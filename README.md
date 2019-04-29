@@ -58,5 +58,14 @@ environments/            contains environment-based overrides
 ```
 192.168.2.1 monitoring.mutu.test
 192.168.2.1 akreditasi.mutu.test
-
 ```
+
+## Cara Kontribusi
+Silahkan baca di [CONTRIBUTE.md](CONTRIBUTE.md)
+
+## Lisensi
+1. Yii2: New BSD-3-Clause License [LICENSE.md](LICENSE.md)
+2. Sistem Mutu: TopApp.id
+
+## Catatan Perubahan
+Silahkan lihat di [CHANGELOG.md](CHANGELOG.md)
