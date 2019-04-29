@@ -1,4 +1,4 @@
-#How To Contribute
+# How To Contribute
 
 PENTING!!! HARAP KODING DI BRANCH MASING-MASING!!!
 
