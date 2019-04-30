@@ -13,6 +13,36 @@ class m190429_191120_init_mutu_database extends Migration
     public function safeUp()
     {
 
+        $this->createTable('{{%fakultas}}',[
+            'id'=>$this->primaryKey(),
+            'nama'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer()
+        ]);
+
+
+        $this->createTable('{{%program}}',[
+            'id'=>$this->primaryKey(),
+            'nama'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+        ]);
+
+        $this->createTable('{{%program_studi}}',[
+            'id'=>$this->primaryKey(),
+            'nama'=>$this->string(),
+            'id_program'=>$this->integer(),
+            'id_fakultas'=>$this->integer(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer()
+        ]);
+
+        $this->createTable('{{%unit}}',[
+            'id'=>$this->primaryKey(),
+            'nama'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer()
+        ]);
     }
 
     /**
@@ -20,9 +50,10 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeDown()
     {
-        echo "m190429_191120_init_mutu_database cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('{{%unit}}');
+       $this->dropTable('{{%program_studi}}');
+       $this->dropTable('{{%program}}');
+       $this->dropTable('{{%fakultas}}');
     }
 
     /*
