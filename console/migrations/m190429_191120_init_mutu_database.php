@@ -291,6 +291,31 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
+        $this->createTable('{{%borang_s1_prodi_standar6}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi'=>$this->integer(),
+            '_6_1'=>$this->text()->comment('Pengelolaan Dana Keterlibatan aktif program studi harus tercerminkan dalam dokumen tentang proses perencanaan, pengelolaan dan pelaporan serta pertanggungjawaban penggunaan dana kepada pemangku kepentingan melalui mekanisme yang transparan dan akuntabel.'),
+            '_6_2'=>$this->text()->comment('Perolehan dan Alokasi Dana.'),
+            '_6_2_1'=>$this->text()->comment('Realisasi Perolehan dan Alokasi Dana.'),
+            '_6_2_2'=>$this->text()->comment('Tuliskan dana untuk kegiatan penelitian pada tiga tahun terakhir yang melibatkan dosen yang bidang keahliannya sesuai dengan program studi.'),
+            '_6_2_3'=>$this->text()->comment('Dana Kegiatan Pengabdian Kepada Masyarakat'),
+            '_6_3_1'=>$this->text()->comment('Data ruang kerja dosen tetap yang bidang keahliannya sesuai dengan PS'),
+            '_6_3_2'=>$this->text()->comment('Tuliskan data prasarana (kantor, ruang kelas, ruang laboratorium, studio, ruang perpustakaan, kebun percobaan, dsb. kecuali ruang dosen) yang dipergunakan PS dalam proses belajar mengajar dengan mengikuti format tabel berikut:'),
+            '_6_3_3'=>$this->text()->comment('Data prasarana lain yang menunjang'),
+            '_6_3_7'=>$this->text()->comment('Aksesibiltas Data'),
+            '_6_4'=>$this->text()->comment('Sarana Pelaksanaan Kegiatan Akademik'),
+            '_6_4_1'=>$this->text()->comment('Pustaka (buku teks, karya ilmiah, dan jurnal; termasuk juga dalam bentuk CD-ROM dan media lainnya)'),
+            '_6_4_2'=>$this->text()->comment('Sumber-sumber pustaka di lembaga lain (lembaga perpustakaan/ sumber dari internet beserta alamat website) yang biasa diakses/dimanfaatkan oleh dosen dan mahasiswa program studi ini.'),
+            '_6_4_3'=>$this->text()->comment('Tuliskan peralatan utama yang digunakan di laboratorium (tempat praktikum, bengkel, studio, ruang simulasi, rumah sakit, puskesmas/balai kesehatan, green house, lahan untuk pertanian, dan sejenisnya) yang dipergunakan dalam proses pembelajaran di jurusan/fakultas dengan mengikuti format tabel berikut:'),
+            '_6_5'=>$this->text()->comment('Sistem Informasi '),
+            '_6_5_1'=>$this->text()->comment('Jelaskan sistem informasi dan fasilitas yang digunakan oleh program studi untuk proses pembelajaran (hardware, software, e-learning, perpustakaan, dll.).'),
+            '_6_5_2'=>$this->text()->comment('Aksesibilitas tiap jenis data'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+
 
     }
 
