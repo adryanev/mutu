@@ -316,6 +316,26 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
+        $this->createTable('{{%borang_s1_prodi_standar7}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi'=>$this->integer(),
+            '_7_1'=>$this->text()->comment('Penelitian Dosen Tetap yang Bidang Keahliannya Sesuai dengan PS.'),
+            '_7_1_1'=>$this->text()->comment('Judul penelitian* yang sesuai dengan bidang keilmuan PS, yang dilakukan oleh dosen tetap yang bidang keahliannya sesuai dengan PS selama tiga tahun terakhir.'),
+            '_7_1_2'=>$this->text()->comment('Mahasiswa tugas akhir yang dilibatkan dalam penelitian dosen dalam tiga tahun terakhir.'),
+            '_7_1_3'=>$this->text()->comment('Judul artikel ilmiah/karya ilmiah/karya seni/buku yang dihasilkan selama tiga tahun terakhir oleh dosen tetap yang bidang keahliannya sesuai dengan PS.'),
+            '_7_1_4'=>$this->text()->comment('Karya dosen dan atau mahasiswa Program Studi yang telah memperoleh/sedang memproses perlindungan Hak atas Kekayaan Intelektual (HaKI) selama tiga tahun terakhir.'),
+            '_7_2'=>$this->text()->comment('Kegiatan Pengabdian kepada Masyarakat'),
+            '_7_2_1'=>$this->text()->comment('Pelayanan/Pengabdian kepada Masyarakat (*) yang sesuai dengan bidang keilmuan PS selama tiga tahun terakhir yang dilakukan oleh dosen tetap yang bidang keahliannya sesuai dengan PS'),
+            '_7_2_2'=>$this->text()->comment('Mahasiswa yang dilibatkan dalam kegiatan pelayanan/pengabdian kepada masyarakat dalam tiga tahun terakhir'),
+            '_7_3'=>$this->text()->comment('Kerjasama dengan Instansi Lain'),
+            '_7_3_1'=>$this->text()->comment('Instansi dalam negeri yang menjalin kerjasama* yang terkait dengan program studi/jurusan dalam tiga tahun terakhir.'),
+            '_7_3_2'=>$this->text()->comment('Instansi luar negeri yang menjalin kerjasama* yang terkait dengan program studi/jurusan dalam tiga tahun terakhir.'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+
 
     }
 
@@ -324,6 +344,8 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeDown()
     {
+        $this->dropTable('{{%borang_s1_prodi_standar7}}');
+        $this->dropTable('{{%borang_s1_prodi_standar6}}');
         $this->dropTable('{{%borang_s1_prodi_standar5}}');
         $this->dropTable('{{%borang_s1_prodi_standar4}}');
         $this->dropTable('{{%borang_s1_prodi_standar3}}');
