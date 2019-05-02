@@ -336,6 +336,134 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
+        $this->createTable('{{%borang_s1_fakultas_standar1}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas'=>$this->integer(),
+            '_1_1'=>$this->text()->comment('Visi, misi, tujuan, dan sasaran serta strategi pencapaian Fakultas/Sekolah Tinggi'),
+            '_1_1_1'=>$this->text()->comment('Visi'),
+            '_1_1_2'=>$this->text()->comment('Misi'),
+            '_1_1_3'=>$this->text()->comment('Tujuan'),
+            '_1_1_4'=>$this->text()->comment('Sasaran dan Strategi Pencapaiannya'),
+            '_1_2'=>$this->text()->comment('Upaya penyebaran/sosialisasi, serta tingkat pemahaman sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan tentang visi, misi dan tujuan Fakultas/Sekolah Tinggi.'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
+        ]);
+
+
+        $this->createTable('{{%borang_s1_fakultas_standar2}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas'=>$this->integer(),
+            '_2_1'=>$this->text()->comment('Tata Pamong'),
+            '_2_2'=>$this->text()->comment('Struktur Organisasi, Koordinasi dan Cara Kerja Fakultas/Sekolah Tinggi'),
+            '_2_3'=>$this->text()->comment('Karakteristik kepemimpinan'),
+            '_2_4'=>$this->text()->comment('Sistem Pengelolaan'),
+            '_2_5'=>$this->text()->comment('Sistem Penjaminan Mutu Fakultas/Sekolah Tinggi'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
+        ]);
+
+        $this->createTable('{{%borang_s1_fakultas_standar3}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas'=>$this->integer(),
+            '_3_1'=>$this->text()->comment('Mahasiswa'),
+            '_3_1_1'=>$this->text()->comment('Sistem Rekrutmen dan Seleksi Calon Mahasiswa Baru dan Efektivitasnya'),
+            '_3_1_2'=>$this->text()->comment('Data mahasiswa reguler dan mahasiswa transfer untuk masing-masing program studi S1 pada TS (tahun akademik penuh yang terakhir) di Fakultas/Sekolah Tinggi'),
+            '_3_1_3'=>$this->text()->comment('Uraikan alasan/pertimbangan Fakultas/Sekolah Tinggi dalam menerima mahasiswa transfer. Jelaskan pula alasan mahasiswa melakukan transfer.'),
+            '_3_2'=>$this->text()->comment('Lulusan'),
+            '_3_2_1'=>$this->text()->comment('Rata-rata masa studi dan rata-rata IPK lulusan selama tiga tahun terakhir dari mahasiswa reguler bukan transfer untuk tiap program studi S1 yang dikelola oleh Fakultas/Sekolah Tinggi'),
+            '_3_2_2'=>$this->text()->comment('Pandangan Fakultas/Sekolah Tinggi tentang rara-rata masa studi dan rata-rata IPK lulusan, yang mencakup aspek : kewajaran, upaya pengembangan, dan upaya peningkatan mutu'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
+        ]);
+
+        $this->createTable('{{%borang_s1_fakultas_standar4}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas'=>$this->integer(),
+            '_4_1'=>$this->text()->comment('Dosen tetap'),
+            '_4_1_1'=>$this->text()->comment('Jumlah dosen tetap yang bidang keahliannya sesuai dengan masing-masing PS di lingkungan Fakultas/Sekolah Tinggi, berdasarkan jabatan fungsional dan pendidikan tertinggi'),
+            '_4_1_2'=>$this->text()->comment('Banyaknya penggantian dan perekrutan serta pengembangan dosen tetap yang bidang keahliannya sesuai dengan program studi pada Fakultas/Sekolah Tinggi dalam tiga tahun terakhir'),
+            '_4_1_3'=>$this->text()->comment('Pandangan Fakultas/Sekolah Tinggi tentang data pada butir 4.1.1 dan 4.1.2, yang mencakup aspek: kecukupan, kualifikasi, dan pengembangan karir'),
+            '_4_2'=>$this->text()->comment('Tenaga kependidikan'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
+        ]);
+        $this->createTable('{{%borang_s1_fakultas_standar5}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas'=>$this->integer(),
+            '_5_1'=>$this->text()->comment('Kurikulum'),
+            '_5_2'=>$this->text()->comment('Pembelajaran'),
+            '_5_3'=>$this->text()->comment('Suasana Akademik'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
+        ]);
+        $this->createTable('{{%borang_s1_fakultas_standar6}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas'=>$this->integer(),
+            '_6_1'=>$this->text()->comment('Pembiayaan'),
+            '_6_1_1'=>$this->text()->comment('Jumlah dana termasuk gaji dan upah yang diterima di Fakultas/Sekolah Tinggi selama tiga tahun terakhir'),
+            '_6_1_2'=>$this->text()->comment('Pendapat pimpinan Fakultas/Sekolah Tinggi tentang perolehan dana pada butir 6.1.1, yang mencakup aspek: kecukupan dan upaya pengembangannya'),
+            '_6_2'=>$this->text()->comment('Sarana'),
+            '_6_2_1'=>$this->text()->comment('Penilaian Fakultas/Sekolah Tinggi tentang sarana untuk menjamin penyelenggaraan program Tridarma PT yang bermutu tinggi. Uraian ini mencakup aspek: kecukupan/ketersediaan/akses dan kewajaran serta rencana pengembangan dalam lima tahun mendatang.'),
+            '_6_2_2'=>$this->text()->comment('Sarana tambahan untuk meningkatkan mutu penyelenggarakan program Tridarma PT pada semua program studi yang dikelola dalam tiga tahun terakhir.'),
+            '_6_3'=>$this->text()->comment('Prasarana'),
+            '_6_3_1'=>$this->text()->comment('Penilaian Fakultas/Sekolah Tinggi tentang prasarana yang telah dimiliki, khususnya yang digunakan untuk program-program studi. Uraian ini mencakup aspek: kecukupan dan kewajaran serta rencana pengembangan dalam lima tahun mendatang'),
+            '_6_3_2'=>$this->text()->comment('Prasarana tambahan untuk semua program studi yang dikelola dalam tiga tahun terakhir. Uraikan pula rencana investasi untuk prasarana dalam lima tahun mendatang,'),
+            '_6_4'=>$this->text()->comment('Sistem Informasi'),
+            '_6_4_1'=>$this->text()->comment('Sistem informasi manajemen dan fasilitas ICT (Information and Communication Technology) yang digunakan Fakultas/Sekolah Tinggi untuk proses penyelenggaraan akademik dan administrasi (misalkan SIAKAD, SIMKEU, SIMAWA, SIMFA, SIMPEG dan sejenisnya), termasuk distance-learning.'),
+            '_6_4_2'=>$this->text()->comment('Aksesibilitas tiap jenis data'),
+            '_6_4_3'=>$this->text()->comment('Upaya penyebaran informasi/kebijakan untuk sivitas akademika di Fakultas/ Sekolah Tinggi (misalnya melalui surat, faksimili, mailing list, e-mail,sms, buletin).'),
+            '_6_4_4'=>$this->text()->comment('Rencana pengembangan sistem informasi jangka panjang dan upaya pencapaiannya. Uraikan pula kendala-kendala yang dihadapi.'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
+        ]);
+
+        $this->createTable('{{%borang_s1_fakultas_standar7}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas'=>$this->integer(),
+            '_7_1'=>$this->text()->comment('Penelitian'),
+            '_7_1_1'=>$this->text()->comment('Jumlah dan dana penelitian yang dilakukan oleh masing-masing PS di lingkungan Fakultas/Sekolah Tinggi dalam tiga tahun terakhir'),
+            '_7_1_2'=>$this->text()->comment('Pandangan pimpinan Fakultas/Sekolah Tinggi tentang data pada butir 7.1.1, dalam perspektif: kesesuaian dengan Visi dan Misi, kecukupan, kewajaran, upaya pengembangan dan peningkatan mutu'),
+            '_7_2'=>$this->text()->comment('Pelayanan/Pengabdian kepada Masyarakat'),
+            '_7_2_1'=>$this->text()->comment('Jumlah dan dana kegiatan pelayanan/pengabdian kepada masyarakat yang dilakukan oleh masing-masing PS di lingkungan Fakultas dalam tiga tahun terakhir'),
+            '_7_2_2'=>$this->text()->comment('Pandangan Fakultas/Sekolah Tinggi tentang data pada butir 7.2.1 dalam perspektif: kesesuaian dengan Visi dan Misi, kecukupan, kewajaran, upaya pengembangan dan peningkatan mutu'),
+            '_7_3'=>$this->text()->comment('Kerjasama dengan Instansi Lain'),
+            '_7_3_1'=>$this->text()->comment('Kerjasama dengan Instansi Lain'),
+            '_7_3_2'=>$this->text()->comment('Instansi luar negeri yang menjalin kerjasama* dengan Fakultas/Sekolah Tinggi dalam tiga tahun terakhir.'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+
+        $this->createTable('{{%borang_institusi}}',[
+            'id'=>$this->primaryKey(),
+            'id_akreditasi_institusi'=>$this->integer(),
+            'progress'=>$this->float(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer()
+
+        ]);
+
+        $this->createTable('{{%borang_institusi_standar1}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_institusi'=>$this->integer(),
+            'progress'=>$this->float(),
+            '_1_1'=>$this->text()->comment('Jelaskan dasar penyusunan dan mekanisme penyusunan visi, misi, tujuan dan sasaran institusi perguruan tinggi, serta pihak-pihak yang dilibatkan dalam penyusunannya.'),
+            '_1_2'=>$this->text()->comment('Pernyataan mengenai tonggak-tonggak capaian (milestones) tujuan yang dinyatakan dalam sasaran-sasaran yang merupakan target terukur, dan penjelasan mengenai strategi serta tahapan pencapaiannya.'),
+            '_1_3'=>$this->text()->comment('Sosialisasi visi, misi, tujuan, sasaran dan strategi pencapaian dan penggunaannya sebagai acuan dalam penyusunan rencana kerja institusi PT.'),
+        ]);
 
     }
 
@@ -344,6 +472,14 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeDown()
     {
+        $this->dropTable('{{%borang_institusi}}');
+        $this->dropTable('{{%borang_s1_fakultas_standar7}}');
+        $this->dropTable('{{%borang_s1_fakultas_standar6}}');
+        $this->dropTable('{{%borang_s1_fakultas_standar5}}');
+        $this->dropTable('{{%borang_s1_fakultas_standar4}}');
+        $this->dropTable('{{%borang_s1_fakultas_standar3}}');
+        $this->dropTable('{{%borang_s1_fakultas_standar2}}');
+        $this->dropTable('{{%borang_s1_fakultas_standar1}}');
         $this->dropTable('{{%borang_s1_prodi_standar7}}');
         $this->dropTable('{{%borang_s1_prodi_standar6}}');
         $this->dropTable('{{%borang_s1_prodi_standar5}}');
@@ -362,7 +498,7 @@ class m190429_191120_init_mutu_database extends Migration
         $this->dropTable('{{%akreditasi_institusi}}');
         $this->dropTable('{{%akreditasi_prodi_s3}}');
         $this->dropTable('{{%akreditasi_prodi_s2}}');
-        $this->dropTable('{{%akreditasi_prodi_s1}');
+        $this->dropTable('{{%akreditasi_prodi_s1}}');
         $this->dropTable('{{%akreditasi_prodi_diploma}}');
         $this->dropTable('{{%akreditasi}}');
         $this->dropTable('{{%jenis_akreditasi}}');
