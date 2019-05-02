@@ -13,7 +13,7 @@ box_check_update: false
 machine_name: mutu
 
 # Virtual machine IP
-ip: 192.168.2.1
+ip: 192.168.2.2
 
 # Virtual machine CPU cores number
 cpus: 1
