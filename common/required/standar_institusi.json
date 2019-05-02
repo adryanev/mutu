@@ -1,0 +1,60 @@
+[
+  {
+    "standar": 1,
+    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN",
+    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian","Sosialisasi"],
+    "butir":[
+      {
+        "nomor": "1.1.a",
+        "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
+        "dokumen_sumber":[
+          {
+            "kode": " 1.1.a-01-01-01",
+            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+          },
+          {
+            "kode": " 1.1.a-01-01-01",
+            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "1.1.a-01-02-01",
+            "dokumen": "Dokumen Daftar Hadir"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "standar": 2,
+    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN",
+    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian","Sosialisasi"],
+    "butir":[
+      {
+        "nomor": "1.1.a",
+        "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
+        "dokumen_sumber":[
+          {
+            "kode": " 1.1.a-01-01-01",
+            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+          },
+          {
+            "kode": " 1.1.a-01-01-01",
+            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "1.1.a-01-02-01",
+            "dokumen": "Dokumen Daftar Hadir"
+          }
+        ]
+      }
+    ]
+  }
+]
