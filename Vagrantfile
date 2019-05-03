@@ -74,4 +74,8 @@ Vagrant.configure(2) do |config|
 
   # post-install message (vagrant console)
   config.vm.post_up_message = "Akreditasi URL: http://#{domains[:akreditasi]}\nMonitoring URL: http://#{domains[:monitoring]}"
+  if Vagrant.has_plugin?("vagrant-vbguest")
+      config.vbguest.auto_update = false
+  end
 end
+
