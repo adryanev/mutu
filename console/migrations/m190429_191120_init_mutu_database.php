@@ -463,6 +463,50 @@ class m190429_191120_init_mutu_database extends Migration
             '_1_1'=>$this->text()->comment('Jelaskan dasar penyusunan dan mekanisme penyusunan visi, misi, tujuan dan sasaran institusi perguruan tinggi, serta pihak-pihak yang dilibatkan dalam penyusunannya.'),
             '_1_2'=>$this->text()->comment('Pernyataan mengenai tonggak-tonggak capaian (milestones) tujuan yang dinyatakan dalam sasaran-sasaran yang merupakan target terukur, dan penjelasan mengenai strategi serta tahapan pencapaiannya.'),
             '_1_3'=>$this->text()->comment('Sosialisasi visi, misi, tujuan, sasaran dan strategi pencapaian dan penggunaannya sebagai acuan dalam penyusunan rencana kerja institusi PT.'),
+            '_1_3_1'=>$this->text()->comment('Uraikan sosialisasi visi, misi, tujuan, dan sasaran PT agar dipahami seluruh pemangku kepentingan (sivitas akademika, tenaga kependidikan, pengguna lulusan, dan masyarakat).'),
+            '_1_3_2'=>$this->text()->comment('Jelaskan bahwa visi, misi, tujuan, dan sasaran PT serta strategi pencapaiannya untuk dijadikan sebagai acuan semua unit dalam institusi perguruan tinggi dalam menyusun rencana strategis (renstra) dan/atau rencana kerja unit bersangkutan.'),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+
+        $this->createTable('{{%borang_institusi_standar2}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_institusi'=>$this->integer(),
+            'progress'=>$this->float(),
+            '_2_1'=>$this->text()->comment('Tata Pamong'),
+            '_2_1_1'=>$this->text()->comment('Uraikan secara ringkas sistem tata pamong (sebutkan lembaga yang berperan, perangkat pendukung, kebijakan dan peraturan/ketentuan termasuk kode etik yang dijadikan pedoman dalam penyelenggaraan perguruan tinggi, serta prosedur penetapannya) di institusi perguruan tinggi dalam membangun sistem tata pamong yang kredibel, transparan, akuntabel, bertanggung jawab, dan adil, serta pelaksanaannya.'),
+            '_2_1_2'=>$this->text()->comment('Struktur Organisasi, Koordinasi, dan Cara Kerja Institusi Perguran Tinggi. Gambarkan struktur organisasi perguruan tinggi serta tugas dan fungsi dari tiap unit yang ada. Sebutkan nama lembaga, fakultas, jurusan dan laboratorium yang ada.'),
+            '_2_1_3'=>$this->text()->comment('Kelembagaan Lembaga, Mutu, SOP, dan Efektifitas Pelaksanaan Kode Etik'),
+            '_2_2'=>$this->text()->comment('Karakteristik kepemimpinan'),
+            '_2_3'=>$this->text()->comment('Sistem Pengelolaan fungsional dan operasional program studi'),
+            '_2_3_1'=>$this->text()->comment('Jelaskan sistem pengelolaan institusi perguruan tinggi serta dokumen pendukungnya (jelaskan unit / bagian / lembaga yang berperan dalam setiap fungsi pengelolaan serta proses pengambilan keputusan).'),
+            '_2_3_2'=>$this->text()->comment('Jelaskan program peningkatan kompetensi manajerial untuk menjamin proses pengelolaan yang efektif dan efisien di setiap unit.'),
+            '_2_3_3'=>$this->text()->comment('Jelaskan diseminasi hasil kerja perguruan tinggi sebagai akuntabilitas publik.'),
+            '_2_3_4'=>$this->text()->comment('Sistem audit internal (lembaga/unit kerja, ruang lingkup tugas, prosedur kerja, dsb).'),
+            '_2_3_5'=>$this->text()->comment('Sistem audit eksternal (lembaga/unit kerja, ruang lingkup tugas, prosedur kerja, dsb).'),
+            '_2_4'=>$this->text()->comment('Sistem Penjaminan Mutu'),
+            '_2_4_1'=>$this->text()->comment('Keberadaan manual mutu yang mencakup informasi tentang kebijakan, pernyataan mutu, unit pelaksana, standar, prosedur, SOP, dan pentahapan sasaran mutu perguruan tinggi.'),
+            '_2_4_2'=>$this->text()->comment('Implementasi penjaminan mutu perguruan tinggi.'),
+            '_2_4_3'=>$this->text()->comment('Monitoring dan evaluasi penjaminan mutu perguruan tinggi, serta tindak lanjutnya.'),
+            '_2_4_4'=>$this->text()->comment('Peranan institusi dalam pembinaan program studi (pengembangan program studi serta bantuan penyusunan dokumen akreditasi dalam bentuk pelatihan, dana dan informasi)'),
+            '_2_4_5'=>$this->text()->comment('Ketersediaan dan pelaksanaan basis data institusi dan program studi untuk mendukung penyusunan dokumen evaluasi diri'),
+            '_2_4_6'=>$this->text()->comment('Jumlah program studi dan status akreditasi BAN-PT'),
+
+
+
+
+
+
+
+
+
+
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
         ]);
 
     }
@@ -472,6 +516,7 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeDown()
     {
+        $this->dropTable('{{%borang_institusi_standar1}}');
         $this->dropTable('{{%borang_institusi}}');
         $this->dropTable('{{%borang_s1_fakultas_standar7}}');
         $this->dropTable('{{%borang_s1_fakultas_standar6}}');
