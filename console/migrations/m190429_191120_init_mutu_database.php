@@ -493,20 +493,44 @@ class m190429_191120_init_mutu_database extends Migration
             '_2_4_4'=>$this->text()->comment('Peranan institusi dalam pembinaan program studi (pengembangan program studi serta bantuan penyusunan dokumen akreditasi dalam bentuk pelatihan, dana dan informasi)'),
             '_2_4_5'=>$this->text()->comment('Ketersediaan dan pelaksanaan basis data institusi dan program studi untuk mendukung penyusunan dokumen evaluasi diri'),
             '_2_4_6'=>$this->text()->comment('Jumlah program studi dan status akreditasi BAN-PT'),
-
-
-
-
-
-
-
-
-
-
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
+        ]);
+        $this->createTable('{{%borang_institusi_standar3}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_institusi'=>$this->integer(),
+            '_3_1'=>$this->text()->comment('Pedoman mahasiswa'),
+            '_3_1_1'=>$this->text()->comment('Jelaskan sistem rekruitmen dan seleksi calon mahasiswa baru untuk program sarjana, magister, doktor dan/atau diploma yang diterapkan pada institusi ini serta ketersediaan pedoman tertulis tentang rekrutmen dan seleksi mahasiswa baru.'),
+            '_3_1_10'=>$this->text()->comment('Jelaskan pelaksanaan program layanan bimbingan karir dan informasi kerja bagi mahasiswa dan lulusan yang mencakup: (1) penyebaran informasi kerja, (2) penyelenggaraan bursa kerja, (3) perencanaan karir, (4) pelatihan melamar kerja, dan (5) layanan penempatan kerja.'),
+            '_3_1_11'=>$this->text()->comment('Sebutkan pencapaian prestasi mahasiswa dalam tiga tahun terakhir di bidang akademik dan non-akademik, antara lain prestasi dalam penelitian dan lomba karya ilmiah, PkM, olahraga, dan seni dalam tabel berikut.'),
+            '_3_1_12'=>$this->text()->comment('Jelaskan upaya institusi untuk meningkatkan prestasi mahasiswa dalam bidang akademik dan non-akademik, antara lain prestasi dalam penelitian dan lomba karya ilmiah, PkM, olahraga, dan seni.'),
+            '_3_1_2'=>$this->text()->comment('Jelaskan kebijakan mengenai penerimaan mahasiswa yang memiliki potensi akademik dan kurang mampu secara ekonomi, fisik, serta implementasinya.'),
+            '_3_1_3'=>$this->text()->comment('Jelaskan kebijakan mengenai penerimaan mahasiswa berdasarkan prinsip ekuitas (SARA-suku, agama, ras, antar golongan, gender, status sosial, dan politik).'),
+            '_3_1_4'=>$this->text()->comment('Jelaskan kebijakan mengenai penerimaan mahasiswa yang berdasarkan prinsip pemerataan wilayah asal mahasiswa, serta informasi mengenai jumlah provinsi asal mahasiswa.'),
+            '_3_1_5'=>$this->text()->comment('Profil mahasiswa'),
+            '_3_1_6'=>$this->text()->comment('Jelaskan tata cara dan instrumen yang digunakan untuk mengetahui kepuasan mahasiswa terhadap layanan kemahasiswaan.'),
+            '_3_1_7'=>$this->text()->comment('Jelaskan hasil pelaksanaan pengukuran kepuasan mahasiswa menggunakan instrumen tersebut.'),
+            '_3_1_8'=>$this->text()->comment('Lengkapilah tabel berikut, untuk data pelayanan kepada mahasiswa dalam satu tahun terakhir.'),
+            '_3_1_9'=>$this->text()->comment('Jelaskan program layanan bimbingan karir dan informasi kerja bagi mahasiswa dan lulusan yang mencakup: (1) penyebaran informasi kerja, (2) penyelenggaraan bursa kerja, (3) perencanaan karir, (4) pelatihan melamar kerja, dan (5) layanan penempatan kerja.'),
+            '_3_2'=>$this->text()->comment('Lulusan'),
+            '_3_2_1a'=>$this->text()->comment('Jumlah mahasiswa dan lulusan program pendidikan sarjana (S-1) tujuh tahun terakhir.'),
+            '_3_2_1b'=>$this->text()->comment('Jumlah mahasiswa dan lulusan program pendidikan magister (S-2) lima tahun terakhir.'),
+            '_3_2_1c'=>$this->text()->comment('Jumlah mahasiswa dan lulusan program pendidikan doktor (S-3) enam tahun terakhir.'),
+            '_3_2_1d'=>$this->text()->comment('Jumlah mahasiswa dan lulusan program pendidikan diploma IV (D-4) tujuh tahun terakhir.'),
+            '_3_2_1e'=>$this->text()->comment('Jumlah mahasiswa dan lulusan program pendidikan diploma III (D-3) lima tahun terakhir.'),
+            '_3_2_1f'=>$this->text()->comment('Jumlah mahasiswa dan lulusan program pendidikan diploma II (D-2) tiga tahun terakhir.'),
+            '_3_2_1g'=>$this->text()->comment('Jumlah mahasiswa dan lulusan program pendidikan diploma I (D-1) dua tahun terakhir.'),
+            '_3_2_2'=>$this->text()->comment('Tuliskan rata-rata masa studi mahasiswa dan IPK lulusan dalam tabel berikut.'),
+            '_3_2_3'=>$this->text()->comment('Jelaskan kebijakan institusi terkait dengan studi pelacakan baik dari lulusan maupun dari pengguna lulusan, berikut keberadaan pedoman. Informasi mencakup: (1) kebijakan dan strategi, (2) instrumen, (3) monitoring dan evaluasi, dan (4) tindak lanjut.'),
+            '_3_2_4'=>$this->text()->comment('Jelaskan pelaksanaan studi pelacakan, hasil evaluasi dalam lima tahun terakhir, dan tindak lanjut dari evaluasi terhadap peningkatan mutu lulusan.'),
+            '_3_2_5'=>$this->text()->comment('Himpunan Alumni'),
+
+
+
+
+
         ]);
 
     }
@@ -516,6 +540,8 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeDown()
     {
+        $this->dropTable('{{%borang_institusi_standar3}}');
+        $this->dropTable('{{%borang_institusi_standar2}}');
         $this->dropTable('{{%borang_institusi_standar1}}');
         $this->dropTable('{{%borang_institusi}}');
         $this->dropTable('{{%borang_s1_fakultas_standar7}}');
