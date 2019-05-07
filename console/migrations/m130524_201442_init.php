@@ -20,6 +20,7 @@ class m130524_201442_init extends Migration
             'password_reset_token' => $this->string()->unique(),
             'email' => $this->string()->notNull()->unique(),
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
+            'is_admin'=>$this->boolean(),
             'is_institusi'=>$this->boolean(),
             'is_fakultas'=>$this->boolean(),
             'is_prodi'=>$this->boolean(),
