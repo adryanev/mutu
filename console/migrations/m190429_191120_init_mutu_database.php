@@ -12,6 +12,7 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeUp()
     {
+
         $this->createTable('{{%profil_user}}',[
             'id'=>$this->primaryKey(),
             'id_user'=>$this->integer(),

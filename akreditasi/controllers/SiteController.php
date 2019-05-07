@@ -1,8 +1,8 @@
 <?php
 namespace akreditasi\controllers;
 
-use frontend\models\ResendVerificationEmailForm;
-use frontend\models\VerifyEmailForm;
+use akreditasi\models\ResendVerificationEmailForm;
+use akreditasi\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\web\BadRequestHttpException;
@@ -10,10 +10,10 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
+use akreditasi\models\PasswordResetRequestForm;
+use akreditasi\models\ResetPasswordForm;
+use akreditasi\models\SignupForm;
+use akreditasi\models\ContactForm;
 
 /**
  * Site controller
@@ -28,7 +28,7 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup','site'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
@@ -36,7 +36,7 @@ class SiteController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout','site'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -84,6 +84,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout='main-login';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }

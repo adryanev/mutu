@@ -29,7 +29,7 @@ class m190506_045438_add_relational extends Migration
         $this->addForeignKey('fk-borang_diploma_prodi-akreditasi_prodi-diploma','{{%borang_diploma_prodi}}','id_akreditasi_prodi_diploma','{{%akreditasi_prodi_diploma}}','id');
         $this->addForeignKey('fk-borang_diploma_akademi-akreditasi_prodi_diploma','{{%borang_diploma_akademi}}','id_akreditasi_prodi_diploma','{{%akreditasi_prodi_diploma}}','id');
         $this->addForeignKey('fk-borang_s1_prodi-akreditasi_prodi_s1','{{%borang_s1_prodi}}','id_akreditasi_prodi_s1','{{%akreditasi_prodi_s1}}','id');
-        $this->addForeignKey('fk-dokumen_borang_s1_prodi-borang_s1_prodi','{{%dokumen_borang_s1_prodi}}','id_akreditasi_prodi_s1','{{%norang_s1_prodi}}','id');
+        $this->addForeignKey('fk-dokumen_borang_s1_prodi-borang_s1_prodi','{{%dokumen_borang_s1_prodi}}','id_akreditasi_prodi_s1','{{%borang_s1_prodi}}','id');
         $this->addForeignKey('fk-borang_s1_fakultas-akreditasi_prodi_s1','{{%borang_s1_fakultas}}','id_akreditasi_prodi_s1','{{%akreditasi_prodi_s1}}','id');
         $this->addForeignKey('fk-dokumen_borang_s1_fakultas-borang_s1_fakultas','{{%dokumen_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
         $this->addForeignKey('fk-borang_s2_prodi-akreditasi_prodi_s2','{{%borang_s2_prodi}}','id_akreditasi_prodi_s2','{{%akreditasi_prodi_s2}}','id');
@@ -71,31 +71,31 @@ class m190506_045438_add_relational extends Migration
         //borang standar fakultas
 
         $this->addForeignKey('fk-borang_s1_fakultas_standar1-borang_s1_fakultas','{{%borang_s1_fakultas_standar1}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
-        $this->addForeignKey('fk-detail_borang_s1_fakultas_standar1-borang_s1_fakultas_standar1','{{%detail_borang_s1_fakultas_standar1}}','id_borang_s1_fakultas_standar1','{{%borang_s1_fakultas_standar1}}','id');
+        $this->addForeignKey('fk-d_borang_s1_fakultas_standar1-borang_s1_fakultas_standar1','{{%detail_borang_s1_fakultas_standar1}}','id_borang_s1_fakultas_standar1','{{%borang_s1_fakultas_standar1}}','id');
 
 
         $this->addForeignKey('fk-borang_s1_fakultas_standar2-borang_s1_fakultas','{{%borang_s1_fakultas_standar2}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
-        $this->addForeignKey('fk-detail_borang_s1_fakultas_standar2-borang_s1_fakultas_standar2','{{%detail_borang_s1_fakultas_standar2}}','id_borang_s1_fakultas_standar2','{{%borang_s1_fakultas_standar2}}','id');
+        $this->addForeignKey('fk-d_borang_s1_fakultas_standar2-borang_s1_fakultas_standar2','{{%detail_borang_s1_fakultas_standar2}}','id_borang_s1_fakultas_standar2','{{%borang_s1_fakultas_standar2}}','id');
 
 
         $this->addForeignKey('fk-borang_s1_fakultas_standar3-borang_s1_fakultas','{{%borang_s1_fakultas_standar3}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
-        $this->addForeignKey('fk-detail_borang_s1_fakultas_standar3-borang_s1_fakultas_standar3','{{%detail_borang_s1_fakultas_standar3}}','id_borang_s1_fakultas_standar3','{{%borang_s1_fakultas_standar3}}','id');
+        $this->addForeignKey('fk-d_borang_s1_fakultas_standar3-borang_s1_fakultas_standar3','{{%detail_borang_s1_fakultas_standar3}}','id_borang_s1_fakultas_standar3','{{%borang_s1_fakultas_standar3}}','id');
 
 
         $this->addForeignKey('fk-borang_s1_fakultas_standar4-borang_s1_fakultas','{{%borang_s1_fakultas_standar4}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
-        $this->addForeignKey('fk-detail_borang_s1_fakultas_standar4-borang_s1_fakultas_standar4','{{%detail_borang_s1_fakultas_standar4}}','id_borang_s1_fakultas_standar4','{{%borang_s1_fakultas_standar4}}','id');
+        $this->addForeignKey('fk-d_borang_s1_fakultas_standar4-borang_s1_fakultas_standar4','{{%detail_borang_s1_fakultas_standar4}}','id_borang_s1_fakultas_standar4','{{%borang_s1_fakultas_standar4}}','id');
 
 
         $this->addForeignKey('fk-borang_s1_fakultas_standar5-borang_s1_fakultas','{{%borang_s1_fakultas_standar5}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
-        $this->addForeignKey('fk-detail_borang_s1_fakultas_standar5-borang_s1_fakultas_standar5','{{%detail_borang_s1_fakultas_standar5}}','id_borang_s1_fakultas_standar5','{{%borang_s1_fakultas_standar5}}','id');
+        $this->addForeignKey('fk-d_borang_s1_fakultas_standar5-borang_s1_fakultas_standar5','{{%detail_borang_s1_fakultas_standar5}}','id_borang_s1_fakultas_standar5','{{%borang_s1_fakultas_standar5}}','id');
 
 
         $this->addForeignKey('fk-borang_s1_fakultas_standar6-borang_s1_fakultas','{{%borang_s1_fakultas_standar6}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
-        $this->addForeignKey('fk-detail_borang_s1_fakultas_standar6-borang_s1_fakultas_standar6','{{%detail_borang_s1_fakultas_standar6}}','id_borang_s1_fakultas_standar6','{{%borang_s1_fakultas_standar6}}','id');
+        $this->addForeignKey('fk-d_borang_s1_fakultas_standar6-borang_s1_fakultas_standar6','{{%detail_borang_s1_fakultas_standar6}}','id_borang_s1_fakultas_standar6','{{%borang_s1_fakultas_standar6}}','id');
 
 
         $this->addForeignKey('fk-borang_s1_fakultas_standar7-borang_s1_fakultas','{{%borang_s1_fakultas_standar7}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
-        $this->addForeignKey('fk-detail_borang_s1_fakultas_standar7-borang_s1_fakultas_standar7','{{%detail_borang_s1_fakultas_standar7}}','id_borang_s1_fakultas_standar7','{{%borang_s1_fakultas_standar7}}','id');
+        $this->addForeignKey('fk-d_borang_s1_fakultas_standar7-borang_s1_fakultas_standar7','{{%detail_borang_s1_fakultas_standar7}}','id_borang_s1_fakultas_standar7','{{%borang_s1_fakultas_standar7}}','id');
 
 
 
