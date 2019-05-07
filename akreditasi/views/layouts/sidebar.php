@@ -22,7 +22,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
             <div class="info">
                 <a data-toggle="collapse" href="#collapseExample" class="collapsed">
                             <span>
-
+                                <?=Yii::$app->user->identity->profilUser->nama_lengkap?>
                                 <b class="caret"></b>
                             </span>
                 </a>
@@ -63,13 +63,13 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                     'items' => [
                         ['label'=> 'Unggah Borang', 'url'=>['/borang/unggah']],
                         ['label'=> 'Isi Borang', 'url'=>['/borang/isi']],
-                        ['label'=> 'Lihat Borang', 'url'=>['/borang/isi']],
+                        ['label'=> 'Lihat Borang', 'url'=>['/borang/lihat']],
                     ],
                 ],
                 [
                     'label' => 'Dokumentasi',
                     'icon' => 'book',
-                    'url' => '#borang',
+                    'url' => '#dokumentasi',
                     'items' => [
                         ['label'=> 'Isi Dokumentasi', 'url'=>['/dokumentasi/isi']],
                         ['label'=> 'Penganggung Jawab', 'url'=>['/dokumentasi/penanggung-jawab']],
@@ -79,7 +79,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                 [
                     'label' => 'Sertifikat Akreditasi',
                     'icon' => 'assignment',
-                    'url' => '#borang',
+                    'url' => '#sertifikat',
                     'items' => [
                         ['label'=> 'Data Akreditasi', 'url'=>['/data/tabel']],
                         ['label'=> 'Grafik Akreditasi', 'url'=>['/data/grafik']],

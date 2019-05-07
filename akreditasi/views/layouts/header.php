@@ -60,7 +60,7 @@ use yii\bootstrap\Html;
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="material-icons">person</i>
                             <p class="hidden-lg hidden-md">Profile</p>
-                            <?=Yii::$app->user->identity->username?>
+                            <?=Yii::$app->user->identity->profilUser->nama_lengkap?>
                         </a>
 
                         <ul class="dropdown-menu">
