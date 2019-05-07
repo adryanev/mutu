@@ -13,6 +13,15 @@ class m190429_191120_init_mutu_database extends Migration
     public function safeUp()
     {
 
+        $this->createTable('{{%profil_user}}',[
+            'id'=>$this->primaryKey(),
+            'id_user'=>$this->integer(),
+            'nama_lengkap'=>$this->string(),
+            'id_prodi'=>$this->integer(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+        ]);
+
         $this->createTable('{{%fakultas_akademi}}',[
             'id'=>$this->primaryKey(),
             'nama'=>$this->string(),
@@ -135,12 +144,31 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer()
         ]);
 
+        $this->createTable('{{%dokumen_borang_s1_prodi}}',[
+            'id'=>$this->primaryKey(),
+            'id_akreditasi_prodi_s1'=>$this->integer(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
+        ]);
+
         $this->createTable('{{%borang_s1_fakultas}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_s1'=>$this->integer(),
             'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
+        ]);
+        $this->createTable('{{%dokumen_borang_s1_fakultas}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas'=>$this->integer(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
         ]);
 
 
@@ -187,10 +215,23 @@ class m190429_191120_init_mutu_database extends Migration
             '_1_1_4'=>$this->text()->comment('Tujuan'),
             '_1_1_5'=>$this->text()->comment('Sasaran dan Strategi Pencapaian'),
             '_1_2'=>$this->text()->comment('Sosialisasi'),
+            'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
+        ]);
+
+        $this->createTable('{{%detail_borang_s1_prodi_standar1}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi_standar1' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+
         ]);
         $this->createTable('{{%borang_s1_prodi_standar2}}',[
             'id'=>$this->primaryKey(),
@@ -201,6 +242,17 @@ class m190429_191120_init_mutu_database extends Migration
             '_2_4'=>$this->text()->comment('Penjaminan Mutu'),
             '_2_5'=>$this->text()->comment('Umpan Balik'),
             '_2_6'=>$this->text()->comment('Keberlanjutan'),
+            'progress'=>$this->float(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+        $this->createTable('{{%detail_borang_s1_prodi_standar2}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi_standar2' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -220,6 +272,17 @@ class m190429_191120_init_mutu_database extends Migration
             '_3_3_2'=>$this->text()->comment('Rata-rata waktu tunggu lulusan untuk memperoleh pekerjaan yang pertama = … bulan '),
             '_3_3_3'=>$this->text()->comment('Persentase lulusan yang bekerja pada bidang yang sesuai dengan keahliannya = … %'),
             '_3_4'=>$this->text()->comment('Himpunan Alumni'),
+            'progress'=>$this->float(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+        $this->createTable('{{%detail_borang_s1_prodi_standar3}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi_standar3' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -249,6 +312,17 @@ class m190429_191120_init_mutu_database extends Migration
             '_4_6'=>$this->text()->comment('Tenaga kependidikan'),
             '_4_6_1'=>$this->text()->comment('Data tenaga kependidikan yang ada di PS, Jurusan, Fakultas atau PT yang melayani mahasiswa PS Tuliskan data tenaga kependidikan yang ada di PS, Jurusan, Fakultas atau PT yang melayani mahasiswa PS'),
             '_4_6_2'=>$this->text()->comment('Jelaskan upaya yang telah dilakukan PS dalam meningkatkan kualifikasi dan kompetensi tenaga kependidikan, dalam hal pemberian kesempatan belajar/pelatihan, pemberian fasilitas termasuk dana, dan jenjang karir'),
+            'progress'=>$this->float(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+        $this->createTable('{{%detail_borang_s1_prodi_standar4}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi_standar4' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -285,6 +359,17 @@ class m190429_191120_init_mutu_database extends Migration
             '_5_7_3'=>$this->text()->comment('Program dan kegiatan di dalam dan di luar proses pembelajaran, yang dilaksanakan baik di dalam maupun di luar kelas, untuk menciptakan suasana akademik yang kondusif (misalnya seminar, simposium, lokakarya, bedah buku, penelitian bersama, pengenalan kehidupan kampus, dan temu dosen-mahasiswa-alumni). 	'),
             '_5_7_4'=>$this->text()->comment('Interaksi akademik antara dosen-mahasiswa, antar mahasiswa, serta antar dosen'),
             '_5_7_5'=>$this->text()->comment('Pengembangan perilaku kecendikiawanan'),
+            'progress'=>$this->float(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+        $this->createTable('{{%detail_borang_s1_prodi_standar5}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi_standar5' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -310,6 +395,17 @@ class m190429_191120_init_mutu_database extends Migration
             '_6_5'=>$this->text()->comment('Sistem Informasi '),
             '_6_5_1'=>$this->text()->comment('Jelaskan sistem informasi dan fasilitas yang digunakan oleh program studi untuk proses pembelajaran (hardware, software, e-learning, perpustakaan, dll.).'),
             '_6_5_2'=>$this->text()->comment('Aksesibilitas tiap jenis data'),
+            'progress'=>$this->float(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+        $this->createTable('{{%detail_borang_s1_prodi_standar6}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi_standar6' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -330,11 +426,23 @@ class m190429_191120_init_mutu_database extends Migration
             '_7_3'=>$this->text()->comment('Kerjasama dengan Instansi Lain'),
             '_7_3_1'=>$this->text()->comment('Instansi dalam negeri yang menjalin kerjasama* yang terkait dengan program studi/jurusan dalam tiga tahun terakhir.'),
             '_7_3_2'=>$this->text()->comment('Instansi luar negeri yang menjalin kerjasama* yang terkait dengan program studi/jurusan dalam tiga tahun terakhir.'),
+            'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
+        $this->createTable('{{%detail_borang_s1_prodi_standar7}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_prodi_standar7' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+
 
         $this->createTable('{{%borang_s1_fakultas_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -351,6 +459,17 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
+        $this->createTable('{{%detail_borang_s1_fakultas_standar1}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas_standar1' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+
 
         $this->createTable('{{%borang_s1_fakultas_standar2}}',[
             'id'=>$this->primaryKey(),
@@ -364,6 +483,16 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
+        ]);
+        $this->createTable('{{%detail_borang_s1_fakultas_standar2}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas_standar2' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
         ]);
 
         $this->createTable('{{%borang_s1_fakultas_standar3}}',[
@@ -382,6 +511,17 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
+        $this->createTable('{{%detail_borang_s1_fakultas_standar3}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas_standar3' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+
         $this->createTable('{{%borang_s1_fakultas_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
@@ -395,6 +535,17 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
         ]);
+
+        $this->createTable('{{%detail_borang_s1_fakultas_standar4}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas_standar4' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
         $this->createTable('{{%borang_s1_fakultas_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
@@ -405,6 +556,17 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
+        ]);
+
+        $this->createTable('{{%detail_borang_s1_fakultas_standar5}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas_standar5' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
         ]);
         $this->createTable('{{%borang_s1_fakultas_standar6}}',[
             'id'=>$this->primaryKey(),
@@ -429,6 +591,17 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
+        $this->createTable('{{%detail_borang_s1_fakultas_standar6}}',[
+            'id'=>$this->primaryKey(),
+            'id_borang_s1_fakultas_standar6' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
+            'created_at'=>$this->integer(),
+            'updated_at'=>$this->integer(),
+            'created_by'=>$this->integer(),
+            'updated_by'=>$this->integer(),
+        ]);
+
         $this->createTable('{{%borang_s1_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
@@ -447,68 +620,16 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_institusi}}',[
+        $this->createTable('{{%detail_borang_s1_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
-            'id_akreditasi_institusi'=>$this->integer(),
-            'progress'=>$this->float(),
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer()
-
-        ]);
-
-        $this->createTable('{{%borang_institusi_standar1}}',[
-            'id'=>$this->primaryKey(),
-            'id_borang_institusi'=>$this->integer(),
-            'progress'=>$this->float(),
-            '_1_1'=>$this->text()->comment('Jelaskan dasar penyusunan dan mekanisme penyusunan visi, misi, tujuan dan sasaran institusi perguruan tinggi, serta pihak-pihak yang dilibatkan dalam penyusunannya.'),
-            '_1_2'=>$this->text()->comment('Pernyataan mengenai tonggak-tonggak capaian (milestones) tujuan yang dinyatakan dalam sasaran-sasaran yang merupakan target terukur, dan penjelasan mengenai strategi serta tahapan pencapaiannya.'),
-            '_1_3'=>$this->text()->comment('Sosialisasi visi, misi, tujuan, sasaran dan strategi pencapaian dan penggunaannya sebagai acuan dalam penyusunan rencana kerja institusi PT.'),
-            '_1_3_1'=>$this->text()->comment('Uraikan sosialisasi visi, misi, tujuan, dan sasaran PT agar dipahami seluruh pemangku kepentingan (sivitas akademika, tenaga kependidikan, pengguna lulusan, dan masyarakat).'),
-            '_1_3_2'=>$this->text()->comment('Jelaskan bahwa visi, misi, tujuan, dan sasaran PT serta strategi pencapaiannya untuk dijadikan sebagai acuan semua unit dalam institusi perguruan tinggi dalam menyusun rencana strategis (renstra) dan/atau rencana kerja unit bersangkutan.'),
+            'id_borang_s1_fakultas_standar7' =>$this->integer(),
+            'nomor_dokumen'=>$this->string(),
+            'nama_dokumen'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-
-        $this->createTable('{{%borang_institusi_standar2}}',[
-            'id'=>$this->primaryKey(),
-            'id_borang_institusi'=>$this->integer(),
-            'progress'=>$this->float(),
-            '_2_1'=>$this->text()->comment('Tata Pamong'),
-            '_2_1_1'=>$this->text()->comment('Uraikan secara ringkas sistem tata pamong (sebutkan lembaga yang berperan, perangkat pendukung, kebijakan dan peraturan/ketentuan termasuk kode etik yang dijadikan pedoman dalam penyelenggaraan perguruan tinggi, serta prosedur penetapannya) di institusi perguruan tinggi dalam membangun sistem tata pamong yang kredibel, transparan, akuntabel, bertanggung jawab, dan adil, serta pelaksanaannya.'),
-            '_2_1_2'=>$this->text()->comment('Struktur Organisasi, Koordinasi, dan Cara Kerja Institusi Perguran Tinggi. Gambarkan struktur organisasi perguruan tinggi serta tugas dan fungsi dari tiap unit yang ada. Sebutkan nama lembaga, fakultas, jurusan dan laboratorium yang ada.'),
-            '_2_1_3'=>$this->text()->comment('Kelembagaan Lembaga, Mutu, SOP, dan Efektifitas Pelaksanaan Kode Etik'),
-            '_2_2'=>$this->text()->comment('Karakteristik kepemimpinan'),
-            '_2_3'=>$this->text()->comment('Sistem Pengelolaan fungsional dan operasional program studi'),
-            '_2_3_1'=>$this->text()->comment('Jelaskan sistem pengelolaan institusi perguruan tinggi serta dokumen pendukungnya (jelaskan unit / bagian / lembaga yang berperan dalam setiap fungsi pengelolaan serta proses pengambilan keputusan).'),
-            '_2_3_2'=>$this->text()->comment('Jelaskan program peningkatan kompetensi manajerial untuk menjamin proses pengelolaan yang efektif dan efisien di setiap unit.'),
-            '_2_3_3'=>$this->text()->comment('Jelaskan diseminasi hasil kerja perguruan tinggi sebagai akuntabilitas publik.'),
-            '_2_3_4'=>$this->text()->comment('Sistem audit internal (lembaga/unit kerja, ruang lingkup tugas, prosedur kerja, dsb).'),
-            '_2_3_5'=>$this->text()->comment('Sistem audit eksternal (lembaga/unit kerja, ruang lingkup tugas, prosedur kerja, dsb).'),
-            '_2_4'=>$this->text()->comment('Sistem Penjaminan Mutu'),
-            '_2_4_1'=>$this->text()->comment('Keberadaan manual mutu yang mencakup informasi tentang kebijakan, pernyataan mutu, unit pelaksana, standar, prosedur, SOP, dan pentahapan sasaran mutu perguruan tinggi.'),
-            '_2_4_2'=>$this->text()->comment('Implementasi penjaminan mutu perguruan tinggi.'),
-            '_2_4_3'=>$this->text()->comment('Monitoring dan evaluasi penjaminan mutu perguruan tinggi, serta tindak lanjutnya.'),
-            '_2_4_4'=>$this->text()->comment('Peranan institusi dalam pembinaan program studi (pengembangan program studi serta bantuan penyusunan dokumen akreditasi dalam bentuk pelatihan, dana dan informasi)'),
-            '_2_4_5'=>$this->text()->comment('Ketersediaan dan pelaksanaan basis data institusi dan program studi untuk mendukung penyusunan dokumen evaluasi diri'),
-            '_2_4_6'=>$this->text()->comment('Jumlah program studi dan status akreditasi BAN-PT'),
-
-
-
-
-
-
-
-
-
-
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer(),
-            'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
-
     }
 
     /**
@@ -516,8 +637,7 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('{{%borang_institusi_standar1}}');
-        $this->dropTable('{{%borang_institusi}}');
+
         $this->dropTable('{{%borang_s1_fakultas_standar7}}');
         $this->dropTable('{{%borang_s1_fakultas_standar6}}');
         $this->dropTable('{{%borang_s1_fakultas_standar5}}');
@@ -525,18 +645,27 @@ class m190429_191120_init_mutu_database extends Migration
         $this->dropTable('{{%borang_s1_fakultas_standar3}}');
         $this->dropTable('{{%borang_s1_fakultas_standar2}}');
         $this->dropTable('{{%borang_s1_fakultas_standar1}}');
+        $this->dropTable('{{%detail_borang_s1_prodi_standar7}}');
         $this->dropTable('{{%borang_s1_prodi_standar7}}');
+        $this->dropTable('{{%detail_borang_s1_prodi_standar6}}');
         $this->dropTable('{{%borang_s1_prodi_standar6}}');
+        $this->dropTable('{{%detail_borang_s1_prodi_standar5}}');
         $this->dropTable('{{%borang_s1_prodi_standar5}}');
+        $this->dropTable('{{%detail_borang_s1_prodi_standar4}}');
         $this->dropTable('{{%borang_s1_prodi_standar4}}');
+        $this->dropTable('{{%detail_borang_s1_prodi_standar3}}');
         $this->dropTable('{{%borang_s1_prodi_standar3}}');
+        $this->dropTable('{{%detail_borang_s1_prodi_standar2}}');
         $this->dropTable('{{%borang_s1_prodi_standar2}}');
         $this->dropTable('{{%borang_s1_prodi_standar1}}');
+        $this->dropTable('{{%detail_borang_s1_prodi_standar1}}');
         $this->dropTable('{{%borang_s3_fakultas}}');
         $this->dropTable('{{%borang_s3_prodi}}');
         $this->dropTable('{{%borang_s2_fakultas}}');
         $this->dropTable('{{%borang_s2_prodi}}');
+        $this->dropTable('{{%dokumen_borang_s1_fakultas}}');
         $this->dropTable('{{%borang_s1_fakultas}}');
+        $this->dropTable('{{%dokumen_borang_s1_prodi}}');
         $this->dropTable('{{%borang_s1_prodi}}');
         $this->dropTable('{{%borang_diploma_akademi}}');
         $this->dropTable('{{%borang_diploma_prodi}}');
@@ -551,6 +680,7 @@ class m190429_191120_init_mutu_database extends Migration
         $this->dropTable('{{%program_studi}}');
         $this->dropTable('{{%program}}');
         $this->dropTable('{{%fakultas_akademi}}');
+        $this->dropTable('{{%profil_user}}');
     }
 
     /*
