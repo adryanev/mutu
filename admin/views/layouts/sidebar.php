@@ -11,18 +11,18 @@ Tip 2: you can also add an image using data-image tag
 Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
     <div class="logo">
-        <?= Html::a(Html::img('@web/img/logo-iain.png',['alt'=>'logo iain','width'=>'100%']),['site/index'],['class'=>'simple-text logo-mini'])?>
-        <?= Html::a('IAIN Padangsidimpuan',['site/index'],['class'=>'simple-text logo-normal','style'=>['font-size'=>'15px']])?>
+        <?= Html::a(Html::img('@web/img/logo-iain.png', ['alt' => 'logo iain', 'width' => '100%']), ['site/index'], ['class' => 'simple-text logo-mini']) ?>
+        <?= Html::a('IAIN Padangsidimpuan', ['site/index'], ['class' => 'simple-text logo-normal', 'style' => ['font-size' => '15px']]) ?>
     </div>
-    <div class="sidebar-wrapper" >
+    <div class="sidebar-wrapper">
         <div class="user">
             <div class="photo">
-                <?= Html::img('@web/img/faces/marc.jpg')?>
+                <?= Html::img('@web/img/faces/marc.jpg') ?>
             </div>
             <div class="info">
                 <a data-toggle="collapse" href="#collapseExample" class="collapsed">
                             <span>
-                                <?=Yii::$app->user->identity->profilUser->nama_lengkap?>
+                                <?= Yii::$app->user->identity->profilUser->nama_lengkap ?>
                                 <b class="caret"></b>
                             </span>
                 </a>
@@ -52,39 +52,23 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
             </div>
         </div>
 
-        <?= Menu::widget( [
+        <?= Menu::widget([
             'items' => [
 
                 ['label' => 'Dashboard', 'icon' => 'dashboard', 'url' => ['/site']],
                 [
-                    'label' => 'Borang',
-                    'icon' => 'description',
-                    'url' => '#borang',
-                    'items' => [
-                        ['label'=> 'Lihat Borang', 'url'=>['/borang/lihat']],
-                    ],
+                    'label' => 'Data Institusi',
+                    'url'=>'#data_institusi',
+                    'icon'=>'account_balance',
+                    'items'=>[
+                            ['label'=>'Unit','icon'=>'label_outline','url'=>['/unit']],
+                            ['label'=>'Program','icon'=>'label_outline','url'=>['/program']],
+                            ['label'=>'Fakultas/Akademi','icon'=>'label_outline','url'=>['/fakultas-akademi']],
+                            ['label'=>'Program Studi','icon'=>'label_outline','url'=>['/program-studi']]
+                    ]
                 ],
-                [
-                    'label' => 'Dokumentasi',
-                    'icon' => 'book',
-                    'url' => '#dokumentasi',
-                    'items' => [
-                        ['label'=> 'Penganggung Jawab', 'url'=>['/dokumentasi/penanggung']],
-                        ['label'=> 'Lihat Dokumentasi', 'url'=>['/dokumentasi/lihat-dok']],
-                    ],
-                ],
-                [
-                    'label' => 'Sertifikat Akreditasi',
-                    'icon' => 'assignment',
-                    'url' => '#sertifikat',
-                    'items' => [
-                        ['label'=> 'Data Akreditasi', 'url'=>['/data/tabel']],
-                        ['label'=> 'Grafik Akreditasi', 'url'=>['/data/grafik']],
-
-                    ],
-                ],
-                ['label'=> 'Pengguna', 'icon'=>'person', 'url'=>['/user/index']],
+                ['label' => 'Pengguna', 'icon' => 'person_outline', 'url' => ['/user/index']],
             ],
-        ])?>
+        ]) ?>
     </div>
 </div>

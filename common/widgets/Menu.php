@@ -72,7 +72,7 @@ class Menu extends \yii\widgets\Menu
             if(!empty($item['icon'])){
                 $replacements = [
                     '{label}' => strtr($this->labelTemplate, ['{label}' => $item['label'],'{caret}'=> isset($item['items'])? $this->dropdownIcon : '',]),
-                    '{icon}' => isset($item['icon'])? '<i class="material-icons">' . $item['icon'] . '</i> ': '<span class="sidebar-mini">'.preg_match_all("/[A-Z]/", ucwords(strtolower($item['label'])), $matches).'</span>',
+                    '{icon}' => isset($item['icon'])? '<i class="material-icons-round">' . $item['icon'] . '</i> ': '<span class="sidebar-mini">'.preg_match_all("/[A-Z]/", ucwords(strtolower($item['label'])), $matches).'</span>',
                     '{url}' => isset($item['url']) ? Url::to($item['url']) : 'javascript:void(0);',
 
                 ];

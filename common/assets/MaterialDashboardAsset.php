@@ -16,7 +16,7 @@ class MaterialDashboardAsset extends AssetBundle
         'css/material-dashboard.css?v=1.2.0',
         'http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css',
         'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
-        'https://fonts.googleapis.com/icon?family=Material+Icons',
+        'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp',
 
     ];
     public $js = [
