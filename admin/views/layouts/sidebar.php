@@ -56,6 +56,33 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
             'items' => [
 
                 ['label' => 'Dashboard', 'icon' => 'dashboard', 'url' => ['/site']],
+                [
+                    'label' => 'Borang',
+                    'icon' => 'description',
+                    'url' => '#borang',
+                    'items' => [
+                        ['label'=> 'Lihat Borang', 'url'=>['/borang/lihat']],
+                    ],
+                ],
+                [
+                    'label' => 'Dokumentasi',
+                    'icon' => 'book',
+                    'url' => '#dokumentasi',
+                    'items' => [
+                        ['label'=> 'Penganggung Jawab', 'url'=>['/dokumentasi/penanggung']],
+                        ['label'=> 'Lihat Dokumentasi', 'url'=>['/dokumentasi/lihat-dok']],
+                    ],
+                ],
+                [
+                    'label' => 'Sertifikat Akreditasi',
+                    'icon' => 'assignment',
+                    'url' => '#sertifikat',
+                    'items' => [
+                        ['label'=> 'Data Akreditasi', 'url'=>['/data/tabel']],
+                        ['label'=> 'Grafik Akreditasi', 'url'=>['/data/grafik']],
+
+                    ],
+                ],
                 ['label'=> 'Pengguna', 'icon'=>'person', 'url'=>['/user/index']],
             ],
         ])?>

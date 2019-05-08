@@ -5,7 +5,7 @@ use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use monitoring\models\MonitoringLoginForm;
+use admin\models\AdminLoginForm;
 
 /**
  * Site controller
@@ -60,7 +60,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        Yii::debug('is Admin?'. Yii::$app->user->identity->isAdminFakultas());
         return $this->render('index');
     }
 
@@ -76,7 +75,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new MonitoringLoginForm();
+        $model = new AdminLoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
