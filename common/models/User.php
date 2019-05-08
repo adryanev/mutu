@@ -30,9 +30,10 @@ use yii\web\IdentityInterface;
  */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
-    const STATUS_INACTIVE = 9;
-    const STATUS_ACTIVE = 10;
+    public const STATUS_DELETED = 0;
+    public const STATUS_INACTIVE = 9;
+    public const STATUS_ACTIVE = 10;
+
 
     /**
      * {@inheritdoc}
@@ -45,10 +46,35 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     /**
      * {@inheritdoc}
      */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
+
+
+    public function scenarios()
+    {
+        $scenario = parent::scenarios();
+        $scenario['create']= [
+            'username','password_hash','email','status','is_admin','is_institusi','is_fakultas','is_prodi'
+        ];
+        $scenario['update']=[
+            'username','email','status','is_admin','is_institusi','is_fakuktas','is_prodi',
+        ];
+        $scenario['password-update'] = ['password_hash'];
+
+        return $scenario;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
-            [['username', 'auth_key', 'password_hash', 'email', 'created_at', 'updated_at'], 'required'],
+            [['username', 'email',], 'required'],
             [['status', 'is_admin', 'is_institusi', 'is_fakultas', 'is_prodi', 'created_at', 'updated_at'], 'integer'],
             [['username', 'password_hash', 'password_reset_token', 'email', 'verification_token'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
@@ -73,10 +99,10 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
             'status' => 'Status',
-            'is_admin' => 'Is Admin',
-            'is_institusi' => 'Is Institusi',
-            'is_fakultas' => 'Is Fakultas',
-            'is_prodi' => 'Is Prodi',
+            'is_admin' => 'Akses Admin',
+            'is_institusi' => 'Akses Institusi',
+            'is_fakultas' => 'Akses Fakultas',
+            'is_prodi' => 'Akses Prodi',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'verification_token' => 'Verification Token',
@@ -93,15 +119,6 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
 
 
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            TimestampBehavior::className(),
-        ];
-    }
 
 
     /**
@@ -252,5 +269,21 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    public function isAdminFakultas(){
+        return $this->is_admin=== 1 && $this->is_fakultas ===1;
+    }
+
+    public function isAdminProdi(){
+        return $this->is_admin===1 && $this->is_prodi ===1;
+    }
+
+    public function isAdminInstitusi(){
+        return $this->is_admin ===1 && $this->is_institusi ===1;
+    }
+
+    public function isRoot(){
+        return $this->isAdminFakultas() && $this->isAdminInstitusi() && $this->isAdminProdi();
     }
 }

@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "program".
@@ -27,6 +28,15 @@ class Program extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
@@ -42,7 +52,7 @@ class Program extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'nama' => 'Nama',
+            'nama' => 'Nama Program',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

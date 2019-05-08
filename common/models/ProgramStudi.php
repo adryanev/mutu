@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "program_studi".
@@ -31,6 +32,16 @@ class ProgramStudi extends \yii\db\ActiveRecord
     {
         return 'program_studi';
     }
+    /**
+     * {@inheritdoc}
+     */
+
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
 
     /**
      * {@inheritdoc}
@@ -52,7 +63,7 @@ class ProgramStudi extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'nama' => 'Nama',
+            'nama' => 'Nama Program Studi',
             'id_program' => 'Id Program',
             'id_fakultas_akademi' => 'Id Fakultas Akademi',
             'created_at' => 'Created At',
