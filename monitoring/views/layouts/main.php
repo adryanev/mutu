@@ -31,6 +31,9 @@ MaterialDashboardAsset::register($this);
 
     <?=$this->render('sidebar')?>
     <?=$this->render('header')?>
+    <?= \yii2mod\alert\Alert::widget([
+        'useSessionFlash' => true,
+    ])?>
     <?=$this->render('content',['content'=>$content])?>
     <?=$this->render('footer')?>
 

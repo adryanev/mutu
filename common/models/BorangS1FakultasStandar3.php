@@ -18,12 +18,15 @@ use yii\behaviors\TimestampBehavior;
  * @property string $_3_2 Lulusan
  * @property string $_3_2_1 Rata-rata masa studi dan rata-rata IPK lulusan selama tiga tahun terakhir dari mahasiswa reguler bukan transfer untuk tiap program studi S1 yang dikelola oleh Fakultas/Sekolah Tinggi
  * @property string $_3_2_2 Pandangan Fakultas/Sekolah Tinggi tentang rara-rata masa studi dan rata-rata IPK lulusan, yang mencakup aspek : kewajaran, upaya pengembangan, dan upaya peningkatan mutu
+ * @property double $progress
  * @property int $created_at
  * @property int $updated_at
  * @property int $created_by
  * @property int $updated_by
  *
  * @property BorangS1Fakultas $borangS1Fakultas
+ * @property User $createdBy
+ * @property User $updatedBy
  * @property DetailBorangS1FakultasStandar3[] $detailBorangS1FakultasStandar3s
  */
 class BorangS1FakultasStandar3 extends \yii\db\ActiveRecord
@@ -36,11 +39,14 @@ class BorangS1FakultasStandar3 extends \yii\db\ActiveRecord
         return 'borang_s1_fakultas_standar3';
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function behaviors()
     {
         return [
             TimestampBehavior::class,
-            BlameableBehavior::class
+            BlameableBehavior::class,
         ];
     }
 
@@ -52,7 +58,10 @@ class BorangS1FakultasStandar3 extends \yii\db\ActiveRecord
         return [
             [['id_borang_s1_fakultas', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['_3_1', '_3_1_1', '_3_1_2', '_3_1_3', '_3_2', '_3_2_1', '_3_2_2'], 'string'],
+            [['progress'], 'number'],
             [['id_borang_s1_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => BorangS1Fakultas::className(), 'targetAttribute' => ['id_borang_s1_fakultas' => 'id']],
+            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
+            [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
         ];
     }
 
@@ -71,6 +80,7 @@ class BorangS1FakultasStandar3 extends \yii\db\ActiveRecord
             '_3_2' => '3 2',
             '_3_2_1' => '3 2 1',
             '_3_2_2' => '3 2 2',
+            'progress' => 'Progress',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',
@@ -84,6 +94,22 @@ class BorangS1FakultasStandar3 extends \yii\db\ActiveRecord
     public function getBorangS1Fakultas()
     {
         return $this->hasOne(BorangS1Fakultas::className(), ['id' => 'id_borang_s1_fakultas']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCreatedBy()
+    {
+        return $this->hasOne(User::className(), ['id' => 'created_by']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUpdatedBy()
+    {
+        return $this->hasOne(User::className(), ['id' => 'updated_by']);
     }
 
     /**

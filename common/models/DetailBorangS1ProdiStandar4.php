@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "detail_borang_s1_prodi_standar4".
@@ -16,6 +18,8 @@ use Yii;
  * @property int $created_by
  * @property int $updated_by
  *
+ * @property User $createdBy
+ * @property User $updatedBy
  * @property BorangS1ProdiStandar4 $borangS1ProdiStandar4
  */
 class DetailBorangS1ProdiStandar4 extends \yii\db\ActiveRecord
@@ -31,11 +35,24 @@ class DetailBorangS1ProdiStandar4 extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
             [['id_borang_s1_prodi_standar4', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['nomor_dokumen', 'nama_dokumen'], 'string', 'max' => 255],
+            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
+            [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
             [['id_borang_s1_prodi_standar4'], 'exist', 'skipOnError' => true, 'targetClass' => BorangS1ProdiStandar4::className(), 'targetAttribute' => ['id_borang_s1_prodi_standar4' => 'id']],
         ];
     }
@@ -55,6 +72,22 @@ class DetailBorangS1ProdiStandar4 extends \yii\db\ActiveRecord
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCreatedBy()
+    {
+        return $this->hasOne(User::className(), ['id' => 'created_by']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUpdatedBy()
+    {
+        return $this->hasOne(User::className(), ['id' => 'updated_by']);
     }
 
     /**
