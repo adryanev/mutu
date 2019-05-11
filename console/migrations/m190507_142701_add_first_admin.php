@@ -36,7 +36,6 @@ class m190507_142701_add_first_admin extends Migration
             'id_user'=>1,
             'nama_lengkap'=>'Administrator',
             'id_prodi'=>null,
-            'id_fakultas'=>null,
             'created_at'=>0,
             'updated_at'=>0
         ]);
