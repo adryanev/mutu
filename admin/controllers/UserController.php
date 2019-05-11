@@ -2,13 +2,20 @@
 
 namespace admin\controllers;
 
+use common\models\CreateUserForm;
+use common\models\FakultasAkademi;
+use common\models\ProgramStudi;
 use Yii;
+use yii\base\InvalidArgumentException;
 use yii\filters\AccessControl;
 use common\models\User;
 use admin\models\UserSearch;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\Response;
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -21,15 +28,15 @@ class UserController extends Controller
     public function behaviors()
     {
         return [
-            'access'=>[
-                'class'=>AccessControl::className(),
-                'rules'=>[
-                    ['actions'=>['index','create','update','view','delete'],
-                     'allow'=>true,
-                     'roles'=>['@']
-                    ]
-                ]
-            ],
+//            'access'=>[
+//                'class'=>AccessControl::className(),
+//                'rules'=>[
+//                    ['actions'=>['index','create','update','view','delete','get-prodi'],
+//                     'allow'=>true,
+//                     'roles'=>['@']
+//                    ]
+//                ]
+//            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -74,14 +81,32 @@ class UserController extends Controller
      */
     public function actionCreate()
     {
-        $model = new User();
+        $model = new CreateUserForm();
+        $fakultas = FakultasAkademi::find()->all();
+        $dataFakultas = ArrayHelper::map($fakultas,'id','nama');
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+
+
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            if($model->validate()){
+
+                $user = $model->addUser();
+                if($user === null){
+                    throw new InvalidArgumentException('Gagal membuat user');
+
+                }
+                return $this->redirect(['user/index']);
+
+            }
+
+            throw new InvalidArgumentException('Gagal membuat user, Validasi data gagal');
+
         }
 
-        return $this->render('create', [
+        return $this->render('create_user_form', [
             'model' => $model,
+            'dataFakultas'=>$dataFakultas
         ]);
     }
 
@@ -133,5 +158,41 @@ class UserController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionGetFakultas(){
+        $fakultas = FakultasAkademi::find()->all();
+        return ArrayHelper::map($fakultas,'id','nama');
+    }
+
+    public function actionGetProdi(){
+
+        $this->enableCsrfValidation = false;
+        $arrayProdi = [];
+
+        if(isset($_POST['depdrop_parents'])){
+            $parent = $_POST['depdrop_parents'];
+            if($parent!==null){
+                $id = $parent[0];
+                $dataProdi = ProgramStudi::findAll(['id_fakultas_akademi'=>$id]);
+                foreach ($dataProdi as $data){
+                    $id = $data->id;
+                    $nama = $data->nama . '('.$data->program->nama.')';
+                    $newArray = ['id'=>$id,'name'=>$nama];
+                    $arrayProdi[] = $newArray;
+                }
+
+                echo Json::encode(['output'=>$arrayProdi, 'selected'=>'']);
+                return;
+            }
+        }
+        echo Json::encode(['output'=>'', 'selected'=>'']);
+    }
+    public function beforeAction($action)
+    {
+        if ($this->action->id === 'get-prodi') {
+            $this->enableCsrfValidation = false;
+        }
+        return true;
     }
 }
