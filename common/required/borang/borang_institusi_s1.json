@@ -1,16 +1,618 @@
 [
   {
     "standar": 1,
+    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN",
     "poin": [
       {
         "nomor": "1.1",
-        "judul": "Visi, Misi, Tujuan, dan Sasaran serta Strategi Pencapaian",
+        "judul": "Jelaskan dasar penyusunan dan mekanisme penyusunan visi, misi, tujuan dan sasaran institusi perguruan tinggi, serta pihak-pihak yang dilibatkan dalam penyusunannya.",
         "penjelasan": ""
       },
       {
-        "nomor": "1.1.1",
-        "judul": "Jelaskan mekanisme penyusunan visi, misi, tujuan dan sasaran program studi, serta pihak-pihak yang dilibatkan.",
+        "nomor": "1.2",
+        "judul": "Pernyataan mengenai tonggak-tonggak capaian (milestones) tujuan yang dinyatakan dalam sasaran-sasaran yang merupakan target terukur, dan penjelasan mengenai strategi serta tahapan pencapaiannya.",
         "penjelasan": ""
+      },
+      {
+        "nomor" : "1.3",
+        "judul" : "Sosialisasi visi, misi, tujuan, sasaran dan strategi pencapaian dan penggunaannya sebagai acuan dalam penyusunan rencana kerja institusi PT.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "1.3.1",
+        "judul" : "Uraikan sosialisasi visi, misi, tujuan, dan sasaran PT agar dipahami seluruh pemangku kepentingan (sivitas akademika, tenaga kependidikan, pengguna lulusan, dan masyarakat).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "1.3.2",
+        "judul" : "Jelaskan bahwa visi, misi, tujuan, dan sasaran PT serta strategi pencapaiannya untuk dijadikan sebagai acuan semua unit dalam institusi perguruan tinggi dalam menyusun rencana strategis (renstra) dan/atau rencana kerja unit bersangkutan.",
+        "penjelasan" : ""
+      }
+    ]
+  },
+  {
+    "standar" : 2,
+    "judul" : "TATA PAMONG, KEPEMIMPINAN, SISTEM PENGELOLAAN, DAN PENJAMINAN MUTU",
+    "poin" : [
+      {
+        "nomor" : "2.1",
+        "judul" : "Tata Pamong",
+        "penjelasan" : "Sistem tata pamong berjalan secara efektif melalui mekanisme yang disepakati bersama, serta dapat memelihara dan mengakomodasi semua unsur, fungsi, dan peran dalam institusi perguruan tinggi. Tata pamong didukung dengan budaya organisasi yang dicerminkan dengan ada dan tegaknya aturan, tatacara pemilihan pimpinan, etika dosen, etika mahasiswa, etika tenaga kependidikan, sistem penghargaan dan sanksi serta pedoman dan prosedur pelayanan (administrasi, perpustakaan, laboratorium, dan studio). Sistem tata pamong (input, proses, output dan outcome serta lingkungan eksternal yang menjamin terlaksananya tata pamong yang baik) harus diformulasikan, disosialisasikan, dilaksanakan, dipantau dan dievaluasi dengan peraturan dan prosedur yang jelas. Hal-hal yang menjadi fokus di dalam tata pamong termasuk bagaimana kebijakan dan strategi disusun sedemikian rupa sehingga memungkinkan terpilihnya pemimpin dan pengelola yang kredibel dan sistem penyelenggaraan program studi secara kredibel, transparan, akuntabel, bertanggung jawab dan menerapkan prinsip-prinsip keadilan. Organisasi dan sistem tata pamong yang baik (good governance) mencerminkan kredibilitas, transparansi, akuntabilitas, tanggungjawab dan keadilan institusi perguruan tinggi."
+      },
+      {
+        "nomor" : "2.1.1",
+        "judul" : "Uraikan secara ringkas sistem tata pamong (sebutkan lembaga yang berperan, perangkat pendukung, kebijakan dan peraturan/ketentuan termasuk kode etik yang dijadikan pedoman dalam penyelenggaraan perguruan tinggi, serta prosedur penetapannya) di institusi perguruan tinggi dalam membangun sistem tata pamong yang kredibel, transparan, akuntabel, bertanggung jawab, dan adil, serta pelaksanaannya.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.1.2",
+        "judul" : "Struktur Organisasi, Koordinasi, dan Cara Kerja Institusi Perguran Tinggi. Gambarkan struktur organisasi perguruan tinggi serta tugas dan fungsi dari tiap unit yang ada. Sebutkan nama lembaga, fakultas, jurusan dan laboratorium yang ada.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td style=\"text-align: center;\"><strong>No.</strong></td><td style=\"text-align: center;\"><strong>Nama Generik Unit</strong></td><td style=\"text-align: center;\"><strong>Nama Unit di Perguruan Tinggi</strong></td><td style=\"text-align: center;\"><strong>Tugas Pokok dan &nbsp;Fungsi</strong></td></tr><tr><td style=\"text-align: center;\"><strong>(1)</strong></td><td style=\"text-align: center;\"><strong>(2)</strong></td><td style=\"text-align: center;\"><strong>(3)</strong></td><td style=\"text-align: center;\"><strong>(4)</strong></td></tr><tr><td>1</td><td>Pimpinan institusi</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Senat perguruan tinggi/senat akademik</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Satuan pengawasan</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Dewan pertimbangan</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>Pelaksana kegiatan akademik</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>Pelaksana administrasi, pelayanan dan pendukung</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>7</td><td>Pelaksana penjaminan mutu</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>8</td><td>Unit perencana dan pengembangan tridarma</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "2.1.3",
+        "judul" : "Kelembagaan Kode Etik",
+        "penjelasan" : "Jelaskan kode etik, lembaga serta prosedur penyelesaian pelanggaran kode etik sivitas akademika dan tenaga kependidikan di institusi ini beserta sosialisasinya."
+      },
+      {
+        "nomor" : "2.2",
+        "judul" : "Kepemimpinan",
+        "penjelasan" : "Kepemimpinan efektif mengarahkan dan mempengaruhi perilaku semua unsur dalam program studi, mengikuti nilai, norma, etika, dan budaya organisasi yang disepakati bersama, serta mampu membuat keputusan yang tepat dan cepat. Kepemimpinan mampu memprediksi masa depan, merumuskan dan mengartikulasi visi yang realistik, kredibel, serta mengkomunikasikan visi ke depan, yang menekankan pada keharmonisan hubungan manusia dan mampu menstimulasi secara intelektual dan arif bagi anggota untuk mewujudkan visi organisasi, serta mampu memberikan arahan, tujuan, peran, dan tugas kepada seluruh unsur dalam perguruan tinggi. Dalam menjalankan fungsi kepemimpinan dikenal kepemimpinan operasional, kepemimpinan organisasi, dan kepemimpinan publik. Kepemimpinan operasional berkaitan dengan kemampuan menjabarkan visi, misi ke dalam kegiatan operasional program studi. Kepemimpinan organisasi berkaitan dengan pemahaman tata kerja antar unit dalam organisasi perguruan tinggi. Kepemimpinan publik berkaitan dengan kemampuan menjalin kerjasama dan menjadi rujukan bagi publik. Jelaskan pola kepemimpinan dalam Program Studi."
+      },
+      {
+        "nomor" : "2.3",
+        "judul" : "Sistem Pengelolaan",
+        "penjelasan" : "Sistem pengelolaan fungsional dan operasional program studi mencakup planning, organizing, staffing, leading, controlling dalam kegiatan internal maupun eksternal. Jelaskan sistem pengelolaan Program Studi serta dokumen pendukungnya."
+      },
+      {
+        "nomor" : "2.3.1",
+        "judul" : "Jelaskan sistem pengelolaan institusi perguruan tinggi serta dokumen pendukungnya (jelaskan unit / bagian / lembaga yang berperan dalam setiap fungsi pengelolaan serta proses pengambilan keputusan).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.3.2",
+        "judul" : "Jelaskan program peningkatan kompetensi manajerial untuk menjamin proses pengelolaan yang efektif dan efisien di setiap unit.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.3.3",
+        "judul" : "Jelaskan diseminasi hasil kerja perguruan tinggi sebagai akuntabilitas publik.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.3.4",
+        "judul" : "Jelaskan sistem audit internal (lembaga/unit kerja, ruang lingkup tugas, prosedur kerja dsb).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.3.5",
+        "judul" : "Jelaskan sistem audit eksternal (lembaga/unit kerja, ruang lingkup tugas, prosedur kerja dsb).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.4",
+        "judul" : "Sistem Penjaminan Mutu",
+        "penjelasan" : "Sistem penjaminan mutu meliputi kebijakan mutu, perangkat penjaminan mutu (organisasi, pernyataan mutu, manual mutu, standar mutu), pelaksanaan penjaminan mutu, serta monitoring dan evaluasi."
+      },
+      {
+        "nomor" : "2.4.1",
+        "judul" : "Jelaskan keberadaan manual mutu yang mencakup informasi tentang kebijakan, pernyataan, unit pelaksana, standar, prosedur, SOP, dan pentahapan sasaran mutu perguruan tinggi.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.4.2",
+        "judul" : "Jelaskan implementasi penjaminan mutu perguruan tinggi.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.4.3",
+        "judul" : "Jelaskan monitoring dan evaluasi penjaminan mutu perguruan tinggi, serta tindak lanjutnya.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.4.4",
+        "judul" : "Jelaskan peranan institusi dalam pembinaan program studi (pengembangan program studi serta bantuan penyusunan dokumen akreditasi dalam bentuk pelatihan, dana dan informasi).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.4.5",
+        "judul" : "Jelaskan ketersediaan dan pelaksanaan basis data institusi dan program studi untuk mendukung penyusunan dokumen evaluasi diri.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "2.4.6",
+        "judul" : "Tuliskan jumlah program studi yang ada dan status akreditasi BAN-PT.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Status Akreditasi</strong></td><td><p><strong>JPS</strong></p><hr><p><strong>Akademik</strong></p><hr><p><strong>S-3</strong></p></td><td><p><strong>JPS</strong></p><hr><p><strong>Akademik</strong></p><hr><p><strong>S-2</strong></p></td><td><p><strong>JPS</strong></p><hr><p><strong>Akademik</strong></p><hr><p><strong>S-3</strong></p></td><td><p><strong>JPS</strong></p><hr><p><strong>Profesi</strong></p><hr><p><strong>Sp-2</strong></p></td><td><p><strong>JPS</strong></p><hr><p><strong>Profesi</strong></p><hr><p><strong>Sp-1</strong></p></td><td><p><strong>JPS</strong></p><hr><p><strong>Profesi</strong></p><hr><p>&nbsp;</p></td><td><p><strong>JPS</strong></p><hr><p><strong>Vokasi</strong></p><hr><p><strong>D-4</strong></p></td><td><p><strong>JPS</strong></p><hr><p><strong>Vokasi</strong></p><hr><p><strong>D-3</strong></p></td><td><p><strong>JPS</strong></p><hr><p><strong>Vokasi</strong></p><hr><p><strong>D-2</strong></p></td><td><p><strong>JPS</strong></p><hr><p><strong>Vokasi</strong></p><hr><p><strong>D-1</strong></p></td><td><strong>Total</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td><td><strong>(9)</strong></td><td><strong>(10)</strong></td><td><strong>(11)</strong></td><td><strong>(12)</strong></td><td><strong>(13)</strong></td></tr><tr><td>1</td><td>Terakre- ditasi A</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NA=</td></tr><tr><td>2</td><td>Terakre- ditasi B</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NB=</td></tr><tr><td>3</td><td>Terakre- ditasi C</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NC=</td></tr><tr><td>4</td><td>Akreditasi Kadalu-warsa</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NK=</td></tr><tr><td>5</td><td>Belum Terakre-ditasi</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NO=</td></tr><tr><td>&nbsp;</td><td><strong>Jumlah</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NPS=</td></tr></tbody></table>"
+      }
+    ]
+  },
+  {
+    "standar" : 3,
+    "judul" : "MAHASISWA DAN LULUSAN",
+    "poin" : [
+      {
+        "nomor" : "3.1",
+        "judul" : "Mahasiswa",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.1",
+        "judul" : "Jelaskan sistem rekruitmen dan seleksi calon mahasiswa baru untuk program sarjana, magister, doktor dan/atau diploma yang diterapkan pada institusi ini serta ketersediaan pedoman tertulis tentang rekrutmen dan seleksi mahasiswa baru.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.10",
+        "judul" : "Jelaskan pelaksanaan program layanan bimbingan karir dan informasi kerja bagi mahasiswa dan lulusan yang mencakup: (1) penyebaran informasi kerja, (2) penyelenggaraan bursa kerja, (3) perencanaan karir, (4) pelatihan melamar kerja, dan (5) layanan penempatan kerja.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.11",
+        "judul" : "Sebutkan pencapaian prestasi mahasiswa dalam tiga tahun terakhir di bidang akademik dan non-akademik, antara lain prestasi dalam penelitian dan lomba karya ilmiah, PkM, olahraga, dan seni dalam tabel berikut.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td style=\"text-align: center;\"><strong>No.</strong></td><td style=\"text-align: center;\"><strong>Nama Kegiatan</strong></td><td style=\"text-align: center;\"><strong>Waktu Penyelenggaraan</strong></td><td><p style=\"text-align: center;\"><strong>Tingkat*</strong></p><hr><p style=\"text-align: center;\"><strong>Propinsi/Wilayah</strong></p></td><td><p style=\"text-align: center;\"><strong>Tingkat*</strong></p><hr><p style=\"text-align: center;\"><strong>Nasional</strong></p></td><td><p style=\"text-align: center;\"><strong>Tingkat*</strong></p><hr><p style=\"text-align: center;\"><strong>Internasional</strong></p></td><td style=\"text-align: center;\"><strong>Prestasi yang Dicapai</strong></td></tr><tr><td style=\"text-align: center;\"><strong>(1)</strong></td><td style=\"text-align: center;\"><strong>(2)</strong></td><td style=\"text-align: center;\"><strong>(3)</strong></td><td style=\"text-align: center;\"><strong>(4)</strong></td><td style=\"text-align: center;\"><strong>(5)</strong></td><td style=\"text-align: center;\"><strong>(6)</strong></td><td style=\"text-align: center;\"><strong>(7)</strong></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>Jumlah</strong></td><td>&nbsp;</td><td>NA=</td><td>NB=</td><td>NC=</td><td>&nbsp;</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "3.1.12",
+        "judul" : "Jelaskan upaya institusi untuk meningkatkan prestasi mahasiswa dalam bidang akademik dan non-akademik, antara lain prestasi dalam penelitian dan lomba karya ilmiah, PkM, olahraga, dan seni.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.2",
+        "judul" : "Jelaskan kebijakan mengenai penerimaan mahasiswa yang memiliki potensi akademik dan kurang mampu secara ekonomi, fisik, serta implementasinya.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.3",
+        "judul" : "Jelaskan kebijakan mengenai penerimaan mahasiswa berdasarkan prinsip ekuitas (SARA-suku, agama, ras, antar golongan, gender, status sosial, dan politik).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.4",
+        "judul" : "Jelaskan kebijakan mengenai penerimaan mahasiswa yang berdasarkan prinsip pemerataan wilayah asal mahasiswa, serta informasi mengenai jumlah provinsi asal mahasiswa.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.5",
+        "judul" : "Profil Mahasiswa",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Tahun Akade-mik</strong></td><td><strong>Daya Tampung</strong></td><td><p><strong>Jumlah</strong></p><hr><p><strong>Calon Mahasiswa</strong></p><hr><p><strong>&nbsp;Ikut Seleksi</strong></p></td><td><p><strong>Jumlah</strong></p><hr><p><strong>Calon Mahasiswa</strong></p><hr><p><strong>&nbsp;Lulus Seleksi</strong></p></td><td><p><strong>Jumlah</strong></p><hr><p><strong>Mahasiswa Baru</strong></p><hr><p><strong>Regular bukan Transfer</strong></p></td><td><p><strong>Jumlah</strong></p><hr><p><strong>Mahasiswa Baru</strong></p><hr><p><strong>Transfer(1)</strong></p></td><td><p><strong>Jumlah Total Mahasiswa</strong></p><p><strong>(<em>Student Body</em>)</strong></p><hr><p><strong>Reguler bukan Transfer</strong></p></td><td><p><strong>Jumlah</strong></p><p><strong>Total Mahasiswa</strong></p><p><strong>(<em>Student Body</em>)</strong></p><hr><p><strong>Transfer(1)</strong></p></td></tr><tr><td style=\"text-align: center;\"><strong>(1)</strong></td><td style=\"text-align: center;\"><strong>(2)</strong></td><td style=\"text-align: center;\"><strong>(3)</strong></td><td style=\"text-align: center;\"><strong>(4)</strong></td><td style=\"text-align: center;\"><strong>(5)</strong></td><td style=\"text-align: center;\"><strong>(6)</strong></td><td style=\"text-align: center;\"><strong>(7)</strong></td><td style=\"text-align: center;\"><strong>(8)</strong></td></tr><tr><td><strong>Program Akademik (S-1, S-2, S-3)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Jumlah</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><b>&nbsp;</b></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Jumlah</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><strong>Program Vokasi (D-1, D-2, D-3, D-4)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Jumlah</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Total Mahasiswa pada TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>NMR =&nbsp;</td><td>NMT =</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "3.1.6",
+        "judul" : "Jelaskan tata cara dan instrumen yang digunakan untuk mengetahui kepuasan mahasiswa terhadap layanan kemahasiswaan.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.7",
+        "judul" : "Jelaskan hasil pelaksanaan pengukuran kepuasan mahasiswa menggunakan instrumen tersebut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.1.8",
+        "judul" : "Lengkapilah tabel berikut, untuk data pelayanan kepada mahasiswa dalam satu tahun terakhir.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td style=\"text-align: center;\"><strong>No.</strong></td><td style=\"text-align: center;\"><strong>Jenis Pelayanan kepada Mahasiswa</strong></td><td style=\"text-align: center;\"><strong>Uraian Kegiatan</strong></td><td style=\"text-align: center;\"><strong>Frekuensi Pelaksanaan</strong></td><td><p style=\"text-align: center;\"><strong>Jumlah</strong></p><p style=\"text-align: center;\"><strong>Mahasiswa</strong></p></td></tr><tr><td style=\"text-align: center;\">(1)</td><td style=\"text-align: center;\">(2)</td><td style=\"text-align: center;\">(3)</td><td style=\"text-align: center;\">(4)</td><td style=\"text-align: center;\">(5)</td></tr><tr><td>1</td><td>Bimbingan dan konseling</td><td>1.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>dst</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Minat dan bakat (ekstra kurikuler)</td><td>1.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>dst</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Pembinaan <em>soft skills</em></td><td>1.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>dst</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Beasiswa</td><td>1.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>dst</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>Kesehatan</td><td>1.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>dst</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>Lainnya, sebutkan:&nbsp;</td><td>1.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>dst</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "3.1.9",
+        "judul" : "Jelaskan program layanan bimbingan karir dan informasi kerja bagi mahasiswa dan lulusan yang mencakup: (1) penyebaran informasi kerja, (2) penyelenggaraan bursa kerja, (3) perencanaan karir, (4) pelatihan melamar kerja, dan (5) layanan penempatan kerja.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.2",
+        "judul" : "Lulusan",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.2.1a",
+        "judul" : "Jumlah mahasiswa dan lulusan program pendidikan sarjana.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Tahun Masuk</strong></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-6</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-5</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-4</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-3</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS</strong></p></td><td><strong>Jumlah Lulusan s.d. TS</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td><td><strong>(9)</strong></td></tr><tr><td>TS-6</td><td><em>(a1)=</em></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(b1)=</em></td><td><em>(c1)=</em></td></tr><tr><td>TS-5</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(d1) =</em></td><td>&nbsp;</td><td>&nbsp;</td><td><em>(e1) =</em></td><td><em>(f 1) =</em></td></tr><tr><td>TS-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "3.2.1b",
+        "judul" : "Tuliskan data jumlah mahasiswa dan lulusan program pendidikan magister (S-2) lima tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Tahun Masuk</strong></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS-4</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS-3</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS</strong></p></td><td><p><strong>Jumlah Lulusan </strong></p><strong>s.d. TS</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td></tr><tr><td>TS-4</td><td><em>(a2)=</em></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(b2)=</em></td><td><em>(c2)=</em></td></tr><tr><td>TS-3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(d2)=</em></td><td><em>(e2)=</em></td><td><em>(f2)=</em></td></tr><tr><td>TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "3.2.1c",
+        "judul" : "Tuliskan data jumlah mahasiswa dan lulusan program pendidikan doktor (S-3) enam tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Tahun Masuk</strong></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>TS-5</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>TS-4</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>TS-3</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>TS</strong></p></td><td><strong>Jumlah Lulusan s.d. TS</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>TS-5</td><td><em>(a3)=</em></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(b3)=</em></td><td><em>(c3)=</em></td></tr><tr><td>TS-4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(d3) =</em></td><td>&nbsp;</td><td><em>(e3) =</em></td><td><em>(f3) =</em></td></tr><tr><td>TS-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "3.2.1d",
+        "judul" : "Tuliskan data jumlah mahasiswa dan lulusan program pendidikan diploma IV (D-4)tujuh tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Tahun Masuk</strong></td><td><p><strong>Jumlah Mahasiswa per Angkatan </strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-6</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-5</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-4</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-3</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan</strong></p><p><strong>pada Tahun*</strong></p><p><strong>TS</strong></p></td><td><strong>Jumlah Lulusan s.d. TS</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td><td><strong>(9)</strong></td></tr><tr><td>TS-6</td><td><em>(a4)=</em></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(b4)=</em></td><td><em>(c4)=</em></td></tr><tr><td>TS-5</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(d4) =</em></td><td>&nbsp;</td><td>&nbsp;</td><td><em>(e4) =</em></td><td><em>(f4) =</em></td></tr><tr><td>TS-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "3.2.1e",
+        "judul" : "Tuliskan data jumlah mahasiswa dan lulusan program pendidikan diploma III (D-3) lima tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Tahun Masuk</strong></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS-4</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS-3</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Mahasiswa per Angkatan pada Tahun*</strong></p><p><strong>TS</strong></p></td><td><p><strong>Jumlah Lulusan </strong></p><strong>s.d. TS</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td></tr><tr><td>TS-4</td><td><em>(a5)=</em></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(b5)=</em></td><td><em>(c5)=</em></td></tr><tr><td>TS-3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS-2</td><td>&nbsp;</td><td>&nbsp;</td><td><em>(d5) =</em></td><td>&nbsp;</td><td><em><span new=\"\" roman=\"\" style=\"font-family:arial,sans-serif; font-size:11.0pt; mso-ansi-language:EN-US; mso-bidi-language:AR-SA; mso-fareast-font-family:\" times=\"\">(e</span><span lang=\"IN\" new=\"\" roman=\"\" style=\"font-family:arial,sans-serif; font-size:11.0pt; mso-ansi-language:IN; mso-bidi-language:AR-SA; mso-fareast-font-family:\" times=\"\">5</span><span new=\"\" roman=\"\" style=\"font-family:arial,sans-serif; font-size:11.0pt; mso-ansi-language:EN-US; mso-bidi-language:AR-SA; mso-fareast-font-family:\" times=\"\">) =</span></em></td><td><em>(f5) =</em></td></tr><tr><td>TS-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>TS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+      },
+      {
+        "nomor" : "3.2.1f",
+        "judul" : "Tuliskan data jumlah mahasiswa dan lulusan program pendidikan diploma II (D-2) tiga tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.2.1g",
+        "judul" : "Tuliskan data jumlah mahasiswa dan lulusan program pendidikan diploma I (D-1) dua tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.2.2",
+        "judul" : "Tuliskan rata-rata masa studi mahasiswa dan IPK lulusan dalam tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.2.3",
+        "judul" : "Jelaskan kebijakan institusi terkait dengan studi pelacakan baik dari lulusan maupun dari pengguna lulusan, berikut keberadaan pedoman. Informasi mencakup: (1) kebijakan dan strategi, (2) instrumen, (3) monitoring dan evaluasi, dan (4) tindak lanjut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.2.4",
+        "judul" : "Jelaskan pelaksanaan studi pelacakan, hasil evaluasi dalam lima tahun terakhir, dan tindak lanjut dari evaluasi terhadap peningkatan mutu lulusan.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "3.2.5",
+        "judul" : "Himpunan Alumni",
+        "penjelasan" : "Jelaskan apakah lulusan program studi memiliki himpunan alumni. Jika memiliki, jelaskan aktivitas dan hasil kegiatan dari himpunan alumni untuk kemajuan program studi dalam kegiatan akademik dan non akademik, meliputi sumbangan dana, sumbangan fasilitas, keterlibatan dalam kegiatan, pengembangan jejaring, dan penyediaan fasilitas."
+      }
+    ]
+  },
+  {
+    "standar" : 4,
+    "judul" : "SUMBER DAYA MANUSIA",
+    "poin" : [
+      {
+        "nomor" : "4.1",
+        "judul" : "Sistem Pengelolaan Sumber Daya Manusia",
+        "penjelasan" : "Jelaskan sistem pengelolaan sumber daya manusia yang meliputi perencanaan seleksi/perekrutan, penempatan, pengembangan, retensi, dan pemberhentian dosen dan tenaga kependidikan untuk menjamin mutu penyelenggaraan program akademik, serta remunerasi, penghargaan, dan sanksi, termasuk informasi tentang ketersediaan pedoman tertulis dan konsistensi pelaksanaannya."
+      },
+      {
+        "nomor" : "4.2",
+        "judul" : "Sistem Monitoring dan Evaluasi",
+        "penjelasan" : "Jelaskan sistem monitoring dan evaluasi, serta rekam jejak kinerja akademik dosen dan kinerja tenaga kependidikan (termasuk informasi tentang ketersediaan pedoman tertulis, serta monitoring dan evaluasi kinerja dosen dalam tridarma serta dokumentasinya)."
+      },
+      {
+        "nomor" : "4.3",
+        "judul" : "Dosen",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.3.1",
+        "judul" : "Dosen Tetap",
+        "penjelasan" : "Dosen tetap dalam borang akreditasi BAN-PT adalah dosen yang diangkat dan ditempatkan sebagai tenaga tetap pada PT yang bersangkutan; termasuk dosen penugasan Kopertis, dan dosen yayasan pada PTS dalam bidang yang relevan dengan keahlian bidang studinya. Seorang dosen hanya dapat menjadi dosen tetap pada satu perguruan tinggi, dan mempunyai penugasan kerja minimum 20 jam/minggu.<br>Dosen tetap dipilah dalam 2 kelompok, yaitu:<br>1. dosen tetap yang bidang keahliannya sesuai dengan PS<br>2. dosen tetap yang bidang keahliannya di luar PS"
+      },
+      {
+        "nomor" : "4.3.2",
+        "judul" : "Dosen Tidak Tetap",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.4",
+        "judul" : "Kegiatan peningkatan sumber daya manusia (dosen) dalam tiga tahun terakhir",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.5",
+        "judul" : "Tenaga Kependidikan",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.5.1",
+        "judul" : "Tuliskan data tenaga kependidikan yang ada di institusi yang melayani mahasiswa dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.5.2",
+        "judul" : "Jelaskan upaya yang telah dilakukan institusi dalam meningkatkan kualifikasi dan kompetensi tenaga kependidikan, dalam hal pemberian kesempatan belajar/ pelatihan, studi banding, pemberian fasilitas termasuk dana, dan jenjang karir.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.6",
+        "judul" : "Kepuasan dosen dan tenaga kependidikan",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.6.1",
+        "judul" : "Jelaskan instrumen yang digunakan untuk mengetahui tingkat kepuasan dosen dan tenaga kependidikan terhadap sistem dan praktek pengelolaan sumber daya manusia di institusi ini.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.6.2",
+        "judul" : "Jelaskan pelaksanaan survei kepuasan dosen, pustakawan, laboran, teknisi, dan tenaga administrasi terhadap sistem pengelolaan sumber daya manusia.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "4.6.3",
+        "judul" : "Jelaskan bagaimana hasil penjajagan kepuasan tersebut dan apa tindak lanjutnya.",
+        "penjelasan" : ""
+      }
+    ]
+  },
+  {
+    "standar" : 5,
+    "judul" : "KURIKULUM, PEMBELAJARAN, DAN SUASANA AKADEMIK",
+    "poin" : [
+      {
+        "nomor" : "5.1",
+        "judul" : "Kurikulum",
+        "penjelasan" : "Kurikulum pendidikan tinggi adalah seperangkat rencana dan pengaturan mengenai isi, bahan kajian, maupun bahan pelajaran serta cara penyampaiannya, dan penilaian yang digunakan sebagai pedoman penyelenggaraan kegiatan pembelajaran di perguruan tinggi. Kurikulum seharusnya memuat standar kompetensi lulusan yang terstruktur dalam kompetensi utama, pendukung dan lainnya yang mendukung tercapainya tujuan, terlaksananya misi, dan terwujudnya visi program studi. Kurikulum memuat mata kuliah/modul/blok yang mendukung pencapaian kompetensi lulusan dan memberikan keleluasaan pada mahasiswa untuk memperluas wawasan dan memperdalam keahlian sesuai dengan minatnya, serta dilengkapi dengan deskripsi mata kuliah/modul/blok, silabus, rencana pembelajaran dan evaluasi. Kurikulum harus dirancang berdasarkan relevansinya dengan tujuan, cakupan dan kedalaman materi, pengorganisasian yang mendorong terbentuknya hard skills dan keterampilan kepribadian dan perilaku (soft skills) yang dapat diterapkan dalam berbagai situasi dan kondisi."
+      },
+      {
+        "nomor" : "5.1.1",
+        "judul" : "Jelaskan kebijakan institusi dalam pengembangan kurikulum, bentuk dukungan institusi dalam pengembangan kurikulum program studi, sistem monitoring dan evaluasi kurikulum, serta keberadaan dokumen.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "5.1.2",
+        "judul" : "Jelaskan monitoring dan evaluasi pengembangan kurikulum program studi",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "5.2",
+        "judul" : "Pembelajaran",
+        "penjelasan" : "Jelaskan peran Fakultas/Sekolah Tinggi dalam memonitor dan mengevaluasi pembelajaran."
+      },
+      {
+        "nomor" : "5.2.1",
+        "judul" : "Sistem Pembelajaran",
+        "penjelasan" : "Jelaskan unit organisasi yang melaksanakan kegiatan pengkajian dan pengembangan sistem dan mutu pembelajaran yang menghasilkan capaian pembelajaran yang sesuai dengan tujuan kurikulum dan lulusan yang mampu berpikir kritis, bereksplorasi, bereksperimen, dan memiliki integritas, serta pemanfaatan hasilnya."
+      },
+      {
+        "nomor" : "5.2.2",
+        "judul" : "Pengendalian mutu proses pembelajaran",
+        "penjelasan" : "Jelaskan bagaimana sistem pengendalian mutu pembelajaran diterapkan institusi termasuk proses monitoring, evaluasi, dan pemanfaatannya."
+      },
+      {
+        "nomor" : "5.2.3",
+        "judul" : "Pedoman Pelaksanaan Tridarma PT",
+        "penjelasan" : "Jelaskan keberadaan pedoman pelaksanaan tridarma PT, serta pengintegrasian kegiatan penelitian dan pelayanan/pengabdian kepada masyarakat kedalam proses pembelajaran, serta ketersediaan dokumen pendukung."
+      },
+      {
+        "nomor" : "5.3",
+        "judul" : "Suasana Akademik",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "5.3.1",
+        "judul" : "Kebebasan Akademik, Kebebasan Mimbar Akademik, dan Otonomi Keilmuan",
+        "penjelasan" : "Jelaskan bagaimana institusi menjamin pelaksanaan kebebasan akademik, kebebasan mimbar akademik, dan otonomi keilmuan. Jelaskan pula ketersediaan dokumen pendukung serta konsistensi pelaksanaannya."
+      },
+      {
+        "nomor" : "5.3.2",
+        "judul" : "Jelaskan kebijakan dan dukungan institusi untuk menjamin terciptanya suasana akademik di lingkungan institusi yang kondusif untuk meningkatkan proses dan mutu pembelajaran. Dukungan institusi mencakup antara lain peraturan dan sumber daya.",
+        "penjelasan" : ""
+      }
+    ]
+  },
+  {
+    "standar" : 6,
+    "judul" : "PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI",
+    "poin" : [
+      {
+        "nomor" : "6.1",
+        "judul" : "Pembiayaan",
+        "penjelasan" : "Pengelolaan dana institusi perguruan tinggi harus tercerminkan dalam dokumen tentang proses perencanaan, penerimaan, pengalokasian, pelaporan, audit, monitoring dan evaluasi, serta pertanggungjawaban penggunaan dana kepada pemangku kepentingan melalui mekanisme yang transparan dan akuntabel."
+      },
+      {
+        "nomor" : "6.1.1",
+        "judul" : "Jelaskan proses pengelolaan dana institusi perguruan tinggi mulai dari perencanaan, penerimaan, pengalokasian, pelaporan, audit, monitoring dan evaluasi, serta pertanggungjawaban kepada pemangku kepentingan.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.1.2",
+        "judul" : "Jelaskan mekanisme penetapan biaya pendidikan (SPP dan biaya lainnya), serta jelaskan pihak-pihak yang berperan dalam penetapan tersebut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.1.3",
+        "judul" : "Jelaskan kebijakan mengenai pembiayaan mahasiswa yang berpotensi secara akademik dan kurang mampu, jumlah dan persentase mahasiswa yang mendapatkan keringanan atau pembebasan biaya pendidikan terhadap total mahasiswa.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.1.4",
+        "judul" : "Tuliskan realisasi penerimaan dana (termasuk hibah) dalam juta rupiah, selama tiga tahun terakhir, pada tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.1.5",
+        "judul" : "Tuliskan penggunaan dana yang diterima pada Tabel 6.2.2 selama tiga tahun terakhir pada tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.1.6",
+        "judul" : "Tuliskan dana untuk kegiatan penelitian dalam tiga tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.1.7",
+        "judul" : "Tuliskan dana yang diperoleh dari/untuk kegiatan pelayanan/pengabdian kepada masyarakat pada tiga tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.1.8",
+        "judul" : "Jelaskan sistem monitoring dan evaluasi pendanaan internal untuk pemanfaatan dana yang lebih efektif, transparan, dan memenuhi aturan keuangan yang berlaku.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.1.9",
+        "judul" : "Jelaskan tentang lembaga audit eksternal keuangan, pelaksanaan audit, ketersediaan laporan bagi pemangku kepentingan, serta tindak lanjutnya oleh perguruan tinggi.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.2",
+        "judul" : "Prasarana dan Sarana",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.2.1",
+        "judul" : "Jelaskan sistem pengelolaan prasarana dan sarana (kebijakan pengembangan dan pencatatan, penetapan penggunaan, pemeliharaan/perbaikan/kebersihan, keamanan dan keselamatan prasarana dan sarana) yang digunakan dalam penyelenggaraan kegiatan akademik dan non-akademik, untuk mencapai tujuan institusi.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.2.2",
+        "judul" : "Tuliskan lokasi, status, penggunaan dan luas lahan yang digunakan perguruan tinggi untuk menjamin penyelenggaraan pendidikan yang bermutu, dalam tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.2.3",
+        "judul" : "Prasarana untuk kegiatan akademik dan non-akademik",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.2.4",
+        "judul" : "Sebutkan prasarana tambahan yang dikelola dalam tiga tahun terakhir. Uraikan pula rencana investasi untuk prasarana dalam lima tahun mendatang, dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.2.5",
+        "judul" : "Pustaka (buku teks, karya ilmiah, dan jurnal; termasuk juga dalam bentuk elektronik/e-library)",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.2.6",
+        "judul" : "Jelaskan pula aksesibilitas dan pemanfaatan pustaka di atas.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.2.7",
+        "judul" : "Jelaskan upaya perguruan tinggi menyediakan prasarana dan sarana pembelajaran yang terpusat, serta aksesibilitasnya bagi sivitas akademika.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3",
+        "judul" : "Sistem Informasi",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3.1",
+        "judul" : "Jelaskan sistem informasi dan fasilitas yang digunakan oleh perguruan tinggi untuk kegiatan pembelajaran (hardware, software, e-learning, e-library).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3.2",
+        "judul" : "Jelaskan sistem informasi dan fasilitas yang digunakan oleh perguruan tinggi untuk kegiatan administrasi (akademik, keuangan, dan personil) serta aksesibilitasnya.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3.3",
+        "judul" : "Jelaskan sistem informasi dan fasilitas yang digunakan oleh institusi perguruan tinggi untuk pengelolaan prasarana dan sarana (hardware, software).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3.4",
+        "judul" : "Jelaskan sistem pendukung pengambilan keputusan.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3.5",
+        "judul" : "Jelaskan sistem informasi (misalnya website institusi, fasilitas internet, jaringan lokal, jaringan nirkabel) yang dimanfaatkan untuk komunikasi internal dan eksternal kampus. Jelaskan juga akses mahasiswa dan dosen terhadap sumber informasi.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3.6",
+        "judul" : "Jelaskan kapasitas internet yang tersedia dan bandwidth per mahasiswa.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3.7",
+        "judul" : "Aksesibiltas Data",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "6.3.8",
+        "judul" : "Blue print sistem informasi.",
+        "penjelasan" : "Jelaskan blue print pengembangan, pengelolaan, dan pemanfaatan sistem informasi."
+      }
+    ]
+  },
+  {
+    "standar" : 7,
+    "judul" : "PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI",
+    "poin" : [
+      {
+        "nomor" : "7.1",
+        "judul" : "Penelitian",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.1.1",
+        "judul" : "Jelaskan kebijakan dan sistem pengelolaan penelitian (lembaga/unit yang menangani masalah penelitian, pengarahan fokus dan agenda penelitian, pedoman penyusunan usul dan pelaksanaan penelitian, pendanaan, dan jaminan atas HaKI).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.1.2",
+        "judul" : "Tuliskan jumlah judul penelitian* yang dilakukan oleh dosen tetap selama tiga tahun terakhir dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.1.3",
+        "judul" : "Tuliskan judul artikel ilmiah/karya ilmiah/karya seni/buku yang dihasilkan selama tiga tahun terakhir oleh dosen tetap dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.1.4",
+        "judul" : "Jumlah artikel ilmiah yang tercatat dalam indeks sitasi internasional selama 3 tahun terakhir: ... artikel.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.1.5",
+        "judul" : "Sebutkan karya dosen dan atau mahasiswa Institusi perguruan tinggi yang telah memperoleh Paten/Hak atas Kekayaan Intelektual (HaKI)/Karya yang mendapatkan penghargaan tingkat nasional/internasional selama tiga tahun terakhir.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.1.6",
+        "judul" : "Jelaskan kebijakan dan upaya yang dilakukan oleh institusi dalam menjamin keberlanjutan penelitian, yang mencakup informasi tentang agenda penelitian, dukungan SDM, prasarana dan sarana, jejaring penelitian, dan pencarian berbagai sumber dana penelitian.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.2",
+        "judul" : "Kegiatan Pelayanan/Pengabdian kepada Masyarakat (PkM)",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.2.1",
+        "judul" : "Jelaskan kebijakan dan sistem pengelolaan kegiatan PkM (lembaga/unit yang menangani masalah, agenda, pedoman penyusunan usul dan pelaksanaan, serta pendanaan PkM).",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.2.2",
+        "judul" : "Tuliskan jumlah kegiatan PkM* berdasarkan sumber pembiayaan selama tiga tahun terakhir yang dilakukan oleh institusi dengan mengikuti format tabel berikut.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.2.3",
+        "judul" : "Jelaskan kebijakan dan upaya yang dilakukan oleh institusi dalam menjamin keberlanjutan dan mutu kegiatan PkM, , yang mencakup informasi tentang agenda PkM, dukungan SDM, prasarana dan sarana, jejaring PkM, dan pencarian berbagai sumber dana PkM.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.3",
+        "judul" : "Kerjasama",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.3.1",
+        "judul" : "Jelaskan kebijakan dan upaya (pengelolaan serta sistem monitoring dan evaluasi) kerjasama, dalam rangka mewujudkan visi, melaksanakan misi, dan mencapai tujuan dan sasaran institusi.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.3.2",
+        "judul" : "Tuliskan instansi dalam negeri yang menjalin kerjasama* yang terkait dengan institusi perguruan tinggi dalam tiga tahun terakhir.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.3.3",
+        "judul" : "Tuliskan instansi luar negeri yang menjalin kerjasama* yang terkait dengan institusi perguruan tinggi/jurusan dalam tiga tahun terakhir.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.3.4",
+        "judul" : "Jelaskan proses monitoring dan evaluasi pelaksanaan dan hasil kerjasama serta waktu pelaksanaannya.",
+        "penjelasan" : ""
+      },
+      {
+        "nomor" : "7.3.5",
+        "judul" : "Jelaskan manfaat dan kepuasan mitra kerja sama. Jelaskan pula cara memperoleh informasi tersebut.",
+        "penjelasan" : ""
       }
     ]
   }
