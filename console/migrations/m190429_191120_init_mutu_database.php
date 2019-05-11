@@ -17,7 +17,6 @@ class m190429_191120_init_mutu_database extends Migration
             'id'=>$this->primaryKey(),
             'id_user'=>$this->integer(),
             'nama_lengkap'=>$this->string(),
-            'id_fakultas'=>$this->integer(),
             'id_prodi'=>$this->integer(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
