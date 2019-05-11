@@ -9,7 +9,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use akreditasi\assets\AppAsset;
-use common\widgets\Alert;
+use yii2mod\alert\Alert;
 
 MaterialDashboardAsset::register($this);
 ?>
@@ -31,6 +31,9 @@ MaterialDashboardAsset::register($this);
 
     <?=$this->render('sidebar')?>
     <?=$this->render('header')?>
+    <?= Alert::widget([
+            'useSessionFlash' => true,
+    ])?>
     <?=$this->render('content',['content'=>$content])?>
     <?=$this->render('footer')?>
 
