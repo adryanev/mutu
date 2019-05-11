@@ -48,9 +48,7 @@ class UserPasswordForm extends Model
     }
     public function __construct($id, $config = [])
     {
-        if (!is_int($id)) {
-            throw new InvalidArgumentException('Oops, Data yang anda cari tidak dapat ditemukan.');
-        }
+
         if (empty($id)) {
             throw new InvalidArgumentException('User tidak ditemukan');
         }

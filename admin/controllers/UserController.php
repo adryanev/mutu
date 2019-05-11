@@ -5,6 +5,8 @@ namespace admin\controllers;
 use common\models\CreateUserForm;
 use common\models\FakultasAkademi;
 use common\models\ProgramStudi;
+use common\models\UpdateUserForm;
+use common\models\UserPasswordForm;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\filters\AccessControl;
@@ -119,14 +121,38 @@ class UserController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $model = new UpdateUserForm($id);
+        $modelPassword = new UserPasswordForm($id);
+        $fakultas = FakultasAkademi::find()->all();
+        $dataFakultas = ArrayHelper::map($fakultas,'id','nama');
+
+        if ($model->load(Yii::$app->request->post()) ) {
+            if(!$model->validate()){
+                throw new InvalidArgumentException('Gagal Validasi user');
+            }
+            $model->updateUser();
+            if($model === false){
+                throw new InvalidArgumentException('Gagal membuat user, terdapat error');
+
+            }
+            return $this->redirect(['view', 'id' => $model->getUser()->id]);
+        }
+        if($modelPassword->load(Yii::$app->request->post())){
+
+            $modelPassword->updatePassword();
+            if(!$modelPassword){
+                throw new InvalidArgumentException('Gagal Mengganti Password');
+            }
+            return $this->redirect(['view', 'id' => $model->getUser()->id]);
+
+
         }
 
-        return $this->render('update', [
+        return $this->render('update_user_form', [
             'model' => $model,
+            'modelPassword'=>$modelPassword,
+            'dataFakultas'=>$dataFakultas
         ]);
     }
 

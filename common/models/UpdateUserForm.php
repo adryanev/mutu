@@ -6,6 +6,7 @@ namespace common\models;
 
 use InvalidArgumentException;
 use yii\base\Model;
+use yii\db\Exception;
 
 class UpdateUserForm extends Model
 {
@@ -50,9 +51,6 @@ class UpdateUserForm extends Model
     public function __construct($id,$config = [])
     {
 
-        if(!is_int($id)){
-            throw new InvalidArgumentException('Id tidak valid');
-        }
         if(empty($id)){
             throw new InvalidArgumentException('Id tidak boleh kosong');
         }
@@ -61,6 +59,20 @@ class UpdateUserForm extends Model
             throw new InvalidArgumentException('User tidak Ditemukan');
         }
         $this->_profilUser = $this->_user->profilUser;
+
+        $this->setAttributes([
+            'username'=>$this->_user->username,
+            'email'=>$this->_user->email,
+            'status'=>$this->_user->status,
+            'is_admin'=>$this->_user->is_admin,
+            'is_institusi'=>$this->_user->is_institusi,
+            'is_fakultas'=>$this->_user->is_fakultas,
+            'is_prodi'=>$this->_user->is_prodi,
+            'nama_lengkap'=>$this->_profilUser->nama_lengkap,
+            'id_prodi'=>$this->_profilUser->id_prodi,
+            'id_fakultas'=>$this->_profilUser->id_fakultas,
+        ],false);
+
         parent::__construct($config);
     }
 
@@ -79,13 +91,41 @@ class UpdateUserForm extends Model
 
         $profil = $this->_profilUser;
 
-        $user->setAttributes(['username','email','status','is_admin','is_institusi','is_fakultas','is_prodi']);
+        $user->setAttributes(['username'=>$this->username,
+            'email'=>$this->email,
+            'status'=>$this->status,
+            'is_admin'=>$this->is_admin,
+            'is_institusi'=>$this->is_institusi,'is_fakultas','is_prodi']);
         $profil->setAttributes(['nama_lengkap','id_fakultas','id_prodi']);
 
-        $valid = $user->save()&& $profil->save() ;
+        $transaction = \Yii::$app->db->beginTransaction();
+
+        if(!$user->save()){
+            $transaction->rollBack();
+            return false;
+        }
+        $profil->id_user = $user->id;
+        if(!$profil->save()){
+            $transaction->rollBack();
+            return false;
+        }
+
+        try {
+            $transaction->commit();
+        } catch (Exception $e) {
+            var_dump($e->getMessage());
+        }
 
 
-        return $valid? $user : null;
+
+        return $user;
     }
 
+    public function getUser(){
+        return $this->_user;
+    }
+
+    public function getProfilUser(){
+        return $this->_profilUser;
+    }
 }
