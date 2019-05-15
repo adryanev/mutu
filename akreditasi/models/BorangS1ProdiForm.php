@@ -5,6 +5,7 @@ namespace akreditasi\models;
 
 
 use common\models\DokumenBorangS1Prodi;
+use Yii;
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
 use yii\web\UploadedFile;

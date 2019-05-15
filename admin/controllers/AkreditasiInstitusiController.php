@@ -2,20 +2,18 @@
 
 namespace admin\controllers;
 
-use common\models\JenisAkreditasi;
 use Yii;
 use yii\filters\AccessControl;
-use common\models\Akreditasi;
-use admin\models\AkreditasiSearch;
-use yii\helpers\ArrayHelper;
+use common\models\AkreditasiInstitusi;
+use admin\models\AkreditasiInstitusiSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AkreditasiController implements the CRUD actions for Akreditasi model.
+ * AkreditasiInstitusiController implements the CRUD actions for AkreditasiInstitusi model.
  */
-class AkreditasiController extends Controller
+class AkreditasiInstitusiController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -42,12 +40,12 @@ class AkreditasiController extends Controller
     }
 
     /**
-     * Lists all Akreditasi models.
+     * Lists all AkreditasiInstitusi models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new AkreditasiSearch();
+        $searchModel = new AkreditasiInstitusiSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -57,7 +55,7 @@ class AkreditasiController extends Controller
     }
 
     /**
-     * Displays a single Akreditasi model.
+     * Displays a single AkreditasiInstitusi model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -70,46 +68,25 @@ class AkreditasiController extends Controller
     }
 
     /**
-     * Creates a new Akreditasi model.
+     * Creates a new AkreditasiInstitusi model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Akreditasi();
+        $model = new AkreditasiInstitusi();
 
-        $jenisAkreditasi = JenisAkreditasi::find()->all();
-        $dataJenisAkreditasi = ArrayHelper::map($jenisAkreditasi,'id','nama');
-
-        $akreditasiProdi = 'Program Studi';
-        $akreditasiInstitusi = 'Institusi';
-
-        $path = Yii::getAlias('@uploadAkreditasi');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-
-            switch (strtolower($model->jenisAkreditasi->nama)){
-                case strtolower($akreditasiProdi):
-                    $path .= "/$model->lembaga/prodi/$model->tahun/";
-                    break;
-                case strtolower($akreditasiInstitusi):
-                    $path .= "/$model->lembaga/institusi/$model->tahun/";
-                    break;
-            }
-
-            if(!file_exists($path) && !mkdir($path, 0777, true) && !is_dir($path)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $path));
-            }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
-            'dataJenisAkreditasi'=>$dataJenisAkreditasi
         ]);
     }
 
     /**
-     * Updates an existing Akreditasi model.
+     * Updates an existing AkreditasiInstitusi model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -119,22 +96,17 @@ class AkreditasiController extends Controller
     {
         $model = $this->findModel($id);
 
-        $jenisAkreditasi = JenisAkreditasi::find()->all();
-        $dataJenisAkreditasi = ArrayHelper::map($jenisAkreditasi,'id','nama');
-
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
-            'dataJenisAkreditasi'=>$dataJenisAkreditasi
         ]);
     }
 
     /**
-     * Deletes an existing Akreditasi model.
+     * Deletes an existing AkreditasiInstitusi model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -148,15 +120,15 @@ class AkreditasiController extends Controller
     }
 
     /**
-     * Finds the Akreditasi model based on its primary key value.
+     * Finds the AkreditasiInstitusi model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Akreditasi the loaded model
+     * @return AkreditasiInstitusi the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Akreditasi::findOne($id)) !== null) {
+        if (($model = AkreditasiInstitusi::findOne($id)) !== null) {
             return $model;
         }
 

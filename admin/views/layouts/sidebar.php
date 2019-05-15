@@ -67,11 +67,13 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                         ['label' => 'Program Studi', 'icon' => 'label_outline', 'url' => ['/program-studi']]
                     ]
                 ],
-                ['label' => 'Pengguna', 'icon' => 'person_outline', 'url' => ['/user/index']],
+                ['label' => 'Pengguna', 'icon' => 'person_outline', 'url' => ['/user']],
                 ['label' => 'Akreditasi', 'icon' => 'school', 'url' => '#akreditasi',
                     'items' => [
-                        ['label' => 'Jenis Akreditasi', 'url' => ['/jenis-akreditasi/index'],],
-                        ['label'=>'Data Akreditasi','url'=>['/akreditasi/index']]
+                        ['label' => 'Jenis Akreditasi', 'url' => ['/jenis-akreditasi'],],
+                        ['label'=>'Data Akreditasi','url'=>['/akreditasi']],
+                        ['label'=>'Akreditasi Institusi','url'=>['/akreditasi-institusi']],
+                        ['label'=>'Akreditasi Program Studi','url'=>['/akreditasi-prodi']],
                     ]],
             ],
         ]) ?>
