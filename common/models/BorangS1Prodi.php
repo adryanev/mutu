@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "borang_s1_prodi".
@@ -31,6 +32,13 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'borang_s1_prodi';
+    }
+
+    public function behaviors()
+    {
+        return[
+            TimestampBehavior::class
+        ];
     }
 
     /**
@@ -128,6 +136,6 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getDokumenBorangS1Prodis()
     {
-        return $this->hasMany(DokumenBorangS1Prodi::className(), ['id_akreditasi_prodi_s1' => 'id']);
+        return $this->hasMany(DokumenBorangS1Prodi::className(), ['id_borang_s1_prodi' => 'id']);
     }
 }

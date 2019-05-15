@@ -3,6 +3,8 @@
 namespace admin\controllers;
 
 use common\models\Akreditasi;
+use common\models\BorangS1Fakultas;
+use common\models\BorangS1Prodi;
 use common\models\ProgramStudi;
 use Yii;
 use yii\db\StaleObjectException;
@@ -90,6 +92,7 @@ class AkreditasiProdiS1Controller extends Controller
 
         if ($model->load(Yii::$app->request->post()) ) {
 
+            $model->progress = 0;
 
             $pathP = $path. "/{$model->akreditasi->tahun}/{$model->id_prodi}/prodi";
             $pathBorang = $pathP . '/borang';
@@ -129,6 +132,21 @@ class AkreditasiProdiS1Controller extends Controller
                 throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathFGambar));
             }
             $model->save();
+
+            $transaction = Yii::$app->db->beginTransaction();
+
+            $borangProdi = new BorangS1Prodi();
+            $borangFakultas = new BorangS1Fakultas();
+
+            $borangProdi->id_akreditasi_prodi_s1 = $model->id;
+            $borangFakultas->id_akreditasi_prodi_s1 = $model->id;
+
+            $borangProdi->save();
+            $borangFakultas->save();
+
+
+
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
