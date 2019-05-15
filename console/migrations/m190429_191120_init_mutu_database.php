@@ -646,13 +646,20 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeDown()
     {
-
+        
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar7}}');
         $this->dropTable('{{%borang_s1_fakultas_standar7}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar6}}');
         $this->dropTable('{{%borang_s1_fakultas_standar6}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar5}}');
         $this->dropTable('{{%borang_s1_fakultas_standar5}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar4}}');
         $this->dropTable('{{%borang_s1_fakultas_standar4}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar3}}');
         $this->dropTable('{{%borang_s1_fakultas_standar3}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar2}}');
         $this->dropTable('{{%borang_s1_fakultas_standar2}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar1}}');
         $this->dropTable('{{%borang_s1_fakultas_standar1}}');
         $this->dropTable('{{%detail_borang_s1_prodi_standar7}}');
         $this->dropTable('{{%borang_s1_prodi_standar7}}');

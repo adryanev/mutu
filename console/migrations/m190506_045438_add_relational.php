@@ -110,25 +110,25 @@ class m190506_045438_add_relational extends Migration
 
         //borang standar fakultas
 
-        $this->dropForeignKey('fk-detail_borang_s1_fakultas_standar7-borang_s1_fakultas_standar7','{{%detail_borang_s1_fakultas_standar7}}');
+        $this->dropForeignKey('fk-d_borang_s1_fakultas_standar7-borang_s1_fakultas_standar7','{{%detail_borang_s1_fakultas_standar7}}');
         $this->dropForeignKey('fk-borang_s1_fakultas_standar7-borang_s1_fakultas','{{%borang_s1_fakultas_standar7}}');
 
-        $this->dropForeignKey('fk-detail_borang_s1_fakultas_standar6-borang_s1_fakultas_standar6','{{%detail_borang_s1_fakultas_standar6}}');
+        $this->dropForeignKey('fk-d_borang_s1_fakultas_standar6-borang_s1_fakultas_standar6','{{%detail_borang_s1_fakultas_standar6}}');
         $this->dropForeignKey('fk-borang_s1_fakultas_standar6-borang_s1_fakultas','{{%borang_s1_fakultas_standar6}}');
 
-        $this->dropForeignKey('fk-detail_borang_s1_fakultas_standar5-borang_s1_fakultas_standar5','{{%detail_borang_s1_fakultas_standar5}}');
+        $this->dropForeignKey('fk-d_borang_s1_fakultas_standar5-borang_s1_fakultas_standar5','{{%detail_borang_s1_fakultas_standar5}}');
         $this->dropForeignKey('fk-borang_s1_fakultas_standar5-borang_s1_fakultas','{{%borang_s1_fakultas_standar5}}');
 
-        $this->dropForeignKey('fk-detail_borang_s1_fakultas_standar4-borang_s1_fakultas_standar4','{{%detail_borang_s1_fakultas_standar4}}');
+        $this->dropForeignKey('fk-d_borang_s1_fakultas_standar4-borang_s1_fakultas_standar4','{{%detail_borang_s1_fakultas_standar4}}');
         $this->dropForeignKey('fk-borang_s1_fakultas_standar4-borang_s1_fakultas','{{%borang_s1_fakultas_standar4}}');
 
-        $this->dropForeignKey('fk-detail_borang_s1_fakultas_standar3-borang_s1_fakultas_standar3','{{%detail_borang_s1_fakultas_standar3}}');
+        $this->dropForeignKey('fk-d_borang_s1_fakultas_standar3-borang_s1_fakultas_standar3','{{%detail_borang_s1_fakultas_standar3}}');
         $this->dropForeignKey('fk-borang_s1_fakultas_standar3-borang_s1_fakultas','{{%borang_s1_fakultas_standar3}}');
 
-        $this->dropForeignKey('fk-detail_borang_s1_fakultas_standar2-borang_s1_fakultas_standar2','{{%detail_borang_s1_fakultas_standar2}}');
+        $this->dropForeignKey('fk-d_borang_s1_fakultas_standar2-borang_s1_fakultas_standar2','{{%detail_borang_s1_fakultas_standar2}}');
         $this->dropForeignKey('fk-borang_s1_fakultas_standar2-borang_s1_fakultas','{{%borang_s1_fakultas_standar2}}');
 
-        $this->dropForeignKey('fk-detail_borang_s1_fakultas_standar1-borang_s1_fakultas_standar1','{{%detail_borang_s1_fakultas_standar1}}');
+        $this->dropForeignKey('fk-d_borang_s1_fakultas_standar1-borang_s1_fakultas_standar1','{{%detail_borang_s1_fakultas_standar1}}');
         $this->dropForeignKey('fk-borang_s1_fakultas_standar1-borang_s1_fakultas','{{%borang_s1_fakultas_standar1}}');
 
         //borang standar prodi
