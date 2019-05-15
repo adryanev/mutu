@@ -5,8 +5,11 @@ namespace admin\controllers;
 use common\models\Akreditasi;
 use common\models\BorangS1Fakultas;
 use common\models\BorangS1Prodi;
+use common\models\DokumentasiS1Fakultas;
+use common\models\DokumentasiS1Prodi;
 use common\models\ProgramStudi;
 use Yii;
+use yii\base\InvalidArgumentException;
 use yii\db\StaleObjectException;
 use yii\filters\AccessControl;
 use common\models\AkreditasiProdiS1;
@@ -78,6 +81,7 @@ class AkreditasiProdiS1Controller extends Controller
      * Creates a new AkreditasiProdiS1 model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
+     * @throws \yii\db\Exception
      */
     public function actionCreate()
     {
@@ -139,14 +143,38 @@ class AkreditasiProdiS1Controller extends Controller
             $borangFakultas = new BorangS1Fakultas();
 
             $borangProdi->id_akreditasi_prodi_s1 = $model->id;
+            $borangProdi->progress = 0;
             $borangFakultas->id_akreditasi_prodi_s1 = $model->id;
+            $borangFakultas->progress = 0;
 
-            $borangProdi->save();
-            $borangFakultas->save();
+            if(!$borangProdi->save(false) ){
+                $transaction->rollBack();
+                throw new InvalidArgumentException($borangProdi->errors );
+            }
+            if(!$borangFakultas->save(false)){
+                $transaction->rollBack();
+                throw new InvalidArgumentException($borangFakultas->errors );
+            }
 
+            $dokumentasiProdi = new DokumentasiS1Prodi();
+            $dokumentasiFakultas = new DokumentasiS1Fakultas();
 
+            $dokumentasiProdi->id_akreditasi_prodi_s1 = $model->id;
+            $dokumentasiProdi->progress = 0;
+            $dokumentasiFakultas->id_akreditasi_prodi_s1 = $model->id;
+            $dokumentasiFakultas->progress=0;
 
+            if(!$dokumentasiProdi->save() ){
+                $transaction->rollBack();
+                throw new InvalidArgumentException($dokumentasiProdi->errors);
 
+            }
+            if(!$dokumentasiFakultas->save()){
+                $transaction->rollBack();
+                throw new InvalidArgumentException($dokumentasiFakultas->errors);
+            }
+
+            $transaction->commit();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

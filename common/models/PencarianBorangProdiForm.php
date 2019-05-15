@@ -24,23 +24,30 @@ class PencarianBorangProdiForm extends Model
     private $_borang;
 
 
-    public function rules()
+    public function rules() :array
     {
         return [
             [['akreditasi','program','id_prodi','borang_untuk',],'required']
         ];
     }
 
-    public function cari(){
+    public function cari(): string
+    {
 
+        $url ='';
         $this->_akreditasi = Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
         switch ($this->program){
             case self::S1:
                 $this->_akreditasi_prodi = AkreditasiProdiS1::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
-                $this->_borang = new BorangS1Prodi();
-                $this->_borang->id_akreditasi_prodi_s1 = $this->_akreditasi_prodi->id;
-                $this->_borang->save();
+                if($this->borang_untuk === 'fakultas'){
+                    $this->_borang = BorangS1Fakultas::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
+                    $url .= 'borang-s1-fakultas/index';
 
+                }else{
+                    $this->_borang = BorangS1Prodi::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
+                    $url .= 'borang-s1-prodi/index';
+
+                }
 
                 break;
             case self::S2:
@@ -62,13 +69,34 @@ class PencarianBorangProdiForm extends Model
         }
 
 
-
-
-
+        return $url;
 
 
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAkreditasi()
+    {
+        return $this->_akreditasi;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAkreditasiProdi()
+    {
+        return $this->_akreditasi_prodi;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBorang()
+    {
+        return $this->_borang;
+    }
 
 
 }

@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4 class="card-title">Form Borang</h4>
                 <?php $form = ActiveForm::begin() ?>
 
-                    <?=$form->field($model,'akreditasi')->dropDownList($dataAkreditasi)?>
+                    <?=$form->field($model,'akreditasi')->dropDownList($dataAkreditasi,['prompt'=>'Pilih Akreditasi'])?>
                     <?=$form->field($model,'program')->dropDownList($dataProgram,['id'=>'id_program','prompt'=>'Pilih Jenjang'])?>
                     <?=$form->field($model,'id_prodi')->widget(DepDrop::class,[
                         'options' => ['id' => 'id_prodi'],
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'url' => [\yii\helpers\Url::toRoute(['borang/cari-prodi'])],
 
                         ]
-                    ])?>
+                    ])->label('Program Studi')?>
                     <?=$form->field($model,'borang_untuk')->dropDownList(['fakultas'=>'Fakultas','prodi'=>'Program Studi'],['prompt'=>'Pilih borang untuk'])?>
 
                 <div class="form-group">

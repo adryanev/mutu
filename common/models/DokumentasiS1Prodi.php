@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "dokumentasi_s1_prodi".
@@ -31,6 +32,13 @@ class DokumentasiS1Prodi extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'dokumentasi_s1_prodi';
+    }
+
+    public function behaviors()
+    {
+        return[
+            TimestampBehavior::class
+        ];
     }
 
     /**

@@ -27,14 +27,9 @@ class BorangController extends \yii\web\Controller
         if($model->load(\Yii::$app->request->post())){
 
 
-            var_dump($model);
-            exit();
             $url = $model->cari();
-
-            var_dump($url);
-            exit();
-
-            $this->redirect([$url]);
+            $borang = $model->getBorang()->id;
+            $this->redirect([$url,'borang'=>$borang]);
 
         }
         return $this->render('arsip',[
