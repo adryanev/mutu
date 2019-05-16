@@ -5,8 +5,9 @@ namespace admin\controllers;
 use common\models\Program;
 use yii\base\DynamicModel;
 use yii\helpers\ArrayHelper;
+use yii\web\Controller;
 
-class AkreditasiProdiController extends \yii\web\Controller
+class AkreditasiProdiController extends Controller
 {
     public function actionIndex()
     {

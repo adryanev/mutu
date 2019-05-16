@@ -8,10 +8,15 @@ use common\models\Program;
 use common\models\ProgramStudi;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
+use yii\web\NotFoundHttpException;
 
 class BorangController extends \yii\web\Controller
 {
 
+    /**
+     * @return string
+     * @throws NotFoundHttpException
+     */
     public function actionArsipBorang(){
 
 
@@ -28,8 +33,12 @@ class BorangController extends \yii\web\Controller
 
 
             $url = $model->cari();
-            $borang = $model->getBorang()->id;
-            $this->redirect([$url,'borang'=>$borang]);
+            $borang = $model->getBorang();
+            if(!$borang){
+                throw new NotFoundHttpException('Data yang anda cari tidak ditemukan');
+            }
+            $borangId = $borang->id;
+            $this->redirect([$url,'borang'=>$borangId]);
 
         }
         return $this->render('arsip',[

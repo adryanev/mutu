@@ -161,8 +161,10 @@ class AkreditasiProdiS1Controller extends Controller
 
             $dokumentasiProdi->id_akreditasi_prodi_s1 = $model->id;
             $dokumentasiProdi->progress = 0;
+            $dokumentasiProdi->is_publik = 0;
             $dokumentasiFakultas->id_akreditasi_prodi_s1 = $model->id;
             $dokumentasiFakultas->progress=0;
+            $dokumentasiFakultas->is_publik = 0;
 
             if(!$dokumentasiProdi->save() ){
                 $transaction->rollBack();
