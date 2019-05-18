@@ -24,17 +24,23 @@ class BorangS1ProdiForm extends Model
     public function rules()
     {
         return [
-            ['dokumenBorang','file','skipOnEmpty' => false, ]
+            ['dokumenBorang','file','skipOnEmpty' => false,]
         ];
     }
 
 
-    public function uploadDokumen(){
+    public function uploadDokumen($id){
 
         if($this->validate()){
             $this->_dokumenBorangS1Prodi = new DokumenBorangS1Prodi();
+            $this->_dokumenBorangS1Prodi->id_borang_s1_prodi = $id;
             $fileName = $this->dokumenBorang->getBaseName().'.'.$this->dokumenBorang->getExtension();
+            $this->_dokumenBorangS1Prodi->nama_dokumen = $fileName;
+            $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
 
+            $this->dokumenBorang->saveAs("$path/$fileName");
+
+            return true;
         }
 
         return false;

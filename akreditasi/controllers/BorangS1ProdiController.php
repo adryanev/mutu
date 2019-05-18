@@ -3,6 +3,7 @@
 namespace akreditasi\controllers;
 
 use akreditasi\models\BorangS1ProdiForm;
+use akreditasi\models\BorangS1ProdiStandar1Form;
 use common\models\BorangS1Prodi;
 use common\models\BorangS1ProdiStandar1;
 use common\models\BorangS1ProdiStandar2;
@@ -14,9 +15,17 @@ use common\models\BorangS1ProdiStandar7;
 use common\models\DokumenBorangS1Prodi;
 use Yii;
 use yii\helpers\Url;
+use yii\web\UploadedFile;
 
 class BorangS1ProdiController extends \yii\web\Controller
 {
+
+    public function actionTestProgress(){
+        $model = new BorangS1ProdiStandar1Form();
+        $model->updateProgress();
+        var_dump($model);
+        exit();
+    }
     public function actionIndex($borang)
     {
         $file_json = 'borang_prodi_s1.json';
@@ -34,9 +43,10 @@ class BorangS1ProdiController extends \yii\web\Controller
 
 
         if($dokumenBorang->load(Yii::$app->request->post())){
+            $dokumenBorang->dokumenBorang = UploadedFile::getInstance($dokumenBorang,'dokumenBorang');
             var_dump($dokumenBorang);
             exit();
-            $dokumenBorang->uploadDokumen();
+            $dokumenBorang->uploadDokumen($borang);
 
             return $this->redirect(Url::current());
         }

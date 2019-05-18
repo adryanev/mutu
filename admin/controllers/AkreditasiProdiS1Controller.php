@@ -2,6 +2,7 @@
 
 namespace admin\controllers;
 
+use admin\models\AkreditasiProdiS1Form;
 use common\models\Akreditasi;
 use common\models\BorangS1Fakultas;
 use common\models\BorangS1Prodi;
@@ -85,99 +86,18 @@ class AkreditasiProdiS1Controller extends Controller
      */
     public function actionCreate()
     {
-        $model = new AkreditasiProdiS1();
+        $model = new AkreditasiProdiS1Form();
         $idAkreditasi = Akreditasi::find()->all();
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id','nama');
 
         $idProdi = ProgramStudi::find()->where(['id_program'=>self::S1])->all();
         $dataProdi = ArrayHelper::map($idProdi,'id','nama');
 
-        $path = Yii::getAlias('@uploadAkreditasi'. '/BAN-PT/prodi');
-
-        if ($model->load(Yii::$app->request->post()) ) {
-
-            $model->progress = 0;
-
-            $pathP = $path. "/{$model->akreditasi->tahun}/{$model->id_prodi}/prodi";
-            $pathBorang = $pathP . '/borang';
-            $pathDokumentasi = $pathP. '/dokumentasi';
-            $pathGambar = $pathP. '/gambar';
-
-
-            if(!file_exists($pathBorang) && !mkdir($pathBorang, 0777, true) && !is_dir($pathBorang)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathBorang));
+        if($model->load(Yii::$app->request->post())){
+            if($model->createAkreditasi()) {
+                Yii::$app->session->setFlash('success', 'Berhasil membuat entry akreditasi');
+                return $this->redirect(['akreditasi-prodi-s1/index']);
             }
-
-            if(!file_exists($pathDokumentasi) && !mkdir($pathDokumentasi, 0777, true) && !is_dir($pathDokumentasi)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathDokumentasi));
-            }
-
-            if(!file_exists($pathGambar) && !mkdir($pathGambar, 0777, true) && !is_dir($pathGambar)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathGambar));
-            }
-
-
-
-            $pathF = $path. "/{$model->akreditasi->tahun}/{$model->id_prodi}/fakultas";
-            $pathFBorang = $pathF . '/borang';
-            $pathFDokumentasi = $pathF. '/dokumentasi';
-            $pathFGambar = $pathF. '/gambar';
-
-
-            if(!file_exists($pathFBorang) && !mkdir($pathFBorang, 0777, true) && !is_dir($pathFBorang)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathFBorang));
-            }
-
-            if(!file_exists($pathFDokumentasi) && !mkdir($pathFDokumentasi, 0777, true) && !is_dir($pathFDokumentasi)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathFDokumentasi));
-            }
-
-            if(!file_exists($pathFGambar) && !mkdir($pathFGambar, 0777, true) && !is_dir($pathFGambar)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathFGambar));
-            }
-            $model->save();
-
-            $transaction = Yii::$app->db->beginTransaction();
-
-            $borangProdi = new BorangS1Prodi();
-            $borangFakultas = new BorangS1Fakultas();
-
-            $borangProdi->id_akreditasi_prodi_s1 = $model->id;
-            $borangProdi->progress = 0;
-            $borangFakultas->id_akreditasi_prodi_s1 = $model->id;
-            $borangFakultas->progress = 0;
-
-            if(!$borangProdi->save(false) ){
-                $transaction->rollBack();
-                throw new InvalidArgumentException($borangProdi->errors );
-            }
-            if(!$borangFakultas->save(false)){
-                $transaction->rollBack();
-                throw new InvalidArgumentException($borangFakultas->errors );
-            }
-
-            $dokumentasiProdi = new DokumentasiS1Prodi();
-            $dokumentasiFakultas = new DokumentasiS1Fakultas();
-
-            $dokumentasiProdi->id_akreditasi_prodi_s1 = $model->id;
-            $dokumentasiProdi->progress = 0;
-            $dokumentasiProdi->is_publik = 0;
-            $dokumentasiFakultas->id_akreditasi_prodi_s1 = $model->id;
-            $dokumentasiFakultas->progress=0;
-            $dokumentasiFakultas->is_publik = 0;
-
-            if(!$dokumentasiProdi->save() ){
-                $transaction->rollBack();
-                throw new InvalidArgumentException($dokumentasiProdi->errors);
-
-            }
-            if(!$dokumentasiFakultas->save()){
-                $transaction->rollBack();
-                throw new InvalidArgumentException($dokumentasiFakultas->errors);
-            }
-
-            $transaction->commit();
-            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [

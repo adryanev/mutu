@@ -101,7 +101,7 @@ class AkreditasiProdiS1Form extends Model
         }
 
 
-        return $this->_akreditasiProdiS1;
+        return true;
     }
 
 
@@ -112,12 +112,17 @@ class AkreditasiProdiS1Form extends Model
 
         $pathP = $path. "/{$this->_akreditasiProdiS1->akreditasi->tahun}/{$this->_akreditasiProdiS1->id_prodi}/prodi";
         $pathBorang = $pathP . '/borang';
+        $pathBorangDokumen = $pathP . '/borang/dokumen';
         $pathDokumentasi = $pathP. '/dokumentasi';
         $pathGambar = $pathP. '/gambar';
 
 
         if(!file_exists($pathBorang) && !mkdir($pathBorang, 0777, true) && !is_dir($pathBorang)) {
             throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathBorang));
+        }
+
+        if(!file_exists($pathBorangDokumen) && !mkdir($pathBorangDokumen, 0777, true) && !is_dir($pathBorangDokumen)) {
+            throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathBorangDokumen));
         }
 
         if(!file_exists($pathDokumentasi) && !mkdir($pathDokumentasi, 0777, true) && !is_dir($pathDokumentasi)) {
@@ -275,21 +280,36 @@ class AkreditasiProdiS1Form extends Model
         $standar1->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
         $standar1->is_publik = 0;
         $standar1->is_asesor = 0;
+        $standar1->progress = 0;
+
         $standar2->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+        $standar2->is_publik = 0;
+        $standar2->is_asesor =0;
+        $standar2->progress=0;
 
         $standar3->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+        $standar3->is_publik=0;
+        $standar3->is_asesor =0;
         $standar3->progress = 0;
 
         $standar4->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+        $standar4->is_publik = 0;
+        $standar4->is_asesor= 0;
         $standar4->progress = 0;
 
         $standar5->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+        $standar5->is_publik = 0;
+        $standar5->is_asesor = 0;
         $standar5->progress = 0;
 
         $standar6->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+        $standar6->is_publik =0;
+        $standar6->is_asesor = 0;
         $standar6->progress = 0;
 
         $standar7->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+        $standar7->is_publik = 0;
+        $standar7->is_asesor = 0;
         $standar7->progress = 0;
 
         if(!$standar1->save()){
@@ -325,6 +345,20 @@ class AkreditasiProdiS1Form extends Model
             throw new InvalidArgumentException($standar7->errors);
         }
 
+    }
+
+    public static function findOne($id){
+
+        $model = new AkreditasiProdiS1Form();
+        $data = AkreditasiProdiS1::findOne($id);
+        $model->id_prodi = $data->id_prodi;
+        $model->id_akreditasi = $data->id_akreditasi;
+        $model->_borangS1Prodi = $data->borangS1Prodis;
+        $model->_borangS1Fakultas = $data->borangS1Fakultas;
+        $model->_dokumentasiS1Prodi = $data->dokumentasiS1Prodi;
+        $model->_dokumentasiS1Fakultas = $data->dokumentasiS1Fakultas;
+
+        return $model;
     }
 
 
