@@ -12,6 +12,13 @@ namespace admin\models;
 
 use common\models\AkreditasiProdiS1;
 use common\models\BorangS1Fakultas;
+use common\models\BorangS1FakultasStandar1;
+use common\models\BorangS1FakultasStandar2;
+use common\models\BorangS1FakultasStandar3;
+use common\models\BorangS1FakultasStandar4;
+use common\models\BorangS1FakultasStandar5;
+use common\models\BorangS1FakultasStandar6;
+use common\models\BorangS1FakultasStandar7;
 use common\models\BorangS1Prodi;
 use common\models\BorangS1ProdiStandar1;
 use common\models\BorangS1ProdiStandar2;
@@ -78,7 +85,7 @@ class AkreditasiProdiS1Form extends Model
      */
     public function createAkreditasi(){
 
-        $this->createFolder();
+
 
         $transaction = Yii::$app->db->beginTransaction();
 
@@ -91,6 +98,7 @@ class AkreditasiProdiS1Form extends Model
 
             $this->_akreditasiProdiS1->save();
 
+            $this->createFolder();
             $this->createBorang($transaction);
             $this->createDokumentasi($transaction);
 
@@ -179,69 +187,115 @@ class AkreditasiProdiS1Form extends Model
             throw new InvalidArgumentException($this->_borangS1Fakultas->errors);
         }
 
-        $standar1 = new BorangS1ProdiStandar1();
-        $standar2 = new BorangS1ProdiStandar2();
-        $standar3 = new BorangS1ProdiStandar3();
-        $standar4 = new BorangS1ProdiStandar4();
-        $standar5 = new BorangS1ProdiStandar5();
-        $standar6 = new BorangS1ProdiStandar6();
-        $standar7 = new BorangS1ProdiStandar7();
+        $standar1Prodi = new BorangS1ProdiStandar1();
+        $standar2Prodi = new BorangS1ProdiStandar2();
+        $standar3Prodi = new BorangS1ProdiStandar3();
+        $standar4Prodi = new BorangS1ProdiStandar4();
+        $standar5Prodi = new BorangS1ProdiStandar5();
+        $standar6Prodi = new BorangS1ProdiStandar6();
+        $standar7Prodi = new BorangS1ProdiStandar7();
 
-        $standar1->id_borang_s1_prodi = $this->_borangS1Prodi->id;
-        $standar1->progress = 0;
+        $standar1Prodi->id_borang_s1_prodi = $this->_borangS1Prodi->id;
+        $standar1Prodi->progress = 0;
 
-        $standar2->id_borang_s1_prodi = $this->_borangS1Prodi->id;
-        $standar2->progress = 0;
+        $standar2Prodi->id_borang_s1_prodi = $this->_borangS1Prodi->id;
+        $standar2Prodi->progress = 0;
 
-        $standar3->id_borang_s1_prodi = $this->_borangS1Prodi->id;
-        $standar3->progress = 0;
+        $standar3Prodi->id_borang_s1_prodi = $this->_borangS1Prodi->id;
+        $standar3Prodi->progress = 0;
 
-        $standar4->id_borang_s1_prodi = $this->_borangS1Prodi->id;
-        $standar4->progress = 0;
+        $standar4Prodi->id_borang_s1_prodi = $this->_borangS1Prodi->id;
+        $standar4Prodi->progress = 0;
 
-        $standar5->id_borang_s1_prodi = $this->_borangS1Prodi->id;
-        $standar5->progress = 0;
+        $standar5Prodi->id_borang_s1_prodi = $this->_borangS1Prodi->id;
+        $standar5Prodi->progress = 0;
 
-        $standar6->id_borang_s1_prodi = $this->_borangS1Prodi->id;
-        $standar6->progress = 0;
+        $standar6Prodi->id_borang_s1_prodi = $this->_borangS1Prodi->id;
+        $standar6Prodi->progress = 0;
 
-        $standar7->id_borang_s1_prodi = $this->_borangS1Prodi->id;
-        $standar7->progress = 0;
+        $standar7Prodi->id_borang_s1_prodi = $this->_borangS1Prodi->id;
+        $standar7Prodi->progress = 0;
 
-        if(!$standar1->save()){
+        if(!$standar1Prodi->save()){
             $transaction->rollBack();
-            throw new InvalidArgumentException($standar1->errors);
+            throw new InvalidArgumentException($standar1Prodi->errors);
         }
 
-        if(!$standar2->save()){
+        if(!$standar2Prodi->save()){
             $transaction->rollBack();
-            throw new InvalidArgumentException($standar2->errors);
+            throw new InvalidArgumentException($standar2Prodi->errors);
         }
-        if(!$standar3->save()){
+        if(!$standar3Prodi->save()){
             $transaction->rollBack();
-            throw new InvalidArgumentException($standar3->errors);
-        }
-
-        if(!$standar4->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar4->errors);
+            throw new InvalidArgumentException($standar3Prodi->errors);
         }
 
-        if(!$standar5->save()){
+        if(!$standar4Prodi->save()){
             $transaction->rollBack();
-            throw new InvalidArgumentException($standar5->errors);
+            throw new InvalidArgumentException($standar4Prodi->errors);
         }
 
-        if(!$standar6->save()){
+        if(!$standar5Prodi->save()){
             $transaction->rollBack();
-            throw new InvalidArgumentException($standar6->errors);
-        }
-        if(!$standar7->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar7->errors);
+            throw new InvalidArgumentException($standar5Prodi->errors);
         }
 
+        if(!$standar6Prodi->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar6Prodi->errors);
+        }
+        if(!$standar7Prodi->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar7Prodi->errors);
+        }
 
+        $attr = ['progress'=>0];
+        $standar1Fakultas = new BorangS1FakultasStandar1();
+        $standar2Fakultas = new BorangS1FakultasStandar2();
+        $standar3Fakultas = new BorangS1FakultasStandar3();
+        $standar4Fakultas = new BorangS1FakultasStandar4();
+        $standar5Fakultas = new BorangS1FakultasStandar5();
+        $standar6Fakultas = new BorangS1FakultasStandar6();
+        $standar7Fakultas = new BorangS1FakultasStandar7();
+
+
+        $standar1Fakultas->attributes = $attr;
+        $standar2Fakultas->attributes = $attr;
+        $standar3Fakultas->attributes = $attr;
+        $standar4Fakultas->attributes = $attr;
+        $standar5Fakultas->attributes = $attr;
+        $standar6Fakultas->attributes = $attr;
+        $standar7Fakultas->attributes = $attr;
+
+
+        if(!$standar1Fakultas->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar1Fakultas->errors);
+        }
+        if(!$standar2Fakultas->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar2Fakultas->errors);
+        }
+        if(!$standar3Fakultas->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar3Fakultas->errors);
+        }
+        if(!$standar4Fakultas->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar4Fakultas->errors);
+        }
+        if(!$standar5Fakultas->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar5Fakultas->errors);
+        }
+        if(!$standar6Fakultas->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar6Fakultas->errors);
+        }
+        if(!$standar7Fakultas->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($standar7Fakultas->errors);
+        }
 
     }
 
@@ -269,81 +323,81 @@ class AkreditasiProdiS1Form extends Model
             throw new InvalidArgumentException($this->_dokumentasiS1Fakultas->errors);
         }
 
-        $standar1 = new DokumentasiS1ProdiStandar1();
-        $standar2 = new DokumentasiS1ProdiStandar2();
-        $standar3 = new DokumentasiS1ProdiStandar3();
-        $standar4 = new DokumentasiS1ProdiStandar4();
-        $standar5 = new DokumentasiS1ProdiStandar5();
-        $standar6 = new DokumentasiS1ProdiStandar6();
-        $standar7 = new DokumentasiS1ProdiStandar7();
-
-        $standar1->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-        $standar1->is_publik = 0;
-        $standar1->is_asesor = 0;
-        $standar1->progress = 0;
-
-        $standar2->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-        $standar2->is_publik = 0;
-        $standar2->is_asesor =0;
-        $standar2->progress=0;
-
-        $standar3->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-        $standar3->is_publik=0;
-        $standar3->is_asesor =0;
-        $standar3->progress = 0;
-
-        $standar4->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-        $standar4->is_publik = 0;
-        $standar4->is_asesor= 0;
-        $standar4->progress = 0;
-
-        $standar5->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-        $standar5->is_publik = 0;
-        $standar5->is_asesor = 0;
-        $standar5->progress = 0;
-
-        $standar6->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-        $standar6->is_publik =0;
-        $standar6->is_asesor = 0;
-        $standar6->progress = 0;
-
-        $standar7->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-        $standar7->is_publik = 0;
-        $standar7->is_asesor = 0;
-        $standar7->progress = 0;
-
-        if(!$standar1->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar1->errors);
-        }
-
-        if(!$standar2->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar2->errors);
-        }
-        if(!$standar3->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar3->errors);
-        }
-
-        if(!$standar4->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar4->errors);
-        }
-
-        if(!$standar5->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar5->errors);
-        }
-
-        if(!$standar6->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar6->errors);
-        }
-        if(!$standar7->save()){
-            $transaction->rollBack();
-            throw new InvalidArgumentException($standar7->errors);
-        }
+//        $standar1 = new DokumentasiS1ProdiStandar1();
+//        $standar2 = new DokumentasiS1ProdiStandar2();
+//        $standar3 = new DokumentasiS1ProdiStandar3();
+//        $standar4 = new DokumentasiS1ProdiStandar4();
+//        $standar5 = new DokumentasiS1ProdiStandar5();
+//        $standar6 = new DokumentasiS1ProdiStandar6();
+//        $standar7 = new DokumentasiS1ProdiStandar7();
+//
+//        $standar1->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+//        $standar1->is_publik = 0;
+//        $standar1->is_asesor = 0;
+//        $standar1->progress = 0;
+//
+//        $standar2->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+//        $standar2->is_publik = 0;
+//        $standar2->is_asesor =0;
+//        $standar2->progress=0;
+//
+//        $standar3->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+//        $standar3->is_publik=0;
+//        $standar3->is_asesor =0;
+//        $standar3->progress = 0;
+//
+//        $standar4->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+//        $standar4->is_publik = 0;
+//        $standar4->is_asesor= 0;
+//        $standar4->progress = 0;
+//
+//        $standar5->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+//        $standar5->is_publik = 0;
+//        $standar5->is_asesor = 0;
+//        $standar5->progress = 0;
+//
+//        $standar6->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+//        $standar6->is_publik =0;
+//        $standar6->is_asesor = 0;
+//        $standar6->progress = 0;
+//
+//        $standar7->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
+//        $standar7->is_publik = 0;
+//        $standar7->is_asesor = 0;
+//        $standar7->progress = 0;
+//
+//        if(!$standar1->save()){
+//            $transaction->rollBack();
+//            throw new InvalidArgumentException($standar1->errors);
+//        }
+//
+//        if(!$standar2->save()){
+//            $transaction->rollBack();
+//            throw new InvalidArgumentException($standar2->errors);
+//        }
+//        if(!$standar3->save()){
+//            $transaction->rollBack();
+//            throw new InvalidArgumentException($standar3->errors);
+//        }
+//
+//        if(!$standar4->save()){
+//            $transaction->rollBack();
+//            throw new InvalidArgumentException($standar4->errors);
+//        }
+//
+//        if(!$standar5->save()){
+//            $transaction->rollBack();
+//            throw new InvalidArgumentException($standar5->errors);
+//        }
+//
+//        if(!$standar6->save()){
+//            $transaction->rollBack();
+//            throw new InvalidArgumentException($standar6->errors);
+//        }
+//        if(!$standar7->save()){
+//            $transaction->rollBack();
+//            throw new InvalidArgumentException($standar7->errors);
+//        }
 
     }
 

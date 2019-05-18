@@ -6,9 +6,11 @@ use common\models\Akreditasi;
 use common\models\PencarianBorangProdiForm;
 use common\models\Program;
 use common\models\ProgramStudi;
+use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
+use yii\web\Response;
 
 class BorangController extends \yii\web\Controller
 {
@@ -29,7 +31,7 @@ class BorangController extends \yii\web\Controller
 
 
         $dataProgram = ArrayHelper::map(Program::find()->all(),'id','nama');
-        if($model->load(\Yii::$app->request->post())){
+        if($model->load(Yii::$app->request->post())){
 
 
             $url = $model->cari();
@@ -80,6 +82,7 @@ class BorangController extends \yii\web\Controller
     public function actionCariProdi(){
         $this->enableCsrfValidation = false;
 
+        Yii::$app->response->format = Response::FORMAT_JSON;
         $arrayProdi = [];
 
         if(isset($_POST['depdrop_parents'])){
@@ -94,11 +97,10 @@ class BorangController extends \yii\web\Controller
                     $arrayProdi[] = $newArray;
                 }
 
-                echo Json::encode(['output'=>$arrayProdi, 'selected'=>'']);
-                return;
+                return ['output'=>$arrayProdi, 'selected'=>''];
             }
         }
-        echo Json::encode(['output'=>'', 'selected'=>'']);
+        return ['output'=>'', 'selected'=>''];
     }
 
     public function beforeAction($action)

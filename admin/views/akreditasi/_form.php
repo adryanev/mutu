@@ -27,7 +27,7 @@ use yii\widgets\ActiveForm;
         ]
     ])->label('Jenis Akreditasi') ?>
 
-    <?= $form->field($model, 'lembaga')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'lembaga')->textInput(['maxlength' => true,'value'=>'BAN-PT','readonly'=>true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-rose']) ?>
