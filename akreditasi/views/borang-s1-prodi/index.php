@@ -137,7 +137,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
 
                 <?= $form->field($dokumenBorang,'dokumenBorang')->widget(FileInput::class,[
-
                         'pluginOptions' => [
                                 'showUpload'=>false,
                         ]
