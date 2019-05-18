@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "dokumentasi_s1_fakultas_standar1".
@@ -45,6 +47,17 @@ class DokumentasiS1FakultasStandar1 extends \yii\db\ActiveRecord
             [['id_dokumentasi_s1_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => DokumentasiS1Fakultas::className(), 'targetAttribute' => ['id_dokumentasi_s1_fakultas' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
             [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
         ];
     }
 
