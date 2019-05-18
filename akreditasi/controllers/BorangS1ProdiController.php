@@ -12,9 +12,11 @@ use common\models\BorangS1ProdiStandar4;
 use common\models\BorangS1ProdiStandar5;
 use common\models\BorangS1ProdiStandar6;
 use common\models\BorangS1ProdiStandar7;
+use common\models\DetailBorangS1ProdiStandar1;
 use common\models\DokumenBorangS1Prodi;
 use Yii;
 use yii\helpers\FileHelper;
+use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
 use yii\web\UploadedFile;
@@ -66,10 +68,18 @@ class BorangS1ProdiController extends \yii\web\Controller
         $file_json = 'borang_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
         $model = BorangS1ProdiStandar1Form::findOne($borang);
+        $decode = Json::decode($json);
+        $data = $decode[0];
+        $poin = $data['poin'];
+        $detail = DetailBorangS1ProdiStandar1::findOne(['id_borang_s1_prodi_standar1'=>$model->id]);
+        $detailModel = new DetailBorangS1ProdiStandar1();
 
         return $this->render('standar1',[
             'model'=>$model,
-            'json'=>$json
+            'json'=>$data,
+            'poin'=>$poin,
+            'detail'=>$detail,
+            'detailModel'=>$detailModel
         ]);
     }
     public function actionStandar2($borang){

@@ -1,10 +1,14 @@
 <?php
 
 use akreditasi\models\BorangS1ProdiStandar1Form;
+use dosamigos\ckeditor\CKEditor;
+use yii\bootstrap\ActiveForm;
+use yii\bootstrap\Progress;
 use yii\web\View;
 
 /* @var $this yii\web\View */
 /* @var $model BorangS1ProdiStandar1Form */
+/** @var array $poin */
 $this->title='Standar 1';
 $this->params['breadcrumbs'][] = ['label'=>'Isi Borang','url'=>['borang-s1-prodi/index','borang'=>$model->id_borang_s1_prodi]];
 $this->params['breadcrumbs'][] = $this->title;
@@ -18,23 +22,25 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4 class="card-title">Standar 1</h4>
                 <p class="category">Kelengkapan Berkas : 60%</p>
 
-                <div class="progress">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
-                        <span class="sr-only">100% Complete</span>
-                    </div>
-                </div>
+                <?=
+                Progress::widget([
+                    'percent' => $model->progress,
+                    'label' => 'test',
+                    'barOptions' => ['class' => 'progress-bar-info'],
+                    'options' => ['class' => 'progress-striped']
+                ]);?>
 
             </div>
 
-            <div class="card-content">
 
-                <?php var_dump($json)?>
+            <div class="card-content">
                 <div class="panel-group" id="accordionn" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOnee">
                             <a role="button" data-toggle="collapse" data-parent="#accordionn" href="#collapseOnee" aria-expanded="true" aria-controls="collapseOnee">
                                 <h4 class="panel-title">
-                                    1.1.a <br><small style="font-size:13px;color:grey">Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.  </small>
+                                    <?=
+                                    $poin[0]['nomor']?> <br><small style="font-size:13px;color:grey"><?= $poin[0]['judul']?>  </small>
                                     <i class="material-icons">keyboard_arrow_down</i>
                                 </h4>
                             </a>
@@ -42,23 +48,32 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div id="collapseOnee" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOnee">
                             <div class="panel-body">
 
-                                <div class="col-md-12 table-responsive ">
-                                    <table class="table table-hover">
-                                        <tbody>
-                                        <tr>
-                                            <p>Isian Borang</p>
-                                        </tr>
-                                        <tr>
-                                            <textarea class="form-control" placeholder="isian"></textarea>
-                                        </tr>
-
-
-
-                                        </tbody>
-                                    </table>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <?=$poin[0]['penjelasan']?>
+                                    </div>
                                 </div>
+                                <div class="clearfix"></div>
 
 
+                                <div class="row">
+                                    <?php $form = ActiveForm::begin(['options' => ['enctype'=>'multipart/form-data']]) ?>
+
+                                    <div class="col-md-12">
+
+                                        <?=$form->field($model,'_1_1')->widget(CKEditor::class,[
+                                            'options' => ['rows' => 6],
+                                            'preset' => 'basic'
+                                        ])->label('') ?>
+
+                                        <div class="form-group">
+                                            <?=\yii\bootstrap\Html::submitButton('Simpan',['class'=>'btn btn-rose pull-right'])?>
+                                        </div>
+                                    </div>
+
+                                    <?php ActiveForm::end() ?>
+
+                                </div>
 
                             </div>
                         </div>

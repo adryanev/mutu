@@ -310,8 +310,10 @@ class AkreditasiProdiS1Form extends Model
 
         $this->_dokumentasiS1Prodi->id_akreditasi_prodi_s1= $this->_akreditasiProdiS1->id;
         $this->_dokumentasiS1Prodi->progress = 0;
+        $this->_dokumentasiS1Prodi->is_publik = 0;
         $this->_dokumentasiS1Fakultas->id_akreditasi_prodi_s1 = $this->_akreditasiProdiS1->id;
         $this->_dokumentasiS1Fakultas->progress = 0;
+        $this->_dokumentasiS1Fakultas->is_publik = 0;
 
         if(!$this->_dokumentasiS1Prodi->save(false)){
             $transaction->rollback();
