@@ -3,7 +3,6 @@
 namespace common\models;
 
 use Yii;
-use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "dokumen_borang_s1_prodi".
@@ -11,7 +10,6 @@ use yii\behaviors\TimestampBehavior;
  * @property int $id
  * @property int $id_borang_s1_prodi
  * @property string $nama_dokumen
- * @property double $progress
  * @property int $created_at
  * @property int $updated_at
  * @property int $created_by
@@ -29,10 +27,14 @@ class DokumenBorangS1Prodi extends \yii\db\ActiveRecord
         return 'dokumen_borang_s1_prodi';
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function behaviors()
     {
         return [
-            TimestampBehavior::class
+            TimestampBehavior::class,
+            BlameableBehavior::class,
         ];
     }
 
@@ -43,7 +45,6 @@ class DokumenBorangS1Prodi extends \yii\db\ActiveRecord
     {
         return [
             [['id_borang_s1_prodi', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
-            [['progress'], 'number'],
             [['nama_dokumen'], 'string', 'max' => 255],
             [['id_borang_s1_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => BorangS1Prodi::className(), 'targetAttribute' => ['id_borang_s1_prodi' => 'id']],
         ];
@@ -58,7 +59,6 @@ class DokumenBorangS1Prodi extends \yii\db\ActiveRecord
             'id' => 'ID',
             'id_borang_s1_prodi' => 'Id Borang S1 Prodi',
             'nama_dokumen' => 'Nama Dokumen',
-            'progress' => 'Progress',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',

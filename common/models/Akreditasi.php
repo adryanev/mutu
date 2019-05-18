@@ -3,7 +3,6 @@
 namespace common\models;
 
 use Yii;
-use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "akreditasi".
@@ -33,15 +32,12 @@ class Akreditasi extends \yii\db\ActiveRecord
         return 'akreditasi';
     }
 
-
     /**
      * {@inheritdoc}
      */
-
     public function behaviors()
     {
-
-        return[
+        return [
             TimestampBehavior::class
         ];
     }

@@ -13,6 +13,7 @@ use Yii;
  * @property string $dokumen
  * @property int $is_publik
  * @property int $is_asesor
+ * @property double $progress
  * @property int $created_at
  * @property int $updated_at
  * @property int $created_by
@@ -39,6 +40,7 @@ class DokumentasiS1FakultasStandar2 extends \yii\db\ActiveRecord
     {
         return [
             [['id_dokumentasi_s1_fakultas', 'is_publik', 'is_asesor', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['progress'], 'number'],
             [['kode', 'dokumen'], 'string', 'max' => 255],
             [['id_dokumentasi_s1_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => DokumentasiS1Fakultas::className(), 'targetAttribute' => ['id_dokumentasi_s1_fakultas' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
@@ -58,6 +60,7 @@ class DokumentasiS1FakultasStandar2 extends \yii\db\ActiveRecord
             'dokumen' => 'Dokumen',
             'is_publik' => 'Is Publik',
             'is_asesor' => 'Is Asesor',
+            'progress' => 'Progress',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',

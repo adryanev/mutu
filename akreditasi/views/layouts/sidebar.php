@@ -55,7 +55,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
         <?= Menu::widget( [
             'items' => [
 
-                ['label' => 'Dashboard', 'icon' => 'dashboard', 'url' => ['/site']],
+                ['label' => 'Beranda', 'icon' => 'dashboard', 'url' => ['/site']],
                 [
                     'label' => 'Borang',
                     'icon' => 'description',
