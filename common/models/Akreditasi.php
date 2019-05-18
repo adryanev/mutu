@@ -33,15 +33,12 @@ class Akreditasi extends \yii\db\ActiveRecord
         return 'akreditasi';
     }
 
-
     /**
      * {@inheritdoc}
      */
-
     public function behaviors()
     {
-
-        return[
+        return [
             TimestampBehavior::class
         ];
     }

@@ -3,9 +3,11 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
- * This is the model class for table "dokumentasi_institusi_standar3".
+ * This is the model class for table "dokumentasi_institusi_standar5".
  *
  * @property int $id
  * @property int $id_dokumentasi_institusi
@@ -13,6 +15,7 @@ use Yii;
  * @property string $dokumen
  * @property int $is_publik
  * @property int $is_asesor
+ * @property double $progress
  * @property int $created_at
  * @property int $updated_at
  * @property int $created_by
@@ -22,14 +25,25 @@ use Yii;
  * @property User $createdBy
  * @property User $updatedBy
  */
-class DokumentasiIntitusiStandar3 extends \yii\db\ActiveRecord
+class DokumentasiInstitusiStandar5 extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'dokumentasi_institusi_standar3';
+        return 'dokumentasi_institusi_standar5';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
     }
 
     /**
@@ -39,6 +53,7 @@ class DokumentasiIntitusiStandar3 extends \yii\db\ActiveRecord
     {
         return [
             [['id_dokumentasi_institusi', 'is_publik', 'is_asesor', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['progress'], 'number'],
             [['kode', 'dokumen'], 'string', 'max' => 255],
             [['id_dokumentasi_institusi'], 'exist', 'skipOnError' => true, 'targetClass' => DokumentasiInstitusi::className(), 'targetAttribute' => ['id_dokumentasi_institusi' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
@@ -58,6 +73,7 @@ class DokumentasiIntitusiStandar3 extends \yii\db\ActiveRecord
             'dokumen' => 'Dokumen',
             'is_publik' => 'Is Publik',
             'is_asesor' => 'Is Asesor',
+            'progress' => 'Progress',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',

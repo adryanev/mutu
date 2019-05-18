@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "dokumentasi_s1_prodi_standar2".
@@ -13,6 +15,7 @@ use Yii;
  * @property string $dokumen
  * @property int $is_publik
  * @property int $is_asesor
+ * @property double $progress
  * @property int $created_at
  * @property int $updated_at
  * @property int $created_by
@@ -35,10 +38,22 @@ class DokumentasiS1ProdiStandar2 extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
             [['id_dokumentasi_s1_prodi', 'is_publik', 'is_asesor', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['progress'], 'number'],
             [['kode', 'dokumen'], 'string', 'max' => 255],
             [['id_dokumentasi_s1_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => DokumentasiS1Prodi::className(), 'targetAttribute' => ['id_dokumentasi_s1_prodi' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
@@ -58,6 +73,7 @@ class DokumentasiS1ProdiStandar2 extends \yii\db\ActiveRecord
             'dokumen' => 'Dokumen',
             'is_publik' => 'Is Publik',
             'is_asesor' => 'Is Asesor',
+            'progress' => 'Progress',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',

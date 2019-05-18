@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "detail_borang_institusi_standar1".
@@ -28,6 +30,17 @@ class DetailBorangInstitusiStandar1 extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'detail_borang_institusi_standar1';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
     }
 
     /**
