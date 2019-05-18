@@ -1,12 +1,16 @@
 <?php
+
+use akreditasi\models\BorangS1ProdiStandar1Form;
+use yii\web\View;
+
 /* @var $this yii\web\View */
+/* @var $model BorangS1ProdiStandar1Form */
 $this->title='Standar 1';
-$this->params['breadcrumbs'][] = ['label'=>'Isi Borang','url'=>['borang/isi']];
+$this->params['breadcrumbs'][] = ['label'=>'Isi Borang','url'=>['borang-s1-prodi/index','borang'=>$model->id_borang_s1_prodi]];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 <div class="row">
-
 
     <div class="col-md-12">
         <div class="card">
@@ -24,9 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="card-content">
 
-
-
-
+                <?php var_dump($json)?>
                 <div class="panel-group" id="accordionn" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOnee">

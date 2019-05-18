@@ -31,6 +31,7 @@ class BorangS1ProdiForm extends Model
 
     public function uploadDokumen($id){
 
+
         if($this->validate()){
             $this->_dokumenBorangS1Prodi = new DokumenBorangS1Prodi();
             $this->_dokumenBorangS1Prodi->id_borang_s1_prodi = $id;
@@ -40,6 +41,7 @@ class BorangS1ProdiForm extends Model
 
             $this->dokumenBorang->saveAs("$path/$fileName");
 
+            $this->_dokumenBorangS1Prodi->save(false);
             return true;
         }
 
@@ -48,11 +50,11 @@ class BorangS1ProdiForm extends Model
     }
 
     /**
-     * @return mixed
+     * @return DokumenBorangS1Prodi
      */
     public function getDetailBorangS1Prodi()
     {
-        return $this->_detailBorangS1Prodi;
+        return $this->_dokumenBorangS1Prodi;
     }
 
 

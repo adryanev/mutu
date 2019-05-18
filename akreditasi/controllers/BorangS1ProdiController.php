@@ -14,18 +14,14 @@ use common\models\BorangS1ProdiStandar6;
 use common\models\BorangS1ProdiStandar7;
 use common\models\DokumenBorangS1Prodi;
 use Yii;
+use yii\helpers\FileHelper;
 use yii\helpers\Url;
+use yii\web\BadRequestHttpException;
 use yii\web\UploadedFile;
 
 class BorangS1ProdiController extends \yii\web\Controller
 {
 
-    public function actionTestProgress(){
-        $model = new BorangS1ProdiStandar1Form();
-        $model->updateProgress();
-        var_dump($model);
-        exit();
-    }
     public function actionIndex($borang)
     {
         $file_json = 'borang_prodi_s1.json';
@@ -44,11 +40,11 @@ class BorangS1ProdiController extends \yii\web\Controller
 
         if($dokumenBorang->load(Yii::$app->request->post())){
             $dokumenBorang->dokumenBorang = UploadedFile::getInstance($dokumenBorang,'dokumenBorang');
-            var_dump($dokumenBorang);
-            exit();
-            $dokumenBorang->uploadDokumen($borang);
+            $uploaded = $dokumenBorang->uploadDokumen($borang);
+            if($uploaded){
+                return $this->redirect(Url::current());
+            }
 
-            return $this->redirect(Url::current());
         }
         return $this->render('index',[
             'borangProdi'=>$borangProdi,
@@ -69,8 +65,12 @@ class BorangS1ProdiController extends \yii\web\Controller
 
         $file_json = 'borang_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
+        $model = BorangS1ProdiStandar1Form::findOne($borang);
 
-        return $this->render('standar1');
+        return $this->render('standar1',[
+            'model'=>$model,
+            'json'=>$json
+        ]);
     }
     public function actionStandar2($borang){
 
@@ -112,6 +112,29 @@ class BorangS1ProdiController extends \yii\web\Controller
         return $this->render('standar7');
 
 
+    }
+
+    public function actionDownload($dokumen){
+
+        ini_set('max_execution_time', 5*60);
+        $model = DokumenBorangS1Prodi::findOne($dokumen);
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}");
+        return Yii::$app->response->sendFile($file);
+
+    }
+
+    public function actionHapusDokumen(){
+
+        if(Yii::$app->request->isPost){
+            $id = Yii::$app->request->post('id');
+            $model = DokumenBorangS1Prodi::findOne($id);
+            $borangId = $model->borangS1Prodi->id;
+            unlink(Yii::getAlias('@webroot'."/upload/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}"));
+            $model->delete();
+
+            return $this->redirect(['borang-s1-prodi/index','borang'=>$borangId]);
+        }
+        throw new BadRequestHttpException('Request Harus Post');
     }
 
 }

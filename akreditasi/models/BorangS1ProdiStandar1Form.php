@@ -12,11 +12,11 @@ class BorangS1ProdiStandar1Form extends BorangS1ProdiStandar1
 {
 
 
-    public function beforeSave($insert)
-    {
-        $this->updateProgress();
-        return parent::beforeSave($insert);
-    }
+   public function afterSave($insert, $changedAttributes)
+   {
+       $this->updateProgress();
+       parent::afterSave($insert, $changedAttributes);
+   }
 
     public function updateProgress(){
         $count = 0;

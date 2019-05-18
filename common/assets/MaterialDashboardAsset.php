@@ -36,7 +36,6 @@ class MaterialDashboardAsset extends AssetBundle
         //'js/demo.js',
         'js/fullcalendar.min.js',
         'js/jquery.tagsinput.js',
-        'js/jasny-bootstrap.min.js',
         'js/material-dashboard.js?v=1.2.0',
         'js/yii2-override.js',
     ];

@@ -1,13 +1,14 @@
 {
     "name": "adryanev/mutu",
     "description": "Sistem Mutu Universitas",
-    "keywords": ["yii2", "framework", "aplikas", "mutu","universitas"],
+    "keywords": ["yii2", "framework", "aplikasi", "mutu","universitas"],
     "homepage": "https://topapp.id/",
     "type": "project",
     "license": "BSD-3-Clause",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "php": ">=7.2.0",
+        "php": ">=7.1.0",
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
@@ -16,7 +17,9 @@
         "nesbot/carbon": "^2.17",
         "kartik-v/yii2-widget-select2": "dev-master",
         "kartik-v/yii2-widget-depdrop": "dev-master",
-        "mdmsoft/yii2-admin": "~2.0"
+        "mdmsoft/yii2-admin": "~2.0",
+        "2amigos/yii2-ckeditor-widget": "^2.2",
+        "kartik-v/yii2-widget-fileinput": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
