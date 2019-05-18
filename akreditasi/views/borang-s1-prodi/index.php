@@ -9,7 +9,11 @@ use common\models\BorangS1ProdiStandar4;
 use common\models\BorangS1ProdiStandar5;
 use common\models\BorangS1ProdiStandar6;
 use common\models\BorangS1ProdiStandar7;
-use common\models\DokumenBorangS1Prodi;use yii\bootstrap\Html;
+use common\models\DokumenBorangS1Prodi;
+use kartik\file\FileInput;
+use yii\bootstrap\ActiveForm;
+use yii\bootstrap\Html;
+use yii\bootstrap\Modal;
 use yii\web\View;
 /* @var $this yii\web\View */
 /* @var $borangProdi BorangS1Prodi */
@@ -24,7 +28,7 @@ use yii\web\View;
 /* @var $standar7 BorangS1ProdiStandar7 */
 /* @var $json */
 
-$this->title='Isi Dokumentasi';
+$this->title='Isi Borang';
 $this->params['breadcrumbs'][] = $this->title;
 
 
@@ -36,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <i class="material-icons">file_copy</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title">Form Dokumentasi</h4>
+                <h4 class="card-title">Form Borang</h4>
 
                 <div class="col-md-12 table-responsive ">
                     <table class="table table-hover">
@@ -95,18 +99,57 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Isi Borang</h4>
+
+
+                <div class="col-md-12 table-responsive ">
+                    <table class="table table-hover">
+
+                        <tbody>
+                        <tr>
+                            <th>Dokumen Borang</th>
+                            <th>Aksi</th>
+                        </tr>
+
+                        <?php foreach ($dataDokumenBorang as $item) :?>
+                            <tr>
+                                <td>  <?=$item->nama_dokumen?></td>
+                                <td> <?=Html::a('<i class ="material-icons">send</i> Download',['borang-s1-prodi/download','dokumen'=>$item->id],['class'=>'btn btn-info']) ?> <?=Html::a('<i class ="material-icons">delete</i> Hapus',['borang-s1-prodi/hapus-dokumen'],['class'=>'btn btn-danger','data'=>[
+                                        'method'=>'POST',
+                                        'confirm'=>'Apakah anda yakin menghapus item ini?',
+                                        'params'=>['id'=>$item->id]
+                                    ]])?></td>
+                            </tr>
+
+                        <?php endforeach;?>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <?php Modal::begin([
+                    'header' => 'Upload Dokumen Borang',
+                    'toggleButton' => ['label' => '<i class="material-icons">backup</i> &nbsp;upload','class'=>'btn btn-default btn-sm pull-right'],
+                    'size' => 'modal-lg',
+                    'clientOptions' => ['backdrop' => 'blur', 'keyboard' => true]
+                ]); ?>
+
+                <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
+
+                <?= $form->field($dokumenBorang,'dokumenBorang')->widget(FileInput::class,[
+                        'pluginOptions' => [
+                                'showUpload'=>false,
+                        ]
+                ]) ?>
+
+                <div class="form-group">
+                    <?=Html::submitButton('Simpan',['class'=>'btn btn-rose']) ?>
+                </div>
+                <?php ActiveForm::end() ?>
+
+                <?php Modal::end(); ?>
+                <div class="clearfix"></div>
                 <p class="category">Kelengkapan Berkas : <?=Html::encode($borangProdi->progress)?>%</p>
-
-                <?php foreach ($dataDokumenBorang as $item) :?>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <?=$item->nama_dokumen?>
-                            <?=Html::a('Download') ?>
-                        </div>
-                    </div>
-
-                <?php endforeach;?>
-
                 <div class="progress">
                     <div class="progress-bar <?=$borangProdi->progress < 30 ? 'progress-bar-danger' : (($borangProdi->progress >30 && $borangProdi->progress<=60 )? 'progress-bar-warning': 'progress-bar-info') ?>" role="progressbar" aria-valuenow="<?=Html::encode($borangProdi->progress)?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=Html::encode($borangProdi->progress)?>%;">
                         <span class="sr-only"><?=Html::encode($borangProdi->progress)?>% Complete</span>
@@ -140,7 +183,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </div>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/lihat'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/standar1','borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
