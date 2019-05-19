@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "borang_s1_prodi".
@@ -14,13 +15,13 @@ use Yii;
  * @property int $updated_at
  *
  * @property AkreditasiProdiS1 $akreditasiProdiS1
- * @property BorangS1ProdiStandar1[] $borangS1ProdiStandar1s
- * @property BorangS1ProdiStandar2[] $borangS1ProdiStandar2s
- * @property BorangS1ProdiStandar3[] $borangS1ProdiStandar3s
- * @property BorangS1ProdiStandar4[] $borangS1ProdiStandar4s
- * @property BorangS1ProdiStandar5[] $borangS1ProdiStandar5s
- * @property BorangS1ProdiStandar6[] $borangS1ProdiStandar6s
- * @property BorangS1ProdiStandar7[] $borangS1ProdiStandar7s
+ * @property BorangS1ProdiStandar1 $borangS1ProdiStandar1s
+ * @property BorangS1ProdiStandar2 $borangS1ProdiStandar2s
+ * @property BorangS1ProdiStandar3 $borangS1ProdiStandar3s
+ * @property BorangS1ProdiStandar4 $borangS1ProdiStandar4s
+ * @property BorangS1ProdiStandar5 $borangS1ProdiStandar5s
+ * @property BorangS1ProdiStandar6 $borangS1ProdiStandar6s
+ * @property BorangS1ProdiStandar7 $borangS1ProdiStandar7s
  * @property DokumenBorangS1Prodi[] $dokumenBorangS1Prodis
  */
 class BorangS1Prodi extends \yii\db\ActiveRecord
@@ -31,6 +32,13 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'borang_s1_prodi';
+    }
+
+    public function behaviors()
+    {
+        return[
+            TimestampBehavior::class
+        ];
     }
 
     /**
@@ -72,7 +80,7 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getBorangS1ProdiStandar1s()
     {
-        return $this->hasMany(BorangS1ProdiStandar1::className(), ['id_borang_s1_prodi' => 'id']);
+        return $this->hasOne(BorangS1ProdiStandar1::className(), ['id_borang_s1_prodi' => 'id']);
     }
 
     /**
@@ -80,7 +88,7 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getBorangS1ProdiStandar2s()
     {
-        return $this->hasMany(BorangS1ProdiStandar2::className(), ['id_borang_s1_prodi' => 'id']);
+        return $this->hasOne(BorangS1ProdiStandar2::className(), ['id_borang_s1_prodi' => 'id']);
     }
 
     /**
@@ -88,7 +96,7 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getBorangS1ProdiStandar3s()
     {
-        return $this->hasMany(BorangS1ProdiStandar3::className(), ['id_borang_s1_prodi' => 'id']);
+        return $this->hasOne(BorangS1ProdiStandar3::className(), ['id_borang_s1_prodi' => 'id']);
     }
 
     /**
@@ -96,7 +104,7 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getBorangS1ProdiStandar4s()
     {
-        return $this->hasMany(BorangS1ProdiStandar4::className(), ['id_borang_s1_prodi' => 'id']);
+        return $this->hasOne(BorangS1ProdiStandar4::className(), ['id_borang_s1_prodi' => 'id']);
     }
 
     /**
@@ -104,7 +112,7 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getBorangS1ProdiStandar5s()
     {
-        return $this->hasMany(BorangS1ProdiStandar5::className(), ['id_borang_s1_prodi' => 'id']);
+        return $this->hasOne(BorangS1ProdiStandar5::className(), ['id_borang_s1_prodi' => 'id']);
     }
 
     /**
@@ -112,7 +120,7 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getBorangS1ProdiStandar6s()
     {
-        return $this->hasMany(BorangS1ProdiStandar6::className(), ['id_borang_s1_prodi' => 'id']);
+        return $this->hasOne(BorangS1ProdiStandar6::className(), ['id_borang_s1_prodi' => 'id']);
     }
 
     /**
@@ -120,7 +128,7 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getBorangS1ProdiStandar7s()
     {
-        return $this->hasMany(BorangS1ProdiStandar7::className(), ['id_borang_s1_prodi' => 'id']);
+        return $this->hasOne(BorangS1ProdiStandar7::className(), ['id_borang_s1_prodi' => 'id']);
     }
 
     /**
@@ -128,6 +136,23 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getDokumenBorangS1Prodis()
     {
-        return $this->hasMany(DokumenBorangS1Prodi::className(), ['id_akreditasi_prodi_s1' => 'id']);
+        return $this->hasMany(DokumenBorangS1Prodi::className(), ['id_borang_s1_prodi' => 'id']);
     }
+
+    public function updateProgress(){
+        $s1= $this->borangS1ProdiStandar1s->progress/100;
+        $s2= $this->borangS1ProdiStandar2s->progress/100;
+        $s3= $this->borangS1ProdiStandar3s->progress/100;
+        $s4= $this->borangS1ProdiStandar4s->progress/100;
+        $s5= $this->borangS1ProdiStandar5s->progress/100;
+        $s6= $this->borangS1ProdiStandar6s->progress/100;
+        $s7= $this->borangS1ProdiStandar7s->progress/100;
+
+        $progress = round((($s1+$s2+$s3+$s4+$s5+$s6+$s7)/7) *100,2);
+
+        $this->progress = $progress;
+        $this->save(false);
+    }
+
+
 }

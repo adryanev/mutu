@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "borang_s1_prodi_standar5".
@@ -43,6 +45,8 @@ use Yii;
  * @property int $updated_by
  *
  * @property BorangS1Prodi $borangS1Prodi
+ * @property User $createdBy
+ * @property User $updatedBy
  * @property DetailBorangS1ProdiStandar5[] $detailBorangS1ProdiStandar5s
  */
 class BorangS1ProdiStandar5 extends \yii\db\ActiveRecord
@@ -58,6 +62,17 @@ class BorangS1ProdiStandar5 extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
@@ -65,6 +80,8 @@ class BorangS1ProdiStandar5 extends \yii\db\ActiveRecord
             [['_5_1', '_5_1_1', '_5_1_1_1', '_5_1_1_2', '_5_1_1_3', '_5_1_2', '_5_1_2_1', '_5_1_2_2', '_5_1_3', '_5_1_4', '_5_2', '_5_3', '_5_3_1', '_5_3_2', '_5_4', '_5_4_1', '_5_4_2', '_5_5', '_5_5_1', '_5_5_2', '_5_6', '_5_7', '_5_7_1', '_5_7_2', '_5_7_3', '_5_7_4', '_5_7_5'], 'string'],
             [['progress'], 'number'],
             [['id_borang_s1_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => BorangS1Prodi::className(), 'targetAttribute' => ['id_borang_s1_prodi' => 'id']],
+            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
+            [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
         ];
     }
 
@@ -117,6 +134,22 @@ class BorangS1ProdiStandar5 extends \yii\db\ActiveRecord
     public function getBorangS1Prodi()
     {
         return $this->hasOne(BorangS1Prodi::className(), ['id' => 'id_borang_s1_prodi']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCreatedBy()
+    {
+        return $this->hasOne(User::className(), ['id' => 'created_by']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUpdatedBy()
+    {
+        return $this->hasOne(User::className(), ['id' => 'updated_by']);
     }
 
     /**

@@ -13,7 +13,7 @@ class Menu extends \yii\widgets\Menu
 {
 
     public $linkTemplate = '<a href="{url}">{icon} {label}</a>';
-    public $submenuTemplate = "\n <div class='collapse' id='{id}'><ul class='nav '>\n{items}\n</ul>\n</div>";
+    public $submenuTemplate = "\n <div class='collapse ' id='{id}'><ul class='nav '>\n{items}\n</ul>\n</div>";
     public $activateParents = true;
     public $options = ['class' => 'nav'];
     private $dropdownIcon = '<b class="caret"></b>';
@@ -166,7 +166,7 @@ class Menu extends \yii\widgets\Menu
                 }
             }
             if (!isset($item['active'])) {
-                if ($this->activateParents && $hasActiveChild || $this->activateItems && $this->isItemActive($item)) {
+                if (($this->activateParents && $hasActiveChild) || ($this->activateItems && $this->isItemActive($item))) {
                     $active = $items[$i]['active'] = true;
                 } else {
                     $items[$i]['active'] = false;

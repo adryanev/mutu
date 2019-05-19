@@ -5,4 +5,26 @@ return [
     'senderEmail' => 'noreply@example.com',
     'senderName' => 'Example.com mailer',
     'user.passwordResetTokenExpire' => 3600,
+    'mdm.admin.configs' => [
+        'advanced' => [
+            'app-admin' => [
+                '@common/config/main.php',
+                '@common/config/main-local.php',
+                '@admin/config/main.php',
+                '@admin/config/main-local.php',
+            ],
+            'app-akreditasi' => [
+                '@common/config/main.php',
+                '@common/config/main-local.php',
+                '@akreditasi/config/main.php',
+                '@akreditasi/config/main-local.php',
+            ],
+            'app-monitoring' => [
+                '@common/config/main.php',
+                '@common/config/main-local.php',
+                '@monitoring/config/main.php',
+                '@monitoring/config/main-local.php',
+            ],
+        ],
+    ],
 ];
