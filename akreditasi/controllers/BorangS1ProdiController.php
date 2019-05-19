@@ -81,9 +81,10 @@ class BorangS1ProdiController extends \yii\web\Controller
         }
         if($detailModel->load(Yii::$app->request->post())){
             $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
-            var_dump($detailModel);
-            exit();
+            $detailModel->uploadDokumen($model->id);
         }
+
+        Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
         return $this->render('standar1',[
             'model'=>$model,
             'json'=>$data,
@@ -152,7 +153,30 @@ class BorangS1ProdiController extends \yii\web\Controller
             unlink(Yii::getAlias('@webroot'."/upload/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}"));
             $model->delete();
 
-            return $this->redirect(['borang-s1-prodi/index','borang'=>$borangId]);
+            return $this->redirect(['borang-s1-prodi/isi','borang'=>$borangId]);
+        }
+        throw new BadRequestHttpException('Request Harus Post');
+    }
+
+    public function actionDownloadDetail($dokumen){
+
+        ini_set('max_execution_time', 5*60);
+        $model = DetailBorangS1ProdiStandar1::findOne($dokumen);
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}");
+        return Yii::$app->response->sendFile($file);
+
+    }
+
+    public function actionHapusDetail(){
+
+        if(Yii::$app->request->isPost){
+            $id = Yii::$app->request->post('id');
+            $model = DetailBorangS1ProdiStandar1::findOne($id);
+            $borangId = $model->borangS1ProdiStandar1->borangS1Prodi->id;
+            unlink(Yii::getAlias('@webroot'."/upload/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}"));
+            $model->delete();
+
+            return $this->redirect(['borang-s1-prodi/standar1','borang'=>$borangId]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }
