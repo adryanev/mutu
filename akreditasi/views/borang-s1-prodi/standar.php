@@ -14,7 +14,9 @@ use yii\web\View;
 /* @var $detailModel \common\models\DetailBorangS1ProdiStandar1 */
 /* @var $detail \yii\db\ActiveQuery */
 /** @var array $poin */
-$this->title='Standar 1';
+$standar = $json['standar'];
+
+$this->title='Standar '.$standar;
 $this->params['breadcrumbs'][] = ['label'=>'Isi Borang','url'=>['borang-s1-prodi/isi','borang'=>$model->id_borang_s1_prodi]];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -24,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Standar 1</h4>
+                <h4 class="card-title"><?=$this->title?></h4>
                 <p class="category">Kelengkapan Berkas : <?=$model->progress?>%</p>
 
                 <?=
@@ -109,7 +111,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                             <td>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <?=Html::a('Download',['borang-s1-prodi/download-detail','dokumen'=>$item->id],[
+                                                                        <?=Html::a('Download',['borang-s1-prodi/download-detail','standar'=>$standar,'dokumen'=>$item->id],[
                                                                                 'class'=>'btn btn-info'
                                                                         ])?>
                                                                         <?=Html::a('Hapus',['borang-s1-prodi/hapus-detail'],[
@@ -117,7 +119,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                                                 'data'=>[
                                                                                         'method'=>'POST',
                                                                                         'confirm'=>'Apakah anda yakin menghapus item ini?',
-                                                                                        'params'=>['id'=>$item->id]
+                                                                                        'params'=>['id'=>$item->id,'standar'=>$standar]
                                                                                 ]
                                                                         ])?>
 

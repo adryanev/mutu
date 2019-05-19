@@ -140,15 +140,15 @@ class BorangS1Prodi extends \yii\db\ActiveRecord
     }
 
     public function updateProgress(){
-        $s1= $this->borangS1ProdiStandar1s->progress;
-        $s2= $this->borangS1ProdiStandar2s->progress;
-        $s3= $this->borangS1ProdiStandar3s->progress;
-        $s4= $this->borangS1ProdiStandar4s->progress;
-        $s5= $this->borangS1ProdiStandar5s->progress;
-        $s6= $this->borangS1ProdiStandar6s->progress;
-        $s7= $this->borangS1ProdiStandar7s->progress;
+        $s1= $this->borangS1ProdiStandar1s->progress/100;
+        $s2= $this->borangS1ProdiStandar2s->progress/100;
+        $s3= $this->borangS1ProdiStandar3s->progress/100;
+        $s4= $this->borangS1ProdiStandar4s->progress/100;
+        $s5= $this->borangS1ProdiStandar5s->progress/100;
+        $s6= $this->borangS1ProdiStandar6s->progress/100;
+        $s7= $this->borangS1ProdiStandar7s->progress/100;
 
-        $progress = round(($s1+$s2+$s3+$s4+$s5+$s6+$s7)/7,2);
+        $progress = round((($s1+$s2+$s3+$s4+$s5+$s6+$s7)/7) *100,2);
 
         $this->progress = $progress;
         $this->save(false);
