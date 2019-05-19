@@ -146,9 +146,8 @@ class m190429_191120_init_mutu_database extends Migration
 
         $this->createTable('{{%dokumen_borang_s1_prodi}}',[
             'id'=>$this->primaryKey(),
-            'id_akreditasi_prodi_s1'=>$this->integer(),
+            'id_borang_s1_prodi'=>$this->integer(),
             'nama_dokumen'=>$this->string(),
-            'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -166,7 +165,6 @@ class m190429_191120_init_mutu_database extends Migration
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             'nama_dokumen'=>$this->string(),
-            'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -646,13 +644,20 @@ class m190429_191120_init_mutu_database extends Migration
      */
     public function safeDown()
     {
-
+        
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar7}}');
         $this->dropTable('{{%borang_s1_fakultas_standar7}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar6}}');
         $this->dropTable('{{%borang_s1_fakultas_standar6}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar5}}');
         $this->dropTable('{{%borang_s1_fakultas_standar5}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar4}}');
         $this->dropTable('{{%borang_s1_fakultas_standar4}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar3}}');
         $this->dropTable('{{%borang_s1_fakultas_standar3}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar2}}');
         $this->dropTable('{{%borang_s1_fakultas_standar2}}');
+        $this->dropTable('{{%detail_borang_s1_fakultas_standar1}}');
         $this->dropTable('{{%borang_s1_fakultas_standar1}}');
         $this->dropTable('{{%detail_borang_s1_prodi_standar7}}');
         $this->dropTable('{{%borang_s1_prodi_standar7}}');

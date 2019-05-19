@@ -51,7 +51,7 @@ $this->registerJs($js, View::POS_READY);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href=" ../dashboard.html ">IAIN Padangsidimpuan</a>
+            <a  href="#" style="text-decoration:none;color:white;font-size:16px;letter-spacing:1px;"><img src="<?=Yii::getAlias('@web/img/logo-iain.png')?>" width="70">&nbsp;&nbsp;IAIN Padangsidimpuan</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">

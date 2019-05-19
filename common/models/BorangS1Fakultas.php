@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "borang_s1_fakultas".
@@ -31,6 +32,13 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'borang_s1_fakultas';
+    }
+
+    public function behaviors()
+    {
+        return[
+            TimestampBehavior::class
+        ];
     }
 
     /**

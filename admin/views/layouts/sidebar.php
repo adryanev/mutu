@@ -58,16 +58,23 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                 ['label' => 'Dashboard', 'icon' => 'dashboard', 'url' => ['/site']],
                 [
                     'label' => 'Data Institusi',
-                    'url'=>'#data_institusi',
-                    'icon'=>'account_balance',
-                    'items'=>[
-                            ['label'=>'Unit','icon'=>'label_outline','url'=>['/unit']],
-                            ['label'=>'Program','icon'=>'label_outline','url'=>['/program']],
-                            ['label'=>'Fakultas/Akademi','icon'=>'label_outline','url'=>['/fakultas-akademi']],
-                            ['label'=>'Program Studi','icon'=>'label_outline','url'=>['/program-studi']]
+                    'url' => '#data_institusi',
+                    'icon' => 'account_balance',
+                    'items' => [
+                        ['label' => 'Unit', 'icon' => 'label_outline', 'url' => ['/unit']],
+                        ['label' => 'Program', 'icon' => 'label_outline', 'url' => ['/program']],
+                        ['label' => 'Fakultas/Akademi', 'icon' => 'label_outline', 'url' => ['/fakultas-akademi']],
+                        ['label' => 'Program Studi', 'icon' => 'label_outline', 'url' => ['/program-studi']]
                     ]
                 ],
-                ['label' => 'Pengguna', 'icon' => 'person_outline', 'url' => ['/user/index']],
+                ['label' => 'Pengguna', 'icon' => 'person_outline', 'url' => ['/user']],
+                ['label' => 'Akreditasi', 'icon' => 'school', 'url' => '#akreditasi',
+                    'items' => [
+                        ['label' => 'Jenis Akreditasi', 'url' => ['/jenis-akreditasi'],],
+                        ['label'=>'Data Akreditasi','url'=>['/akreditasi']],
+                        ['label'=>'Akreditasi Institusi','url'=>['/akreditasi-institusi']],
+                        ['label'=>'Akreditasi Program Studi','url'=>['/akreditasi-prodi']],
+                    ]],
             ],
         ]) ?>
     </div>

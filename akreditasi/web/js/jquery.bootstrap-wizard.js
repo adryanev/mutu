@@ -147,7 +147,7 @@
         };
 
         this.currentIndex = function() {
-            return $navigation.find(baseItemSelector + ($settings.withVisible ? ':visible' : '')).index($activeTab);
+            return $navigation.find(baseItemSelector + ($settings.withVisible ? ':visible' : '')).isi($activeTab);
         };
 
         this.firstIndex = function() {
@@ -159,7 +159,7 @@
         };
 
         this.getIndex = function(e) {
-            return $navigation.find(baseItemSelector + ($settings.withVisible ? ':visible' : '')).index(e);
+            return $navigation.find(baseItemSelector + ($settings.withVisible ? ':visible' : '')).isi(e);
         };
 
         this.nextIndex = function() {
@@ -234,7 +234,7 @@
         var innerTabClick = function(e) {
             // Get the index of the clicked tab
             var $ul = $navigation.find(baseItemSelector);
-            var clickedIndex = $ul.index($(e.currentTarget).parent(baseItemSelector));
+            var clickedIndex = $ul.isi($(e.currentTarget).parent(baseItemSelector));
             var $clickedTab = $($ul[clickedIndex]);
             if ($settings.onTabClick && typeof $settings.onTabClick === 'function' && $settings.onTabClick($activeTab, $navigation, obj.currentIndex(), clickedIndex, $clickedTab) === false) {
                 return false;
@@ -243,7 +243,7 @@
 
         var innerTabShown = function(e) {
             var $element = $(e.target).parent();
-            var nextTab = $navigation.find(baseItemSelector).index($element);
+            var nextTab = $navigation.find(baseItemSelector).isi($element);
 
             // If it's disabled then do not change
             if ($element.hasClass('disabled')) {
