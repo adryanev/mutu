@@ -1083,7 +1083,7 @@
                      this.$searchbox.off('input.getSize propertychange.getSize').on('input.getSize propertychange.getSize', getSize);
                      $window.off('resize.getSize scroll.getSize').on('resize.getSize scroll.getSize', getSize);
                  } else if (this.options.size && this.options.size != 'auto' && this.$lis.not(notDisabled).length > this.options.size) {
-                     var optIndex = this.$lis.not('.divider').not(notDisabled).children().slice(0, this.options.size).last().parent().index(),
+                     var optIndex = this.$lis.not('.divider').not(notDisabled).children().slice(0, this.options.size).last().parent().isi(),
                          divLength = this.$lis.slice(0, optIndex + 1).filter('.divider').length;
                      menuHeight = liHeight * this.options.size + divLength * divHeight + menuPadding.vert;
 
@@ -1717,25 +1717,25 @@
                  if (!$items.length) return;
 
                  if (/(38|40)/.test(e.keyCode.toString(10))) {
-                     index = $items.index($items.find('a').filter(':focus').parent());
-                     first = $items.filter(selector).first().index();
-                     last = $items.filter(selector).last().index();
-                     next = $items.eq(index).nextAll(selector).eq(0).index();
-                     prev = $items.eq(index).prevAll(selector).eq(0).index();
-                     nextPrev = $items.eq(next).prevAll(selector).eq(0).index();
+                     index = $items.isi($items.find('a').filter(':focus').parent());
+                     first = $items.filter(selector).first().isi();
+                     last = $items.filter(selector).last().isi();
+                     next = $items.eq(index).nextAll(selector).eq(0).isi();
+                     prev = $items.eq(index).prevAll(selector).eq(0).isi();
+                     nextPrev = $items.eq(next).prevAll(selector).eq(0).isi();
 
                      if (that.options.liveSearch) {
                          $items.each(function(i) {
                              if (!$(this).hasClass('disabled')) {
-                                 $(this).data('index', i);
+                                 $(this).data('isi.php', i);
                              }
                          });
-                         index = $items.index($items.filter('.active'));
-                         first = $items.first().data('index');
-                         last = $items.last().data('index');
-                         next = $items.eq(index).nextAll().eq(0).data('index');
-                         prev = $items.eq(index).prevAll().eq(0).data('index');
-                         nextPrev = $items.eq(next).prevAll().eq(0).data('index');
+                         index = $items.isi($items.filter('.active'));
+                         first = $items.first().data('isi.php');
+                         last = $items.last().data('isi.php');
+                         next = $items.eq(index).nextAll().eq(0).data('isi.php');
+                         prev = $items.eq(index).prevAll().eq(0).data('isi.php');
+                         nextPrev = $items.eq(next).prevAll().eq(0).data('isi.php');
                      }
 
                      prevIndex = $this.data('prevIndex');

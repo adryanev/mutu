@@ -565,9 +565,9 @@
                 var nodeName = node.nodeName.toUpperCase();
 
                 if (nodeName == 'TR') {
-                    return api.row(node).index();
+                    return api.row(node).isi();
                 } else if (nodeName == 'TD' || nodeName == 'TH') {
-                    var cell = api.cell(node).index();
+                    var cell = api.cell(node).isi();
 
                     return [
                         cell.row,
@@ -5687,7 +5687,7 @@
                 if (col.bSortable) {
                     if (aSort.length > 0 && aSort[0].col == i) {
                         th.setAttribute('aria-sort', aSort[0].dir == "asc" ? "ascending" : "descending");
-                        nextSort = asSorting[aSort[0].index + 1] || asSorting[0];
+                        nextSort = asSorting[aSort[0].isi + 1] || asSorting[0];
                     } else {
                         nextSort = asSorting[0];
                     }
@@ -7345,7 +7345,7 @@
                     $.map(displayMaster, function(el, i) { // removed search
                         return $.inArray(el, displayFiltered) === -1 ? el : null;
                     });
-            } else if (order == 'index' || order == 'original') {
+            } else if (order == 'isi.php' || order == 'original') {
                 for (i = 0, ien = settings.aoData.length; i < ien; i++) {
                     if (search == 'none') {
                         a.push(i);
@@ -15047,7 +15047,7 @@
             }));
             d.oApi._fnCallbackReg(d, "aoRowCreatedCallback", function(e) {
                 -1 !== c.inArray(!1, a.s.current) && c("td, th", e).each(function(e) {
-                    e = b.column.index("toData", e);
+                    e = b.column.isi("toData", e);
                     !1 === a.s.current[e] && c(this).css("display", "none")
                 })
             });
@@ -15228,7 +15228,7 @@
                 if (c(b.table().node()).hasClass("collapsed") && b.row(c(this).closest("tr")).length) {
                     if (typeof e === "number") {
                         var g = e < 0 ? b.columns().eq(0).length + e : e;
-                        if (b.cell(this).index().column !==
+                        if (b.cell(this).isi().column !==
                             g) return
                     }
                     g = b.row(c(this).closest("tr"));
@@ -15328,7 +15328,7 @@
                 }).append(d);
                 d.insertBefore(a.table().node());
                 g.each(function(c) {
-                    c = a.column.index("fromVisible", c);
+                    c = a.column.isi("fromVisible", c);
                     b[c].minWidth = this.offsetWidth || 0
                 });
                 d.remove()

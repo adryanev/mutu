@@ -19,7 +19,7 @@ class BorangController extends \yii\web\Controller
      * @return string
      * @throws NotFoundHttpException
      */
-    public function actionArsipBorang(){
+    public function actionArsipBorang($target){
 
 
         $model = new PencarianBorangProdiForm();
@@ -34,12 +34,13 @@ class BorangController extends \yii\web\Controller
         if($model->load(Yii::$app->request->post())){
 
 
-            $url = $model->cari();
+            $url = $model->cari($target);
             $borang = $model->getBorang();
             if(!$borang){
                 throw new NotFoundHttpException('Data yang anda cari tidak ditemukan');
             }
             $borangId = $borang->id;
+
             $this->redirect([$url,'borang'=>$borangId]);
 
         }

@@ -31,7 +31,7 @@ class PencarianBorangProdiForm extends Model
         ];
     }
 
-    public function cari(): string
+    public function cari($target): string
     {
 
         $url ='';
@@ -41,11 +41,11 @@ class PencarianBorangProdiForm extends Model
                 $this->_akreditasi_prodi = AkreditasiProdiS1::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
                 if($this->borang_untuk === 'fakultas'){
                     $this->_borang = BorangS1Fakultas::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
-                    $url .= 'borang-s1-fakultas/index';
+                    $url .= 'borang-s1-fakultas/'.$target;
 
                 }else{
                     $this->_borang = BorangS1Prodi::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
-                    $url .= 'borang-s1-prodi/index';
+                    $url .= 'borang-s1-prodi/'.$target;
 
                 }
 
