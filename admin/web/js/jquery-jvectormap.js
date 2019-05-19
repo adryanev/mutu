@@ -2026,14 +2026,14 @@ jvm.Marker = function(config) {
     this.isImage = !!this.config.style.initial.image;
     this.createShape();
 
-    text = this.getLabelText(config.index);
+    text = this.getLabelText(config.isi);
     if (this.config.label && text) {
-        this.offsets = this.getLabelOffsets(config.index);
+        this.offsets = this.getLabelOffsets(config.isi);
         this.labelX = config.cx / this.map.scale - this.map.transX;
         this.labelY = config.cy / this.map.scale - this.map.transY;
         this.label = config.canvas.addText({
             text: text,
-            'data-index': config.index,
+            'data-index': config.isi,
             dy: "0.6ex",
             x: this.labelX,
             y: this.labelY
@@ -2052,7 +2052,7 @@ jvm.Marker.prototype.createShape = function() {
         this.shape.remove();
     }
     this.shape = this.config.canvas[this.isImage ? 'addImage' : 'addCircle']({
-        "data-index": this.config.index,
+        "data-index": this.config.isi,
         cx: this.config.cx,
         cy: this.config.cy
     }, this.config.style, this.config.group);

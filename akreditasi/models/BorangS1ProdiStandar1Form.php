@@ -11,11 +11,11 @@ use yii\helpers\ArrayHelper;
 class BorangS1ProdiStandar1Form extends BorangS1ProdiStandar1
 {
 
-
-   public function afterSave($insert, $changedAttributes)
+   public function beforeSave($insert)
    {
        $this->updateProgress();
-       parent::afterSave($insert, $changedAttributes);
+       $this->borangS1Prodi->updateProgress();
+       return parent::beforeSave($insert);
    }
 
     public function updateProgress(){
@@ -28,17 +28,16 @@ class BorangS1ProdiStandar1Form extends BorangS1ProdiStandar1
         },ARRAY_FILTER_USE_KEY);
 
         $total = sizeof($filters);
-        var_dump($total);
 
-        foreach ($this->attributes as $attribute){
+        foreach ($filters as $attribute){
             if($attribute !== null){
                 $count +=1;
             }
         }
+
         $progress = round(($count/$total) * 100,2);
 
         $this->progress = $progress;
-         $this->save(false);
 
         return true;
     }

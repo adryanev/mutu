@@ -4,6 +4,7 @@ namespace akreditasi\controllers;
 
 use akreditasi\models\BorangS1ProdiForm;
 use akreditasi\models\BorangS1ProdiStandar1Form;
+use akreditasi\models\DetailBorangS1ProdiStandar1UploadForm;
 use common\models\BorangS1Prodi;
 use common\models\BorangS1ProdiStandar1;
 use common\models\BorangS1ProdiStandar2;
@@ -24,7 +25,7 @@ use yii\web\UploadedFile;
 class BorangS1ProdiController extends \yii\web\Controller
 {
 
-    public function actionIndex($borang)
+    public function actionIsi($borang)
     {
         $file_json = 'borang_prodi_s1.json';
         $borangProdi = BorangS1Prodi::findOne($borang);
@@ -48,7 +49,7 @@ class BorangS1ProdiController extends \yii\web\Controller
             }
 
         }
-        return $this->render('index',[
+        return $this->render('isi',[
             'borangProdi'=>$borangProdi,
             'dokumenBorang'=>$dokumenBorang,
             'dataDokumenBorang'=>$dataDokumenBorang,
@@ -71,9 +72,18 @@ class BorangS1ProdiController extends \yii\web\Controller
         $decode = Json::decode($json);
         $data = $decode[0];
         $poin = $data['poin'];
-        $detail = DetailBorangS1ProdiStandar1::findOne(['id_borang_s1_prodi_standar1'=>$model->id]);
-        $detailModel = new DetailBorangS1ProdiStandar1();
+        $detail = DetailBorangS1ProdiStandar1::find()->where(['id_borang_s1_prodi_standar1'=>$model->id]);
+        $detailModel = new DetailBorangS1ProdiStandar1UploadForm();
 
+        if($model->load(Yii::$app->request->post())){
+            $model->save();
+
+        }
+        if($detailModel->load(Yii::$app->request->post())){
+            $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
+            var_dump($detailModel);
+            exit();
+        }
         return $this->render('standar1',[
             'model'=>$model,
             'json'=>$data,
