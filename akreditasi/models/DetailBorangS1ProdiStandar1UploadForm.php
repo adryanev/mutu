@@ -37,7 +37,9 @@ class DetailBorangS1ProdiStandar1UploadForm extends Model
     public function rules()
     {
         return [
-            ['dokumenBorang','file','skipOnEmpty' => false,]
+            ['dokumenPendukung','file','skipOnEmpty' => false,],
+            ['nomorDokumen','string',],
+            ['nomorDokumen','required']
         ];
     }
 
@@ -51,10 +53,8 @@ class DetailBorangS1ProdiStandar1UploadForm extends Model
             $fileName = $this->dokumenPendukung->getBaseName().'.'.$this->dokumenPendukung->getExtension();
             $this->_detailBorangS1Prodi->nama_dokumen = $fileName;
             $this->_detailBorangS1Prodi->nomor_dokumen = $this->nomorDokumen;
-            $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$this->_detailBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_detailBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
-
+            $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$this->_detailBorangS1Prodi->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_detailBorangS1Prodi->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
             $this->dokumenPendukung->saveAs("$path/$fileName");
-
             $this->_detailBorangS1Prodi->save(false);
             return true;
         }

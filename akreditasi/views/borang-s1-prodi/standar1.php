@@ -98,14 +98,37 @@ $this->params['breadcrumbs'][] = $this->title;
                                                         </tr>
                                                         </thead>
 
+                                                        <tbody>
+                                                        <?php
+                                                        $detail1 = $detail->where(['nomor_dokumen'=>$value['nomor']])->all();
+
+                                                        foreach ($detail1 as $k => $item):
+                                                            ?>
+                                                        <td><?=$k+1?></td>
+                                                            <td><?=$item->nama_dokumen?></td>
+                                                            <td>
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <?=Html::a('Download',['borang-s1-prodi/download-detail','dokumen'=>$item->id],[
+                                                                                'class'=>'btn btn-info'
+                                                                        ])?>
+                                                                        <?=Html::a('Hapus',['borang-s1-prodi/hapus-detail'],[
+                                                                                'class'=>'btn btn-danger',
+                                                                                'data'=>[
+                                                                                        'method'=>'POST',
+                                                                                        'confirm'=>'Apakah anda yakin menghapus item ini?',
+                                                                                        'params'=>['id'=>$item->id]
+                                                                                ]
+                                                                        ])?>
+
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        <?php endforeach;?>
+                                                        </tbody>
                                                     </table>
                                                 </div>
-                                                <?php
-                                                $detail1 = $detail->where(['nomor_dokumen'=>$value['nomor']])->all();
-                                                foreach ($detail1 as $item):
-                                                    ?>
 
-                                                <?php endforeach;?>
 
                                                 <?php Modal::begin([
                                                     'header' => 'Upload Dokumen Pendukung Borang',
