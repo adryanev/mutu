@@ -6,32 +6,38 @@
       {
         "nomor": "1.1",
         "judul": "Visi, misi, tujuan, dan sasaran serta strategi pencapaian Fakultas/Sekolah Tinggi",
-        "penjelasan": ""
+        "penjelasan": "",
+        "isian": false
       },
       {
         "nomor": "1.1.1",
         "judul": "Visi",
-        "penjelasan": ""
+        "penjelasan": "",
+        "isian": false
       },
       {
         "nomor" : "1.1.2",
         "judul" : "Misi",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "1.1.3",
         "judul" : "Tujuan",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "1.1.4",
         "judul" : "Sasaran dan strategi pencapaiannya",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "1.2",
         "judul" : "Uraikan upaya penyebaran/sosialisasi, serta tingkat pemahaman sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan tentang visi, misi dan tujuan Fakultas/Sekolah Tinggi.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       }
     ]
   },
@@ -42,27 +48,32 @@
       {
         "nomor" : "2.1",
         "judul" : "Tata Pamong",
-        "penjelasan" : "Tata pamong adalah suatu sistem yang dapat menjadikan kepemimpinan, sistem pengelolaan dan penjaminan mutu berjalan secara efektif di dalam universitas/institusi yang mengelola program studi.  Hal-hal yang menjadi fokus di dalam tata pamong termasuk bagaimana kebijakan dan strategi disusun sedemikian rupa sehingga memungkinkan terpilihnya pemimpin dan pengelola yang kredibel dan sistem penyelenggaraan program studi secara kredibel, transparan, akuntabel, bertanggung jawab dan menerapkan prinsip-prinsip keadilan.<br>Organisasi dan sistem tata pamong yang baik (good governance) mencerminkan kredibilitas, transparansi, akuntabilitas, tanggungjawab dan keadilan Fakultas/Sekolah Tinggi dalam mengelola program studi.<br>Uraikan secara ringkas sistem dan pelaksanaan tata pamong di Fakultas/Sekolah Tinggi untuk memilih pemimpin dan membangun sistem tata pamong yang kredibel, akuntabel, transparan, bertanggung jawab dan adil."
+        "penjelasan" : "Tata pamong adalah suatu sistem yang dapat menjadikan kepemimpinan, sistem pengelolaan dan penjaminan mutu berjalan secara efektif di dalam universitas/institusi yang mengelola program studi.  Hal-hal yang menjadi fokus di dalam tata pamong termasuk bagaimana kebijakan dan strategi disusun sedemikian rupa sehingga memungkinkan terpilihnya pemimpin dan pengelola yang kredibel dan sistem penyelenggaraan program studi secara kredibel, transparan, akuntabel, bertanggung jawab dan menerapkan prinsip-prinsip keadilan.<br>Organisasi dan sistem tata pamong yang baik (good governance) mencerminkan kredibilitas, transparansi, akuntabilitas, tanggungjawab dan keadilan Fakultas/Sekolah Tinggi dalam mengelola program studi.<br>Uraikan secara ringkas sistem dan pelaksanaan tata pamong di Fakultas/Sekolah Tinggi untuk memilih pemimpin dan membangun sistem tata pamong yang kredibel, akuntabel, transparan, bertanggung jawab dan adil.",
+        "isian": false
       },
       {
         "nomor" : "2.2",
         "judul" : "Struktur Organisasi, Koordinasi dan Cara Kerja Fakultas/Sekolah Tinggi",
-        "penjelasan" : "Gambarkan struktur organisasi  Fakultas/Sekolah Tinggi serta tugas/fungsi dari tiap unit yang ada."
+        "penjelasan" : "Gambarkan struktur organisasi  Fakultas/Sekolah Tinggi serta tugas/fungsi dari tiap unit yang ada.",
+        "isian": false
       },
       {
         "nomor" : "2.3",
         "judul" : "Kepemimpinan",
-        "penjelasan" : "Kepemimpinan efektif mengarahkan dan mempengaruhi perilaku semua unsur dalam program studi, mengikuti nilai, norma, etika, dan budaya organisasi yang disepakati bersama, serta mampu membuat keputusan yang tepat dan cepat. Kepemimpinan mampu memprediksi masa depan, merumuskan dan mengartikulasi visi yang realistik, kredibel, serta mengkomunikasikan visi ke depan, yang menekankan pada keharmonisan hubungan manusia dan mampu menstimulasi secara intelektual dan arif bagi anggota untuk mewujudkan visi organisasi, serta mampu memberikan arahan, tujuan, peran, dan tugas kepada seluruh unsur dalam perguruan tinggi. Dalam menjalankan fungsi kepemimpinan dikenal kepemimpinan operasional, kepemimpinan organisasi, dan kepemimpinan publik. Kepemimpinan operasional berkaitan dengan kemampuan menjabarkan visi, misi ke dalam kegiatan operasional program studi. Kepemimpinan organisasi berkaitan dengan pemahaman tata kerja antar unit dalam organisasi perguruan tinggi. Kepemimpinan publik berkaitan dengan kemampuan menjalin kerjasama dan menjadi rujukan bagi publik. Jelaskan pola kepemimpinan dalam Program Studi."
+        "penjelasan" : "Kepemimpinan efektif mengarahkan dan mempengaruhi perilaku semua unsur dalam program studi, mengikuti nilai, norma, etika, dan budaya organisasi yang disepakati bersama, serta mampu membuat keputusan yang tepat dan cepat. Kepemimpinan mampu memprediksi masa depan, merumuskan dan mengartikulasi visi yang realistik, kredibel, serta mengkomunikasikan visi ke depan, yang menekankan pada keharmonisan hubungan manusia dan mampu menstimulasi secara intelektual dan arif bagi anggota untuk mewujudkan visi organisasi, serta mampu memberikan arahan, tujuan, peran, dan tugas kepada seluruh unsur dalam perguruan tinggi. Dalam menjalankan fungsi kepemimpinan dikenal kepemimpinan operasional, kepemimpinan organisasi, dan kepemimpinan publik. Kepemimpinan operasional berkaitan dengan kemampuan menjabarkan visi, misi ke dalam kegiatan operasional program studi. Kepemimpinan organisasi berkaitan dengan pemahaman tata kerja antar unit dalam organisasi perguruan tinggi. Kepemimpinan publik berkaitan dengan kemampuan menjalin kerjasama dan menjadi rujukan bagi publik. Jelaskan pola kepemimpinan dalam Program Studi.",
+        "isian": false
       },
       {
         "nomor" : "2.4",
         "judul" : "Sistem Pengelolaan",
-        "penjelasan" : "Sistem pengelolaan fungsional dan operasional program studi mencakup planning, organizing, staffing, leading, controlling, serta operasi internal dan eksternal.<br>Jelaskan sistem pengelolaan Fakultas/Sekolah Tinggi serta ketersediaan Renstra dan Renop."
+        "penjelasan" : "Sistem pengelolaan fungsional dan operasional program studi mencakup planning, organizing, staffing, leading, controlling, serta operasi internal dan eksternal.<br>Jelaskan sistem pengelolaan Fakultas/Sekolah Tinggi serta ketersediaan Renstra dan Renop.",
+        "isian": false
       },
       {
         "nomor" : "2.5",
         "judul" : "Sistem Penjaminan Mutu Fakultas/Sekolah Tinggi",
-        "penjelasan" : "Jelaskan sistem penjaminan mutu dalam Fakultas/Sekolah Tinggi.  Jelaskan pula standar mutu yang digunakan."
+        "penjelasan" : "Jelaskan sistem penjaminan mutu dalam Fakultas/Sekolah Tinggi.  Jelaskan pula standar mutu yang digunakan.",
+        "isian": false
       }
     ]
   },
@@ -73,37 +84,44 @@
       {
         "nomor" : "3.1",
         "judul" : "Mahasiswa",
-        "penjelasan" : "Mahasiswa program jalur akademik (S-1, S-2, S-3), profesi (profesi, spesialis 1, spesialis 2), dan vokasi (D-1, D-2, D-3, D-4)."
+        "penjelasan" : "Mahasiswa program jalur akademik (S-1, S-2, S-3), profesi (profesi, spesialis 1, spesialis 2), dan vokasi (D-1, D-2, D-3, D-4).",
+        "isian": false
       },
       {
         "nomor" : "3.1.1",
         "judul" : "Sistem Rekrutmen dan Seleksi Calon Mahasiswa Baru dan Efektivitasnya",
-        "penjelasan" : "Kebijakan sistem rekrutmen dan seleksi calon mahasiswa (mencakup mutu prestasi dan reputasi akademik serta bakat pada jenjang pendidikan sebelumnya, equitas wilayah, kemampuan ekonomi dan jender).<br>Efektivitas implementasi sistem rekrutmen dan seleksi calon mahasiswa untuk menghasilkan calon mahasiswa yang bermutu diukur dari jumlah peminat, proporsi pendaftar terhadap daya tampung dan proporsi yang diterima dan yang registrasi.<br>Jelaskan sistem rekrutmen dan seleksi calon mahasiswa baru yang diterapkan pada Fakultas/Sekolah Tinggi ini, serta efektivitasnya."
+        "penjelasan" : "Kebijakan sistem rekrutmen dan seleksi calon mahasiswa (mencakup mutu prestasi dan reputasi akademik serta bakat pada jenjang pendidikan sebelumnya, equitas wilayah, kemampuan ekonomi dan jender).<br>Efektivitas implementasi sistem rekrutmen dan seleksi calon mahasiswa untuk menghasilkan calon mahasiswa yang bermutu diukur dari jumlah peminat, proporsi pendaftar terhadap daya tampung dan proporsi yang diterima dan yang registrasi.<br>Jelaskan sistem rekrutmen dan seleksi calon mahasiswa baru yang diterapkan pada Fakultas/Sekolah Tinggi ini, serta efektivitasnya.",
+        "isian": false
       },
       {
         "nomor" : "3.1.2",
         "judul" : "Tuliskan data mahasiswa reguler dan mahasiswa transfer untuk masing-masing program studi S1 pada TS (tahun akademik penuh yang terakhir) di Fakultas/Sekolah Tinggi sesuai dengan mengikuti format tabel berikut:",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody>  <tr><td><strong>No.</strong></td><td><strong>Hal</strong></td><td><strong>Hal</strong></td><td><p><strong>Jumlah Mahasiswa pada PS:</strong></p><p><strong>PS-1&nbsp;</strong></p><p><strong>… … …&nbsp;</strong></p></td><td><p><strong>Jumlah Mahasiswa pada PS:</strong></p><p><strong>PS-2&nbsp;</strong></p><p><strong>… … …&nbsp;</strong></p></td><td><p><strong>Jumlah Mahasiswa pada PS:</strong></p><p><strong>PS-3&nbsp;</strong></p><p><strong>… … …&nbsp;</strong></p></td><td><p><strong>Jumlah Mahasiswa pada PS:</strong></p><p><strong>dst</strong></p><p><strong>… … …&nbsp;</strong></p></td><td><p><strong>Total Mahasiswa</strong></p><strong>pada Fakultas</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>1</td><td>Program reguler</td><td>1. Mhs. baru bukan transfer</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2. Mhs. baru transfer&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>3. Total mhs. regular (<em>Student Body</em>)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Program non-reguler</td><td>1. Mhs. baru bukan transfer</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2. Mhs. baru transfer&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>3. Total mhs. non-reguler (<em>Student Body</em>)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody>  <tr><td><strong>No.</strong></td><td><strong>Hal</strong></td><td><strong>Hal</strong></td><td><p><strong>Jumlah Mahasiswa pada PS:</strong></p><p><strong>PS-1&nbsp;</strong></p><p><strong>… … …&nbsp;</strong></p></td><td><p><strong>Jumlah Mahasiswa pada PS:</strong></p><p><strong>PS-2&nbsp;</strong></p><p><strong>… … …&nbsp;</strong></p></td><td><p><strong>Jumlah Mahasiswa pada PS:</strong></p><p><strong>PS-3&nbsp;</strong></p><p><strong>… … …&nbsp;</strong></p></td><td><p><strong>Jumlah Mahasiswa pada PS:</strong></p><p><strong>dst</strong></p><p><strong>… … …&nbsp;</strong></p></td><td><p><strong>Total Mahasiswa</strong></p><strong>pada Fakultas</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>1</td><td>Program reguler</td><td>1. Mhs. baru bukan transfer</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2. Mhs. baru transfer&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>3. Total mhs. regular (<em>Student Body</em>)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Program non-reguler</td><td>1. Mhs. baru bukan transfer</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>2. Mhs. baru transfer&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>3. Total mhs. non-reguler (<em>Student Body</em>)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "3.1.3",
         "judul" : "Uraikan alasan/pertimbangan Fakultas/Sekolah Tinggi dalam menerima mahasiswa transfer. Jelaskan pula alasan mahasiswa melakukan transfer.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "3.2",
         "judul" : "Lulusan",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "3.2.1",
         "judul" : "Tuliskan rata-rata masa studi dan rata-rata IPK lulusan selama tiga tahun terakhir dari mahasiswa reguler bukan transfer untuk tiap program studi S1 yang dikelola oleh Fakultas/Sekolah Tinggi dengan mengikuti format tabel berikut:",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Program Studi</strong></td><td><strong>Rata-rata Masa Studi (tahun)</strong></td><td><strong>Rata-rata IPK Lulusan</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td></tr><tr><td>1</td><td>PS 1: …</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>PS 2: …</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>…</td><td>…</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>Rata-rata di Fakultas</strong></td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Program Studi</strong></td><td><strong>Rata-rata Masa Studi (tahun)</strong></td><td><strong>Rata-rata IPK Lulusan</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td></tr><tr><td>1</td><td>PS 1: …</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>PS 2: …</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>…</td><td>…</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>Rata-rata di Fakultas</strong></td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "3.2.2",
         "judul" : "Uraikan pandangan Fakultas/Sekolah Tinggi tentang rara-rata masa studi dan rata-rata IPK lulusan, yang mencakup aspek : kewajaran, upaya pengembangan, dan upaya peningkatan mutu. Uraikan pula kendala-kendala yang dihadapi.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       }
     ]
   },
@@ -114,27 +132,32 @@
       {
         "nomor" : "4.1",
         "judul" : "Dosen Tetap",
-        "penjelasan" : "Dosen tetap dalam borang akreditasi BAN-PT adalah dosen yang diangkat dan ditempatkan sebagai tenaga tetap pada PT yang bersangkutan; termasuk dosen penugasan Kopertis, dan dosen yayasan pada PTS dalam bidang yang relevan dengan keahlian bidang studinya. Seorang dosen hanya dapat menjadi dosen tetap pada satu perguruan tinggi, dan mempunyai penugasan kerja minimum 20 jam/minggu.<br>Dosen tetap dipilah dalam 2 kelompok, yaitu:<br>1. dosen tetap yang bidang keahliannya sesuai dengan PS<br>2. dosen tetap yang bidang keahliannya di luar PS"
+        "penjelasan" : "Dosen tetap dalam borang akreditasi BAN-PT adalah dosen yang diangkat dan ditempatkan sebagai tenaga tetap pada PT yang bersangkutan; termasuk dosen penugasan Kopertis, dan dosen yayasan pada PTS dalam bidang yang relevan dengan keahlian bidang studinya. Seorang dosen hanya dapat menjadi dosen tetap pada satu perguruan tinggi, dan mempunyai penugasan kerja minimum 20 jam/minggu.<br>Dosen tetap dipilah dalam 2 kelompok, yaitu:<br>1. dosen tetap yang bidang keahliannya sesuai dengan PS<br>2. dosen tetap yang bidang keahliannya di luar PS",
+        "isian": false
       },
       {
         "nomor" : "4.1.1",
         "judul" : "Tuliskan jumlah dosen tetap yang bidang keahliannya sesuai dengan masing-masing PS di lingkungan Fakultas/Sekolah Tinggi, berdasarkan jabatan fungsional dan pendidikan tertinggi, dengan mengikuti format tabel berikut",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Hal</strong></td><td><p><strong>Jumlah Dosen Tetap yang Bertugas </strong></p><p><strong>pada Program Studi:&nbsp;</strong></p><p><strong>PS-1&nbsp;</strong></p><p><strong>… … … …</strong></p></td><td><p><strong>Jumlah Dosen Tetap yang Bertugas</strong></p><p><strong>pada Program Studi:&nbsp;</strong></p><p><strong>PS-2&nbsp;</strong></p><p><strong>… … … …</strong></p></td><td><p><strong>Jumlah Dosen Tetap yang Bertugas</strong></p><p><strong>pada Program Studi:&nbsp;</strong></p><p><strong>PS-3&nbsp;</strong></p><p><strong>… … … …</strong></p></td><td><p><strong>Jumlah Dosen Tetap yang Bertugas</strong></p><p><strong>pada Program Studi:&nbsp;</strong></p><p><strong>dst</strong></p><p><strong>… … … …</strong></p></td><td><strong>Total di Fakultas</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td></tr><tr><td><strong>A</strong></td><td><strong>Jabatan Fungsional&nbsp;:</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>1</td><td>Asisten Ahli</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Lektor</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Lektor Kepala</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Guru Besar/Profesor</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>TOTAL</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><strong>B</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>1</td><td>S1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>S2/Profesi/Sp-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>S3/Sp-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>TOTAL</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Hal</strong></td><td><p><strong>Jumlah Dosen Tetap yang Bertugas </strong></p><p><strong>pada Program Studi:&nbsp;</strong></p><p><strong>PS-1&nbsp;</strong></p><p><strong>… … … …</strong></p></td><td><p><strong>Jumlah Dosen Tetap yang Bertugas</strong></p><p><strong>pada Program Studi:&nbsp;</strong></p><p><strong>PS-2&nbsp;</strong></p><p><strong>… … … …</strong></p></td><td><p><strong>Jumlah Dosen Tetap yang Bertugas</strong></p><p><strong>pada Program Studi:&nbsp;</strong></p><p><strong>PS-3&nbsp;</strong></p><p><strong>… … … …</strong></p></td><td><p><strong>Jumlah Dosen Tetap yang Bertugas</strong></p><p><strong>pada Program Studi:&nbsp;</strong></p><p><strong>dst</strong></p><p><strong>… … … …</strong></p></td><td><strong>Total di Fakultas</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td></tr><tr><td><strong>A</strong></td><td><strong>Jabatan Fungsional&nbsp;:</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>1</td><td>Asisten Ahli</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Lektor</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Lektor Kepala</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Guru Besar/Profesor</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>TOTAL</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><strong>B</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>1</td><td>S1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>S2/Profesi/Sp-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>S3/Sp-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>TOTAL</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "4.1.2",
         "judul" : "Tuliskan banyaknya penggantian dan perekrutan serta pengembangan dosen tetap yang bidang keahliannya sesuai dengan program studi pada Fakultas/Sekolah Tinggi dalam tiga tahun terakhir dengan mengikuti format tabel berikut:",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Hal</strong></td><td><p><strong>PS-1&nbsp;</strong></p><strong>… … … …</strong></td><td><p><strong>PS-2&nbsp;</strong></p><strong>… … … …</strong></td><td><p><strong>PS-3&nbsp;</strong></p><strong>… … … …</strong></td><td><p><strong>dst</strong></p><strong>… … … …</strong></td><td><strong>Total di Fakultas</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td></tr><tr><td>1</td><td>Banyaknya dosen pensiun/berhenti</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Banyaknya perekrutan dosen baru&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Banyaknya dosen tugas belajar S2/Sp-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Banyaknya dosen tugas belajar S3/Sp-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Hal</strong></td><td><p><strong>PS-1&nbsp;</strong></p><strong>… … … …</strong></td><td><p><strong>PS-2&nbsp;</strong></p><strong>… … … …</strong></td><td><p><strong>PS-3&nbsp;</strong></p><strong>… … … …</strong></td><td><p><strong>dst</strong></p><strong>… … … …</strong></td><td><strong>Total di Fakultas</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td></tr><tr><td>1</td><td>Banyaknya dosen pensiun/berhenti</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Banyaknya perekrutan dosen baru&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Banyaknya dosen tugas belajar S2/Sp-1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Banyaknya dosen tugas belajar S3/Sp-2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "4.1.3",
         "judul" : "Uraikan pandangan Fakultas/Sekolah Tinggi tentang data pada butir 4.1.1 dan 4.1.2, yang mencakup aspek: kecukupan, kualifikasi, dan pengembangan karir. Jelaskan kendala yang ada dalam pengembangan tenaga dosen tetap.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "4.2",
         "judul" : "Tenaga kependidikan",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Jenis Tenaga Kependidikan</strong></td><td><p><strong>Jumlah Tenaga Kependidikan dengan </strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>S3</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>S2</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>S1</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>D4</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>D3</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>D2</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>D1</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>SMA/SMK</strong></p></td><td><strong>Unit Kerja</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td><td><strong>(9)</strong></td><td><strong>(10)</strong></td><td><strong>(11)</strong></td></tr><tr><td>1</td><td>Pustakawan *</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Laboran/ Teknisi/ Analis/ Operator/ Programer</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Administrasi</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Lainnya&nbsp;: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>Total</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Jenis Tenaga Kependidikan</strong></td><td><p><strong>Jumlah Tenaga Kependidikan dengan </strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>S3</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>S2</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>S1</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>D4</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>D3</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>D2</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>D1</strong></p></td><td><p><strong>Jumlah Tenaga Kependidikan dengan</strong></p><p><strong>Pendidikan Terakhir</strong></p><p><strong>SMA/SMK</strong></p></td><td><strong>Unit Kerja</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td><td><strong>(9)</strong></td><td><strong>(10)</strong></td><td><strong>(11)</strong></td></tr><tr><td>1</td><td>Pustakawan *</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Laboran/ Teknisi/ Analis/ Operator/ Programer</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Administrasi</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Lainnya&nbsp;: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><strong>Total</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       }
     ]
   },
@@ -145,17 +168,20 @@
       {
         "nomor" : "5.1",
         "judul" : "Kurikulum",
-        "penjelasan" : "Jelaskan peran Fakultas/Sekolah Tinggi dalam penyusunan dan pengembangan kurikulum untuk program studi yang dikelola."
+        "penjelasan" : "Jelaskan peran Fakultas/Sekolah Tinggi dalam penyusunan dan pengembangan kurikulum untuk program studi yang dikelola.",
+        "isian": false
       },
       {
         "nomor" : "5.2",
         "judul" : "Pembelajaran",
-        "penjelasan" : "Jelaskan peran Fakultas/Sekolah Tinggi dalam memonitor dan mengevaluasi pembelajaran."
+        "penjelasan" : "Jelaskan peran Fakultas/Sekolah Tinggi dalam memonitor dan mengevaluasi pembelajaran.",
+        "isian": false
       },
       {
         "nomor" : "5.3",
         "judul" : "Suasana Akademik",
-        "penjelasan" : "Jelaskan peran Fakultas/Sekolah Tinggi dalam mendorong  suasana akademik yang kondusif, terutama dalam: (1)  Kebijakan tentang suasana akademik, (2) penyediaan  prasarana dan sarana, (3) dukungan dana, dan (4) kegiatan akademik di dalam dan di luar kelas."
+        "penjelasan" : "Jelaskan peran Fakultas/Sekolah Tinggi dalam mendorong  suasana akademik yang kondusif, terutama dalam: (1)  Kebijakan tentang suasana akademik, (2) penyediaan  prasarana dan sarana, (3) dukungan dana, dan (4) kegiatan akademik di dalam dan di luar kelas.",
+        "isian": false
       }
     ]
   },
@@ -166,72 +192,86 @@
       {
         "nomor" : "6.1",
         "judul" : "Pembiayaan",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.1.1",
         "judul" : "Tuliskan jumlah dana termasuk gaji dan upah yang diterima di Fakultas/Sekolah Tinggi selama tiga tahun terakhir dengan mengikuti format tabel berikut:",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Sumber Dana</strong></td><td><strong>Jenis Dana</strong></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td></tr><tr><td>PT sendiri&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Yayasan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Diknas</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Sumber lain</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Total</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table><br>Pengguna dana:<br><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Jenis Penggunaan</strong></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS-2</strong></p><p><strong>Rp</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS-2</strong></p><p><strong>%</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS-1</strong></p><p><strong>Rp</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS-1</strong></p><p><strong>%</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS</strong></p><p><strong>Rp</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS</strong></p><p><strong>%</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>1</td><td>Pendidikan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Penelitian</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Pengabdian kepada Masyarakat</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Investasi prasarana</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>Investasi sarana&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>Investasi SDM</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>7</td><td>Lain-lain</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table><br>Penggunaan dana untuk penyelenggaraan kegiatan tridarma per program studi:<br><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Nama Program Studi</strong></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td></tr><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Sumber Dana</strong></td><td><strong>Jenis Dana</strong></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td></tr><tr><td>PT sendiri&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Yayasan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Diknas</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Sumber lain</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Total</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table><br>Pengguna dana:<br><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Jenis Penggunaan</strong></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS-2</strong></p><p><strong>Rp</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS-2</strong></p><p><strong>%</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS-1</strong></p><p><strong>Rp</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS-1</strong></p><p><strong>%</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS</strong></p><p><strong>Rp</strong></p></td><td><p><strong>Jumlah Dana dalam Juta Rupiah dan Persentase</strong></p><p><strong>TS</strong></p><p><strong>%</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>1</td><td>Pendidikan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>Penelitian</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>Pengabdian kepada Masyarakat</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>Investasi prasarana</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>Investasi sarana&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>Investasi SDM</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>7</td><td>Lain-lain</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table><br>Penggunaan dana untuk penyelenggaraan kegiatan tridarma per program studi:<br><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Nama Program Studi</strong></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Dana (Juta Rupiah)</strong></p><p><strong>TS</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td></tr><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "6.1.2",
         "judul" : "Uraikan pendapat pimpinan Fakultas/Sekolah Tinggi tentang perolehan dana pada butir 6.1.1, yang mencakup aspek: kecukupan dan upaya pengembangannya. Uraikan pula kendala-kendala yang dihadapi.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.2",
         "judul" : "Sarana",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.2.1",
         "judul" : "Uraikan penilaian Fakultas/Sekolah Tinggi tentang sarana untuk menjamin penyelenggaraan program Tridarma PT yang bermutu tinggi. Uraian ini mencakup aspek: kecukupan/ketersediaan/akses dan kewajaran serta rencana pengembangan dalam lima tahun mendatang. Uraikan kendala yang dihadapi dalam penambahan sarana.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.2.2",
         "judul" : "Tuliskan sarana tambahan untuk meningkatkan mutu penyelenggarakan program Tridarma PT pada semua program studi yang dikelola dalam tiga tahun terakhir. Uraikan pula rencana investasi untuk sarana dalam lima tahun mendatang, dengan mengikuti format tabel berikut:",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody>  <tr><td><strong>No.</strong></td><td><strong>Jenis Sarana Tambahan</strong></td><td><p><strong>Investasi Sarana&nbsp;</strong><strong>Selama Tiga Tahun Terakhir (Juta Rp)</strong></p></td><td><p><strong>Rencana Investasi Sarana dalam Lima Tahun Mendatang</strong></p><p><strong>Nilai Investasi (Juta Rp)</strong></p></td><td><p><strong>Rencana Investasi Sarana dalam Lima Tahun Mendatang</strong></p><p><strong>Sumber Dana</strong></p></td>  </tr>  <tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td>  </tr>  <tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  </tr>  <tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody>  <tr><td><strong>No.</strong></td><td><strong>Jenis Sarana Tambahan</strong></td><td><p><strong>Investasi Sarana&nbsp;</strong><strong>Selama Tiga Tahun Terakhir (Juta Rp)</strong></p></td><td><p><strong>Rencana Investasi Sarana dalam Lima Tahun Mendatang</strong></p><p><strong>Nilai Investasi (Juta Rp)</strong></p></td><td><p><strong>Rencana Investasi Sarana dalam Lima Tahun Mendatang</strong></p><p><strong>Sumber Dana</strong></p></td>  </tr>  <tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td>  </tr>  <tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  </tr>  <tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
      },
       {
         "nomor" : "6.3",
         "judul" : "Prasarana",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.3.1",
         "judul" : "Uraikan penilaian Fakultas/Sekolah Tinggi tentang prasarana yang telah dimiliki, khususnya yang digunakan untuk program-program studi. Uraian ini mencakup aspek: kecukupan dan kewajaran serta rencana pengembangan dalam lima tahun mendatang. Uraikan kendala yang dihadapi dalam penambahan prasarana.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.3.2",
         "judul" : "Sebutkan prasarana tambahan untuk semua program studi yang dikelola dalam tiga tahun terakhir. Uraikan pula rencana investasi untuk prasarana dalam lima tahun mendatang, dengan mengikuti format tabel berikut:",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Jenis Prasarana Tambahan</strong></td><td><p><strong>Investasi Prasarana&nbsp;</strong><strong>Selama Tiga Tahun Terakhir (Juta Rp)</strong></p></td><td><p><strong>Rencana Investasi Prasarana dalam Lima Tahun Mendatang</strong></p><p><strong>Nilai Investasi (Juta Rp)</strong></p></td><td><p><strong>Rencana Investasi Prasarana dalam Lima Tahun Mendatang</strong></p><p><strong>Sumber Dana</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td></tr><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Jenis Prasarana Tambahan</strong></td><td><p><strong>Investasi Prasarana&nbsp;</strong><strong>Selama Tiga Tahun Terakhir (Juta Rp)</strong></p></td><td><p><strong>Rencana Investasi Prasarana dalam Lima Tahun Mendatang</strong></p><p><strong>Nilai Investasi (Juta Rp)</strong></p></td><td><p><strong>Rencana Investasi Prasarana dalam Lima Tahun Mendatang</strong></p><p><strong>Sumber Dana</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td></tr><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "6.4",
         "judul" : "Sistem Informasi",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.4.1",
         "judul" : "Jelaskan sistem informasi manajemen dan fasilitas ICT (Information and Communication Technology) yang digunakan Fakultas/Sekolah Tinggi untuk proses penyelenggaraan akademik dan administrasi (misalkan SIAKAD, SIMKEU, SIMAWA, SIMFA, SIMPEG dan sejenisnya), termasuk distance-learning. Jelaskan pemanfaatannya dalam proses pengambilan keputusan dalam pengembangan institusi.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.4.2",
         "judul" : "Beri tanda √ pada kolom yang sesuai (hanya satu kolom per baris) dengan aksesibilitas tiap jenis data, dengan mengikuti format tabel berikut.",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Jenis Data</strong></td><td><p><strong>Sistem Pengelolaan Data</strong></p><p><strong>Secara Manual</strong></p></td><td><p><strong>Sistem Pengelolaan Data</strong></p><p><strong>Dengan Komputer Tanpa Jaringan</strong></p></td><td><p><strong>Sistem Pengelolaan Data</strong></p><p><strong>Dengan Komputer Melalui Jaringan Lokal (LAN)</strong></p></td><td><p><strong>Sistem Pengelolaan Data</strong></p><p><strong>Dengan Komputer Melalui Jaringan Luas (WAN)</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td></tr><tr><td>1. Mahasiswa</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2. Kartu Rencana Studi (KRS)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3. Jadwal mata kuliah</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4. Nilai mata kuliah</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5. Transkrip akademik</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6. Lulusan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>7. Dosen</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>8. Pegawai</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>9. Keuangan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>10. Inventaris</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>11. Pembayaran SPP</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>12. Perpustakaan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>Jenis Data</strong></td><td><p><strong>Sistem Pengelolaan Data</strong></p><p><strong>Secara Manual</strong></p></td><td><p><strong>Sistem Pengelolaan Data</strong></p><p><strong>Dengan Komputer Tanpa Jaringan</strong></p></td><td><p><strong>Sistem Pengelolaan Data</strong></p><p><strong>Dengan Komputer Melalui Jaringan Lokal (LAN)</strong></p></td><td><p><strong>Sistem Pengelolaan Data</strong></p><p><strong>Dengan Komputer Melalui Jaringan Luas (WAN)</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td></tr><tr><td>1. Mahasiswa</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2. Kartu Rencana Studi (KRS)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3. Jadwal mata kuliah</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4. Nilai mata kuliah</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5. Transkrip akademik</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6. Lulusan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>7. Dosen</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>8. Pegawai</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>9. Keuangan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>10. Inventaris</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>11. Pembayaran SPP</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>12. Perpustakaan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "6.4.3",
         "judul" : "Jelaskan upaya penyebaran informasi/kebijakan untuk sivitas akademika di Fakultas/ Sekolah Tinggi (misalnya melalui surat, faksimili, mailing list, e-mail,sms, buletin).",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "6.4.4",
         "judul" : "Uraikan rencana pengembangan sistem informasi jangka panjang dan upaya pencapaiannya. Uraikan pula kendala-kendala yang dihadapi.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       }
     ]
   },
@@ -242,47 +282,56 @@
       {
         "nomor" : "7.1",
         "judul" : "Penelitian",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "7.1.1",
         "judul" : "Tuliskan jumlah dan dana penelitian yang dilakukan oleh masing-masing PS di lingkungan Fakultas/Sekolah Tinggi dalam tiga tahun terakhir dengan mengikuti format tabel berikut:",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Nama Program Studi</strong></td><td><p><strong>Jumlah Judul Penelitian</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Judul Penelitian</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Judul Penelitian</strong></p><p><strong>TS</strong></p></td><td><p><strong>Total Dana Penelitian (Juta Rp)</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Total Dana Penelitian (Juta Rp)</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Total Dana Penelitian (Juta Rp)</strong></p><p><strong>TS</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>1</td><td>PS 1: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>PS 2: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>Total</td><td>na=</td><td>nb=</td><td>nc=</td><td>nd=</td><td>ne=</td><td>nf=</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Nama Program Studi</strong></td><td><p><strong>Jumlah Judul Penelitian</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Judul Penelitian</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Judul Penelitian</strong></p><p><strong>TS</strong></p></td><td><p><strong>Total Dana Penelitian (Juta Rp)</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Total Dana Penelitian (Juta Rp)</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Total Dana Penelitian (Juta Rp)</strong></p><p><strong>TS</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>1</td><td>PS 1: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>PS 2: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>Total</td><td>na=</td><td>nb=</td><td>nc=</td><td>nd=</td><td>ne=</td><td>nf=</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "7.1.2",
         "judul" : "Uraikan pandangan pimpinan Fakultas/Sekolah Tinggi tentang data pada butir 7.1.1, dalam perspektif: kesesuaian dengan Visi dan Misi, kecukupan, kewajaran, upaya pengembangan dan peningkatan mutu. Uraikan pula kendala-kendala yang dihadapi.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "7.2",
         "judul" : "Pelayanan/Pengabdian kepada Masyarakat",
-        "penjelasan" : "Pelayanan/Pengabdian kepada Masyarakat adalah penerapan bidang ilmu untuk menyelesaikan masalah di masyarakat (termasuk masyarakat industri, pemerintah, dsb.)"
+        "penjelasan" : "Pelayanan/Pengabdian kepada Masyarakat adalah penerapan bidang ilmu untuk menyelesaikan masalah di masyarakat (termasuk masyarakat industri, pemerintah, dsb.)",
+        "isian": false
       },
       {
         "nomor" : "7.2.1",
         "judul" : "Tuliskan jumlah dan dana kegiatan pelayanan/pengabdian kepada masyarakat yang dilakukan oleh masing-masing PS di lingkungan Fakultas dalam tiga tahun terakhir dengan mengikuti format tabel berikut:",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Nama Program Studi</strong></td><td><p><strong>Jumlah Judul Kegiatan Pelayanan/Pengabdian kepada Masyarakat</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Judul Kegiatan Pelayanan/Pengabdian kepada Masyarakat</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Judul Kegiatan Pelayanan/Pengabdian kepada Masyarakat</strong></p><p><strong>TS</strong></p></td><td><p><strong>Total Dana </strong></p><p><strong>Kegiatan Pelayanan/ Pengabdian kepada Masyarakat (Juta Rp)</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Total Dana</strong></p><p><strong>Kegiatan Pelayanan/ Pengabdian kepada Masyarakat (Juta Rp)</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Total Dana</strong></p><p><strong>Kegiatan Pelayanan/ Pengabdian kepada Masyarakat (Juta Rp)</strong></p><p><strong>TS</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>1</td><td>PS 1: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>PS 2: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>Total</td><td>na=</td><td>nb=</td><td>nc=</td><td>nd=</td><td>ne=</td><td>nf=</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Nama Program Studi</strong></td><td><p><strong>Jumlah Judul Kegiatan Pelayanan/Pengabdian kepada Masyarakat</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Jumlah Judul Kegiatan Pelayanan/Pengabdian kepada Masyarakat</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Jumlah Judul Kegiatan Pelayanan/Pengabdian kepada Masyarakat</strong></p><p><strong>TS</strong></p></td><td><p><strong>Total Dana </strong></p><p><strong>Kegiatan Pelayanan/ Pengabdian kepada Masyarakat (Juta Rp)</strong></p><p><strong>TS-2</strong></p></td><td><p><strong>Total Dana</strong></p><p><strong>Kegiatan Pelayanan/ Pengabdian kepada Masyarakat (Juta Rp)</strong></p><p><strong>TS-1</strong></p></td><td><p><strong>Total Dana</strong></p><p><strong>Kegiatan Pelayanan/ Pengabdian kepada Masyarakat (Juta Rp)</strong></p><p><strong>TS</strong></p></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td><td><strong>(7)</strong></td><td><strong>(8)</strong></td></tr><tr><td>1</td><td>PS 1: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>PS 2: …</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>...</td><td>...</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>Total</td><td>na=</td><td>nb=</td><td>nc=</td><td>nd=</td><td>ne=</td><td>nf=</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "7.2.2",
         "judul" : "Uraikan pandangan Fakultas/Sekolah Tinggi tentang data pada butir 7.2.1 dalam perspektif: kesesuaian dengan Visi dan Misi, kecukupan, kewajaran, upaya pengembangan dan peningkatan mutu. Uraikan pula kendala-kendala yang dihadapi.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "7.3",
         "judul" : "Kegiatan Kerjasama dengan Instansi Lain",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": false
       },
       {
         "nomor" : "7.3.1",
         "judul" : "Tuliskan instansi dalam negeri yang menjalin kerjasama* dengan Fakultas/Sekolah Tinggi dalam tiga tahun terakhir.",
-        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Nama Instansi</strong></td><td><p><strong>Jenis</strong></p><strong>Kegiatan</strong></td><td><p><strong>Kurun Waktu Kerja Sama</strong></p><p><strong>Mulai</strong></p></td><td><p><strong>Kurun Waktu Kerja Sama</strong></p><p><strong>Mulai</strong></p></td><td><strong>Manfaat yang Telah Diperoleh</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td></tr><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>dst.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>"
+        "penjelasan" : "<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\"><tbody><tr><td><strong>No.</strong></td><td><strong>Nama Instansi</strong></td><td><p><strong>Jenis</strong></p><strong>Kegiatan</strong></td><td><p><strong>Kurun Waktu Kerja Sama</strong></p><p><strong>Mulai</strong></p></td><td><p><strong>Kurun Waktu Kerja Sama</strong></p><p><strong>Mulai</strong></p></td><td><strong>Manfaat yang Telah Diperoleh</strong></td></tr><tr><td><strong>(1)</strong></td><td><strong>(2)</strong></td><td><strong>(3)</strong></td><td><strong>(4)</strong></td><td><strong>(5)</strong></td><td><strong>(6)</strong></td></tr><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>dst.</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>",
+        "isian": false
       },
       {
         "nomor" : "7.3.2",
         "judul" : "Tuliskan instansi luar negeri yang menjalin kerjasama* dengan Fakultas/Sekolah Tinggi dalam tiga tahun terakhir.",
-        "penjelasan" : ""
+        "penjelasan" : "",
+        "isian": true
       }
     ]
   }
