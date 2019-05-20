@@ -10,10 +10,6 @@ class PencarianBorangProdiForm extends Model
 {
 
 
-    public const DIPLOMA = 4;
-    public const S1 = 1;
-    public const S2 = 2;
-    public const S3 = 3;
     public $akreditasi;
     public $program;
     public $id_prodi;
@@ -36,36 +32,21 @@ class PencarianBorangProdiForm extends Model
 
         $url ='';
         $this->_akreditasi = Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
-        switch ($this->program){
-            case self::S1:
-                $this->_akreditasi_prodi = AkreditasiProdiS1::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
-                if($this->borang_untuk === 'fakultas'){
-                    $this->_borang = BorangS1Fakultas::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
-                    $url .= 'borang-s1-fakultas/'.$target;
+        $program = Program::findOne(['id'=>$this->program]);
+        $akreditasiProdiClass = 'common\\models\\'.'AkreditasiProdi'.$program->nama;
+        $borangfakultasClass = 'common\\models\\Borang'.$program->nama.'Fakultas';
+        $borangProdiClass = 'common\\models\\Borang'.$program->nama.'Prodi';
 
-                }else{
-                    $this->_borang = BorangS1Prodi::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
-                    $url .= 'borang-s1-prodi/'.$target;
 
-                }
+        $this->_akreditasi_prodi = call_user_func($akreditasiProdiClass.'::findOne',['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi]);
 
-                break;
-            case self::S2:
-                $this->_akreditasi_prodi = AkreditasiProdiS2::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
-//                $this->_borang = new BorangS2Prodi();
+        if($this->borang_untuk === 'fakultas'){
+            $this->_borang = call_user_func($borangfakultasClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program->nama)=>$this->_akreditasi_prodi->id]);
+            $url .= 'borang-'.strtolower($program->nama).'-fakultas/'.$target;
 
-                break;
-            case self::S3:
-                $this->_akreditasi_prodi = AkreditasiProdiS3::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
-//                $this->_borang = new BorangS3Prodi();
-
-                break;
-            case self::DIPLOMA:
-                $this->_akreditasi_prodi = AkreditasiProdiDiploma::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
-//                $this->_borang = new BorangDiplomaProdi();
-
-                break;
-
+        }else{
+            $this->_borang = call_user_func($borangProdiClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program->nama)=>$this->_akreditasi_prodi->id]);
+            $url .= 'borang-'.strtolower($program->nama).'-prodi/'.$target;
         }
 
 

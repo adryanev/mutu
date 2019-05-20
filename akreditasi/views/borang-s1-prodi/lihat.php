@@ -29,7 +29,7 @@ use yii\web\View;
 /* @var $standar7 BorangS1ProdiStandar7 */
 /* @var $json */
 
-$this->title='Isi Borang';
+$this->title='Lihat Borang';
 $this->params['breadcrumbs'][] = $this->title;
 
 
@@ -99,7 +99,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Isi Borang</h4>
+                <h4 class="card-title"><?=$this->title?></h4>
                 <div class="clearfix"></div>
                 <div class="row">
                     <div class="col-md-12 table-responsive ">
@@ -117,11 +117,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             <?php foreach ($dataDokumenBorang as $item) :?>
                                 <tr>
                                     <td>  <?=$item->nama_dokumen?></td>
-                                    <td> <?=Html::a('<i class ="material-icons">send</i> Download',['borang-s1-prodi/download','dokumen'=>$item->id],['class'=>'btn btn-info']) ?> <?=Html::a('<i class ="material-icons">delete</i> Hapus',['borang-s1-prodi/hapus-dokumen'],['class'=>'btn btn-danger','data'=>[
-                                            'method'=>'POST',
-                                            'confirm'=>'Apakah anda yakin menghapus item ini?',
-                                            'params'=>['id'=>$item->id]
-                                        ]])?></td>
+                                    <td> <?=Html::a('<i class ="material-icons">send</i> Download',['borang-s1-prodi/download','dokumen'=>$item->id],['class'=>'btn btn-info']) ?>
+                                       </td>
                                 </tr>
 
                             <?php endforeach;?>
@@ -132,27 +129,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
 
-                <?php Modal::begin([
-                    'header' => 'Upload Dokumen Borang',
-                    'toggleButton' => ['label' => '<i class="material-icons">backup</i> &nbsp;upload','class'=>'btn btn-default btn-sm pull-right'],
-                    'size' => 'modal-lg',
-                    'clientOptions' => ['backdrop' => 'blur', 'keyboard' => true]
-                ]); ?>
-
-                <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
-
-                <?= $form->field($dokumenBorang,'dokumenBorang')->widget(FileInput::class,[
-                    'pluginOptions' => [
-                        'showUpload'=>false,
-                    ]
-                ]) ?>
-
-                <div class="form-group">
-                    <?=Html::submitButton('Simpan',['class'=>'btn btn-rose']) ?>
-                </div>
-                <?php ActiveForm::end() ?>
-
-                <?php Modal::end(); ?>
                 <div class="clearfix"></div>
                 <p class="category">Kelengkapan Berkas : <?=Html::encode($borangProdi->progress)?>%</p>
                 <?=
@@ -191,7 +167,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     'options' => ['class' => 'progress-striped']
                                 ]);?>
 
-                            <td><?= Html::a('Lihat',['borang-s1-prodi/isi-standar','standar'=>1,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/lihat-standar','id'=>1,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -207,7 +183,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['borang-s1-prodi/isi-standar','standar'=>2,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/lihat-standar','id'=>2,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -224,7 +200,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['borang-s1-prodi/isi-standar','standar'=>3,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/lihat-standar','id'=>3,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -241,7 +217,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['borang-s1-prodi/isi-standar','standar'=>4,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/lihat-standar','id'=>4,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -258,7 +234,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['borang-s1-prodi/isi-standar','standar'=>5,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/lihat-standar','id'=>5,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -275,7 +251,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['borang-s1-prodi/isi-standar','standar'=>6,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/lihat-standar','id'=>6,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -292,7 +268,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['borang-s1-prodi/isi-standar','standar'=>7,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/lihat-standar','id'=>7,'borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         </tbody>
