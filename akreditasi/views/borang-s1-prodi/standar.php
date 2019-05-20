@@ -118,7 +118,7 @@ $query = $isian;
 
                                                                 <?=$form->field($modelIsian,'nomor_borang')->textInput(['value'=>$value['nomor'],'readonly'=>true])?>
                                                                 <?=$form->field($modelIsian,'nama_file')->widget(FileInput::class,[
-                                                                    'options' => ['id'=>'dokumenPendukung'.$modelAttribute],
+                                                                    'options' => ['id'=>'isianBorang'.$modelAttribute],
                                                                     'pluginOptions' => [
                                                                         'showUpload'=>false
                                                                     ]
