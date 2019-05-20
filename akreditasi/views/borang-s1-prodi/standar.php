@@ -227,7 +227,7 @@ $query = $isian;
                                                             <td>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <?=Html::a('Download',['borang-s1-prodi/download-detail','standar'=>$standar,'dokumen'=>$item->id],[
+                                                                        <?=Html::a('Download',['borang-s1-prodi/download-detail','standar'=>$standar,'dokumen'=>$item->id,'borang'=>$_GET['borang']],[
                                                                                 'class'=>'btn btn-info'
                                                                         ])?>
                                                                         <?=Html::a('Hapus',['borang-s1-prodi/hapus-detail'],[
@@ -235,7 +235,7 @@ $query = $isian;
                                                                                 'data'=>[
                                                                                         'method'=>'POST',
                                                                                         'confirm'=>'Apakah anda yakin menghapus item ini?',
-                                                                                        'params'=>['id'=>$item->id,'standar'=>$standar]
+                                                                                        'params'=>['id'=>$item->id,'standar'=>$standar,'borang'=>$_GET['borang']]
                                                                                 ]
                                                                         ])?>
 
