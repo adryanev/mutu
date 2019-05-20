@@ -46,7 +46,7 @@ class PencarianBorangProdiForm extends Model
 
         }else{
             $this->_borang = call_user_func($borangProdiClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program->nama)=>$this->_akreditasi_prodi->id]);
-            $url .= 'borang-'.strtolower($program->nama).'-fakultas/'.$target;
+            $url .= 'borang-'.strtolower($program->nama).'-prodi/'.$target;
         }
 
 
