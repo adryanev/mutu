@@ -31,14 +31,14 @@ class m190520_044427_insert_isian_borang extends Migration
             [15,'6.3.3','template-6.3.3.xlsx','prodi',1557554873,1557554873],
             [16,'6.3.7','template-6.3.7.xlsx','prodi',1557554873,1557554873],
             [17,'6.4.3','template-6.4.3.xlsx','prodi',1557554873,1557554873],
-            [17,'6.5.2','template-6.5.2.xlsx','prodi',1557554873,1557554873],
-            [18,'7.1.1','template-7.1.1.xlsx','prodi',1557554873,1557554873],
-            [19,'7.1.3','template-7.1.3.xlsx','prodi',1557554873,1557554873],
-            [20,'7.1.4','template-7.1.4.xlsx','prodi',1557554873,1557554873],
-            [21,'7.2.1','template-7.2.1.xlsx','prodi',1557554873,1557554873],
-            [22,'7.3.1','template-7.3.1.xlsx','prodi',1557554873,1557554873],
-            [23,'7.3.2','template-7.3.2.xlsx','prodi',1557554873,1557554873],
-            [24,'7.3.2','template-7.3.2.xlsx','fakultas',1557554873,1557554873],
+            [18,'6.5.2','template-6.5.2.xlsx','prodi',1557554873,1557554873],
+            [19,'7.1.1','template-7.1.1.xlsx','prodi',1557554873,1557554873],
+            [20,'7.1.3','template-7.1.3.xlsx','prodi',1557554873,1557554873],
+            [21,'7.1.4','template-7.1.4.xlsx','prodi',1557554873,1557554873],
+            [22,'7.2.1','template-7.2.1.xlsx','prodi',1557554873,1557554873],
+            [23,'7.3.1','template-7.3.1.xlsx','prodi',1557554873,1557554873],
+            [24,'7.3.2','template-7.3.2.xlsx','prodi',1557554873,1557554873],
+            [25,'7.3.2','template-7.3.2.xlsx','fakultas',1557554873,1557554873],
         ];
 
         $this->batchInsert('{{%isian_borang}}',['id','nomor_borang','nama_file','untuk','created_at','updated_at'],$data);

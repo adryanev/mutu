@@ -16,7 +16,9 @@ use yii\behaviors\TimestampBehavior;
  * @property int $updated_at
  * @property int $created_by
  * @property int $updated_by
+ * @property int $id_borang_s1_prodi
  *
+ * @property BorangS1Prodi $borangS1Prodi
  * @property IsianBorang $isianBorang
  * @property User $createdBy
  * @property User $updatedBy
@@ -45,8 +47,9 @@ class IsianBorangS1Prodi extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_isian_borang', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['id_isian_borang', 'created_at', 'updated_at', 'created_by', 'updated_by', 'id_borang_s1_prodi'], 'integer'],
             [['nama_file'], 'string', 'max' => 255],
+            [['id_borang_s1_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => BorangS1Prodi::className(), 'targetAttribute' => ['id_borang_s1_prodi' => 'id']],
             [['id_isian_borang'], 'exist', 'skipOnError' => true, 'targetClass' => IsianBorang::className(), 'targetAttribute' => ['id_isian_borang' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
             [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
@@ -66,7 +69,16 @@ class IsianBorangS1Prodi extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
+            'id_borang_s1_prodi' => 'Id Borang S1 Prodi',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBorangS1Prodi()
+    {
+        return $this->hasOne(BorangS1Prodi::className(), ['id' => 'id_borang_s1_prodi']);
     }
 
     /**

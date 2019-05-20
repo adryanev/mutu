@@ -1,24 +1,32 @@
 <?php
 
 use akreditasi\models\BorangS1ProdiStandar1Form;
+use akreditasi\models\IsianBorangS1ProdiUploadForm;
+use common\models\DetailBorangS1ProdiStandar1;
+use common\models\IsianBorang;
 use dosamigos\ckeditor\CKEditor;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
 use yii\bootstrap\Modal;
 use yii\bootstrap\Progress;
+use yii\db\ActiveQuery;
 use yii\web\View;
 
-/* @var $this yii\web\View */
+/* @var $this View */
 /* @var $model BorangS1ProdiStandar1Form */
-/* @var $detailModel \common\models\DetailBorangS1ProdiStandar1 */
-/* @var $detail \yii\db\ActiveQuery */
+/* @var $detailModel DetailBorangS1ProdiStandar1 */
+/* @var $modelIsian IsianBorangS1ProdiUploadForm*/
+/* @var $detail ActiveQuery */
+/* @var $template ActiveQuery */
+/* @var $isian ActiveQuery */
 /** @var array $poin */
 $standar = $json['standar'];
 
 $this->title='Standar '.$standar;
 $this->params['breadcrumbs'][] = ['label'=>'Isi Borang','url'=>['borang-s1-prodi/isi','borang'=>$model->id_borang_s1_prodi]];
 $this->params['breadcrumbs'][] = $this->title;
+$query = $isian;
 
 ?>
 <div class="row">
@@ -87,12 +95,120 @@ $this->params['breadcrumbs'][] = $this->title;
                                             </div>
 
                                         </div>
-
+                                        <?php if($value['isian']): ?>
                                         <div class="row">
                                             <div class="col-md-12">
+                                                <h3 class="text-black-50">Isian Borang</h3>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+                                                                <h6 class="pull-left">File Isian Borang</h6>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <?php Modal::begin([
+                                                                    'header' => 'Upload isian borang',
+                                                                    'toggleButton' => ['label' => '<i class="material-icons">backup</i> &nbsp;upload isian borang','class'=>'btn btn-default btn-sm pull-right'],
+                                                                    'size' => 'modal-lg',
+                                                                    'clientOptions' => ['backdrop' => 'blur', 'keyboard' => true]
+                                                                ])?>
+                                                                <?php $form = ActiveForm::begin(['options' => ['enctype'=>'multipart/form-data']]) ?>
+
+                                                                <?=$form->field($modelIsian,'nomor_borang')->textInput(['value'=>$value['nomor'],'readonly'=>true])?>
+                                                                <?=$form->field($modelIsian,'nama_file')->widget(FileInput::class,[
+                                                                    'options' => ['id'=>'dokumenPendukung'.$modelAttribute],
+                                                                    'pluginOptions' => [
+                                                                        'showUpload'=>false
+                                                                    ]
+                                                                ])?>
+                                                                <div class="form-group">
+                                                                    <?=Html::submitButton('Simpan',['class'=>'btn btn-rose'])?>
+                                                                </div>
+                                                                <?php ActiveForm::end() ?>
+
+                                                                <?php Modal::end()?>
+                                                            </div>
+
+                                                        </div>
+                                                            <table class="table table-striped table-hover">
+                                                                <thead data-background-color="blue">
+                                                                <tr>
+                                                                    <th>No</th>
+                                                                    <th>Nama File</th>
+                                                                    <th>Aksi</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                        <?php
+                                                                        $nomor = IsianBorang::findOne(['nomor_borang'=>$value['nomor']]);
+                                                                        $data = \common\models\IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi'=>$_GET['borang'],'id_isian_borang'=>$nomor])->all();
+
+                                                                        foreach ($data as $f =>$file):
+                                                                        ?>
+
+                                                                        <tr>
+                                                                            <td><?=$f+1?></td>
+                                                                            <td><?=$file->nama_file?></td>
+                                                                            <td>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <?=Html::a('Download',['borang-s1-prodi/download-isian','id'=>$file->id,'borang'=>$_GET['borang']],[
+                                                                                            'class'=>'btn btn-info'
+                                                                                        ])?>
+                                                                                        <?=Html::a('Hapus',['borang-s1-prodi/hapus-isian'],[
+                                                                                            'class'=>'btn btn-danger',
+                                                                                            'data'=>[
+                                                                                                'method'=>'POST',
+                                                                                                'confirm'=>'Apakah anda yakin menghapus item ini?',
+                                                                                                'params'=>['id'=>$file->id,'borang'=>$_GET['borang']]
+                                                                                            ]
+                                                                                        ])?>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                <?php endforeach; ?>
+                                                                </tbody>
+                                                            </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h6>Download Template</h6>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-striped table-hover">
+                                                                <thead data-background-color="black">
+                                                                <tr>
+                                                                    <th>Nama File</th>
+                                                                    <th>Aksi</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <?php $fileTemplate = $template->where(['nomor_borang'=>$value['nomor']])->one();?>
+                                                                    <td><?=$fileTemplate->nama_file?></td>
+                                                                    <td><?=Html::a('<i class="material-icons">send</i> Download',['borang-s1-prodi/download-template','id'=>$fileTemplate->id],['class'=>'btn btn-success btn-sm'])?></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <?php endif;?>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h4 class="text-black-50">Dokumen Pendukung</h4>
                                                 <div class="table-responsive">
-                                                    <table class="table table-bordered table-hover">
-                                                        <thead>
+                                                    <table class="table table-striped table-hover">
+                                                        <thead data-background-color="purple">
                                                         <tr>
                                                             <th>No</th>
                                                             <th>Dokumen Pendukung</th>

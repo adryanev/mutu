@@ -16,7 +16,9 @@ use yii\behaviors\TimestampBehavior;
  * @property int $updated_at
  * @property int $created_by
  * @property int $updated_by
+ * @property int $id_borang_s1_fakultas
  *
+ * @property BorangS1Fakultas $borangS1Fakultas
  * @property IsianBorang $isianBorang
  * @property User $createdBy
  * @property User $updatedBy
@@ -38,14 +40,16 @@ class IsianBorangS1Fakultas extends \yii\db\ActiveRecord
             BlameableBehavior::class
         ];
     }
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['id_isian_borang', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['id_isian_borang', 'created_at', 'updated_at', 'created_by', 'updated_by', 'id_borang_s1_fakultas'], 'integer'],
             [['nama_file'], 'string', 'max' => 255],
+            [['id_borang_s1_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => BorangS1Fakultas::className(), 'targetAttribute' => ['id_borang_s1_fakultas' => 'id']],
             [['id_isian_borang'], 'exist', 'skipOnError' => true, 'targetClass' => IsianBorang::className(), 'targetAttribute' => ['id_isian_borang' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
             [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
@@ -65,7 +69,16 @@ class IsianBorangS1Fakultas extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',
             'updated_by' => 'Updated By',
+            'id_borang_s1_fakultas' => 'Id Borang S1 Fakultas',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBorangS1Fakultas()
+    {
+        return $this->hasOne(BorangS1Fakultas::className(), ['id' => 'id_borang_s1_fakultas']);
     }
 
     /**
