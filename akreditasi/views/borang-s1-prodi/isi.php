@@ -207,7 +207,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/standar2','borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -224,7 +224,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/standar3','borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -241,7 +241,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/standar4','borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -258,7 +258,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/standar5','borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -275,7 +275,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/standar6','borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -292,7 +292,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ]);?>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/isi-dok'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['borang-s1-prodi/standar7','borang'=>$borangProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         </tbody>

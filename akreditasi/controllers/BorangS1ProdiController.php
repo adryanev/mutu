@@ -4,7 +4,19 @@ namespace akreditasi\controllers;
 
 use akreditasi\models\BorangS1ProdiForm;
 use akreditasi\models\BorangS1ProdiStandar1Form;
+use akreditasi\models\BorangS1ProdiStandar2Form;
+use akreditasi\models\BorangS1ProdiStandar3Form;
+use akreditasi\models\BorangS1ProdiStandar5Form;
+use akreditasi\models\BorangS1ProdiStandar6Form;
+use akreditasi\models\BorangS1ProdiStandar7Form;
 use akreditasi\models\DetailBorangS1ProdiStandar1UploadForm;
+use akreditasi\models\DetailBorangS1ProdiStandar2UploadForm;
+use akreditasi\models\DetailBorangS1ProdiStandar3UploadForm;
+use akreditasi\models\DetailBorangS1ProdiStandar4UploadForm;
+use akreditasi\models\DetailBorangS1ProdiStandar5UploadForm;
+use akreditasi\models\DetailBorangS1ProdiStandar6UploadForm;
+use akreditasi\models\DetailBorangS1ProdiStandar7UploadForm;
+use akreditasi\models\IsianBorangS1ProdiUploadForm;
 use common\models\BorangS1Prodi;
 use common\models\BorangS1ProdiStandar1;
 use common\models\BorangS1ProdiStandar2;
@@ -14,7 +26,15 @@ use common\models\BorangS1ProdiStandar5;
 use common\models\BorangS1ProdiStandar6;
 use common\models\BorangS1ProdiStandar7;
 use common\models\DetailBorangS1ProdiStandar1;
+use common\models\DetailBorangS1ProdiStandar2;
+use common\models\DetailBorangS1ProdiStandar3;
+use common\models\DetailBorangS1ProdiStandar4;
+use common\models\DetailBorangS1ProdiStandar5;
+use common\models\DetailBorangS1ProdiStandar6;
+use common\models\DetailBorangS1ProdiStandar7;
 use common\models\DokumenBorangS1Prodi;
+use common\models\IsianBorang;
+use common\models\IsianBorangS1Prodi;
 use Yii;
 use yii\helpers\FileHelper;
 use yii\helpers\Json;
@@ -74,64 +94,386 @@ class BorangS1ProdiController extends \yii\web\Controller
         $poin = $data['poin'];
         $detail = DetailBorangS1ProdiStandar1::find()->where(['id_borang_s1_prodi_standar1'=>$model->id]);
         $detailModel = new DetailBorangS1ProdiStandar1UploadForm();
+        $template = IsianBorang::find()->where(['untuk'=>'prodi'])->all();
+        $isian = IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi'=>$borang]);
+        $modelIsian  = new IsianBorangS1ProdiUploadForm();
+
 
         if($model->load(Yii::$app->request->post())){
             $model->save();
+            Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
+            return $this->redirect(Url::current());
+
+
 
         }
         if($detailModel->load(Yii::$app->request->post())){
             $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
             $detailModel->uploadDokumen($model->id);
+            return $this->redirect(Url::current());
+
         }
 
-        Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
-        return $this->render('standar1',[
+        if($modelIsian->load(Yii::$app->request->post())){
+
+            $modelIsian->nama_file = UploadedFile::getInstance($modelIsian,'nama_file');
+
+            if($modelIsian->uploadFile($borang)){
+                Yii::$app->session->setFlash('success','Berhasil mengupload isian borang');
+            }
+            return $this->redirect(Url::current());
+
+        }
+
+        return $this->render('standar',[
             'model'=>$model,
             'json'=>$data,
             'poin'=>$poin,
             'detail'=>$detail,
-            'detailModel'=>$detailModel
+            'detailModel'=>$detailModel,
+            'template'=>$template,
+            'isian'=>$isian,
+            'modelIsian'=>$modelIsian,
+
         ]);
     }
     public function actionStandar2($borang){
 
         $file_json = 'borang_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
-        return $this->render('standar2');
+        $model = BorangS1ProdiStandar2Form::findOne($borang);
+        $decode = Json::decode($json);
+        $data = $decode[1];
+        $poin = $data['poin'];
+        $detail = DetailBorangS1ProdiStandar2::find()->where(['id_borang_s1_prodi_standar2'=>$model->id]);
+        $detailModel = new DetailBorangS1ProdiStandar2UploadForm();
+        $template = IsianBorang::find()->where(['untuk'=>'prodi']);
+        $isian = IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi'=>$borang]);
+        $modelIsian  = new IsianBorangS1ProdiUploadForm();
+
+        if($model->load(Yii::$app->request->post())){
+            $model->save();
+            Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
+
+            return $this->redirect(Url::current());
+
+        }
+        if($detailModel->load(Yii::$app->request->post())){
+            $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
+            $detailModel->uploadDokumen($model->id);
+            return $this->redirect(Url::current());
+
+        }
+        if($modelIsian->load(Yii::$app->request->post())){
+
+            $modelIsian->nama_file = UploadedFile::getInstance($modelIsian,'nama_file');
+
+            if($modelIsian->uploadFile($borang)){
+                Yii::$app->session->setFlash('success','Berhasil mengupload isian borang');
+            }
+            return $this->redirect(Url::current());
+
+        }
+        return $this->render('standar',[
+            'model'=>$model,
+            'json'=>$data,
+            'poin'=>$poin,
+            'detail'=>$detail,
+            'detailModel'=>$detailModel,
+            'template'=>$template,
+            'isian'=>$isian,
+            'modelIsian'=>$modelIsian,
+
+        ]);
     }
     public function actionStandar3($borang){
 
         $file_json = 'borang_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
-        return $this->render('standar3');
+        $model = BorangS1ProdiStandar3Form::findOne($borang);
+        $decode = Json::decode($json);
+        $data = $decode[2];
+        $poin = $data['poin'];
+        $detail = DetailBorangS1ProdiStandar3::find()->where(['id_borang_s1_prodi_standar2'=>$model->id]);
+        $detailModel = new DetailBorangS1ProdiStandar3UploadForm();
+        $template = IsianBorang::find()->where(['untuk'=>'prodi']);
+        $isian = IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi'=>$borang]);
+        $modelIsian  = new IsianBorangS1ProdiUploadForm();
+
+        if($model->load(Yii::$app->request->post())){
+            $model->save();
+            Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
+
+            return $this->redirect(Url::current());
+
+        }
+        if($detailModel->load(Yii::$app->request->post())){
+            $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
+            $detailModel->uploadDokumen($model->id);
+            Yii::$app->session->setFlash('success','Berhasil mengupload dokumen pendukung');
+
+            return $this->redirect(Url::current());
+
+        }
+
+        if($modelIsian->load(Yii::$app->request->post())){
+
+            $modelIsian->nama_file = UploadedFile::getInstance($modelIsian,'nama_file');
+
+            if($modelIsian->uploadFile($borang)){
+                Yii::$app->session->setFlash('success','Berhasil mengupload isian borang');
+            }
+            return $this->redirect(Url::current());
+
+        }
+        return $this->render('standar',[
+            'model'=>$model,
+            'json'=>$data,
+            'poin'=>$poin,
+            'detail'=>$detail,
+            'detailModel'=>$detailModel,
+            'template'=>$template,
+            'isian'=>$isian,
+            'modelIsian'=>$modelIsian,
+        ]);
     }
     public function actionStandar4($borang){
 
         $file_json = 'borang_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
-        return $this->render('standar4');
+        $model = BorangS1ProdiStandar3Form::findOne($borang);
+        $decode = Json::decode($json);
+        $data = $decode[3];
+        $poin = $data['poin'];
+        $detail = DetailBorangS1ProdiStandar4::find()->where(['id_borang_s1_prodi_standar2'=>$model->id]);
+        $detailModel = new DetailBorangS1ProdiStandar4UploadForm();
+        $template = IsianBorang::find()->where(['untuk'=>'prodi']);
+        $isian = IsianBorangS1Prodi::find();
+        $modelIsian  = new IsianBorangS1ProdiUploadForm();
+
+
+        if($model->load(Yii::$app->request->post())){
+            $model->save();
+            Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
+            return $this->redirect(Url::current());
+
+
+        }
+        if($detailModel->load(Yii::$app->request->post())){
+            $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
+            $detailModel->uploadDokumen($model->id);
+            return $this->redirect(Url::current());
+
+        }
+
+        if($modelIsian->load(Yii::$app->request->post())){
+
+            $modelIsian->nama_file = UploadedFile::getInstance($modelIsian,'nama_file');
+
+            if($modelIsian->uploadFile($borang)){
+                Yii::$app->session->setFlash('success','Berhasil mengupload isian borang');
+            }
+            return $this->redirect(Url::current());
+
+        }
+
+        return $this->render('standar',[
+            'model'=>$model,
+            'json'=>$data,
+            'poin'=>$poin,
+            'detail'=>$detail,
+            'detailModel'=>$detailModel,
+            'template'=>$template,
+            'isian'=>$isian,
+            'modelIsian'=>$modelIsian,
+
+        ]);
 
     }
     public function actionStandar5($borang){
 
         $file_json = 'borang_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
-        return $this->render('standar5');
+        $model = BorangS1ProdiStandar5Form::findOne($borang);
+        $decode = Json::decode($json);
+        $data = $decode[4];
+        $poin = $data['poin'];
+        $detail = DetailBorangS1ProdiStandar5::find()->where(['id_borang_s1_prodi_standar2'=>$model->id]);
+        $detailModel = new DetailBorangS1ProdiStandar5UploadForm();
+        $template = IsianBorang::find()->where(['untuk'=>'prodi']);
+        $isian = IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi'=>$borang]);
+        $modelIsian  = new IsianBorangS1ProdiUploadForm();
+
+
+        if($model->load(Yii::$app->request->post())){
+            $model->save();
+            Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
+            return $this->redirect(Url::current());
+
+
+        }
+        if($detailModel->load(Yii::$app->request->post())){
+            $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
+            $detailModel->uploadDokumen($model->id);
+            return $this->redirect(Url::current());
+
+        }
+
+        if($modelIsian->load(Yii::$app->request->post())){
+
+            $modelIsian->nama_file = UploadedFile::getInstance($modelIsian,'nama_file');
+
+            if($modelIsian->uploadFile($borang)){
+                Yii::$app->session->setFlash('success','Berhasil mengupload isian borang');
+            }
+            return $this->redirect(Url::current());
+
+        }
+
+        return $this->render('standar',[
+            'model'=>$model,
+            'json'=>$data,
+            'poin'=>$poin,
+            'detail'=>$detail,
+            'detailModel'=>$detailModel,
+            'template'=>$template,
+            'isian'=>$isian,
+            'modelIsian'=>$modelIsian,
+
+        ]);
 
     }
     public function actionStandar6($borang){
 
         $file_json = 'borang_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
-        return $this->render('standar6');
+        $model = BorangS1ProdiStandar6Form::findOne($borang);
+        $decode = Json::decode($json);
+        $data = $decode[5];
+        $poin = $data['poin'];
+        $detail = DetailBorangS1ProdiStandar6::find()->where(['id_borang_s1_prodi_standar2'=>$model->id]);
+        $detailModel = new DetailBorangS1ProdiStandar6UploadForm();
+        $template = IsianBorang::find()->where(['untuk'=>'prodi']);
+        $isian = IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi'=>$borang]);
+        $modelIsian  = new IsianBorangS1ProdiUploadForm();
+
+
+        if($model->load(Yii::$app->request->post())){
+            $model->save();
+            Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
+            return $this->redirect(Url::current());
+
+
+        }
+        if($detailModel->load(Yii::$app->request->post())){
+            $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
+            $detailModel->uploadDokumen($model->id);
+            return $this->redirect(Url::current());
+
+        }
+
+        if($modelIsian->load(Yii::$app->request->post())){
+
+            $modelIsian->nama_file = UploadedFile::getInstance($modelIsian,'nama_file');
+
+            if($modelIsian->uploadFile($borang)){
+                Yii::$app->session->setFlash('success','Berhasil mengupload isian borang');
+            }
+            return $this->redirect(Url::current());
+
+        }
+        return $this->render('standar',[
+            'model'=>$model,
+            'json'=>$data,
+            'poin'=>$poin,
+            'detail'=>$detail,
+            'detailModel'=>$detailModel,
+            'template'=>$template,
+            'isian'=>$isian,
+            'modelIsian'=>$modelIsian,
+
+        ]);
 
     }
     public function actionStandar7($borang){
 
         $file_json = 'borang_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
-        return $this->render('standar7');
+        $model = BorangS1ProdiStandar7Form::findOne($borang);
+        $decode = Json::decode($json);
+        $data = $decode[6];
+        $poin = $data['poin'];
+        $detail = DetailBorangS1ProdiStandar7::find()->where(['id_borang_s1_prodi_standar2'=>$model->id]);
+        $detailModel = new DetailBorangS1ProdiStandar7UploadForm();
+        $template = IsianBorang::find()->where(['untuk'=>'prodi']);
+        $isian = IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi'=>$borang]);
+        $modelIsian  = new IsianBorangS1ProdiUploadForm();
 
+
+        if($model->load(Yii::$app->request->post())){
+            $model->save();
+            Yii::$app->session->setFlash('success','Berhasil Memperbarui Entri');
+            return $this->redirect(Url::current());
+
+
+        }
+        if($detailModel->load(Yii::$app->request->post())){
+            $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
+            $detailModel->uploadDokumen($model->id);
+            return $this->redirect(Url::current());
+
+        }
+
+        if($modelIsian->load(Yii::$app->request->post())){
+
+            $modelIsian->nama_file = UploadedFile::getInstance($modelIsian,'nama_file');
+
+            if($modelIsian->uploadFile($borang)){
+                Yii::$app->session->setFlash('success','Berhasil mengupload isian borang');
+            }
+            return $this->redirect(Url::current());
+
+        }
+        return $this->render('standar',[
+            'model'=>$model,
+            'json'=>$data,
+            'poin'=>$poin,
+            'detail'=>$detail,
+            'detailModel'=>$detailModel,
+            'template'=>$template,
+            'isian'=>$isian,
+            'modelIsian'=>$modelIsian,
+
+        ]);
+
+
+    }
+
+    public function actionDownloadIsian($id,$borang){
+        ini_set('max_execution_time', 5*60);
+        $template = IsianBorangS1Prodi::findOne($id);
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$template->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$template->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$template->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$template->nama_file}");
+        return Yii::$app->response->sendFile($file);
+
+    }
+
+    public function actionHapusIsian(){
+
+        if(Yii::$app->request->isPost){
+            $id = Yii::$app->request->post('id');
+            $model = IsianBorangS1Prodi::findOne($id);
+            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_file}"));
+            $model->delete();
+            return $this->redirect(['borang-s1-prodi/isi','borang'=>$model->borangS1Prodi->id]);
+        }
+        throw new BadRequestHttpException('Request Harus Post');
+
+    }
+    public function actionDownloadTemplate($id){
+        ini_set('max_execution_time', 5*60);
+        $template = IsianBorang::findOne($id);
+        $file = Yii::getAlias('@templateBorang/prodi/'.$template->nama_file);
+        return Yii::$app->response->sendFile($file);
 
     }
 
@@ -150,7 +492,7 @@ class BorangS1ProdiController extends \yii\web\Controller
             $id = Yii::$app->request->post('id');
             $model = DokumenBorangS1Prodi::findOne($id);
             $borangId = $model->borangS1Prodi->id;
-            unlink(Yii::getAlias('@webroot'."/upload/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}"));
+            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}"));
             $model->delete();
 
             return $this->redirect(['borang-s1-prodi/isi','borang'=>$borangId]);
@@ -158,11 +500,14 @@ class BorangS1ProdiController extends \yii\web\Controller
         throw new BadRequestHttpException('Request Harus Post');
     }
 
-    public function actionDownloadDetail($dokumen){
+    public function actionDownloadDetail($standar,$dokumen,$borang){
 
         ini_set('max_execution_time', 5*60);
-        $model = DetailBorangS1ProdiStandar1::findOne($dokumen);
-        $file = Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}");
+        $borang = BorangS1Prodi::findOne($borang);
+        $namespace = 'common\\models\\';
+        $class = $namespace.'DetailBorangS1ProdiStandar'.$standar;
+        $model = call_user_func($class.'::findOne',$dokumen);
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$borang->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$borang->akreditasiProdiS1->akreditasi->tahun}/{$borang->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}");
         return Yii::$app->response->sendFile($file);
 
     }
@@ -171,12 +516,16 @@ class BorangS1ProdiController extends \yii\web\Controller
 
         if(Yii::$app->request->isPost){
             $id = Yii::$app->request->post('id');
-            $model = DetailBorangS1ProdiStandar1::findOne($id);
-            $borangId = $model->borangS1ProdiStandar1->borangS1Prodi->id;
-            unlink(Yii::getAlias('@webroot'."/upload/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1ProdiStandar1->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}"));
+            $standar = Yii::$app->request->post('standar');
+            $borangid = Yii::$app->request->post('borang');
+            $namespace = 'common\\models\\';
+            $class = $namespace.'DetailBorangS1ProdiStandar'.$standar;
+            $model = call_user_func($class.'::findOne',$id);
+            $borang = BorangS1Prodi::findOne($borangid);
+            $file = Yii::getAlias('@uploadAkreditasi'."/{$borang->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$borang->akreditasiProdiS1->akreditasi->tahun}/{$borang->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_dokumen}");
             $model->delete();
 
-            return $this->redirect(['borang-s1-prodi/standar1','borang'=>$borangId]);
+            return $this->redirect(['borang-s1-prodi/standar1','borang'=>$borangid]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }
