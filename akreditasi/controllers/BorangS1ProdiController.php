@@ -256,12 +256,14 @@ class BorangS1ProdiController extends \yii\web\Controller
 
         if(Yii::$app->request->isPost){
             $id = Yii::$app->request->post('id');
+            $borang = Yii::$app->request->post('borang');
+            $standar = Yii::$app->request->post('standar');
             $model = IsianBorangS1Prodi::findOne($id);
             unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen/{$model->nama_file}"));
             $model->delete();
             Yii::$app->session->setFlash('success','Berhasil Menghapus Isian Borang');
 
-            return $this->redirect(['borang-s1-prodi/isi','borang'=>$model->borangS1Prodi->id]);
+            return $this->redirect(['borang-s1-prodi/isi-standar','standar'=>$standar,'borang'=>$borang]);
         }
         throw new BadRequestHttpException('Request Harus Post');
 
@@ -325,7 +327,7 @@ class BorangS1ProdiController extends \yii\web\Controller
             $model->delete();
             Yii::$app->session->setFlash('success','Berhasil Menghapus Dokumen Pendukung Borang');
 
-            return $this->redirect(['borang-s1-prodi/standar'.$standar,'borang'=>$borangid]);
+            return $this->redirect(['borang-s1-prodi/isi-standar','standar'=>$standar,'borang'=>$borang]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }

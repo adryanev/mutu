@@ -245,7 +245,7 @@ class BorangInstitusiController extends \yii\web\Controller
     public function actionDownloadIsian($id,$borang){
         ini_set('max_execution_time', 5*60);
         $template = IsianBorangInstitusi::findOne($id);
-        $file = Yii::getAlias('@uploadAkreditasi'."/{$template->borangInstitusi->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$template->borangInstitusi->akreditasiInstitusi->akreditasi->tahun}/{$template->borangInstitusi->akreditasiInstitusi->id_institusi}/borang/dokumen/{$template->nama_file}");
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$template->borangInstitusi->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$template->borangInstitusi->akreditasiInstitusi->akreditasi->tahun}/borang/dokumen/{$template->nama_file}");
         return Yii::$app->response->sendFile($file);
 
     }
@@ -255,10 +255,12 @@ class BorangInstitusiController extends \yii\web\Controller
         if(Yii::$app->request->isPost){
             $id = Yii::$app->request->post('id');
             $model = IsianBorangInstitusi::findOne($id);
+            $borang = Yii::$app->request->post('borang');
+            $standar = Yii::$app->request->post('standar');
             unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangInstitusi->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$model->borangInstitusi->akreditasiInstitusi->akreditasi->tahun}/borang/dokumen/{$model->nama_file}"));
             $model->delete();
             Yii::$app->session->setFlash('success','Berhasil Menghapus Isian Borang');
-            return $this->redirect(['borang-institusi/isi','borang'=>$model->borangInstitusi->id]);
+            return $this->redirect(['borang-institusi/isi-standar','standar'=>$standar,'borang'=>$borang]);
         }
         throw new BadRequestHttpException('Request Harus Post');
 
@@ -324,7 +326,7 @@ class BorangInstitusiController extends \yii\web\Controller
 
             $model->delete();
 
-            return $this->redirect(['borang-institusi/standar'.$standar,'borang'=>$borangid]);
+            return $this->redirect(['borang-institusi/isi-standar','standar'=>$standar,'borang'=>$borang->id]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }

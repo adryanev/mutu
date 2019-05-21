@@ -163,7 +163,7 @@ $query = $isian;
                                                                                             'data'=>[
                                                                                                 'method'=>'POST',
                                                                                                 'confirm'=>'Apakah anda yakin menghapus item ini?',
-                                                                                                'params'=>['id'=>$file->id,'borang'=>$_GET['borang']]
+                                                                                                'params'=>['id'=>$file->id,'borang'=>$_GET['borang'],'standar'=>$standar]
                                                                                             ]
                                                                                         ])?>
 
