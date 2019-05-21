@@ -15,13 +15,13 @@ use yii\behaviors\TimestampBehavior;
  * @property int $updated_at
  *
  * @property AkreditasiProdiS1 $akreditasiProdiS1
- * @property BorangS1FakultasStandar1[] $borangS1FakultasStandar1s
- * @property BorangS1FakultasStandar2[] $borangS1FakultasStandar2s
- * @property BorangS1FakultasStandar3[] $borangS1FakultasStandar3s
- * @property BorangS1FakultasStandar4[] $borangS1FakultasStandar4s
- * @property BorangS1FakultasStandar5[] $borangS1FakultasStandar5s
- * @property BorangS1FakultasStandar6[] $borangS1FakultasStandar6s
- * @property BorangS1FakultasStandar7[] $borangS1FakultasStandar7s
+ * @property BorangS1FakultasStandar1 $borangS1FakultasStandar1s
+ * @property BorangS1FakultasStandar2 $borangS1FakultasStandar2s
+ * @property BorangS1FakultasStandar3 $borangS1FakultasStandar3s
+ * @property BorangS1FakultasStandar4 $borangS1FakultasStandar4s
+ * @property BorangS1FakultasStandar5 $borangS1FakultasStandar5s
+ * @property BorangS1FakultasStandar6 $borangS1FakultasStandar6s
+ * @property BorangS1FakultasStandar7 $borangS1FakultasStandar7s
  * @property DokumenBorangS1Fakultas[] $dokumenBorangS1Fakultas
  */
 class BorangS1Fakultas extends \yii\db\ActiveRecord
@@ -80,7 +80,7 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getBorangS1FakultasStandar1s()
     {
-        return $this->hasMany(BorangS1FakultasStandar1::className(), ['id_borang_s1_fakultas' => 'id']);
+        return $this->hasOne(BorangS1FakultasStandar1::className(), ['id_borang_s1_fakultas' => 'id']);
     }
 
     /**
@@ -88,7 +88,7 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getBorangS1FakultasStandar2s()
     {
-        return $this->hasMany(BorangS1FakultasStandar2::className(), ['id_borang_s1_fakultas' => 'id']);
+        return $this->hasOne(BorangS1FakultasStandar2::className(), ['id_borang_s1_fakultas' => 'id']);
     }
 
     /**
@@ -96,7 +96,7 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getBorangS1FakultasStandar3s()
     {
-        return $this->hasMany(BorangS1FakultasStandar3::className(), ['id_borang_s1_fakultas' => 'id']);
+        return $this->hasOne(BorangS1FakultasStandar3::className(), ['id_borang_s1_fakultas' => 'id']);
     }
 
     /**
@@ -104,7 +104,7 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getBorangS1FakultasStandar4s()
     {
-        return $this->hasMany(BorangS1FakultasStandar4::className(), ['id_borang_s1_fakultas' => 'id']);
+        return $this->hasOne(BorangS1FakultasStandar4::className(), ['id_borang_s1_fakultas' => 'id']);
     }
 
     /**
@@ -112,7 +112,7 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getBorangS1FakultasStandar5s()
     {
-        return $this->hasMany(BorangS1FakultasStandar5::className(), ['id_borang_s1_fakultas' => 'id']);
+        return $this->hasOne(BorangS1FakultasStandar5::className(), ['id_borang_s1_fakultas' => 'id']);
     }
 
     /**
@@ -120,7 +120,7 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getBorangS1FakultasStandar6s()
     {
-        return $this->hasMany(BorangS1FakultasStandar6::className(), ['id_borang_s1_fakultas' => 'id']);
+        return $this->hasOne(BorangS1FakultasStandar6::className(), ['id_borang_s1_fakultas' => 'id']);
     }
 
     /**
@@ -128,7 +128,7 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getBorangS1FakultasStandar7s()
     {
-        return $this->hasMany(BorangS1FakultasStandar7::className(), ['id_borang_s1_fakultas' => 'id']);
+        return $this->hasOne(BorangS1FakultasStandar7::className(), ['id_borang_s1_fakultas' => 'id']);
     }
 
     /**
@@ -137,5 +137,20 @@ class BorangS1Fakultas extends \yii\db\ActiveRecord
     public function getDokumenBorangS1Fakultas()
     {
         return $this->hasMany(DokumenBorangS1Fakultas::className(), ['id_borang_s1_fakultas' => 'id']);
+    }
+
+    public function updateProgress(){
+        $s1= $this->borangS1FakultasStandar1s->progress/100;
+        $s2= $this->borangS1FakultasStandar2s->progress/100;
+        $s3= $this->borangS1FakultasStandar3s->progress/100;
+        $s4= $this->borangS1FakultasStandar4s->progress/100;
+        $s5= $this->borangS1FakultasStandar5s->progress/100;
+        $s6= $this->borangS1FakultasStandar6s->progress/100;
+        $s7= $this->borangS1FakultasStandar7s->progress/100;
+
+        $progress = round((($s1+$s2+$s3+$s4+$s5+$s6+$s7)/7) *100,2);
+
+        $this->progress = $progress;
+        $this->save(false);
     }
 }

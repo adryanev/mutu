@@ -3,19 +3,7 @@
 namespace akreditasi\controllers;
 
 use akreditasi\models\BorangS1ProdiForm;
-use akreditasi\models\BorangS1ProdiStandar1Form;
-use akreditasi\models\BorangS1ProdiStandar2Form;
-use akreditasi\models\BorangS1ProdiStandar3Form;
-use akreditasi\models\BorangS1ProdiStandar5Form;
-use akreditasi\models\BorangS1ProdiStandar6Form;
-use akreditasi\models\BorangS1ProdiStandar7Form;
-use akreditasi\models\DetailBorangS1ProdiStandar1UploadForm;
-use akreditasi\models\DetailBorangS1ProdiStandar2UploadForm;
-use akreditasi\models\DetailBorangS1ProdiStandar3UploadForm;
-use akreditasi\models\DetailBorangS1ProdiStandar4UploadForm;
-use akreditasi\models\DetailBorangS1ProdiStandar5UploadForm;
-use akreditasi\models\DetailBorangS1ProdiStandar6UploadForm;
-use akreditasi\models\DetailBorangS1ProdiStandar7UploadForm;
+
 use akreditasi\models\GambarBorangS1ProdiUploadForm;
 use akreditasi\models\IsianBorangS1ProdiUploadForm;
 use common\models\BorangS1Prodi;
@@ -26,19 +14,11 @@ use common\models\BorangS1ProdiStandar4;
 use common\models\BorangS1ProdiStandar5;
 use common\models\BorangS1ProdiStandar6;
 use common\models\BorangS1ProdiStandar7;
-use common\models\DetailBorangS1ProdiStandar1;
-use common\models\DetailBorangS1ProdiStandar2;
-use common\models\DetailBorangS1ProdiStandar3;
-use common\models\DetailBorangS1ProdiStandar4;
-use common\models\DetailBorangS1ProdiStandar5;
-use common\models\DetailBorangS1ProdiStandar6;
-use common\models\DetailBorangS1ProdiStandar7;
 use common\models\DokumenBorangS1Prodi;
 use common\models\GambarBorangS1Prodi;
 use common\models\IsianBorang;
 use common\models\IsianBorangS1Prodi;
 use Yii;
-use yii\helpers\FileHelper;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
@@ -183,7 +163,8 @@ class BorangS1ProdiController extends \yii\web\Controller
         $decode = Json::decode($json);
         $data = $decode[$id-1];
         $poin = $data['poin'];
-        $detail = DetailBorangS1ProdiStandar1::find()->where(['id_borang_s1_prodi_standar1'=>$model->id]);
+        $detailClass = "common\\models\\DetailBorangS1ProdiStandar".$id;
+        $detail = call_user_func($detailClass.'::find')->where(['id_borang_s1_prodi_standar'.$id=>$model->id]);
         $template = IsianBorang::find()->where(['untuk'=>'prodi'])->all();
         $isian = IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi'=>$borang]);
 
@@ -230,7 +211,11 @@ class BorangS1ProdiController extends \yii\web\Controller
         }
         if($detailModel->load(Yii::$app->request->post())){
             $detailModel->dokumenPendukung = UploadedFile::getInstance($detailModel,'dokumenPendukung');
-            $detailModel->uploadDokumen($model->id);
+            if($detailModel->uploadDokumen($model->id)){
+                Yii::$app->session->setFlash('success','Berhasil menambahkan detail borang');
+            }
+
+
             return $this->redirect(Url::current());
 
         }

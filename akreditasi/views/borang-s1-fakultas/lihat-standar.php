@@ -1,22 +1,18 @@
 <?php
 
-use akreditasi\models\BorangS1ProdiStandar1Form;
-use akreditasi\models\IsianBorangS1ProdiUploadForm;
-use common\models\DetailBorangS1ProdiStandar1;
+use akreditasi\models\BorangS1FakultasStandar1Form;
+use akreditasi\models\IsianBorangS1FakultasUploadForm;
+use common\models\DetailBorangS1FakultasStandar1;
 use common\models\IsianBorang;
-use dosamigos\ckeditor\CKEditor;
-use kartik\file\FileInput;
-use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
-use yii\bootstrap\Modal;
 use yii\bootstrap\Progress;
 use yii\db\ActiveQuery;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $model BorangS1ProdiStandar1Form */
-/* @var $detailModel DetailBorangS1ProdiStandar1 */
-/* @var $modelIsian IsianBorangS1ProdiUploadForm */
+/* @var $model BorangS1FakultasStandar1Form */
+/* @var $detailModel DetailBorangS1FakultasStandar1 */
+/* @var $modelIsian IsianBorangS1FakultasUploadForm */
 /* @var $detail ActiveQuery */
 /* @var $template ActiveQuery */
 /* @var $isian ActiveQuery */
@@ -24,7 +20,7 @@ use yii\web\View;
 $standar = $json['standar'];
 
 $this->title = 'Standar ' . $standar;
-$this->params['breadcrumbs'][] = ['label' => 'Lihat Borang', 'url' => ['borang-s1-prodi/lihat', 'borang' => $model->id_borang_s1_prodi]];
+$this->params['breadcrumbs'][] = ['label' => 'Lihat Borang', 'url' => ['borang-s1-fakultas/lihat', 'borang' => $model->id_borang_s1_fakultas]];
 $this->params['breadcrumbs'][] = $this->title;
 $query = $isian;
 
@@ -79,9 +75,10 @@ $query = $isian;
                                         <?= $value['penjelasan'] ?>
                                     </div>
                                 </div>
+
                                 <div class="clearfix"></div>
 
-
+                                <br>
                                 <div class="row">
 
                                     <div class="col-md-12">
@@ -118,7 +115,7 @@ $query = $isian;
 
                                                         <?php
                                                         $nomor = IsianBorang::findOne(['nomor_borang' => $value['nomor']]);
-                                                        $data = \common\models\IsianBorangS1Prodi::find()->where(['id_borang_s1_prodi' => $_GET['borang'], 'id_isian_borang' => $nomor])->all();
+                                                        $data = \common\models\IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas' => $_GET['borang'], 'id_isian_borang' => $nomor])->all();
 
                                                         foreach ($data as $f => $file):
                                                             ?>
@@ -129,7 +126,7 @@ $query = $isian;
                                                                 <td>
                                                                     <div class="row">
                                                                         <div class="col-md-12">
-                                                                            <?= Html::a('Download', ['borang-s1-prodi/download-isian', 'id' => $file->id, 'borang' => $_GET['borang']], [
+                                                                            <?= Html::a('Download', ['borang-s1-fakultas/download-isian', 'id' => $file->id, 'borang' => $_GET['borang']], [
                                                                                 'class' => 'btn btn-info'
                                                                             ]) ?>
 
@@ -157,7 +154,7 @@ $query = $isian;
                                                         <tr>
                                                             <?php $fileTemplate = $template->where(['nomor_borang' => $value['nomor']])->one(); ?>
                                                             <td><?= $fileTemplate->nama_file ?></td>
-                                                            <td><?= Html::a('<i class="material-icons">send</i> Download', ['borang-s1-prodi/download-template', 'id' => $fileTemplate->id], ['class' => 'btn btn-success btn-sm']) ?></td>
+                                                            <td><?= Html::a('<i class="material-icons">send</i> Download', ['borang-s1-fakultas/download-template', 'id' => $fileTemplate->id], ['class' => 'btn btn-success btn-sm']) ?></td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
@@ -191,7 +188,7 @@ $query = $isian;
                                                     <td>
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <?= Html::a('Download', ['borang-s1-prodi/download-detail', 'standar' => $standar, 'dokumen' => $item->id, 'borang' => $_GET['borang']], [
+                                                                <?= Html::a('Download', ['borang-s1-fakultas/download-detail', 'standar' => $standar, 'dokumen' => $item->id, 'borang' => $_GET['borang']], [
                                                                     'class' => 'btn btn-info'
                                                                 ]) ?>
 

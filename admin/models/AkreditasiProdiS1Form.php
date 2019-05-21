@@ -36,6 +36,7 @@ use common\models\DokumentasiS1ProdiStandar4;
 use common\models\DokumentasiS1ProdiStandar5;
 use common\models\DokumentasiS1ProdiStandar6;
 use common\models\DokumentasiS1ProdiStandar7;
+use RuntimeException;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
@@ -126,38 +127,42 @@ class AkreditasiProdiS1Form extends Model
 
 
         if(!file_exists($pathBorang) && !mkdir($pathBorang, 0777, true) && !is_dir($pathBorang)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathBorang));
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathBorang));
         }
 
         if(!file_exists($pathBorangDokumen) && !mkdir($pathBorangDokumen, 0777, true) && !is_dir($pathBorangDokumen)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathBorangDokumen));
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathBorangDokumen));
         }
 
         if(!file_exists($pathDokumentasi) && !mkdir($pathDokumentasi, 0777, true) && !is_dir($pathDokumentasi)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathDokumentasi));
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathDokumentasi));
         }
 
         if(!file_exists($pathGambar) && !mkdir($pathGambar, 0777, true) && !is_dir($pathGambar)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathGambar));
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathGambar));
         }
 
 
         $pathF = $path. "/{$this->_akreditasiProdiS1->akreditasi->tahun}/{$this->_akreditasiProdiS1->id_prodi}/fakultas";
         $pathFBorang = $pathF . '/borang';
+        $pathFBorangDokumen = $pathF . '/borang/dokumen';
         $pathFDokumentasi = $pathF. '/dokumentasi';
         $pathFGambar = $pathF. '/gambar';
 
 
         if(!file_exists($pathFBorang) && !mkdir($pathFBorang, 0777, true) && !is_dir($pathFBorang)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathFBorang));
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathFBorang));
         }
 
+        if(!file_exists($pathFBorangDokumen) && !mkdir($pathFBorangDokumen, 0777, true) && !is_dir($pathFBorangDokumen)) {
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathFBorangDokumen));
+        }
         if(!file_exists($pathFDokumentasi) && !mkdir($pathFDokumentasi, 0777, true) && !is_dir($pathFDokumentasi)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathFDokumentasi));
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathFDokumentasi));
         }
 
         if(!file_exists($pathFGambar) && !mkdir($pathFGambar, 0777, true) && !is_dir($pathFGambar)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $pathFGambar));
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathFGambar));
         }
 
     }
@@ -249,7 +254,7 @@ class AkreditasiProdiS1Form extends Model
             throw new InvalidArgumentException($standar7Prodi->errors);
         }
 
-        $attr = ['progress'=>0];
+        $attr = ['id_borang_s1_fakultas'=>$this->_borangS1Fakultas->id,'progress'=>0];
         $standar1Fakultas = new BorangS1FakultasStandar1();
         $standar2Fakultas = new BorangS1FakultasStandar2();
         $standar3Fakultas = new BorangS1FakultasStandar3();
@@ -324,82 +329,6 @@ class AkreditasiProdiS1Form extends Model
             $transaction->rollBack();
             throw new InvalidArgumentException($this->_dokumentasiS1Fakultas->errors);
         }
-
-//        $standar1 = new DokumentasiS1ProdiStandar1();
-//        $standar2 = new DokumentasiS1ProdiStandar2();
-//        $standar3 = new DokumentasiS1ProdiStandar3();
-//        $standar4 = new DokumentasiS1ProdiStandar4();
-//        $standar5 = new DokumentasiS1ProdiStandar5();
-//        $standar6 = new DokumentasiS1ProdiStandar6();
-//        $standar7 = new DokumentasiS1ProdiStandar7();
-//
-//        $standar1->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-//        $standar1->is_publik = 0;
-//        $standar1->is_asesor = 0;
-//        $standar1->progress = 0;
-//
-//        $standar2->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-//        $standar2->is_publik = 0;
-//        $standar2->is_asesor =0;
-//        $standar2->progress=0;
-//
-//        $standar3->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-//        $standar3->is_publik=0;
-//        $standar3->is_asesor =0;
-//        $standar3->progress = 0;
-//
-//        $standar4->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-//        $standar4->is_publik = 0;
-//        $standar4->is_asesor= 0;
-//        $standar4->progress = 0;
-//
-//        $standar5->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-//        $standar5->is_publik = 0;
-//        $standar5->is_asesor = 0;
-//        $standar5->progress = 0;
-//
-//        $standar6->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-//        $standar6->is_publik =0;
-//        $standar6->is_asesor = 0;
-//        $standar6->progress = 0;
-//
-//        $standar7->id_dokumentasi_s1_prodi = $this->_dokumentasiS1Prodi->id;
-//        $standar7->is_publik = 0;
-//        $standar7->is_asesor = 0;
-//        $standar7->progress = 0;
-//
-//        if(!$standar1->save()){
-//            $transaction->rollBack();
-//            throw new InvalidArgumentException($standar1->errors);
-//        }
-//
-//        if(!$standar2->save()){
-//            $transaction->rollBack();
-//            throw new InvalidArgumentException($standar2->errors);
-//        }
-//        if(!$standar3->save()){
-//            $transaction->rollBack();
-//            throw new InvalidArgumentException($standar3->errors);
-//        }
-//
-//        if(!$standar4->save()){
-//            $transaction->rollBack();
-//            throw new InvalidArgumentException($standar4->errors);
-//        }
-//
-//        if(!$standar5->save()){
-//            $transaction->rollBack();
-//            throw new InvalidArgumentException($standar5->errors);
-//        }
-//
-//        if(!$standar6->save()){
-//            $transaction->rollBack();
-//            throw new InvalidArgumentException($standar6->errors);
-//        }
-//        if(!$standar7->save()){
-//            $transaction->rollBack();
-//            throw new InvalidArgumentException($standar7->errors);
-//        }
 
     }
 
