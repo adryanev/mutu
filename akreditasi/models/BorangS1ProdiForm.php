@@ -37,7 +37,7 @@ class BorangS1ProdiForm extends Model
             $this->_dokumenBorangS1Prodi->id_borang_s1_prodi = $id;
             $fileName = $this->dokumenBorang->getBaseName().'.'.$this->dokumenBorang->getExtension();
             $this->_dokumenBorangS1Prodi->nama_dokumen = $fileName;
-            $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
+            $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
 
             $this->dokumenBorang->saveAs("$path/$fileName");
 

@@ -17,6 +17,8 @@ use yii\behaviors\TimestampBehavior;
  * @property int $updated_at
  *
  * @property Akreditasi $akreditasi
+ * @property BorangInstitusi[] $borangInstitusis
+ * @property DokumentasiInstitusi[] $dokumentasiInstitusis
  */
 class AkreditasiInstitusi extends \yii\db\ActiveRecord
 {
@@ -27,14 +29,10 @@ class AkreditasiInstitusi extends \yii\db\ActiveRecord
     {
         return 'akreditasi_institusi';
     }
-
-    /**
-     * {@inheritdoc}
-     */
     public function behaviors()
     {
         return [
-            TimestampBehavior::class
+            TimestampBehavior::class,
         ];
     }
 
@@ -73,5 +71,21 @@ class AkreditasiInstitusi extends \yii\db\ActiveRecord
     public function getAkreditasi()
     {
         return $this->hasOne(Akreditasi::className(), ['id' => 'id_akreditasi']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBorangInstitusis()
+    {
+        return $this->hasMany(BorangInstitusi::className(), ['id_akreditasi_institusi' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDokumentasiInstitusis()
+    {
+        return $this->hasMany(DokumentasiInstitusi::className(), ['id_akreditasi_institusi' => 'id']);
     }
 }

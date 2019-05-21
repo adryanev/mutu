@@ -10,7 +10,7 @@
 namespace akreditasi\models;
 
 
-use common\models\DetailBorangS1ProdiStandar2;
+use common\models\DetailBorangS1ProdiStandar1;
 use common\models\DokumenBorangS1Prodi;
 use Yii;
 use yii\base\Model;
@@ -21,7 +21,7 @@ use yii\web\UploadedFile;
  * @property DokumenBorangS1Prodi $detailBorangS1Prodi
  */
 
-class DetailBorangS1ProdiStandar2UploadForm extends Model
+class DetailBorangS1ProdiUploadForm extends Model
 {
 
 
@@ -44,16 +44,20 @@ class DetailBorangS1ProdiStandar2UploadForm extends Model
     }
 
 
-    public function uploadDokumen($id){
+    public function uploadDokumen($id,$standar){
 
 
         if($this->validate()){
-            $this->_detailBorangS1Prodi = new DetailBorangS1ProdiStandar2();
-            $this->_detailBorangS1Prodi->id_borang_s1_prodi_standar2 = $id;
+            $detailClass = 'common\\models\\DetailBorangS1ProdiStandar'.$standar;
+            $detailAttrId = 'id_borang_s1_prodi_standar'.$standar;
+            $this->_detailBorangS1Prodi = new $detailClass;
+//            $this->_detailBorangS1Prodi = new DetailBorangS1ProdiStandar1();
+            $this->_detailBorangS1Prodi->$detailAttrId = $id;
             $fileName = $this->dokumenPendukung->getBaseName().'.'.$this->dokumenPendukung->getExtension();
             $this->_detailBorangS1Prodi->nama_dokumen = $fileName;
             $this->_detailBorangS1Prodi->nomor_dokumen = $this->nomorDokumen;
-            $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$this->_detailBorangS1Prodi->borangS1ProdiStandar2->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_detailBorangS1Prodi->borangS1ProdiStandar2->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
+            $borangAttr = 'borangS1ProdiStandar'.$standar;
+            $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_detailBorangS1Prodi->$borangAttr->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$this->_detailBorangS1Prodi->$borangAttr->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_detailBorangS1Prodi->$borangAttr->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
             $this->dokumenPendukung->saveAs("$path/$fileName");
             $this->_detailBorangS1Prodi->save(false);
             return true;

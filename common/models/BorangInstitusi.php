@@ -15,13 +15,13 @@ use yii\behaviors\TimestampBehavior;
  * @property int $updated_at
  *
  * @property AkreditasiInstitusi $akreditasiInstitusi
- * @property BorangInstitusiStandar1[] $borangInstitusiStandar1s
- * @property BorangInstitusiStandar2[] $borangInstitusiStandar2s
- * @property BorangInstitusiStandar3[] $borangInstitusiStandar3s
- * @property BorangInstitusiStandar4[] $borangInstitusiStandar4s
- * @property BorangInstitusiStandar5[] $borangInstitusiStandar5s
- * @property BorangInstitusiStandar6[] $borangInstitusiStandar6s
- * @property BorangInstitusiStandar7[] $borangInstitusiStandar7s
+ * @property BorangInstitusiStandar1 $borangInstitusiStandar1s
+ * @property BorangInstitusiStandar2 $borangInstitusiStandar2s
+ * @property BorangInstitusiStandar3 $borangInstitusiStandar3s
+ * @property BorangInstitusiStandar4 $borangInstitusiStandar4s
+ * @property BorangInstitusiStandar5 $borangInstitusiStandar5s
+ * @property BorangInstitusiStandar6 $borangInstitusiStandar6s
+ * @property BorangInstitusiStandar7 $borangInstitusiStandar7s
  * @property DokumenBorangInstitusi[] $dokumenBorangInstitusis
  */
 class BorangInstitusi extends \yii\db\ActiveRecord
@@ -83,7 +83,7 @@ class BorangInstitusi extends \yii\db\ActiveRecord
      */
     public function getBorangInstitusiStandar1s()
     {
-        return $this->hasMany(BorangInstitusiStandar1::className(), ['id_borang_institusi' => 'id']);
+        return $this->hasOne(BorangInstitusiStandar1::className(), ['id_borang_institusi' => 'id']);
     }
 
     /**
@@ -91,7 +91,7 @@ class BorangInstitusi extends \yii\db\ActiveRecord
      */
     public function getBorangInstitusiStandar2s()
     {
-        return $this->hasMany(BorangInstitusiStandar2::className(), ['id_borang_institusi' => 'id']);
+        return $this->hasOne(BorangInstitusiStandar2::className(), ['id_borang_institusi' => 'id']);
     }
 
     /**
@@ -99,7 +99,7 @@ class BorangInstitusi extends \yii\db\ActiveRecord
      */
     public function getBorangInstitusiStandar3s()
     {
-        return $this->hasMany(BorangInstitusiStandar3::className(), ['id_borang_institusi' => 'id']);
+        return $this->hasOne(BorangInstitusiStandar3::className(), ['id_borang_institusi' => 'id']);
     }
 
     /**
@@ -107,7 +107,7 @@ class BorangInstitusi extends \yii\db\ActiveRecord
      */
     public function getBorangInstitusiStandar4s()
     {
-        return $this->hasMany(BorangInstitusiStandar4::className(), ['id_borang_institusi' => 'id']);
+        return $this->hasOne(BorangInstitusiStandar4::className(), ['id_borang_institusi' => 'id']);
     }
 
     /**
@@ -115,7 +115,7 @@ class BorangInstitusi extends \yii\db\ActiveRecord
      */
     public function getBorangInstitusiStandar5s()
     {
-        return $this->hasMany(BorangInstitusiStandar5::className(), ['id_borang_institusi' => 'id']);
+        return $this->hasOne(BorangInstitusiStandar5::className(), ['id_borang_institusi' => 'id']);
     }
 
     /**
@@ -123,7 +123,7 @@ class BorangInstitusi extends \yii\db\ActiveRecord
      */
     public function getBorangInstitusiStandar6s()
     {
-        return $this->hasMany(BorangInstitusiStandar6::className(), ['id_borang_institusi' => 'id']);
+        return $this->hasOne(BorangInstitusiStandar6::className(), ['id_borang_institusi' => 'id']);
     }
 
     /**
@@ -131,7 +131,7 @@ class BorangInstitusi extends \yii\db\ActiveRecord
      */
     public function getBorangInstitusiStandar7s()
     {
-        return $this->hasMany(BorangInstitusiStandar7::className(), ['id_borang_institusi' => 'id']);
+        return $this->hasOne(BorangInstitusiStandar7::className(), ['id_borang_institusi' => 'id']);
     }
 
     /**
@@ -140,5 +140,20 @@ class BorangInstitusi extends \yii\db\ActiveRecord
     public function getDokumenBorangInstitusis()
     {
         return $this->hasMany(DokumenBorangInstitusi::className(), ['id_borang_institusi' => 'id']);
+    }
+
+    public function updateProgress(){
+        $s1= $this->borangInstitusiStandar1s->progress/100;
+        $s2= $this->borangInstitusiStandar2s->progress/100;
+        $s3= $this->borangInstitusiStandar3s->progress/100;
+        $s4= $this->borangInstitusiStandar4s->progress/100;
+        $s5= $this->borangInstitusiStandar5s->progress/100;
+        $s6= $this->borangInstitusiStandar6s->progress/100;
+        $s7= $this->borangInstitusiStandar7s->progress/100;
+
+        $progress = round((($s1+$s2+$s3+$s4+$s5+$s6+$s7)/7) *100,2);
+
+        $this->progress = $progress;
+        $this->save(false);
     }
 }

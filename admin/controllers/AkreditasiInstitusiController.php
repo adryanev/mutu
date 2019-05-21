@@ -2,10 +2,14 @@
 
 namespace admin\controllers;
 
+use admin\models\AkreditasiInstitusiForm;
+use common\models\Akreditasi;
+use common\models\JenisAkreditasi;
 use Yii;
 use yii\filters\AccessControl;
 use common\models\AkreditasiInstitusi;
 use admin\models\AkreditasiInstitusiSearch;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -74,14 +78,25 @@ class AkreditasiInstitusiController extends Controller
      */
     public function actionCreate()
     {
-        $model = new AkreditasiInstitusi();
+        $model = new AkreditasiInstitusiForm();
+        $jenisAkred = JenisAkreditasi::findOne(['nama'=>'Institusi']);
+        $idAkreditasi = Akreditasi::findAll(['id_jenis_akreditasi'=>$jenisAkred->id]);
+        $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id',function ($data){
+            return "{$data->lembaga} - {$data->nama} ({$data->tahun})";
+        });
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if($model->createAkreditasiInstitusi()){
+                Yii::$app->session->setFlash('success', 'Berhasil membuat entry akreditasi institusi');
+
+                return $this->redirect(['akreditasi-institusi/index']);
+            }
         }
 
         return $this->render('create', [
             'model' => $model,
+            'dataAkreditasi'=>$dataAkreditasi
         ]);
     }
 
@@ -94,14 +109,23 @@ class AkreditasiInstitusiController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+        $model = AkreditasiInstitusiForm::findOne($id);
+        $jenisAkred = JenisAkreditasi::findOne(['nama'=>'Institusi']);
+        $idAkreditasi = Akreditasi::findAll(['id_jenis_akreditasi'=>$jenisAkred->id]);
+        $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id',function ($data){
+            return "{$data->lembaga} - {$data->nama} ({$data->tahun})";
+        });
+        if ($model->load(Yii::$app->request->post())) {
+            if($model->updateAkreditasiInstitusi()){
+                Yii::$app->session->setFlash('success', 'Berhasil memperbarui akreditasi institusi');
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['akreditasi-institusi/index']);
+            }
         }
 
         return $this->render('update', [
             'model' => $model,
+            'dataAkreditasi'=>$dataAkreditasi
         ]);
     }
 

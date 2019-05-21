@@ -1,10 +1,10 @@
 <?php
 
-use akreditasi\models\BorangS1FakultasStandar1Form;
-use akreditasi\models\IsianBorangS1FakultasUploadForm;
-use common\models\DetailBorangS1FakultasStandar1;
+use akreditasi\models\BorangInstitusiStandar1Form;
+use akreditasi\models\IsianBorangInstitusiUploadForm;
+use common\models\DetailBorangInstitusiStandar1;
 use common\models\IsianBorang;
-use common\models\IsianBorangS1Fakultas;
+use common\models\IsianBorangInstitusi;
 use dosamigos\ckeditor\CKEditor;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
@@ -15,9 +15,9 @@ use yii\db\ActiveQuery;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $model BorangS1FakultasStandar1Form */
-/* @var $detailModel DetailBorangS1FakultasStandar1 */
-/* @var $modelIsian IsianBorangS1FakultasUploadForm*/
+/* @var $model BorangInstitusiStandar1Form */
+/* @var $detailModel DetailBorangInstitusiStandar1 */
+/* @var $modelIsian IsianBorangInstitusiUploadForm*/
 /* @var $detail ActiveQuery */
 /* @var $template ActiveQuery */
 /* @var $isian ActiveQuery */
@@ -25,7 +25,7 @@ use yii\web\View;
 $standar = $json['standar'];
 
 $this->title='Standar '.$standar;
-$this->params['breadcrumbs'][] = ['label'=>'Isi Borang','url'=>['borang-s1-fakultas/isi','borang'=>$model->id_borang_s1_fakultas]];
+$this->params['breadcrumbs'][] = ['label'=>'Isi Borang','url'=>['borang-institusi/isi','borang'=>$model->id_borang_institusi]];
 $this->params['breadcrumbs'][] = $this->title;
 $query = $isian;
 
@@ -144,8 +144,8 @@ $query = $isian;
                                                                 <tbody>
 
                                                                         <?php
-                                                                        $nomor = IsianBorang::findOne(['nomor_borang'=>$value['nomor'],'untuk'=>'fakultas']);
-                                                                        $data = IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas'=>$_GET['borang'],'id_isian_borang'=>$nomor->id])->all();
+                                                                        $nomor = IsianBorang::findOne(['nomor_borang'=>$value['nomor'],'untuk'=>'prodi']);
+                                                                        $data = IsianBorangInstitusi::find()->where(['id_borang_institusi'=>$_GET['borang'],'id_isian_borang'=>$nomor->id])->all();
                                                                         foreach ($data as $f =>$file):
                                                                         ?>
 
@@ -155,10 +155,10 @@ $query = $isian;
                                                                             <td>
                                                                                 <div class="row">
                                                                                     <div class="col-md-12">
-                                                                                        <?=Html::a('Download',['borang-s1-fakultas/download-isian','id'=>$file->id,'borang'=>$_GET['borang']],[
+                                                                                        <?=Html::a('Download',['borang-institusi/download-isian','id'=>$file->id,'borang'=>$_GET['borang']],[
                                                                                             'class'=>'btn btn-info'
                                                                                         ])?>
-                                                                                        <?=Html::a('Hapus',['borang-s1-fakultas/hapus-isian'],[
+                                                                                        <?=Html::a('Hapus',['borang-institusi/hapus-isian'],[
                                                                                             'class'=>'btn btn-danger',
                                                                                             'data'=>[
                                                                                                 'method'=>'POST',
@@ -186,7 +186,7 @@ $query = $isian;
                                                                 <tr>
                                                                     <?php $fileTemplate = $template->where(['nomor_borang'=>$value['nomor']])->one();?>
                                                                     <td><?=$fileTemplate->nama_file?></td>
-                                                                    <td><?=Html::a('<i class="material-icons">send</i> Download',['borang-s1-fakultas/download-template','id'=>$fileTemplate->id],['class'=>'btn btn-success btn-sm'])?></td>
+                                                                    <td><?=Html::a('<i class="material-icons">send</i> Download',['borang-institusi/download-template','id'=>$fileTemplate->id],['class'=>'btn btn-success btn-sm'])?></td>
                                                                 </tr>
                                                                 </tbody>
                                                             </table>
@@ -221,10 +221,10 @@ $query = $isian;
                                                             <td>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <?=Html::a('Download',['borang-s1-fakultas/download-detail','standar'=>$standar,'dokumen'=>$item->id,'borang'=>$_GET['borang']],[
+                                                                        <?=Html::a('Download',['borang-institusi/download-detail','standar'=>$standar,'dokumen'=>$item->id,'borang'=>$_GET['borang']],[
                                                                                 'class'=>'btn btn-info'
                                                                         ])?>
-                                                                        <?=Html::a('Hapus',['borang-s1-fakultas/hapus-detail'],[
+                                                                        <?=Html::a('Hapus',['borang-institusi/hapus-detail'],[
                                                                                 'class'=>'btn btn-danger',
                                                                                 'data'=>[
                                                                                         'method'=>'POST',

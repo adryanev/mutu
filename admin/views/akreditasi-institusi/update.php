@@ -4,6 +4,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\AkreditasiInstitusi */
+/* @var $dataAkreditasi \common\models\Akreditasi[] */
 
 $this->title = 'Update Akreditasi Institusi: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Akreditasi Institusi', 'url' => ['index']];
@@ -26,6 +27,7 @@ $this->params['breadcrumbs'][] = 'Update';
 
                     <?= $this->render('_form', [
                     'model' => $model,
+                        'dataAkreditasi'=>$dataAkreditasi
                     ]) ?>
 
                 </div>
