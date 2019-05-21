@@ -21,10 +21,11 @@ use yii\behaviors\TimestampBehavior;
  * @property ProgramStudi $prodi
  * @property BorangS1Fakultas[] $borangS1Fakultas
  * @property BorangS1Prodi[] $borangS1Prodis
+ * @property DokumentasiS1Fakultas[] $dokumentasiS1Fakultas
+ * @property DokumentasiS1Prodi[] $dokumentasiS1Prodis
  */
 class AkreditasiProdiS1 extends \yii\db\ActiveRecord
 {
-
     public function behaviors()
     {
 
@@ -32,7 +33,6 @@ class AkreditasiProdiS1 extends \yii\db\ActiveRecord
             TimestampBehavior::class,
         ];
     }
-
     /**
      * {@inheritdoc}
      */
@@ -102,5 +102,21 @@ class AkreditasiProdiS1 extends \yii\db\ActiveRecord
     public function getBorangS1Prodis()
     {
         return $this->hasMany(BorangS1Prodi::className(), ['id_akreditasi_prodi_s1' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDokumentasiS1Fakultas()
+    {
+        return $this->hasMany(DokumentasiS1Fakultas::className(), ['id_akreditasi_prodi_s1' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDokumentasiS1Prodis()
+    {
+        return $this->hasMany(DokumentasiS1Prodi::className(), ['id_akreditasi_prodi_s1' => 'id']);
     }
 }

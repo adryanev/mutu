@@ -340,7 +340,7 @@ class AkreditasiProdiS1Form extends Model
         $model->id_akreditasi = $data->id_akreditasi;
         $model->_borangS1Prodi = $data->borangS1Prodis;
         $model->_borangS1Fakultas = $data->borangS1Fakultas;
-        $model->_dokumentasiS1Prodi = $data->dokumentasiS1Prodi;
+        $model->_dokumentasiS1Prodi = $data->dokumentasiS1Prodis;
         $model->_dokumentasiS1Fakultas = $data->dokumentasiS1Fakultas;
 
         return $model;

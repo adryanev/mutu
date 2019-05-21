@@ -4,6 +4,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\AkreditasiInstitusi */
+/* @var $dataAkreditasi \common\models\Akreditasi[] */
 
 $this->title = 'Create Akreditasi Institusi';
 $this->params['breadcrumbs'][] = ['label' => 'Akreditasi Institusi', 'url' => ['index']];
@@ -24,7 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="akreditasi-institusi-create">
 
                     <?= $this->render('_form', [
-                    'model' => $model,
+                        'model' => $model,
+                        'dataAkreditasi' => $dataAkreditasi
                     ]) ?>
 
                 </div>
