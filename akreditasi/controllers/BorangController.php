@@ -3,6 +3,7 @@
 namespace akreditasi\controllers;
 
 use common\models\Akreditasi;
+use common\models\PencarianBorangInstitusiForm;
 use common\models\PencarianBorangProdiForm;
 use common\models\Program;
 use common\models\ProgramStudi;
@@ -23,11 +24,16 @@ class BorangController extends \yii\web\Controller
 
 
         $model = new PencarianBorangProdiForm();
-        $idAkreditasi = Akreditasi::find()->all();
-        $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id',function($data){
+        $modelInstitusi = new PencarianBorangInstitusiForm();
+        $idAkreditasiProdi = Akreditasi::findAll(['id_jenis_akreditasi'=>2]);
+        $dataAkreditasiProdi = ArrayHelper::map($idAkreditasiProdi,'id',function($data){
            return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
         });
 
+        $idAkreditasiInstitusi = Akreditasi::findAll(['id_jenis_akreditasi'=>1]);
+        $dataAkreditasiInstitusi = ArrayHelper::map($idAkreditasiInstitusi,'id',function($data){
+            return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
+        });
 
 
         $dataProgram = ArrayHelper::map(Program::find()->all(),'id','nama');
@@ -44,40 +50,23 @@ class BorangController extends \yii\web\Controller
             $this->redirect([$url,'borang'=>$borangId]);
 
         }
+        if($modelInstitusi->load(Yii::$app->request->post())){
+            $url = $modelInstitusi->cari($target);
+            $borang = $modelInstitusi->getBorang();
+            if(!$borang){
+                throw new NotFoundHttpException("Data yang anda cari tidak ditemukan");
+            }
+
+            $borangId = $borang->id;
+            $this->redirect([$url,'borang'=>$borangId]);
+        }
         return $this->render('arsip',[
             'model'=>$model,
-            'dataAkreditasi'=>$dataAkreditasi,
+            'dataAkreditasiProdi'=>$dataAkreditasiProdi,
+            'dataAkreditasiInstitusi'=>$dataAkreditasiInstitusi,
             'dataProgram'=>$dataProgram,
+            'modelInstitusi'=>$modelInstitusi
            ]);
-    }
-    public function actionUnggah()
-    {
-        return $this->render('unggah');
-    }
-
-    public function actionCari(){
-
-        return $this->render('cari');
-    }
-
-    public function actionLihatUnggah(){
-        return $this->render('lihat_unggah');
-    }
-
-    public function actionIsi(){
-        return $this->render('isi');
-    }
-
-    public function actionLihatIsi(){
-        return $this->render('lihat_isi');
-    }
-
-    public function actionLihat(){
-        return $this->render('lihat');
-    }
-
-    public function actionLihatLihat(){
-        return $this->render('lihat_lihat');
     }
 
     public function actionCariProdi(){

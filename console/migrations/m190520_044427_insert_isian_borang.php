@@ -39,6 +39,7 @@ class m190520_044427_insert_isian_borang extends Migration
             [23,'7.3.1','template-7.3.1.xlsx','prodi',1557554873,1557554873],
             [24,'7.3.2','template-7.3.2.xlsx','prodi',1557554873,1557554873],
             [25,'7.3.2','template-7.3.2.xlsx','fakultas',1557554873,1557554873],
+            [26,'6.3.7','template-6.3.7.xlsx','institusi',1557554873,1557554873],
         ];
 
         $this->batchInsert('{{%isian_borang}}',['id','nomor_borang','nama_file','untuk','created_at','updated_at'],$data);

@@ -92,16 +92,15 @@ $query = $isian;
 
                                 </div>
                                 <?php if ($value['isian']): ?>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3 class="text-black-50">Isian Borang</h3>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-
-                                                        <h6 class="pull-left">File Isian Borang</h6>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h3 class="text-black-50">Isian Borang</h3>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <h6 class="pull-left">File Isian Borang</h6>
+                                                        </div>
                                                     </div>
                                                     <table class="table table-striped table-hover">
                                                         <thead data-background-color="blue">
@@ -139,6 +138,7 @@ $query = $isian;
                                                         </tbody>
                                                     </table>
                                                 </div>
+
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -161,10 +161,10 @@ $query = $isian;
                                                 </div>
                                             </div>
 
+
                                         </div>
                                     </div>
-                                    <?php endif;
-                                    ?>
+                                <?php endif;?>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <h4 class="text-black-50">Dokumen Pendukung</h4>

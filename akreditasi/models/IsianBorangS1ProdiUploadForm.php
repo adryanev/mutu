@@ -48,7 +48,7 @@ class IsianBorangS1ProdiUploadForm extends Model
             $filename = $this->nama_file->getBaseName().'.'.$this->nama_file->getExtension();
             $model->nama_file = $filename;
 
-            $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$borang->akreditasiProdiS1->akreditasi->tahun}/{$borang->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
+            $path = Yii::getAlias('@uploadAkreditasi'. "/{$borang->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$borang->akreditasiProdiS1->akreditasi->tahun}/{$borang->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
 
             $this->nama_file->saveAs("$path/$filename");
             $model->save(false);

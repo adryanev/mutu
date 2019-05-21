@@ -10,14 +10,14 @@
 namespace akreditasi\models;
 
 
-use common\models\BorangS1Fakultas;
+use common\models\BorangInstitusi;
 use common\models\IsianBorang;
-use common\models\IsianBorangS1Fakultas;
+use common\models\IsianBorangInstitusi;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
-class IsianBorangS1FakultasUploadForm extends Model
+class IsianBorangInstitusiUploadForm extends Model
 {
 
     public $nomor_borang;
@@ -39,16 +39,16 @@ class IsianBorangS1FakultasUploadForm extends Model
     public function uploadFile($idBorang){
 
         if($this->validate()){
-            $isian = IsianBorang::findOne(['nomor_borang'=>$this->nomor_borang,'untuk'=>'fakultas']);
-            $borang = BorangS1Fakultas::findOne($idBorang);
-            $model = new IsianBorangS1Fakultas();
+            $isian = IsianBorang::findOne(['nomor_borang'=>$this->nomor_borang,'untuk'=>'prodi']);
+            $borang = BorangInstitusi::findOne($idBorang);
+            $model = new IsianBorangInstitusi();
             $model->id_isian_borang = $isian->id;
-            $model->id_borang_s1_fakultas = $borang->id;
+            $model->id_borang_institusi = $borang->id;
 
             $filename = $this->nama_file->getBaseName().'.'.$this->nama_file->getExtension();
             $model->nama_file = $filename;
 
-            $path = Yii::getAlias('@uploadAkreditasi'. "/{$borang->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$borang->akreditasiProdiS1->akreditasi->tahun}/{$borang->akreditasiProdiS1->id_prodi}/fakultas/borang/dokumen");
+            $path = Yii::getAlias('@uploadAkreditasi'. "/{$borang->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$borang->akreditasiInstitusi->akreditasi->tahun}/borang/dokumen");
 
             $this->nama_file->saveAs("$path/$filename");
             $model->save(false);
