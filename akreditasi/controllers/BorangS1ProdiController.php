@@ -14,7 +14,6 @@ use common\models\BorangS1ProdiStandar4;
 use common\models\BorangS1ProdiStandar5;
 use common\models\BorangS1ProdiStandar6;
 use common\models\BorangS1ProdiStandar7;
-use common\models\DetailBorangS1ProdiStandar1;
 use common\models\DokumenBorangS1Prodi;
 use common\models\GambarBorangS1Prodi;
 use common\models\IsianBorang;
