@@ -86,7 +86,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
 
                     ],
                 ],
-                ['label'=> 'Isi Penilaian', 'icon'=>'person', 'url'=>['/penilaian/isi']],
+                ['label'=> 'Isi Penilaian', 'icon'=>'person', 'url'=>['/penilaian/arsip-penilaian']],
             ],
         ])?>
     </div>
