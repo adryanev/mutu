@@ -1,57 +1,1137 @@
 [
   {
     "standar": 1,
-    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN",
-    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian","Sosialisasi"],
+    "judul" : "VISI,MISI,Program kerjasama dan hasilnya/laporannya ",
+    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian ","Sosialisasi "],
     "butir":[
       {
-        "nomor": "1.1.a",
-        "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
+        "nomor": "1.1.1 ",
+        "isi": "Visi, misi, tujuan, dan sasaran, serta strategi pencapaian sasaran unit pengelola program studi diploma. ",
         "dokumen_sumber":[
           {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
-          },
-          {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+            "kode": " 1.1.1- 02-01-01 ",
+            "dokumen":"Envisioning yang memuat:  Visi, Misi, Tujuan, Nilai Dasar, Dan Keyakinan Dasar  "
           }
 
         ],
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.a-01-02-01",
-            "dokumen": "Dokumen Daftar Hadir"
+            "kode": "1.1.1- 02-02-01 ",
+            "dokumen": "Dokumen daftar hadir "
+          },
+		   {
+            "kode": "1.1.1- 02-02-02 ",
+            "dokumen": "Berita acara, dan notulensi penyusunan visi,  "
+          },
+		   {
+            "kode": "1.1.1- 02-02-03 ",
+            "dokumen": "Dokumen daftar hadir penyusunan dan review visi, misi, tujuan, dan sasaran (sebanyak yang sudah dilakukan Fakultas)  "
+		  },
+		   {
+            "kode": "1.1.1- 02-02-04 ",
+            "dokumen": "Dokumen berita acara penyusunan visi, misi, tujuan, dan sasaran (sebanyak yang sudah dilakukan Fakultas)  "
+		  }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "1.1.2 ",
+        "isi": "Strategi  pencapaian  sasaran dengan  rentang  waktu  yang jelas  dan  didukung  oleh Dokumen.   ",
+        "dokumen_sumber":[
+          {
+            "kode": " 1.1.2- 02-01-01  ",
+            "dokumen":"RIP   "
+          },
+		  {
+            "kode": " 1.1.2- 02-01-02  ",
+            "dokumen":"Renstra   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "1.1.2- 02-01-01  ",
+            "dokumen": "Daftar hadir   "
+          },
+		   {
+            "kode": "1.1.2- 02-01-02 ",
+            "dokumen": "Daftar hadir    "
+		  }
+        ]
+      
+  },
+  
+  
+  
+  {
+        "nomor": "1.2  ",
+        "isi": "Tingkat pemahaman sivitas akademika  dan tenaga kependidikan terhadap visi, misi, tujuan dan sasaran unit pengelola fakultas..     ",
+        "dokumen_sumber":[
+          {
+            "kode": " 1.2-02-01-01  ",
+            "dokumen":"Dialog interaktif   "
+          },
+		  {
+            "kode": " 1.2-02-01-02 ",
+            "dokumen":"TV  "
+          },
+		   {
+            "kode": " 1.2-02-01-03  ",
+            "dokumen":"Radio  "
+          },
+		   {
+            "kode": " 1.2-02-01-04  ",
+            "dokumen":"Rapat Kerja "
+          },
+		   {
+            "kode": " 1.2-02-01-05   ",
+            "dokumen":"Rapat Senat  "
+          },
+		   {
+            "kode": " 1.2-02-01-06  ",
+            "dokumen":"Orientasi Penerimaan Mahasiswa Baru  "
+          },
+		  {
+            "kode": " 1.2-02-01-07  ",
+            "dokumen":"Brosur "
+          },
+		  {
+            "kode": " 1.2-02-01-08  ",
+            "dokumen":"Booklet  "
+          },
+		  {
+            "kode": " 1.2-02-01-09   ",
+            "dokumen":"Buku pedoman akademik  "
+          },
+		  {
+            "kode": " 1.2-02-01-10  ",
+            "dokumen":"Survei Keefektifan Visi Misi  "
+          }
+
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "1.2-02-02-01   ",
+            "dokumen": "Dokumen daftar hadir acara sosialisasi visi, misi, tujuan, dan sasaran Fakultas  "
+          },
+		   {
+            "kode": "1.2-02-02-02 ",
+            "dokumen": "Dokumen notulensi acara sosialisasi visi, misi, tujuan, dan sasaran     "
+		  }
+        ]
+      }
+    ]
+  },
+  
+  
+  {
+    "standar": 2,
+    "judul" : "TATA PAMONG, KEPEMIMPINAN, SISTEM PENGELOLAAN, DAN PENJAMINAN MUTU  ",
+    "aspek": [" Sistem Tata Pamong  ","Penjaminan Mutu","Sistem Pengelolaan "," Penjaminan Mutu","Umpan Balik","Keberlanjutan   "],
+    "butir":[
+      {
+        "nomor": "2.1  ",
+        "isi": "Tata pamong menjamin terwujudnya visi, terlaksananya misi, tercapainya tujuan, berhasilnya strategi yang digunakan secara kredibel, transparan, akuntabel, bertanggung jawab, dan adil.  ",
+        "dokumen_sumber":[
+          {
+            "kode": " 2.1-02-01-01  ",
+            "dokumen":"SK Pendirian    "
+          },
+		   {
+            "kode": " 2.1-02-01-02  ",
+            "dokumen":"Organisasi dan Tata Kerja    "
+          },
+		   {
+            "kode": " 2.1-02-01-03   ",
+            "dokumen":"Statuta PT    "
+          },
+		   {
+            "kode": " 2.1-02-01-04  ",
+            "dokumen":"Dokumen rumusan tata pamong termasuk pemilihan struktur fakultas yang kredibel, transparan, akuntabel, bertanggungjawab, dan adil   "
+          },
+		   {
+            "kode": " 2.1-02-01-05   ",
+            "dokumen":"Bagan Organisasi    "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.1-02-02-01  ",
+            "dokumen": "Dokumen daftar hadir penyusunan tata pamong "
+          },
+		   {
+            "kode": "2.1-02-02-02  ",
+            "dokumen": "Dokumen berita acara penyusunan tata pamong    "
+          }
+        ]
+      
+  },
+  
+  
+        {
+        "nomor": "2.2   ",
+        "isi": "Efisiensi dalam struktur organisasi.  ",
+        "dokumen_sumber":[
+          {
+            "kode": " 2.2- 02-01-05  ",
+            "dokumen":"Analisis Beban Kerja "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": " ",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "2.3   ",
+        "isi": "Kepemimpinan yang efektif (kepemimpinan operasional, kepemimpinan organisasi, dan kepemimpinan publik).  ",
+        "dokumen_sumber":[
+          {
+            "kode": " 2.3-02-01-01  ",
+            "dokumen":"Bukti keterlibatan Fakultas dalam operasional  "
+          },
+		   {
+            "kode": " 2.3-02-01-02 ",
+            "dokumen":"Bukti keterlibatan Fakultas dalam pengelolaan organisasi Fakultas/Sekolah Tinggi Bukti keterlibatan Fakultas dalam aktivitas masyarakat/publik  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.3-02-02-02  ",
+            "dokumen": "Dokumen daftar hadir penyusunan rumusan sistem kepemimpinan Fakultas "
+          }, {
+            "kode": " 2.3-02-02-02 ",
+            "dokumen": "Dokumen daftar hadir penyusunan rumusan sistem kepemimpinan Fakultas "
+          },
+		   {
+            "kode": "2.3-02-02-03  ",
+            "dokumen": "Dokumen berita acara penyusunan rumusan sistem kepemimpinan Fakultas  "
+          }
+        ]
+      
+  },
+  
+  
+     {
+        "nomor": "2.4   ",
+        "isi": "Sistem pengelolaan fungsional dan operasional unit pengelola fakultas diploma.   ",
+        "dokumen_sumber":[
+          {
+            "kode": " 2.4-02-01-01   ",
+            "dokumen":"Dokumen sistem pengelolaan  fakultas "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.4-02-02-01  ",
+            "dokumen": "Dokumen daftar hadir penyusunan rumusan sistem pengelolaan Fakultas Dokumen berita acara penyusunan rumusan sistem pengelolaan Fakultas  "
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "2.5.1  ",
+        "isi": "Keberadaan dan efektivitas unit pelaksana penjaminan mutu.  ",
+        "dokumen_sumber":[
+          {
+            "kode": " 2.5.1-02-01-01   ",
+            "dokumen":"Dokumen penjaminan mutu dari unit penjaminan mutu PT: Sasaran mutu; rencana mutu; semua SOP; wewenang dan tanggungjawab; komitmen, awareness & respon auditee"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.5.1-02-02-01   ",
+            "dokumen": "Dokumen SOP: Mutu Dosen; pembelajaran; kurikulum; pedoman akademik; pengembangan jurusan; pengendalian proses ujian; pelatihan; dan praktikum  "
+          }
+        ]
+      
+  },
+  
+  
+    {
+        "nomor": "2.5.2  ",
+        "isi": "Ketersediaan dan pelaksanaan standar mutu.   ",
+        "dokumen_sumber":[
+          {
+            "kode": " 2.5.2-02-01-01   ",
+            "dokumen":"Dokumen penjaminan mutu dari unit penjaminan mutu PT: Sasaran mutu; rencana mutu; semua SOP; wewenang dan tanggungjawab; komitmen, awareness & respon auditee"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "  ",
+            "dokumen": " "
           }
         ]
       }
     ]
   },
-  {
-    "standar": 2,
-    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN",
-    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian","Sosialisasi"],
+  
+  
+  
+   {
+    "standar": 3,
+    "judul" : "MAHASISWA DAN LULUSAN   ",
+    "aspek": [" Profil Mahasiswa dan Lulusan","Layanan kepada Mahasiswa ","Evaluasi Lulusan  "," Himpunan Alumni  "],
     "butir":[
       {
-        "nomor": "1.1.a",
-        "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
+        "nomor": "3.1.1   ",
+        "isi": "Ketersediaan dokumen tentang penerimaan mahasiswa baru dan pelaksanaannya.    ",
         "dokumen_sumber":[
           {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
-          },
-          {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+            "kode": "3.1.1-02-01-01   ",
+            "dokumen":"Laporan Perkembangan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik  "
           }
 
         ],
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.a-01-02-01",
-            "dokumen": "Dokumen Daftar Hadir"
+            "kode": "3.1.1-02-02-01  ",
+            "dokumen": "DRekap Penerimaan Mahasiswa Baru, yang memuat: o  Rekap jumlah setiap thn selama 5 thn terakhir:  o  Jumlah daya tampung Fakultas o  jumlah calon mahasiswa/peminat Fakultas yang ikut seleksi  "
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "3.1.2  ",
+        "isi": "Rasio mahasiswa baru transfer terhadap mahasiswa baru reguler.   ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.2-02-01-01   ",
+            "dokumen":"Laporan Perkembangan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik  "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "3.1.2-02-01-01 ",
+            "dokumen": "Rekap jumlah setiap thn selama 5 thn terakhir:  "
+          },
+		            {
+            "kode": "3.1.2-02-01-02  ",
+            "dokumen": "Jumlah mahasiswa baru reguler"
+          },
+		            {
+            "kode": "3.1.2-02-01-03  ",
+            "dokumen": "Jumlah mahasiswa baru non reguler  "
+          },
+		   {
+            "kode": "3.1.2-02-01-04  ",
+            "dokumen": "JJumlah mahasiswa baru reguler yang transfer ke Fakultas,   "
+          },
+		   {
+            "kode": "3.1.2-02-01-05  ",
+            "dokumen": "Jumlah mahasiswa baru non reguler transfer ke Fakultas    "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "3.1.3 ",
+        "isi": "Tujuan, proses penerimaan, dan mutu mahasiswa transfer.   ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.3-02-01-01    ",
+            "dokumen":"Pedoman Penerimaan mahasiswa  yang memuat kebiajakan mahasiswa transfer   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": " ",
+            "dokumen": "  "
+          }
+        ]
+      
+  },
+  
+  
+     {
+        "nomor": "3.2.1.1  ",
+        "isi": "Rata-rata masa studi lulusan   ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.1.1-02-01-01   ",
+            "dokumen":"Laporan Indeks Prestasi Mahasiswa Per Semester   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "3.2.1.1-02-02-01  ",
+            "dokumen": " Rekap jumlah setiap thn selama 5 thn terakhir:  "
+          },
+		  {
+            "kode": " 3.2.1.1-02-02-02 ",
+            "dokumen": " IPK terkecil, terbesar, dan rata-rata Persentase IPK <2,75, IPK 2,75-3,50, dan IPK >3,50  "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "3.2.1.2  ",
+        "isi": "Rata-rata IPK lulusan   ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.1.2-02-01-01   ",
+            "dokumen":"Laporan Indeks Prestasi Mahasiswa Per Semester  "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "3.2.1.2-02-02-01  ",
+            "dokumen": " Rekap jumlah setiap thn selama 5 thn terakhir:    "
+          },
+		  {
+            "kode": " 3.2.1.2-02-02-02 ",
+            "dokumen": "IPK terkecil, terbesar, dan rata-rata "
+          },
+		  {
+            "kode": " 3.2.1.2-02-02-03 ",
+            "dokumen": "Persentase IPK <2,75, IPK 2,75-3,50, dan IPK >3,50  "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "3.2.2  ",
+        "isi": "Upaya pengembangan dan peningkatan mutu lulusan: jenis program yang dilakukan dan efektivitas pelaksanaannya.  ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.1-02-01-01 ",
+            "dokumen":"Dokumen program kerja dan laporan kegiatan  "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   
+		  {
+            "kode": " ",
+            "dokumen": " "
+          }
+        ]
+      }
+    ]
+  },
+  
+  
+   {
+    "standar": 4,
+    "judul" : "SUMBER DAYA MANUSIA  ",
+    "aspek": [" Sistem Seleksi dan Pengembangan  ","Monitoring dan Evaluasi","Dosen Tetap  "," Dosen Tidak","Upaya Peningkatan Sumber Daya Manusia  Tetap ","Tenaga Kependidikan   "],
+    "butir":[
+      {
+        "nomor": "4.1.1  ",
+        "isi": "Kecukupan dan kualifikasi dosen tetap  pada unit pengelola fakultas diploma.  ",
+        "dokumen_sumber":[
+          {
+            "kode": " 4.1.1-02-01-01 1 ",
+            "dokumen":"Laporan Evaluasi Beban Kerja Dosen   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+         
+		   {
+            "kode": "",
+            "dokumen": " "
+		  }
+        ]
+      
+  },
+  
+  
+        {
+        "nomor": "4.1.2  ",
+        "isi": "Dosen yang tugas belajar   ",
+        "dokumen_sumber":[
+          {
+            "kode": " 4.1.2ab-02-01-01 ",
+            "dokumen":"Laporan Kegiatan pengembangan dan peningkatan mutu dosen tetap   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+         
+		   {
+            "kode": "",
+            "dokumen": " "
+		  }
+        ]
+      
+  },
+  
+  
+  
+ {
+        "nomor": "4.1.3  ",
+        "isi": "Upaya unit pengelola diploma dalam mengembangkan tenaga dosen tetap.  ",
+        "dokumen_sumber":[
+          {
+            "kode": " 4.1.2.b-02-01-01  ",
+            "dokumen":"Laporan Beban Kerja Dosen:  o   pendidikan: jurnal kuliah, daftar kehadiran mengajar, dll; o  penelitian: hasil penelitian  pelayanan pengabdian kepada masyarakat: bukti-bukti pengabdian, seperti surat permohonan dari masyarakat, SK pengabdian daftar kegiatan pengabdian dosen.   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+         
+		   {
+            "kode": "",
+            "dokumen": " "
+		  }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "4.2   ",
+        "isi": "Kecukupan, kompetensi, dan kualifikasi tenaga kependidikan.  ",
+        "dokumen_sumber":[
+          {
+            "kode": " 4.1.3-02-01-01  ",
+            "dokumen":"Laproan Kegiatan Pengembangan Tenaga Kependidikan   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+         
+		   {
+            "kode": "",
+            "dokumen": " "
+		  }
+        ]
+    }
+    ]
+  },
+  
+  
+  
+   {
+    "standar": 5,
+    "judul" : " KURIKULUM, PEMBELAJARAN, DAN SUASANA AKADEMIK  ",
+    "aspek": ["Kurikulum "," Peninjauan kurikulum dalam 5 tahun terakhir ","Pelaksanaan proses pembelajaran  "," Sistem Pembimbingan  ","  Pembimbingan Tugas Akhir"," Upaya perbaikan pembelajaran "," Upaya peningkatan suasana akademik   "],
+    "butir":[
+      {
+        "nomor": "5.1 ",
+        "isi": "Bentuk dukungan unit pengelola program studi diploma dalam penyusunan, implementasi, dan pengembangan kurikulum antara lain dalam bentuk penyediaan fasilitas, pengorganisasian kegiatan, serta bantuan pendanaan.  ",
+        "dokumen_sumber":[
+          {
+            "kode": " 5.1-02-01-01  ",
+            "dokumen":"Dokumen kurikulum Prodi  "
+          },
+		  {
+            "kode": " 5.1-02-01-02  ",
+            "dokumen":"Dokumen perumusan kompetensi lulusan  "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "5.1-02-02-01  ",
+            "dokumen": "Dokumen daftar hadir penyusunan kompetensi lulusan  "
+          },
+		   {
+            "kode": "5.1-02-02-02  ",
+            "dokumen": "Dokumen berita acara penyusunan kompetensi lulusan   "
+          }
+        ]
+      
+  },
+  
+  
+        {
+        "nomor": "5.3 ",
+        "isi": "Dukungan  unit  pengelola  fakultas diploma dalam penciptaan  suasana akademik.   ",
+        "dokumen_sumber":[
+          {
+            "kode": "5.3-02-01-02   ",
+            "dokumen":"Dokumen Suasana Akademik  "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "  ",
+            "dokumen": ""
+          }
+        ]
+      }
+    ]
+  },
+  
+  
+   {
+    "standar": 6,
+    "judul" : "PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI  ",
+    "aspek": ["Pengelolaan Dana  ","  Perolehan dan Alokasi Dana  ","Prasarana  "," Sarana Pelaksanaan Kegiatan Akademik   "," Sistem Informasi"],
+    "butir":[
+      {
+        "nomor": "6.1.1.1  ",
+        "isi": "Persentase perolehan dana dari mahasiswa dibandingkan dengan total penerimaan dana (= PD MHS )  ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.1.1-02-01-01  ",
+            "dokumen":"Laporan Keuangan  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": " ",
+            "dokumen": " "
+          }
+        ]
+      
+  },
+  
+        {
+        "nomor": "6.1.1.2   ",
+        "isi": "Biaya satuan pendidikan per mahasiswa per tahun. B SP  =  Biaya satuan pendidikan per mahasiswa per tahun.  ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.1.2-02-01-01 ",
+            "dokumen":"Laporan Keuangan  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": " ",
+            "dokumen": " "
+          }
+        ]
+      
+  },
+  
+  
+          {
+        "nomor": "6.1.1.3  ",
+        "isi": "Dana penelitian dalam tiga tahun terakhir.  Rata-rata dana penelitian/dosen tetap/tahun (=R PD)   ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.1.3-02-01-01 ",
+            "dokumen":"Rekap hasil penelitian semua dosen Fakultas, termasuk sumber dananya "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "6.1.1.3-02-02-01 ",
+            "dokumen": " Laporan Penelitian "
+          }
+        ]
+      
+  },
+  
+  
+  
+   {
+        "nomor": "6.1.1.4  ",
+        "isi": "Dana yang diperoleh dalam rangka pelayanan/pengabdian kepada masyarakat dalam tiga  tahun terakhir. Rata-rata dana pengabdian/dosen tetap/tahun (=R PKM ) ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.1.4-02-01-01  ",
+            "dokumen":"Laporan Penggunaan Dana Pengabdian Masyarakat  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "6.1.1.4-02-02-01 ",
+            "dokumen": " SK  Pengabdian  pada  Masyarakat  dari lembaga  pengabdian  masyarakat  PT/ST, beserta jumlah dan sumber dananya  "
+          }
+        ]
+      
+  },
+  
+  
+  
+   {
+        "nomor": "6.1.2.1  ",
+        "isi": "Kecukupan dana yang diperoleh unit pengelola fakultas diploma. Ket: Dana operasional dikatakan cukup jika dana yang diperoleh lebih dari Rp 15 juta/mahasiswa.  ",
+        "dokumen_sumber":[
+          {
+            "kode": "66.1.2.1-02-01-01   ",
+            "dokumen":"Analisis Laporan Keuangan  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "  "
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "6.1.2.1 ",
+        "isi": "Kecukupan dana yang diperoleh unit pengelola fakultas diploma. Ket: Dana operasional dikatakan cukup jika dana yang diperoleh lebih dari Rp 15 juta/mahasiswa.   ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.2.1-02-01-01   ",
+            "dokumen":"Analisis Laporan Keuangan  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "  "
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "6.1.2.2  ",
+        "isi": "Upaya pengembangan dana.  ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.2.2-02-01-01   ",
+            "dokumen":"Laporan Kerjasama  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "  "
+          }
+        ]
+      
+  },
+  
+   {
+        "nomor": "6.2.1   ",
+        "isi": "Investasi untuk pengadaan sarana dalam tiga tahun terakhir dibandingkan dengan kebutuhan saat ini.  ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.1-02-01-01   ",
+            "dokumen":"Laporan investasi   "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "  "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "6.2.2    ",
+        "isi": "Rencana investasi untuk pengadaan sarana dalam lima tahun ke depan.   ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.2-02-01-01   ",
+            "dokumen":"Rencana Investasi   "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "  "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "6.3.1    ",
+        "isi": "Mutu dan kecukupan akses prasarana yang dikelola unit pengelola fakultas diploma untuk keperluan PS.  ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.1-02-01-01    ",
+            "dokumen":"aftar /katalog buku dari perpustakaan Prodi, Fak/ST, PT    "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "  "
+          }
+        ]
+      
+  },
+  
+  
+     {
+        "nomor": "6.3.2    ",
+        "isi": "Rencana pengembangan prasarana oleh unit pengelola fakultas diploma.  ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.2-02-01-01    ",
+            "dokumen":"Rencana Investasi   "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "  "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "6.4.1.1    ",
+        "isi": "Pemanfaatan teknologi komunikasi dan informasi  untuk proses pembelajaran, termasuk e-learning.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.4.1.1-02-01-01     ",
+            "dokumen":"Sistem Informasi   "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "6.4.1.1-02-02-01",
+            "dokumen": " Hotspot PT, Fak, Fakultas  "
+          },
+		   {
+            "kode": "6.4.1.1-02-02-02",
+            "dokumen": " Website  "
+          },
+		   {
+            "kode": "6.4.1.1-02-02-03 ",
+            "dokumen": " e-learning  "
+          }
+        ]
+      
+  },
+  
+  
+     {
+        "nomor": "6.4.1.2  ",
+        "isi": "Pemanfaatan teknologi komunikasi dan informasi  untuk penyelenggaraan  administrasi (misalkan SIAKAD, SIMKEU, SIMAWA, SIMFA, SIMPEG). ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.4.1.2-02-01-01    ",
+            "dokumen":"Sistem Informasi   "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "6.4.1.2-02-02-01  ",
+            "dokumen": "SIAKAD  "
+          },
+		   {
+            "kode": "6.4.1.2-02-02-02 ",
+            "dokumen": "SIMKEU, "
+          },
+		   {
+            "kode": "6.4.1.2-02-02-03 ",
+            "dokumen": " SIMAWA,  "
+          },
+		   {
+            "kode": "6.4.1.2-02-02-04  ",
+            "dokumen": "  SIMFA   "
+          },
+		   {
+            "kode": "6.4.1.2-02-02-05",
+            "dokumen": " SIMPEG   "
+          }
+        ]
+      
+  },
+  
+       {
+        "nomor": "6.4.1.3 ",
+        "isi": "Pemanfaatan teknologi komunikasi dan informasi  untuk proses pengambilan keputusan dalam pengembangan institusi (antara lain informasi berupa deskripsi, ringkasan, dan trend berbagai jenis data).    ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.4.1.3-02-01-01    ",
+            "dokumen":"SistemInformsi  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "6.4.1.3-02-02-01   ",
+            "dokumen": "informasi deskripsi,   "
+          },
+		   {
+            "kode": "6.4.1.3-02-02-02  ",
+            "dokumen": "ringkasan, dan trend berbagai jenis data "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "6.4.2 ",
+        "isi": "Aksesibilitas data dalam sistem informasi dan komunikasi.     ",
+        "dokumen_sumber":[
+          {
+            "kode": "66.4.2-02-01-01    ",
+            "dokumen":"Daftar /katalog buku dari perpustakaan Prodi, Fak/ST, PT   "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "  ",
+            "dokumen": " "
+          }
+        ]
+      
+  },
+  
+  {
+        "nomor": "6.4.3 ",
+        "isi": "Media/cara penyebaran informasi/kebijakan untuk sivitas akademika dan tenaga kependidikan di unit pengelola fakultas diploma dapat dilakukan melalui enam jenis media: 1.  Rapat/pertemuan 2.  Surat 3.  Faksimili/telepon/SMS 4.e-mail 5.Mailing list 6.  Buletin   7.  Lainnya     ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.4.3-02-01-01   ",
+            "dokumen":"Media informasi "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "  ",
+            "dokumen": " "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "6.4.4 ",
+        "isi": "Rencana strategis pengembangan sistem informasi jangka panjang: mempertimbangkan perkembangan teknologi informasi, dan komitmen unit pengelola fakultas diploma dalam hal pendanaan.    ",
+        "dokumen_sumber":[
+          {
+            "kode": "6.4.4-02-01-01   ",
+            "dokumen":"Rencana strategis pengembangan sistem informas  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "  ",
+            "dokumen": " "
+          }
+        ]
+     }
+    ]
+  },
+  
+  
+   {
+    "standar": 7,
+    "judul" : "PENELITIAN, PELAYANAN/PENGABDIAN KEPADA MASYARAKAT, DAN KERJASAMA   ",
+    "aspek": [" Penelitian dosen tetap yang bidang keahliannya sesuai dengan Program Studi   ","Kegiatan pelayanan/ pengabdian kepada masyarakat ","Kegiatan kerjasama dengan instansi lain   "],
+    "butir":[
+      {
+        "nomor": "7.1.1.1  ",
+        "isi": "Kegiatan penelitian: banyaknya kegiatan, total dana  penelitian,  dan  upaya  pengembangan kegiatan penelitian   ",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.1.a-02-01-01 ",
+            "dokumen":"Rekap kegiatan penelitian     "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "  ",
+            "dokumen": "   "
+          }
+        ]
+     
+  },
+  
+  
+      {
+        "nomor": "77.1.1.2   ",
+        "isi": "Besar dana penelitian dosen tetap fakultas diploma sejenjang.   ",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.1.b-02-01-01  ",
+            "dokumen":"Rekap penggunaan dana penelitian   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "  ",
+            "dokumen": "   "
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "7.1.2   ",
+        "isi": "Upaya pengembangan kegiatan penelitian oleh unit pengelola fakultas diploma.    ",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.2-02-01-01   ",
+            "dokumen":"Rencana kegiatan penelitian   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "  ",
+            "dokumen": "   "
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "7.2.1.1   ",
+        "isi": "Banyak kegiatan PkM dosen tetap seluruh program studi diploma sejenjang.   ",
+        "dokumen_sumber":[
+          {
+            "kode": "7.2.1.a-02-01-01   ",
+            "dokumen":"Rekap kegiatan penelitian   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": " 7.2.1.1-02-02-01  ",
+            "dokumen": " Bukti-bukti pengabdian semua dosen: sertifikat, ucapan terimakasih, dll., disertai sumber dananya   "
+          }
+        ]
+     
+  },
+  
+  
+   {
+        "nomor": "7.2.1.2   ",
+        "isi": "Besar dana PkM dosen tetap seluruh program studi diploma sejenjang.   ",
+        "dokumen_sumber":[
+          {
+            "kode": "7.2.1.b-02-01-01   ",
+            "dokumen":"Rekap penggunaan dana penelitian   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "   ",
+            "dokumen": "   "
+          }
+        ]
+     
+  },
+  
+  
+  
+   {
+        "nomor": "7.3.2   ",
+        "isi": "Kegiatan kerjasama dengan instansi di dalam negeri dalam tiga tahun terakhir   ",
+        "dokumen_sumber":[
+          {
+            "kode": "7.3.1-02-01-01   ",
+            "dokumen":"Dokumen semua MoU kerjasama dengan instansi-instansi dalam negeri yang relevan dengan bidang PS   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "   ",
+            "dokumen": "   "
+          }
+        ]
+     
+  },
+  
+  
+     {
+        "nomor": "7.3.2",
+        "isi": "Kegiatan kerjasama dengan instansi di luar negeri dalam tiga tahun terakhir.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.3.1-02-01-02 ",
+            "dokumen":"Program kerjasama dan hasilnya/laporannya   "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
           }
         ]
       }
