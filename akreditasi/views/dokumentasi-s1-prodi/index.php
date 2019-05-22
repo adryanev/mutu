@@ -10,7 +10,10 @@ use common\models\DokumentasiS1ProdiStandar5;
 use common\models\DokumentasiS1ProdiStandar6;
 use common\models\DokumentasiS1ProdiStandar7;
 // use common\models\DokumenBorangS1Prodi;
+use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
+use yii\bootstrap\Modal;
+use yii\bootstrap\Progress;
 use yii\web\View;
 /* @var $this yii\web\View */
 /* @var $borangProdi DokumentasiS1Prodi */
@@ -81,8 +84,26 @@ $this->params['breadcrumbs'][] = $this->title;
                             <td>
                             <?php 
                                 $status = $dokumentasiProdi->is_publik; 
-                            
-                            
+                                $id = $dokumentasiProdi->id;
+
+                                // var_dump($status);
+                                // exit();
+                                
+                                if ($status === 0) {
+                                    echo Html::a('<i class ="material-icons">lock</i> Tidak Publik',['dokumentasi-s1-prodi/ubah-publik'],['class'=>'btn btn-danger','data'=>[
+                                        'method'=>'POST',
+                                        'confirm'=>'Ganti ke publik ?',
+                                        'params'=>['id'=>$id, 'publik'=>1]
+                                    ]]);
+                                }
+                                else{
+                                    echo Html::a('<i class ="material-icons">public</i> Publik',['dokumentasi-s1-prodi/ubah-publik'],['class'=>'btn btn-success','data'=>[
+                                        'method'=>'POST',
+                                        'confirm'=>'Ganti ke tidak publik ?',
+                                        'params'=>['id'=>$id, 'publik'=>0]
+                                    ]]);
+                                }
+
                             ?>
                             </td>
                         </tr>
@@ -99,14 +120,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Isi Borang</h4>
-                <p class="category">Kelengkapan Berkas : <?=Html::encode($dokumentasiProdi->progress)?>%</p>
+                <h4 class="card-title">Isi Dokumentasi</h4>
+                <p class="category">Kelengkapan Berkas : <?=Html::encode($progressDok)?>%</p>
 
                 
 
                 <div class="progress">
-                    <div class="progress-bar <?=$dokumentasiProdi->progress < 30 ? 'progress-bar-danger' : (($dokumentasiProdi->progress >30 && $dokumentasiProdi->progress<=60 )? 'progress-bar-warning': 'progress-bar-info') ?>" role="progressbar" aria-valuenow="<?=Html::encode($dokumentasiProdi->progress)?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=Html::encode($dokumentasiProdi->progress)?>%;">
-                        <span class="sr-only"><?=Html::encode($dokumentasiProdi->progress)?>% Complete</span>
+                    <div class="progress-bar <?=$progressDok < 30 ? 'progress-bar-danger' : (($progressDok >30 && $progressDok<=60 )? 'progress-bar-warning': 'progress-bar-info') ?>" role="progressbar" aria-valuenow="<?=Html::encode($progressDok)?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=Html::encode($progressDok)?>%;">
+                        <span class="sr-only"><?=Html::encode($progressDok)?>% Complete</span>
                     </div>
                 </div>
 
@@ -128,43 +149,52 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>1</td>
                             <td colspan="2">
-                                Standar 1 : <?= $standar1 === null ? 0: $standar1->progress?>%<br><small style="color:grey"> VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN</small>
+                                Standar 1 : <?= $progress1 ?>%<br><small style="color:grey"> VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN</small>
 
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$standar1 === null ? 0: $standar1->progress ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$standar1 === null ? 0: $standar1->progress?>%;">
-                                        <span class="sr-only">60% Complete</span>
-                                    </div>
-                                </div>
+                                <?=
+                                Progress::widget([
+                                    'percent' => $progress1,
+                                    'label' => 'test',
+                                    'barOptions' => ['class' => 'progress-bar-info'],
+                                    'options' => ['class' => 'progress-striped']
+                                ]);?>
+
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/lihat'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/standar1', 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
                             <td>2</td>
                             <td colspan="2">
-                                Standar 2 : <?=$standar2 === null ? 0: $standar2->progress?>%<br><small style="color:grey">TATA PAMONG, KEPEMIMPINAN, SISTEM PENGELOLAAN, DAN PENJAMINAN MUTU</small>
+                                Standar 2 : <?=$progress2 ?>%<br><small style="color:grey">TATA PAMONG, KEPEMIMPINAN, SISTEM PENGELOLAAN, DAN PENJAMINAN MUTU</small>
 
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$standar2 === null ? 0: $standar2->progress?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$standar2 === null ? 0: $standar2->progress?>%;">
-                                        <span class="sr-only"><?=$standar2 === null ? 0: $standar2->progress?>% Complete</span>
-                                    </div>
-                                </div>
+                                <?=
+                                Progress::widget([
+                                    'percent' => $progress2,
+                                    'label' => 'test',
+                                    'barOptions' => ['class' => 'progress-bar-info'],
+                                    'options' => ['class' => 'progress-striped']
+                                ]);?>
+
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/standar2', 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
                             <td>3</td>
                             <td colspan="2">
-                                Standar 3 : <?=$standar3 === null ? 0: $standar3->progress?>%<br><small style="color:grey">MAHASISWA DAN LULUSAN</small>
+                                Standar 3 : <?= $progress3 ?>%<br><small style="color:grey">MAHASISWA DAN LULUSAN</small>
 
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$standar3 === null ? 0: $standar3->progress?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$standar3 === null ? 0: $standar3->progress?>%;">
-                                        <span class="sr-only"><?=$standar3 === null ? 0: $standar3->progress?>% Complete</span>
-                                    </div>
-                                </div>
+                                <?=
+                                Progress::widget([
+                                    'percent' => $progress3,
+                                    'label' => 'test',
+                                    'barOptions' => ['class' => 'progress-bar-info'],
+                                    'options' => ['class' => 'progress-striped']
+                                ]);?>
+
                             </td>
 
                             <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
@@ -173,13 +203,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>4</td>
                             <td colspan="2">
-                                Standar 4 : <?=$standar4 === null ? 0: $standar4->progress?>%<br><small style="color:grey">SUMBER DAYA MANUSIA</small>
+                                Standar 4 : <?= $progress4 ?>%<br><small style="color:grey">SUMBER DAYA MANUSIA</small>
 
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$standar4 === null ? 0: $standar4->progress?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$standar4 === null ? 0: $standar4->progress?>%;">
-                                        <span class="sr-only"><?=$standar4 === null ? 0: $standar4->progress?>% Complete</span>
-                                    </div>
-                                </div>
+                                <?=
+                                Progress::widget([
+                                    'percent' => $progress4,
+                                    'label' => 'test',
+                                    'barOptions' => ['class' => 'progress-bar-info'],
+                                    'options' => ['class' => 'progress-striped']
+                                ]);?>
+                                
                             </td>
 
                             <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
@@ -188,13 +221,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>5</td>
                             <td colspan="2">
-                                Standar 5 : <?=$standar5 === null ? 0: $standar5->progress?>%<br><small style="color:grey">KURIKULUM, PEMBELAJARAN, DAN SUASANA AKADEMIK</small>
+                                Standar 5 : <?= $progress5 ?>%<br><small style="color:grey">KURIKULUM, PEMBELAJARAN, DAN SUASANA AKADEMIK</small>
 
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$standar5 === null ? 0: $standar5->progress?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$standar5 === null ? 0: $standar5->progress?>%;">
-                                        <span class="sr-only"><?=$standar5 === null ? 0: $standar5->progress?>% Complete</span>
-                                    </div>
-                                </div>
+                                <?=
+                                Progress::widget([
+                                    'percent' => $progress5,
+                                    'label' => 'test',
+                                    'barOptions' => ['class' => 'progress-bar-info'],
+                                    'options' => ['class' => 'progress-striped']
+                                ]);?>
+                                
                             </td>
 
                             <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
@@ -203,13 +239,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>6</td>
                             <td colspan="2">
-                                Standar 6 : <?=$standar6 === null ? 0: $standar6->progress?>%<br><small style="color:grey">PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI</small>
+                                Standar 6 : <?= $progress6 ?>%<br><small style="color:grey">PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI</small>
 
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$standar6 === null ? 0: $standar6->progress?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$standar6 === null ? 0: $standar6->progress?>%;">
-                                        <span class="sr-only"><?=$standar4 === null ? 0: $standar4->progress?>% Complete</span>
-                                    </div>
-                                </div>
+                                <?=
+                                Progress::widget([
+                                    'percent' => $progress6,
+                                    'label' => 'test',
+                                    'barOptions' => ['class' => 'progress-bar-info'],
+                                    'options' => ['class' => 'progress-striped']
+                                ]);?>
+                                
                             </td>
 
                             <td><?= Html::a('Lihat',['dokumentasi/lihat-penanggung'],['class'=>'btn btn-rose'])?></td>
@@ -218,13 +257,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>7</td>
                             <td colspan="2">
-                                Standar 7 : <?=$standar7 === null ? 0: $standar7->progress?>%<br> <small style="color:grey">PENELITIAN, PELAYANAN/PENGABDIAN KEPADA MASYARAKAT, DAN KERJASAMA</small>
+                                Standar 7 : <?= $progress7 ?>%<br> <small style="color:grey">PENELITIAN, PELAYANAN/PENGABDIAN KEPADA MASYARAKAT, DAN KERJASAMA</small>
 
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?=$standar7 === null ? 0: $standar7->progress?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$standar7 === null ? 0: $standar7->progress?>%;">
-                                        <span class="sr-only"><?=$standar7 === null ? 0: $standar7->progress?>% Complete</span>
-                                    </div>
-                                </div>
+                                <?=
+                                Progress::widget([
+                                    'percent' => $progress7,
+                                    'label' => 'test',
+                                    'barOptions' => ['class' => 'progress-bar-info'],
+                                    'options' => ['class' => 'progress-striped']
+                                ]);?>
+                                
                             </td>
 
                             <td><?= Html::a('Lihat',['dokumentasi/isi-dok'],['class'=>'btn btn-rose'])?></td>
