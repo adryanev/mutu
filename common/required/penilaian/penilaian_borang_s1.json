@@ -1,583 +1,619 @@
 [
   {
-    "butir": "1",
-    "aspek": "Akurasi dan kelengkapan data serta informasi yang digunakan untuk menyusun laporan evaluasi-diri.",
-    "bobot": 1
-  },
-  {
-    "butir": " 1.1.a",
-    "aspek": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
-    "bobot": 1
-  },
-  {
-    "butir": "1.1.b",
-    "aspek": "Strategi pencapaian sasaran dengan rentang waktu yang jelas dan didukung oleh dokumen.",
-    "bobot": 1
-  },
-  {
-    "butir": "1.2b",
-    "aspek": "Sosialisasi visi-misi. Sosialisasi yang efektif tercermin dari tingkat pemahaman seluruh pemangku kepentingan internal yaitu sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan.",
-    "bobot": 1
-  },
-  {
-    "butir": "1.a",
-    "aspek": "Cara program studi mengemukakan fakta tentang situasi program studi, pada semua komponen evaluasi-diri a.l. kelengkapan data, kurun waktu yang cukup, cross-reference.",
-    "bobot": 1
-  },
-  {
-    "butir": "1.b",
-    "aspek": "Pengolahan data menjadi informasi yang bermanfaat, a.l. menggunakan metode-metode kuantitatif yang tepat, serta teknik representasi yang relevan.",
-    "bobot": 12.5
-  },
-  {
-    "butir": "2",
-    "aspek": "Kualitas analisis yang digunakan untuk mengidentifikasi dan merumuskan masalah pada semua komponen evaluasi-diri.",
-    "bobot": 12.5
-  },
-  {
-    "butir": "2.1",
-    "aspek": "Tata pamong menjamin terwujudnya visi, terlaksananya misi, tercapainya tujuan, berhasilnya strategi yang digunakan secara kredibel, transparan, akuntabel, bertanggung jawab, dan adil.",
-    "bobot": 1
-  },
-  {
-    "butir": "2.2",
-    "aspek": "Karakteristik kepemimpinan yang efektif (kepemimpinan operasional, kepemimpinan organisasi, kepemimpinan publik).",
-    "bobot": 1
-  },
-  {
-    "butir": "2.3",
-    "aspek": "Sistem pengelolaan fungsional dan operasional program studi mencakup: planning, organizing, staffing, leading, controling yang efektif dilaksanakan.",
-    "bobot": 1
-  },
-  {
-    "butir": "2.4",
-    "aspek": "Pelaksanaan penjaminan mutu di program studi.",
-    "bobot": 1
-  },
-  {
-    "butir": "2.5",
-    "aspek": "Penjaringan umpan balik dan tindak lanjutnya.",
-    "bobot": 1
-  },
-  {
-    "butir": "2.6",
-    "aspek": "Upaya untuk menjamin keberlanjutan (sustainability) program studi.",
-    "bobot": 1
-  },
-  {
-    "butir": "2.a",
-    "aspek": "identifikasi dan perumusan masalah dilakukan dengan baik.",
-    "bobot": 7.5
-  },
-  {
-    "butir": "2.b",
-    "aspek": "Ketepatan dalam melakukan appraisal, judgment, evaluasi, asesmen atas fakta tentang situasi di program studi.",
-    "bobot": 7.5
-  },
-  {
-    "butir": "2.c",
-    "aspek": "Permasalahan dan kelemahan yang ada dirumuskan dengan baik.",
-    "bobot": 7.5
-  },
-  {
-    "butir": "2.d",
-    "aspek": "Deskripsi/Analisis SWOT berkenaan dengan ketepatan penempatan aspek dalam komponen SWOT, tumpuan penekanan analisis.",
-    "bobot": 7.5
-  },
-  {
-    "butir": "3",
-    "aspek": "Strategi pengembangan dan perbaikan program.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.1.1.a",
-    "aspek": "Rasio calon mahasiswa yang ikut seleksi terhadap daya tampung.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.1.1.b",
-    "aspek": "Rasio mahasiswa baru reguler yang melakukan registrasi tehadap calon mahasiswa baru reguler yang lulus seleksi.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.1.1.c",
-    "aspek": "Rasio mahasiswa baru transfer terhadap mahasiswa baru regular.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.1.1.d",
-    "aspek": "Rata-rata Indeks Prestasi Kumulatif (IPK) selama lima tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.1.2",
-    "aspek": "Penerimaan mahasiswa non-reguler (selayaknya tidak membuat beban dosen sangat berat, jauh melebihi beban ideal sekitar 12 sks).",
-    "bobot": 1
-  },
-  {
-    "butir": "3.1.3",
-    "aspek": "Penghargaan atas prestasi mahasiswa di bidang nalar, bakat dan minat.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.1.4.a",
-    "aspek": "Persentase kelulusan tepat waktu.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.1.4.b",
-    "aspek": "Persentase mahasiswa yang DO atau mengundurkan diri.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.2.1",
-    "aspek": "Layanan dan kegiatan kemahasiswaan (ragam, jenis, dan aksesibilitasnya) yang dapat dimanfaatkan untuk membina dan mengembangkan penalaran, minat, bakat, seni, dan kesejahteraan.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.2.2",
-    "aspek": "Kualitas layanan kepada mahasiswa.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.3.1.a",
-    "aspek": "Upaya pelacakan dan perekaman data lulusan.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.3.1.b",
-    "aspek": "Penggunaan hasil pelacakan untuk perbaikan: (1) proses pembelajaran, (2) penggalangan dana, (3) informasi pekerjaan, (4) membangun jejaring.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.3.2",
-    "aspek": "Profil masa tunggu kerja pertama (dalam bulan).",
-    "bobot": 1
-  },
-  {
-    "butir": "3.3.3",
-    "aspek": "Profil kesesuaian bidang kerja dengan bidang studi (keahlian) lulusan.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.4.1",
-    "aspek": "Bentuk partisipasi lulusan dan alumni dalam mendukung pengembangan akademik program studi.",
-    "bobot": 1
-  },
-  {
-    "butir": "3.4.2",
-    "aspek": "Bentuk partisipasi lulusan dan alumni dalam mendukung pengembangan non-akademik program studi.",
-    "bobot": 4
-  },
-  {
-    "butir": "3.a",
-    "aspek": "Ketepatan program studi memilih/menentukan rencana perbaikan dari kekurangan yang ada.",
-    "bobot": 10
-  },
-  {
-    "butir": "3.b",
-    "aspek": "Kejelasan program studi menunjukkan cara untuk mengatasi masalah yang ada.",
-    "bobot": 5
-  },
-  {
-    "butir": "3.c",
-    "aspek": "Kelayakan dan kerealistikan strategi dan sasaran yang ingin dicapai.",
-    "bobot": 5
-  },
-  {
-    "butir": "4",
-    "aspek": "Keterpaduan dan keterkaitan antar komponen evaluasi-diri.",
-    "bobot": 1
-  },
-  {
-  "butir": "4.1",
-  "aspek": "Pedoman tertulis tentang sistem seleksi, perekrutan, penempatan, pengembangan, retensi, dan pemberhentian dosen dan kinerja tenaga kependidikan.",
-  "bobot": 1
-  },
-  {
-    "butir": "4.2.1",
-    "aspek": "Pedoman tertulis tentang sistem monitoring dan evaluasi, serta rekam jejak kinerja akademik dosen dan kinerja tenaga kependidikan",
-    "bobot": 1
-  },
-  {
-    "butir": "4.2.2",
-    "aspek": "Pelaksanaan monitoring dan evaluasi kinerja dosen di bidang pendidikan, penelitian, dan pengabdian kepada masyarakat.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.1.a",
-    "aspek": "Dosen tetap berpendidikan (terakhir) S2 dan S3 yang bidang keahliannya sesuai dengan kompetensi PS.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.1.b",
-    "aspek": "Dosen tetap yang berpendidikan S3 yang bidang keahliannya sesuai dengan kompetensi PS.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.1.c",
-    "aspek": "Dosen tetap yang memiliki jabatan lektor kepala dan guru besar yang bidang keahliannya sesuai dengan kompetensi PS.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.1.d",
-    "aspek": "Dosen yang memiliki Sertifikat Pendidik Profesional.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.2",
-    "aspek": "Rasio mahasiswa terhadap dosen tetap yang bidang keahliannya sesuai dengan bidang PS.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.3",
-    "aspek": "Rata-rata beban dosen per semester, atau rata-rata FTE (Fulltime Teaching Equivalent)",
-    "bobot": 1
-  },
-  {
-    "butir": " 4.3.4",
-    "aspek": "Tingkat kehadiran dosen tetap dalam mengajar.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.4",
-    "aspek": "Kesesuaian keahlian (pendidikan terakhir) dosen dengan mata kuliah yang diajarkannya.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.5",
-    "aspek": "Tingkat kehadiran dosen tetap dalam mengajar. ",
-    "bobot": 1
-  },
-  {
-    "butir": "4.3.6",
-    "aspek": "Kesesuaian keahlian (pendidikan terakhir) dosen dengan mata kuliah yang diajarkannya.",
-    "bobot": 1
-  },
-  {
-    "butir": " 4.4.1",
-    "aspek": "Rasio jumlah dosen tidak tetap, terhadap jumlah seluruh dosen.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.4.2.a",
-    "aspek": "Kesesuaian keahlian dosen tidak tetap dengan mata kuliah yang diampu.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.4.2.b",
-    "aspek": "Pelaksanaan tugas atau tingkat kehadiran dosen tidak tetap dalam mengajar.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.5.1",
-    "aspek": "Kegiatan tenaga ahli/pakar sebagai pembicara dalam seminar/pelatihan, pembicara tamu, dsb, dari luar PT sendiri (tidak termasuk dosen tidak tetap).",
-    "bobot": 1
-  },
-  {
-    "butir": "4.5.2",
-    "aspek": "Peningkatan kemampuan dosen tetap melalui program tugas belajar dalam bidang yang sesuai dengan bidang PS.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.5.3",
-    "aspek": "Kegiatan dosen tetap yang bidang keahliannya sesuai dengan PS dalam seminar ilmiah/ lokakarya/ penataran/ workshop/ pagelaran/ pameran/ peragaan/ yang tidak hanya melibatkan dosen PT sendiri.",
-    "bobot": 1
-  },
-  {
-    "butir": " 4.5.4",
-    "aspek": "Prestasi dalam mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari tingkat nasional dan internasional; besaran dan proporsi dana penelitian dari sumber institusi sendiri dan luar institusi.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.5.5",
-    "aspek": "Reputasi dan keluasan jejaring dosen dalam bidang akademik dan profesi.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.6.1.a",
-    "aspek": "Pustakawan: jumlah dan kualifikasnya.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.6.1.b",
-    "aspek": "Laboran, analis, teknisi, operator: jumlah, kualifikasi, dan mutu kerjanya.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.6.1.c",
-    "aspek": "Tenaga administrasi: jumlah dan kualifikasinya.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.6.2",
-    "aspek": "Upaya PS dalam meningkatkan kualifikasi dan kompetensi tenaga kependidikan.",
-    "bobot": 1
-  },
-  {
-    "butir": "4.a",
-    "aspek": "Komprehensif (dalam, luas dan terpadu).",
-    "bobot": 1
-  },
-  {
-    "butir": "4.b",
-    "aspek": "Kejelasan analisis intra dan antar komponen evaluasi-diri.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.1.1.a",
-    "aspek": "Struktur kurikulum (harus memuat standar kompetensi lulusan yang terstruktur dalam kompetensi utama, pendukung dan lainnya).",
-    "bobot": 1
-  },
-  {
-    "butir": "5.1.1.b",
-    "aspek": "Orientasi dan kesesuaian kurikulum dengan visi dan misi PS.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.1.2.a",
-    "aspek": "Kesesuaian mata kuliah dengan standar kompetensi.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.1.2.b",
-    "aspek": "Presentase mata kuliah yang dalam penentuan nilai akhirnya memberikan bobot pada tugas-tugas (PR atau makalah) >20%.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.1.2.c",
-    "aspek": "Matakuliah dilengkapi dengan deskripsi matakuliah, silabus dan SAP.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.1.3",
-    "aspek": "Fleksibilitas mata kuliah pilihan.",
-    "bobot": 1
-  },
-  {
-    "butir": " 5.1.4",
-    "aspek": "Substansi praktikum dan pelaksanaan praktikum.",
-    "bobot": 1
-  },
-  {
-    "butir": "Butir 5.2.a",
-    "aspek": "Pelaksanaan peninjauan kurikulum selama 5 tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.2.b",
-    "aspek": "Penyesuaian kurikulum dengan perkembangan Ipteks dan kebutuhan.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.3.1.a",
-    "aspek": "Pelaksanaan pembelajaran memliki mekanisme untuk monitor, mengkaji, dan memperbaiki secara periodik kegiatan perkuliahan (kehadiran dosen dan mahasiswa), penyusunan materi perkuliahan, serta penilaian hasil belajar.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.3.1.b",
-    "aspek": "Mekanisme penyusunan materi perkuliahan.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.3.2",
-    "aspek": "Mutu soal ujian.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.4.1.a",
-    "aspek": "Rata-rata banyaknya mahasiswa per dosen Pembimbing Akademik per semester.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.4.1.b",
-    "aspek": "Pelaksanaan kegiatan pembimbing akademik",
-    "bobot": 1
-  },
-  {
-    "butir": "5.4.1.c",
-    "aspek": "Jumlah rata-rata pertemuan pembimbing akademik per mahasiswa per semester.",
-    "bobot": 1
-  },
-  {
-    "butir": "Butir 5.4.2",
-    "aspek": "Efektivitas kegiatan pembimbing akademik",
-    "bobot": 1
-  },
-  {
-    "butir": "5.5.1.a",
-    "aspek": "Ketersediaan panduan, sosialisasi, dan penggunaan.",
-    "bobot": 1
-  },
-  {
-    "butir": " 5.5.1.b",
-    "aspek": "Rata-rata mahasiswa per dosen pembimbing tugas akhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.5.1.c",
-    "aspek": "Rata-rata jumlah pertemuan/ pembimbing selama penyelesaian TA.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.5.1.d",
-    "aspek": "Kualifikasi akademik dosen pembimbing tugas akhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.5.2",
-    "aspek": "Rata-rata waktu penyelesaian penulisan tugas akhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.6",
-    "aspek": "Upaya perbaikan sistem pembelajaran yang telah dilakukan selama tiga tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.7.1",
-    "aspek": "Kebijakan tentang suasana akademik (otonomi keilmuan, kebebasan akademik, kebebasan mimbar akademik).",
-    "bobot": 1
-  },
-  {
-    "butir": "5.7.2",
-    "aspek": "Ketersediaan dan jenis prasarana, sarana dan dana yang memungkinkan terciptanya interaksi akademik antara sivitas akademika.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.7.3",
-    "aspek": "Program dan kegiatan akademik untuk menciptakan suasana akademik (seminar, simposium, lokakarya, bedah buku, penelitian bersama dll).",
-    "bobot": 1
-  },
-  {
-    "butir": "5.7.4",
-    "aspek": "Interaksi akademik antara dosen dan mahasiswa.",
-    "bobot": 1
-  },
-  {
-    "butir": "5.7.5",
-    "aspek": "Pengembangan perilaku kecendekiawanan.",
-    "bobot": 1
-  },
-  {
-    "butir": "7.1.2",
-    "aspek": "Keterlibatan mahasiswa yang melakukan tugas akhir dalam penelitian dosen.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.1",
-    "aspek": "Keterlibatan program studi dalam perencanaan kegiatan/ kerja dan perencanaan/ alokasi dan pengelolaan dana.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.2.1",
-    "aspek": "Besarnya dana (termasuk hibah) yang dikelola dalam tiga tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.2.2",
-    "aspek": "Dana penelitian dalam tiga tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.2.3",
-    "aspek": "Dana yang diperoleh dalam rangka pengabdian masyarakat dalam tiga tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.3.1",
-    "aspek": "Luas ruang kerja dosen.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.3.2",
-    "aspek": "Prasarana (kantor, ruang kelas, ruang laboratorium, studio, ruang perpustakaan, kebun percobaan, dsb. kecuali ruang dosen) yang dipergunakan PS dalam proses pembelajaran.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.3.3",
-    "aspek": "Prasarana lain yang menunjang (misalnya tempat olahraga, ruang bersama, ruang himpunan mahasiswa, poliklinik).",
-    "bobot": 1
-  },
-  {
-    "butir": "6.4.1.a",
-    "aspek": "Bahan pustaka yang berupa buku teks",
-    "bobot": 1
-  },
-  {
-    "butir": "6.4.1.b",
-    "aspek": "Bahan pustaka yang berupa disertasi/ tesis/ skripsi/ tugas akhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.4.1.c",
-    "aspek": "Bahan pustaka yang berupa jurnal ilmiah terakreditasi Dikti.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.4.1.d",
-    "aspek": "Bahan pustaka yang berupa jurnal ilmiah internasional.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.4.1.e",
-    "aspek": "Bahan pustaka yang berupa prosiding seminar dalam tiga tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.4.2",
-    "aspek": "Akses ke perpustakaan di luar PT atau sumber pustaka lainnya.",
-    "bobot": 1
-  },
-  {
-    "butir": "6.4.3",
-    "aspek": "Ketersediaan, akses dan pendayagunaan sarana utama di lab(tempat praktikum, bengkel, studio, ruang simulasi, rumah sakit, puskesmas,/balai kesehatan, green house, lahan untuk pertanian, dan sejenisnya).",
-    "bobot": 1
-  },
-  {
-    "butir": " 6.5.1",
-    "aspek": "Sistem informasi dan fasilitas yang digunakan PS dalam proses pembelajaran (hardware, software, e-learning, dan perpustakaan).",
-    "bobot": 1
-  },
-  {
-    "butir": "6.5.2",
-    "aspek": "Aksesibilitas data dalam sistem informasi.",
-    "bobot": 1
-  },
-  {
-    "butir": "7.1.1",
-    "aspek": "Jumlah penelitian yang dilakukan oleh dosen tetap yang bidang keahliannya sesuai dengan PS per tahun, selama 3 tahun.",
-    "bobot": 1
-  },
-  {
-    "butir": "7.1.3",
-    "aspek": "Jumlah artikel ilmiah yang dihasilkan oleh dosen tetap yang bidang keahliannya sesuai dengan PS per tahun, selama tiga tahun.",
-    "bobot": 1
-  },
-  {
-    "butir": "7.1.4",
-    "aspek": "Karya-karya PS/institusi yang telah memperoleh perlindungan Hak atas Kekayaan Intelektual (HaKI) dalam tiga tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "7.2.1",
-    "aspek": "Jumlah kegiatan Pengabdian kepada Masyarakat (PkM) yang dilakukan oleh dosen tetap yang bidang keahliannya sesuai dengan PS.",
-    "bobot": 1
-  },
-  {
-    "butir": "7.2.2",
-    "aspek": "Keterlibatan mahasiswa dalam kegiatan pengabdian kepada masyarakat.",
-    "bobot": 1
-  },
-  {
-    "butir": "7.3.1",
-    "aspek": "Kegiatan kerjasama dengan instansi di dalam negeri dalam tiga tahun terakhir.",
-    "bobot": 1
-  },
-  {
-    "butir": "7.3.2",
-    "aspek": "Kegiatan kerjasama dengan instansi di luar negeri dalam tiga tahun terakhir.",
-    "bobot": 1
+    "standar": 1,
+    "poin": [
+      {
+        "butir": "1",
+        "aspek": "Akurasi dan kelengkapan data serta informasi yang digunakan untuk menyusun laporan evaluasi-diri.",
+        "bobot": 1
+      },
+      {
+        "butir": " 1.1.a",
+        "aspek": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
+        "bobot": 1
+      },
+      {
+        "butir": "1.1.b",
+        "aspek": "Strategi pencapaian sasaran dengan rentang waktu yang jelas dan didukung oleh dokumen.",
+        "bobot": 1
+      },
+      {
+        "butir": "1.2b",
+        "aspek": "Sosialisasi visi-misi. Sosialisasi yang efektif tercermin dari tingkat pemahaman seluruh pemangku kepentingan internal yaitu sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan.",
+        "bobot": 1
+      },
+      {
+        "butir": "1.a",
+        "aspek": "Cara program studi mengemukakan fakta tentang situasi program studi, pada semua komponen evaluasi-diri a.l. kelengkapan data, kurun waktu yang cukup, cross-reference.",
+        "bobot": 1
+      },
+      {
+        "butir": "1.b",
+        "aspek": "Pengolahan data menjadi informasi yang bermanfaat, a.l. menggunakan metode-metode kuantitatif yang tepat, serta teknik representasi yang relevan.",
+        "bobot": 12.5
+      }
+    ]
+  },
+  {
+    "standar": 2,
+    "poin": [
+      {
+        "butir": "2",
+        "aspek": "Kualitas analisis yang digunakan untuk mengidentifikasi dan merumuskan masalah pada semua komponen evaluasi-diri.",
+        "bobot": 12.5
+      },
+      {
+        "butir": "2.1",
+        "aspek": "Tata pamong menjamin terwujudnya visi, terlaksananya misi, tercapainya tujuan, berhasilnya strategi yang digunakan secara kredibel, transparan, akuntabel, bertanggung jawab, dan adil.",
+        "bobot": 1
+      },
+      {
+        "butir": "2.2",
+        "aspek": "Karakteristik kepemimpinan yang efektif (kepemimpinan operasional, kepemimpinan organisasi, kepemimpinan publik).",
+        "bobot": 1
+      },
+      {
+        "butir": "2.3",
+        "aspek": "Sistem pengelolaan fungsional dan operasional program studi mencakup: planning, organizing, staffing, leading, controling yang efektif dilaksanakan.",
+        "bobot": 1
+      },
+      {
+        "butir": "2.4",
+        "aspek": "Pelaksanaan penjaminan mutu di program studi.",
+        "bobot": 1
+      },
+      {
+        "butir": "2.5",
+        "aspek": "Penjaringan umpan balik dan tindak lanjutnya.",
+        "bobot": 1
+      },
+      {
+        "butir": "2.6",
+        "aspek": "Upaya untuk menjamin keberlanjutan (sustainability) program studi.",
+        "bobot": 1
+      },
+      {
+        "butir": "2.a",
+        "aspek": "identifikasi dan perumusan masalah dilakukan dengan baik.",
+        "bobot": 7.5
+      },
+      {
+        "butir": "2.b",
+        "aspek": "Ketepatan dalam melakukan appraisal, judgment, evaluasi, asesmen atas fakta tentang situasi di program studi.",
+        "bobot": 7.5
+      },
+      {
+        "butir": "2.c",
+        "aspek": "Permasalahan dan kelemahan yang ada dirumuskan dengan baik.",
+        "bobot": 7.5
+      },
+      {
+        "butir": "2.d",
+        "aspek": "Deskripsi/Analisis SWOT berkenaan dengan ketepatan penempatan aspek dalam komponen SWOT, tumpuan penekanan analisis.",
+        "bobot": 7.5
+      }
+    ]
+  },
+  {
+    "standar": 3,
+    "poin": [
+      {
+        "butir": "3",
+        "aspek": "Strategi pengembangan dan perbaikan program.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.1.1.a",
+        "aspek": "Rasio calon mahasiswa yang ikut seleksi terhadap daya tampung.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.1.1.b",
+        "aspek": "Rasio mahasiswa baru reguler yang melakukan registrasi tehadap calon mahasiswa baru reguler yang lulus seleksi.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.1.1.c",
+        "aspek": "Rasio mahasiswa baru transfer terhadap mahasiswa baru regular.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.1.1.d",
+        "aspek": "Rata-rata Indeks Prestasi Kumulatif (IPK) selama lima tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.1.2",
+        "aspek": "Penerimaan mahasiswa non-reguler (selayaknya tidak membuat beban dosen sangat berat, jauh melebihi beban ideal sekitar 12 sks).",
+        "bobot": 1
+      },
+      {
+        "butir": "3.1.3",
+        "aspek": "Penghargaan atas prestasi mahasiswa di bidang nalar, bakat dan minat.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.1.4.a",
+        "aspek": "Persentase kelulusan tepat waktu.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.1.4.b",
+        "aspek": "Persentase mahasiswa yang DO atau mengundurkan diri.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.2.1",
+        "aspek": "Layanan dan kegiatan kemahasiswaan (ragam, jenis, dan aksesibilitasnya) yang dapat dimanfaatkan untuk membina dan mengembangkan penalaran, minat, bakat, seni, dan kesejahteraan.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.2.2",
+        "aspek": "Kualitas layanan kepada mahasiswa.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.3.1.a",
+        "aspek": "Upaya pelacakan dan perekaman data lulusan.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.3.1.b",
+        "aspek": "Penggunaan hasil pelacakan untuk perbaikan: (1) proses pembelajaran, (2) penggalangan dana, (3) informasi pekerjaan, (4) membangun jejaring.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.3.2",
+        "aspek": "Profil masa tunggu kerja pertama (dalam bulan).",
+        "bobot": 1
+      },
+      {
+        "butir": "3.3.3",
+        "aspek": "Profil kesesuaian bidang kerja dengan bidang studi (keahlian) lulusan.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.4.1",
+        "aspek": "Bentuk partisipasi lulusan dan alumni dalam mendukung pengembangan akademik program studi.",
+        "bobot": 1
+      },
+      {
+        "butir": "3.4.2",
+        "aspek": "Bentuk partisipasi lulusan dan alumni dalam mendukung pengembangan non-akademik program studi.",
+        "bobot": 4
+      },
+      {
+        "butir": "3.a",
+        "aspek": "Ketepatan program studi memilih/menentukan rencana perbaikan dari kekurangan yang ada.",
+        "bobot": 10
+      },
+      {
+        "butir": "3.b",
+        "aspek": "Kejelasan program studi menunjukkan cara untuk mengatasi masalah yang ada.",
+        "bobot": 5
+      },
+      {
+        "butir": "3.c",
+        "aspek": "Kelayakan dan kerealistikan strategi dan sasaran yang ingin dicapai.",
+        "bobot": 5
+      }
+    ]
+  },
+  {
+    "standar": 4,
+    "poin": [
+      {
+        "butir": "4",
+        "aspek": "Keterpaduan dan keterkaitan antar komponen evaluasi-diri.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.1",
+        "aspek": "Pedoman tertulis tentang sistem seleksi, perekrutan, penempatan, pengembangan, retensi, dan pemberhentian dosen dan kinerja tenaga kependidikan.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.2.1",
+        "aspek": "Pedoman tertulis tentang sistem monitoring dan evaluasi, serta rekam jejak kinerja akademik dosen dan kinerja tenaga kependidikan",
+        "bobot": 1
+      },
+      {
+        "butir": "4.2.2",
+        "aspek": "Pelaksanaan monitoring dan evaluasi kinerja dosen di bidang pendidikan, penelitian, dan pengabdian kepada masyarakat.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.1.a",
+        "aspek": "Dosen tetap berpendidikan (terakhir) S2 dan S3 yang bidang keahliannya sesuai dengan kompetensi PS.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.1.b",
+        "aspek": "Dosen tetap yang berpendidikan S3 yang bidang keahliannya sesuai dengan kompetensi PS.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.1.c",
+        "aspek": "Dosen tetap yang memiliki jabatan lektor kepala dan guru besar yang bidang keahliannya sesuai dengan kompetensi PS.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.1.d",
+        "aspek": "Dosen yang memiliki Sertifikat Pendidik Profesional.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.2",
+        "aspek": "Rasio mahasiswa terhadap dosen tetap yang bidang keahliannya sesuai dengan bidang PS.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.3",
+        "aspek": "Rata-rata beban dosen per semester, atau rata-rata FTE (Fulltime Teaching Equivalent)",
+        "bobot": 1
+      },
+      {
+        "butir": " 4.3.4",
+        "aspek": "Tingkat kehadiran dosen tetap dalam mengajar.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.4",
+        "aspek": "Kesesuaian keahlian (pendidikan terakhir) dosen dengan mata kuliah yang diajarkannya.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.5",
+        "aspek": "Tingkat kehadiran dosen tetap dalam mengajar. ",
+        "bobot": 1
+      },
+      {
+        "butir": "4.3.6",
+        "aspek": "Kesesuaian keahlian (pendidikan terakhir) dosen dengan mata kuliah yang diajarkannya.",
+        "bobot": 1
+      },
+      {
+        "butir": " 4.4.1",
+        "aspek": "Rasio jumlah dosen tidak tetap, terhadap jumlah seluruh dosen.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.4.2.a",
+        "aspek": "Kesesuaian keahlian dosen tidak tetap dengan mata kuliah yang diampu.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.4.2.b",
+        "aspek": "Pelaksanaan tugas atau tingkat kehadiran dosen tidak tetap dalam mengajar.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.5.1",
+        "aspek": "Kegiatan tenaga ahli/pakar sebagai pembicara dalam seminar/pelatihan, pembicara tamu, dsb, dari luar PT sendiri (tidak termasuk dosen tidak tetap).",
+        "bobot": 1
+      },
+      {
+        "butir": "4.5.2",
+        "aspek": "Peningkatan kemampuan dosen tetap melalui program tugas belajar dalam bidang yang sesuai dengan bidang PS.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.5.3",
+        "aspek": "Kegiatan dosen tetap yang bidang keahliannya sesuai dengan PS dalam seminar ilmiah/ lokakarya/ penataran/ workshop/ pagelaran/ pameran/ peragaan/ yang tidak hanya melibatkan dosen PT sendiri.",
+        "bobot": 1
+      },
+      {
+        "butir": " 4.5.4",
+        "aspek": "Prestasi dalam mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari tingkat nasional dan internasional; besaran dan proporsi dana penelitian dari sumber institusi sendiri dan luar institusi.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.5.5",
+        "aspek": "Reputasi dan keluasan jejaring dosen dalam bidang akademik dan profesi.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.6.1.a",
+        "aspek": "Pustakawan: jumlah dan kualifikasnya.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.6.1.b",
+        "aspek": "Laboran, analis, teknisi, operator: jumlah, kualifikasi, dan mutu kerjanya.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.6.1.c",
+        "aspek": "Tenaga administrasi: jumlah dan kualifikasinya.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.6.2",
+        "aspek": "Upaya PS dalam meningkatkan kualifikasi dan kompetensi tenaga kependidikan.",
+        "bobot": 1
+      },
+      {
+        "butir": "4.a",
+        "aspek": "Komprehensif (dalam, luas dan terpadu).",
+        "bobot": 1
+      },
+      {
+        "butir": "4.b",
+        "aspek": "Kejelasan analisis intra dan antar komponen evaluasi-diri.",
+        "bobot": 1
+      }
+    ]
+  },
+  {
+    "standar": 5,
+    "poin": [
+      {
+        "butir": "5.1.1.a",
+        "aspek": "Struktur kurikulum (harus memuat standar kompetensi lulusan yang terstruktur dalam kompetensi utama, pendukung dan lainnya).",
+        "bobot": 1
+      },
+      {
+        "butir": "5.1.1.b",
+        "aspek": "Orientasi dan kesesuaian kurikulum dengan visi dan misi PS.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.1.2.a",
+        "aspek": "Kesesuaian mata kuliah dengan standar kompetensi.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.1.2.b",
+        "aspek": "Presentase mata kuliah yang dalam penentuan nilai akhirnya memberikan bobot pada tugas-tugas (PR atau makalah) >20%.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.1.2.c",
+        "aspek": "Matakuliah dilengkapi dengan deskripsi matakuliah, silabus dan SAP.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.1.3",
+        "aspek": "Fleksibilitas mata kuliah pilihan.",
+        "bobot": 1
+      },
+      {
+        "butir": " 5.1.4",
+        "aspek": "Substansi praktikum dan pelaksanaan praktikum.",
+        "bobot": 1
+      },
+      {
+        "butir": "Butir 5.2.a",
+        "aspek": "Pelaksanaan peninjauan kurikulum selama 5 tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.2.b",
+        "aspek": "Penyesuaian kurikulum dengan perkembangan Ipteks dan kebutuhan.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.3.1.a",
+        "aspek": "Pelaksanaan pembelajaran memliki mekanisme untuk monitor, mengkaji, dan memperbaiki secara periodik kegiatan perkuliahan (kehadiran dosen dan mahasiswa), penyusunan materi perkuliahan, serta penilaian hasil belajar.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.3.1.b",
+        "aspek": "Mekanisme penyusunan materi perkuliahan.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.3.2",
+        "aspek": "Mutu soal ujian.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.4.1.a",
+        "aspek": "Rata-rata banyaknya mahasiswa per dosen Pembimbing Akademik per semester.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.4.1.b",
+        "aspek": "Pelaksanaan kegiatan pembimbing akademik",
+        "bobot": 1
+      },
+      {
+        "butir": "5.4.1.c",
+        "aspek": "Jumlah rata-rata pertemuan pembimbing akademik per mahasiswa per semester.",
+        "bobot": 1
+      },
+      {
+        "butir": "Butir 5.4.2",
+        "aspek": "Efektivitas kegiatan pembimbing akademik",
+        "bobot": 1
+      },
+      {
+        "butir": "5.5.1.a",
+        "aspek": "Ketersediaan panduan, sosialisasi, dan penggunaan.",
+        "bobot": 1
+      },
+      {
+        "butir": " 5.5.1.b",
+        "aspek": "Rata-rata mahasiswa per dosen pembimbing tugas akhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.5.1.c",
+        "aspek": "Rata-rata jumlah pertemuan/ pembimbing selama penyelesaian TA.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.5.1.d",
+        "aspek": "Kualifikasi akademik dosen pembimbing tugas akhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.5.2",
+        "aspek": "Rata-rata waktu penyelesaian penulisan tugas akhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.6",
+        "aspek": "Upaya perbaikan sistem pembelajaran yang telah dilakukan selama tiga tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.7.1",
+        "aspek": "Kebijakan tentang suasana akademik (otonomi keilmuan, kebebasan akademik, kebebasan mimbar akademik).",
+        "bobot": 1
+      },
+      {
+        "butir": "5.7.2",
+        "aspek": "Ketersediaan dan jenis prasarana, sarana dan dana yang memungkinkan terciptanya interaksi akademik antara sivitas akademika.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.7.3",
+        "aspek": "Program dan kegiatan akademik untuk menciptakan suasana akademik (seminar, simposium, lokakarya, bedah buku, penelitian bersama dll).",
+        "bobot": 1
+      },
+      {
+        "butir": "5.7.4",
+        "aspek": "Interaksi akademik antara dosen dan mahasiswa.",
+        "bobot": 1
+      },
+      {
+        "butir": "5.7.5",
+        "aspek": "Pengembangan perilaku kecendekiawanan.",
+        "bobot": 1
+      }
+
+    ]
+  },
+  {
+    "standar": 6,
+    "poin": [
+      {
+        "butir": "6.1",
+        "aspek": "Keterlibatan program studi dalam perencanaan kegiatan/ kerja dan perencanaan/ alokasi dan pengelolaan dana.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.2.1",
+        "aspek": "Besarnya dana (termasuk hibah) yang dikelola dalam tiga tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.2.2",
+        "aspek": "Dana penelitian dalam tiga tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.2.3",
+        "aspek": "Dana yang diperoleh dalam rangka pengabdian masyarakat dalam tiga tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.3.1",
+        "aspek": "Luas ruang kerja dosen.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.3.2",
+        "aspek": "Prasarana (kantor, ruang kelas, ruang laboratorium, studio, ruang perpustakaan, kebun percobaan, dsb. kecuali ruang dosen) yang dipergunakan PS dalam proses pembelajaran.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.3.3",
+        "aspek": "Prasarana lain yang menunjang (misalnya tempat olahraga, ruang bersama, ruang himpunan mahasiswa, poliklinik).",
+        "bobot": 1
+      },
+      {
+        "butir": "6.4.1.a",
+        "aspek": "Bahan pustaka yang berupa buku teks",
+        "bobot": 1
+      },
+      {
+        "butir": "6.4.1.b",
+        "aspek": "Bahan pustaka yang berupa disertasi/ tesis/ skripsi/ tugas akhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.4.1.c",
+        "aspek": "Bahan pustaka yang berupa jurnal ilmiah terakreditasi Dikti.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.4.1.d",
+        "aspek": "Bahan pustaka yang berupa jurnal ilmiah internasional.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.4.1.e",
+        "aspek": "Bahan pustaka yang berupa prosiding seminar dalam tiga tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.4.2",
+        "aspek": "Akses ke perpustakaan di luar PT atau sumber pustaka lainnya.",
+        "bobot": 1
+      },
+      {
+        "butir": "6.4.3",
+        "aspek": "Ketersediaan, akses dan pendayagunaan sarana utama di lab(tempat praktikum, bengkel, studio, ruang simulasi, rumah sakit, puskesmas,/balai kesehatan, green house, lahan untuk pertanian, dan sejenisnya).",
+        "bobot": 1
+      },
+      {
+        "butir": " 6.5.1",
+        "aspek": "Sistem informasi dan fasilitas yang digunakan PS dalam proses pembelajaran (hardware, software, e-learning, dan perpustakaan).",
+        "bobot": 1
+      },
+      {
+        "butir": "6.5.2",
+        "aspek": "Aksesibilitas data dalam sistem informasi.",
+        "bobot": 1
+      }
+    ]
+  },
+  {
+    "standar": 7,
+    "poin": [
+      {
+        "butir": "7.1.1",
+        "aspek": "Jumlah penelitian yang dilakukan oleh dosen tetap yang bidang keahliannya sesuai dengan PS per tahun, selama 3 tahun.",
+        "bobot": 1
+      },
+      {
+        "butir": "7.1.2",
+        "aspek": "Keterlibatan mahasiswa yang melakukan tugas akhir dalam penelitian dosen.",
+        "bobot": 1
+      },
+      {
+        "butir": "7.1.3",
+        "aspek": "Jumlah artikel ilmiah yang dihasilkan oleh dosen tetap yang bidang keahliannya sesuai dengan PS per tahun, selama tiga tahun.",
+        "bobot": 1
+      },
+      {
+        "butir": "7.1.4",
+        "aspek": "Karya-karya PS/institusi yang telah memperoleh perlindungan Hak atas Kekayaan Intelektual (HaKI) dalam tiga tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "7.2.1",
+        "aspek": "Jumlah kegiatan Pengabdian kepada Masyarakat (PkM) yang dilakukan oleh dosen tetap yang bidang keahliannya sesuai dengan PS.",
+        "bobot": 1
+      },
+      {
+        "butir": "7.2.2",
+        "aspek": "Keterlibatan mahasiswa dalam kegiatan pengabdian kepada masyarakat.",
+        "bobot": 1
+      },
+      {
+        "butir": "7.3.1",
+        "aspek": "Kegiatan kerjasama dengan instansi di dalam negeri dalam tiga tahun terakhir.",
+        "bobot": 1
+      },
+      {
+        "butir": "7.3.2",
+        "aspek": "Kegiatan kerjasama dengan instansi di luar negeri dalam tiga tahun terakhir.",
+        "bobot": 1
+      }
+    ]
   }
 ]
 
