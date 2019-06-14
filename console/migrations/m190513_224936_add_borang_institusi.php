@@ -14,7 +14,7 @@ class m190513_224936_add_borang_institusi extends Migration
     {
         
         // migrasi borang institusi
-        $this->createTable('{{%borang_institusi}}',[
+        $this->createTable('{{%s7_borang_institusi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_institusi'=>$this->integer(),
             'progress'=>$this->float(),
@@ -22,7 +22,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer()
         ]);
         // dokumen borang institusi
-        $this->createTable('{{%dokumen_borang_institusi}}',[
+        $this->createTable('{{%s7_dokumen_borang_institusi}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi'=>$this->integer(),
             'nama_dokumen'=>$this->string(),
@@ -33,7 +33,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_by'=>$this->integer()
         ]);
         // borang standar institusi dan detail standar
-        $this->createTable('{{%borang_institusi_standar1}}',[
+        $this->createTable('{{%s7_borang_institusi_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi'=>$this->integer(),
             '_1_1'=>$this->text()->comment('Jelaskan dasar penyusunan dan mekanisme penyusunan visi, misi, tujuan dan sasaran institusi perguruan tinggi, serta pihak-pihak yang dilibatkan dalam penyusunannya'),
@@ -47,7 +47,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_institusi_standar1}}',[
+        $this->createTable('{{%s7_detail_borang_institusi_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar1' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -58,7 +58,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_institusi_standar2}}',[
+        $this->createTable('{{%s7_borang_institusi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi'=>$this->integer(),
             '_2_1'=>$this->text()->comment('Tata Pamong'),
@@ -85,7 +85,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_institusi_standar2}}',[
+        $this->createTable('{{%s7_detail_borang_institusi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar2' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -96,7 +96,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_institusi_standar3}}',[
+        $this->createTable('{{%s7_borang_institusi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi'=>$this->integer(),
             '_3_1'=>$this->text()->comment('Mahasiswa'),
@@ -130,7 +130,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_institusi_standar3}}',[
+        $this->createTable('{{%s7_detail_borang_institusi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar3' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -141,7 +141,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_institusi_standar4}}',[
+        $this->createTable('{{%s7_borang_institusi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi'=>$this->integer(),
             '_4_1'=>$this->text()->comment('Sistem Pengelolaan Sumber Daya Manusia'),
@@ -163,7 +163,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_institusi_standar4}}',[
+        $this->createTable('{{%s7_detail_borang_institusi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar4' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -174,7 +174,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_institusi_standar5}}',[
+        $this->createTable('{{%s7_borang_institusi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi'=>$this->integer(),
             '_5_1'=>$this->text()->comment('Kurikulum'),
@@ -193,7 +193,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_institusi_standar5}}',[
+        $this->createTable('{{%s7_detail_borang_institusi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar5' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -204,7 +204,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_institusi_standar6}}',[
+        $this->createTable('{{%s7_borang_institusi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi'=>$this->integer(),
             '_6_1'=>$this->text()->comment('Pembiayaan'),
@@ -240,7 +240,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_institusi_standar6}}',[
+        $this->createTable('{{%s7_detail_borang_institusi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar6' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -251,7 +251,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_institusi_standar7}}',[
+        $this->createTable('{{%s7_borang_institusi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi'=>$this->integer(),
             '_7_1'=>$this->text()->comment('Penelitian'),
@@ -277,7 +277,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_institusi_standar7}}',[
+        $this->createTable('{{%s7_detail_borang_institusi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar7' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -289,60 +289,60 @@ class m190513_224936_add_borang_institusi extends Migration
         ]);
         
         // relasi borang, dokumen dan user crt upd
-        $this->addForeignKey('fk-borang_institusi-akreditasi_institusi','{{%borang_institusi}}','id_akreditasi_institusi', '{{%akreditasi_institusi}}','id');
-        $this->addForeignKey('fk-dokumen_borang_institusi-borang_institusi','{{%dokumen_borang_institusi}}','id_borang_institusi', '{{%borang_institusi}}','id');
-        $this->addForeignKey('fk-dokumen_borang_institusi-user_crt','{{%dokumen_borang_institusi}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-dokumen_borang_institusi-user_upd','{{%dokumen_borang_institusi}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi-akreditasi_institusi','{{%s7_borang_institusi}}','id_akreditasi_institusi', '{{%akreditasi_institusi}}','id');
+        $this->addForeignKey('fk-dokumen_borang_institusi-borang_institusi','{{%s7_dokumen_borang_institusi}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-dokumen_borang_institusi-user_crt','{{%s7_dokumen_borang_institusi}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-dokumen_borang_institusi-user_upd','{{%s7_dokumen_borang_institusi}}','updated_by', '{{%user}}','id');
         
         // relasi standar, detail dan user crt upd
-        $this->addForeignKey('fk-borang_institusi_standar1-borang_institusi','{{%borang_institusi_standar1}}','id_borang_institusi', '{{%borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar1-borang_institusi_standar1','{{%detail_borang_institusi_standar1}}','id_borang_institusi_standar1', '{{%borang_institusi_standar1}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar1-user_crt','{{%borang_institusi_standar1}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar1-user_upd','{{%borang_institusi_standar1}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar1-user_crt','{{%detail_borang_institusi_standar1}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar1-user_upd','{{%detail_borang_institusi_standar1}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar1-borang_institusi','{{%s7_borang_institusi_standar1}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-detail_borang_institusi_standar1-borang_institusi_standar1','{{%s7_detail_borang_institusi_standar1}}','id_borang_institusi_standar1', '{{%s7_borang_institusi_standar1}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar1-user_crt','{{%s7_borang_institusi_standar1}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar1-user_upd','{{%s7_borang_institusi_standar1}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar1-user_crt','{{%s7_detail_borang_institusi_standar1}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar1-user_upd','{{%s7_detail_borang_institusi_standar1}}','updated_by', '{{%user}}','id');
         
-        $this->addForeignKey('fk-borang_institusi_standar2-borang_institusi','{{%borang_institusi_standar2}}','id_borang_institusi', '{{%borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar2-borang_institusi_standar2','{{%detail_borang_institusi_standar2}}','id_borang_institusi_standar2', '{{%borang_institusi_standar2}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar2-user_crt','{{%borang_institusi_standar2}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar2-user_upd','{{%borang_institusi_standar2}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar2-user_crt','{{%detail_borang_institusi_standar2}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar2-user_upd','{{%detail_borang_institusi_standar2}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar2-borang_institusi','{{%s7_borang_institusi_standar2}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-detail_borang_institusi_standar2-borang_institusi_standar2','{{%s7_detail_borang_institusi_standar2}}','id_borang_institusi_standar2', '{{%s7_borang_institusi_standar2}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar2-user_crt','{{%s7_borang_institusi_standar2}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar2-user_upd','{{%s7_borang_institusi_standar2}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar2-user_crt','{{%s7_detail_borang_institusi_standar2}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar2-user_upd','{{%s7_detail_borang_institusi_standar2}}','updated_by', '{{%user}}','id');
         
-        $this->addForeignKey('fk-borang_institusi_standar3-borang_institusi','{{%borang_institusi_standar3}}','id_borang_institusi', '{{%borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar3-borang_institusi_standar3','{{%detail_borang_institusi_standar3}}','id_borang_institusi_standar3', '{{%borang_institusi_standar3}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar3-user_crt','{{%borang_institusi_standar3}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar3-user_upd','{{%borang_institusi_standar3}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar3-user_crt','{{%detail_borang_institusi_standar3}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar3-user_upd','{{%detail_borang_institusi_standar3}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar3-borang_institusi','{{%s7_borang_institusi_standar3}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-detail_borang_institusi_standar3-borang_institusi_standar3','{{%s7_detail_borang_institusi_standar3}}','id_borang_institusi_standar3', '{{%s7_borang_institusi_standar3}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar3-user_crt','{{%s7_borang_institusi_standar3}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar3-user_upd','{{%s7_borang_institusi_standar3}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar3-user_crt','{{%s7_detail_borang_institusi_standar3}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar3-user_upd','{{%s7_detail_borang_institusi_standar3}}','updated_by', '{{%user}}','id');
         
-        $this->addForeignKey('fk-borang_institusi_standar4-borang_institusi','{{%borang_institusi_standar4}}','id_borang_institusi', '{{%borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar4-borang_institusi_standar4','{{%detail_borang_institusi_standar4}}','id_borang_institusi_standar4', '{{%borang_institusi_standar4}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar4-user_crt','{{%borang_institusi_standar4}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar4-user_upd','{{%borang_institusi_standar4}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar4-user_crt','{{%detail_borang_institusi_standar4}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar4-user_upd','{{%detail_borang_institusi_standar4}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar4-borang_institusi','{{%s7_borang_institusi_standar4}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-detail_borang_institusi_standar4-borang_institusi_standar4','{{%s7_detail_borang_institusi_standar4}}','id_borang_institusi_standar4', '{{%s7_borang_institusi_standar4}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar4-user_crt','{{%s7_borang_institusi_standar4}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar4-user_upd','{{%s7_borang_institusi_standar4}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar4-user_crt','{{%s7_detail_borang_institusi_standar4}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar4-user_upd','{{%s7_detail_borang_institusi_standar4}}','updated_by', '{{%user}}','id');
         
-        $this->addForeignKey('fk-borang_institusi_standar5-borang_institusi','{{%borang_institusi_standar5}}','id_borang_institusi', '{{%borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar5-borang_institusi_standar5','{{%detail_borang_institusi_standar5}}','id_borang_institusi_standar5', '{{%borang_institusi_standar5}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar5-user_crt','{{%borang_institusi_standar5}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar5-user_upd','{{%borang_institusi_standar5}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar5-user_crt','{{%detail_borang_institusi_standar5}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar5-user_upd','{{%detail_borang_institusi_standar5}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar5-borang_institusi','{{%s7_borang_institusi_standar5}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-detail_borang_institusi_standar5-borang_institusi_standar5','{{%s7_detail_borang_institusi_standar5}}','id_borang_institusi_standar5', '{{%s7_borang_institusi_standar5}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar5-user_crt','{{%s7_borang_institusi_standar5}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar5-user_upd','{{%s7_borang_institusi_standar5}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar5-user_crt','{{%s7_detail_borang_institusi_standar5}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar5-user_upd','{{%s7_detail_borang_institusi_standar5}}','updated_by', '{{%user}}','id');
         
-        $this->addForeignKey('fk-borang_institusi_standar6-borang_institusi','{{%borang_institusi_standar6}}','id_borang_institusi', '{{%borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar6-borang_institusi_standar6','{{%detail_borang_institusi_standar6}}','id_borang_institusi_standar6', '{{%borang_institusi_standar6}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar6-user_crt','{{%borang_institusi_standar6}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar6-user_upd','{{%borang_institusi_standar6}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar6-user_crt','{{%detail_borang_institusi_standar6}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar6-user_upd','{{%detail_borang_institusi_standar6}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar6-borang_institusi','{{%s7_borang_institusi_standar6}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-detail_borang_institusi_standar6-borang_institusi_standar6','{{%s7_detail_borang_institusi_standar6}}','id_borang_institusi_standar6', '{{%s7_borang_institusi_standar6}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar6-user_crt','{{%s7_borang_institusi_standar6}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar6-user_upd','{{%s7_borang_institusi_standar6}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar6-user_crt','{{%s7_detail_borang_institusi_standar6}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar6-user_upd','{{%s7_detail_borang_institusi_standar6}}','updated_by', '{{%user}}','id');
         
-        $this->addForeignKey('fk-borang_institusi_standar7-borang_institusi','{{%borang_institusi_standar7}}','id_borang_institusi', '{{%borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar7-borang_institusi_standar7','{{%detail_borang_institusi_standar7}}','id_borang_institusi_standar7', '{{%borang_institusi_standar7}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar7-user_crt','{{%borang_institusi_standar7}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar7-user_upd','{{%borang_institusi_standar7}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar7-user_crt','{{%detail_borang_institusi_standar7}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar7-user_upd','{{%detail_borang_institusi_standar7}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar7-borang_institusi','{{%s7_borang_institusi_standar7}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-detail_borang_institusi_standar7-borang_institusi_standar7','{{%s7_detail_borang_institusi_standar7}}','id_borang_institusi_standar7', '{{%s7_borang_institusi_standar7}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar7-user_crt','{{%s7_borang_institusi_standar7}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar7-user_upd','{{%s7_borang_institusi_standar7}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar7-user_crt','{{%s7_detail_borang_institusi_standar7}}','created_by', '{{%user}}','id');
+        $this->addForeignKey('fk-d_borang_institusi_standar7-user_upd','{{%s7_detail_borang_institusi_standar7}}','updated_by', '{{%user}}','id');
 
     }
 
@@ -352,77 +352,77 @@ class m190513_224936_add_borang_institusi extends Migration
     public function safeDown()
     {
         
-        $this->dropForeignKey('fk-d_borang_institusi_standar7-user_upd','{{%detail_borang_institusi_standar7}}');
-        $this->dropForeignKey('fk-d_borang_institusi_standar7-user_crt','{{%detail_borang_institusi_standar7}}');
-        $this->dropForeignKey('fk-borang_institusi_standar7-user_upd','{{%borang_institusi_standar7}}');
-        $this->dropForeignKey('fk-borang_institusi_standar7-user_crt','{{%borang_institusi_standar7}}');
-        $this->dropForeignKey('fk-detail_borang_institusi_standar7-borang_institusi_standar7','{{%detail_borang_institusi_standar7}}');
-        $this->dropForeignKey('fk-borang_institusi_standar7-borang_institusi','{{%borang_institusi_standar7}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar7-user_upd','{{%s7_detail_borang_institusi_standar7}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar7-user_crt','{{%s7_detail_borang_institusi_standar7}}');
+        $this->dropForeignKey('fk-borang_institusi_standar7-user_upd','{{%s7_borang_institusi_standar7}}');
+        $this->dropForeignKey('fk-borang_institusi_standar7-user_crt','{{%s7_borang_institusi_standar7}}');
+        $this->dropForeignKey('fk-detail_borang_institusi_standar7-borang_institusi_standar7','{{%s7_detail_borang_institusi_standar7}}');
+        $this->dropForeignKey('fk-borang_institusi_standar7-borang_institusi','{{%s7_borang_institusi_standar7}}');
         
-        $this->dropForeignKey('fk-d_borang_institusi_standar6-user_upd','{{%detail_borang_institusi_standar6}}');
-        $this->dropForeignKey('fk-d_borang_institusi_standar6-user_crt','{{%detail_borang_institusi_standar6}}');
-        $this->dropForeignKey('fk-borang_institusi_standar6-user_upd','{{%borang_institusi_standar6}}');
-        $this->dropForeignKey('fk-borang_institusi_standar6-user_crt','{{%borang_institusi_standar6}}');
-        $this->dropForeignKey('fk-detail_borang_institusi_standar6-borang_institusi_standar6','{{%detail_borang_institusi_standar6}}');
-        $this->dropForeignKey('fk-borang_institusi_standar6-borang_institusi','{{%borang_institusi_standar6}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar6-user_upd','{{%s7_detail_borang_institusi_standar6}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar6-user_crt','{{%s7_detail_borang_institusi_standar6}}');
+        $this->dropForeignKey('fk-borang_institusi_standar6-user_upd','{{%s7_borang_institusi_standar6}}');
+        $this->dropForeignKey('fk-borang_institusi_standar6-user_crt','{{%s7_borang_institusi_standar6}}');
+        $this->dropForeignKey('fk-detail_borang_institusi_standar6-borang_institusi_standar6','{{%s7_detail_borang_institusi_standar6}}');
+        $this->dropForeignKey('fk-borang_institusi_standar6-borang_institusi','{{%s7_borang_institusi_standar6}}');
         
-        $this->dropForeignKey('fk-d_borang_institusi_standar5-user_upd','{{%detail_borang_institusi_standar5}}');
-        $this->dropForeignKey('fk-d_borang_institusi_standar5-user_crt','{{%detail_borang_institusi_standar5}}');
-        $this->dropForeignKey('fk-borang_institusi_standar5-user_upd','{{%borang_institusi_standar5}}');
-        $this->dropForeignKey('fk-borang_institusi_standar5-user_crt','{{%borang_institusi_standar5}}');
-        $this->dropForeignKey('fk-detail_borang_institusi_standar5-borang_institusi_standar5','{{%detail_borang_institusi_standar5}}');
-        $this->dropForeignKey('fk-borang_institusi_standar5-borang_institusi','{{%borang_institusi_standar5}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar5-user_upd','{{%s7_detail_borang_institusi_standar5}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar5-user_crt','{{%s7_detail_borang_institusi_standar5}}');
+        $this->dropForeignKey('fk-borang_institusi_standar5-user_upd','{{%s7_borang_institusi_standar5}}');
+        $this->dropForeignKey('fk-borang_institusi_standar5-user_crt','{{%s7_borang_institusi_standar5}}');
+        $this->dropForeignKey('fk-detail_borang_institusi_standar5-borang_institusi_standar5','{{%s7_detail_borang_institusi_standar5}}');
+        $this->dropForeignKey('fk-borang_institusi_standar5-borang_institusi','{{%s7_borang_institusi_standar5}}');
         
-        $this->dropForeignKey('fk-d_borang_institusi_standar4-user_upd','{{%detail_borang_institusi_standar4}}');
-        $this->dropForeignKey('fk-d_borang_institusi_standar4-user_crt','{{%detail_borang_institusi_standar4}}');
-        $this->dropForeignKey('fk-borang_institusi_standar4-user_upd','{{%borang_institusi_standar4}}');
-        $this->dropForeignKey('fk-borang_institusi_standar4-user_crt','{{%borang_institusi_standar4}}');
-        $this->dropForeignKey('fk-detail_borang_institusi_standar4-borang_institusi_standar4','{{%detail_borang_institusi_standar4}}');
-        $this->dropForeignKey('fk-borang_institusi_standar4-borang_institusi','{{%borang_institusi_standar4}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar4-user_upd','{{%s7_detail_borang_institusi_standar4}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar4-user_crt','{{%s7_detail_borang_institusi_standar4}}');
+        $this->dropForeignKey('fk-borang_institusi_standar4-user_upd','{{%s7_borang_institusi_standar4}}');
+        $this->dropForeignKey('fk-borang_institusi_standar4-user_crt','{{%s7_borang_institusi_standar4}}');
+        $this->dropForeignKey('fk-detail_borang_institusi_standar4-borang_institusi_standar4','{{%s7_detail_borang_institusi_standar4}}');
+        $this->dropForeignKey('fk-borang_institusi_standar4-borang_institusi','{{%s7_borang_institusi_standar4}}');
         
-        $this->dropForeignKey('fk-d_borang_institusi_standar3-user_upd','{{%detail_borang_institusi_standar3}}');
-        $this->dropForeignKey('fk-d_borang_institusi_standar3-user_crt','{{%detail_borang_institusi_standar3}}');
-        $this->dropForeignKey('fk-borang_institusi_standar3-user_upd','{{%borang_institusi_standar3}}');
-        $this->dropForeignKey('fk-borang_institusi_standar3-user_crt','{{%borang_institusi_standar3}}');
-        $this->dropForeignKey('fk-detail_borang_institusi_standar3-borang_institusi_standar3','{{%detail_borang_institusi_standar3}}');
-        $this->dropForeignKey('fk-borang_institusi_standar3-borang_institusi','{{%borang_institusi_standar3}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar3-user_upd','{{%s7_detail_borang_institusi_standar3}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar3-user_crt','{{%s7_detail_borang_institusi_standar3}}');
+        $this->dropForeignKey('fk-borang_institusi_standar3-user_upd','{{%s7_borang_institusi_standar3}}');
+        $this->dropForeignKey('fk-borang_institusi_standar3-user_crt','{{%s7_borang_institusi_standar3}}');
+        $this->dropForeignKey('fk-detail_borang_institusi_standar3-borang_institusi_standar3','{{%s7_detail_borang_institusi_standar3}}');
+        $this->dropForeignKey('fk-borang_institusi_standar3-borang_institusi','{{%s7_borang_institusi_standar3}}');
         
-        $this->dropForeignKey('fk-d_borang_institusi_standar2-user_upd','{{%detail_borang_institusi_standar2}}');
-        $this->dropForeignKey('fk-d_borang_institusi_standar2-user_crt','{{%detail_borang_institusi_standar2}}');
-        $this->dropForeignKey('fk-borang_institusi_standar2-user_upd','{{%borang_institusi_standar2}}');
-        $this->dropForeignKey('fk-borang_institusi_standar2-user_crt','{{%borang_institusi_standar2}}');
-        $this->dropForeignKey('fk-detail_borang_institusi_standar2-borang_institusi_standar2','{{%detail_borang_institusi_standar2}}');
-        $this->dropForeignKey('fk-borang_institusi_standar2-borang_institusi','{{%borang_institusi_standar2}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar2-user_upd','{{%s7_detail_borang_institusi_standar2}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar2-user_crt','{{%s7_detail_borang_institusi_standar2}}');
+        $this->dropForeignKey('fk-borang_institusi_standar2-user_upd','{{%s7_borang_institusi_standar2}}');
+        $this->dropForeignKey('fk-borang_institusi_standar2-user_crt','{{%s7_borang_institusi_standar2}}');
+        $this->dropForeignKey('fk-detail_borang_institusi_standar2-borang_institusi_standar2','{{%s7_detail_borang_institusi_standar2}}');
+        $this->dropForeignKey('fk-borang_institusi_standar2-borang_institusi','{{%s7_borang_institusi_standar2}}');
 
-        $this->dropForeignKey('fk-d_borang_institusi_standar1-user_upd','{{%detail_borang_institusi_standar1}}');
-        $this->dropForeignKey('fk-d_borang_institusi_standar1-user_crt','{{%detail_borang_institusi_standar1}}');
-        $this->dropForeignKey('fk-borang_institusi_standar1-user_upd','{{%borang_institusi_standar1}}');
-        $this->dropForeignKey('fk-borang_institusi_standar1-user_crt','{{%borang_institusi_standar1}}');
-        $this->dropForeignKey('fk-detail_borang_institusi_standar1-borang_institusi_standar1','{{%detail_borang_institusi_standar1}}');
-        $this->dropForeignKey('fk-borang_institusi_standar1-borang_institusi','{{%borang_institusi_standar1}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar1-user_upd','{{%s7_detail_borang_institusi_standar1}}');
+        $this->dropForeignKey('fk-d_borang_institusi_standar1-user_crt','{{%s7_detail_borang_institusi_standar1}}');
+        $this->dropForeignKey('fk-borang_institusi_standar1-user_upd','{{%s7_borang_institusi_standar1}}');
+        $this->dropForeignKey('fk-borang_institusi_standar1-user_crt','{{%s7_borang_institusi_standar1}}');
+        $this->dropForeignKey('fk-detail_borang_institusi_standar1-borang_institusi_standar1','{{%s7_detail_borang_institusi_standar1}}');
+        $this->dropForeignKey('fk-borang_institusi_standar1-borang_institusi','{{%s7_borang_institusi_standar1}}');
 
-        $this->dropForeignKey('fk-dokumen_borang_institusi-user_upd','{{%dokumen_borang_institusi}}');
-        $this->dropForeignKey('fk-dokumen_borang_institusi-user_crt','{{%dokumen_borang_institusi}}');
-        $this->dropForeignKey('fk-dokumen_borang_institusi-borang_institusi','{{%dokumen_borang_institusi}}');
-        $this->dropForeignKey('fk-borang_institusi-akreditasi_institusi','{{%borang_institusi}}');
+        $this->dropForeignKey('fk-dokumen_borang_institusi-user_upd','{{%s7_dokumen_borang_institusi}}');
+        $this->dropForeignKey('fk-dokumen_borang_institusi-user_crt','{{%s7_dokumen_borang_institusi}}');
+        $this->dropForeignKey('fk-dokumen_borang_institusi-borang_institusi','{{%s7_dokumen_borang_institusi}}');
+        $this->dropForeignKey('fk-borang_institusi-akreditasi_institusi','{{%s7_borang_institusi}}');
 
-        $this->dropTable('{{%detail_borang_institusi_standar7}}');
-        $this->dropTable('{{%borang_institusi_standar7}}');
-        $this->dropTable('{{%detail_borang_institusi_standar6}}');
-        $this->dropTable('{{%borang_institusi_standar6}}');
-        $this->dropTable('{{%detail_borang_institusi_standar5}}');
-        $this->dropTable('{{%borang_institusi_standar5}}');
-        $this->dropTable('{{%detail_borang_institusi_standar4}}');
-        $this->dropTable('{{%borang_institusi_standar4}}');
-        $this->dropTable('{{%detail_borang_institusi_standar3}}');
-        $this->dropTable('{{%borang_institusi_standar3}}');
-        $this->dropTable('{{%detail_borang_institusi_standar2}}');
-        $this->dropTable('{{%borang_institusi_standar2}}');
-        $this->dropTable('{{%detail_borang_institusi_standar1}}');
-        $this->dropTable('{{%borang_institusi_standar1}}');
+        $this->dropTable('{{%s7_detail_borang_institusi_standar7}}');
+        $this->dropTable('{{%s7_borang_institusi_standar7}}');
+        $this->dropTable('{{%s7_detail_borang_institusi_standar6}}');
+        $this->dropTable('{{%s7_borang_institusi_standar6}}');
+        $this->dropTable('{{%s7_detail_borang_institusi_standar5}}');
+        $this->dropTable('{{%s7_borang_institusi_standar5}}');
+        $this->dropTable('{{%s7_detail_borang_institusi_standar4}}');
+        $this->dropTable('{{%s7_borang_institusi_standar4}}');
+        $this->dropTable('{{%s7_detail_borang_institusi_standar3}}');
+        $this->dropTable('{{%s7_borang_institusi_standar3}}');
+        $this->dropTable('{{%s7_detail_borang_institusi_standar2}}');
+        $this->dropTable('{{%s7_borang_institusi_standar2}}');
+        $this->dropTable('{{%s7_detail_borang_institusi_standar1}}');
+        $this->dropTable('{{%s7_borang_institusi_standar1}}');
 
-        $this->dropTable('{{%dokumen_borang_institusi}}');
-        $this->dropTable('{{%borang_institusi}}');
+        $this->dropTable('{{%s7_dokumen_borang_institusi}}');
+        $this->dropTable('{{%s7_borang_institusi}}');
     }
 
     /*

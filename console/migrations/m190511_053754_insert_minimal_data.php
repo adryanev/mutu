@@ -52,10 +52,7 @@ class m190511_053754_insert_minimal_data extends Migration
 
     private function insertDataInstitusi()
     {
-        $this->insert('{{%program}}',['id'=>1,
-            'nama'=>'S1',
-            'created_at'=>1557554873,
-            'updated_at'=>1557554873]);
+
         $this->insert('{{%unit}}',['id'=>1,
             'nama'=>'PTIPD',
             'created_at'=>1557554873,
@@ -91,7 +88,6 @@ class m190511_053754_insert_minimal_data extends Migration
 
     private function deleteDataInstitusi()
     {
-        $this->delete('{{%program}}',['id'=>1]);
         $this->delete('{{%unit}}',['id'=>1]);
         $this->delete('{{%fakultas_akademi}}',['id'=>1]);
         $this->delete('{{%program_studi}}',['id'=>1]);
