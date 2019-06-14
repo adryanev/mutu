@@ -36,7 +36,7 @@ class m190429_191120_init_mutu_database extends Migration
             'kode'=>$this->string(),
             'nama'=>$this->string(),
             'id_fakultas_akademi'=>$this->integer(),
-            'nama_kaprodi'=>$this->string(),
+            'kaprodi'=>$this->string(),
             'jenjang'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
@@ -55,7 +55,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
-        $this->createTable('{{%akreditasi}}',[
+        $this->createTable('{{%s7_akreditasi}}',[
             'id'=>$this->primaryKey(),
             'nama'=>$this->string(),
             'tahun'=>$this->string(4),

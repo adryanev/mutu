@@ -24,7 +24,7 @@ class m190520_135425_add_tabel_gambar_borang extends Migration
         ]);
 
         $this->createIndex('idx-search-gambar_borang_s1_prodi','{{%s7_gambar_borang_s1_prodi}}',['nomor_borang']);
-        $this->addForeignKey('fk-gambar_borang_s1_prodi-borang_s1_prodi','{{%s7_gambar_borang_s1_prodi}}','id_borang_s1_prodi','{{%borang_s1_prodi}}','id');
+        $this->addForeignKey('fk-gambar_borang_s1_prodi-borang_s1_prodi','{{%s7_gambar_borang_s1_prodi}}','id_borang_s1_prodi','{{%s7_borang_s1_prodi}}','id');
 
         $this->addForeignKey('fk-gambar_borang_s1_prodi-usr_crd','{{%s7_gambar_borang_s1_prodi}}','created_by','{{%user}}','id');
         $this->addForeignKey('fk-gambar_borang_s1_prodi-usr_upd','{{%s7_gambar_borang_s1_prodi}}','updated_by','{{%user}}','id');
@@ -43,7 +43,7 @@ class m190520_135425_add_tabel_gambar_borang extends Migration
         ]);
 
         $this->createIndex('idx-search-gambar_borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}',['nomor_borang']);
-        $this->addForeignKey('fk-gambar_borang_s1_fakultas-borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
+        $this->addForeignKey('fk-gambar_borang_s1_fakultas-borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%s7_borang_s1_fakultas}}','id');
 
         $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_crd','{{%s7_gambar_borang_s1_fakultas}}','created_by','{{%user}}','id');
         $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_upd','{{%s7_gambar_borang_s1_fakultas}}','updated_by','{{%user}}','id');

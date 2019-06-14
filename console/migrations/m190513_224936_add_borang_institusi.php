@@ -289,7 +289,7 @@ class m190513_224936_add_borang_institusi extends Migration
         ]);
         
         // relasi borang, dokumen dan user crt upd
-        $this->addForeignKey('fk-borang_institusi-akreditasi_institusi','{{%s7_borang_institusi}}','id_akreditasi_institusi', '{{%akreditasi_institusi}}','id');
+        $this->addForeignKey('fk-borang_institusi-akreditasi_institusi','{{%s7_borang_institusi}}','id_akreditasi_institusi', '{{%s7_akreditasi_institusi}}','id');
         $this->addForeignKey('fk-dokumen_borang_institusi-borang_institusi','{{%s7_dokumen_borang_institusi}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
         $this->addForeignKey('fk-dokumen_borang_institusi-user_crt','{{%s7_dokumen_borang_institusi}}','created_by', '{{%user}}','id');
         $this->addForeignKey('fk-dokumen_borang_institusi-user_upd','{{%s7_dokumen_borang_institusi}}','updated_by', '{{%user}}','id');
