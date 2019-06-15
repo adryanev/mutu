@@ -1,8 +1,8 @@
 <?php
 
-use akreditasi\models\BorangS1ProdiStandar1Form;
+use akreditasi\models\S7BorangS1ProdiStandar1Form;
 use akreditasi\models\IsianBorangS1ProdiUploadForm;
-use common\models\DetailBorangS1ProdiStandar1;
+use common\models\S7DetailBorangS1ProdiStandar1;
 use common\models\IsianBorang;
 use dosamigos\ckeditor\CKEditor;
 use kartik\file\FileInput;
@@ -14,8 +14,8 @@ use yii\db\ActiveQuery;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $model BorangS1ProdiStandar1Form */
-/* @var $detailModel DetailBorangS1ProdiStandar1 */
+/* @var $model S7BorangS1ProdiStandar1Form */
+/* @var $detailModel S7DetailBorangS1ProdiStandar1 */
 /* @var $modelIsian IsianBorangS1ProdiUploadForm */
 /* @var $detail ActiveQuery */
 /* @var $template ActiveQuery */

@@ -10,7 +10,7 @@
 namespace akreditasi\models;
 
 
-use common\models\BorangS1Fakultas;
+use common\models\S7BorangS1Fakultas;
 use common\models\IsianBorang;
 use common\models\IsianBorangS1Fakultas;
 use Yii;
@@ -40,7 +40,7 @@ class IsianBorangS1FakultasUploadForm extends Model
 
         if($this->validate()){
             $isian = IsianBorang::findOne(['nomor_borang'=>$this->nomor_borang,'untuk'=>'fakultas']);
-            $borang = BorangS1Fakultas::findOne($idBorang);
+            $borang = S7BorangS1Fakultas::findOne($idBorang);
             $model = new IsianBorangS1Fakultas();
             $model->id_isian_borang = $isian->id;
             $model->id_borang_s1_fakultas = $borang->id;

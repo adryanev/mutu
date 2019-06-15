@@ -15,7 +15,7 @@ use yii\behaviors\TimestampBehavior;
  * @property int $created_at
  * @property int $updated_at
  *
- * @property AkreditasiInstitusi $akreditasiInstitusi
+ * @property S7AkreditasiInstitusi $akreditasiInstitusi
  * @property DokumentasiInstitusiStandar1[] $dokumentasiInstitusiStandar1s
  * @property DokumentasiInstitusiStandar2[] $dokumentasiInstitusiStandar2s
  * @property DokumentasiInstitusiStandar3[] $dokumentasiInstitusiStandar3s
@@ -52,7 +52,7 @@ class DokumentasiInstitusi extends \yii\db\ActiveRecord
         return [
             [['id_akreditasi_institusi', 'is_publik', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
-            [['id_akreditasi_institusi'], 'exist', 'skipOnError' => true, 'targetClass' => AkreditasiInstitusi::className(), 'targetAttribute' => ['id_akreditasi_institusi' => 'id']],
+            [['id_akreditasi_institusi'], 'exist', 'skipOnError' => true, 'targetClass' => S7AkreditasiInstitusi::className(), 'targetAttribute' => ['id_akreditasi_institusi' => 'id']],
         ];
     }
 
@@ -63,7 +63,7 @@ class DokumentasiInstitusi extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_akreditasi_institusi' => 'Id Akreditasi Institusi',
+            'id_akreditasi_institusi' => 'Id S7Akreditasi Institusi',
             'progress' => 'Progress',
             'is_publik' => 'Is Publik',
             'created_at' => 'Created At',
@@ -76,7 +76,7 @@ class DokumentasiInstitusi extends \yii\db\ActiveRecord
      */
     public function getAkreditasiInstitusi()
     {
-        return $this->hasOne(AkreditasiInstitusi::className(), ['id' => 'id_akreditasi_institusi']);
+        return $this->hasOne(S7AkreditasiInstitusi::className(), ['id' => 'id_akreditasi_institusi']);
     }
 
     /**

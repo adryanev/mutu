@@ -17,7 +17,7 @@ use yii\behaviors\TimestampBehavior;
  * @property int $created_by
  * @property int $updated_by
  *
- * @property BorangS1Prodi $borangS1Prodi
+ * @property S7BorangS1Prodi $borangS1Prodi
  */
 class DokumenBorangS1Prodi extends \yii\db\ActiveRecord
 {
@@ -48,7 +48,7 @@ class DokumenBorangS1Prodi extends \yii\db\ActiveRecord
         return [
             [['id_borang_s1_prodi', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['nama_dokumen'], 'string', 'max' => 255],
-            [['id_borang_s1_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => BorangS1Prodi::className(), 'targetAttribute' => ['id_borang_s1_prodi' => 'id']],
+            [['id_borang_s1_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => S7BorangS1Prodi::className(), 'targetAttribute' => ['id_borang_s1_prodi' => 'id']],
         ];
     }
 
@@ -73,6 +73,6 @@ class DokumenBorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getBorangS1Prodi()
     {
-        return $this->hasOne(BorangS1Prodi::className(), ['id' => 'id_borang_s1_prodi']);
+        return $this->hasOne(S7BorangS1Prodi::className(), ['id' => 'id_borang_s1_prodi']);
     }
 }

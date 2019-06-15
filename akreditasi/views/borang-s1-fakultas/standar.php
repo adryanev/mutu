@@ -1,8 +1,8 @@
 <?php
 
-use akreditasi\models\BorangS1FakultasStandar1Form;
+use akreditasi\models\S7BorangS1FakultasStandar1Form;
 use akreditasi\models\IsianBorangS1FakultasUploadForm;
-use common\models\DetailBorangS1FakultasStandar1;
+use common\models\S7DetailBorangS1FakultasStandar1;
 use common\models\IsianBorang;
 use common\models\IsianBorangS1Fakultas;
 use dosamigos\ckeditor\CKEditor;
@@ -15,8 +15,8 @@ use yii\db\ActiveQuery;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $model BorangS1FakultasStandar1Form */
-/* @var $detailModel DetailBorangS1FakultasStandar1 */
+/* @var $model S7BorangS1FakultasStandar1Form */
+/* @var $detailModel S7DetailBorangS1FakultasStandar1 */
 /* @var $modelIsian IsianBorangS1FakultasUploadForm*/
 /* @var $detail ActiveQuery */
 /* @var $template ActiveQuery */

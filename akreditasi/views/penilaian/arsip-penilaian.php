@@ -1,6 +1,6 @@
 <?php
 
-use common\models\Akreditasi;
+use common\models\S7Akreditasi;
 use common\models\PencarianBorangProdiForm;
 use common\models\Program;
 use common\models\ProgramStudi;
@@ -12,8 +12,8 @@ use yii\web\View;
 /* @var $this yii\web\View */
 /* @var $model PencarianBorangProdiForm */
 /* @var $modelInstitusi \common\models\PencarianBorangInstitusiForm */
-/* @var $dataAkreditasiProdi Akreditasi[] */
-/* @var $dataAkreditasiInstitusi Akreditasi[] */
+/* @var $dataAkreditasiProdi S7Akreditasi[] */
+/* @var $dataAkreditasiInstitusi S7Akreditasi[] */
 /* @var $dataProgram Program[] */
 
 
@@ -32,7 +32,7 @@ $identity = Yii::$app->user->identity;
                     <h4 class="card-title">Form Borang Prodi</h4>
                     <?php $form = ActiveForm::begin() ?>
 
-                    <?=$form->field($model,'akreditasi')->dropDownList($dataAkreditasiProdi,['prompt'=>'Pilih Akreditasi'])?>
+                    <?=$form->field($model,'akreditasi')->dropDownList($dataAkreditasiProdi,['prompt'=>'Pilih S7Akreditasi'])?>
                     <?=$form->field($model,'program')->dropDownList($dataProgram,['id'=>'id_program','prompt'=>'Pilih Jenjang'])?>
                     <?=$form->field($model,'id_prodi')->widget(DepDrop::class,[
                         'options' => ['id' => 'id_prodi'],
@@ -66,7 +66,7 @@ $identity = Yii::$app->user->identity;
                     <h4 class="card-title">Form Institusi</h4>
                     <?php $form = ActiveForm::begin() ?>
 
-                    <?=$form->field($modelInstitusi,'akreditasi')->dropDownList($dataAkreditasiInstitusi,['prompt'=>'Pilih Akreditasi'])?>
+                    <?=$form->field($modelInstitusi,'akreditasi')->dropDownList($dataAkreditasiInstitusi,['prompt'=>'Pilih S7Akreditasi'])?>
                     <?=$form->field($modelInstitusi,'borang_untuk')->dropDownList(['institusi'=>'Institusi'],['prompt'=>'Pilih borang untuk'])?>
 
                     <div class="form-group">

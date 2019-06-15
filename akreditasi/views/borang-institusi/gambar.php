@@ -1,15 +1,15 @@
 <?php
 
 use akreditasi\models\BorangInstitusiForm;
-use common\models\BorangInstitusi;
-use common\models\BorangInstitusiStandar1;
-use common\models\BorangInstitusiStandar2;
-use common\models\BorangInstitusiStandar3;
-use common\models\BorangInstitusiStandar4;
-use common\models\BorangInstitusiStandar5;
-use common\models\BorangInstitusiStandar6;
-use common\models\BorangInstitusiStandar7;
-use common\models\DokumenBorangInstitusi;
+use common\models\S7BorangInstitusi;
+use common\models\S7BorangInstitusiStandar1;
+use common\models\S7BorangInstitusiStandar2;
+use common\models\S7BorangInstitusiStandar3;
+use common\models\S7BorangInstitusiStandar4;
+use common\models\S7BorangInstitusiStandar5;
+use common\models\S7BorangInstitusiStandar6;
+use common\models\S7BorangInstitusiStandar7;
+use common\models\S7DokumenBorangInstitusi;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
@@ -17,16 +17,16 @@ use yii\bootstrap\Modal;
 use yii\bootstrap\Progress;
 use yii\web\View;
 /* @var $this yii\web\View */
-/* @var $borangInstitusi BorangInstitusi */
+/* @var $borangInstitusi S7BorangInstitusi */
 /* @var $dokumenBorang BorangInstitusiForm */
-/* @var $dataDokumenBorang DokumenBorangInstitusi */
-/* @var $standar1 BorangInstitusiStandar1 */
-/* @var $standar2 BorangInstitusiStandar2 */
-/* @var $standar3 BorangInstitusiStandar3 */
-/* @var $standar4 BorangInstitusiStandar4 */
-/* @var $standar5 BorangInstitusiStandar5 */
-/* @var $standar6 BorangInstitusiStandar6 */
-/* @var $standar7 BorangInstitusiStandar7 */
+/* @var $dataDokumenBorang S7DokumenBorangInstitusi */
+/* @var $standar1 S7BorangInstitusiStandar1 */
+/* @var $standar2 S7BorangInstitusiStandar2 */
+/* @var $standar3 S7BorangInstitusiStandar3 */
+/* @var $standar4 S7BorangInstitusiStandar4 */
+/* @var $standar5 S7BorangInstitusiStandar5 */
+/* @var $standar6 S7BorangInstitusiStandar6 */
+/* @var $standar7 S7BorangInstitusiStandar7 */
 /* @var $json */
 
 $this->title='Isi Borang';

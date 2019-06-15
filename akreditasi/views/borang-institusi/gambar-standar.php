@@ -1,10 +1,10 @@
 <?php
 
-use akreditasi\models\BorangInstitusiStandar1Form;
+use akreditasi\models\S7BorangInstitusiStandar1Form;
 use akreditasi\models\GambarBorangInstitusiUploadForm;
 use akreditasi\models\IsianBorangInstitusiUploadForm;
-use common\models\BorangInstitusi;
-use common\models\DetailBorangInstitusiStandar1;
+use common\models\S7BorangInstitusi;
+use common\models\S7DetailBorangInstitusiStandar1;
 use common\models\GambarBorangInstitusi;
 use common\models\IsianBorang;
 use dosamigos\ckeditor\CKEditor;
@@ -19,7 +19,7 @@ use yii\web\View;
 
 /* @var $this View */
 /* @var $model GambarBorangInstitusi */
-/* @var $dataBorang BorangInstitusi */
+/* @var $dataBorang S7BorangInstitusi */
 /* @var $gambarForm GambarBorangInstitusiUploadForm */
 /** @var array $poin */
 $standar = $json['standar'];

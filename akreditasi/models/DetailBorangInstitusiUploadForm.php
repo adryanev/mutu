@@ -10,15 +10,15 @@
 namespace akreditasi\models;
 
 
-use common\models\DetailBorangInstitusiStandar1;
-use common\models\DokumenBorangInstitusi;
+use common\models\S7DetailBorangInstitusiStandar1;
+use common\models\S7DokumenBorangInstitusi;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
 /**
  *
- * @property DokumenBorangInstitusi $detailBorangInstitusi
+ * @property S7DokumenBorangInstitusi $detailBorangInstitusi
  */
 
 class DetailBorangInstitusiUploadForm extends Model
@@ -67,7 +67,7 @@ class DetailBorangInstitusiUploadForm extends Model
     }
 
     /**
-     * @return DokumenBorangInstitusi
+     * @return S7DokumenBorangInstitusi
      */
     public function getDetailBorangInstitusi()
     {

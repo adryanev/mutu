@@ -10,15 +10,15 @@
 namespace admin\models;
 
 
-use common\models\AkreditasiInstitusi;
-use common\models\BorangInstitusi;
-use common\models\BorangInstitusiStandar1;
-use common\models\BorangInstitusiStandar2;
-use common\models\BorangInstitusiStandar3;
-use common\models\BorangInstitusiStandar4;
-use common\models\BorangInstitusiStandar5;
-use common\models\BorangInstitusiStandar6;
-use common\models\BorangInstitusiStandar7;
+use common\models\S7AkreditasiInstitusi;
+use common\models\S7BorangInstitusi;
+use common\models\S7BorangInstitusiStandar1;
+use common\models\S7BorangInstitusiStandar2;
+use common\models\S7BorangInstitusiStandar3;
+use common\models\S7BorangInstitusiStandar4;
+use common\models\S7BorangInstitusiStandar5;
+use common\models\S7BorangInstitusiStandar6;
+use common\models\S7BorangInstitusiStandar7;
 use common\models\DokumentasiInstitusi;
 use RuntimeException;
 use Yii;
@@ -32,12 +32,12 @@ class AkreditasiInstitusiForm extends Model
 
     public $id_akreditasi;
     /**
-     * @var AkreditasiInstitusi
+     * @var S7AkreditasiInstitusi
      */
     private $_akreditasiInstitusi;
 
     /**
-     * @var BorangInstitusi
+     * @var S7BorangInstitusi
      */
     private $_borangInstitusi;
 
@@ -57,7 +57,7 @@ class AkreditasiInstitusiForm extends Model
         $transaction = Yii::$app->db->beginTransaction();
 
         try {
-            $this->_akreditasiInstitusi = new AkreditasiInstitusi();
+            $this->_akreditasiInstitusi = new S7AkreditasiInstitusi();
             $this->_akreditasiInstitusi->progress = 0;
             $this->_akreditasiInstitusi->id_akreditasi = $this->id_akreditasi;
 
@@ -109,7 +109,7 @@ class AkreditasiInstitusiForm extends Model
 
     private function createBorang(Transaction $transaction)
     {
-        $this->_borangInstitusi = new BorangInstitusi();
+        $this->_borangInstitusi = new S7BorangInstitusi();
         $this->_borangInstitusi->progress = 0;
         $this->_borangInstitusi->id_akreditasi_institusi = $this->_akreditasiInstitusi->id;
 
@@ -119,13 +119,13 @@ class AkreditasiInstitusiForm extends Model
 
         }
 
-        $standar1 = new BorangInstitusiStandar1();
-        $standar2 = new BorangInstitusiStandar2();
-        $standar3 = new BorangInstitusiStandar3();
-        $standar4 = new BorangInstitusiStandar4();
-        $standar5 = new BorangInstitusiStandar5();
-        $standar6 = new BorangInstitusiStandar6();
-        $standar7 = new BorangInstitusiStandar7();
+        $standar1 = new S7BorangInstitusiStandar1();
+        $standar2 = new S7BorangInstitusiStandar2();
+        $standar3 = new S7BorangInstitusiStandar3();
+        $standar4 = new S7BorangInstitusiStandar4();
+        $standar5 = new S7BorangInstitusiStandar5();
+        $standar6 = new S7BorangInstitusiStandar6();
+        $standar7 = new S7BorangInstitusiStandar7();
 
         $attr = ['id_borang_institusi'=>$this->_borangInstitusi->id,'progress'=>0];
         $standar1->attributes = $attr;
@@ -181,7 +181,7 @@ class AkreditasiInstitusiForm extends Model
 
     public static function findOne($id){
         $model = new AkreditasiInstitusiForm();
-        $data = AkreditasiInstitusi::findOne($id);
+        $data = S7AkreditasiInstitusi::findOne($id);
         $model->id_akreditasi = $data->id_akreditasi;
         $model->_borangInstitusi = $data->borangInstitusis;
         $model->_dokumentasiInstitusi = $data->dokumentasiInstitusis;

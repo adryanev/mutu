@@ -10,7 +10,7 @@
 namespace akreditasi\models;
 
 
-use common\models\DetailBorangS1ProdiStandar1;
+use common\models\S7DetailBorangS1ProdiStandar1;
 use common\models\DokumenBorangS1Prodi;
 use Yii;
 use yii\base\Model;
@@ -51,7 +51,7 @@ class DetailBorangS1ProdiUploadForm extends Model
             $detailClass = 'common\\models\\DetailBorangS1ProdiStandar'.$standar;
             $detailAttrId = 'id_borang_s1_prodi_standar'.$standar;
             $this->_detailBorangS1Prodi = new $detailClass;
-//            $this->_detailBorangS1Prodi = new DetailBorangS1ProdiStandar1();
+//            $this->_detailBorangS1Prodi = new S7DetailBorangS1ProdiStandar1();
             $this->_detailBorangS1Prodi->$detailAttrId = $id;
             $fileName = $this->dokumenPendukung->getBaseName().'.'.$this->dokumenPendukung->getExtension();
             $this->_detailBorangS1Prodi->nama_dokumen = $fileName;

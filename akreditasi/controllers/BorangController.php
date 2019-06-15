@@ -2,7 +2,7 @@
 
 namespace akreditasi\controllers;
 
-use common\models\Akreditasi;
+use common\models\S7Akreditasi;
 use common\models\PencarianBorangInstitusiForm;
 use common\models\PencarianBorangProdiForm;
 use common\models\Program;
@@ -25,12 +25,12 @@ class BorangController extends \yii\web\Controller
 
         $model = new PencarianBorangProdiForm();
         $modelInstitusi = new PencarianBorangInstitusiForm();
-        $idAkreditasiProdi = Akreditasi::findAll(['id_jenis_akreditasi'=>2]);
+        $idAkreditasiProdi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>2]);
         $dataAkreditasiProdi = ArrayHelper::map($idAkreditasiProdi,'id',function($data){
            return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
         });
 
-        $idAkreditasiInstitusi = Akreditasi::findAll(['id_jenis_akreditasi'=>1]);
+        $idAkreditasiInstitusi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>1]);
         $dataAkreditasiInstitusi = ArrayHelper::map($idAkreditasiInstitusi,'id',function($data){
             return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
         });

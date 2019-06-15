@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel admin\models\AkreditasiProdiS1Search */
+/* @var $searchModel admin\models\S7AkreditasiProdiS1Search */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Akreditasi Prodi S1';
+$this->title = 'S7Akreditasi Prodi S1';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                     <p>
-                        <?= Html::a('Create Akreditasi Prodi S1', ['create'], ['class' => 'btn btn-success']) ?>
+                        <?= Html::a('Create S7Akreditasi Prodi S1', ['create'], ['class' => 'btn btn-success']) ?>
                     </p>
 
                                                                     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

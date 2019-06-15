@@ -15,10 +15,10 @@ use yii\behaviors\TimestampBehavior;
  * @property int $created_at
  * @property int $updated_at
  *
- * @property AkreditasiProdiDiploma[] $akreditasiProdiDiplomas
- * @property AkreditasiProdiS1[] $akreditasiProdiS1s
- * @property AkreditasiProdiS2[] $akreditasiProdiS2s
- * @property AkreditasiProdiS3[] $akreditasiProdiS3s
+ * @property S7AkreditasiProdiDiploma[] $akreditasiProdiDiplomas
+ * @property S7AkreditasiProdiS1[] $akreditasiProdiS1s
+ * @property S7AkreditasiProdiS2[] $akreditasiProdiS2s
+ * @property S7AkreditasiProdiS3[] $akreditasiProdiS3s
  * @property ProfilUser[] $profilUsers
  * @property Program $program
  * @property FakultasAkademi $fakultasAkademi
@@ -76,7 +76,7 @@ class ProgramStudi extends \yii\db\ActiveRecord
      */
     public function getAkreditasiProdiDiplomas()
     {
-        return $this->hasMany(AkreditasiProdiDiploma::className(), ['id_prodi' => 'id']);
+        return $this->hasMany(S7AkreditasiProdiDiploma::className(), ['id_prodi' => 'id']);
     }
 
     /**
@@ -84,7 +84,7 @@ class ProgramStudi extends \yii\db\ActiveRecord
      */
     public function getAkreditasiProdiS1s()
     {
-        return $this->hasMany(AkreditasiProdiS1::className(), ['id_prodi' => 'id']);
+        return $this->hasMany(S7AkreditasiProdiS1::className(), ['id_prodi' => 'id']);
     }
 
     /**
@@ -92,7 +92,7 @@ class ProgramStudi extends \yii\db\ActiveRecord
      */
     public function getAkreditasiProdiS2s()
     {
-        return $this->hasMany(AkreditasiProdiS2::className(), ['id_prodi' => 'id']);
+        return $this->hasMany(S7AkreditasiProdiS2::className(), ['id_prodi' => 'id']);
     }
 
     /**
@@ -100,7 +100,7 @@ class ProgramStudi extends \yii\db\ActiveRecord
      */
     public function getAkreditasiProdiS3s()
     {
-        return $this->hasMany(AkreditasiProdiS3::className(), ['id_prodi' => 'id']);
+        return $this->hasMany(S7AkreditasiProdiS3::className(), ['id_prodi' => 'id']);
     }
 
     /**

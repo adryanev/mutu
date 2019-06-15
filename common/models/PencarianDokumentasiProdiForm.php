@@ -29,10 +29,10 @@ class PencarianDokumentasiProdiForm extends Model {
 
         $url = '';
 
-        $this->_akreditasi = Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
+        $this->_akreditasi = S7Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
         switch ($this->program){
             case self::S1:
-                $this->_akreditasi_prodi = AkreditasiProdiS1::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
+                $this->_akreditasi_prodi = S7AkreditasiProdiS1::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
                 if($this->dokumentasi_untuk === 'fakultas'){
                     $this->_dokumentasi = DokumentasiS1Fakultas::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
                     $url .= 'dokumentasi-s1-fakultas/index';
@@ -45,17 +45,17 @@ class PencarianDokumentasiProdiForm extends Model {
 
                 break;
             case self::S2:
-                $this->_akreditasi_prodi = AkreditasiProdiS2::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
+                $this->_akreditasi_prodi = S7AkreditasiProdiS2::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
 //                $this->_borang = new BorangS2Prodi();
 
                 break;
             case self::S3:
-                $this->_akreditasi_prodi = AkreditasiProdiS3::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
+                $this->_akreditasi_prodi = S7AkreditasiProdiS3::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
 //                $this->_borang = new BorangS3Prodi();
 
                 break;
             case self::DIPLOMA:
-                $this->_akreditasi_prodi = AkreditasiProdiDiploma::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
+                $this->_akreditasi_prodi = S7AkreditasiProdiDiploma::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
 //                $this->_borang = new BorangDiplomaProdi();
 
                 break;

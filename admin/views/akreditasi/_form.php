@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Akreditasi */
+/* @var $model common\models\S7Akreditasi */
 /* @var $dataJenisAkreditasi common\models\JenisAkreditasi[] */
 /* @var $form yii\widgets\ActiveForm */
 ?>
@@ -23,9 +23,9 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'id_jenis_akreditasi')->widget(Select2::class, [
         'data' => $dataJenisAkreditasi,
         'options' => [
-            'placeholder' => 'Pilih Jenis Akreditasi'
+            'placeholder' => 'Pilih Jenis S7Akreditasi'
         ]
-    ])->label('Jenis Akreditasi') ?>
+    ])->label('Jenis S7Akreditasi') ?>
 
     <?= $form->field($model, 'lembaga')->textInput(['maxlength' => true,'value'=>'BAN-PT','readonly'=>true]) ?>
 

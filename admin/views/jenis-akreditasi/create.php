@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\JenisAkreditasi */
 
-$this->title = 'Create Jenis Akreditasi';
-$this->params['breadcrumbs'][] = ['label' => 'Jenis Akreditasi', 'url' => ['index']];
+$this->title = 'Create Jenis S7Akreditasi';
+$this->params['breadcrumbs'][] = ['label' => 'Jenis S7Akreditasi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">

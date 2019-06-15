@@ -3,9 +3,9 @@
 namespace admin\controllers;
 
 use admin\models\AkreditasiProdiS1Form;
-use common\models\Akreditasi;
-use common\models\BorangS1Fakultas;
-use common\models\BorangS1Prodi;
+use common\models\S7Akreditasi;
+use common\models\S7BorangS1Fakultas;
+use common\models\S7BorangS1Prodi;
 use common\models\DokumentasiS1Fakultas;
 use common\models\DokumentasiS1Prodi;
 use common\models\ProgramStudi;
@@ -13,15 +13,15 @@ use Yii;
 use yii\base\InvalidArgumentException;
 use yii\db\StaleObjectException;
 use yii\filters\AccessControl;
-use common\models\AkreditasiProdiS1;
-use admin\models\AkreditasiProdiS1Search;
+use common\models\S7AkreditasiProdiS1;
+use admin\models\S7AkreditasiProdiS1Search;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AkreditasiProdiS1Controller implements the CRUD actions for AkreditasiProdiS1 model.
+ * AkreditasiProdiS1Controller implements the CRUD actions for S7AkreditasiProdiS1 model.
  */
 class AkreditasiProdiS1Controller extends Controller
 {
@@ -51,12 +51,12 @@ class AkreditasiProdiS1Controller extends Controller
     }
 
     /**
-     * Lists all AkreditasiProdiS1 models.
+     * Lists all S7AkreditasiProdiS1 models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new AkreditasiProdiS1Search();
+        $searchModel = new S7AkreditasiProdiS1Search();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -66,7 +66,7 @@ class AkreditasiProdiS1Controller extends Controller
     }
 
     /**
-     * Displays a single AkreditasiProdiS1 model.
+     * Displays a single S7AkreditasiProdiS1 model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -79,7 +79,7 @@ class AkreditasiProdiS1Controller extends Controller
     }
 
     /**
-     * Creates a new AkreditasiProdiS1 model.
+     * Creates a new S7AkreditasiProdiS1 model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      * @throws \yii\db\Exception
@@ -87,7 +87,7 @@ class AkreditasiProdiS1Controller extends Controller
     public function actionCreate()
     {
         $model = new AkreditasiProdiS1Form();
-        $idAkreditasi = Akreditasi::find()->all();
+        $idAkreditasi = S7Akreditasi::find()->all();
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id','nama');
 
         $idProdi = ProgramStudi::find()->where(['id_program'=>self::S1])->all();
@@ -108,7 +108,7 @@ class AkreditasiProdiS1Controller extends Controller
     }
 
     /**
-     * Updates an existing AkreditasiProdiS1 model.
+     * Updates an existing S7AkreditasiProdiS1 model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -118,7 +118,7 @@ class AkreditasiProdiS1Controller extends Controller
     {
         $model = $this->findModel($id);
 
-        $idAkreditasi = Akreditasi::find()->all();
+        $idAkreditasi = S7Akreditasi::find()->all();
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id','nama');
 
         $idProdi = ProgramStudi::find()->where(['id_program'=>self::S1])->all();
@@ -137,7 +137,7 @@ class AkreditasiProdiS1Controller extends Controller
     }
 
     /**
-     * Deletes an existing AkreditasiProdiS1 model.
+     * Deletes an existing S7AkreditasiProdiS1 model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -153,15 +153,15 @@ class AkreditasiProdiS1Controller extends Controller
     }
 
     /**
-     * Finds the AkreditasiProdiS1 model based on its primary key value.
+     * Finds the S7AkreditasiProdiS1 model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return AkreditasiProdiS1 the loaded model
+     * @return S7AkreditasiProdiS1 the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = AkreditasiProdiS1::findOne($id)) !== null) {
+        if (($model = S7AkreditasiProdiS1::findOne($id)) !== null) {
             return $model;
         }
 

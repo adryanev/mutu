@@ -1,16 +1,16 @@
 <?php
 
-use common\models\Akreditasi;
+use common\models\S7Akreditasi;
 use common\models\ProgramStudi;
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $dataAkreditasi Akreditasi[] */
+/* @var $dataAkreditasi S7Akreditasi[] */
 /* @var $dataProdi ProgramStudi[] */
-/* @var $model common\models\AkreditasiProdiS1 */
+/* @var $model common\models\S7AkreditasiProdiS1 */
 
-$this->title = 'Create Akreditasi Prodi S1';
-$this->params['breadcrumbs'][] = ['label' => 'Akreditasi Prodi S1', 'url' => ['index']];
+$this->title = 'Create S7Akreditasi Prodi S1';
+$this->params['breadcrumbs'][] = ['label' => 'S7Akreditasi Prodi S1', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">

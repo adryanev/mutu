@@ -10,7 +10,7 @@
 namespace akreditasi\models;
 
 
-use common\models\BorangInstitusi;
+use common\models\S7BorangInstitusi;
 use common\models\GambarBorangInstitusi;
 use Yii;
 use yii\base\Model;
@@ -37,7 +37,7 @@ class GambarBorangInstitusiUploadForm extends Model
     public function uploadGambar($id){
 
         if($this->validate()){
-            $borang = BorangInstitusi::findOne($id);
+            $borang = S7BorangInstitusi::findOne($id);
             $path = Yii::getAlias('@uploadAkreditasi/'."{$borang->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$borang->akreditasiInstitusi->akreditasi->tahun}/gambar");
 
             foreach ($this->gambar_borang as $gambar){

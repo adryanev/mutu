@@ -5,9 +5,9 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\AkreditasiInstitusi */
+/* @var $model common\models\S7AkreditasiInstitusi */
 /* @var $form yii\widgets\ActiveForm */
-/* @var $dataAkreditasi \common\models\Akreditasi[] */
+/* @var $dataAkreditasi \common\models\S7Akreditasi[] */
 ?>
 
 
@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_akreditasi')->widget(Select2::class, [
         'data' => $dataAkreditasi,
-        'options' => ['placeholder' => 'Pilih Akreditasi']
+        'options' => ['placeholder' => 'Pilih S7Akreditasi']
     ]) ?>
 
     <div class="form-group">

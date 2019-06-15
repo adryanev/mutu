@@ -31,7 +31,7 @@ class PencarianBorangProdiForm extends Model
     {
 
         $url ='';
-        $this->_akreditasi = Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
+        $this->_akreditasi = S7Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
         $program = Program::findOne(['id'=>$this->program]);
         $akreditasiProdiClass = 'common\\models\\'.'AkreditasiProdi'.$program->nama;
         $borangfakultasClass = 'common\\models\\Borang'.$program->nama.'Fakultas';

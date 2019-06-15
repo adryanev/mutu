@@ -10,15 +10,15 @@
 namespace akreditasi\models;
 
 
-use common\models\DetailBorangS1FakultasStandar1;
-use common\models\DokumenBorangS1Fakultas;
+use common\models\S7DetailBorangS1FakultasStandar1;
+use common\models\S7DokumenBorangS1Fakultas;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
 /**
  *
- * @property DokumenBorangS1Fakultas $detailBorangS1Fakultas
+ * @property S7DokumenBorangS1Fakultas $detailBorangS1Fakultas
  */
 
 class DetailBorangS1FakultasUploadForm extends Model
@@ -51,7 +51,7 @@ class DetailBorangS1FakultasUploadForm extends Model
             $detailClass = 'common\\models\\DetailBorangS1FakultasStandar'.$standar;
             $detailAttrId = 'id_borang_s1_fakultas_standar'.$standar;
             $this->_detailBorangS1Fakultas = new $detailClass;
-//            $this->_detailBorangS1Fakultas = new DetailBorangS1FakultasStandar1();
+//            $this->_detailBorangS1Fakultas = new S7DetailBorangS1FakultasStandar1();
             $this->_detailBorangS1Fakultas->$detailAttrId = $id;
             $fileName = $this->dokumenPendukung->getBaseName().'.'.$this->dokumenPendukung->getExtension();
             $this->_detailBorangS1Fakultas->nama_dokumen = $fileName;
@@ -68,7 +68,7 @@ class DetailBorangS1FakultasUploadForm extends Model
     }
 
     /**
-     * @return DokumenBorangS1Fakultas
+     * @return S7DokumenBorangS1Fakultas
      */
     public function getDetailBorangS1Fakultas()
     {

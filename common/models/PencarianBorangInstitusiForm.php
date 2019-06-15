@@ -29,12 +29,12 @@ class PencarianBorangInstitusiForm extends Model
     {
 
         $url ='';
-        $this->_akreditasi = Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
+        $this->_akreditasi = S7Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
 
-        $this->_akreditasi_Institusi = AkreditasiInstitusi::findOne(['id_akreditasi'=>$this->_akreditasi->id]);
+        $this->_akreditasi_Institusi = S7AkreditasiInstitusi::findOne(['id_akreditasi'=>$this->_akreditasi->id]);
 
         if($this->borang_untuk ==='institusi'){
-            $this->_borang = BorangInstitusi::findOne(['id_akreditasi_institusi'=>$this->_akreditasi_Institusi->id]);
+            $this->_borang = S7BorangInstitusi::findOne(['id_akreditasi_institusi'=>$this->_akreditasi_Institusi->id]);
             $url .= "borang-institusi/$target";
         }
 

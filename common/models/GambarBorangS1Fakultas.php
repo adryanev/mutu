@@ -18,7 +18,7 @@ use yii\behaviors\TimestampBehavior;
  * @property int $created_by
  * @property int $updated_by
  *
- * @property BorangS1Fakultas $borangS1Fakultas
+ * @property S7BorangS1Fakultas $borangS1Fakultas
  * @property User $createdBy
  * @property User $updatedBy
  */
@@ -51,7 +51,7 @@ class GambarBorangS1Fakultas extends \yii\db\ActiveRecord
         return [
             [['id_borang_s1_fakultas', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['nomor_borang', 'nama_file'], 'string', 'max' => 255],
-            [['id_borang_s1_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => BorangS1Fakultas::className(), 'targetAttribute' => ['id_borang_s1_fakultas' => 'id']],
+            [['id_borang_s1_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => S7BorangS1Fakultas::className(), 'targetAttribute' => ['id_borang_s1_fakultas' => 'id']],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
             [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
         ];
@@ -79,7 +79,7 @@ class GambarBorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getBorangS1Fakultas()
     {
-        return $this->hasOne(BorangS1Fakultas::className(), ['id' => 'id_borang_s1_fakultas']);
+        return $this->hasOne(S7BorangS1Fakultas::className(), ['id' => 'id_borang_s1_fakultas']);
     }
 
     /**

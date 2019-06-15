@@ -10,23 +10,23 @@
 namespace admin\models;
 
 
-use common\models\AkreditasiProdiS1;
-use common\models\BorangS1Fakultas;
-use common\models\BorangS1FakultasStandar1;
-use common\models\BorangS1FakultasStandar2;
-use common\models\BorangS1FakultasStandar3;
-use common\models\BorangS1FakultasStandar4;
-use common\models\BorangS1FakultasStandar5;
-use common\models\BorangS1FakultasStandar6;
-use common\models\BorangS1FakultasStandar7;
-use common\models\BorangS1Prodi;
-use common\models\BorangS1ProdiStandar1;
-use common\models\BorangS1ProdiStandar2;
-use common\models\BorangS1ProdiStandar3;
-use common\models\BorangS1ProdiStandar4;
-use common\models\BorangS1ProdiStandar5;
-use common\models\BorangS1ProdiStandar6;
-use common\models\BorangS1ProdiStandar7;
+use common\models\S7AkreditasiProdiS1;
+use common\models\S7BorangS1Fakultas;
+use common\models\S7BorangS1FakultasStandar1;
+use common\models\S7BorangS1FakultasStandar2;
+use common\models\S7BorangS1FakultasStandar3;
+use common\models\S7BorangS1FakultasStandar4;
+use common\models\S7BorangS1FakultasStandar5;
+use common\models\S7BorangS1FakultasStandar6;
+use common\models\S7BorangS1FakultasStandar7;
+use common\models\S7BorangS1Prodi;
+use common\models\S7BorangS1ProdiStandar1;
+use common\models\S7BorangS1ProdiStandar2;
+use common\models\S7BorangS1ProdiStandar3;
+use common\models\S7BorangS1ProdiStandar4;
+use common\models\S7BorangS1ProdiStandar5;
+use common\models\S7BorangS1ProdiStandar6;
+use common\models\S7BorangS1ProdiStandar7;
 use common\models\DokumentasiS1Fakultas;
 use common\models\DokumentasiS1Prodi;
 use common\models\DokumentasiS1ProdiStandar1;
@@ -49,17 +49,17 @@ class AkreditasiProdiS1Form extends Model
     public $id_prodi;
 
     /**
-     * @var AkreditasiProdiS1
+     * @var S7AkreditasiProdiS1
      */
     private $_akreditasiProdiS1;
 
     /**
-     * @var BorangS1Prodi
+     * @var S7BorangS1Prodi
      */
     private $_borangS1Prodi;
 
     /**
-     * @var BorangS1Fakultas
+     * @var S7BorangS1Fakultas
      */
     private $_borangS1Fakultas;
 
@@ -92,7 +92,7 @@ class AkreditasiProdiS1Form extends Model
 
 
         try {
-            $this->_akreditasiProdiS1 = new AkreditasiProdiS1();
+            $this->_akreditasiProdiS1 = new S7AkreditasiProdiS1();
             $this->_akreditasiProdiS1->progress = 0;
             $this->_akreditasiProdiS1->id_akreditasi = $this->id_akreditasi;
             $this->_akreditasiProdiS1->id_prodi = $this->id_prodi;
@@ -173,8 +173,8 @@ class AkreditasiProdiS1Form extends Model
      */
     private function createBorang($transaction)
     {
-        $this->_borangS1Prodi = new BorangS1Prodi();
-        $this->_borangS1Fakultas = new BorangS1Fakultas();
+        $this->_borangS1Prodi = new S7BorangS1Prodi();
+        $this->_borangS1Fakultas = new S7BorangS1Fakultas();
 
 
         $this->_borangS1Prodi->id_akreditasi_prodi_s1= $this->_akreditasiProdiS1->id;
@@ -192,13 +192,13 @@ class AkreditasiProdiS1Form extends Model
             throw new InvalidArgumentException($this->_borangS1Fakultas->errors);
         }
 
-        $standar1Prodi = new BorangS1ProdiStandar1();
-        $standar2Prodi = new BorangS1ProdiStandar2();
-        $standar3Prodi = new BorangS1ProdiStandar3();
-        $standar4Prodi = new BorangS1ProdiStandar4();
-        $standar5Prodi = new BorangS1ProdiStandar5();
-        $standar6Prodi = new BorangS1ProdiStandar6();
-        $standar7Prodi = new BorangS1ProdiStandar7();
+        $standar1Prodi = new S7BorangS1ProdiStandar1();
+        $standar2Prodi = new S7BorangS1ProdiStandar2();
+        $standar3Prodi = new S7BorangS1ProdiStandar3();
+        $standar4Prodi = new S7BorangS1ProdiStandar4();
+        $standar5Prodi = new S7BorangS1ProdiStandar5();
+        $standar6Prodi = new S7BorangS1ProdiStandar6();
+        $standar7Prodi = new S7BorangS1ProdiStandar7();
 
         $standar1Prodi->id_borang_s1_prodi = $this->_borangS1Prodi->id;
         $standar1Prodi->progress = 0;
@@ -255,13 +255,13 @@ class AkreditasiProdiS1Form extends Model
         }
 
         $attr = ['id_borang_s1_fakultas'=>$this->_borangS1Fakultas->id,'progress'=>0];
-        $standar1Fakultas = new BorangS1FakultasStandar1();
-        $standar2Fakultas = new BorangS1FakultasStandar2();
-        $standar3Fakultas = new BorangS1FakultasStandar3();
-        $standar4Fakultas = new BorangS1FakultasStandar4();
-        $standar5Fakultas = new BorangS1FakultasStandar5();
-        $standar6Fakultas = new BorangS1FakultasStandar6();
-        $standar7Fakultas = new BorangS1FakultasStandar7();
+        $standar1Fakultas = new S7BorangS1FakultasStandar1();
+        $standar2Fakultas = new S7BorangS1FakultasStandar2();
+        $standar3Fakultas = new S7BorangS1FakultasStandar3();
+        $standar4Fakultas = new S7BorangS1FakultasStandar4();
+        $standar5Fakultas = new S7BorangS1FakultasStandar5();
+        $standar6Fakultas = new S7BorangS1FakultasStandar6();
+        $standar7Fakultas = new S7BorangS1FakultasStandar7();
 
 
         $standar1Fakultas->attributes = $attr;
@@ -335,7 +335,7 @@ class AkreditasiProdiS1Form extends Model
     public static function findOne($id){
 
         $model = new AkreditasiProdiS1Form();
-        $data = AkreditasiProdiS1::findOne($id);
+        $data = S7AkreditasiProdiS1::findOne($id);
         $model->id_prodi = $data->id_prodi;
         $model->id_akreditasi = $data->id_akreditasi;
         $model->_borangS1Prodi = $data->borangS1Prodis;

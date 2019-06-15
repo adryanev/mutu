@@ -15,7 +15,7 @@ use yii\behaviors\TimestampBehavior;
  * @property int $created_at
  * @property int $updated_at
  *
- * @property AkreditasiProdiS1 $akreditasiProdiS1
+ * @property S7AkreditasiProdiS1 $akreditasiProdiS1
  * @property DokumentasiS1FakultasStandar1[] $dokumentasiS1FakultasStandar1s
  * @property DokumentasiS1FakultasStandar2[] $dokumentasiS1FakultasStandar2s
  * @property DokumentasiS1FakultasStandar3[] $dokumentasiS1FakultasStandar3s
@@ -48,7 +48,7 @@ class DokumentasiS1Fakultas extends \yii\db\ActiveRecord
         return [
             [['id_akreditasi_prodi_s1', 'is_publik', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
-            [['id_akreditasi_prodi_s1'], 'exist', 'skipOnError' => true, 'targetClass' => AkreditasiProdiS1::className(), 'targetAttribute' => ['id_akreditasi_prodi_s1' => 'id']],
+            [['id_akreditasi_prodi_s1'], 'exist', 'skipOnError' => true, 'targetClass' => S7AkreditasiProdiS1::className(), 'targetAttribute' => ['id_akreditasi_prodi_s1' => 'id']],
         ];
     }
 
@@ -59,7 +59,7 @@ class DokumentasiS1Fakultas extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_akreditasi_prodi_s1' => 'Id Akreditasi Prodi S1',
+            'id_akreditasi_prodi_s1' => 'Id S7Akreditasi Prodi S1',
             'progress' => 'Progress',
             'is_publik' => 'Is Publik',
             'created_at' => 'Created At',
@@ -72,7 +72,7 @@ class DokumentasiS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getAkreditasiProdiS1()
     {
-        return $this->hasOne(AkreditasiProdiS1::className(), ['id' => 'id_akreditasi_prodi_s1']);
+        return $this->hasOne(S7AkreditasiProdiS1::className(), ['id' => 'id_akreditasi_prodi_s1']);
     }
 
     /**

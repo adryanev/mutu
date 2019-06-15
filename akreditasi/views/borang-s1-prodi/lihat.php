@@ -1,14 +1,14 @@
 <?php
 
 use akreditasi\models\BorangS1ProdiForm;
-use common\models\BorangS1Prodi;
-use common\models\BorangS1ProdiStandar1;
-use common\models\BorangS1ProdiStandar2;
-use common\models\BorangS1ProdiStandar3;
-use common\models\BorangS1ProdiStandar4;
-use common\models\BorangS1ProdiStandar5;
-use common\models\BorangS1ProdiStandar6;
-use common\models\BorangS1ProdiStandar7;
+use common\models\S7BorangS1Prodi;
+use common\models\S7BorangS1ProdiStandar1;
+use common\models\S7BorangS1ProdiStandar2;
+use common\models\S7BorangS1ProdiStandar3;
+use common\models\S7BorangS1ProdiStandar4;
+use common\models\S7BorangS1ProdiStandar5;
+use common\models\S7BorangS1ProdiStandar6;
+use common\models\S7BorangS1ProdiStandar7;
 use common\models\DokumenBorangS1Prodi;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
@@ -17,16 +17,16 @@ use yii\bootstrap\Modal;
 use yii\bootstrap\Progress;
 use yii\web\View;
 /* @var $this yii\web\View */
-/* @var $borangProdi BorangS1Prodi */
+/* @var $borangProdi S7BorangS1Prodi */
 /* @var $dokumenBorang BorangS1ProdiForm */
 /* @var $dataDokumenBorang DokumenBorangS1Prodi */
-/* @var $standar1 BorangS1ProdiStandar1 */
-/* @var $standar2 BorangS1ProdiStandar2 */
-/* @var $standar3 BorangS1ProdiStandar3 */
-/* @var $standar4 BorangS1ProdiStandar4 */
-/* @var $standar5 BorangS1ProdiStandar5 */
-/* @var $standar6 BorangS1ProdiStandar6 */
-/* @var $standar7 BorangS1ProdiStandar7 */
+/* @var $standar1 S7BorangS1ProdiStandar1 */
+/* @var $standar2 S7BorangS1ProdiStandar2 */
+/* @var $standar3 S7BorangS1ProdiStandar3 */
+/* @var $standar4 S7BorangS1ProdiStandar4 */
+/* @var $standar5 S7BorangS1ProdiStandar5 */
+/* @var $standar6 S7BorangS1ProdiStandar6 */
+/* @var $standar7 S7BorangS1ProdiStandar7 */
 /* @var $json */
 
 $this->title='Lihat Borang';
