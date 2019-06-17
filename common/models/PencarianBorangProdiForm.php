@@ -11,7 +11,7 @@ class PencarianBorangProdiForm extends Model
 
 
     public $akreditasi;
-    public $program;
+    public $jenjang;
     public $id_prodi;
     public $borang_untuk;
 
@@ -23,7 +23,7 @@ class PencarianBorangProdiForm extends Model
     public function rules() :array
     {
         return [
-            [['akreditasi','program','id_prodi','borang_untuk',],'required']
+            [['akreditasi','jenjang','id_prodi','borang_untuk',],'required']
         ];
     }
 
@@ -32,21 +32,21 @@ class PencarianBorangProdiForm extends Model
 
         $url ='';
         $this->_akreditasi = S7Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
-        $program = Program::findOne(['id'=>$this->program]);
-        $akreditasiProdiClass = 'common\\models\\'.'AkreditasiProdi'.$program->nama;
-        $borangfakultasClass = 'common\\models\\Borang'.$program->nama.'Fakultas';
-        $borangProdiClass = 'common\\models\\Borang'.$program->nama.'Prodi';
+        $program = $this->jenjang;
+        $akreditasiProdiClass = 'common\\models\\'.'S7AkreditasiProdi'.$program;
+        $borangfakultasClass = 'common\\models\\S7Borang'.$program.'Fakultas';
+        $borangProdiClass = 'common\\models\\S7Borang'.$program.'Prodi';
 
 
         $this->_akreditasi_prodi = call_user_func($akreditasiProdiClass.'::findOne',['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi]);
 
         if($this->borang_untuk === 'fakultas'){
-            $this->_borang = call_user_func($borangfakultasClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program->nama)=>$this->_akreditasi_prodi->id]);
+            $this->_borang = call_user_func($borangfakultasClass.'::findOne',['id_akreditasi'=>$this->akreditasi]);
             $url .= 'borang-'.strtolower($program->nama).'-fakultas/'.$target;
 
         }else{
-            $this->_borang = call_user_func($borangProdiClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program->nama)=>$this->_akreditasi_prodi->id]);
-            $url .= 'borang-'.strtolower($program->nama).'-prodi/'.$target;
+            $this->_borang = call_user_func($borangProdiClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program)=>$this->_akreditasi_prodi->id]);
+            $url .= 'borang-'.strtolower($program).'-prodi/'.$target;
         }
 
 

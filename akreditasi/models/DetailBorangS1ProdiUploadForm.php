@@ -48,7 +48,7 @@ class DetailBorangS1ProdiUploadForm extends Model
 
 
         if($this->validate()){
-            $detailClass = 'common\\models\\DetailBorangS1ProdiStandar'.$standar;
+            $detailClass = 'common\\models\\S7DetailBorangS1ProdiStandar'.$standar;
             $detailAttrId = 'id_borang_s1_prodi_standar'.$standar;
             $this->_detailBorangS1Prodi = new $detailClass;
 //            $this->_detailBorangS1Prodi = new S7DetailBorangS1ProdiStandar1();

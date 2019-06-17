@@ -57,16 +57,36 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
 
                 ['label' => 'Beranda', 'icon' => 'dashboard', 'url' => ['/site']],
                 [
-                    'label' => 'Standar 7',
+                    'label' => 'Borang',
                     'icon' => 'description',
-                    'url' => ['/standar7/default'],
-
+                    'url' => '#borang',
+                    'items' => [
+                        ['label'=> 'Unggah Gambar', 'url'=>['/standar7/borang/arsip-borang','target'=>'unggah']],
+                        ['label'=> 'Isi Borang', 'url'=>['/standar7/borang/arsip-borang','target'=>'isi']],
+                        ['label'=> 'Lihat Borang', 'url'=>['/standar7/borang/arsip-borang','target'=>'lihat']],
+                    ],
                 ],
                 [
-                    'label' => 'Standar 9',
+                    'label' => 'Dokumentasi',
                     'icon' => 'book',
-                    'url'=>['/standar9/default']
+                    'url' => '#dokumentasi',
+                    'items' => [
+                        ['label'=> 'Isi Dokumentasi', 'url'=>['/standar7/dokumentasi/arsip-dok']],
+                        ['label'=> 'Penganggung Jawab', 'url'=>['/standar7/dokumentasi/penanggung']],
+                        ['label'=> 'Lihat Dokumentasi', 'url'=>['/standar7/dokumentasi/lihat-dok']],
+                    ],
                 ],
+                [
+                    'label' => 'Sertifikat S7Akreditasi',
+                    'icon' => 'assignment',
+                    'url' => '#sertifikat',
+                    'items' => [
+                        ['label'=> 'Data S7Akreditasi', 'url'=>['/standar7/data/tabel']],
+                        ['label'=> 'Grafik S7Akreditasi', 'url'=>['/standar7/data/grafik']],
+
+                    ],
+                ],
+                ['label'=> 'Isi Penilaian', 'icon'=>'person', 'url'=>['/standar7/penilaian/arsip-penilaian']],
             ],
         ])?>
     </div>

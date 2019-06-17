@@ -9,6 +9,12 @@ use yii\web\Controller;
  */
 class DefaultController extends Controller
 {
+    public function beforeAction($action)
+    {
+        $this->layout="main";
+        return parent::beforeAction($action);
+    }
+
     /**
      * Renders the index view for the module
      * @return string
