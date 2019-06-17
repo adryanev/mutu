@@ -18,7 +18,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'kode')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'kaprodi')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'jenjang')->widget(Select2::class,[
             'data'=>['S1'=>'S1','S2'=>'S2','S3'=>'S3','Diploma'=>'Diploma']

@@ -25,7 +25,7 @@ use yii\web\View;
 $standar = $json['standar'];
 
 $this->title = 'Standar ' . $standar;
-$this->params['breadcrumbs'][] = ['label' => 'Unggah Gambar', 'url' => ['borang-s1-fakultas/unggah', 'borang' => $_GET['borang']]];
+$this->params['breadcrumbs'][] = ['label' => 'Unggah Dokumen', 'url' => ['borang-s1-fakultas/unggah', 'borang' => $_GET['borang']]];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                         <?php Modal::begin([
                                             'header' => 'Upload Gambar Borang',
-                                            'toggleButton' => ['label' => '<i class="material-icons">backup</i> &nbsp;upload gambar', 'class' => 'btn btn-primary btn-sm pull-right'],
+                                            'toggleButton' => ['label' => '<i class="material-icons">backup</i> &nbsp;upload dokumen', 'class' => 'btn btn-primary btn-sm pull-right'],
                                             'size' => 'modal-lg',
                                             'clientOptions' => ['backdrop' => 'blur', 'keyboard' => true]
                                         ]) ?>
@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                         <?= $form->field($gambarForm, 'nomor_borang')->textInput(['value' => $value['nomor'], 'readonly' => true]) ?>
                                         <?= $form->field($gambarForm, 'gambar_borang[]')->widget(FileInput::class, [
-                                            'options' => ['id' => 'gambar_borang' . $modelAttribute, 'multiple' => true, 'accept' => 'image/*'],
+                                            'options' => ['id' => 'gambar_borang' . $modelAttribute, 'multiple' => true,],
                                             'pluginOptions' => [
                                                 'showUpload' => false
                                             ],
@@ -88,12 +88,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                                         <div class="col-md-12">
                                                             <?php Modal::begin([
                                                                 'header' => $gambar->nama_file,
-                                                                'toggleButton' => ['label' =>Html::img(Url::base() . "/upload/{$dataBorang->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$dataBorang->akreditasiProdiS1->akreditasi->tahun}/{$dataBorang->akreditasiProdiS1->id_prodi}/fakultas/gambar/$gambar->nama_file", ['width' => 100, 'height' => 100]),['class'=>'btn btn-transparent']],
+                                                                'toggleButton' => ['label' =>Html::img(Url::base() . "/upload/{$dataBorang->akreditasi->lembaga}/prodi/{$dataBorang->akreditasi->tahun}/fakultas/{$dataBorang->id_fakultas}/gambar/$gambar->nama_file", ['width' => 100, 'height' => 100]),['class'=>'btn btn-transparent']],
                                                                 'size' => 'modal-lg',
                                                                 'clientOptions' => ['backdrop' => 'blur', 'keyboard' => true]
                                                             ])?>
 
-                                                            <?= Html::img(Url::base() . "/upload/{$dataBorang->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$dataBorang->akreditasiProdiS1->akreditasi->tahun}/{$dataBorang->akreditasiProdiS1->id_prodi}/fakultas/gambar/$gambar->nama_file") ?>
+                                                            <?= Html::img(Url::base() . "/upload/{$dataBorang->akreditasi->lembaga}/prodi/{$dataBorang->akreditasi->tahun}/fakultas/{$dataBorang->id_fakultas}/gambar/$gambar->nama_file") ?>
 
                                                             <?php Modal::end()?>
                                                         </div>

@@ -36,7 +36,7 @@ class BorangS1FakultasForm extends Model
             $this->_dokumenBorangS1Fakultas->id_borang_s1_fakultas = $id;
             $fileName = $this->dokumenBorang->getBaseName().'.'.$this->dokumenBorang->getExtension();
             $this->_dokumenBorangS1Fakultas->nama_dokumen = $fileName;
-            $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_dokumenBorangS1Fakultas->borangS1Fakultas->akreditasi->lembaga}/prodi/{$this->_dokumenBorangS1Fakultas->borangS1Fakultas->akreditasi->tahun}/fakultas/borang/dokumen");
+            $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_dokumenBorangS1Fakultas->borangS1Fakultas->akreditasi->lembaga}/prodi/{$this->_dokumenBorangS1Fakultas->borangS1Fakultas->akreditasi->tahun}/fakultas/{$this->_dokumenBorangS1Fakultas->borangS1Fakultas->id_fakultas}/borang/dokumen");
 
             $this->dokumenBorang->saveAs("$path/$fileName");
 
