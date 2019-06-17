@@ -153,6 +153,7 @@ class m190429_191120_init_mutu_database extends Migration
         $this->createTable('{{%s7_borang_s1_fakultas}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
+            'id_fakultas'=>$this->integer(),
             'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
