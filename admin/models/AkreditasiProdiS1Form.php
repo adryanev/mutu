@@ -99,7 +99,6 @@ class AkreditasiProdiS1Form extends Model
 
             $this->_akreditasiProdiS1->save();
 
-            $this->createFolder();
             $this->createBorang($transaction);
             $this->createDokumentasi($transaction);
 
@@ -119,7 +118,7 @@ class AkreditasiProdiS1Form extends Model
     {
         $path = Yii::getAlias('@uploadAkreditasi'. '/BAN-PT/prodi');
 
-        $pathP = $path. "/{$this->_akreditasiProdiS1->akreditasi->tahun}/{$this->_akreditasiProdiS1->akreditasi->id}/{$this->_akreditasiProdiS1->id_prodi}/prodi";
+        $pathP = $path. "/{$this->_akreditasiProdiS1->akreditasi->tahun}/{$this->_akreditasiProdiS1->id_prodi}/prodi";
         $pathBorang = $pathP . '/borang';
         $pathBorangDokumen = $pathP . '/borang/dokumen';
         $pathDokumentasi = $pathP. '/dokumentasi';
@@ -142,11 +141,9 @@ class AkreditasiProdiS1Form extends Model
             throw new RuntimeException(sprintf('Directory "%s" was not created', $pathGambar));
         }
 
-        $cekFakultas = S7BorangS1Fakultas::find()->where(['id_akreditasi'=>$this->id_akreditasi])->all();
 
-        if(empty($cekFakultas)){
 
-            $pathF = $path. "/{$this->_akreditasiProdiS1->akreditasi->tahun}/{$this->_akreditasiProdiS1->akreditasi->id}/fakultas";
+            $pathF = $path. "/{$this->_akreditasiProdiS1->akreditasi->tahun}/fakultas/{$this->_borangS1Fakultas->id_fakultas}";
             $pathFBorang = $pathF . '/borang';
             $pathFBorangDokumen = $pathF . '/borang/dokumen';
             $pathFDokumentasi = $pathF. '/dokumentasi';
@@ -167,7 +164,6 @@ class AkreditasiProdiS1Form extends Model
             if(!file_exists($pathFGambar) && !mkdir($pathFGambar, 0777, true) && !is_dir($pathFGambar)) {
                 throw new RuntimeException(sprintf('Directory "%s" was not created', $pathFGambar));
             }
-        }
 
 
     }
@@ -185,10 +181,11 @@ class AkreditasiProdiS1Form extends Model
         $this->_borangS1Prodi->progress = 0;
 
 
-        $cekFakultas = S7BorangS1Fakultas::find()->where(['id_akreditasi'=>$this->id_akreditasi])->all();
+        $cekFakultas = S7BorangS1Fakultas::find()->where(['id_akreditasi'=>$this->id_akreditasi,'id_fakultas'=>$this->_akreditasiProdiS1->prodi->id_fakultas_akademi])->all();
         if(empty($cekFakultas)){
             $this->_borangS1Fakultas = new S7BorangS1Fakultas();
             $this->_borangS1Fakultas->id_akreditasi = $this->id_akreditasi;
+            $this->_borangS1Fakultas->id_fakultas = $this->_akreditasiProdiS1->prodi->id_fakultas_akademi;
             $this->_borangS1Fakultas->progress = 0;
             if(!$this->_borangS1Fakultas->save(false)){
                 $transaction->rollBack();
@@ -241,6 +238,8 @@ class AkreditasiProdiS1Form extends Model
                 $transaction->rollBack();
                 throw new InvalidArgumentException($standar7Fakultas->errors);
             }
+
+            $this->createFolder();
 
         }
 
@@ -329,10 +328,11 @@ class AkreditasiProdiS1Form extends Model
         $this->_dokumentasiS1Prodi->progress = 0;
         $this->_dokumentasiS1Prodi->is_publik = 0;
 
-        $cekFakultas = S7BorangS1Fakultas::find()->where(['id_akreditasi'=>$this->id_akreditasi])->all();
+        $cekFakultas = S7DokumentasiS1Fakultas::find()->where(['id_akreditasi'=>$this->id_akreditasi,'id_fakultas'=>$this->_akreditasiProdiS1->prodi->id_fakultas_akademi])->all();
         if(empty($cekFakultas)){
             $this->_dokumentasiS1Fakultas = new S7DokumentasiS1Fakultas();
             $this->_dokumentasiS1Fakultas->id_akreditasi = $this->_akreditasiProdiS1->id;
+            $this->_dokumentasiS1Fakultas->id_fakultas = $this->_akreditasiProdiS1->prodi->id_fakultas_akademi;
             $this->_dokumentasiS1Fakultas->progress = 0;
             $this->_dokumentasiS1Fakultas->is_publik = 0;
 

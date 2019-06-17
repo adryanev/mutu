@@ -75,7 +75,7 @@ class BorangS1FakultasController extends \yii\web\Controller
 
             $model= S7GambarBorangS1Fakultas::findOne($id);
 
-            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasi->tahun}/{$model->borangS1Fakultas->akreditasi->id}/fakultas/gambar/{$model->nama_file}"));
+            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasi->tahun}/fakultas/{$model->borangS1Fakultas->id_fakultas}/gambar/{$model->nama_file}"));
             $model->delete();
 
             Yii::$app->session->setFlash('success','Berhasil Menghapus Gambar');
@@ -243,7 +243,7 @@ class BorangS1FakultasController extends \yii\web\Controller
     public function actionDownloadIsian($id,$borang){
         ini_set('max_execution_time', 5*60);
         $template = S7IsianBorangS1Fakultas::findOne($id);
-        $file = Yii::getAlias('@uploadAkreditasi'."/{$template->borangS1Fakultas->akreditasi->lembaga}/prodi/{$template->borangS1Fakultas->akreditasi->tahun}/{$template->borangS1Fakultas->akreditasi->id}/fakultas/borang/dokumen/{$template->nama_file}");
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$template->borangS1Fakultas->akreditasi->lembaga}/prodi/{$template->borangS1Fakultas->akreditasi->tahun}/fakultas/{$template->borangS1Fakultas->id_fakultas}/borang/dokumen/{$template->nama_file}");
         return Yii::$app->response->sendFile($file);
 
     }
@@ -255,7 +255,7 @@ class BorangS1FakultasController extends \yii\web\Controller
             $borang = Yii::$app->request->post('borang');
             $standar = Yii::$app->request->post('standar');
             $model = S7IsianBorangS1Fakultas::findOne($id);
-            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasi->tahun}/{$model->borangS1Fakultas->akreditasi->id}/fakultas/borang/dokumen/{$model->nama_file}"));
+            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasi->tahun}/fakultas/{$model->borangS1Fakultas->id_fakultas}/borang/dokumen/{$model->nama_file}"));
             $model->delete();
             Yii::$app->session->setFlash('success','Berhasil Menghapus Isian Borang');
 
@@ -276,7 +276,7 @@ class BorangS1FakultasController extends \yii\web\Controller
 
         ini_set('max_execution_time', 5*60);
         $model = S7DokumenBorangS1Fakultas::findOne($dokumen);
-        $file = Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasi->tahun}/{$model->borangS1Fakultas->akreditasi->id}/fakultas/borang/dokumen/{$model->nama_dokumen}");
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasi->tahun}/fakultas/{$model->borangS1Fakultas->id_fakultas}/borang/dokumen/{$model->nama_dokumen}");
         return Yii::$app->response->sendFile($file);
 
     }
@@ -287,7 +287,7 @@ class BorangS1FakultasController extends \yii\web\Controller
             $id = Yii::$app->request->post('id');
             $model = S7DokumenBorangS1Fakultas::findOne($id);
             $borangId = $model->borangS1Fakultas->id;
-            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasi->tahun}/{$model->borangS1Fakultas->akreditasi->id}/fakultas/borang/dokumen/{$model->nama_dokumen}"));
+            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasi->tahun}/fakultas/{$model->borangS1Fakultas->id_fakultas}/borang/dokumen/{$model->nama_dokumen}"));
             $model->delete();
             Yii::$app->session->setFlash('success','Berhasil Menghapus Dokumen Borang');
 
@@ -303,7 +303,7 @@ class BorangS1FakultasController extends \yii\web\Controller
         $namespace = 'common\\models\\';
         $class = $namespace.'DetailBorangS1FakultasStandar'.$standar;
         $model = call_user_func($class.'::findOne',$dokumen);
-        $file = Yii::getAlias('@uploadAkreditasi'."/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/{$borang->akreditasi->id}/fakultas/borang/dokumen/{$model->nama_dokumen}");
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/{$borang->id_fakultas}/borang/dokumen/{$model->nama_dokumen}");
         return Yii::$app->response->sendFile($file);
 
     }
@@ -318,7 +318,7 @@ class BorangS1FakultasController extends \yii\web\Controller
             $class = $namespace.'DetailBorangS1FakultasStandar'.$standar;
             $model = call_user_func($class.'::findOne',$id);
             $borang = S7BorangS1Fakultas::findOne($borangid);
-            $file = Yii::getAlias('@uploadAkreditasi'."/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/{$borang->akreditasi->id}}/fakultas/borang/dokumen/{$model->nama_dokumen}");
+            $file = Yii::getAlias('@uploadAkreditasi'."/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/{$borang->id_fakultas}/borang/dokumen/{$model->nama_dokumen}");
             unlink($file);
             Yii::$app->session->setFlash('success','Berhasil Menghapus Dokumen Pendukung Borang');
 
