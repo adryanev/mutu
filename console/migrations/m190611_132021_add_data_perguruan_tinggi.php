@@ -81,6 +81,7 @@ class m190611_132021_add_data_perguruan_tinggi extends Migration
             [2,'FTK','Fakultas Tarbiyah dan Ilmu Keguruan','Dr.Lelya Hilda,M.Si.',1557554873,1557554873],
             [3,'FDK','Fakultas Dakwah dan Ilmu Komunikasi','Dr.Ali Sati,M.Ag.',1557554873,1557554873],
             [4,'FEB','Fakultas Ekonomi dan Bisnis Islam','Dr.Darwis Harahap,S.HI.,M.Si.',1557554873,1557554873],
+            [5,'PASCA','Pasca Sarjana','asd',1557554873,1557554873],
 
         ];
 
@@ -96,7 +97,7 @@ class m190611_132021_add_data_perguruan_tinggi extends Migration
             [4,'74235','Hukum Tata Negara',1,'Dermina Dalimunthe,S.H.,M.H.','S1',1557554873,1557554873],
             [5,'74231','Hukum Pidana Islam',1,'Dermina Dalimunthe,S.H.,M.H.','S1',1557554873,1557554873],
 
-            [6,'86108','Pendidikan Agama Islam',2,'Dr.Erawadi,M.Ag.','S2',1557554873,1557554873],
+            [6,'86108','Pendidikan Agama Islam',5,'Dr.Erawadi,M.Ag.','S2',1557554873,1557554873],
             [7,'86208','Pendidikan Agama Islam',2,'Drs.H.Abdul Sattar Daulay,M.Ag','S1',1557554873,1557554873],
             [8,'88203','Pendidikan Bahasa Inggris',2,'Fitri Rayani Siregar,M.Hum.','S1',1557554873,1557554873],
             [9,'84202','Tadris/ Pendidikan Matematika',2,'Suparni,S.Si.,M.Pd.','S1',1557554873,1557554873],

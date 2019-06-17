@@ -118,6 +118,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
         $this->createTable('{{%s7_dokumentasi_s1_fakultas}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
+            'id_fakultas'=>$this->integer(),
             'progress'=>$this->float(),
             'is_publik'=>$this->boolean(),
             'created_at'=>$this->integer(),
@@ -362,6 +363,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
 
         // foreign key tabel dokumentasi s1 fakultas
         $this->addForeignKey('fk-dok_s1_fakultas-akreditasi','{{%s7_dokumentasi_s1_fakultas}}','id_akreditasi', '{{%s7_akreditasi}}','id');
+        $this->addForeignKey('fk-dok_s1_fakultas-fakultas_akademi','{{%s7_dokumentasi_s1_fakultas}}','id_fakultas', '{{%fakultas_akademi}}','id');
 
         // foreign key tabel dokumen s1 fakultas standar
         $this->addForeignKey('fk-dok_s1_fakultas_standar1-dok_s1_fakultas', '{{%s7_dokumentasi_s1_fakultas_standar1}}', 'id_dokumentasi_s1_fakultas', '{{%s7_dokumentasi_s1_fakultas}}', 'id');
