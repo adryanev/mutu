@@ -6,6 +6,11 @@ namespace common\models;
 
 use yii\base\Model;
 
+/**
+ *
+ * @property mixed $akreditasiProdi
+ * @property mixed $borang
+ */
 class PencarianBorangProdiForm extends Model
 {
 
@@ -42,7 +47,7 @@ class PencarianBorangProdiForm extends Model
 
         if($this->borang_untuk === 'fakultas'){
             $this->_borang = call_user_func($borangfakultasClass.'::findOne',['id_akreditasi'=>$this->akreditasi]);
-            $url .= 'borang-'.strtolower($program->nama).'-fakultas/'.$target;
+            $url .= 'borang-'.strtolower($program).'-fakultas/'.$target;
 
         }else{
             $this->_borang = call_user_func($borangProdiClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program)=>$this->_akreditasi_prodi->id]);

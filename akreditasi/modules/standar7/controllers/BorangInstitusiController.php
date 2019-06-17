@@ -26,6 +26,11 @@ use yii\web\UploadedFile;
 
 class BorangInstitusiController extends \yii\web\Controller
 {
+    public function beforeAction($action)
+    {
+        $this->layout="main";
+        return parent::beforeAction($action);
+    }
 
     public function actionUnggah($borang){
 

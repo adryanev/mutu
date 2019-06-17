@@ -30,7 +30,7 @@ class GambarBorangS1FakultasUploadForm extends Model
         return [
             ['nomor_borang','required'],
             ['nomor_borang','string'],
-            [['gambar_borang'],'file','skipOnEmpty' => false,'extensions' => 'png, jpg, jpeg','maxFiles' => 5]
+            [['gambar_borang'],'file','skipOnEmpty' => false,'maxFiles' => 5]
         ];
     }
 
@@ -38,7 +38,7 @@ class GambarBorangS1FakultasUploadForm extends Model
 
         if($this->validate()){
             $borang = S7BorangS1Fakultas::findOne($id);
-            $path = Yii::getAlias('@uploadAkreditasi/'."{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/gambar");
+            $path = Yii::getAlias('@uploadAkreditasi/'."{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/{$borang->id_fakultas}/gambar");
 
             foreach ($this->gambar_borang as $gambar){
                 $model = new S7GambarBorangS1Fakultas();

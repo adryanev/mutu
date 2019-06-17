@@ -15,6 +15,12 @@ use yii\web\Response;
 
 class PenilaianController extends Controller
 {
+    public function beforeAction($action)
+    {
+        $this->layout="main";
+        return parent::beforeAction($action);
+    }
+
     public function actionArsipPenilaian()
     {
 
