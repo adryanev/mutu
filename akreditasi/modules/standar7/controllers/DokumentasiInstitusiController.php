@@ -26,6 +26,13 @@ namespace akreditasi\modules\standar7\controllers;
     use common\models\S7DokumentasiInstitusiStandar7;
 
     class DokumentasiInstitusiController extends \yii\web\Controller {
+
+        public function beforeAction($action)
+        {
+            $this->layout="main";
+            return parent::beforeAction($action);
+        }
+
         public function actionIsi($dokumentasi)
         {
             $file_json = 'standar_institusi.json';
@@ -171,11 +178,11 @@ namespace akreditasi\modules\standar7\controllers;
                 $id = Yii::$app->request->post('id');
                 $status = Yii::$app->request->post('publik');
     
-                $model = S7DokumentasiS1Prodi::findOne($id);
+                $model = S7DokumentasiInstitusi::findOne($id);
                 $model->is_publik = $status;
                 $model->save();
                 
-                return $this->redirect(['dokumentasi-institusi/index','dokumentasi'=>$id]);
+                return $this->redirect(['dokumentasi-institusi/isi','dokumentasi'=>$id]);
             }
             throw new BadRequestHttpException('Request Harus Post');
         }
@@ -187,7 +194,7 @@ namespace akreditasi\modules\standar7\controllers;
             $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
     
             $dokProdi = S7DokumentasiInstitusi::findOne($dokumentasi);
-            $sourceModel = 'akreditasi\\models\\DokumentasiInstitusiStandar'.$standar.'Form';
+            $sourceModel = 'akreditasi\\models\\S7DokumentasiInstitusiStandar'.$standar.'Form';
             // $model = DokumentasiInstitusiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
             $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_institusi'=>$dokumentasi])->all();
             
@@ -235,7 +242,8 @@ namespace akreditasi\modules\standar7\controllers;
                 'json'=>$data,
                 'butir'=>$butir,
                 'dokModel'=>$dokModel,
-                'progress'=>$progress
+                'progress'=>$progress,
+                'cari'=>'isi'
             ]);
         }
     
@@ -269,14 +277,14 @@ namespace akreditasi\modules\standar7\controllers;
             $model->is_publik = $publik;
             if ($model->save()){
                 Yii::$app->session->setFlash('success',"Dokumen $model->dokumen jadi $status");
-                return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
+                return $this->redirect(['dokumentasi-institusi/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
             }
             else{
                 Yii::$app->session->setFlash('danger','Tidak Berhasil');
-                return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
+                return $this->redirect(['dokumentasi-institusi/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
             }
             
-            return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
+//            return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
             
         }
     
@@ -297,14 +305,14 @@ namespace akreditasi\modules\standar7\controllers;
             $model->is_asesor = $asesor;
             if ($model->save()){
                 Yii::$app->session->setFlash('success',"Dokumen $model->dokumen jadi $status");
-                return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
+                return $this->redirect(['dokumentasi-institusi/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
             }
             else{
                 Yii::$app->session->setFlash('danger','Tidak Berhasil');
-                return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
+                return $this->redirect(['dokumentasi-institusi/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
             }
             
-            return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
+//            return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
             
         }
     
@@ -319,10 +327,10 @@ namespace akreditasi\modules\standar7\controllers;
                 $model = call_user_func($class.'::findOne',$id);
         
                 
-                unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->dokumentasiInstitusi->akreditasiProdiS1->akreditasi->lembaga}/institusi/{$model->dokumentasiInstitusi->akreditasiProdiS1->akreditasi->tahun}/dokumentasi/{$model->dokumen}"));
+                unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->dokumentasiInstitusi->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$model->dokumentasiInstitusi->akreditasiInstitusi->akreditasi->tahun}/dokumentasi/{$model->dokumen}"));
                 $model->delete();
-    
-                return $this->redirect(["dokumentasi-institusi/standar$standar","dokumentasi"=>$dokumentasi]);
+
+                return $this->redirect(['dokumentasi-institusi/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
             }
             throw new BadRequestHttpException('Request Harus Post');
         }
@@ -362,7 +370,7 @@ namespace akreditasi\modules\standar7\controllers;
             $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
     
             $dokProdi = S7DokumentasiInstitusi::findOne($dokumentasi);
-            $sourceModel = 'akreditasi\\models\\DokumentasiInstitusiStandar'.$standar.'Form';
+            $sourceModel = 'akreditasi\\models\\S7DokumentasiInstitusiStandar'.$standar.'Form';
             // $model = DokumentasiInstitusiStandar2Form::find('kode')->where(['id_dokumentasi_institusi'=>$dokumentasi])->all();
             $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_institusi'=>$dokumentasi])->all();
             
@@ -426,7 +434,7 @@ namespace akreditasi\modules\standar7\controllers;
             $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
     
             $dokProdi = S7DokumentasiInstitusi::findOne($dokumentasi);
-            $sourceModel = 'akreditasi\\models\\DokumentasiInstitusiStandar'.$standar.'Form';
+            $sourceModel = 'akreditasi\\models\\S7DokumentasiInstitusiStandar'.$standar.'Form';
             // $model = DokumentasiInstitusiStandar2Form::find('kode')->where(['id_dokumentasi_institusi'=>$dokumentasi])->all();
             $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_institusi'=>$dokumentasi])->all();
             

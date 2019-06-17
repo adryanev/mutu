@@ -27,6 +27,12 @@ use yii\web\UploadedFile;
 
 class DokumentasiS1ProdiController extends \yii\web\Controller
 {
+    public function beforeAction($action)
+    {
+        $this->layout="main";
+        return parent::beforeAction($action);
+    }
+
     public function actionIsi($dokumentasi)
     {
         $file_json = 'standar_prodi_s1.json';
@@ -299,14 +305,14 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         $model->is_asesor = $asesor;
         if ($model->save()){
             Yii::$app->session->setFlash('success',"Dokumen $model->dokumen jadi $status");
-            return $this->redirect(["dokumentasi-s1-prodi/standar$standar","dokumentasi"=>$dokumentasi]);
+            return $this->redirect(["dokumentasi-s1-prodi/isi-standar","standar"=>$standar,"dokumentasi"=>$dokumentasi]);
         }
         else{
             Yii::$app->session->setFlash('danger','Tidak Berhasil');
-            return $this->redirect(["dokumentasi-s1-prodi/standar$standar","dokumentasi"=>$dokumentasi]);
+            return $this->redirect(["dokumentasi-s1-prodi/isi-standar","standar"=>$standar,"dokumentasi"=>$dokumentasi]);
         }
 
-        return $this->redirect(["dokumentasi-s1-prodi/standar$standar","dokumentasi"=>$dokumentasi]);
+        return $this->redirect(['dokumentasi-s1-prodi/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
 
     }
 
@@ -324,7 +330,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->dokumentasiS1Prodi->akreditasiProdiS1->id_prodi}/prodi/dokumentasi/{$model->dokumen}"));
             $model->delete();
 
-            return $this->redirect(["dokumentasi-s1-prodi/standar$standar","dokumentasi"=>$dokumentasi]);
+            return $this->redirect(['dokumentasi-s1-prodi/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }

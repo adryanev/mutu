@@ -72,8 +72,8 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                     'url' => '#dokumentasi',
                     'items' => [
                         ['label'=> 'Isi Dokumentasi', 'url'=>['/standar7/dokumentasi/arsip-dok','target'=>'isi']],
-                        ['label'=> 'Penganggung Jawab', 'url'=>['/standar7/dokumentasi/penanggung','target'=>'pj']],
-                        ['label'=> 'Lihat Dokumentasi', 'url'=>['/standar7/dokumentasi/lihat-dok','target'=>'lihat']],
+                        ['label'=> 'Penganggung Jawab', 'url'=>['/standar7/dokumentasi/arsip-dok','target'=>'pj']],
+                        ['label'=> 'Lihat Dokumentasi', 'url'=>['/standar7/dokumentasi/arsip-dok','target'=>'lihat']],
                     ],
                 ],
                 [

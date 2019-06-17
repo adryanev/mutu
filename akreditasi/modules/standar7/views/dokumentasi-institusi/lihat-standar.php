@@ -1,6 +1,7 @@
 <?php
 
 use akreditasi\models\DokumentasiInstitusiStandar1Form;
+use common\models\S7DokumentasiInstitusi;
 use dosamigos\ckeditor\CKEditor;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Modal;
@@ -10,10 +11,14 @@ use yii\bootstrap\Progress;
 use yii\web\View;
 
 /* @var $this yii\web\View */
+/* @var $cari */
+/* @var $butir */
+/* @var $dokProdi S7DokumentasiInstitusi*/
+
 $standar = $json['standar'];
 
 $this->title='Standar '.$standar;
-$this->params['breadcrumbs'][] = ['label'=>'Pencarian Penanggung Jawab Dokumentasi','url'=>['dokumentasi/arsip-dok','target'=>$cari]];
+$this->params['breadcrumbs'][] = ['label'=>'Pencarian Lihat Dokumentasi','url'=>['dokumentasi/arsip-dok','target'=>$cari]];
 $this->params['breadcrumbs'][] = ['label'=>'Lihat Dokumentasi','url'=>['dokumentasi-institusi/lihat','dokumentasi'=>$dokProdi->id]];
 $this->params['breadcrumbs'][] = $this->title;
 

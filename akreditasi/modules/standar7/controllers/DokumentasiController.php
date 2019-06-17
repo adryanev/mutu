@@ -2,6 +2,8 @@
 
 namespace akreditasi\modules\standar7\controllers;
 
+use common\models\FakultasAkademi;
+use common\models\PencarianDokumentasiFakultasForm;
 use Yii;
 use common\models\S7Akreditasi;
 use common\models\PencarianDokumentasiProdiForm;
@@ -11,22 +13,16 @@ use common\models\ProgramStudi;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
+use yii\web\Response;
 
 class DokumentasiController extends \yii\web\Controller
 {
-    public function beforeAction($action)
-    {
-        $this->layout="main";
-        if($this->action->id === 'cari-dok'){
-            $this->enableCsrfValidation = false;
-        }
 
-        return true;
-    }
 
     public function actionArsipDok($target){
 
         $model = new PencarianDokumentasiProdiForm();
+        $modelFakultas = new PencarianDokumentasiFakultasForm();
         $modelInstitusi = new PencarianDokumentasiInstitusiForm();
 
         $idAkreditasi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>2]);
@@ -39,7 +35,8 @@ class DokumentasiController extends \yii\web\Controller
             return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
         });
 
-        $dataProgram = ArrayHelper::map(ProgramStudi::find()->all(),'id','jenjang');
+//        $dataProgram = ArrayHelper::map(ProgramStudi::find()->all(),'id','jenjang');
+        $dataProgram = ['S1'=>'S1','S2'=>'S2','S3'=>'S3','Diploma'=>'Diploma'];
         if($model->load(\Yii::$app->request->post())){
 
             $url = $model->cari($target);
@@ -61,6 +58,18 @@ class DokumentasiController extends \yii\web\Controller
             $dokId = $dokumentasi->id;
             $this->redirect([$url,'dokumentasi'=>$dokId]);
         }
+        if($modelFakultas->load(Yii::$app->request->post())){
+
+
+            $url = $modelFakultas->cari($target);
+            $dokumentasi = $modelFakultas->getDokumentasi();
+            if(!$dokumentasi){
+                throw new NotFoundHttpException("Data yang anda cari tidak ditemukan");
+            }
+
+            $dokumentasiId = $dokumentasi->id;
+            $this->redirect([$url,'dokumentasi'=>$dokumentasiId]);
+        }
 
         return $this->render('cari_dok',[
             'model'=>$model,
@@ -68,6 +77,7 @@ class DokumentasiController extends \yii\web\Controller
             'dataAkreditasiInstitusi'=>$dataAkreditasiInstitusi,
             'dataProgram'=>$dataProgram,
             'modelInstitusi'=>$modelInstitusi,
+            'modelFakultas'=>$modelFakultas,
             'target'=>$target
 
         ]);
@@ -87,12 +97,11 @@ class DokumentasiController extends \yii\web\Controller
             $parent = $_POST['depdrop_parents'];
             if($parent!==null){
                 $id = $parent[0];
-                $dataProdi = ProgramStudi::findAll(['id'=>$id]);
+                $dataProdi = ProgramStudi::findAll(['jenjang'=>$id]);
                 foreach ($dataProdi as $data){
                     $id = $data->id;
-                    $nama = $data->nama ;
-                    $jenjang = $data->jenjang;
-                    $newArray = ['id'=>$id,'name'=>$nama, 'jenjang'=>$jenjang];
+                    $nama = $data->nama . '('.$data->jenjang.')';
+                    $newArray = ['id'=>$id,'name'=>$nama];
                     $arrayProdi[] = $newArray;
                 }
 
@@ -104,28 +113,40 @@ class DokumentasiController extends \yii\web\Controller
 
     }
 
-    public function actionIsi()
-    {
-        return $this->render('isi');
+    public function actionCariFakultas(){
+        $this->enableCsrfValidation = false;
+
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $arrayProdi = [];
+
+        if(isset($_POST['depdrop_parents'])){
+            $parent = $_POST['depdrop_parents'];
+            if($parent!==null){
+                $id = $parent[0];
+                $dataFakultas = FakultasAkademi::find()->all();
+                foreach ($dataFakultas as $data){
+                    $id = $data->id;
+                    $nama = $data->nama;
+                    $newArray = ['id'=>$id,'name'=>$nama];
+                    $arrayProdi[] = $newArray;
+                }
+
+                return ['output'=>$arrayProdi, 'selected'=>''];
+            }
+        }
+        return ['output'=>'', 'selected'=>''];
     }
-    public function actionLihatDok()
+
+    public function beforeAction($action)
     {
-        return $this->render('lihat_dok');
-    }
-    public function actionLihatIsiDok()
-    {
-        return $this->render('lihat_isi_dok');
-    }
-    public function actionLihatPenanggung()
-    {
-        return $this->render('lihat_penanggung');
-    }
-    public function actionLihat()
-    {
-        return $this->render('lihat');
-    }
-    public function actionPenanggung()
-    {
-        return $this->render('penanggung');
+        $this->layout="main";
+        if($this->action->id === 'cari-prodi'){
+            $this->enableCsrfValidation = false;
+        }
+        if($this->action->id === 'cari-fakultas'){
+            $this->enableCsrfValidation = false;
+        }
+
+        return true;
     }
 }
