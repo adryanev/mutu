@@ -6,8 +6,8 @@ use admin\models\AkreditasiProdiS1Form;
 use common\models\S7Akreditasi;
 use common\models\S7BorangS1Fakultas;
 use common\models\S7BorangS1Prodi;
-use common\models\DokumentasiS1Fakultas;
-use common\models\DokumentasiS1Prodi;
+use common\models\S7DokumentasiS1Fakultas;
+use common\models\S7DokumentasiS1Prodi;
 use common\models\ProgramStudi;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -25,7 +25,6 @@ use yii\filters\VerbFilter;
  */
 class AkreditasiProdiS1Controller extends Controller
 {
-    const S1 = 1;
     /**
      * {@inheritdoc}
      */
@@ -90,8 +89,10 @@ class AkreditasiProdiS1Controller extends Controller
         $idAkreditasi = S7Akreditasi::find()->all();
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id','nama');
 
-        $idProdi = ProgramStudi::find()->where(['id_program'=>self::S1])->all();
-        $dataProdi = ArrayHelper::map($idProdi,'id','nama');
+        $idProdi = ProgramStudi::find()->where(['jenjang'=>'S1'])->all();
+        $dataProdi = ArrayHelper::map($idProdi,'id',function($data){
+            return $data->nama . " ({$data->jenjang})";
+        });
 
         if($model->load(Yii::$app->request->post())){
             if($model->createAkreditasi()) {
@@ -121,8 +122,10 @@ class AkreditasiProdiS1Controller extends Controller
         $idAkreditasi = S7Akreditasi::find()->all();
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id','nama');
 
-        $idProdi = ProgramStudi::find()->where(['id_program'=>self::S1])->all();
-        $dataProdi = ArrayHelper::map($idProdi,'id','nama');
+        $idProdi = ProgramStudi::find()->where(['jenjang'=>'S1'])->all();
+        $dataProdi = ArrayHelper::map($idProdi,'id',function($data){
+            return $data->nama . " ({$data->jenjang})";
+        });
 
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

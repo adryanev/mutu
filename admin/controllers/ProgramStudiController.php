@@ -78,7 +78,6 @@ class ProgramStudiController extends Controller
     public function actionCreate()
     {
         $model = new ProgramStudi();
-        $dataProgram = ArrayHelper::map(Program::find()->all(),'id','nama');
         $dataFakultas = ArrayHelper::map(FakultasAkademi::find()->all(),'id','nama');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -87,7 +86,6 @@ class ProgramStudiController extends Controller
 
         return $this->render('create', [
             'model' => $model,
-            'dataProgram'=>$dataProgram,
             'dataFakultas'=>$dataFakultas
         ]);
     }
@@ -102,7 +100,6 @@ class ProgramStudiController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $dataProgram = ArrayHelper::map(Program::find()->all(),'id','nama');
         $dataFakultas = ArrayHelper::map(FakultasAkademi::find()->all(),'id','nama');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -111,7 +108,6 @@ class ProgramStudiController extends Controller
 
         return $this->render('update', [
             'model' => $model,
-            'dataProgram'=>$dataProgram,
             'dataFakultas'=>$dataFakultas
         ]);
     }

@@ -31,7 +31,7 @@ class S7BorangInstitusi extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'borang_institusi';
+        return 's7_borang_institusi';
     }
 
     /**

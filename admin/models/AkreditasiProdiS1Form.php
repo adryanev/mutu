@@ -27,15 +27,15 @@ use common\models\S7BorangS1ProdiStandar4;
 use common\models\S7BorangS1ProdiStandar5;
 use common\models\S7BorangS1ProdiStandar6;
 use common\models\S7BorangS1ProdiStandar7;
-use common\models\DokumentasiS1Fakultas;
-use common\models\DokumentasiS1Prodi;
-use common\models\DokumentasiS1ProdiStandar1;
-use common\models\DokumentasiS1ProdiStandar2;
-use common\models\DokumentasiS1ProdiStandar3;
-use common\models\DokumentasiS1ProdiStandar4;
-use common\models\DokumentasiS1ProdiStandar5;
-use common\models\DokumentasiS1ProdiStandar6;
-use common\models\DokumentasiS1ProdiStandar7;
+use common\models\S7DokumentasiS1Fakultas;
+use common\models\S7DokumentasiS1Prodi;
+use common\models\S7DokumentasiS1ProdiStandar1;
+use common\models\S7DokumentasiS1ProdiStandar2;
+use common\models\S7DokumentasiS1ProdiStandar3;
+use common\models\S7DokumentasiS1ProdiStandar4;
+use common\models\S7DokumentasiS1ProdiStandar5;
+use common\models\S7DokumentasiS1ProdiStandar6;
+use common\models\S7DokumentasiS1ProdiStandar7;
 use RuntimeException;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -64,12 +64,12 @@ class AkreditasiProdiS1Form extends Model
     private $_borangS1Fakultas;
 
     /**
-     * @var DokumentasiS1Prodi
+     * @var S7DokumentasiS1Prodi
      */
     private $_dokumentasiS1Prodi;
 
     /**
-     * @var DokumentasiS1Fakultas
+     * @var S7DokumentasiS1Fakultas
      */
     private $_dokumentasiS1Fakultas;
 
@@ -143,7 +143,7 @@ class AkreditasiProdiS1Form extends Model
         }
 
 
-        $pathF = $path. "/{$this->_akreditasiProdiS1->akreditasi->tahun}/{$this->_akreditasiProdiS1->id_prodi}/fakultas";
+        $pathF = $path. "/{$this->_akreditasiProdiS1->akreditasi->tahun}/fakultas";
         $pathFBorang = $pathF . '/borang';
         $pathFBorangDokumen = $pathF . '/borang/dokumen';
         $pathFDokumentasi = $pathF. '/dokumentasi';
@@ -179,7 +179,7 @@ class AkreditasiProdiS1Form extends Model
 
         $this->_borangS1Prodi->id_akreditasi_prodi_s1= $this->_akreditasiProdiS1->id;
         $this->_borangS1Prodi->progress = 0;
-        $this->_borangS1Fakultas->id_akreditasi_prodi_s1 = $this->_akreditasiProdiS1->id;
+        $this->_borangS1Fakultas->id_akreditasi = $this->id_akreditasi;
         $this->_borangS1Fakultas->progress = 0;
 
         if(!$this->_borangS1Prodi->save(false)){
@@ -309,14 +309,14 @@ class AkreditasiProdiS1Form extends Model
      */
     private function createDokumentasi($transaction)
     {
-        $this->_dokumentasiS1Prodi = new DokumentasiS1Prodi();
-        $this->_dokumentasiS1Fakultas = new DokumentasiS1Fakultas();
+        $this->_dokumentasiS1Prodi = new S7DokumentasiS1Prodi();
+        $this->_dokumentasiS1Fakultas = new S7DokumentasiS1Fakultas();
 
 
         $this->_dokumentasiS1Prodi->id_akreditasi_prodi_s1= $this->_akreditasiProdiS1->id;
         $this->_dokumentasiS1Prodi->progress = 0;
         $this->_dokumentasiS1Prodi->is_publik = 0;
-        $this->_dokumentasiS1Fakultas->id_akreditasi_prodi_s1 = $this->_akreditasiProdiS1->id;
+        $this->_dokumentasiS1Fakultas->id_akreditasi = $this->_akreditasiProdiS1->id;
         $this->_dokumentasiS1Fakultas->progress = 0;
         $this->_dokumentasiS1Fakultas->is_publik = 0;
 

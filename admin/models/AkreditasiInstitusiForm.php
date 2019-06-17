@@ -19,7 +19,7 @@ use common\models\S7BorangInstitusiStandar4;
 use common\models\S7BorangInstitusiStandar5;
 use common\models\S7BorangInstitusiStandar6;
 use common\models\S7BorangInstitusiStandar7;
-use common\models\DokumentasiInstitusi;
+use common\models\S7DokumentasiInstitusi;
 use RuntimeException;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -42,7 +42,7 @@ class AkreditasiInstitusiForm extends Model
     private $_borangInstitusi;
 
     /**
-     * @var DokumentasiInstitusi
+     * @var S7DokumentasiInstitusi
      */
     private $_dokumentasiInstitusi;
     public function rules()
@@ -168,7 +168,7 @@ class AkreditasiInstitusiForm extends Model
 
     private function createDokumentasi(Transaction $transaction)
     {
-        $this->_dokumentasiInstitusi = new DokumentasiInstitusi();
+        $this->_dokumentasiInstitusi = new S7DokumentasiInstitusi();
         $this->_dokumentasiInstitusi->id_akreditasi_institusi = $this->_akreditasiInstitusi->id;
         $this->_dokumentasiInstitusi->progress = 0;
         $this->_dokumentasiInstitusi->is_publik = 0;

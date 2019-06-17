@@ -29,7 +29,7 @@ class S7AkreditasiProdiS3 extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'akreditasi_prodi_s3';
+        return 's7_akreditasi_prodi_s3';
     }
 
     /**

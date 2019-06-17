@@ -26,7 +26,7 @@ class S7DokumenBorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'dokumen_borang_s1_fakultas';
+        return 's7_dokumen_borang_s1_fakultas';
     }
 
     /**

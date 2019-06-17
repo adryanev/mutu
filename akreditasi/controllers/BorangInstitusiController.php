@@ -15,9 +15,9 @@ use common\models\S7BorangInstitusiStandar5;
 use common\models\S7BorangInstitusiStandar6;
 use common\models\S7BorangInstitusiStandar7;
 use common\models\S7DokumenBorangInstitusi;
-use common\models\GambarBorangInstitusi;
-use common\models\IsianBorang;
-use common\models\IsianBorangInstitusi;
+use common\models\S7GambarBorangInstitusi;
+use common\models\S7IsianBorang;
+use common\models\S7IsianBorangInstitusi;
 use Yii;
 use yii\helpers\Json;
 use yii\helpers\Url;
@@ -72,7 +72,7 @@ class BorangInstitusiController extends \yii\web\Controller
             $id_borang = Yii::$app->request->post('borang');
             $standar = Yii::$app->request->post('standar');
 
-            $model= GambarBorangInstitusi::findOne($id);
+            $model= S7GambarBorangInstitusi::findOne($id);
 
             unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangInstitusi->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$model->borangInstitusi->akreditasiInstitusi->akreditasi->tahun}/gambar/{$model->nama_file}"));
             $model->delete();
@@ -166,8 +166,8 @@ class BorangInstitusiController extends \yii\web\Controller
         $poin = $data['poin'];
         $detailClass = "common\\models\\DetailBorangInstitusiStandar".$id;
         $detail = call_user_func($detailClass.'::find')->where(['id_borang_institusi_standar'.$id=>$model->id]);
-        $template = IsianBorang::find()->where(['untuk'=>'institusi']);
-        $isian = IsianBorangInstitusi::find()->where(['id_borang_institusi'=>$borang]);
+        $template = S7IsianBorang::find()->where(['untuk'=>'institusi']);
+        $isian = S7IsianBorangInstitusi::find()->where(['id_borang_institusi'=>$borang]);
 
 
 
@@ -196,9 +196,9 @@ class BorangInstitusiController extends \yii\web\Controller
         $detailModelClass = 'akreditasi\\models\\DetailBorangInstitusiUploadForm';
         $detailModel = new $detailModelClass;
 
-        $template = IsianBorang::find()->where(['untuk'=>'institusi']);
+        $template = S7IsianBorang::find()->where(['untuk'=>'institusi']);
 
-        $isian = IsianBorangInstitusi::find()->where(['id_borang_institusi'=>$borang]);
+        $isian = S7IsianBorangInstitusi::find()->where(['id_borang_institusi'=>$borang]);
         $modelIsian  = new IsianBorangInstitusiUploadForm();
 
 
@@ -244,7 +244,7 @@ class BorangInstitusiController extends \yii\web\Controller
 
     public function actionDownloadIsian($id,$borang){
         ini_set('max_execution_time', 5*60);
-        $template = IsianBorangInstitusi::findOne($id);
+        $template = S7IsianBorangInstitusi::findOne($id);
         $file = Yii::getAlias('@uploadAkreditasi'."/{$template->borangInstitusi->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$template->borangInstitusi->akreditasiInstitusi->akreditasi->tahun}/borang/dokumen/{$template->nama_file}");
         return Yii::$app->response->sendFile($file);
 
@@ -254,7 +254,7 @@ class BorangInstitusiController extends \yii\web\Controller
 
         if(Yii::$app->request->isPost){
             $id = Yii::$app->request->post('id');
-            $model = IsianBorangInstitusi::findOne($id);
+            $model = S7IsianBorangInstitusi::findOne($id);
             $borang = Yii::$app->request->post('borang');
             $standar = Yii::$app->request->post('standar');
             unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangInstitusi->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$model->borangInstitusi->akreditasiInstitusi->akreditasi->tahun}/borang/dokumen/{$model->nama_file}"));
@@ -267,7 +267,7 @@ class BorangInstitusiController extends \yii\web\Controller
     }
     public function actionDownloadTemplate($id){
         ini_set('max_execution_time', 5*60);
-        $template = IsianBorang::findOne($id);
+        $template = S7IsianBorang::findOne($id);
         $file = Yii::getAlias('@templateBorang/institusi/'.$template->nama_file);
         return Yii::$app->response->sendFile($file);
 

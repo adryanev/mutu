@@ -34,11 +34,11 @@ class PencarianDokumentasiProdiForm extends Model {
             case self::S1:
                 $this->_akreditasi_prodi = S7AkreditasiProdiS1::find()->where(['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi])->one();
                 if($this->dokumentasi_untuk === 'fakultas'){
-                    $this->_dokumentasi = DokumentasiS1Fakultas::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
+                    $this->_dokumentasi = S7DokumentasiS1Fakultas::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
                     $url .= 'dokumentasi-s1-fakultas/index';
 
                 }else{
-                    $this->_dokumentasi = DokumentasiS1Prodi::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
+                    $this->_dokumentasi = S7DokumentasiS1Prodi::find()->where(['id_akreditasi_prodi_s1'=>$this->_akreditasi_prodi->id])->one();
                     $url .= 'dokumentasi-s1-prodi/index';
 
                 }

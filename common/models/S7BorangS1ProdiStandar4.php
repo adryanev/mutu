@@ -49,7 +49,7 @@ class S7BorangS1ProdiStandar4 extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'borang_s1_prodi_standar4';
+        return 's7_borang_s1_prodi_standar4';
     }
 
     /**

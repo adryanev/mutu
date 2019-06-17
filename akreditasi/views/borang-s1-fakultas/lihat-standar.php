@@ -3,7 +3,7 @@
 use akreditasi\models\S7BorangS1FakultasStandar1Form;
 use akreditasi\models\IsianBorangS1FakultasUploadForm;
 use common\models\S7DetailBorangS1FakultasStandar1;
-use common\models\IsianBorang;
+use common\models\S7IsianBorang;
 use yii\bootstrap\Html;
 use yii\bootstrap\Progress;
 use yii\db\ActiveQuery;
@@ -113,8 +113,8 @@ $query = $isian;
                                                         <tbody>
 
                                                         <?php
-                                                        $nomor = IsianBorang::findOne(['nomor_borang' => $value['nomor']]);
-                                                        $data = \common\models\IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas' => $_GET['borang'], 'id_isian_borang' => $nomor])->all();
+                                                        $nomor = S7IsianBorang::findOne(['nomor_borang' => $value['nomor']]);
+                                                        $data = \common\models\S7IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas' => $_GET['borang'], 'id_isian_borang' => $nomor])->all();
 
                                                         foreach ($data as $f => $file):
                                                             ?>

@@ -11,7 +11,7 @@ namespace akreditasi\models;
 
 
 use common\models\S7BorangS1Fakultas;
-use common\models\GambarBorangS1Fakultas;
+use common\models\S7GambarBorangS1Fakultas;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
@@ -38,10 +38,10 @@ class GambarBorangS1FakultasUploadForm extends Model
 
         if($this->validate()){
             $borang = S7BorangS1Fakultas::findOne($id);
-            $path = Yii::getAlias('@uploadAkreditasi/'."{$borang->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$borang->akreditasiProdiS1->akreditasi->tahun}/{$borang->akreditasiProdiS1->id_prodi}/fakultas/gambar");
+            $path = Yii::getAlias('@uploadAkreditasi/'."{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/gambar");
 
             foreach ($this->gambar_borang as $gambar){
-                $model = new GambarBorangS1Fakultas();
+                $model = new S7GambarBorangS1Fakultas();
                 $model->id_borang_s1_fakultas = $borang->id;
                 $model->nomor_borang = $this->nomor_borang;
                 $fileName = $gambar->getBaseName().'.'.$gambar->getExtension();

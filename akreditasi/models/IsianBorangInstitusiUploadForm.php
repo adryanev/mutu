@@ -11,8 +11,8 @@ namespace akreditasi\models;
 
 
 use common\models\S7BorangInstitusi;
-use common\models\IsianBorang;
-use common\models\IsianBorangInstitusi;
+use common\models\S7IsianBorang;
+use common\models\S7IsianBorangInstitusi;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
@@ -39,9 +39,9 @@ class IsianBorangInstitusiUploadForm extends Model
     public function uploadFile($idBorang){
 
         if($this->validate()){
-            $isian = IsianBorang::findOne(['nomor_borang'=>$this->nomor_borang,'untuk'=>'prodi']);
+            $isian = S7IsianBorang::findOne(['nomor_borang'=>$this->nomor_borang,'untuk'=>'prodi']);
             $borang = S7BorangInstitusi::findOne($idBorang);
-            $model = new IsianBorangInstitusi();
+            $model = new S7IsianBorangInstitusi();
             $model->id_isian_borang = $isian->id;
             $model->id_borang_institusi = $borang->id;
 

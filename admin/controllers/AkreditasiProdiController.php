@@ -3,6 +3,7 @@
 namespace admin\controllers;
 
 use common\models\Program;
+use Yii;
 use yii\base\DynamicModel;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
@@ -12,15 +13,13 @@ class AkreditasiProdiController extends Controller
     public function actionIndex()
     {
         $model = new DynamicModel(['program']);
-        $dataProgram = ArrayHelper::map(Program::find()->all(),'id','nama');
+        $dataProgram =['S1'=>'S1','S2'=>'S2','S3'=>'S3','Diploma'=>'Diploma'];
         $model->addRule('program','required');
 
-        if($model->load(\Yii::$app->request->post())){
+        if($model->load(Yii::$app->request->post())){
 
             $redirect = '';
-            $idProgram = (int)$model->getAttributes(['program']);
-            $nama = Program::findOne($idProgram)->nama;
-            $program = strtolower($nama);
+            $program = strtolower($model->program);
             $redirect .= "akreditasi-prodi-$program/index";
             return $this->redirect([$redirect]);
         }

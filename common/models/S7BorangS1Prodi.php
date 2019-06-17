@@ -22,7 +22,7 @@ use yii\behaviors\TimestampBehavior;
  * @property S7BorangS1ProdiStandar5 $borangS1ProdiStandar5s
  * @property S7BorangS1ProdiStandar6 $borangS1ProdiStandar6s
  * @property S7BorangS1ProdiStandar7 $borangS1ProdiStandar7s
- * @property DokumenBorangS1Prodi[] $dokumenBorangS1Prodis
+ * @property S7DokumenBorangS1Prodi[] $dokumenBorangS1Prodis
  */
 class S7BorangS1Prodi extends \yii\db\ActiveRecord
 {
@@ -31,7 +31,7 @@ class S7BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'borang_s1_prodi';
+        return 's7_borang_s1_prodi';
     }
 
     public function behaviors()
@@ -136,7 +136,7 @@ class S7BorangS1Prodi extends \yii\db\ActiveRecord
      */
     public function getDokumenBorangS1Prodis()
     {
-        return $this->hasMany(DokumenBorangS1Prodi::className(), ['id_borang_s1_prodi' => 'id']);
+        return $this->hasMany(S7DokumenBorangS1Prodi::className(), ['id_borang_s1_prodi' => 'id']);
     }
 
     public function updateProgress(){

@@ -11,14 +11,14 @@ namespace akreditasi\models;
 
 
 use common\models\S7DetailBorangS1ProdiStandar1;
-use common\models\DokumenBorangS1Prodi;
+use common\models\S7DokumenBorangS1Prodi;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
 /**
  *
- * @property DokumenBorangS1Prodi $detailBorangS1Prodi
+ * @property S7DokumenBorangS1Prodi $detailBorangS1Prodi
  */
 
 class DetailBorangS1ProdiUploadForm extends Model
@@ -68,7 +68,7 @@ class DetailBorangS1ProdiUploadForm extends Model
     }
 
     /**
-     * @return DokumenBorangS1Prodi
+     * @return S7DokumenBorangS1Prodi
      */
     public function getDetailBorangS1Prodi()
     {

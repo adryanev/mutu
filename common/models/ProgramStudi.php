@@ -10,7 +10,8 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property int $id
  * @property string $nama
- * @property int $id_program
+ * @property string $jenjang
+ * @property string $kaprodi
  * @property int $id_fakultas_akademi
  * @property int $created_at
  * @property int $updated_at
@@ -20,7 +21,6 @@ use yii\behaviors\TimestampBehavior;
  * @property S7AkreditasiProdiS2[] $akreditasiProdiS2s
  * @property S7AkreditasiProdiS3[] $akreditasiProdiS3s
  * @property ProfilUser[] $profilUsers
- * @property Program $program
  * @property FakultasAkademi $fakultasAkademi
  */
 class ProgramStudi extends \yii\db\ActiveRecord
@@ -49,9 +49,8 @@ class ProgramStudi extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_program', 'id_fakultas_akademi', 'created_at', 'updated_at'], 'integer'],
-            [['nama'], 'string', 'max' => 255],
-            [['id_program'], 'exist', 'skipOnError' => true, 'targetClass' => Program::className(), 'targetAttribute' => ['id_program' => 'id']],
+            [['id_fakultas_akademi', 'created_at', 'updated_at'], 'integer'],
+            [['nama','jenjang'], 'string', 'max' => 255],
             [['id_fakultas_akademi'], 'exist', 'skipOnError' => true, 'targetClass' => FakultasAkademi::className(), 'targetAttribute' => ['id_fakultas_akademi' => 'id']],
         ];
     }
@@ -111,13 +110,6 @@ class ProgramStudi extends \yii\db\ActiveRecord
         return $this->hasMany(ProfilUser::className(), ['id_prodi' => 'id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProgram()
-    {
-        return $this->hasOne(Program::className(), ['id' => 'id_program']);
-    }
 
     /**
      * @return \yii\db\ActiveQuery

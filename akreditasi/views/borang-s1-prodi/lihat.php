@@ -9,7 +9,7 @@ use common\models\S7BorangS1ProdiStandar4;
 use common\models\S7BorangS1ProdiStandar5;
 use common\models\S7BorangS1ProdiStandar6;
 use common\models\S7BorangS1ProdiStandar7;
-use common\models\DokumenBorangS1Prodi;
+use common\models\S7DokumenBorangS1Prodi;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
@@ -19,7 +19,7 @@ use yii\web\View;
 /* @var $this yii\web\View */
 /* @var $borangProdi S7BorangS1Prodi */
 /* @var $dokumenBorang BorangS1ProdiForm */
-/* @var $dataDokumenBorang DokumenBorangS1Prodi */
+/* @var $dataDokumenBorang S7DokumenBorangS1Prodi */
 /* @var $standar1 S7BorangS1ProdiStandar1 */
 /* @var $standar2 S7BorangS1ProdiStandar2 */
 /* @var $standar3 S7BorangS1ProdiStandar3 */

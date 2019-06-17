@@ -18,7 +18,7 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property S7Akreditasi $akreditasi
  * @property S7BorangInstitusi[] $borangInstitusis
- * @property DokumentasiInstitusi[] $dokumentasiInstitusis
+ * @property S7DokumentasiInstitusi[] $dokumentasiInstitusis
  */
 class S7AkreditasiInstitusi extends \yii\db\ActiveRecord
 {
@@ -27,7 +27,7 @@ class S7AkreditasiInstitusi extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'akreditasi_institusi';
+        return 's7_akreditasi_institusi';
     }
     public function behaviors()
     {
@@ -86,6 +86,6 @@ class S7AkreditasiInstitusi extends \yii\db\ActiveRecord
      */
     public function getDokumentasiInstitusis()
     {
-        return $this->hasMany(DokumentasiInstitusi::className(), ['id_akreditasi_institusi' => 'id']);
+        return $this->hasMany(S7DokumentasiInstitusi::className(), ['id_akreditasi_institusi' => 'id']);
     }
 }

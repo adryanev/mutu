@@ -29,7 +29,7 @@ class S7DetailBorangS1FakultasStandar5 extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'detail_borang_s1_fakultas_standar5';
+        return 's7_detail_borang_s1_fakultas_standar5';
     }
 
     /**

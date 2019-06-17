@@ -5,8 +5,8 @@ use akreditasi\models\GambarBorangInstitusiUploadForm;
 use akreditasi\models\IsianBorangInstitusiUploadForm;
 use common\models\S7BorangInstitusi;
 use common\models\S7DetailBorangInstitusiStandar1;
-use common\models\GambarBorangInstitusi;
-use common\models\IsianBorang;
+use common\models\S7GambarBorangInstitusi;
+use common\models\S7IsianBorang;
 use dosamigos\ckeditor\CKEditor;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
@@ -18,7 +18,7 @@ use yii\helpers\Url;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $model GambarBorangInstitusi */
+/* @var $model S7GambarBorangInstitusi */
 /* @var $dataBorang S7BorangInstitusi */
 /* @var $gambarForm GambarBorangInstitusiUploadForm */
 /** @var array $poin */
@@ -81,7 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <div class="col-md-12"
                                                 >
                                                 <?php
-                                                $dataGambar = GambarBorangInstitusi::findAll(['id_borang_institusi' => $_GET['borang'], 'nomor_borang' => $value['nomor']]);
+                                                $dataGambar = S7GambarBorangInstitusi::findAll(['id_borang_institusi' => $_GET['borang'], 'nomor_borang' => $value['nomor']]);
                                                 foreach ($dataGambar as $gambar):?>
 
                                                     <div class="col-md-3">

@@ -9,7 +9,9 @@ use yii\behaviors\TimestampBehavior;
  * This is the model class for table "fakultas_akademi".
  *
  * @property int $id
+ * @property string $kode
  * @property string $nama
+ * @property string $dekan
  * @property int $created_at
  * @property int $updated_at
  *

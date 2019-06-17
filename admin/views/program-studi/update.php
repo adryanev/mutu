@@ -6,7 +6,6 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\ProgramStudi */
-/* @var $dataProgram common\models\Program[] */
 /* @var $dataFakultas common\models\FakultasAkademi[] */
 
 $this->title = 'Update Program Studi: ' . $model->id;
@@ -30,7 +29,6 @@ $this->params['breadcrumbs'][] = 'Update';
 
                     <?= $this->render('_form', [
                     'model' => $model,
-                        'dataProgram'=>$dataProgram,
                         'dataFakultas'=>$dataFakultas
                     ]) ?>
 

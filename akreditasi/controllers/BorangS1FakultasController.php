@@ -16,9 +16,9 @@ use common\models\S7BorangS1FakultasStandar6;
 use common\models\S7BorangS1FakultasStandar7;
 use common\models\S7DetailBorangS1FakultasStandar1;
 use common\models\S7DokumenBorangS1Fakultas;
-use common\models\GambarBorangS1Fakultas;
-use common\models\IsianBorang;
-use common\models\IsianBorangS1Fakultas;
+use common\models\S7GambarBorangS1Fakultas;
+use common\models\S7IsianBorang;
+use common\models\S7IsianBorangS1Fakultas;
 use Yii;
 use yii\helpers\Json;
 use yii\helpers\Url;
@@ -73,7 +73,7 @@ class BorangS1FakultasController extends \yii\web\Controller
             $id_borang = Yii::$app->request->post('borang');
             $standar = Yii::$app->request->post('standar');
 
-            $model= GambarBorangS1Fakultas::findOne($id);
+            $model= S7GambarBorangS1Fakultas::findOne($id);
 
             unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Fakultas->akreditasiProdiS1->id_prodi}/fakultas/gambar/{$model->nama_file}"));
             $model->delete();
@@ -166,8 +166,8 @@ class BorangS1FakultasController extends \yii\web\Controller
         $data = $decode[$id-1];
         $poin = $data['poin'];
         $detail = S7DetailBorangS1FakultasStandar1::find()->where(['id_borang_s1_fakultas_standar1'=>$model->id]);
-        $template = IsianBorang::find()->where(['untuk'=>'fakultas']);
-        $isian = IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas'=>$borang]);
+        $template = S7IsianBorang::find()->where(['untuk'=>'fakultas']);
+        $isian = S7IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas'=>$borang]);
 
 
 
@@ -198,9 +198,9 @@ class BorangS1FakultasController extends \yii\web\Controller
         $detailModelClass = 'akreditasi\\models\\DetailBorangS1FakultasUploadForm';
         $detailModel = new $detailModelClass;
 
-        $template = IsianBorang::find()->where(['untuk'=>'fakultas']);
+        $template = S7IsianBorang::find()->where(['untuk'=>'fakultas']);
 
-        $isian = IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas'=>$borang]);
+        $isian = S7IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas'=>$borang]);
         $modelIsian  = new IsianBorangS1FakultasUploadForm();
 
 
@@ -246,7 +246,7 @@ class BorangS1FakultasController extends \yii\web\Controller
 
     public function actionDownloadIsian($id,$borang){
         ini_set('max_execution_time', 5*60);
-        $template = IsianBorangS1Fakultas::findOne($id);
+        $template = S7IsianBorangS1Fakultas::findOne($id);
         $file = Yii::getAlias('@uploadAkreditasi'."/{$template->borangS1Fakultas->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$template->borangS1Fakultas->akreditasiProdiS1->akreditasi->tahun}/{$template->borangS1Fakultas->akreditasiProdiS1->id_prodi}/fakultas/borang/dokumen/{$template->nama_file}");
         return Yii::$app->response->sendFile($file);
 
@@ -258,7 +258,7 @@ class BorangS1FakultasController extends \yii\web\Controller
             $id = Yii::$app->request->post('id');
             $borang = Yii::$app->request->post('borang');
             $standar = Yii::$app->request->post('standar');
-            $model = IsianBorangS1Fakultas::findOne($id);
+            $model = S7IsianBorangS1Fakultas::findOne($id);
             unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->borangS1Fakultas->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->borangS1Fakultas->akreditasiProdiS1->akreditasi->tahun}/{$model->borangS1Fakultas->akreditasiProdiS1->id_prodi}/fakultas/borang/dokumen/{$model->nama_file}"));
             $model->delete();
             Yii::$app->session->setFlash('success','Berhasil Menghapus Isian Borang');
@@ -270,7 +270,7 @@ class BorangS1FakultasController extends \yii\web\Controller
     }
     public function actionDownloadTemplate($id){
         ini_set('max_execution_time', 5*60);
-        $template = IsianBorang::findOne($id);
+        $template = S7IsianBorang::findOne($id);
         $file = Yii::getAlias('@templateBorang/fakultas/'.$template->nama_file);
         return Yii::$app->response->sendFile($file);
 

@@ -3,8 +3,8 @@
 use akreditasi\models\S7BorangS1FakultasStandar1Form;
 use akreditasi\models\IsianBorangS1FakultasUploadForm;
 use common\models\S7DetailBorangS1FakultasStandar1;
-use common\models\IsianBorang;
-use common\models\IsianBorangS1Fakultas;
+use common\models\S7IsianBorang;
+use common\models\S7IsianBorangS1Fakultas;
 use dosamigos\ckeditor\CKEditor;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
@@ -144,8 +144,8 @@ $query = $isian;
                                                                 <tbody>
 
                                                                         <?php
-                                                                        $nomor = IsianBorang::findOne(['nomor_borang'=>$value['nomor'],'untuk'=>'fakultas']);
-                                                                        $data = IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas'=>$_GET['borang'],'id_isian_borang'=>$nomor->id])->all();
+                                                                        $nomor = S7IsianBorang::findOne(['nomor_borang'=>$value['nomor'],'untuk'=>'fakultas']);
+                                                                        $data = S7IsianBorangS1Fakultas::find()->where(['id_borang_s1_fakultas'=>$_GET['borang'],'id_isian_borang'=>$nomor->id])->all();
                                                                         foreach ($data as $f =>$file):
                                                                         ?>
 

@@ -62,7 +62,6 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                     'icon' => 'account_balance',
                     'items' => [
                         ['label' => 'Unit', 'icon' => 'label_outline', 'url' => ['/unit']],
-                        ['label' => 'Program', 'icon' => 'label_outline', 'url' => ['/program']],
                         ['label' => 'Fakultas/Akademi', 'icon' => 'label_outline', 'url' => ['/fakultas-akademi']],
                         ['label' => 'Program Studi', 'icon' => 'label_outline', 'url' => ['/program-studi']]
                     ]

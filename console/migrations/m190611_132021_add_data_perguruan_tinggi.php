@@ -77,7 +77,10 @@ class m190611_132021_add_data_perguruan_tinggi extends Migration
     private function addToTabelFakultas()
     {
         $data = [
-            [1,'FST','Sains dan Teknologi','Dr. ADAkdakdakdka',1557554873,1557554873],
+            [1,'FSI','Fakultas Syariah dan Ilmu Hukum','Dr.H.Fatahuddin Aziz Siregar,M.Ag.',1557554873,1557554873],
+            [2,'FTK','Fakultas Tarbiyah dan Ilmu Keguruan','Dr.Lelya Hilda,M.Si.',1557554873,1557554873],
+            [3,'FDK','Fakultas Dakwah dan Ilmu Komunikasi','Dr.Ali Sati,M.Ag.',1557554873,1557554873],
+            [4,'FEB','Fakultas Ekonomi dan Bisnis Islam','Dr.Darwis Harahap,S.HI.,M.Si.',1557554873,1557554873],
 
         ];
 
@@ -87,7 +90,28 @@ class m190611_132021_add_data_perguruan_tinggi extends Migration
     private function addToTabelProdi()
     {
         $data = [
-            [1,'925829','Teknik Informatika',1,'Dr. asdakdadad','S1',1557554873,1557554873],
+            [1,'74230','Hukum Keluarga Islam (Ahwal Syakhshiyyah)',1,'Musa Aripin,S.H.I.,M.S.I','S1',1557554873,1557554873],
+            [2,'76231','Ilmu Al Quran dan Tafsir',1,'Drs.H.Dame Siregar,M.A.','S1',1557554873,1557554873],
+            [3,'74234','Hukum Ekonomi Syariah',1,'Musa Aripin,S.H.I.,M.S.I','S1',1557554873,1557554873],
+            [4,'74235','Hukum Tata Negara',1,'Dermina Dalimunthe,S.H.,M.H.','S1',1557554873,1557554873],
+            [5,'74231','Hukum Pidana Islam',1,'Dermina Dalimunthe,S.H.,M.H.','S1',1557554873,1557554873],
+
+            [6,'86108','Pendidikan Agama Islam',2,'Dr.Erawadi,M.Ag.','S2',1557554873,1557554873],
+            [7,'86208','Pendidikan Agama Islam',2,'Drs.H.Abdul Sattar Daulay,M.Ag','S1',1557554873,1557554873],
+            [8,'88203','Pendidikan Bahasa Inggris',2,'Fitri Rayani Siregar,M.Hum.','S1',1557554873,1557554873],
+            [9,'84202','Tadris/ Pendidikan Matematika',2,'Suparni,S.Si.,M.Pd.','S1',1557554873,1557554873],
+            [10,'88204','Pendidikan  Bahasa Arab',2,'Muhammad Yusuf Pulungan,M.A.','S1',1557554873,1557554873],
+            [11,'86232','PGMI',2,'Nursyaidah,M.Pd.','S1',1557554873,1557554873],
+            [12,'86233','PIAUD',2,'Drs.H.Abdul Sattar Daulay,M.Ag','S1',1557554873,1557554873],
+
+            [13,'70233','Komunikasi Penyiaran Islam',3,'Risdawati Siregar,S.Ag,M.Pd','S1',1557554873,1557554873],
+            [14,'70230','Manajemen Dakwah',3,'H.Ali Anas Nasution,M.A.','S1',1557554873,1557554873],
+            [15,'70232','Bimbingan Konseling Islam',3,'Maslina Daulay,MA.','S1',1557554873,1557554873],
+            [16,'70231','Pengembangan Masyarakat Islam',3,'H.Ali Anas Nasution,M.A.','S1',1557554873,1557554873],
+
+            [17,'60202','Perbankan Syariah',4,'Nofinawati,M.A.','S1',1557554873,1557554873],
+            [18,'61206','Ekonomi Syariah',4,'Delima Sari Lubis,M.A.','S1',1557554873,1557554873],
+
         ];
         $this->batchInsert('{{%program_studi}}',['id','kode','nama','id_fakultas_akademi','kaprodi','jenjang','created_at','updated_at'],$data);
     }

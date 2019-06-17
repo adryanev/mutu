@@ -20,9 +20,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'id_program')->widget(Select2::class,[
-            'data'=>$dataProgram
-    ])->label('Program') ?>
+    <?= $form->field($model, 'jenjang')->widget(Select2::class,[
+            'data'=>['S1'=>'S1','S2'=>'S2','S3'=>'S3','Diploma'=>'Diploma']
+    ])->label('Jenjang') ?>
 
     <?= $form->field($model, 'id_fakultas_akademi')->widget(Select2::class,[
             'data'=>$dataFakultas

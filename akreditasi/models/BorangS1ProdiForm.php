@@ -4,7 +4,7 @@
 namespace akreditasi\models;
 
 
-use common\models\DokumenBorangS1Prodi;
+use common\models\S7DokumenBorangS1Prodi;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
@@ -33,7 +33,7 @@ class BorangS1ProdiForm extends Model
 
 
         if($this->validate()){
-            $this->_dokumenBorangS1Prodi = new DokumenBorangS1Prodi();
+            $this->_dokumenBorangS1Prodi = new S7DokumenBorangS1Prodi();
             $this->_dokumenBorangS1Prodi->id_borang_s1_prodi = $id;
             $fileName = $this->dokumenBorang->getBaseName().'.'.$this->dokumenBorang->getExtension();
             $this->_dokumenBorangS1Prodi->nama_dokumen = $fileName;
@@ -50,7 +50,7 @@ class BorangS1ProdiForm extends Model
     }
 
     /**
-     * @return DokumenBorangS1Prodi
+     * @return S7DokumenBorangS1Prodi
      */
     public function getDetailBorangS1Prodi()
     {

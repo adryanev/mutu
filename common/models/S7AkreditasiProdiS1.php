@@ -21,8 +21,8 @@ use yii\behaviors\TimestampBehavior;
  * @property ProgramStudi $prodi
  * @property S7BorangS1Fakultas[] $borangS1Fakultas
  * @property S7BorangS1Prodi[] $borangS1Prodis
- * @property DokumentasiS1Fakultas[] $dokumentasiS1Fakultas
- * @property DokumentasiS1Prodi[] $dokumentasiS1Prodis
+ * @property S7DokumentasiS1Fakultas[] $dokumentasiS1Fakultas
+ * @property S7DokumentasiS1Prodi[] $dokumentasiS1Prodis
  */
 class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
 {
@@ -38,7 +38,7 @@ class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'akreditasi_prodi_s1';
+        return 's7_akreditasi_prodi_s1';
     }
 
     /**
@@ -109,7 +109,7 @@ class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
      */
     public function getDokumentasiS1Fakultas()
     {
-        return $this->hasMany(DokumentasiS1Fakultas::className(), ['id_akreditasi_prodi_s1' => 'id']);
+        return $this->hasMany(S7DokumentasiS1Fakultas::className(), ['id_akreditasi_prodi_s1' => 'id']);
     }
 
     /**
@@ -117,6 +117,6 @@ class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
      */
     public function getDokumentasiS1Prodis()
     {
-        return $this->hasMany(DokumentasiS1Prodi::className(), ['id_akreditasi_prodi_s1' => 'id']);
+        return $this->hasMany(S7DokumentasiS1Prodi::className(), ['id_akreditasi_prodi_s1' => 'id']);
     }
 }

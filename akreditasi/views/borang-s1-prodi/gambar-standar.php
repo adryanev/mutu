@@ -5,8 +5,8 @@ use akreditasi\models\GambarBorangS1ProdiUploadForm;
 use akreditasi\models\IsianBorangS1ProdiUploadForm;
 use common\models\S7BorangS1Prodi;
 use common\models\S7DetailBorangS1ProdiStandar1;
-use common\models\GambarBorangS1Prodi;
-use common\models\IsianBorang;
+use common\models\S7GambarBorangS1Prodi;
+use common\models\S7IsianBorang;
 use dosamigos\ckeditor\CKEditor;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
@@ -18,7 +18,7 @@ use yii\helpers\Url;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $model GambarBorangS1Prodi */
+/* @var $model S7GambarBorangS1Prodi */
 /* @var $dataBorang S7BorangS1Prodi */
 /* @var $gambarForm GambarBorangS1ProdiUploadForm */
 /** @var array $poin */
@@ -81,7 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <div class="col-md-12"
                                                 >
                                                 <?php
-                                                $dataGambar = GambarBorangS1Prodi::findAll(['id_borang_s1_prodi' => $_GET['borang'], 'nomor_borang' => $value['nomor']]);
+                                                $dataGambar = S7GambarBorangS1Prodi::findAll(['id_borang_s1_prodi' => $_GET['borang'], 'nomor_borang' => $value['nomor']]);
                                                 foreach ($dataGambar as $gambar):?>
 
                                                     <div class="col-md-3">

@@ -9,12 +9,12 @@ use yii\behaviors\TimestampBehavior;
  * This is the model class for table "borang_s1_fakultas".
  *
  * @property int $id
- * @property int $id_akreditasi_prodi_s1
+ * @property int $id_akreditasi
  * @property double $progress
  * @property int $created_at
  * @property int $updated_at
  *
- * @property S7AkreditasiProdiS1 $akreditasiProdiS1
+ * @property S7Akreditasi $akreditasi
  * @property S7BorangS1FakultasStandar1 $borangS1FakultasStandar1s
  * @property S7BorangS1FakultasStandar2 $borangS1FakultasStandar2s
  * @property S7BorangS1FakultasStandar3 $borangS1FakultasStandar3s
@@ -31,7 +31,7 @@ class S7BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'borang_s1_fakultas';
+        return 's7_borang_s1_fakultas';
     }
 
     public function behaviors()
@@ -60,7 +60,7 @@ class S7BorangS1Fakultas extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_akreditasi_prodi_s1' => 'Id S7Akreditasi Prodi S1',
+            'id_akreditasi' => 'Id Akreditasi S1',
             'progress' => 'Progress',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
@@ -70,9 +70,9 @@ class S7BorangS1Fakultas extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getAkreditasiProdiS1()
+    public function getAkreditasi()
     {
-        return $this->hasOne(S7AkreditasiProdiS1::className(), ['id' => 'id_akreditasi_prodi_s1']);
+        return $this->hasOne(S7Akreditasi::className(), ['id' => 'id_akreditasi']);
     }
 
     /**

@@ -34,7 +34,7 @@ class S7BorangS1FakultasStandar2 extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'borang_s1_fakultas_standar2';
+        return 's7_borang_s1_fakultas_standar2';
     }
 
     /**
