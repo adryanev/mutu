@@ -2,22 +2,23 @@
 
 namespace akreditasi\modules\standar7\controllers;
 
-use akreditasi\models\S7DokumentasiS1ProdiStandar1Form;
-use akreditasi\models\S7DokumentasiS1ProdiStandar2Form;
-use akreditasi\models\S7DokumentasiS1ProdiStandar3Form;
-use akreditasi\models\S7DokumentasiS1ProdiStandar4Form;
-use akreditasi\models\S7DokumentasiS1ProdiStandar5Form;
-use akreditasi\models\S7DokumentasiS1ProdiStandar6Form;
-use akreditasi\models\S7DokumentasiS1ProdiStandar7Form;
-use common\models\S7DokumentasiS1Prodi;
-use common\models\S7DokumentasiS1ProdiStandar1;
-use common\models\S7DokumentasiS1ProdiStandar2;
-use common\models\S7DokumentasiS1ProdiStandar3;
-use common\models\S7DokumentasiS1ProdiStandar4;
-use common\models\S7DokumentasiS1ProdiStandar5;
-use common\models\S7DokumentasiS1ProdiStandar6;
-use common\models\S7DokumentasiS1ProdiStandar7;
-// use common\models\DokumenDokumentasiS1Prodi;
+// use akreditasi\models\DokumentasiS1ProdiForm;
+use akreditasi\models\S7DokumentasiS1FakultasStandar1Form;
+use akreditasi\models\S7DokumentasiS1FakultasStandar2Form;
+use akreditasi\models\S7DokumentasiS1FakultasStandar3Form;
+use akreditasi\models\S7DokumentasiS1FakultasStandar4Form;
+use akreditasi\models\S7DokumentasiS1FakultasStandar5Form;
+use akreditasi\models\S7DokumentasiS1FakultasStandar6Form;
+use akreditasi\models\S7DokumentasiS1FakultasStandar7Form;
+use common\models\S7DokumentasiS1Fakultas;
+use common\models\S7DokumentasiS1FakultasStandar1;
+use common\models\S7DokumentasiS1FakultasStandar2;
+use common\models\S7DokumentasiS1FakultasStandar3;
+use common\models\S7DokumentasiS1FakultasStandar4;
+use common\models\S7DokumentasiS1FakultasStandar5;
+use common\models\S7DokumentasiS1FakultasStandar6;
+use common\models\S7DokumentasiS1FakultasStandar7;
+// use common\models\DokumenDokumentasiS1Fakultas;
 use Yii;
 use yii\helpers\FileHelper;
 use yii\helpers\Json;
@@ -25,31 +26,33 @@ use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
 use yii\web\UploadedFile;
 
-class DokumentasiS1ProdiController extends \yii\web\Controller
+
+
+class DokumentasiS1FakultasController extends \yii\web\Controller
 {
     public function actionIsi($dokumentasi)
     {
-        $file_json = 'standar_prodi_s1.json';
-        $dokumentasiProdi = S7DokumentasiS1Prodi::findOne($dokumentasi);
+        $file_json = 'standar_fakultas_s1.json';
+        $dokumentasiProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
 
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
-        $standar1 = S7DokumentasiS1ProdiStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar2 = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar3 = S7DokumentasiS1ProdiStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar4 = S7DokumentasiS1ProdiStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar5 = S7DokumentasiS1ProdiStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar6 = S7DokumentasiS1ProdiStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar7 = S7DokumentasiS1ProdiStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar1 = S7DokumentasiS1FakultasStandar1::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar2 = S7DokumentasiS1FakultasStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar3 = S7DokumentasiS1FakultasStandar3::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar4 = S7DokumentasiS1FakultasStandar4::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar5 = S7DokumentasiS1FakultasStandar5::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar6 = S7DokumentasiS1FakultasStandar6::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar7 = S7DokumentasiS1FakultasStandar7::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
 
         $decode = Json::decode($json);
 
-        $cekisi1 = S7DokumentasiS1ProdiStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi2 = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi3 = S7DokumentasiS1ProdiStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi4 = S7DokumentasiS1ProdiStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi5 = S7DokumentasiS1ProdiStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi6 = S7DokumentasiS1ProdiStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi7 = S7DokumentasiS1ProdiStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
+        $cekisi1 = S7DokumentasiS1FakultasStandar1::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi2 = S7DokumentasiS1FakultasStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi3 = S7DokumentasiS1FakultasStandar3::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi4 = S7DokumentasiS1FakultasStandar4::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi5 = S7DokumentasiS1FakultasStandar5::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi6 = S7DokumentasiS1FakultasStandar6::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi7 = S7DokumentasiS1FakultasStandar7::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
 
         $data1 = $decode[0];
         $butir1 = $data1['butir'];
@@ -65,7 +68,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         $butir6 = $data6['butir'];
         $data7 = $decode[6];
         $butir7 = $data7['butir'];
-
+        
         $standar1json = 0;
         $standar2json = 0;
         $standar3json = 0;
@@ -74,12 +77,15 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         $standar6json = 0;
         $standar7json = 0;
 
+        // var_dump($butir5);
+        // exit();
+
         foreach ($butir1 as $key => $value) {
             foreach ($value['dokumen_sumber'] as $key => $sumber) {
                 $standar1json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar1json++;
+                $standar1json++;  
             }
         }
         foreach ($butir2 as $key => $value) {
@@ -87,7 +93,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar2json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar2json++;
+                $standar2json++;  
             }
         }
         foreach ($butir3 as $key => $value) {
@@ -95,7 +101,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar3json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar3json++;
+                $standar3json++;  
             }
         }
         foreach ($butir4 as $key => $value) {
@@ -103,7 +109,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar4json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar4json++;
+                $standar4json++;  
             }
         }
         foreach ($butir5 as $key => $value) {
@@ -111,7 +117,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar5json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar5json++;
+                $standar5json++;  
             }
         }
         foreach ($butir6 as $key => $value) {
@@ -119,7 +125,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar6json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar6json++;
+                $standar6json++;  
             }
         }
         foreach ($butir7 as $key => $value) {
@@ -127,7 +133,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar7json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar7json++;
+                $standar7json++;  
             }
         }
 
@@ -172,41 +178,41 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             $id = Yii::$app->request->post('id');
             $status = Yii::$app->request->post('publik');
 
-            $model = S7DokumentasiS1Prodi::findOne($id);
+            $model = S7DokumentasiS1Fakultas::findOne($id);
             $model->is_publik = $status;
             $model->save();
-
-            return $this->redirect(['dokumentasi-s1-prodi/isi','dokumentasi'=>$id]);
+            
+            return $this->redirect(['dokumentasi-s1-fakultas/isi','dokumentasi'=>$id]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }
 
-
+    
     public function actionIsiStandar($standar, $dokumentasi){
 
-        $file_json = 'standar_prodi_s1.json';
+        $file_json = 'standar_fakultas_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
 
-        $dokProdi = S7DokumentasiS1Prodi::findOne($dokumentasi);
-        $sourceModel = 'akreditasi\\models\\S7DokumentasiS1ProdiStandar'.$standar.'Form';
+        $dokProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
+        $sourceModel = 'akreditasi\\models\\DokumentasiS1FakultasStandar'.$standar.'Form';
         // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
-        $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
-
+        $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
+        
         $sourceCek = 'common\\models\\S7DokumentasiS1ProdiStandar'.$standar;
-        // $cekisi = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
+        // $cekisi = DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
 
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
         $butir = $data['butir'];
-
+        
         $standar1json = 0;
         foreach ($butir as $key => $value) {
             foreach ($value['dokumen_sumber'] as $key => $sumber) {
                 $standar1json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar1json++;
+                $standar1json++;  
             }
         }
 
@@ -215,7 +221,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         $dokModel = new $sourceModel;
 
         if($dokModel->load(Yii::$app->request->post())){
-
+            
             $dokModel->dokumenDokumentasi = UploadedFile::getInstance($dokModel,'dokumenDokumentasi');
 
             if($dokModel->uploadDokumen($dokumentasi)){
@@ -227,7 +233,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 return $this->redirect(Url::current());
             }
             return $this->redirect(Url::current());
-
+            
         }
 
         return $this->render('standar',[
@@ -236,8 +242,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             'json'=>$data,
             'butir'=>$butir,
             'dokModel'=>$dokModel,
-            'progress'=>$progress,
-            'cari'=>'isi'
+            'progress'=>$progress
         ]);
     }
 
@@ -245,11 +250,11 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
     public function actionDownloadDok($standar, $dok, $dokumentasi){
 
         ini_set('max_execution_time', 5*60);
-        $dokumentasi = S7DokumentasiS1Prodi::findOne($dokumentasi);
+        $dokumentasi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
         $namespace = 'common\\models\\S7';
-        $class = $namespace.'DokumentasiS1ProdiStandar'.$standar;
+        $class = $namespace.'DokumentasiS1FakultasStandar'.$standar;
         $model = call_user_func($class.'::findOne',$dok);
-        $file = Yii::getAlias('@uploadAkreditasi'."/{$dokumentasi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$dokumentasi->akreditasiProdiS1->akreditasi->tahun}/{$dokumentasi->akreditasiProdiS1->id_prodi}/prodi/dokumentasi/{$model->dokumen}");
+        $file = Yii::getAlias('@uploadAkreditasi'."/{$dokumentasi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$dokumentasi->akreditasiProdiS1->akreditasi->tahun}/{$dokumentasi->akreditasiProdiS1->id_prodi}/fakultas/dokumentasi/{$model->dokumen}");
         return Yii::$app->response->sendFile($file);
 
     }
@@ -257,7 +262,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
     public function actionPublikStandar($id, $publik, $standar, $dokumentasi){
 
         $namespace = 'common\\models\\S7';
-        $class = $namespace.'DokumentasiS1ProdiStandar'.$standar;
+        $class = $namespace.'DokumentasiS1FakultasStandar'.$standar;
         $model = call_user_func($class.'::findOne',$id);
 
         $status = "";
@@ -267,47 +272,47 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         else{
             $status = 'Publik';
         }
-
+       
         $model->is_publik = $publik;
         if ($model->save()){
             Yii::$app->session->setFlash('success',"Dokumen $model->dokumen jadi $status");
-            return $this->redirect(["dokumentasi-s1-prodi/isi-standar","standar"=>$standar,"dokumentasi"=>$dokumentasi]);
+            return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
         }
         else{
             Yii::$app->session->setFlash('danger','Tidak Berhasil');
-            return $this->redirect(["dokumentasi-s1-prodi/isi-standar","standar"=>$standar,"dokumentasi"=>$dokumentasi]);
+            return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
         }
-
-        return $this->redirect(["dokumentasi-s1-prodi/isi-standar","standar"=>$standar,"dokumentasi"=>$dokumentasi]);
-
+        
+        return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
+        
     }
 
     public function actionAsesorStandar($id, $asesor, $standar, $dokumentasi){
 
         $namespace = 'common\\models\\S7';
-        $class = $namespace.'DokumentasiS1ProdiStandar'.$standar;
+        $class = $namespace.'DokumentasiS1FakultasStandar'.$standar;
         $model = call_user_func($class.'::findOne',$id);
 
-        $status = "";
+        $status = " ";
         if($asesor === 1){
             $status = 'Tidak Asesor';
         }
         else{
             $status = 'Asesor';
         }
-
+       
         $model->is_asesor = $asesor;
         if ($model->save()){
             Yii::$app->session->setFlash('success',"Dokumen $model->dokumen jadi $status");
-            return $this->redirect(["dokumentasi-s1-prodi/standar$standar","dokumentasi"=>$dokumentasi]);
+            return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
         }
         else{
             Yii::$app->session->setFlash('danger','Tidak Berhasil');
-            return $this->redirect(["dokumentasi-s1-prodi/standar$standar","dokumentasi"=>$dokumentasi]);
+            return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
         }
-
-        return $this->redirect(["dokumentasi-s1-prodi/standar$standar","dokumentasi"=>$dokumentasi]);
-
+        
+        return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
+        
     }
 
     public function actionHapusStandar(){
@@ -317,30 +322,30 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             $dokumentasi = Yii::$app->request->post('dokumentasi');
 
             $namespace = 'common\\models\\S7';
-            $class = $namespace.'DokumentasiS1ProdiStandar'.$standar;
+            $class = $namespace.'DokumentasiS1FakultasStandar'.$standar;
             $model = call_user_func($class.'::findOne',$id);
-
-
-            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->dokumentasiS1Prodi->akreditasiProdiS1->id_prodi}/prodi/dokumentasi/{$model->dokumen}"));
+    
+            
+            unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->dokumentasiS1Fakultas->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->dokumentasiS1Fakultas->akreditasiProdiS1->akreditasi->tahun}/{$model->dokumentasiS1Fakultas->akreditasiProdiS1->id_prodi}/fakultas/dokumentasi/{$model->dokumen}"));
             $model->delete();
 
-            return $this->redirect(["dokumentasi-s1-prodi/standar$standar","dokumentasi"=>$dokumentasi]);
+            return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }
 
     public function actionPj($dokumentasi){
-        $file_json = 'standar_prodi_s1.json';
-        $dokumentasiProdi = S7DokumentasiS1Prodi::findOne($dokumentasi);
+        $file_json = 'standar_fakultas_s1.json';
+        $dokumentasiProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
 
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
-        $standar1 = S7DokumentasiS1ProdiStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar2 = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar3 = S7DokumentasiS1ProdiStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar4 = S7DokumentasiS1ProdiStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar5 = S7DokumentasiS1ProdiStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar6 = S7DokumentasiS1ProdiStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar7 = S7DokumentasiS1ProdiStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar1 = S7DokumentasiS1FakultasStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar2 = S7DokumentasiS1FakultasStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar3 = S7DokumentasiS1FakultasStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar4 = S7DokumentasiS1FakultasStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar5 = S7DokumentasiS1FakultasStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar6 = S7DokumentasiS1FakultasStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar7 = S7DokumentasiS1FakultasStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
 
         $decode = Json::decode($json);
 
@@ -353,33 +358,32 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             'standar5'=>$standar5,
             'standar6'=>$standar6,
             'standar7'=>$standar7,
-            'json'=>$json,
-            'cari'=>'pj'
+            'json'=>$json
         ]);
     }
 
     public function actionPjStandar($standar, $dokumentasi){
 
-        $file_json = 'standar_prodi_s1.json';
+        $file_json = 'standar_fakultas_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
 
-        $dokProdi = S7DokumentasiS1Prodi::findOne($dokumentasi);
-        $sourceModel = 'akreditasi\\models\\S7DokumentasiS1ProdiStandar'.$standar.'Form';
+        $dokProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
+        $sourceModel = 'akreditasi\\models\\DokumentasiS1FakultasStandar'.$standar.'Form';
         // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
-        $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
-
-        $sourceCek = 'common\\models\\S7DokumentasiS1ProdiStandar'.$standar;
-        // $cekisi = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
+        $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
+        
+        $sourceCek = 'common\\models\\S7DokumentasiS1FakultasStandar'.$standar;
+        // $cekisi = DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
 
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
         $butir = $data['butir'];
+        
+        $standar1json = 0;
+        
 
-        // $standar1json = 0;
-
-
-        // $progress = round(($cekisi/$standar1json)*100,2);
+        $progress = round(($cekisi/$standar1json)*100,2);
 
         $dokModel = new $sourceModel;
 
@@ -388,24 +392,23 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             'dokProdi'=>$dokProdi,
             'json'=>$data,
             'butir'=>$butir,
-            'dokModel'=>$dokModel,
-            'cari'=>'pj'
+            'dokModel'=>$dokModel
         ]);
 
     }
 
     public function actionLihat($dokumentasi){
-        $file_json = 'standar_prodi_s1.json';
-        $dokumentasiProdi = S7DokumentasiS1Prodi::findOne($dokumentasi);
+        $file_json = 'standar_fakultas_s1.json';
+        $dokumentasiProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
 
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
-        $standar1 = S7DokumentasiS1ProdiStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar2 = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar3 = S7DokumentasiS1ProdiStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar4 = S7DokumentasiS1ProdiStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar5 = S7DokumentasiS1ProdiStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar6 = S7DokumentasiS1ProdiStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar7 = S7DokumentasiS1ProdiStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar1 = S7DokumentasiS1FakultasStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar2 = S7DokumentasiS1FakultasStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar3 = S7DokumentasiS1FakultasStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar4 = S7DokumentasiS1FakultasStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar5 = S7DokumentasiS1FakultasStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar6 = S7DokumentasiS1FakultasStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar7 = S7DokumentasiS1FakultasStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
 
         $decode = Json::decode($json);
 
@@ -418,30 +421,29 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             'standar5'=>$standar5,
             'standar6'=>$standar6,
             'standar7'=>$standar7,
-            'json'=>$json,
-            'cari'=>'lihat'
+            'json'=>$json
         ]);
     }
 
     public function actionLihatStandar($standar, $dokumentasi){
-        $file_json = 'standar_prodi_s1.json';
+        $file_json = 'standar_fakultas_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
 
-        $dokProdi = S7DokumentasiS1Prodi::findOne($dokumentasi);
-        $sourceModel = 'akreditasi\\models\\S7DokumentasiS1ProdiStandar'.$standar.'Form';
+        $dokProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
+        $sourceModel = 'akreditasi\\models\\DokumentasiS1FakultasStandar'.$standar.'Form';
         // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
-        $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
-
-        $sourceCek = 'common\\models\\S7DokumentasiS1ProdiStandar'.$standar;
-        // $cekisi = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
+        $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
+        
+        $sourceCek = 'common\\models\\S7DokumentasiS1FakultasStandar'.$standar;
+        // $cekisi = DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
+        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
 
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
         $butir = $data['butir'];
-
+        
         $standar1json = 0;
-
+        
 
         $dokModel = new $sourceModel;
 
@@ -452,7 +454,6 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             'json'=>$data,
             'butir'=>$butir,
             'dokModel'=>$dokModel,
-            'cari'=>'lihat'
         ]);
     }
 
