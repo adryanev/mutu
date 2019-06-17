@@ -10,12 +10,14 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property int $id
  * @property int $id_akreditasi
+ * @property int $id_fakultas
  * @property double $progress
  * @property int $is_publik
  * @property int $created_at
  * @property int $updated_at
  *
  * @property S7Akreditasi $akreditasi
+ * @property FakultasAkademi $fakultas
  * @property S7DokumentasiS1FakultasStandar1[] $dokumentasiS1FakultasStandar1s
  * @property S7DokumentasiS1FakultasStandar2[] $dokumentasiS1FakultasStandar2s
  * @property S7DokumentasiS1FakultasStandar3[] $dokumentasiS1FakultasStandar3s
@@ -46,9 +48,10 @@ class S7DokumentasiS1Fakultas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_akreditasi', 'is_publik', 'created_at', 'updated_at'], 'integer'],
+            [['id_akreditasi','id_fakultas', 'is_publik', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
             [['id_akreditasi'], 'exist', 'skipOnError' => true, 'targetClass' => S7Akreditasi::className(), 'targetAttribute' => ['id_akreditasi_prodi_s1' => 'id']],
+            [['id_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => FakultasAkademi::className(), 'targetAttribute' => ['id_akreditasi_prodi_s1' => 'id']],
         ];
     }
 
@@ -73,6 +76,14 @@ class S7DokumentasiS1Fakultas extends \yii\db\ActiveRecord
     public function getAkreditasi()
     {
         return $this->hasOne(S7Akreditasi::className(), ['id' => 'id_akreditasi']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getFakultas()
+    {
+        return $this->hasOne(FakultasAkademi::className(), ['id' => 'id_fakultas']);
     }
 
     /**

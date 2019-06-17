@@ -16,7 +16,7 @@ use yii\behaviors\TimestampBehavior;
  * @property int $updated_at
  *
  * @property S7Akreditasi $akreditasi
- * @property FakultasAkademi[] $fakultas
+ * @property FakultasAkademi $fakultas
  * @property S7BorangS1FakultasStandar1 $borangS1FakultasStandar1s
  * @property S7BorangS1FakultasStandar2 $borangS1FakultasStandar2s
  * @property S7BorangS1FakultasStandar3 $borangS1FakultasStandar3s
@@ -82,7 +82,7 @@ class S7BorangS1Fakultas extends \yii\db\ActiveRecord
      */
     public function getFakultas()
     {
-        return $this->hasMany(FakultasAkademi::className(), ['id' => 'id_fakultas']);
+        return $this->hasOne(FakultasAkademi::className(), ['id' => 'id_fakultas']);
     }
 
     /**
