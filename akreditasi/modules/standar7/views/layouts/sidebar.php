@@ -61,7 +61,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                     'icon' => 'description',
                     'url' => '#borang',
                     'items' => [
-                        ['label'=> 'Unggah Gambar', 'url'=>['/standar7/borang/arsip-borang','target'=>'unggah']],
+                        ['label'=> 'Unggah Dokumen', 'url'=>['/standar7/borang/arsip-borang','target'=>'unggah']],
                         ['label'=> 'Isi Borang', 'url'=>['/standar7/borang/arsip-borang','target'=>'isi']],
                         ['label'=> 'Lihat Borang', 'url'=>['/standar7/borang/arsip-borang','target'=>'lihat']],
                     ],

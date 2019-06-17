@@ -48,7 +48,7 @@ class IsianBorangS1FakultasUploadForm extends Model
             $filename = $this->nama_file->getBaseName().'.'.$this->nama_file->getExtension();
             $model->nama_file = $filename;
 
-            $path = Yii::getAlias('@uploadAkreditasi'. "/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/borang/dokumen");
+            $path = Yii::getAlias('@uploadAkreditasi'. "/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/{$borang->id_fakultas}/borang/dokumen");
 
             $this->nama_file->saveAs("$path/$filename");
             $model->save(false);

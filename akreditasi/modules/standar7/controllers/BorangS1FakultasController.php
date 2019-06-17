@@ -28,6 +28,12 @@ use yii\web\UploadedFile;
 class BorangS1FakultasController extends \yii\web\Controller
 {
 
+    public function beforeAction($action)
+    {
+        $this->layout="main";
+        return parent::beforeAction($action);
+    }
+
     public function actionUnggah($borang){
 
         $borangFakultas = S7BorangS1Fakultas::findOne($borang);
@@ -156,7 +162,7 @@ class BorangS1FakultasController extends \yii\web\Controller
     }
 
     public function actionLihatStandar($id,$borang){
-        $standarClass = 'common\\models\\BorangS1FakultasStandar'.$id;
+        $standarClass = 'common\\models\\S7BorangS1FakultasStandar'.$id;
 
         $model = call_user_func($standarClass.'::findOne',['id_borang_s1_fakultas'=>$borang]);
 
@@ -183,13 +189,13 @@ class BorangS1FakultasController extends \yii\web\Controller
         $file_json = 'borang_fakultas_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/borang/'.$file_json));
 
-        $modelClass = 'akreditasi\\models\\BorangS1FakultasStandar'.$standar.'Form';
+        $modelClass = 'akreditasi\\models\\S7BorangS1FakultasStandar'.$standar.'Form';
         $model = call_user_func($modelClass.'::findOne',$borang);
 
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
         $poin = $data['poin'];
-        $detailClass = 'common\\models\\DetailBorangS1FakultasStandar'.$standar;
+        $detailClass = 'common\\models\\S7DetailBorangS1FakultasStandar'.$standar;
         $detail = call_user_func($detailClass."::find")->where(['id_borang_s1_fakultas_standar1'=>$model->id]);
         $detailModelClass = 'akreditasi\\models\\DetailBorangS1FakultasUploadForm';
         $detailModel = new $detailModelClass;
@@ -301,7 +307,7 @@ class BorangS1FakultasController extends \yii\web\Controller
         ini_set('max_execution_time', 5*60);
         $borang = S7BorangS1Fakultas::findOne($borang);
         $namespace = 'common\\models\\';
-        $class = $namespace.'DetailBorangS1FakultasStandar'.$standar;
+        $class = $namespace.'S7DetailBorangS1FakultasStandar'.$standar;
         $model = call_user_func($class.'::findOne',$dokumen);
         $file = Yii::getAlias('@uploadAkreditasi'."/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/{$borang->id_fakultas}/borang/dokumen/{$model->nama_dokumen}");
         return Yii::$app->response->sendFile($file);
@@ -315,7 +321,7 @@ class BorangS1FakultasController extends \yii\web\Controller
             $standar = Yii::$app->request->post('standar');
             $borangid = Yii::$app->request->post('borang');
             $namespace = 'common\\models\\';
-            $class = $namespace.'DetailBorangS1FakultasStandar'.$standar;
+            $class = $namespace.'S7DetailBorangS1FakultasStandar'.$standar;
             $model = call_user_func($class.'::findOne',$id);
             $borang = S7BorangS1Fakultas::findOne($borangid);
             $file = Yii::getAlias('@uploadAkreditasi'."/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/{$borang->id_fakultas}/borang/dokumen/{$model->nama_dokumen}");
@@ -324,7 +330,7 @@ class BorangS1FakultasController extends \yii\web\Controller
 
             $model->delete();
 
-            return $this->redirect(['borang-s1-fakultas/isi-standar','standar'=>$standar,'borang'=>$borang]);
+            return $this->redirect(['borang-s1-fakultas/isi-standar','standar'=>$standar,'borang'=>$borang->id]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }

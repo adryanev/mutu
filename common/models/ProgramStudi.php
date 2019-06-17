@@ -12,6 +12,7 @@ use yii\behaviors\TimestampBehavior;
  * @property string $nama
  * @property string $jenjang
  * @property string $kaprodi
+ * @property string $kode
  * @property int $id_fakultas_akademi
  * @property int $created_at
  * @property int $updated_at
@@ -50,7 +51,7 @@ class ProgramStudi extends \yii\db\ActiveRecord
     {
         return [
             [['id_fakultas_akademi', 'created_at', 'updated_at'], 'integer'],
-            [['nama','jenjang'], 'string', 'max' => 255],
+            [['nama','jenjang','kaprodi','kode'], 'string', 'max' => 255],
             [['id_fakultas_akademi'], 'exist', 'skipOnError' => true, 'targetClass' => FakultasAkademi::className(), 'targetAttribute' => ['id_fakultas_akademi' => 'id']],
         ];
     }
@@ -63,7 +64,8 @@ class ProgramStudi extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nama' => 'Nama Program Studi',
-            'id_program' => 'Id Program',
+            'jenjang' => 'Jenjang',
+            'kaprodi' => 'Kepala Program Studi',
             'id_fakultas_akademi' => 'Id Fakultas Akademi',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',

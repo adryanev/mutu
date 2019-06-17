@@ -60,27 +60,23 @@ $this->params['breadcrumbs'][] = $this->title;
                         </tr>
                         <tr>
                             <td><strong>Lembaga Akreditasi</strong></td>
-                            <td><?=Html::encode($borangFakultas->akreditasiProdiS1->akreditasi->lembaga)?></td>
+                            <td><?=Html::encode($borangFakultas->akreditasi->lembaga)?></td>
                         </tr>
                         <tr>
                             <td><strong>Versi Akreditasi</strong></td>
-                            <td><?=Html::encode($borangFakultas->akreditasiProdiS1->akreditasi->nama)?></td>
+                            <td><?=Html::encode($borangFakultas->akreditasi->nama)?></td>
                         </tr>
                         <tr>
                             <td><strong>Jenis Akreditasi</strong></td>
-                            <td><?=Html::encode($borangFakultas->akreditasiProdiS1->akreditasi->jenisAkreditasi->nama)?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Jenjang</strong></td>
-                            <td><?=Html::encode($borangFakultas->akreditasiProdiS1->prodi->program->nama)?></td>
+                            <td><?=Html::encode($borangFakultas->akreditasi->jenisAkreditasi->nama)?></td>
                         </tr>
                         <tr>
                             <td><strong>Borang Untuk</strong></td>
-                            <td>Program Studi</td>
+                            <td>Fakultas</td>
                         </tr>
                         <tr>
                             <td><strong>Prodi</strong></td>
-                            <td><?=Html::encode($borangFakultas->akreditasiProdiS1->prodi->nama)?></td>
+                            <td><?=Html::encode($borangFakultas->fakultas->nama)?></td>
                         </tr>
                         <tr>
                             <td><strong>Keterangan</strong></td>

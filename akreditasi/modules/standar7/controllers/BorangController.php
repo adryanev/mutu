@@ -2,6 +2,8 @@
 
 namespace akreditasi\modules\standar7\controllers;
 
+use common\models\FakultasAkademi;
+use common\models\PencarianBorangFakultasForm;
 use common\models\S7Akreditasi;
 use common\models\PencarianBorangInstitusiForm;
 use common\models\PencarianBorangProdiForm;
@@ -24,6 +26,7 @@ class BorangController extends \yii\web\Controller
 
 
         $model = new PencarianBorangProdiForm();
+        $modelFakultas = new PencarianBorangFakultasForm();
         $modelInstitusi = new PencarianBorangInstitusiForm();
         $idAkreditasiProdi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>2]);
         $dataAkreditasiProdi = ArrayHelper::map($idAkreditasiProdi,'id',function($data){
@@ -60,12 +63,25 @@ class BorangController extends \yii\web\Controller
             $borangId = $borang->id;
             $this->redirect([$url,'borang'=>$borangId]);
         }
+        if($modelFakultas->load(Yii::$app->request->post())){
+
+
+            $url = $modelFakultas->cari($target);
+            $borang = $modelFakultas->getBorang();
+            if(!$borang){
+                throw new NotFoundHttpException("Data yang anda cari tidak ditemukan");
+            }
+
+            $borangId = $borang->id;
+            $this->redirect([$url,'borang'=>$borangId]);
+        }
         return $this->render('arsip',[
             'model'=>$model,
             'dataAkreditasiProdi'=>$dataAkreditasiProdi,
             'dataAkreditasiInstitusi'=>$dataAkreditasiInstitusi,
             'dataProgram'=>$dataProgram,
-            'modelInstitusi'=>$modelInstitusi
+            'modelInstitusi'=>$modelInstitusi,
+            'modelFakultas'=>$modelFakultas
            ]);
     }
 
@@ -93,10 +109,36 @@ class BorangController extends \yii\web\Controller
         return ['output'=>'', 'selected'=>''];
     }
 
+    public function actionCariFakultas(){
+        $this->enableCsrfValidation = false;
+
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $arrayProdi = [];
+
+        if(isset($_POST['depdrop_parents'])){
+            $parent = $_POST['depdrop_parents'];
+            if($parent!==null){
+                $id = $parent[0];
+                $dataFakultas = FakultasAkademi::find()->all();
+                foreach ($dataFakultas as $data){
+                    $id = $data->id;
+                    $nama = $data->nama;
+                    $newArray = ['id'=>$id,'name'=>$nama];
+                    $arrayProdi[] = $newArray;
+                }
+
+                return ['output'=>$arrayProdi, 'selected'=>''];
+            }
+        }
+        return ['output'=>'', 'selected'=>''];
+    }
     public function beforeAction($action)
     {
         $this->layout="main";
         if($this->action->id === 'cari-prodi'){
+            $this->enableCsrfValidation = false;
+        }
+        if($this->action->id === 'cari-fakultas'){
             $this->enableCsrfValidation = false;
         }
 
