@@ -75,7 +75,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $butir6 = $data6['butir'];
         $data7 = $decode[6];
         $butir7 = $data7['butir'];
-        
+
         $standar1json = 0;
         $standar2json = 0;
         $standar3json = 0;
@@ -92,7 +92,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 $standar1json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar1json++;  
+                $standar1json++;
             }
         }
         foreach ($butir2 as $key => $value) {
@@ -100,7 +100,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 $standar2json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar2json++;  
+                $standar2json++;
             }
         }
         foreach ($butir3 as $key => $value) {
@@ -108,7 +108,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 $standar3json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar3json++;  
+                $standar3json++;
             }
         }
         foreach ($butir4 as $key => $value) {
@@ -116,7 +116,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 $standar4json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar4json++;  
+                $standar4json++;
             }
         }
         foreach ($butir5 as $key => $value) {
@@ -124,7 +124,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 $standar5json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar5json++;  
+                $standar5json++;
             }
         }
         foreach ($butir6 as $key => $value) {
@@ -132,7 +132,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 $standar6json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar6json++;  
+                $standar6json++;
             }
         }
         foreach ($butir7 as $key => $value) {
@@ -140,7 +140,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 $standar7json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar7json++;  
+                $standar7json++;
             }
         }
 
@@ -191,13 +191,13 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
 //            var_dump($model);
 //            exit();
             $model->save();
-            
+
             return $this->redirect(['dokumentasi-s1-fakultas/isi','dokumentasi'=>$id]);
         }
         throw new BadRequestHttpException('Request Harus Post');
     }
 
-    
+
     public function actionIsiStandar($standar, $dokumentasi){
 
         $file_json = 'standar_fakultas_s1.json';
@@ -207,7 +207,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $sourceModel = 'akreditasi\\models\\S7DokumentasiS1FakultasStandar'.$standar.'Form';
         // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
         $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
-        
+
         $sourceCek = 'common\\models\\S7DokumentasiS1FakultasStandar'.$standar;
         // $cekisi = DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
         $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
@@ -215,14 +215,14 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
         $butir = $data['butir'];
-        
+
         $standar1json = 0;
         foreach ($butir as $key => $value) {
             foreach ($value['dokumen_sumber'] as $key => $sumber) {
                 $standar1json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar1json++;  
+                $standar1json++;
             }
         }
 
@@ -231,7 +231,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $dokModel = new $sourceModel;
 
         if($dokModel->load(Yii::$app->request->post())){
-            
+
             $dokModel->dokumenDokumentasi = UploadedFile::getInstance($dokModel,'dokumenDokumentasi');
 
             if($dokModel->uploadDokumen($dokumentasi)){
@@ -243,7 +243,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 return $this->redirect(Url::current());
             }
             return $this->redirect(Url::current());
-            
+
         }
 
         return $this->render('standar',[
@@ -301,11 +301,11 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 return $this->redirect(['dokumentasi-s1-fakultas/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
             }
         }
-       
 
-        
+
+
 //        return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
-        
+
     }
 
     public function actionAsesorStandar($id, $asesor, $standar, $dokumentasi){
@@ -339,11 +339,11 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
                 return $this->redirect(['dokumentasi-s1-fakultas/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
             }
         }
-       
 
-        
+
+
 //        return $this->redirect(["dokumentasi-s1-fakultas/standar$standar","dokumentasi"=>$dokumentasi]);
-        
+
     }
 
     public function actionHapusStandar(){
@@ -403,7 +403,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $sourceModel = 'akreditasi\\models\\S7DokumentasiS1FakultasStandar'.$standar.'Form';
         // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
         $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
-        
+
         $sourceCek = 'common\\models\\S7DokumentasiS1FakultasStandar'.$standar;
         // $cekisi = DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
         $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
@@ -411,9 +411,9 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
         $butir = $data['butir'];
-        
+
         $standar1json = 0;
-        
+
 
         $progress = round(($cekisi/$standar1json)*100,2);
 
@@ -467,7 +467,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $sourceModel = 'akreditasi\\models\\S7DokumentasiS1FakultasStandar'.$standar.'Form';
         // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
         $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
-        
+
         $sourceCek = 'common\\models\\S7DokumentasiS1FakultasStandar'.$standar;
         // $cekisi = DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
         $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->count();
@@ -475,9 +475,9 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
         $butir = $data['butir'];
-        
+
         $standar1json = 0;
-        
+
 
         $dokModel = new $sourceModel;
 
