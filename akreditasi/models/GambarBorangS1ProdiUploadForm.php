@@ -10,8 +10,8 @@
 namespace akreditasi\models;
 
 
-use common\models\BorangS1Prodi;
-use common\models\GambarBorangS1Prodi;
+use common\models\S7BorangS1Prodi;
+use common\models\S7GambarBorangS1Prodi;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
@@ -37,11 +37,11 @@ class GambarBorangS1ProdiUploadForm extends Model
     public function uploadGambar($id){
 
         if($this->validate()){
-            $borang = BorangS1Prodi::findOne($id);
+            $borang = S7BorangS1Prodi::findOne($id);
             $path = Yii::getAlias('@uploadAkreditasi/'."{$borang->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$borang->akreditasiProdiS1->akreditasi->tahun}/{$borang->akreditasiProdiS1->id_prodi}/prodi/gambar");
 
             foreach ($this->gambar_borang as $gambar){
-                $model = new GambarBorangS1Prodi();
+                $model = new S7GambarBorangS1Prodi();
                 $model->id_borang_s1_prodi = $borang->id;
                 $model->nomor_borang = $this->nomor_borang;
                 $fileName = $gambar->getBaseName().'.'.$gambar->getExtension();

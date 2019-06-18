@@ -10,15 +10,15 @@
 namespace akreditasi\models;
 
 
-use common\models\DetailBorangInstitusiStandar1;
-use common\models\DokumenBorangInstitusi;
+use common\models\S7DetailBorangInstitusiStandar1;
+use common\models\S7DokumenBorangInstitusi;
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
 /**
  *
- * @property DokumenBorangInstitusi $detailBorangInstitusi
+ * @property S7DokumenBorangInstitusi $detailBorangInstitusi
  */
 
 class DetailBorangInstitusiStandar1UploadForm extends Model
@@ -48,7 +48,7 @@ class DetailBorangInstitusiStandar1UploadForm extends Model
 
 
         if($this->validate()){
-            $this->_detailBorangInstitusi = new DetailBorangInstitusiStandar1();
+            $this->_detailBorangInstitusi = new S7DetailBorangInstitusiStandar1();
             $this->_detailBorangInstitusi->id_borang_institusi_standar1 = $id;
             $fileName = $this->dokumenPendukung->getBaseName().'.'.$this->dokumenPendukung->getExtension();
             $this->_detailBorangInstitusi->nama_dokumen = $fileName;
@@ -64,7 +64,7 @@ class DetailBorangInstitusiStandar1UploadForm extends Model
     }
 
     /**
-     * @return DokumenBorangInstitusi
+     * @return S7DokumenBorangInstitusi
      */
     public function getDetailBorangInstitusi()
     {

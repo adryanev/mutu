@@ -13,7 +13,7 @@ class m190520_042417_create_isian_borang extends Migration
     public function safeUp()
     {
 
-        $this->createTable('{{%isian_borang}}', [
+        $this->createTable('{{%s7_isian_borang}}', [
             'id' => $this->primaryKey(),
             'nomor_borang' => $this->string(),
             'nama_file' => $this->string(),
@@ -22,7 +22,7 @@ class m190520_042417_create_isian_borang extends Migration
             'updated_at' => $this->integer()
         ]);
 
-        $this->createTable('{{%isian_borang_s1_prodi}}', [
+        $this->createTable('{{%s7_isian_borang_s1_prodi}}', [
             'id' => $this->primaryKey(),
             'id_isian_borang' => $this->integer(),
             'nama_file' => $this->string(),
@@ -32,7 +32,7 @@ class m190520_042417_create_isian_borang extends Migration
             'updated_by' => $this->integer(),
         ]);
 
-        $this->createTable('{{%isian_borang_s1_fakultas}}', [
+        $this->createTable('{{%s7_isian_borang_s1_fakultas}}', [
             'id' => $this->primaryKey(),
             'id_isian_borang' => $this->integer(),
             'nama_file' => $this->string(),
@@ -43,17 +43,17 @@ class m190520_042417_create_isian_borang extends Migration
         ]);
 
 
-        $this->addForeignKey('fk-isian_borang_s1_prodi-isian_borang', '{{%isian_borang_s1_prodi}}', 'id_isian_borang', '{{%isian_borang}}', 'id');
-        $this->addForeignKey('fk-isian_borang_s1_fakultas-isian_borang', '{{%isian_borang_s1_fakultas}}', 'id_isian_borang', '{{%isian_borang}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_prodi-isian_borang', '{{%s7_isian_borang_s1_prodi}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_fakultas-isian_borang', '{{%s7_isian_borang_s1_fakultas}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id');
 
-        $this->addForeignKey('fk-isian_borang_s1_prodi-usr_crd', '{{%isian_borang_s1_prodi}}', 'created_by', '{{%user}}', 'id');
-        $this->addForeignKey('fk-isian_borang_s1_prodi-usr_upd', '{{%isian_borang_s1_prodi}}', 'updated_by', '{{%user}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_prodi-usr_crd', '{{%s7_isian_borang_s1_prodi}}', 'created_by', '{{%user}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_prodi-usr_upd', '{{%s7_isian_borang_s1_prodi}}', 'updated_by', '{{%user}}', 'id');
 
 
-        $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_crd', '{{%isian_borang_s1_fakultas}}', 'created_by', '{{%user}}', 'id');
-        $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_upd', '{{%isian_borang_s1_fakultas}}', 'updated_by', '{{%user}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_crd', '{{%s7_isian_borang_s1_fakultas}}', 'created_by', '{{%user}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_upd', '{{%s7_isian_borang_s1_fakultas}}', 'updated_by', '{{%user}}', 'id');
 
-        $this->createIndex('idx-search-isian_borang', '{{%isian_borang}}', ['nomor_borang', 'untuk']);
+        $this->createIndex('idx-search-isian_borang', '{{%s7_isian_borang}}', ['nomor_borang', 'untuk']);
     }
 
     /**
@@ -61,21 +61,21 @@ class m190520_042417_create_isian_borang extends Migration
      */
     public function safeDown()
     {
-        $this->dropIndex('idx-search-isian_borang_prod', '{{%isian_borang}}');
+        $this->dropIndex('idx-search-isian_borang_prod', '{{%s7_isian_borang}}');
 
-        $this->dropForeignKey('fk-isian_borang_s1_fakultas-usr_upd', '{{%isian_borang_s1_fakultas}}');
-        $this->dropForeignKey('fk-isian_borang_s1_fakultas-usr_crd', '{{%isian_borang_s1_fakultas}}');
+        $this->dropForeignKey('fk-isian_borang_s1_fakultas-usr_upd', '{{%s7_isian_borang_s1_fakultas}}');
+        $this->dropForeignKey('fk-isian_borang_s1_fakultas-usr_crd', '{{%s7_isian_borang_s1_fakultas}}');
 
 
-        $this->dropForeignKey('fk-isian_borang_s1_prodi-usr_upd', '{{%isian_borang_s1_prodi}}');
-        $this->dropForeignKey('fk-isian_borang_s1_prodi-usr_crd', '{{%isian_borang_s1_prodi}}');
+        $this->dropForeignKey('fk-isian_borang_s1_prodi-usr_upd', '{{%s7_isian_borang_s1_prodi}}');
+        $this->dropForeignKey('fk-isian_borang_s1_prodi-usr_crd', '{{%s7_isian_borang_s1_prodi}}');
 
-        $this->dropForeignKey('fk-isian_borang_s1_prodi-isian_borang', '{{%isian_borang_s1_prodi}}');
-        $this->dropForeignKey('fk-isian_borang_s1_fakultas-isian_borang', '{{%isian_borang_s1_fakultas}}');
+        $this->dropForeignKey('fk-isian_borang_s1_prodi-isian_borang', '{{%s7_isian_borang_s1_prodi}}');
+        $this->dropForeignKey('fk-isian_borang_s1_fakultas-isian_borang', '{{%s7_isian_borang_s1_fakultas}}');
 
-        $this->dropTable('{{%isian_borang_s1_fakultas}}');
-        $this->dropTable('{{%isian_borang_s1_prodi}}');
-        $this->dropTable('{{%isian_borang}}');
+        $this->dropTable('{{%s7_isian_borang_s1_fakultas}}');
+        $this->dropTable('{{%s7_isian_borang_s1_prodi}}');
+        $this->dropTable('{{%s7_isian_borang}}');
 
     }
 

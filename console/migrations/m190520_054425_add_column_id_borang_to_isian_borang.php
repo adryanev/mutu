@@ -12,11 +12,11 @@ class m190520_054425_add_column_id_borang_to_isian_borang extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn('{{%isian_borang_s1_prodi}}','id_borang_s1_prodi',$this->integer());
-        $this->addColumn('{{%isian_borang_s1_fakultas}}','id_borang_s1_fakultas',$this->integer());
+        $this->addColumn('{{%s7_isian_borang_s1_prodi}}','id_borang_s1_prodi',$this->integer());
+        $this->addColumn('{{%s7_isian_borang_s1_fakultas}}','id_borang_s1_fakultas',$this->integer());
 
-        $this->addForeignKey('fk-isian_borang_s1_prodi-borang_s1_prodi','{{%isian_borang_s1_prodi}}','id_borang_s1_prodi','{{%borang_s1_prodi}}','id');
-        $this->addForeignKey('fk-isian_borang_s1_fakultas-borang_s1_fakultas','{{%isian_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%borang_s1_fakultas}}','id');
+        $this->addForeignKey('fk-isian_borang_s1_prodi-borang_s1_prodi','{{%s7_isian_borang_s1_prodi}}','id_borang_s1_prodi','{{%s7_borang_s1_prodi}}','id');
+        $this->addForeignKey('fk-isian_borang_s1_fakultas-borang_s1_fakultas','{{%s7_isian_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%s7_borang_s1_fakultas}}','id');
 
     }
 
@@ -25,11 +25,11 @@ class m190520_054425_add_column_id_borang_to_isian_borang extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey('fk-isian_borang_s1_prodi-borang_s1_prodi','{{%isian_borang_s1_prodi}}');
-        $this->dropForeignKey('fk-isian_borang_s1_fakultas-borang_s1_fakultas','{{%isian_borang_s1_fakultas}}');
+        $this->dropForeignKey('fk-isian_borang_s1_prodi-borang_s1_prodi','{{%s7_isian_borang_s1_prodi}}');
+        $this->dropForeignKey('fk-isian_borang_s1_fakultas-borang_s1_fakultas','{{%s7_isian_borang_s1_fakultas}}');
 
-        $this->dropColumn('{{%isian_borang_s1_fakultas}}','id_borang_s1_fakultas');
-        $this->dropColumn('{{%isian_borang_s1_prodi}}','id_borang_s1_prodi');
+        $this->dropColumn('{{%s7_isian_borang_s1_fakultas}}','id_borang_s1_fakultas');
+        $this->dropColumn('{{%s7_isian_borang_s1_prodi}}','id_borang_s1_prodi');
 
     }
 

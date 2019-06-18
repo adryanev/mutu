@@ -3,19 +3,19 @@
 namespace admin\controllers;
 
 use admin\models\AkreditasiInstitusiForm;
-use common\models\Akreditasi;
+use common\models\S7Akreditasi;
 use common\models\JenisAkreditasi;
 use Yii;
 use yii\filters\AccessControl;
-use common\models\AkreditasiInstitusi;
-use admin\models\AkreditasiInstitusiSearch;
+use common\models\S7AkreditasiInstitusi;
+use admin\models\S7AkreditasiInstitusiSearch;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AkreditasiInstitusiController implements the CRUD actions for AkreditasiInstitusi model.
+ * AkreditasiInstitusiController implements the CRUD actions for S7AkreditasiInstitusi model.
  */
 class AkreditasiInstitusiController extends Controller
 {
@@ -44,12 +44,12 @@ class AkreditasiInstitusiController extends Controller
     }
 
     /**
-     * Lists all AkreditasiInstitusi models.
+     * Lists all S7AkreditasiInstitusi models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new AkreditasiInstitusiSearch();
+        $searchModel = new S7AkreditasiInstitusiSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -59,7 +59,7 @@ class AkreditasiInstitusiController extends Controller
     }
 
     /**
-     * Displays a single AkreditasiInstitusi model.
+     * Displays a single S7AkreditasiInstitusi model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -72,7 +72,7 @@ class AkreditasiInstitusiController extends Controller
     }
 
     /**
-     * Creates a new AkreditasiInstitusi model.
+     * Creates a new S7AkreditasiInstitusi model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
@@ -80,7 +80,7 @@ class AkreditasiInstitusiController extends Controller
     {
         $model = new AkreditasiInstitusiForm();
         $jenisAkred = JenisAkreditasi::findOne(['nama'=>'Institusi']);
-        $idAkreditasi = Akreditasi::findAll(['id_jenis_akreditasi'=>$jenisAkred->id]);
+        $idAkreditasi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>$jenisAkred->id]);
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id',function ($data){
             return "{$data->lembaga} - {$data->nama} ({$data->tahun})";
         });
@@ -101,7 +101,7 @@ class AkreditasiInstitusiController extends Controller
     }
 
     /**
-     * Updates an existing AkreditasiInstitusi model.
+     * Updates an existing S7AkreditasiInstitusi model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -111,7 +111,7 @@ class AkreditasiInstitusiController extends Controller
     {
         $model = AkreditasiInstitusiForm::findOne($id);
         $jenisAkred = JenisAkreditasi::findOne(['nama'=>'Institusi']);
-        $idAkreditasi = Akreditasi::findAll(['id_jenis_akreditasi'=>$jenisAkred->id]);
+        $idAkreditasi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>$jenisAkred->id]);
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id',function ($data){
             return "{$data->lembaga} - {$data->nama} ({$data->tahun})";
         });
@@ -130,7 +130,7 @@ class AkreditasiInstitusiController extends Controller
     }
 
     /**
-     * Deletes an existing AkreditasiInstitusi model.
+     * Deletes an existing S7AkreditasiInstitusi model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -144,15 +144,15 @@ class AkreditasiInstitusiController extends Controller
     }
 
     /**
-     * Finds the AkreditasiInstitusi model based on its primary key value.
+     * Finds the S7AkreditasiInstitusi model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return AkreditasiInstitusi the loaded model
+     * @return S7AkreditasiInstitusi the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = AkreditasiInstitusi::findOne($id)) !== null) {
+        if (($model = S7AkreditasiInstitusi::findOne($id)) !== null) {
             return $model;
         }
 

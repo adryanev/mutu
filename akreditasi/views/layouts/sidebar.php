@@ -57,36 +57,16 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
 
                 ['label' => 'Beranda', 'icon' => 'dashboard', 'url' => ['/site']],
                 [
-                    'label' => 'Borang',
+                    'label' => 'Standar 7',
                     'icon' => 'description',
-                    'url' => '#borang',
-                    'items' => [
-                        ['label'=> 'Unggah Gambar', 'url'=>['/borang/arsip-borang','target'=>'unggah']],
-                        ['label'=> 'Isi Borang', 'url'=>['/borang/arsip-borang','target'=>'isi']],
-                        ['label'=> 'Lihat Borang', 'url'=>['/borang/arsip-borang','target'=>'lihat']],
-                    ],
-                ],
-                [
-                    'label' => 'Dokumentasi',
-                    'icon' => 'book',
-                    'url' => '#dokumentasi',
-                    'items' => [
-                        ['label'=> 'Isi Dokumentasi', 'url'=>['/dokumentasi/arsip-dok']],
-                        ['label'=> 'Penganggung Jawab', 'url'=>['/dokumentasi/penanggung']],
-                        ['label'=> 'Lihat Dokumentasi', 'url'=>['/dokumentasi/lihat-dok']],
-                    ],
-                ],
-                [
-                    'label' => 'Sertifikat Akreditasi',
-                    'icon' => 'assignment',
-                    'url' => '#sertifikat',
-                    'items' => [
-                        ['label'=> 'Data Akreditasi', 'url'=>['/data/tabel']],
-                        ['label'=> 'Grafik Akreditasi', 'url'=>['/data/grafik']],
+                    'url' => ['/standar7/default'],
 
-                    ],
                 ],
-                ['label'=> 'Isi Penilaian', 'icon'=>'person', 'url'=>['/penilaian/arsip-penilaian']],
+                [
+                    'label' => 'Standar 9',
+                    'icon' => 'book',
+                    'url'=>['/standar9/default']
+                ],
             ],
         ])?>
     </div>

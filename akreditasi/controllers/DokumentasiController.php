@@ -3,7 +3,7 @@
 namespace akreditasi\controllers;
 
 use Yii;
-use common\models\Akreditasi;
+use common\models\S7Akreditasi;
 use common\models\PencarianDokumentasiProdiForm;
 use common\models\Program;
 use common\models\ProgramStudi;
@@ -21,7 +21,7 @@ class DokumentasiController extends \yii\web\Controller
     public function actionArsipDok(){
 
         $model = new PencarianDokumentasiProdiForm();
-        $idAkreditasi = Akreditasi::find()->all();
+        $idAkreditasi = S7Akreditasi::find()->all();
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id',function($data){
            return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
         });

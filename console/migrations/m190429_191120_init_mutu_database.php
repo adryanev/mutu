@@ -24,24 +24,20 @@ class m190429_191120_init_mutu_database extends Migration
 
         $this->createTable('{{%fakultas_akademi}}',[
             'id'=>$this->primaryKey(),
+            'kode'=>$this->string(),
             'nama'=>$this->string(),
+            'dekan'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
 
-
-        $this->createTable('{{%program}}',[
-            'id'=>$this->primaryKey(),
-            'nama'=>$this->string(),
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer(),
-        ]);
-
         $this->createTable('{{%program_studi}}',[
             'id'=>$this->primaryKey(),
+            'kode'=>$this->string(),
             'nama'=>$this->string(),
-            'id_program'=>$this->integer(),
             'id_fakultas_akademi'=>$this->integer(),
+            'kaprodi'=>$this->string(),
+            'jenjang'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -59,7 +55,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
-        $this->createTable('{{%akreditasi}}',[
+        $this->createTable('{{%s7_akreditasi}}',[
             'id'=>$this->primaryKey(),
             'nama'=>$this->string(),
             'tahun'=>$this->string(4),
@@ -69,7 +65,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer()
         ]);
 
-        $this->createTable('{{%akreditasi_prodi_diploma}}',[
+        $this->createTable('{{%s7_akreditasi_prodi_diploma}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
@@ -79,7 +75,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
-        $this->createTable('{{%akreditasi_prodi_s1}}',[
+        $this->createTable('{{%s7_akreditasi_prodi_s1}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
@@ -89,7 +85,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
-        $this->createTable('{{%akreditasi_prodi_s2}}',[
+        $this->createTable('{{%s7_akreditasi_prodi_s2}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
@@ -99,7 +95,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
-        $this->createTable('{{%akreditasi_prodi_s3}}',[
+        $this->createTable('{{%s7_akreditasi_prodi_s3}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
@@ -111,7 +107,7 @@ class m190429_191120_init_mutu_database extends Migration
         ]);
 
 
-        $this->createTable('{{%akreditasi_institusi}}',[
+        $this->createTable('{{%s7_akreditasi_institusi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'progress'=>$this->float(),
@@ -121,14 +117,14 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=> $this->integer(),
         ]);
 
-        $this->createTable('{{%borang_diploma_prodi}}',[
+        $this->createTable('{{%s7_borang_diploma_prodi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_diploma'=>$this->integer(),
             'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
         ]);
-        $this->createTable('{{%borang_diploma_akademi}}',[
+        $this->createTable('{{%s7_borang_diploma_akademi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_diploma'=>$this->integer(),
             'progress'=>$this->float(),
@@ -136,7 +132,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer()
         ]);
 
-        $this->createTable('{{%borang_s1_prodi}}',[
+        $this->createTable('{{%s7_borang_s1_prodi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_s1'=>$this->integer(),
             'progress'=>$this->float(),
@@ -144,7 +140,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer()
         ]);
 
-        $this->createTable('{{%dokumen_borang_s1_prodi}}',[
+        $this->createTable('{{%s7_dokumen_borang_s1_prodi}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
             'nama_dokumen'=>$this->string(),
@@ -154,14 +150,15 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
-        $this->createTable('{{%borang_s1_fakultas}}',[
+        $this->createTable('{{%s7_borang_s1_fakultas}}',[
             'id'=>$this->primaryKey(),
-            'id_akreditasi_prodi_s1'=>$this->integer(),
+            'id_akreditasi'=>$this->integer(),
+            'id_fakultas'=>$this->integer(),
             'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
-        $this->createTable('{{%dokumen_borang_s1_fakultas}}',[
+        $this->createTable('{{%s7_dokumen_borang_s1_fakultas}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             'nama_dokumen'=>$this->string(),
@@ -172,7 +169,7 @@ class m190429_191120_init_mutu_database extends Migration
         ]);
 
 
-        $this->createTable('{{%borang_s2_prodi}}',[
+        $this->createTable('{{%s7_borang_s2_prodi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_s2'=>$this->integer(),
             'progress'=>$this->float(),
@@ -180,7 +177,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer()
         ]);
 
-        $this->createTable('{{%borang_s2_fakultas}}',[
+        $this->createTable('{{%s7_borang_s2_fakultas}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_s2'=>$this->integer(),
             'progress'=>$this->float(),
@@ -188,7 +185,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer()
         ]);
 
-        $this->createTable('{{%borang_s3_prodi}}',[
+        $this->createTable('{{%s7_borang_s3_prodi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_s3'=>$this->integer(),
             'progress'=>$this->float(),
@@ -196,7 +193,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer()
         ]);
 
-        $this->createTable('{{%borang_s3_fakultas}}',[
+        $this->createTable('{{%s7_borang_s3_fakultas}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_s3'=>$this->integer(),
             'progress'=>$this->float(),
@@ -205,7 +202,7 @@ class m190429_191120_init_mutu_database extends Migration
         ]);
 
 
-        $this->createTable('{{%borang_s1_prodi_standar1}}',[
+        $this->createTable('{{%s7_borang_s1_prodi_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
             '_1_1'=>$this->text()->comment('Visi, Misi, Sasaran, serta Strategi Pencapaian'),
@@ -222,7 +219,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%detail_borang_s1_prodi_standar1}}',[
+        $this->createTable('{{%s7_detail_borang_s1_prodi_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar1' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -233,7 +230,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
 
         ]);
-        $this->createTable('{{%borang_s1_prodi_standar2}}',[
+        $this->createTable('{{%s7_borang_s1_prodi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
             '_2_1'=>$this->text()->comment('Sistem Tata Pamong'),
@@ -248,7 +245,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_s1_prodi_standar2}}',[
+        $this->createTable('{{%s7_detail_borang_s1_prodi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar2' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -258,7 +255,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%borang_s1_prodi_standar3}}',[
+        $this->createTable('{{%s7_borang_s1_prodi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
             '_3_1'=>$this->text()->comment('Profil Mahasiswa dan Lulusan'),
@@ -278,7 +275,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_s1_prodi_standar3}}',[
+        $this->createTable('{{%s7_detail_borang_s1_prodi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar3' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -289,7 +286,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_s1_prodi_standar4}}',[
+        $this->createTable('{{%s7_borang_s1_prodi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
             '_4_1'=>$this->text()->comment('Sistem Seleksi dan Pengembangan'),
@@ -318,7 +315,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_s1_prodi_standar4}}',[
+        $this->createTable('{{%s7_detail_borang_s1_prodi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar4' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -329,7 +326,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_s1_prodi_standar5}}',[
+        $this->createTable('{{%s7_borang_s1_prodi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
             '_5_1'=>$this->text()->comment('Kurikulum'),
@@ -365,7 +362,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_s1_prodi_standar5}}',[
+        $this->createTable('{{%s7_detail_borang_s1_prodi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar5' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -376,7 +373,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_s1_prodi_standar6}}',[
+        $this->createTable('{{%s7_borang_s1_prodi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
             '_6_1'=>$this->text()->comment('Pengelolaan Dana Keterlibatan aktif program studi harus tercerminkan dalam dokumen tentang proses perencanaan, pengelolaan dan pelaporan serta pertanggungjawaban penggunaan dana kepada pemangku kepentingan melalui mekanisme yang transparan dan akuntabel.'),
@@ -401,7 +398,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_s1_prodi_standar6}}',[
+        $this->createTable('{{%s7_detail_borang_s1_prodi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar6' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -412,7 +409,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_s1_prodi_standar7}}',[
+        $this->createTable('{{%s7_borang_s1_prodi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
             '_7_1'=>$this->text()->comment('Penelitian Dosen Tetap yang Bidang Keahliannya Sesuai dengan PS.'),
@@ -432,7 +429,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%detail_borang_s1_prodi_standar7}}',[
+        $this->createTable('{{%s7_detail_borang_s1_prodi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar7' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -444,7 +441,7 @@ class m190429_191120_init_mutu_database extends Migration
         ]);
 
 
-        $this->createTable('{{%borang_s1_fakultas_standar1}}',[
+        $this->createTable('{{%s7_borang_s1_fakultas_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             '_1_1'=>$this->text()->comment('Visi, misi, tujuan, dan sasaran serta strategi pencapaian Fakultas/Sekolah Tinggi'),
@@ -460,7 +457,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
-        $this->createTable('{{%detail_borang_s1_fakultas_standar1}}',[
+        $this->createTable('{{%s7_detail_borang_s1_fakultas_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas_standar1' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -472,7 +469,7 @@ class m190429_191120_init_mutu_database extends Migration
         ]);
 
 
-        $this->createTable('{{%borang_s1_fakultas_standar2}}',[
+        $this->createTable('{{%s7_borang_s1_fakultas_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             '_2_1'=>$this->text()->comment('Tata Pamong'),
@@ -486,7 +483,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
         ]);
-        $this->createTable('{{%detail_borang_s1_fakultas_standar2}}',[
+        $this->createTable('{{%s7_detail_borang_s1_fakultas_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas_standar2' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -497,7 +494,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_s1_fakultas_standar3}}',[
+        $this->createTable('{{%s7_borang_s1_fakultas_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             '_3_1'=>$this->text()->comment('Mahasiswa'),
@@ -514,7 +511,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
-        $this->createTable('{{%detail_borang_s1_fakultas_standar3}}',[
+        $this->createTable('{{%s7_detail_borang_s1_fakultas_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas_standar3' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -525,7 +522,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_s1_fakultas_standar4}}',[
+        $this->createTable('{{%s7_borang_s1_fakultas_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             '_4_1'=>$this->text()->comment('Dosen tetap'),
@@ -540,7 +537,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
-        $this->createTable('{{%detail_borang_s1_fakultas_standar4}}',[
+        $this->createTable('{{%s7_detail_borang_s1_fakultas_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas_standar4' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -550,7 +547,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%borang_s1_fakultas_standar5}}',[
+        $this->createTable('{{%s7_borang_s1_fakultas_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             '_5_1'=>$this->text()->comment('Kurikulum'),
@@ -563,7 +560,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
-        $this->createTable('{{%detail_borang_s1_fakultas_standar5}}',[
+        $this->createTable('{{%s7_detail_borang_s1_fakultas_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas_standar5' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -573,7 +570,7 @@ class m190429_191120_init_mutu_database extends Migration
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
         ]);
-        $this->createTable('{{%borang_s1_fakultas_standar6}}',[
+        $this->createTable('{{%s7_borang_s1_fakultas_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             '_6_1'=>$this->text()->comment('Pembiayaan'),
@@ -597,7 +594,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer()
         ]);
 
-        $this->createTable('{{%detail_borang_s1_fakultas_standar6}}',[
+        $this->createTable('{{%s7_detail_borang_s1_fakultas_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas_standar6' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -608,7 +605,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%borang_s1_fakultas_standar7}}',[
+        $this->createTable('{{%s7_borang_s1_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
             '_7_1'=>$this->text()->comment('Penelitian'),
@@ -627,7 +624,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_by'=>$this->integer(),
         ]);
 
-        $this->createTable('{{%detail_borang_s1_fakultas_standar7}}',[
+        $this->createTable('{{%s7_detail_borang_s1_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas_standar7' =>$this->integer(),
             'nomor_dokumen'=>$this->string(),
@@ -645,50 +642,50 @@ class m190429_191120_init_mutu_database extends Migration
     public function safeDown()
     {
         
-        $this->dropTable('{{%detail_borang_s1_fakultas_standar7}}');
-        $this->dropTable('{{%borang_s1_fakultas_standar7}}');
-        $this->dropTable('{{%detail_borang_s1_fakultas_standar6}}');
-        $this->dropTable('{{%borang_s1_fakultas_standar6}}');
-        $this->dropTable('{{%detail_borang_s1_fakultas_standar5}}');
-        $this->dropTable('{{%borang_s1_fakultas_standar5}}');
-        $this->dropTable('{{%detail_borang_s1_fakultas_standar4}}');
-        $this->dropTable('{{%borang_s1_fakultas_standar4}}');
-        $this->dropTable('{{%detail_borang_s1_fakultas_standar3}}');
-        $this->dropTable('{{%borang_s1_fakultas_standar3}}');
-        $this->dropTable('{{%detail_borang_s1_fakultas_standar2}}');
-        $this->dropTable('{{%borang_s1_fakultas_standar2}}');
-        $this->dropTable('{{%detail_borang_s1_fakultas_standar1}}');
-        $this->dropTable('{{%borang_s1_fakultas_standar1}}');
-        $this->dropTable('{{%detail_borang_s1_prodi_standar7}}');
-        $this->dropTable('{{%borang_s1_prodi_standar7}}');
-        $this->dropTable('{{%detail_borang_s1_prodi_standar6}}');
-        $this->dropTable('{{%borang_s1_prodi_standar6}}');
-        $this->dropTable('{{%detail_borang_s1_prodi_standar5}}');
-        $this->dropTable('{{%borang_s1_prodi_standar5}}');
-        $this->dropTable('{{%detail_borang_s1_prodi_standar4}}');
-        $this->dropTable('{{%borang_s1_prodi_standar4}}');
-        $this->dropTable('{{%detail_borang_s1_prodi_standar3}}');
-        $this->dropTable('{{%borang_s1_prodi_standar3}}');
-        $this->dropTable('{{%detail_borang_s1_prodi_standar2}}');
-        $this->dropTable('{{%borang_s1_prodi_standar2}}');
-        $this->dropTable('{{%borang_s1_prodi_standar1}}');
-        $this->dropTable('{{%detail_borang_s1_prodi_standar1}}');
-        $this->dropTable('{{%borang_s3_fakultas}}');
-        $this->dropTable('{{%borang_s3_prodi}}');
-        $this->dropTable('{{%borang_s2_fakultas}}');
-        $this->dropTable('{{%borang_s2_prodi}}');
-        $this->dropTable('{{%dokumen_borang_s1_fakultas}}');
-        $this->dropTable('{{%borang_s1_fakultas}}');
-        $this->dropTable('{{%dokumen_borang_s1_prodi}}');
-        $this->dropTable('{{%borang_s1_prodi}}');
-        $this->dropTable('{{%borang_diploma_akademi}}');
-        $this->dropTable('{{%borang_diploma_prodi}}');
-        $this->dropTable('{{%akreditasi_institusi}}');
-        $this->dropTable('{{%akreditasi_prodi_s3}}');
-        $this->dropTable('{{%akreditasi_prodi_s2}}');
-        $this->dropTable('{{%akreditasi_prodi_s1}}');
-        $this->dropTable('{{%akreditasi_prodi_diploma}}');
-        $this->dropTable('{{%akreditasi}}');
+        $this->dropTable('{{%s7_detail_borang_s1_fakultas_standar7}}');
+        $this->dropTable('{{%s7_borang_s1_fakultas_standar7}}');
+        $this->dropTable('{{%s7_detail_borang_s1_fakultas_standar6}}');
+        $this->dropTable('{{%s7_borang_s1_fakultas_standar6}}');
+        $this->dropTable('{{%s7_detail_borang_s1_fakultas_standar5}}');
+        $this->dropTable('{{%s7_borang_s1_fakultas_standar5}}');
+        $this->dropTable('{{%s7_detail_borang_s1_fakultas_standar4}}');
+        $this->dropTable('{{%s7_borang_s1_fakultas_standar4}}');
+        $this->dropTable('{{%s7_detail_borang_s1_fakultas_standar3}}');
+        $this->dropTable('{{%s7_borang_s1_fakultas_standar3}}');
+        $this->dropTable('{{%s7_detail_borang_s1_fakultas_standar2}}');
+        $this->dropTable('{{%s7_borang_s1_fakultas_standar2}}');
+        $this->dropTable('{{%s7_detail_borang_s1_fakultas_standar1}}');
+        $this->dropTable('{{%s7_borang_s1_fakultas_standar1}}');
+        $this->dropTable('{{%s7_detail_borang_s1_prodi_standar7}}');
+        $this->dropTable('{{%s7_borang_s1_prodi_standar7}}');
+        $this->dropTable('{{%s7_detail_borang_s1_prodi_standar6}}');
+        $this->dropTable('{{%s7_borang_s1_prodi_standar6}}');
+        $this->dropTable('{{%s7_detail_borang_s1_prodi_standar5}}');
+        $this->dropTable('{{%s7_borang_s1_prodi_standar5}}');
+        $this->dropTable('{{%s7_detail_borang_s1_prodi_standar4}}');
+        $this->dropTable('{{%s7_borang_s1_prodi_standar4}}');
+        $this->dropTable('{{%s7_detail_borang_s1_prodi_standar3}}');
+        $this->dropTable('{{%s7_borang_s1_prodi_standar3}}');
+        $this->dropTable('{{%s7_detail_borang_s1_prodi_standar2}}');
+        $this->dropTable('{{%s7_borang_s1_prodi_standar2}}');
+        $this->dropTable('{{%s7_borang_s1_prodi_standar1}}');
+        $this->dropTable('{{%s7_detail_borang_s1_prodi_standar1}}');
+        $this->dropTable('{{%s7_borang_s3_fakultas}}');
+        $this->dropTable('{{%s7_borang_s3_prodi}}');
+        $this->dropTable('{{%s7_borang_s2_fakultas}}');
+        $this->dropTable('{{%s7_borang_s2_prodi}}');
+        $this->dropTable('{{%s7_dokumen_borang_s1_fakultas}}');
+        $this->dropTable('{{%s7_borang_s1_fakultas}}');
+        $this->dropTable('{{%s7_dokumen_borang_s1_prodi}}');
+        $this->dropTable('{{%s7_borang_s1_prodi}}');
+        $this->dropTable('{{%s7_borang_diploma_akademi}}');
+        $this->dropTable('{{%s7_borang_diploma_prodi}}');
+        $this->dropTable('{{%s7_akreditasi_institusi}}');
+        $this->dropTable('{{%s7_akreditasi_prodi_s3}}');
+        $this->dropTable('{{%s7_akreditasi_prodi_s2}}');
+        $this->dropTable('{{%s7_akreditasi_prodi_s1}}');
+        $this->dropTable('{{%s7_akreditasi_prodi_diploma}}');
+        $this->dropTable('{{%s7_akreditasi}}');
         $this->dropTable('{{%jenis_akreditasi}}');
         $this->dropTable('{{%unit}}');
         $this->dropTable('{{%program_studi}}');

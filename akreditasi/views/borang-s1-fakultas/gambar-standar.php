@@ -1,12 +1,12 @@
 <?php
 
-use akreditasi\models\BorangS1FakultasStandar1Form;
+use akreditasi\models\S7BorangS1FakultasStandar1Form;
 use akreditasi\models\GambarBorangS1FakultasUploadForm;
 use akreditasi\models\IsianBorangS1FakultasUploadForm;
-use common\models\BorangS1Fakultas;
-use common\models\DetailBorangS1FakultasStandar1;
-use common\models\GambarBorangS1Fakultas;
-use common\models\IsianBorang;
+use common\models\S7BorangS1Fakultas;
+use common\models\S7DetailBorangS1FakultasStandar1;
+use common\models\S7GambarBorangS1Fakultas;
+use common\models\S7IsianBorang;
 use dosamigos\ckeditor\CKEditor;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
@@ -18,8 +18,8 @@ use yii\helpers\Url;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $model GambarBorangS1Fakultas */
-/* @var $dataBorang BorangS1Fakultas */
+/* @var $model S7GambarBorangS1Fakultas */
+/* @var $dataBorang S7BorangS1Fakultas */
 /* @var $gambarForm GambarBorangS1FakultasUploadForm */
 /** @var array $poin */
 $standar = $json['standar'];
@@ -81,7 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <div class="col-md-12"
                                                 >
                                                 <?php
-                                                $dataGambar = GambarBorangS1Fakultas::findAll(['id_borang_s1_fakultas' => $_GET['borang'], 'nomor_borang' => $value['nomor']]);
+                                                $dataGambar = S7GambarBorangS1Fakultas::findAll(['id_borang_s1_fakultas' => $_GET['borang'], 'nomor_borang' => $value['nomor']]);
                                                 foreach ($dataGambar as $gambar):?>
 
                                                     <div class="col-md-3">

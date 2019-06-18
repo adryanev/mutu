@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'attributes' => [
                                 'id',
             'nama',
-            'program.nama',
+            'jenjang',
             'fakultasAkademi.nama',
             'created_at:datetime',
             'updated_at:datetime',

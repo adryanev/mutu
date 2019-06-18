@@ -1,6 +1,6 @@
 <?php
 
-use admin\models\AkreditasiSearch;
+use admin\models\S7AkreditasiSearch;
 use common\models\Program;
 use yii\base\DynamicModel;
 use yii\bootstrap\ActiveForm;
@@ -13,7 +13,7 @@ use yii\web\View;
 /* @var $model DynamicModel */
 /* @var $dataProgram Program[] */
 
-$this->title = 'Akreditasi Program Studi';
+$this->title = 'S7Akreditasi Program Studi';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">

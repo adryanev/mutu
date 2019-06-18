@@ -9,7 +9,9 @@ use yii\behaviors\TimestampBehavior;
  * This is the model class for table "fakultas_akademi".
  *
  * @property int $id
+ * @property string $kode
  * @property string $nama
+ * @property string $dekan
  * @property int $created_at
  * @property int $updated_at
  *
@@ -42,7 +44,7 @@ class FakultasAkademi extends \yii\db\ActiveRecord
     {
         return [
             [['created_at', 'updated_at'], 'integer'],
-            [['nama'], 'string', 'max' => 255],
+            [['nama','kode','dekan'], 'string', 'max' => 255],
         ];
     }
 
@@ -53,6 +55,8 @@ class FakultasAkademi extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'kode' => 'Kode',
+            'dekan' => 'Dekan / Direktur',
             'nama' => 'Nama Fakultas',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',

@@ -17,7 +17,7 @@ class ProgramStudiSearch extends ProgramStudi
     public function rules()
     {
         return [
-            [['id', 'id_program', 'id_fakultas_akademi', 'created_at', 'updated_at'], 'integer'],
+            [['id', 'id_fakultas_akademi', 'created_at', 'updated_at'], 'integer'],
             [['nama'], 'safe'],
         ];
     }
@@ -59,7 +59,6 @@ class ProgramStudiSearch extends ProgramStudi
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'id_program' => $this->id_program,
             'id_fakultas_akademi' => $this->id_fakultas_akademi,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,

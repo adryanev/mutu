@@ -1,15 +1,15 @@
 <?php
 
 use akreditasi\models\BorangS1FakultasForm;
-use common\models\BorangS1Fakultas;
-use common\models\BorangS1FakultasStandar1;
-use common\models\BorangS1FakultasStandar2;
-use common\models\BorangS1FakultasStandar3;
-use common\models\BorangS1FakultasStandar4;
-use common\models\BorangS1FakultasStandar5;
-use common\models\BorangS1FakultasStandar6;
-use common\models\BorangS1FakultasStandar7;
-use common\models\DokumenBorangS1Fakultas;
+use common\models\S7BorangS1Fakultas;
+use common\models\S7BorangS1FakultasStandar1;
+use common\models\S7BorangS1FakultasStandar2;
+use common\models\S7BorangS1FakultasStandar3;
+use common\models\S7BorangS1FakultasStandar4;
+use common\models\S7BorangS1FakultasStandar5;
+use common\models\S7BorangS1FakultasStandar6;
+use common\models\S7BorangS1FakultasStandar7;
+use common\models\S7DokumenBorangS1Fakultas;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
@@ -17,16 +17,16 @@ use yii\bootstrap\Modal;
 use yii\bootstrap\Progress;
 use yii\web\View;
 /* @var $this yii\web\View */
-/* @var $borangFakultas BorangS1Fakultas */
+/* @var $borangFakultas S7BorangS1Fakultas */
 /* @var $dokumenBorang BorangS1FakultasForm */
-/* @var $dataDokumenBorang DokumenBorangS1Fakultas */
-/* @var $standar1 BorangS1FakultasStandar1 */
-/* @var $standar2 BorangS1FakultasStandar2 */
-/* @var $standar3 BorangS1FakultasStandar3 */
-/* @var $standar4 BorangS1FakultasStandar4 */
-/* @var $standar5 BorangS1FakultasStandar5 */
-/* @var $standar6 BorangS1FakultasStandar6 */
-/* @var $standar7 BorangS1FakultasStandar7 */
+/* @var $dataDokumenBorang S7DokumenBorangS1Fakultas */
+/* @var $standar1 S7BorangS1FakultasStandar1 */
+/* @var $standar2 S7BorangS1FakultasStandar2 */
+/* @var $standar3 S7BorangS1FakultasStandar3 */
+/* @var $standar4 S7BorangS1FakultasStandar4 */
+/* @var $standar5 S7BorangS1FakultasStandar5 */
+/* @var $standar6 S7BorangS1FakultasStandar6 */
+/* @var $standar7 S7BorangS1FakultasStandar7 */
 /* @var $json */
 
 $this->title='Isi Borang';

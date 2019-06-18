@@ -4,7 +4,7 @@
 namespace akreditasi\models;
 
 
-use common\models\DokumenBorangInstitusi;
+use common\models\S7DokumenBorangInstitusi;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
@@ -33,7 +33,7 @@ class BorangInstitusiForm extends Model
 
 
         if($this->validate()){
-            $this->_dokumenBorangInstitusi = new DokumenBorangInstitusi();
+            $this->_dokumenBorangInstitusi = new S7DokumenBorangInstitusi();
             $this->_dokumenBorangInstitusi->id_borang_institusi = $id;
             $fileName = $this->dokumenBorang->getBaseName().'.'.$this->dokumenBorang->getExtension();
             $this->_dokumenBorangInstitusi->nama_dokumen = $fileName;
@@ -50,7 +50,7 @@ class BorangInstitusiForm extends Model
     }
 
     /**
-     * @return DokumenBorangInstitusi
+     * @return S7DokumenBorangInstitusi
      */
     public function getDetailBorangInstitusi()
     {

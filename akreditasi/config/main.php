@@ -11,6 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'akreditasi\controllers',
+    'modules' => [
+        'standar7' => [
+            'class' => 'akreditasi\modules\standar7\Standar7',
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-akreditasi',

@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Akreditasi */
+/* @var $model common\models\S7Akreditasi */
 
 $this->title = $model->nama;
-$this->params['breadcrumbs'][] = ['label' => 'Akreditasi', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'S7Akreditasi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

@@ -13,7 +13,7 @@ use yii\behaviors\TimestampBehavior;
  * @property int $created_at
  * @property int $updated_at
  *
- * @property Akreditasi[] $akreditasis
+ * @property S7Akreditasi[] $akreditasis
  */
 class JenisAkreditasi extends \yii\db\ActiveRecord
 {
@@ -53,7 +53,7 @@ class JenisAkreditasi extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'nama' => 'Jenis Akreditasi',
+            'nama' => 'Jenis S7Akreditasi',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
@@ -64,6 +64,6 @@ class JenisAkreditasi extends \yii\db\ActiveRecord
      */
     public function getAkreditasis()
     {
-        return $this->hasMany(Akreditasi::className(), ['id_jenis_akreditasi' => 'id']);
+        return $this->hasMany(S7Akreditasi::className(), ['id_jenis_akreditasi' => 'id']);
     }
 }

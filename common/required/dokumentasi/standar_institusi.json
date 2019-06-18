@@ -5,24 +5,130 @@
     "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian","Sosialisasi"],
     "butir":[
       {
-        "nomor": "1.1.a",
-        "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
+        "nomor": "1.1",
+        "isi": "Kejelasan, kerealistikan, dan keterkaitan antar visi, misi, tujuan dan sasaran perguruan tinggi, dan pemangku kepentingan yang terlibat.",
         "dokumen_sumber":[
           {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+            "kode": " 1.1.1",
+            "dokumen":"Join Visi Misi"
           },
           {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+            "kode": " 1.1.2",
+            "dokumen":"SK Perubahan iain ke uin"
+          },
+          {
+            "kode": " 1.1.3",
+            "dokumen":"Statuta 2006"
+          },
+          {
+            "kode": " 1.1.4",
+            "dokumen":"SK Senat UIN tentang Visi Misi"
+          },
+          {
+            "kode": " 1.1.5",
+            "dokumen":"Statuta 2014"
+          },
+          {
+            "kode": " 1.1.6",
+            "dokumen":"Rencana Induk Pengembangan (RIP)"
+          },
+          {
+            "kode": " 1.1.7",
+            "dokumen":"Renstra"
+          },
+          {
+            "kode": " 1.1.8",
+            "dokumen":"Renstra dan Renop (hingga ke level jurusan)"
+          },
+          {
+            "kode": " 1.1.9",
+            "dokumen":"SPJ LPJ"
+          },
+          {
+            "kode": " 1.1.10",
+            "dokumen":"ORTAKER"
           }
 
         ],
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.a-01-02-01",
-            "dokumen": "Dokumen Daftar Hadir"
+            "kode": "",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "1.2",
+        "isi": "Perguruan tinggi menetapkan tonggak-tonggak capaian (milestones) tujuan sebagai penjabaran atau pelaksanaan renstra, serta mekanisme kontrol ketercapaiannya.",
+        "dokumen_sumber":[
+          {
+            "kode": "1.2.1",
+            "dokumen":"Dokumen dewas dan senat"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "1.3.1",
+        "isi": "Sosialisasi visi dan misi perguruan tinggi dilaksanakan secara sistematis dan berkelanjutan kepada pemangku kepentingan.",
+        "dokumen_sumber":[
+          {
+            "kode": "1.3.1.1",
+            "dokumen":"LPJ Sosprom"
+          },
+          {
+            "kode": "1.3.1.2",
+            "dokumen":"film UIN"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "1.3.2",
+        "isi": "Visi dan misi perguruan tinggi dijadikan pedoman, panduan, dan rambu-rambu bagi semua pemangku kepentingan internal serta dijadikan acuan pelaksanaan renstra, keterwujudan visi, keterlaksanaan misi, ketercapaian tujuan melalui strategi-strategi yang dikembangkan.",
+        "dokumen_sumber":[
+          {
+            "kode": " 1.3.2.1",
+            "dokumen":"Dokumen Kuesioner Visi Misi"
+          },
+          {
+            "kode": "1.3.2.2",
+            "dokumen":"Rencana Induk Pengembangan (RIP)"
+          },
+          {
+            "kode": "1.3.2.3",
+            "dokumen":"Renstra"
+          },
+          {
+            "kode": "1.3.2.4",
+            "dokumen":"Renop/RKT"
+          },
+          {
+            "kode": "1.3.2.5",
+            "dokumen":"Hasil Pemahaman Visi Misi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": "-"
           }
         ]
       }
@@ -30,19 +136,387 @@
   },
   {
     "standar": 2,
-    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN",
-    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian","Sosialisasi"],
+    "judul" : "TATA PAMONG, KEPEMIMPINAN, SISTEM PENGELOLAAN, DAN PENJAMINAN MUTU",
+    "aspek": [" TATA PAMONG, KEPEMIMPINAN, SISTEM PENGELOLAAN, DAN PENJAMINAN MUTU"],
     "butir":[
       {
-        "nomor": "1.1.a",
-        "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
+        "nomor": "2.1.1",
+        "isi": "Perguruan tinggi memiliki tata pamong yang memungkinkan terlaksananya secara konsisten prinsip-prinsip tata pamong, terutama yang terkait dengan pelaku tata pamong (aktor) dan sistem ketatapamongan yang baik (kelembagaan, instrumen, perangkat pendukung, kebijakan dan peraturan, serta kode etik).",
         "dokumen_sumber":[
           {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+            "kode": " 2.1.1.1",
+            "dokumen":"Dokumen Standard Operating Procedures (SOP) untuk setiap jenis layanan."
           },
           {
-            "kode": " 1.1.a-01-01-01",
+            "kode": "2.1.1.2",
+            "dokumen":"Job Description"
+          },
+          {
+            "kode": "2.1.1.3",
+            "dokumen":"Peraturan Rektor Nomor 90.1 Tahun 2017 Pedoman Manajemen SDM"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.1.2",
+        "isi": "Kelengkapan dan keefektifan struktur organisasi yang disesuaikan dengan kebutuhan penyelenggaraan dan pengembangan perguruan tinggi yang bermutu.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.1.2.1",
+            "dokumen":"Struktur Organisasi Universitas dan Fakultas"
+          },
+          {
+            "kode": "2.1.2.2",
+            "dokumen":"SK Rektor Nomor 86 Tahun 2018 Pemberhentian dan Pengangkatan Senat"
+          },
+          {
+            "kode": "2.1.2.3",
+            "dokumen":"Dewan Pertimbangan"
+          },
+          {
+            "kode": "2.1.2.4",
+            "dokumen":"SK Rektor Nomor : 21 Tahun 2018 (Pengelola LPM)"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.1.3",
+        "isi": "Keberadaan lembaga, mutu, SOP, dan efektifitas pelaksanaan kode etik.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.1.3.1",
+            "dokumen":"Pedoman etika dosen"
+          },
+          {
+            "kode": "2.1.3.2",
+            "dokumen":"Pedoman etika mahasiswa"
+          },
+          {
+            "kode": "2.1.3.3",
+            "dokumen":"Pedoman etika tenaga kependidikan"
+          },
+          {
+            "kode": "2.1.3.4",
+            "dokumen":"Pedoman sistem penghargaan dan saksi"
+          },
+          {
+            "kode": "2.1.3.5",
+            "dokumen":"Pedoman dan prosedur pelayanan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.2",
+        "isi": "Karakteristik kepemimpinan yang efektif dalam kepemimpinan operasional, kepemimpinan organisasi, dan kepemimpinan publik.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.2.1",
+            "dokumen":"Statuta PT"
+          },
+          {
+            "kode": "2.2.2",
+            "dokumen":"Dokumen Standard Operating Procedures (SOP) untuk setiap jenis layanan."
+          },
+          {
+            "kode": "2.2.3",
+            "dokumen":"Job Description"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.3.1",
+        "isi": "Sistem pengelolaan fungsional dan operasional perguruan tinggi mencakup fungsi pengelolaan (planning, organizing, staffing, leading, dan controlling), yang dilaksanakan secara efektif untuk mewujudkan visi dan melaksanakan misi perguruan tinggi.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.3.1.1",
+            "dokumen":"Pedoman Reward an Punishment"
+          },
+          {
+            "kode": "2.3.1.2",
+            "dokumen":"RIP"
+          },
+          {
+            "kode": "2.3.1.3",
+            "dokumen":"Renstra"
+          },
+          {
+            "kode": "2.3.1.4",
+            "dokumen":"Renstra dan Renop (hingga ke level jurusan)"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.3.2",
+        "isi": "Perguruan tinggi memiliki analisis jabatan, deskripsi tugas, program peningkatan kompetensi manajerial yang menjamin terjadinya proses pengelolaan yang efektif dan efisien di setiap unit kerja.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.3.2.1",
+            "dokumen":"Pedoman rancangan dan analisis jabatan"
+          },
+          {
+            "kode": "2.3.2.2",
+            "dokumen":"Hasil rancangan dan analisis jabatan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.3.3",
+        "isi": "Diseminasi hasil kerja perguruan tinggi sebagai akuntabilitas publik, serta keberkalaannya.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.3.3.1",
+            "dokumen":"Laporan ke Dewan Pengawas BLU"
+          },
+          {
+            "kode": "2.3.3.2",
+            "dokumen":"LAKIP"
+          },
+          {
+            "kode": "2.3.3.3",
+            "dokumen":"Laporan Keuangan"
+          },
+          {
+            "kode": "2.3.3.4",
+            "dokumen":"Laporan Tahunan Rektor"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.3.4",
+        "isi": "Keberadaan dan keefektifan sistem audit internal, dilengkapi dengan kriteria dan instrumen penilaian serta menggunakannya untuk mengukur kinerja setiap unit kerja, serta diseminasi hasilnya.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.3.4.1",
+            "dokumen":"Pedoman penilaian BKD"
+          },
+          {
+            "kode": "2.3.4.2",
+            "dokumen":"Pedoman SKP"
+          },
+          {
+            "kode": "2.3.4.3",
+            "dokumen":"Pedoman IKD"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.3.5",
+        "isi": "Keberadaan dan keefektifan sistem audit eksternal, dilengkapi dengan kriteria dan instrumen penilaian serta menggunakannya untuk mengukur kinerja perguruan tinggi.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.3.5.1",
+            "dokumen":"Laporan Audit Akuntan Publik"
+          },
+          {
+            "kode": "2.3.5.2",
+            "dokumen":"Laporan audit BPK"
+          },
+          {
+            "kode": "2.3.5.3",
+            "dokumen":"Laporan audit Irjen"
+          },
+          {
+            "kode": "2.3.5.4",
+            "dokumen":"Laporan AMI"
+          },
+          {
+            "kode": "2.3.5.5",
+            "dokumen":"Laporan AME"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.4.1",
+        "isi": "Perguruan tinggi menjalankan sistem penjaminan mutu yang didukung dengan adanya bukti-bukti berupa manual mutu, dan pelaksanaannya.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.4.1.1",
+            "dokumen":"Manual Mutu yang lengkap meliputi: (1) Pernyataan Mutu (2) Kebijakan Mutu (3)Unit Pelaksana (4) Standar Mutu (5) Prosedur Mutu (6) Instruksi Kerja (7) Pentahapan Sasaran Mutu dan terintegrasi dalam suatu sistem dokumen"
+          },
+          {
+            "kode": "2.4.1.2",
+            "dokumen":"Dokumen Standard Operating Procedures (SOP) untuk setiap jenis layanan."
+          },
+          {
+            "kode": "2.4.1.3",
+            "dokumen":"Analisis Resiko"
+          },
+          {
+            "kode": "2.4.1.4",
+            "dokumen":"Analisis pihak-pihak yang berkepentingan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.4.2",
+        "isi": "Implementasi penjaminan mutu.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.4.2.1",
+            "dokumen":"Pedoman Penjaminan Mutu"
+          },
+          {
+            "kode": "2.4.2.2",
+            "dokumen":"Laporan monev per fakultas/unit/lembaga"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.4.3",
+        "isi": "Monitoring dan evaluasi hasil penjaminan mutu di bidang pendidikan, penelitian, pelayanan/pengabdian kepada masyarakat, sarana prasarana, keuangan, manajemen, serta tindak lanjutnya.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.4.3.1",
+            "dokumen":"Laporan monev per fakultas/unit/lembaga"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.4.4",
+        "isi": "Perguruan tinggi memiliki sistem pembinaan perguruan tinggi yang mencakup: (1) pengembangan perguruan tinggi, (2) penyusunan dokumen akreditasi dalam bentuk pelatihan, dana, dan informasi.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.4.4.1",
+            "dokumen":"SK pengelola CTSD"
+          },
+          {
+            "kode": "2.4.4.2",
+            "dokumen":"SK pendampingan Akreditasi dan Sertifikasi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.4.5",
+        "isi": "Kelengkapan dan aksesibilitas sistem basis data institusi yang mendukung penyusunan evaluasi diri institusi dan perguruan tinggi.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.4.5.1",
+            "dokumen":"Dokumen SIA"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "2.4.6",
+        "isi": "Status akreditasi BAN-PT untuk seluruh perguruan tinggi dalam perguruan tinggi.",
+        "dokumen_sumber":[
+          {
+            "kode": "2.4.6.1",
+            "dokumen":"Sertifikat Akreditasi Prodi"
+          },
+          {
+            "kode": "",
             "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
           }
 
@@ -50,8 +524,1793 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.a-01-02-01",
-            "dokumen": "Dokumen Daftar Hadir"
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "standar": 3,
+    "judul" : "MAHASISWA DAN LULUSAN",
+    "aspek": ["MAHASISWA DAN LULUSAN"],
+    "butir": [
+      {
+        "nomor": "3.1.1",
+        "isi": "Sistem penerimaan mahasiswa baru disusun secara lengkap (kebijakan, kriteria, prosedur, instrumen, sistem pengambilan keputusan) dan konsistensi pelaksanaannya.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.1.1",
+            "dokumen":"Pedoman penerimaan mahasiswa baru."
+          },
+          {
+            "kode": "3.1.1.2",
+            "dokumen":"Daftar penerimaan mahasiswa baru."
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.2",
+        "isi": "Sistem penerimaan mahasiswa baru yang memberikan peluang dan menerima mahasiswa yang memiliki potensi akademik namun kurang mampu secara ekonomi dan/atau cacat fisik disertai bukti implementasi sistem tsb. berupa ketersediaan sarana dan prasarana penunjang.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.2.1",
+            "dokumen":"PROSEDUR OPERASIONAL BAKU (POB) PENERIMAAN MAHASISWA BARU S1, S2, DAN S3 UIN SUNAN KALIJAGA YOGYAKARTA"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.3",
+        "isi": "Sistem penerimaan mahasiswa baru yang menerapkan prinsip-prinsip ekuitas.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.3.1",
+            "dokumen":"Sistem penerimaan maba sediakan ruang upload SK penerimaan Maba"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.4",
+        "isi": "Sistem penerimaan mahasiswa baru menerapkan prinsip pemerataan wilayah asal mahasiswa. NP = Jumlah propinsi asal mahasiswa",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.4.1",
+            "dokumen":"Sistem penerimaan maba sediakan ruang upload SK penerimaan Maba"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.5.1",
+        "isi": "Rasio jumlah calon mahasiswa yang ikut seleksi terhadap jumlah calon mahasiswa yang lulus seleksi.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.5.1.1",
+            "dokumen":"Rasio jumlah calon mahasiswa yang ikut seleksi terhadap jumlah calon mahasiswa yang lulus seleksi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.5.2",
+        "isi": "Rasio jumlah mahasiswa yang mendaftar ulang terhadap jumlah mahasiswa yang lulus seleksi.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.5.2.1",
+            "dokumen":"Rasio jumlah mahasiswa yang mendaftar ulang terhadap jumlah mahasiswa yang lulus seleksi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.5.3",
+        "isi": "Rasio jumlah mahasiswa baru transfer terhadap jumlah mahasiswa baru bukan transfer.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.5.3.1",
+            "dokumen":"Rasio jumlah mahasiswa baru transfer terhadap jumlah mahasiswa baru bukan transfer"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.6",
+        "isi": "Instrumen dan tata cara pengukuran kepuasan mahasiswa terhadap layanan kemahasiswaan.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.6.1",
+            "dokumen":"Pedoman pengukuran kepuasan mahasiswa"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.7",
+        "isi": "Hasil pelaksanaan survei kepuasan mahasiswa terhadap layanan kegiatan kemahasiswaan, dan tindak lanjutnya.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.7.1",
+            "dokumen":"Laporan hasil survei kepuasan mahasiswa"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.8",
+        "isi": "Layanan kepada mahasiswa dalam bidang bimbingan dan konseling, minat dan bakat, pembinaan soft skills, beasiswa, dan kesehatan.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.8.1",
+            "dokumen":"Brosur PMB UIN Sunan Kalijaga Yogyakarta"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.9",
+        "isi": "Pemilikan program layanan bimbingan karir dan informasi kerja bagi mahasiswa dan lulusan.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.9.1",
+            "dokumen":"Pedoman kebijakan bimbingan karir"
+          },
+          {
+            "kode": "3.1.9.2",
+            "dokumen":"Program kerja layanan bimbingan karir dan informasi kerja untuk mahasiswa dan lulusan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.10",
+        "isi": "Pelaksanaan program layanan bimbingan karir dan informasi kerja bagi mahasiswa dan lulusan, serta hasilnya.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.10.1",
+            "dokumen":"Laporan pelaksanaan kebijakan dan program layanan bimbingan karir dan informasi kerja untuk mahasiswa dan lulusan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.11",
+        "isi": "Pencapaian prestasi mahasiswa di tingkat propinsi/ wilayah, nasional, dan internasional.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.11.1",
+            "dokumen":"Bukti prestasi akademik sesuai keilmuan prodi"
+          },
+          {
+            "kode": "3.1.11.2",
+            "dokumen":"Bukti prestasi non-akademik"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.1.12",
+        "isi": "Upaya institusi untuk meningkatkan prestasi mahasiswa dalam bidang akademik dan non-akademik.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.12.1",
+            "dokumen":"Upaya institusi untuk meningkatkan prestasi mahasiswa dalam bidang akademik dan non-akademik."
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.2.1.1",
+        "isi": "Persentase mahasiswa DO atau mengundurkan diri untuk semua perguruan tinggi.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.1.1.1",
+            "dokumen":"Rekap Mahasiswa DO atau mengundurkan diri"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.2.1.2",
+        "isi": "Persentase kelulusan tepat waktu untuk semua perguruan tinggi.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.1.2.1",
+            "dokumen":"Rekap Lama Studi Mahasiswa"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.2.2.1",
+        "isi": "Rata-rata lama studi lulusan dalam tiga tahun terakhir.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.2.1.1",
+            "dokumen":"Rekap rata-rata lama studi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.2.2.2",
+        "isi": "Rata-rata IPK lulusan dalam tiga tahun terakhir.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.2.2.1",
+            "dokumen":"Rekap Rata-rata IPK Lulusan 3 Tahun Terakhir"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.2.3",
+        "isi": "Sistem evaluasi lulusan yang efektif, mencakup kebijakan dan strategi, keberadaan instrumen, monitoring dan evaluasi, serta tindak lanjutnya.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.3.1",
+            "dokumen":"Pedoman evaluasi lulusan(tracer study)"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.2.4",
+        "isi": "Rasio alumni dalam lima tahun terakhir yang memberikan respons terhadap studi pelacakan.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.4.1",
+            "dokumen":"Rasio alumni dalam lima tahun terakhir yang memberikan respons terhadap studi pelacakan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "3.2.5",
+        "isi": "Partisipasi alumni dalam mendukung pengembangan perguruan tinggi dalam bentuk: sumbangan dana, sumbangan fasilitas, masukan untuk perbaikan proses pembelajaran, dan pengembangan jejaring.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.2.5.1",
+            "dokumen":"Laporan partisipasi alumni (akademik dan non akademik)"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "standar": 4,
+    "judul" : "SUMBER DAYA MANUSIA",
+    "aspek": ["SUMBER DAYA MANUSIA"],
+    "butir": [
+      {
+        "nomor": "4.1",
+        "isi": "Sistem pengelolaan sumber daya manusia yang lengkap, transparan, dan akuntabel, mencakup: perencanaan, rekrutmen, seleksi, dan pemberhentian pegawai, orientasi dan penempatan pegawai, pengembangan karir, remunerasi, penghargaan, dan sanksi.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.1.1",
+            "dokumen":"Pedoman sistem pengelolaan dosen PNS maupun non PNS."
+          },
+          {
+            "kode": "4.1.2",
+            "dokumen":"Pedoman sistem pengelolaan tenaga kependidikan PNS maupun non PNS."
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.2.1",
+        "isi": "Pedoman formal tentang sistem monitoring dan evaluasi, serta rekam jejak kinerja dosen dan tenaga kependidikan.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.2.1.1",
+            "dokumen":"Pedoman Monev kinerja dosen dan tenaga kependidikan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.2.2",
+        "isi": "Pelaksanaan monitoring dan evaluasi (monev) kinerja dosen di bidang pendidikan, penelitian, pelayanan/pengabdian kepada masyarakat.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.2.2.1",
+            "dokumen":"Laporan monev kinerja dosen dan tenaga kependidikan"
+          },
+          {
+            "kode": "4.2.2.2",
+            "dokumen":"Rekap LKD"
+          },
+          {
+            "kode": "4.2.2.3",
+            "dokumen":"Rekap Laporan SKP"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.3.1.1",
+        "isi": "Fotokopi ijazah terakhir dan sertifikat pendidik dosen tetap",
+        "dokumen_sumber":[
+          {
+            "kode": "4.3.1.1.1",
+            "dokumen":"Fotokopi ijazah terakhir dosen tetap"
+          },
+          {
+            "kode": "4.3.1.1.2",
+            "dokumen":"Fotocopy sertifikat pendidik dosen tetap"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.3.1.2",
+        "isi": "Persentase dosen tetap berpendidikan doktor/Sp-2",
+        "dokumen_sumber":[
+          {
+            "kode": "4.3.1.2.1",
+            "dokumen":"Dosen tetap berpendidikan doktor"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.3.1.3",
+        "isi": "Persentase dosen tetap dengan jabatan guru besar (untuk institut, universitas, dan sekolah tinggi) dan lektor kepala (untuk akademi dan politeknik).",
+        "dokumen_sumber":[
+          {
+            "kode": "4.3.1.3.1",
+            "dokumen":"Dosen tetap dengan jabatan guru besar"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.3.1.4",
+        "isi": "Persentase jumlah dosen tidak tetap terhadap jumlah seluruh dosen.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.3.1.4.1",
+            "dokumen":"Fotokopi ijazah terakhir dosen tidak tetap"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.4",
+        "isi": "Persentase dosen tetap yang menjalani program peningkatan kompetensi melalui tugas belajar.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.4.1",
+            "dokumen":"Daftar dosen tetap yang sedang tugas belajar"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.5.1.1",
+        "isi": "Pustakawan dan kualifikasinya.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.5.1.1.1",
+            "dokumen":"Daftar Pustakawan"
+          },
+          {
+            "kode": "4.5.1.1.2",
+            "dokumen":"Sertifikat Kompetensi Pustakawan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.5.1.2",
+        "isi": "Laboran, teknisi, analis, operator, dan programer.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.5.1.2.1",
+            "dokumen":"Daftar Laboran, Teknisi, Analisis, Operator, dan Programmer"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.5.1.3",
+        "isi": "Tenaga administrasi: jumlah, kualifikasi, dan mutu kerjanya.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.5.1.3.1",
+            "dokumen":"Data Tenaga Administrasi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.5.1.4",
+        "isi": "Persentase laboran/teknisi/analis/operator/programer yang memiliki sertifikat kompetensi.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.5.1.4.1",
+            "dokumen":"Sertifikat Tenaga Kependidikan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.5.2",
+        "isi": "Upaya perguruan tinggi dalam meningkatkan kualifikasi dan kompetensi tenaga kependidikan.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.5.2.1",
+            "dokumen":"Fotokopi ijazah tenaga kependidikan"
+          },
+          {
+            "kode": "4.5.2.2",
+            "dokumen":"Fotocopy sertifikat kompetensi tenaga kependidikan"
+          },
+          {
+            "kode": "4.5.2.3",
+            "dokumen":"Diklat peningkatan kualifikasi dan kompetensi tenaga kependidikan"
+          },
+          {
+            "kode": "4.5.2.4",
+            "dokumen":"Studi Banding"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.6.1",
+        "isi": "Instrumen survei kepuasan dosen, pustakawan, laboran, teknisi, dan tenaga administrasi terhadap sistem pengelolaan sumber daya manusia.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.6.1.1",
+            "dokumen":"Pedoman penilaian kepuasan dosen dan tenaga kependidikan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.6.2",
+        "isi": "Pelaksanaan survei kepuasan dosen, pustakawan, laboran, teknisi, tenaga administrasi, dan tenaga pendukung terhadap sistem pengelolaan sumber daya manusia.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.6.2.1",
+            "dokumen":"Laporan hasil survei kepuasan dosen dan tenaga kependidikan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "4.6.3",
+        "isi": "Pemanfaatan hasil survei kepuasan dosen, pustakawan, laboran, teknisi, dan tenaga administrasi terhadap sistem pengelolaan sumber daya manusia.",
+        "dokumen_sumber":[
+          {
+            "kode": "4.6.3.1",
+            "dokumen":"Pemanfaatan hasil survei Sumber Daya Manusia"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "standar": 5,
+    "judul" : "KURIKULUM, PEMBELAJARAN DAN SUASANA AKADEMIK",
+    "aspek": ["KURIKULUM, PEMBELAJARAN DAN SUASANA AKADEMIK"],
+    "butir": [
+      {
+        "nomor": "5.1.1",
+        "isi": "Dokumen kebijakan tentang pengembangan kurikulum yang lengkap.",
+        "dokumen_sumber":[
+          {
+            "kode": "5.1.1.1",
+            "dokumen":"Pedoman kebijakan pengembangan kurikulum"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "5.1.2",
+        "isi": "Monitoring dan evaluasi pengembangan kurikulum perguruan tinggi.",
+        "dokumen_sumber":[
+          {
+            "kode": "5.1.2.1",
+            "dokumen":"Laporan proses analisis dan evaluasi pemutakhiran kurikulum"
+          },
+          {
+            "kode": "5.1.2.2",
+            "dokumen":"Kurikulum setiap prodi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "5.2.1",
+        "isi": "Unit pengkajian dan pengembangan sistem dan mutu pembelajaran mendorong mahasiswa untuk berfikir kritis, bereksplorasi, berekspresi, bereksperimen dengan memanfaatkan aneka sumber yang hasilnya dimanfaatkan oleh institusi.",
+        "dokumen_sumber":[
+          {
+            "kode": "5.2.1.1",
+            "dokumen":"Pusat Studi di IAIN Padangsidimpuan"
+          },
+          {
+            "kode": "5.2.1.2",
+            "dokumen":"Pengembangan Strategi Pembelajaran di Perguruan Tinggi"
+          },
+          {
+            "kode": "5.2.1.3",
+            "dokumen":"Kebijakan Mutu IAIN Padangsidimpuan"
+          },
+          {
+            "kode": "5.2.1.4",
+            "dokumen":"Standar Mutu IAIN Padangsidimpuan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "5.2.2",
+        "isi": "Sistem pengendalian mutu pembelajaran diterapkan institusi termasuk proses monitoring, evaluasi, dan pemanfaatannya",
+        "dokumen_sumber":[
+          {
+            "kode": "5.2.2.1",
+            "dokumen":"Rekap kehadiran mengajar dosen"
+          },
+          {
+            "kode": "5.2.2.2",
+            "dokumen":"Rekap jurnal mengajar"
+          },
+          {
+            "kode": "5.2.2.3",
+            "dokumen":"Rekap nilai"
+          },
+          {
+            "kode": "5.2.2.4",
+            "dokumen":"Rekap penyerahan nilai"
+          },
+          {
+            "kode": "5.2.2.5",
+            "dokumen":"Pendekatan Sistem Pembelajaran dan Pengajaran"
+          },
+          {
+            "kode": "5.2.2.6",
+            "dokumen":"Perencanaan dan Sumber Daya Pembelajaran"
+          },
+          {
+            "kode": "5.2.2.7",
+            "dokumen":"Syarat dan Monitoring Kelulusan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "5.2.3",
+        "isi": "Pedoman pelaksanaan tridarma perguruan tinggi yang digunakan sebagai acuan bagi perencanaan dan pelaksanaan program tridarma unit di bawahnya, menjamin terintegrasinya kegiatan penelitian dan PkM ke dalam proses pembelajaran.",
+        "dokumen_sumber":[
+          {
+            "kode": "5.2.3.1",
+            "dokumen":"Buku pedoman akademik"
+          },
+          {
+            "kode": "5.2.3.2",
+            "dokumen":"Pedoman penelitian"
+          },
+          {
+            "kode": "5.2.3.3",
+            "dokumen":"Pedoman pengabdian kepada masyarakat"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "5.3.1",
+        "isi": "Dokumen formal tentang kebebasan akademik, kebebasan mimbar akademik, dan otonomi keilmuan, serta konsistensi pelaksanaannya.",
+        "dokumen_sumber":[
+          {
+            "kode": "5.3.1.1",
+            "dokumen":"Peraturan rektor tentang kebebasan akademik, kebebasan mimbar akademik, dan otonomi keilmuan"
+          },
+          {
+            "kode": "5.3.1.2",
+            "dokumen":"Bentuk Otonomi Keilmuan Dosen dan Mahasiswa IAIN Padangsidimpuan"
+          },
+          {
+            "kode": "5.3.1.3",
+            "dokumen":"Bentuk pelaksanaan Kebebasan Akademik dan Kebebasan Mimbar Akademik IAIN Padangsidimpuan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "5.3.2",
+        "isi": "Sistem pengembangan suasana akademik yang kondusif bagi pebelajar untuk meraih prestasi akademik yang maksimal.",
+        "dokumen_sumber":[
+          {
+            "kode": "5.3.2.1",
+            "dokumen":"Pedoman sistem pengembangan suasana akademik"
+          },
+          {
+            "kode": "5.3.2.2",
+            "dokumen":"Laporan pelaksanaan sistem pengembangan suasana akademik"
+          },
+          {
+            "kode": "5.3.2.3",
+            "dokumen":"Strategi Dukungan Institusi untuk penciptaan suasana akademik"
+          },
+          {
+            "kode": "5.3.2.4",
+            "dokumen":"Program implementasi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "standar": 6,
+    "judul" : "PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI",
+    "aspek": ["PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI"],
+    "butir": [
+      {
+        "nomor": "6.1.1",
+        "isi": "Dokumen pengelolaan dana yang mencakup perencanaan penerimaan, pengalokasian, pelaporan, audit, monitoring dan evaluasi, serta pertanggungjawaban kepada pemangku kepentingan.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.1.1",
+            "dokumen":"Pedoman pengelolaan dana (BLU, BOPTN, APBN)"
+          },
+          {
+            "kode": "6.1.1.2",
+            "dokumen":"Laporan keuangan (BLU, BOPTN, APBN)"
+          },
+          {
+            "kode": "6.1.1.3",
+            "dokumen":"SOP Perencanaan"
+          },
+          {
+            "kode": "6.1.1.4",
+            "dokumen":"Dewan Pengawas"
+          },
+          {
+            "kode": "6.1.1.5",
+            "dokumen":"Laporan Kinerja Pegawai"
+          },
+          {
+            "kode": "6.1.1.6",
+            "dokumen":"Satuan Pengawas Internal"
+          },
+          {
+            "kode": "6.1.1.7",
+            "dokumen":"Usulan Rencana Bisnis dan Anggaran"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.1.2",
+        "isi": "Mekanisme penetapan biaya pendidikan mahasiswa dengan mengikutsertakan semua pemangku kepentingan internal.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.2.1",
+            "dokumen":"dokumen Petunjuk Teknis UKT"
+          },
+          {
+            "kode": "6.1.2.2",
+            "dokumen":"Analisis Kebutuhan UKT"
+          },
+          {
+            "kode": "6.1.2.3",
+            "dokumen":"Review UKT"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.1.3",
+        "isi": "Kebijakan mengenai pembiayaan mahasiswa yang berpotensi secara akademik dan kurang mampu secara ekonomi, serta persentase mahasiswa yang mendapatkan keringanan atau pembebasan biaya pendidikan terhadap total mahasiswa.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.3.1",
+            "dokumen":"SK Beasiswa S2 dan S3"
+          },
+          {
+            "kode": "6.1.3.2",
+            "dokumen":"Pemberian Penghargaan Prestasi Mahasiswa"
+          },
+          {
+            "kode": "6.1.3.3",
+            "dokumen":"Petunjuk Teknis Pemberian Beasiswa"
+          },
+          {
+            "kode": "6.1.3.4",
+            "dokumen":"Pengajuan dan Penetapan Penerima Beasiswa"
+          },
+          {
+            "kode": "6.1.3.5",
+            "dokumen":"Peraturan Pengelolaan dan Penyelenggaraan Pendidikan"
+          },
+          {
+            "kode": "6.1.3.6",
+            "dokumen":"Pembiayaan Mahasiswa Penerima Beasiswa"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.1.4",
+        "isi": "Persentase dana perguruan tinggi yang berasal dari mahasiswa (SPP dan dana lainnya).",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.4.1",
+            "dokumen":"Penerimaan Pendapatan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.1.5",
+        "isi": "Penggunaan dana untuk operasional (pendidikan, penelitian, pengabdian pada masyarakat, termasuk gaji dan upah, dan investasi prasarana, saran, dan SDM). Jumlah dana operasional/ mahasiswa/tahun.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.5.1",
+            "dokumen":"Penerimaan dan Penggunaan Dana"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.1.6",
+        "isi": "Dana penelitian dalam tiga tahun terakhir. Rata-rata dana penelitian/dosen tetap/tahun.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.6.1",
+            "dokumen":"Dana Penelitian Dosen"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.1.7",
+        "isi": "Dana yang diperoleh dalam rangka pelayanan/pengabdian kepada masyarakat dalam tiga tahun terakhir. Rata-rata dana pelayanan/pengabdian kepada masyarakat /dosen tetap/tahun.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.7.1",
+            "dokumen":"Dana Pengabdian Dosen"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.1.8",
+        "isi": "Sistem monitoring dan evaluasi pendanaan internal untuk pemanfaatan dana yang lebih efektif, transparan dan memenuhi aturan keuangan yang berlaku.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.8.1",
+            "dokumen":"Laporan monev keuangan oleh WR 2/Kabiro AUK"
+          },
+          {
+            "kode": "6.1.8.2",
+            "dokumen":"Laporan monev keuangan oleh SPI"
+          },
+          {
+            "kode": "6.1.8.3",
+            "dokumen":"Laporan monev keuangan oleh Irjen"
+          },
+          {
+            "kode": "6.1.8.4",
+            "dokumen":"Tindak Lanjut Monev"
+          },
+          {
+            "kode": "6.1.8.5",
+            "dokumen":"Piagam Audit"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.1.9",
+        "isi": "Laporan audit keuangan oleh auditor eksternal yang transparan dan dapat diakses oleh semua pemangku kepentingan.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.1.9.1",
+            "dokumen":"Laporan audit Akuntan Publik"
+          },
+          {
+            "kode": "6.1.9.2",
+            "dokumen":"Laporan audit BPK"
+          },
+          {
+            "kode": "6.1.9.3",
+            "dokumen":"Laporan audit Irjen"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.2.1",
+        "isi": "Sistem pengelolaan prasarana dan sarana berupa kebijakan, peraturan, dan pedoman/panduan untuk aspek: pengembangan dan pencatatan, penetapan penggunaan, keamanan dan keselamatan penggunaan, pemeliharaan/perbaikan/kebersihan.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.1.1",
+            "dokumen":"Pedoman pengelolaan prasarana dan sarana"
+          },
+          {
+            "kode": "6.2.1.2",
+            "dokumen":"SOP pengadaan prasarana dan sarana"
+          },
+          {
+            "kode": "6.2.1.3",
+            "dokumen":"SOP pemeliharaan prasarana dan sarana"
+          },
+          {
+            "kode": "6.2.1.4",
+            "dokumen":"Dokumen Daftar prasarana dan sarana pembelajaran"
+          },
+          {
+            "kode": "6.2.1.5",
+            "dokumen":"Rekap pelaksanaan pengelolaan prasarana dan sarana (SOP)"
+          },
+          {
+            "kode": "6.2.1.6",
+            "dokumen":"Surat peminjaman sarpras dan jawabannya"
+          },
+          {
+            "kode": "6.2.1.7",
+            "dokumen":"Hasil Survey Kepuasan Layanan Rumah Tangga"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.2.2",
+        "isi": "Kepemilikan dan penggunaan lahan.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.2.1",
+            "dokumen":"Daftar pemilikan tanah"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.2.3",
+        "isi": "Kecukupan dan mutu prasarana yang dikelola perguruan tinggi, untuk kegiatan akademik dan non-akademik.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.3.1",
+            "dokumen":"Prasarana Kegiatan Akademik dan Non Akademik"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.2.4",
+        "isi": "Rencana pengembangan prasarana.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.4.1",
+            "dokumen":"Pengembangan Kampus"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.2.5",
+        "isi": "Kecukupan koleksi perpustakaan, aksesibilitas termasuk ketersediaan dan kemudahan akses e-library.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.5.1",
+            "dokumen":"Perpustakaan IAIN"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.2.6",
+        "isi": "Aksesibilitas dan pemanfaatan bahan pustaka, mencakup waktu layanan, mutu layanan (kemudahan mencari bahan pustaka, keleluasaan meminjam, bantuan mencarikan bahan pustaka dari perpustakaan lain), dan ketersediaan layanan e-library.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.6.1",
+            "dokumen":"Aksesibilitas Bahan Pustaka"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.2.7",
+        "isi": "Penyediaan prasarana dan sarana pembelajaran terpusat untuk mendukung interaksi akademik antara mahasiswa, dosen, pakar, dan nara sumber lainnya dalam kegiatan-kegiatan pembelajaran dan aksesibilitasnya.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.2.7.1",
+            "dokumen":"Daftar prasana dan sarana pembelajaran terpusat"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.3.1",
+        "isi": "Sistem informasi dan fasilitas yang digunakan perguruan tinggi dalam proses pembelajaran (hardware, software, e-learning, e-library).",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.1.1",
+            "dokumen":"Panduan atau Pedoman Sistem Informasi"
+          },
+          {
+            "kode": "6.3.1.2",
+            "dokumen":"Pedoman e-learning"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.3.2",
+        "isi": "Sistem informasi dan fasilitas yang digunakan perguruan tinggi dalam administrasi (akademik dan umum).",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.2.1",
+            "dokumen":"Pedoman sistem informasi pengelolaan administrasi umum"
+          },
+          {
+            "kode": "6.3.2.2",
+            "dokumen":"Pedoman sistem tata persuratan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.3.3",
+        "isi": "Sistem informasi untuk pengelolaan prasarana dan sarana yang transparan, akurat dan cepat.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.3.1",
+            "dokumen":"Pedoman sistem informasi pengelolaan prasarana dan sarana"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.3.4",
+        "isi": "Sistem pendukung pengambilan keputusan (decision support system) yang lengkap, efektif, dan obyektif.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.4.1",
+            "dokumen":"Sistem Pendukung Pengambil Keputusan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.3.5",
+        "isi": "Manfaat sistem informasi untuk mahasiswa dan dosen serta akses terhadap sumber informasi.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.5.1",
+            "dokumen":"Sistem Informasi Komunikasi Internal dan Eksternal"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.3.6",
+        "isi": "Perguruan tinggi memiliki kapasitas internet dengan rasio bandwidth per mahasiswa yang memadai. Kapasitas bandwidth (dalam Kbps per mahasiswa).",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.6.1",
+            "dokumen":"Kapasitas Internet Mahasiswa"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.3.7",
+        "isi": "Aksesibilitas data dalam sistem informasi.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.7.1",
+            "dokumen":"Aksesibilitas Data"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "6.3.8",
+        "isi": "Blue print pengembangan, pengelolaan, dan pemanfaatan sistem informasi yang lengkap.",
+        "dokumen_sumber":[
+          {
+            "kode": "6.3.8.1",
+            "dokumen":"Dokumen blue print pengembangan, pengelolaan, dan pemanfaatan sistem informasi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "standar": 7,
+    "judul" : "PENELITIAN, PELAYANAN/PENGABDIAM KEPADA MASYARAKAT DAN KERJASAMA",
+    "aspek": ["PENELITIAN, PELAYANAN/PENGABDIAM KEPADA MASYARAKAT DAN KERJASAMA"],
+    "butir": [
+      {
+        "nomor": "7.1.1",
+        "isi": "Pemilikan pedoman pengelolaan penelitian yang lengkap, dan dikembangkan serta dipublikasikan oleh institusi.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.1.1",
+            "dokumen":"Pedoman pengelolaan penelitian yang lengkap, dan dikembangkan serta dipublikasikan oleh institusi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.1.2",
+        "isi": "Jumlah penelitian dosen tetap selama tiga tahun terakhir.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.2.1",
+            "dokumen":"Rekapitulasi judul penelitian"
+          },
+          {
+            "kode": "7.1.2.2",
+            "dokumen":"Dokumen laporan penelitian"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.1.3",
+        "isi": "Jumlah artikel ilmiah yang dihasilkan oleh dosen tetap dalam tiga tahun terakhir.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.3.1",
+            "dokumen":"Rekapitulasi judul artikel"
+          },
+          {
+            "kode": "7.1.3.2",
+            "dokumen":"Dokumen artikel"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.1.4",
+        "isi": "Banyaknya artikel yang tercatat dalam lembaga sitasi.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.4.1",
+            "dokumen":"Rekap sitasi publikasi ilmiah"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.1.5",
+        "isi": "Karya dosen dan atau mahasiswa yang berupa paten/hak atas kekayaan intelektual (HaKI)/karya yang mendapatkan penghargaan tingkat nasional/internasional.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.5.1",
+            "dokumen":"Rekap dokumen hak paten"
+          },
+          {
+            "kode": "7.1.5.2",
+            "dokumen":"Rekap dokumen HaKI"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.1.6",
+        "isi": "Kebijakan dan upaya perguruan tinggi dalam menjamin keberlanjutan penelitian.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.1.6.1",
+            "dokumen":"Kebijakan dan Upaya Perguruan Tinggi dalam Menjamin Keberlanjutan Penelitian"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.2.1",
+        "isi": "Pemilikan pedoman pengelolaan pelayanan/pengabdian kepada masyarakat yang lengkap, dan dikembangkan serta dipublikasikan oleh institusi.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.2.1.1",
+            "dokumen":"Pedoman pengelolaan PkM"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.2.2",
+        "isi": "Jumlah kegiatan PkM dosen tetap selama tiga tahun terakhir.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.2.2.1",
+            "dokumen":"Rekapitulasi judul PkM"
+          },
+          {
+            "kode": "7.2.2.2",
+            "dokumen":"Rekapitulasi laporan PkM"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.2.3",
+        "isi": "Kebijakan dan upaya perguruan tinggi dalam menjamin keberlanjutan kegiatan PkM.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.2.3.1",
+            "dokumen":"Kebijakan dan Upaya Perguruan Tinggi dalam Menjamin Keberlanjutan Kegiatan PkM"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.3.1",
+        "isi": "Kebijakan, pengelolaan, dan monev oleh perguruan tinggi dalam kegiatan kerjasama untuk menjamin aspek: mutu kegiatan kerjasama, relevansi kegiatan kerjasama, produktivitas kegiatan kerjasama, keberlanjutan kegiatan kerjasama.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.3.1.1",
+            "dokumen":"Daftar kerjasama dengan instansi dalam negeri"
+          },
+          {
+            "kode": "7.3.1.2",
+            "dokumen":"Dokumen MoU kerjasama dengan instansi dalam negeri"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.3.2",
+        "isi": "Kegiatan kerjasama dengan instansi di dalam negeri dalam tiga tahun terakhir.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.3.2.1",
+            "dokumen":"Daftar kerjasama dengan instansi luar negeri"
+          },
+          {
+            "kode": "7.3.2.2",
+            "dokumen":"Dokumen MoU kerjasama dengan instansi luar negeri"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.3.3",
+        "isi": "Kegiatan kerjasama dengan instansi di luar negeri dalam tiga tahun terakhir.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.3.3.1",
+            "dokumen":"Kegiatan Kerjasama dengan Instansi di Luar Negeri dalam Tiga Tahun Terakhir"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.3.4",
+        "isi": "Monitoring dan evaluasi pelaksanaan dan hasil kerja sama secara berkala.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.3.4.1",
+            "dokumen":"Pedoman monev kerjasama"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.3.5",
+        "isi": "manfaat dan kepuasan mitra kerja sama.",
+        "dokumen_sumber":[
+          {
+            "kode": "7.3.5.1",
+            "dokumen":"Instrumen survey pemanfaatan dan kepuasan hasil kerjasama"
+          },
+          {
+            "kode": "7.3.5.2",
+            "dokumen":"Laporan survey pemanfaatan dan kepuasan hasil kerjasama"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
+          }
+        ]
+      },
+      {
+        "nomor": "7.3.6",
+        "isi": "Aksesibilitas dan pemanfaatan bahan pustaka, mencakup: (1) waktu layanan (2) mutu layanan (kemudahan mencari bahan pustaka, keleluasaan meminjam, bantuan mencarikan bahan pustaka dari perpustakaan lain) (3) ketersediaan layanan e-library",
+        "dokumen_sumber":[
+          {
+            "kode": "7.3.6.1",
+            "dokumen":"(1) Dokumen kesempatan belajar/ pelatihan (2) pemberian fasilitas termasuk dana (3) jenjang karir yang jelas studi banding"
+          },
+          {
+            "kode": "7.3.6.2",
+            "dokumen":"(1) Program Kerja pengelolaan sumber daya manusia, (2) instrumen pengukuran kepuasan dosen, pustakawan, laboran, teknisi, tenaga administrasi, dan tenaga pendukung, analisis hasil survei kepuasan dosen, pustakawan, laboran, teknisi, tenaga administrasi, dan tenaga pendukung,"
+          },
+          {
+            "kode": "7.3.6.3",
+            "dokumen":"(1) Dokumen kesempatan belajar/ pelatihan (2) pemberian fasilitas termasuk dana (3) jenjang karir yang jelas studi banding"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "-",
+            "dokumen": "-"
           }
         ]
       }

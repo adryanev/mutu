@@ -1,14 +1,14 @@
 <?php
 
 use akreditasi\models\DokumentasiS1ProdiForm;
-use common\models\DokumentasiS1Prodi;
-use common\models\DokumentasiS1ProdiStandar1;
-use common\models\DokumentasiS1ProdiStandar2;
-use common\models\DokumentasiS1ProdiStandar3;
-use common\models\DokumentasiS1ProdiStandar4;
-use common\models\DokumentasiS1ProdiStandar5;
-use common\models\DokumentasiS1ProdiStandar6;
-use common\models\DokumentasiS1ProdiStandar7;
+use common\models\S7DokumentasiS1Prodi;
+use common\models\S7DokumentasiS1ProdiStandar1;
+use common\models\S7DokumentasiS1ProdiStandar2;
+use common\models\S7DokumentasiS1ProdiStandar3;
+use common\models\S7DokumentasiS1ProdiStandar4;
+use common\models\S7DokumentasiS1ProdiStandar5;
+use common\models\S7DokumentasiS1ProdiStandar6;
+use common\models\S7DokumentasiS1ProdiStandar7;
 // use common\models\DokumenBorangS1Prodi;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
@@ -16,14 +16,14 @@ use yii\bootstrap\Modal;
 use yii\bootstrap\Progress;
 use yii\web\View;
 /* @var $this yii\web\View */
-/* @var $borangProdi DokumentasiS1Prodi */
-/* @var $standar1 DokumentasiS1ProdiStandar1 */
-/* @var $standar2 DokumentasiS1ProdiStandar2 */
-/* @var $standar3 DokumentasiS1ProdiStandar3 */
-/* @var $standar4 DokumentasiS1ProdiStandar4 */
-/* @var $standar5 DokumentasiS1ProdiStandar5 */
-/* @var $standar6 DokumentasiS1ProdiStandar6 */
-/* @var $standar7 DokumentasiS1ProdiStandar7 */
+/* @var $borangProdi S7DokumentasiS1Prodi */
+/* @var $standar1 S7DokumentasiS1ProdiStandar1 */
+/* @var $standar2 S7DokumentasiS1ProdiStandar2 */
+/* @var $standar3 S7DokumentasiS1ProdiStandar3 */
+/* @var $standar4 S7DokumentasiS1ProdiStandar4 */
+/* @var $standar5 S7DokumentasiS1ProdiStandar5 */
+/* @var $standar6 S7DokumentasiS1ProdiStandar6 */
+/* @var $standar7 S7DokumentasiS1ProdiStandar7 */
 /* @var $json */
 
 $this->title='Isi Dokumentasi';

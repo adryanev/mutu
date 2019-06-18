@@ -1,6 +1,6 @@
 <?php
 
-use common\models\Akreditasi;
+use common\models\S7Akreditasi;
 use common\models\PencarianDokumentasiProdiForm;
 use common\models\Program;
 use common\models\ProgramStudi;
@@ -10,7 +10,7 @@ use yii\bootstrap\Html;
 
 /* @var $this yii\web\View */
 /* @var $model PencarianDokumentasiProdiForm */
-/* @var $dataAkreditasi Akreditasi[] */
+/* @var $dataAkreditasi S7Akreditasi[] */
 /* @var $dataProgram Program[] */
 
 
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4 class="card-title">Form Dokumentasi</h4>
                 <?php $form = ActiveForm::begin() ?>
 
-                    <?=$form->field($model,'akreditasi')->dropDownList($dataAkreditasi,['prompt'=>'Pilih Akreditasi'])?>
+                    <?=$form->field($model,'akreditasi')->dropDownList($dataAkreditasi,['prompt'=>'Pilih S7Akreditasi'])?>
                     <?=$form->field($model,'program')->dropDownList($dataProgram,['id'=>'id_program','prompt'=>'Pilih Jenjang'])?>
                     <?=$form->field($model,'id_prodi')->widget(DepDrop::class,[
                         'options' => ['id' => 'id_prodi'],
