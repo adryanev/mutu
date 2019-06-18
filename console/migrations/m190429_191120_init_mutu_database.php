@@ -85,17 +85,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
-        $this->createTable('{{%s7_akreditasi_prodi_s2}}',[
-            'id'=>$this->primaryKey(),
-            'id_akreditasi'=>$this->integer(),
-            'id_prodi'=>$this->integer(),
-            'progress'=>$this->float(),
-            'peringkat'=>$this->char(1),
-            'skor'=>$this->integer(3),
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer()
-        ]);
-        $this->createTable('{{%s7_akreditasi_prodi_s3}}',[
+
+        $this->createTable('{{%s7_akreditasi_prodi_pasca}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
@@ -126,7 +117,8 @@ class m190429_191120_init_mutu_database extends Migration
         ]);
         $this->createTable('{{%s7_borang_diploma_akademi}}',[
             'id'=>$this->primaryKey(),
-            'id_akreditasi_prodi_diploma'=>$this->integer(),
+            'id_akreditasi'=>$this->integer(),
+            'id_fakultas'=>$this->integer(),
             'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
@@ -169,33 +161,18 @@ class m190429_191120_init_mutu_database extends Migration
         ]);
 
 
-        $this->createTable('{{%s7_borang_s2_prodi}}',[
+        $this->createTable('{{%s7_borang_pasca_prodi}}',[
             'id'=>$this->primaryKey(),
-            'id_akreditasi_prodi_s2'=>$this->integer(),
+            'id_akreditasi_prodi_pasca'=>$this->integer(),
             'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
 
-        $this->createTable('{{%s7_borang_s2_fakultas}}',[
+        $this->createTable('{{%s7_borang_pasca_fakultas}}',[
             'id'=>$this->primaryKey(),
-            'id_akreditasi_prodi_s2'=>$this->integer(),
-            'progress'=>$this->float(),
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer()
-        ]);
-
-        $this->createTable('{{%s7_borang_s3_prodi}}',[
-            'id'=>$this->primaryKey(),
-            'id_akreditasi_prodi_s3'=>$this->integer(),
-            'progress'=>$this->float(),
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer()
-        ]);
-
-        $this->createTable('{{%s7_borang_s3_fakultas}}',[
-            'id'=>$this->primaryKey(),
-            'id_akreditasi_prodi_s3'=>$this->integer(),
+            'id_akreditasi'=>$this->integer(),
+            'id_fakultas'=>$this->integer(),
             'progress'=>$this->float(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
@@ -670,10 +647,8 @@ class m190429_191120_init_mutu_database extends Migration
         $this->dropTable('{{%s7_borang_s1_prodi_standar2}}');
         $this->dropTable('{{%s7_borang_s1_prodi_standar1}}');
         $this->dropTable('{{%s7_detail_borang_s1_prodi_standar1}}');
-        $this->dropTable('{{%s7_borang_s3_fakultas}}');
-        $this->dropTable('{{%s7_borang_s3_prodi}}');
-        $this->dropTable('{{%s7_borang_s2_fakultas}}');
-        $this->dropTable('{{%s7_borang_s2_prodi}}');
+        $this->dropTable('{{%s7_borang_pasca_fakultas}}');
+        $this->dropTable('{{%s7_borang_pasca_prodi}}');
         $this->dropTable('{{%s7_dokumen_borang_s1_fakultas}}');
         $this->dropTable('{{%s7_borang_s1_fakultas}}');
         $this->dropTable('{{%s7_dokumen_borang_s1_prodi}}');
@@ -681,8 +656,7 @@ class m190429_191120_init_mutu_database extends Migration
         $this->dropTable('{{%s7_borang_diploma_akademi}}');
         $this->dropTable('{{%s7_borang_diploma_prodi}}');
         $this->dropTable('{{%s7_akreditasi_institusi}}');
-        $this->dropTable('{{%s7_akreditasi_prodi_s3}}');
-        $this->dropTable('{{%s7_akreditasi_prodi_s2}}');
+        $this->dropTable('{{%s7_akreditasi_prodi_pasca}}');
         $this->dropTable('{{%s7_akreditasi_prodi_s1}}');
         $this->dropTable('{{%s7_akreditasi_prodi_diploma}}');
         $this->dropTable('{{%s7_akreditasi}}');
