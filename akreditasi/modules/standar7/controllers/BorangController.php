@@ -98,7 +98,7 @@ class BorangController extends \yii\web\Controller
                 $dataProdi = ProgramStudi::findAll(['jenjang'=>$id]);
                 foreach ($dataProdi as $data){
                     $id = $data->id;
-                    $nama = $data->nama . '('.$data->jenjang.')';
+                    $nama = $data->nama;
                     $newArray = ['id'=>$id,'name'=>$nama];
                     $arrayProdi[] = $newArray;
                 }
