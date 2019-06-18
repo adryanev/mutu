@@ -23,90 +23,101 @@ $this->params['breadcrumbs'][] = $this->title;
 $identity = Yii::$app->user->identity;
 
 ?>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header card-header-icon" data-background-color="green">
-                    <i class="material-icons">file_copy</i>
-                </div>
-                <div class="card-content">
-                    <h4 class="card-title">Form Borang Prodi</h4>
-                    <?php $form = ActiveForm::begin() ?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <ul class="nav nav-pills nav-pills-success">
+                    <li class="active">
+                        <a href="#pill1" data-toggle="tab">Akreditasi Program Studi</a>
+                    </li>
+                    <li>
+                        <a href="#pill2" data-toggle="tab">Akreditasi Program Studi - Fakultas</a>
+                    </li>
+                    <?php if ($identity->isAdminInstitusi() || $identity->is_institusi === 1): ?>
+                        <li>
+                            <a href="#pill3" data-toggle="tab">Akreditasi Institusi</a>
+                        </li>
+                    <?php endif ?>
+                </ul>
 
-                    <?= $form->field($model, 'akreditasi')->dropDownList($dataAkreditasiProdi, ['prompt' => 'Pilih S7Akreditasi']) ?>
-                    <?= $form->field($model, 'jenjang')->dropDownList($dataProgram, ['id' => 'jenjang', 'prompt' => 'Pilih Jenjang']) ?>
-                    <?= $form->field($model, 'id_prodi')->widget(DepDrop::class, [
-                        'options' => ['id' => 'id_prodi'],
-                        'type' => DepDrop::TYPE_SELECT2,
-                        'pluginOptions' => [
-                            'depends' => ['jenjang'],
-                            'placeholder' => 'Pilih Program Studi',
-                            'url' => [\yii\helpers\Url::toRoute(['borang/cari-prodi'])],
-                        ]
-                    ])->label('Program Studi') ?>
-                    <?= $form->field($model, 'borang_untuk')->dropDownList(['prodi' => 'Program Studi'], ['prompt' => 'Pilih borang untuk']) ?>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="pill1">
+                        <div class="card">
+                            <div class="card-content">
+                                <h4 class="card-title">Form Borang Prodi</h4>
+                                <?php $form = ActiveForm::begin() ?>
 
-                    <div class="form-group">
-                        <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>
+                                <?= $form->field($model, 'akreditasi')->dropDownList($dataAkreditasiProdi, ['prompt' => 'Pilih S7Akreditasi']) ?>
+                                <?= $form->field($model, 'jenjang')->dropDownList($dataProgram, ['id' => 'jenjang', 'prompt' => 'Pilih Jenjang']) ?>
+                                <?= $form->field($model, 'id_prodi')->widget(DepDrop::class, [
+                                    'options' => ['id' => 'id_prodi'],
+                                    'type' => DepDrop::TYPE_SELECT2,
+                                    'pluginOptions' => [
+                                        'depends' => ['jenjang'],
+                                        'placeholder' => 'Pilih Program Studi',
+                                        'url' => [\yii\helpers\Url::toRoute(['borang/cari-prodi'])],
+                                    ]
+                                ])->label('Program Studi') ?>
+                                <?= $form->field($model, 'borang_untuk')->dropDownList(['prodi' => 'Program Studi'], ['prompt' => 'Pilih borang untuk']) ?>
+
+                                <div class="form-group">
+                                    <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>
+                                </div>
+
+                                <?php ActiveForm::end() ?>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <?php ActiveForm::end() ?>
-                </div>
-            </div>
-        </div>
+                    <div class="tab-pane active" id="pill2">
+                        <div class="card">
+                            <div class="card-content">
+                                <h4 class="card-title">Form Fakultas</h4>
+                                <?php $form = ActiveForm::begin() ?>
 
-    </div>
+                                <?= $form->field($modelFakultas, 'akreditasi')->dropDownList($dataAkreditasiProdi, ['prompt' => 'Pilih S7Akreditasi']) ?>
+                                <?= $form->field($modelFakultas, 'jenjang')->dropDownList($dataProgram, ['id' => 'jenjang', 'prompt' => 'Pilih Jenjang']) ?>
+                                <?= $form->field($modelFakultas, 'id_fakultas')->widget(\kartik\select2\Select2::class, [
+                                    'data' => ArrayHelper::map(\common\models\FakultasAkademi::find()->all(), 'id', 'nama')
+                                ])->label('Fakultas') ?>
+                                <?= $form->field($modelFakultas, 'borang_untuk')->dropDownList(['fakultas' => 'Fakultas'], ['prompt' => 'Pilih borang untuk']) ?>
 
+                                <div class="form-group">
+                                    <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>
+                                </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header card-header-icon" data-background-color="green">
-                    <i class="material-icons">file_copy</i>
-                </div>
-                <div class="card-content">
-                    <h4 class="card-title">Form Fakultas</h4>
-                    <?php $form = ActiveForm::begin() ?>
-
-                    <?= $form->field($modelFakultas, 'akreditasi')->dropDownList($dataAkreditasiProdi, ['prompt' => 'Pilih S7Akreditasi']) ?>
-                    <?= $form->field($modelFakultas, 'jenjang')->dropDownList($dataProgram, ['id' => 'jenjang', 'prompt' => 'Pilih Jenjang']) ?>
-                    <?= $form->field($modelFakultas, 'id_fakultas')->widget(\kartik\select2\Select2::class,[
-                            'data' =>ArrayHelper::map(\common\models\FakultasAkademi::find()->all(),'id','nama')
-                    ])->label('Fakultas') ?>
-                    <?= $form->field($modelFakultas, 'borang_untuk')->dropDownList(['fakultas' => 'Fakultas'], ['prompt' => 'Pilih borang untuk']) ?>
-
-                    <div class="form-group">
-                        <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>
+                                <?php ActiveForm::end() ?>
+                            </div>
+                        </div>
                     </div>
 
-                    <?php ActiveForm::end() ?>
-                </div>
-            </div>
-        </div>
+                    <div class="tab-pane active" id="pill3">
+                        <div class="card">
+                            <div class="card-content">
+                                <h4 class="card-title">Form Institusi</h4>
+                                <?php $form = ActiveForm::begin() ?>
 
-    </div>
+                                <?= $form->field($modelInstitusi, 'akreditasi')->dropDownList($dataAkreditasiInstitusi, ['prompt' => 'Pilih S7Akreditasi']) ?>
+                                <?= $form->field($modelInstitusi, 'borang_untuk')->dropDownList(['institusi' => 'Institusi'], ['prompt' => 'Pilih borang untuk']) ?>
 
-<?php if ($identity->isAdminInstitusi() || $identity->is_institusi === 1): ?>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header card-header-icon" data-background-color="green">
-                    <i class="material-icons">file_copy</i>
-                </div>
-                <div class="card-content">
-                    <h4 class="card-title">Form Institusi</h4>
-                    <?php $form = ActiveForm::begin() ?>
+                                <div class="form-group">
+                                    <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>
+                                </div>
 
-                    <?= $form->field($modelInstitusi, 'akreditasi')->dropDownList($dataAkreditasiInstitusi, ['prompt' => 'Pilih S7Akreditasi']) ?>
-                    <?= $form->field($modelInstitusi, 'borang_untuk')->dropDownList(['institusi' => 'Institusi'], ['prompt' => 'Pilih borang untuk']) ?>
+                                <?php ActiveForm::end() ?>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>
                     </div>
 
-                    <?php ActiveForm::end() ?>
                 </div>
+
             </div>
+
         </div>
     </div>
-<?php endif ?>
+
+</div>
+
