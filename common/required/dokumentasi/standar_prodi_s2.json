@@ -1,60 +1,2291 @@
 [
   {
     "standar": 1,
-    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN",
-    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian","Sosialisasi"],
+    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN ",
+    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian ","Sosialisasi "],
     "butir":[
       {
-        "nomor": "1.1.a",
+        "nomor": "1.1.a  ",
         "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
         "dokumen_sumber":[
           {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
-          },
-          {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+            "kode": " 1.1.a- 01-01-01 ",
+            "dokumen":"Envisioning yang memuat:  Visi, Misi, Tujuan, Nilai Dasar, Dan Keyakinan Dasar  "
           }
 
         ],
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.a-01-02-01",
-            "dokumen": "Dokumen Daftar Hadir"
+            "kode": "1.1.a- 01-02-01",
+            "dokumen": "Dokumen daftar hadir "
+          },
+		   {
+            "kode": "1.1.a- 01-02-02",
+            "dokumen": "Berita acara, dan notulensi penyusunan visi"
+          },
+		   {
+            "kode": "1.1.a- 01-02-03 ",
+            "dokumen": "Dokumen daftar hadir penyusunan dan review visi, misi, tujuan, dan sasaran (sebanyak yang sudah dilakukan Prodi)"
+          },
+		    {
+            "kode": "1.1.a- 01-02-04",
+            "dokumen": "Dokumen berita acara penyusunan visi, misi, tujuan, dan sasaran (sebanyak yang sudah dilakukan Prodi)  "
+          }
+        ]
+     
+  },
+ 
+      {
+        "nomor": "1.1.b",
+        "isi": "Strategi pencapaian sasaran  dengan  rentang waktu  yang  jelas  dan didukung oleh Dokumen.","dokumen_sumber":[
+          {
+            "kode": " 1.1.b- 01-01-01 ",
+            "dokumen":"RIP dan Renstra"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "1.1.b- 01-02-01",
+            "dokumen": "Dokumen daftar hadir penyusunan RIP dan Renstra Prodi"
+          }
+        ]
+     
+  },
+  
+        {
+        "nomor": "1.2      ",
+        "isi": "Sosialisasi visi-misi. Sosialisasi yang efektif tercermin  dari tingkat pemahaman seluruh pemangku kepentingan internal yaitu sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan.","dokumen_sumber":[
+          {
+            "kode": "1.2-01-01-01",
+            "dokumen":"1.Dialog interaktif"
+          },
+		    {
+            "kode": "1.2-01-01-02",
+            "dokumen":"2.TV"
+          },
+		   {
+            "kode": "1.2-01-01-03",
+            "dokumen":"3.  Radio"
+          },
+		   {
+            "kode": "1.2-01-01-04",
+            "dokumen":"4.Rapat Kerja"
+          },
+		   {
+            "kode": "1.2-01-01-05",
+            "dokumen":"5.Rapat Senat "
+          },
+		   {
+            "kode": "1.2-01-01-06 ",
+            "dokumen":"6.Orientasi Penerimaan Mahasiswa Baru "
+          },
+		   {
+            "kode": "1.2-01-01-07",
+            "dokumen":"7.Brosur"
+          },
+		   {
+            "kode": "1.2-01-01-08 ",
+            "dokumen":"8.Booklet "
+          },
+		   {
+            "kode": "1.2-01-01-09 ",
+            "dokumen":"9.Buku pedoman akademik "
+          },
+		   {
+            "kode": "1.2-01-01-10 ",
+            "dokumen":"10. Survei Keefektifan Visi Misi"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "1.1.b- 01-02-01",
+            "dokumen": "Dokumen daftar hadir penyusunan RIP dan Renstra Prodi"
+          },
+		  {
+            "kode": "1.2-01-02-01",
+            "dokumen": "1.Dokumen daftar hadir acara sosialisasi visi, misi, tujuan, dan sasaran Prodi "
+          },
+		  {
+            "kode": "1.2-01-02-02",
+            "dokumen": "2. Dokumen notulensi acara sosialisasi visi, misi, tujuan, dan sasaran "
           }
         ]
       }
     ]
   },
-  {
+  
+  
+   {
     "standar": 2,
-    "judul" : "VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN",
-    "aspek": [" Visi, Misi, Tujuan dan Sasaran serta Strategi Pencapaian","Sosialisasi"],
+    "judul" : "TATA PAMONG, KEPEMIMPINAN, SISTEM PENGELOLAAN, DAN PENJAMINAN MUTU",
+    "aspek": ["Sistem Tata Pamong ","Penjaminan Mutu","Sistem Pengelolaan"," Penjaminan Mutu","Umpan Balik","Keberlanjutan"],
     "butir":[
       {
-        "nomor": "1.1.a",
-        "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
-        "dokumen_sumber":[
+        "nomor": "2.1",
+        "isi": "Tata  pamong  menjamin terwujudnya  visi, terlaksananya  misi, tercapainya  tujuan, berhasilnya  strategi  yang digunakan secara kredibel, transparan,  akuntabel, bertanggung  jawab,  dan adil.","dokumen_sumber":[
           {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+            "kode": "2.1-01-01-01",
+            "dokumen":"SK Pendirian"
           },
-          {
-            "kode": " 1.1.a-01-01-01",
-            "dokumen":"Envisioning yang memuat: Visi, Misi, Tujuan, Nilai Dasar, Dan Sasaran Program Studi"
+		  {
+            "kode": "2.1-01-01-02",
+            "dokumen":"Organisasi dan Tata Kerja"
+          },
+		  {
+            "kode": "2.1-01-01-03",
+            "dokumen":"Statuta PT"
+          },
+		  {
+            "kode": "2.1-01-01-04",
+            "dokumen":"Dokumen rumusan tata pamong termasuk pemilihan struktur prodi yang kredibel, transparan, akuntabel, bertanggungjawab, dan adil "
+          },
+		   {
+            "kode": "2.1-01-01-05",
+            "dokumen":"Bagan Organisasi"
           }
 
         ],
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.a-01-02-01",
-            "dokumen": "Dokumen Daftar Hadir"
+            "kode": "2.1-01-02-01",
+            "dokumen": "Dokumen  daftar  hadir  penyusunan  tata pamong "
+          },
+		   {
+            "kode": "2.1-01-02-02",
+            "dokumen": "Dokumen  berita  acara  penyusunan  tata pamong."
+          }
+        ]
+      
+  },
+  
+  
+      {
+        "nomor": "2.1",
+        "isi": "Karakteristik kepemimpinan  yang efektif  (kepemimpinan operasional, kepemimpinan  organisasi, kepemimpinan publik).","dokumen_sumber":[
+          {
+            "kode": "2.2-01-01-01",
+            "dokumen":"Bukti keterlibatan Prodi dalam operasional"
+          },
+		  {
+            "kode": "2.2-01-01-02",
+            "dokumen":"Bukti keterlibatan Prodi dalam pengelolaan organisasi Fakultas/Sekolah Tinggi "
+          },
+		  {
+            "kode": "2.2-01-01-03 ",
+            "dokumen":"Bukti keterlibatan Prodi dalam aktivitas masyarakat/publik "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.2-01-02-01",
+            "dokumen": "Dokumen rumusan sistem kepemimpinan Prodi"
+          },
+		   {
+            "kode": "2.2-01-02-02",
+            "dokumen": "Dokumen daftar hadir penyusunan rumusan sistem kepemimpinan Prodi"
+          },
+		  {
+            "kode": "2.2-01-02-03 ",
+            "dokumen": "Dokumen berita acara penyusunan rumusan sistem kepemimpinan Prodi  "
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "2.3",
+        "isi": "Sistem pengelolaan fungsional dan operasional program studi mencakup:  (1) perencanaan,  (2) pengorganisasian,  (3) pengembangan staf, (4) pengawasan,  (5) pengarahan,  (6) representasi, dan  (7) penganggaran  yang dilaksanakan secara efektif. ","dokumen_sumber":[
+          {
+            "kode": "2.3-01-01-01",
+            "dokumen":"Renstra  unit pengelola PS/ universitas"
+          },
+		  {
+            "kode": "2.3-01-01-02",
+            "dokumen":"Rencana pengembangan program studi"
+          },
+		  {
+            "kode": "2.3-01-01-03",
+            "dokumen":"Standard Operating Procedure(SOP)"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.3-01-02-01",
+            "dokumen": "Dokumen daftar hadir penyusunan rumusan sistem pengelolaan Prodi "
+          },
+		   {
+            "kode": "2.3-01-02-02 ",
+            "dokumen": "Dokumen daftar hadir penyusunan rumusan sistem kepemimpinan Prodi"
+          },
+		  {
+            "kode": "2.2-01-02-03 ",
+            "dokumen": "Dokumen berita acara penyusunan rumusan sistem pengelolaan Prodi"
+          }
+        ]
+     
+  },
+  
+  
+    {
+        "nomor": "2.4",
+        "isi": "Penjaminan mutu di program studi:  (1) keberadaan kebijakan penjaminan mutu,  (2) sistem dokumentasi,  (3) tindak lanjut terhadap laporan pelaksanaan, dan  (4) akreditasi program studi.  ","dokumen_sumber":[
+          {
+            "kode": "2.4-01-01-01",
+            "dokumen":"Kebijakan evaluasi dan pengendalian mutu program yang efektif, Sistem Dokumentasi, laporan pelaksanaan "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.4-01-02-01",
+            "dokumen": "Dokumen SOP: Mutu Dosen; pembelajaran; kurikulum; pedoman akademik; pengembangan jurusan; pengendalian proses ujian; pelatihan; dan praktikum "
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "2.5 ",
+        "isi": "Penjaringan umpan balik  dan tindak lanjutnya. (1)  Sumber umpan balik antara lain dari: dosen, mahasiswa, alumni, pengguna lulusan. (2)  Pelaksanaan secara berkala (minimum sekali dalam tiga tahun) (3)  Tindak lanjut untuk perbaikan kurikulum, pelaksanaan proses pembelajaran, dan peningkatan kegiatan program studi. ","dokumen_sumber":[
+          {
+            "kode": "2.5-01-01-01",
+            "dokumen":"Survei proses pembelajaran melalui umpan balik dari dosen,mahasiswa, alumni, dan pengguna lulusan  "
+          },
+		  {
+            "kode": "2.5-01-01-01",
+            "dokumen":"Dokumen Rencana Tindak Lanjut  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.5-01-02-01",
+            "dokumen": "Dokumen berupa notulensi hasil diskusi/sharing dengan dosen, angket dan surat saran dan masukan dari mahasiswa dan users. "
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "2.6",
+        "isi": "Upaya-upaya yang telah dilakukan penyelenggara program studi untuk menjamin keberlanjutan (sustainability) program studi ini antara lain mencakup: (1)  Upaya untuk peningkatan animo calon mahasiswa (2)  Upaya peningkatan mutu manajemen (3)  Upaya untuk peningkatan mutu lulusan (4)  Upaya untuk pelaksanaan dan hasil kerjasama kemitraan (5)  Upaya dan prestasi memperoleh dana dari sumber selain dari mhs. ","dokumen_sumber":[
+          {
+            "kode": "2.6-01-01-01",
+            "dokumen":"Dokumen berita acara/surat tugas sosialisasi Prodi keluar;Leaflet Fak dan Prodi, CD profile Prodi, foto spanduk "
+          },
+		  {
+            "kode": "2.6-01-01-02",
+            "dokumen":"Dokumen bukti sertifikat/surat ket keikutsertaan sosialisasi QA; semua"
+          },
+		   {
+            "kode": "2.6-01-01-03",
+            "dokumen":"Dokumen/arsip hasil audit mutu internal Prodi stp semester; Sertifikat ISO (barangkali ada)"
+          },
+		   {
+            "kode": "2.6-01-01-04",
+            "dokumen":"Dokumen hasil/notulensi review kurikulum;"
+          },
+		   {
+            "kode": "2.6-01-01-05",
+            "dokumen":"Dokumen PKL, pelatihan IT, bahasa asing, sertifikasi kompetensi Prodi, pelatihan/ shortcourse2 lainnya, kuliah umum, studium general.  "
+          },
+		    {
+            "kode": "2.6-01-01-06",
+            "dokumen":"Dokumen MoU kerjasama kemitraan; Dokumen program dan hasil kerjasama "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "2.6-01-02-01",
+            "dokumen": "Dokumen daftar hadir review kurikulum;"
+          },
+		  {
+            "kode": "2.6-01-02-02",
+            "dokumen": "Dokumen berita acara review kurikulum;"
+          },
+		  {
+            "kode": "2.6-01-02-03",
+            "dokumen": "Dokumen bukti kegiatan ekstrakurikuler softskill;"
           }
         ]
       }
     ]
-  }
+  },
+  
+  
+  {
+    "standar": 3,
+    "judul" : "MAHASISWA DAN LULUSAN",
+    "aspek": ["Profil Mahasiswa dan Lulusan ","Layanan kepada Mahasiswa","Evaluasi Lulusan"," Himpunan Alumni "],
+    "butir":[
+      {
+        "nomor": "3.1.",
+        "isi": "Sistem rekrutmen calon mahasiswa baru: dokumentasi kebijakan dan persyaratan penerimaan. ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.1.a-01-01-01",
+            "dokumen":"Pedoman  Penerimaan  Mahasiswa Baru"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+      {
+        "nomor": "3.2.1.1",
+        "isi": "Rasio calon mahasiswa yang ikut seleksi terhadap daya tampung. ","dokumen_sumber":[
+          {
+            "kode": "3.2.1.1-01-01-01 ",
+            "dokumen":"Laporan Penerimaan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.2.1.2",
+        "isi": "Rasio mahasiswa baru yang melakukan registrasi terhadap calon mahasiswa baru yang lulus seleksi.","dokumen_sumber":[
+          {
+            "kode": "3.2.1.2-01-01-01",
+            "dokumen":"Laporan Penerimaan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.2.1.3",
+        "isi": "Rasio mahasiswa baru transfer terhadap mahasiswa baru bukan transfer","dokumen_sumber":[
+          {
+            "kode": "3.2.1.2-01-01-01",
+            "dokumen":"Laporan Penerimaan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.2.1.5",
+        "isi": "Rata-rata IPK ( = R IPK )","dokumen_sumber":[
+          {
+            "kode": "3.2.1.2-01-01-01",
+            "dokumen":"Laporan Penerimaan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.2.1.6",
+        "isi": "Persentase mahasiswa WNA terhadap jumlah mahasiswa (= M WNA ) ","dokumen_sumber":[
+          {
+            "kode": "3.2.1.2-01-01-01",
+            "dokumen":"Laporan Penerimaan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+   {
+        "nomor": "3.2.2",
+        "isi": "Penghargaan atas prestasi mahasiswa di bidang akademik.","dokumen_sumber":[
+          {
+            "kode": "3.2.2-01-01-01",
+            "dokumen":"Laporan Prestasi Mahasiswa Di Bidang Akademik"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.2.3.1",
+        "isi": "Persentase kelulusan tepat waktu (K TW ) ","dokumen_sumber":[
+          {
+            "kode": "3.2.3.1-01-01-01",
+            "dokumen":"Buku Wisuda"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.2.3.2",
+        "isi": "Persentase mahasiswa yang DO atau mengundurkan diri. ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.1.4.b-01-01-01",
+            "dokumen":"Laporan Wisuda"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "3.1.4.b-01-02-01",
+            "dokumen": "Buku Wisuda"
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.2.1",
+        "isi": "Layanan dan kegiatan kemahasiswaan (ragam, jenis, dan aksesibilitasnya) yang dapat dimanfaatkan untuk membina dan mengembangkan penalaran, minat, bakat, seni, dan kesejahteraan. ","dokumen_sumber":[
+          {
+            "kode": "3.2.1-01-01-01 ",
+            "dokumen":"Dokumen Jenis Layanan dan Standard Operating Procedures untuk setiap jenis layanan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.3.1",
+        "isi": "Upaya  pelacakan  dan perekaman data lulusan.",
+        "dokumen_sumber":[
+          {
+            "kode": "3.3.1-01-01-01",
+            "dokumen":"Laporan  Kegiatan  Survei  Pelacakan dan Perekaman Data Lulusan "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "3.3.1.a-01-02-01",
+            "dokumen": "Kuesioner"
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.3.2.1",
+        "isi": "Pendapat pengguna (employer) lulusan terhadap mutu alumni. ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.3.2.1-01-01-01",
+            "dokumen":"Laporan Survei Kualitas Alumni"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "3.3.1.b-01-02-01",
+            "dokumen": "Notulen Rapat"
+          }
+        ]
+     
+  },
+  
+  
+    {
+        "nomor": "3.3.2.2",
+        "isi": "Pemanfaatan hasil pelacakan untuk perbaikan dalam aspek:  (1) proses pembelajaran,  (2) penggalangan dana,  (3) informasi pekerjaan,  (4) membangun jejaring. ",
+        "dokumen_sumber":[
+          {
+            "kode": "3.3.2.2-01-01-01",
+            "dokumen":"Dokumen  Hasil  Pelacakan  untuk Perbaikan"
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "3.3.2-01-02-01 ",
+            "dokumen": "Kuesioner "
+          }
+        ]
+     
+  },
+  
+  
+  {
+        "nomor": "3.3.3",
+        "isi": "Profil  kesesuaian  bidang kerja  dengan  bidang  studi (keahlian) lulusan.","dokumen_sumber":[
+          {
+            "kode": "3.3.3-01-01-01 ",
+            "dokumen":"Survei  Masa  Tunggu  Alumni  dan Kesesuaian Bidang Kerja "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "3.3.3-01-02-01",
+            "dokumen": "Kuesioner"
+          }
+        ]
+     
+  },
+  
+   {
+        "nomor": "3.4.",
+        "isi": "3.4  Partisipasi alumni dalam mendukung pengembangan  program studi dalam bentuk:  (1)  Sumbangan dana (2)  Sumbangan fasilitas (3)  Masukan unt perbaikan proses pembelajaran (4)  Pengembangan jejaring","dokumen_sumber":[
+          {
+            "kode": "33.4-01-01-01",
+            "dokumen":"Berita Acara Partisipasi Alumni:  o  Sumbangan dana o  Sumbangan fasilitas o  Keterlibatan dalam kegiatan akademik o  Pengembangan jejaring o  Penyediaan fasilitas untuk kegiatan akademik "
+          }
+
+        ],
+        "dokumen_pendukung":
+        [
+		    {
+            "kode": "3.4.1-01-02-01",
+            "dokumen": "Foto kegiatan"
+          }
+        ]
+      }
+    ]
+  },
+  
+  
+   {
+    "standar": 4,
+    "judul" : "SUMBER DAYA MANUSIA",
+    "aspek": ["Sistem Seleksi dan Pengembangan ","Monitoring dan Evaluasi ","Dosen Tetap "," Dosen Tidak Tetap ","Upaya Peningkatan Sumber Daya Manusia","Tenaga Kependidikan"],
+    "butir":[
+      {
+        "nomor": "4.1",
+        "isi": "Pedoman  tertulis  tentang  sistem seleksi,  perekrutan,  penempatan, pengembangan,  retensi,  dan pemberhentian  dosen  dan  tenaga kependidikan.","dokumen_sumber":[
+          {
+            "kode": "4.1-01-01-01",
+            "dokumen":"Dokumen  pedoman  tertulis tentang rekruitmen, penempatan, pengembangan,  dan pemberhentian  dosen  yang sangat lengkap."
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+
+      {
+        "nomor": "4.2.1",
+        "isi": "Pedoman tertulis tentang sistem monitoring dan evaluasi, serta rekam jejak kinerja akademik dosen dan kinerja tenaga kependidikan.","dokumen_sumber":[
+          {
+            "kode": "4.2.1-01-01-01",
+            "dokumen":"Dokumen pedoman tertulis tentang sistem monitoring dan evaluasi, serta rekam jejak kinerja dosen dan tenaga kependidikan."
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "4.2.1-01-02-01",
+            "dokumen": "Bukti adanya monitoring dan evaluasi kinerja dosen, misal dengan IKD (indeks kinerja dosen) dan DP3 (daftar penilaian pelaksanaan pekerjaan)."
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.2.2 ",
+        "isi": "Pelaksanaan monitoring dan evaluasi kinerja dosen di bidang  pendidikan, penelitian, dan pengabdian kepada masyarakat.","dokumen_sumber":[
+          {
+            "kode": "4.2.2-01-01-01",
+            "dokumen":"Laporan Beban Kerja Dosen:  o  pendidikan: jurnal kuliah, daftar kehadiran mengajar, dll; o   penelitian: hasil penelitian  pelayanan/ pengabdian kepada masyarakat: bukti-bukti pengabdian, seperti surat permohonan dari masyarakat, SK pengabdian, daftar kegiatan pengabdian dosen.   "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "4.2.2-01-02-01 ",
+            "dokumen": "Jurnal Mengajar Dosen"
+          },
+		  {
+            "kode": "4.2.2-01-02-02",
+            "dokumen": "Laporan Penelitian"
+          },
+		  {
+            "kode": "4.2.2-01-02-02",
+            "dokumen": "Laporan Pengabdian Masyarakat"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.3.1.1",
+        "isi": "Dosen tetap yang memiliki jabatan guru besar yang bidang keahliannya sesuai dengan kompetensi PS.","dokumen_sumber":[
+          {
+            "kode": "4.3.1.1-01-01-01",
+            "dokumen":"Dokumen copy ijazah S1, S2, dan S3 semua dosen tetap "
+          },
+		   {
+            "kode": "4.3.1.2-01-01-02",
+            "dokumen":"DRekap data semua dosen tetap: NIDN, tgl lahir, jabatan akademik, gelar akademik, pendidikan S1, S2, dan S3 dan asal pendidikannya, dan bidang keahliannya S1, S2, dan S3."
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+    {
+        "nomor": "4.3.1.2",
+        "isi": "Dosen tetap berpendidikan doktor yang bidang keahliannya sesuai dengan kompetensi PS.","dokumen_sumber":[
+          {
+            "kode": "4.3.1.2-01-01-01",
+            "dokumen":"Dokumen copy ijazah S1, S2, dan S3 semua dosen tetap "
+          },
+		  {
+            "kode": "4.3.1.2-01-01-02",
+            "dokumen":"Rekap data semua dosen tetap: NIDN, tgl lahir, jabatan akademik, gelar akademik, pendidikan S1, S2, dan S3 dan asal pendidikannya, dan bidang keahliannya S1, S2, dan S3. "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  {
+        "nomor": "4.3.1.3",
+        "isi": "Dosen yang memiliki sertifikat dosen.","dokumen_sumber":[
+          {
+            "kode": "4.3.1.3-01-01-01",
+            "dokumen":"Dokumen copy ijazah S1, S2, dan S3 semua dosen tetap "
+          },
+		  {
+            "kode": "4.3.1.3-01-01-02",
+            "dokumen":"Rekap data semua dosen tetap: NIDN, tgl lahir, jabatan akademik, gelar akademik, pendidikan S1, S2, dan S3 dan asal pendidikannya, dan bidang keahliannya S1, S2, dan S3."
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.3.2 ",
+        "isi": "Rata-rata beban kerja dosen per semester dalam SKS.","dokumen_sumber":[
+          {
+            "kode": "4..3.2-01-01-01",
+            "dokumen":"Dokumen Beban Kerja Dosen"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.4.",
+        "isi": "Rasio jumlah dosen tidak tetap, terhadap jumlah seluruh dosen.","dokumen_sumber":[
+          {
+            "kode": "4.4.1-01-01-01",
+            "dokumen":"Laporan per semester terkait: o  Jumlah dosen tetap o  Jumlah dosen tidak tetap  o  Jumlah seluruh dosen Data dosen tidak tetap: nama, ttl, jabatan akademik, gelar akademik, pendidikan S1, S2, dan S3, bidang keahlian jenjang S1, S2, dan S3 "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.5.1.",
+        "isi": "Peningkatan kemampuan dosen tetap melalui program tugas belajar dalam bidang yang sesuai dengan bidang PS. ","dokumen_sumber":[
+          {
+            "kode": "4.5.1-01-01-01",
+            "dokumen":"Dokumen Studi Lanjut Dosen"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "4.4.2.b-01-02-02",
+            "dokumen": "Jurnal kuliah mengajar dosen tidak tetap"
+          },
+		  {
+            "kode": "4.4.2.b-01-02-03",
+            "dokumen": "JDaftar kehadiran mengajar dosen tidak tetap"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.5.2",
+        "isi": "Kegiatan tenaga ahli/pakar sebagai pembicara dalam seminar/pelatihan, pembicara tamu, dsb, dari luar PT sendiri (tidak termasuk dosen tidak tetap).. ","dokumen_sumber":[
+          {
+            "kode": "4.5.1-01-01-01",
+            "dokumen":"Laporan kegiatan ilmiah dengan narasumber tenaga ahli/pakar "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "4.5.1-01-02-01",
+            "dokumen": "surat permohonan, surat kesediaan, makalah, foto kegiatan, CV narasumber, dan daftar hadir "
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.5.3",
+        "isi": "Keikutsertaan dosen tetap dalam kegiatan seminar ilmiah/ lokakarya/ penataran/ workshop/ pagelaran/ pameran/peragaan yang melibatkan ahli/pakar dari luar PT dalam tiga tahun terakhir. ","dokumen_sumber":[
+          {
+            "kode": "4.5.3-01-01-01",
+            "dokumen":"Bukti kegiatan dosen tetap yang bidang keahliannya sama dengan PS dalam seminar ilmiah/ lokakarya/ penataran/ workshop/ pagelaran/ pameran/peragaan yang tidak hanya melibatkan dosen PT sendiri: sertifikat, makalah "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.5.4.1",
+        "isi": "Persentase dosen tetap yang pernah menjadi pakar/konsultan/staf ahli/nara sumber (bukan pejabat penuh waktu seperti direktur, dirjen, menteri, dll), dalam tiga tahun terakhir. ","dokumen_sumber":[
+          {
+            "kode": "4.5.4-01-01-01",
+            "dokumen":"Bukti copy sertifikat atau tanda penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi internasional: setyalancana, hibah penelitian, dll "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.5.4.2",
+        "isi": "Persentase dosen tetap yang menjadi anggota masyarakat/himpunan/asosiasi profesi dan/atau  ilmiah tingkat nasional dan/atau internasional dalam tiga tahun terakhir (=P DAP ). ","dokumen_sumber":[
+          {
+            "kode": "4.5.4.2-01-01-01",
+            "dokumen":"Bukti copy sertifikat, kartu anggota, SK kepengurusan dosen tetap sebagai anggota masyarakat bidang ilmu tingkat internasional. "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+ {
+        "nomor": "4.5.4.3 ",
+        "isi": "Dosen tetap yang pernah menjadi guru besar tamu (visiting professor) dalam tiga tahun terakhi.","dokumen_sumber":[
+          {
+            "kode": "4.5.4.3-01-01-01",
+            "dokumen":"SK Visiting Professor"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "4.5.4.3-01-02-01",
+            "dokumen": "Lampiran Kegiatan"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.5.5",
+        "isi": "Pencapaian prestasi dosen tetap selama tiga tahun terakhir dalam mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi tingkat lokal (PT), wilayah, nasional dan internasional. ","dokumen_sumber":[
+          {
+            "kode": "4.5.5-01-01-01",
+            "dokumen":"Laporan Prestasi dan Penghargaan "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "4.5.5-01-02-01",
+            "dokumen": "Piala, sertifikat"
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "4.6.1",
+        "isi": "Tenaga administrasi: jumlah dan kualifikasinya.","dokumen_sumber":[
+          {
+            "kode": "4.6.1.c-01-01-01",
+            "dokumen":"SK staf pegawai"
+          },
+		  {
+            "kode": "4.6.1.c-01-01-02",
+            "dokumen":"Daftar tenaga kependidikan adimistrasir: gelarnya.  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "4.6.1.c-01-02-01",
+            "dokumen": "copy ijazah"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "4.6.2",
+        "isi": "Upaya PS dalam meningkatkan kualifikasi dan kompetensi tenaga kependidikan. ","dokumen_sumber":[
+          {
+            "kode": "4.6.2-01-01-01",
+            "dokumen":"Surat tugas atau ijin belajar,sertifikat mengikuti pelatihan, dll "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      }
+    ]
+  },
+  
+  
+   {
+    "standar": 5,
+    "judul" : "KURIKULUM, PEMBELAJARAN, DAN SUASANA AKADEMIK",
+    "aspek": ["Kurikulum ","Peninjauan kurikulum dalam 5 tahun terakhir","Pelaksanaan proses pembelajaran "," Sistem Pembimbingan ","Pembimbingan Tugas Akhir ","Upaya perbaikan pembelajaran","Upaya peningkatan suasana akademik  "],
+    "butir":[
+      {
+        "nomor": "5.1.1.1",
+        "isi": "Struktur kurikulum (harus memuat standar kompetensi lulusan yang terstruktur dalam kompetensi  utama, pendukung dan lainnya ).","dokumen_sumber":[
+          {
+            "kode": "5.1.1.1-01-01-01 ",
+            "dokumen":"Dokumen kurikulum Prodi "
+          },
+		  {
+            "kode": "5.1.1.1-01-01-02 ",
+            "dokumen":"Dokumen perumusan kompetensi lulusan "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "5.1.1.a-01-02-01",
+            "dokumen": "Dokumen daftar hadir penyusunan kompetensi lulusan dan kurikulum "
+          },
+		   {
+            "kode": "5.1.1.a-01-02-02",
+            "dokumen": "Dokumen berita acara penyusunan kompetensi lulusan dan kurikulum "
+          }
+        ]
+      
+  },
+  
+  {
+        "nomor": "5.1.1.2 ",
+        "isi": "Orientasi  dan  kesesuaian kurikulum  dengan  visi  dan misi PS. ","dokumen_sumber":[
+          {
+            "kode": "5.1.1.2-01-01-01",
+            "dokumen":"Dokumen rumusan visi, dan misi PT, Fak/ST, dan Prodi (Evaluasi Kurikulum Periodik) "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "5.1.1.b-01-02-01",
+            "dokumen": "Dokumen berita acara "
+          },
+		   {
+            "kode": "2.3-01-02-02 ",
+            "dokumen": "Dokumen daftar hadir penyusunan rumusan sistem kepemimpinan Prodi"
+          },
+		  {
+            "kode": "2.2-01-02-03 ",
+            "dokumen": "Dokumen berita acara penyusunan rumusan sistem pengelolaan Prodi"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "5.1.2.1.1",
+        "isi": "Kesesuaian  mata  kuliah dengan  standar kompetensi. ","dokumen_sumber":[
+          {
+            "kode": "5.1.2.a-01-01-01 1",
+            "dokumen":"Dokumen Kurikulum Prodi"
+          },
+		  {
+            "kode": "5.1.2.a-01-01-02",
+            "dokumen":"Dokumen SAP/Silabi semua matakuliah Prodi"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "5.1.2.a-01-02-01",
+            "dokumen": "Dokumen berita acara"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "5.1.2.1.2",
+        "isi": "Persentase  mata  kuliah  yang dalam penentuan nilai akhirnya  memberikan bobot pada tugas-tugas (PR atau makalah) ≥ 20%. ","dokumen_sumber":[
+          {
+            "kode": "5.1.2.b-01-01-01",
+            "dokumen":"Dokumen Kurikulum prodi"
+          },
+		  {
+            "kode": "5.1.2.b-01-01-02",
+            "dokumen":"Dokumen kontrak belajar dan norma penilaian matakuliah Direkap/persentase "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "5.1.2.1.3 ",
+        "isi": "Matakuliah  dilengkapi dengan  deskripsi matakuliah,  silabus  dan SAP. ","dokumen_sumber":[
+          {
+            "kode": "5.1.2.c-01-01-01",
+            "dokumen":"Dokumen Kurikulum Prodi"
+          },
+		  {
+            "kode": "5.1.2.c-01-01-02",
+            "dokumen":"Dokumen SAP/Silabi semua matakuliah Prodi "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "5.1.2.1.4",
+        "isi": "Fleksibilitas mata kuliah pilihan.  ","dokumen_sumber":[
+          {
+            "kode": "5.1.3-01-01-01",
+            "dokumen":"Dokumen Kurikulum Prodi"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+    {
+        "nomor": "5.1.3.1",
+        "isi": "Substansi  praktikum  dan pelaksanaan praktikum. ","dokumen_sumber":[
+          {
+            "kode": "5.1.3-01-01-01",
+            "dokumen":"Modul-modul pedoman praktikum dan  PKL"
+          },
+		  {
+            "kode": "5.1.3-01-01-02 ",
+            "dokumen":"CD praktium"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+      {
+        "nomor": "5.1.3.2",
+        "isi": "Pelaksanaan  peninjauan kurikulum  selama  5  tahun terakhir. ","dokumen_sumber":[
+          {
+            "kode": "5.1.3-01-01-01",
+            "dokumen":"Dokumen kurikulum lama"
+          },
+		  {
+            "kode": "5.1.3-01-01-02",
+            "dokumen":"Dokumen kurikulum baru Catatan: peserta review kurikulum juga dari eksternal, misal praktisi,users, stakeholders"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "5.2.1-01-02-01",
+            "dokumen": "Dokumen berita acara review kurikulum"
+          },
+		  {
+            "kode": "5.2.1-01-02-02",
+            "dokumen": "Dokumen daftar hadir peserta review kurikulum "
+          },
+		  {
+            "kode": "5.2.1-01-02-03 1",
+            "dokumen": "Dokumen notulensi"
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "5.2.1",
+        "isi": "Persyaratan  yang  harus dipenuhi mahasiswa selama mengikuti  pendidikan magister,  proses pelaksanaan  dan persyaratan  kelulusannya. Persyaratan mukim ","dokumen_sumber":[
+          {
+            "kode": "5.2.1-01-01-01",
+            "dokumen":"Pedoman pendidikan "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "5.2.2",
+        "isi": "Persyaratan penguasaan bahasa Inggris ","dokumen_sumber":[
+          {
+            "kode": "5.2.2-01-01-01",
+            "dokumen":"Laporan Penguasaan Bahasa Inggris"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "5.2.2-01-02-01",
+            "dokumen": "Dokumen berita acara review kurikulum"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "5.2.3",
+        "isi": "Mengikuti perkuliahan dan ujian mata kuliah (atau tugas-tugas setara dari komisi pembimbing) yang isinya berupa perkembangan ilmu mutakhir dalam bidangnya. ","dokumen_sumber":[
+          {
+            "kode": "5.2.3-01-01-01",
+            "dokumen":"Laporan Perkuliahan dan Ujian Mata Kuliah"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "5.2.4",
+        "isi": "Penyajian dan penilaian rencana penelitian. ","dokumen_sumber":[
+          {
+            "kode": "5.2.4-01-01-01",
+            "dokumen":"Laporan Rencana Penelitian"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "5.2.5",
+        "isi": "Penyajian hasil penelitian tesis dalam seminar. ","dokumen_sumber":[
+          {
+            "kode": "5.2.5-01-01-01",
+            "dokumen":"Laporan Penyajian Hasil Penelitian Tesis dalam Seminar"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "5.2.6",
+        "isi": "Sistem penjaminan mutu tesis dan pelaksanaannya. ","dokumen_sumber":[
+          {
+            "kode": "5.2.6-01-01-01",
+            "dokumen":"Laporan Sistem Penjaminan Mutu Tesis dan Pelaksanaannya"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "5.2.7",
+        "isi": "Keanggotaan tim penguji pada ujian akhir studi magister. ","dokumen_sumber":[
+          {
+            "kode": "5.2.7-01-01-01",
+            "dokumen":"Daftar Tim Penguji"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.3.1",
+        "isi": "Pelaksanaan pembelajaran memiliki mekanisme untuk memonitor, mengkaji, dan memperbaiki secara periodik kegiatan perkuliahan (kehadiran dosen dan mahasiswa), penyusunan materi perkuliahan, serta penilaian hasil belajar. ","dokumen_sumber":[
+          {
+            "kode": "5.3.1.a-01-01-01",
+            "dokumen":"Jurnal semua matakuliah yang sudah ditandatangani Ketua Prodi "
+          },
+		  {
+            "kode": "5.3.1-01-01-02",
+            "dokumen":"Presensi mahasiswa untuk semua matakuliah yang sudah ditandatangani Ketua Prodi"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.3.2",
+        "isi": "Mutu soal ujian.","dokumen_sumber":[
+          {
+            "kode": "5.3.2-01-01-01",
+            "dokumen":"Dokumen contoh soal"
+          },
+		  {
+            "kode": "5.3.2-01-01-02",
+            "dokumen":"Dokumen semua soal ujian yang sudah diverifikasi Ketua Prodi"
+          },
+		  {
+            "kode": "5.3.2-01-01-03",
+            "dokumen":"Dokumen semua SAP matakuliah untuk mencocokkan soal"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  
+  {
+        "nomor":"5.4.1",
+        "isi": "Ketersediaan panduan, sosialisasi,  dan penggunaan. ","dokumen_sumber":[
+          {
+            "kode": "5.5.1.a-01-01-01",
+            "dokumen":"Buku pedoman penulisan skripsi"
+          },
+		  {
+            "kode": "5.5.1.a-01-01-02",
+            "dokumen":"Bukti sosialisasi buku pedoman skripsi, misal pengumuman, dalam pelatihan penulisan skripsi, melalui dosen MK Metopen, dll. "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.4.2.1",
+        "isi": "Jumlah maksimum mahasiswa yang dibimbing oleh seorang dosen pembimbing utama tesis. Dalam hal jumlah mahasiswa bimbingan, penilaian berdasarkan expert judgment. J MM  = Jumlah maksimum mahasiswa per  pembimbing utama per tahun ","dokumen_sumber":[
+          {
+            "kode": "5.4.2.1-01-01-01",
+            "dokumen":"Rekap Bukti surat penetapan pembimbing skripsi "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.4.2.2",
+        "isi": "Jumlah maksimum mahasiswa yang dibimbing oleh seorang dosen pembimbing baik sebagai ketua pembimbing (pembimbing utama) dan anggota (=J MTM ).","dokumen_sumber":[
+          {
+            "kode": "5.5.1.c-01-01-01",
+            "dokumen":"Form bimbingan skripsi yang diisi dan ditandatangani  dosen pembimbing "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.4.2.3",
+        "isi": "Jabatan akademik (fungsional) dosen sebagai ketua pembimbing tesis. ","dokumen_sumber":[
+          {
+            "kode": "5.4.2.3-01-01-01",
+            "dokumen":"Copy ijazah S2 dosen pembimbing skripsi"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.4.3",
+        "isi": "Rata-rata waktu penyelesaian penulisan tugas akhir.","dokumen_sumber":[
+          {
+            "kode": "5.5.2-01-01-01",
+            "dokumen":"Rekap waktu Penyelesaian Penulisan Tugas Akhir"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  {
+            "kode": "5.5.2-01-02-01",
+            "dokumen": "Dokumen berita acara seminar proposal skripsi"
+          },
+		  {
+            "kode": "5.5.2-01-02-02",
+            "dokumen": "Dokumen berita acara ujian skripsi"
+          },
+		  {
+            "kode": "5.5.2-01-02-03",
+            "dokumen": "Buku pendaftaran seminar skripsi"
+          },
+		  {
+            "kode": "5.5.2-01-02-04",
+            "dokumen": "Buku pendaftaran Ujian"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.5.1",
+        "isi": "Monitoring dan evaluasi proses  penyusunan usul penelitian dan pelaksanaan penelitian tesis","dokumen_sumber":[
+          {
+            "kode": "5.5.1-01-01-01",
+            "dokumen":"Dokumen Monitoring dan Evaluasi Penelitian"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.5.2",
+        "isi": "Monitoring dan evaluasi proses penulisan tesis ","dokumen_sumber":[
+          {
+            "kode": "5.5.2-01-01-01",
+            "dokumen":"Dokumen Monitoring dan Evaluasi Penelitian"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  
+   {
+        "nomor":"5.5.3",
+        "isi": "Monitoring dan evaluasi kelayakan dosen dalam proses pembimbingan penelitian tesis.","dokumen_sumber":[
+          {
+            "kode": "5.5.3-01-01-01",
+            "dokumen":"Laporan Monitoring dan Evaluasi Kelayakan Dosen Pembimbingan Penelitian Tesis "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  
+		  {
+            "kode": "5.5.3-01-02-01",
+            "dokumen": "Buku Pembantu Inventaris"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.5.4",
+        "isi": "Monitoring dan evaluasi ujian akhir  studi magister. ","dokumen_sumber":[
+          {
+            "kode": "5.5.4-01-01-01",
+            "dokumen":"Laporan Monitoring dan Evaluasi Ujian Akhir Studi Magister"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+    {
+        "nomor":"5.6.1",
+        "isi": "Kebijakan tertulis tentang suasana akademik (otonomi keilmuan, kebebasan akademik, kebebasan mimbar akademik, kemitraan dosen-mahasiswa)","dokumen_sumber":[
+          {
+            "kode": "5.6.4-01-01-01",
+            "dokumen":"SK Kebijakan Suasana Akademik"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  
+		  {
+            "kode": "5.6.1-01-02-01",
+            "dokumen": "Bukti-bukti foto kegiatan"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.6.2",
+        "isi": "Ketersediaan dan kelengkapan jenis prasarana, sarana serta dana yang memungkinkan terciptanya interaksi akademik antara sivitas akademika. ","dokumen_sumber":[
+          {
+            "kode": "5.6.2-01-01-01",
+            "dokumen":"Laporan Kegiatan Pengembangan Perilaku Kecendekiawanan"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  
+		  {
+            "kode": "5.6.2-01-02-01",
+            "dokumen": "Bukti-bukti foto kegiatan"
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor":"5.6.3",
+        "isi": "Interaksi akademik berupa program dan kegiatan akademik, selain perkuliahan dan tugas-tugas khusus, untuk menciptakan suasana akademik (seminar, simposium, lokakarya, bedah buku dll). ","dokumen_sumber":[
+          {
+            "kode": "5.6.3-01-01-01",
+            "dokumen":"Laporan Kegiatan Akademik"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"5.6.4",
+        "isi": "Pengembangan perilaku kecendekiawanan (kemampuan untuk menanggapi dan memberikan solusi pada masalah masyarakat dan lingkungan). ","dokumen_sumber":[
+          {
+            "kode": "5.6.4-01-01-01",
+            "dokumen":"Kegiatan Pengembangan Perilaku Kecendekiawanan"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		  
+		  {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      }
+    ]
+  },
+  
+  
+  {
+    "standar": 6,
+    "judul" : "PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI",
+    "aspek": ["Pengelolaan Dana ","Perolehan dan Alokasi Dana ","Prasarana  "," Sarana Pelaksanaan Kegiatan Akademik  ","PSistem Informasi  "],
+    "butir":[
+      {
+        "nomor": "6.1",
+        "isi": "Keterlibatan program studi dalam perencanaan target kinerja, perencanaan kegiatan/ kerja dan perencanaan/alokasi dan pengelolaan dana.","dokumen_sumber":[
+          {
+            "kode": "6.1-01-01-01",
+            "dokumen":"Bukti-bukti prodi dilibatkan dalam perencanaan target kinerja, perencanaan kegiatan/ kerja dan perencanaan/alokasi dan pengelolaan dana: "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "6.1-01-02-01",
+            "dokumen": "surat undangan raker Fakultas/ST,"
+          },
+		   {
+            "kode": "6.1-01-02-02",
+            "dokumen": "bukti daftar hadir raker Fak/ST."
+          }
+        ]
+      
+  },
+  
+  {
+        "nomor": "6.2.1",
+        "isi": "Besarnya dana (termasuk hibah) yang dikelola dalam tiga tahun terakhir.","dokumen_sumber":[
+          {
+            "kode": "6.2.1-01-01-01",
+            "dokumen":"Daftar realisasi perolehan dan alokasi dana Prodi, termasuk hibah, gaji: Kerjasama dengan Fak/ST  "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+    {
+        "nomor": "6.2.2",
+        "isi": "Rata-rata dana operasional per mahasiswa per tahun dalam tiga tahun terakhir (=JDO, juta rupiah) ","dokumen_sumber":[
+          {
+            "kode": "6.2.2-01-01-01",
+            "dokumen":"Laporan Penggunaan Dana Operasional Mahasiswa"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "6.2.3",
+        "isi": "Dana penelitian dalam tiga tahun terakhir.","dokumen_sumber":[
+          {
+            "kode": "6.2.3-01-01-01",
+            "dokumen":"Rekap hasil penelitian semua dosen Prodi, termasuk sumber dananya "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "6.2.2-01-02-01",
+            "dokumen": "Laporan Penelitian"
+          }
+        ]
+      
+  },
+  
+  
+  
+   {
+        "nomor": "6.2.4",
+        "isi": "Dana pelayanan/ pengabdian kepada masyarakat dalam tiga  tahun terakhir ","dokumen_sumber":[
+          {
+            "kode": "6.2.4-01-01-01",
+            "dokumen":"Laporan dana pengabdian kepada masyarakat"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "6.2.2-01-02-01",
+            "dokumen": "Laporan Penelitian"
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "6.3.1",
+        "isi": "Luas ruang kerja dosen","dokumen_sumber":[
+          {
+            "kode": "6.3.1-01-01-01",
+            "dokumen":"Data jumlah dosen"
+          },
+		  {
+            "kode": "6.3.1-01-01-02",
+            "dokumen":"Data jumlah ruang dosen"
+          },
+		  {
+            "kode": "6.3.1-01-01-03",
+            "dokumen":"Data luas seluruh ruang dosen"
+          },
+		  {
+            "kode": "6.3.1-01-01-04",
+            "dokumen":"Data luas setiap ruang (bilik) dosen"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "6.3.2",
+        "isi": "Tempat kerja mahasiswa program studi magister: (1) Ketersediaan meja kerja dan (2) akses internet. ","dokumen_sumber":[
+          {
+            "kode": "6.3.2-01-01-01",
+            "dokumen":"Daftar Tempat Kerja Mahasiswa Prodi Magister"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "6.3.2-01-02-01",
+            "dokumen": "Buku Pembantu Prasarana"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "6.3.3",
+        "isi": "Prasarana (kantor, ruang kelas, ruang laboratorium, studio, ruang perpustakaan, kebun percobaan, dsb. kecuali  ruang dosen) yang dipergunakan PS dalam proses pembelajaran.  ","dokumen_sumber":[
+          {
+            "kode": "6.3.3-01-01-01",
+            "dokumen":"Daftar inventaris prasarana."
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "6.3.3-01-02-01",
+            "dokumen": "Buku Pembantu Prasarana"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"6.3.4",
+        "isi": "Prasarana lain yang menunjang (misalnya tempat olah raga, ruang bersama, ruang himpunan mahasiswa, poliklinik).","dokumen_sumber":[
+          {
+            "kode": "6.3.4-01-01-01",
+            "dokumen":"Daftar inventaris prasarana Lain"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+    {
+        "nomor":"6.4.1.1",
+        "isi": "Bahan pustaka yang berupa buku teks.","dokumen_sumber":[
+          {
+            "kode": "6.4.1.a-01-01-01",
+            "dokumen":"Daftar /katalog buku dari perpustakaan Prodi, Fak/ST, PT"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor":"6.4.1.2",
+        "isi": "Bahan pustaka yang berupa disertasi/tesis/ skripsi/ tugas akhir. ","dokumen_sumber":[
+          {
+            "kode": "6.4.1.b-01-01-01",
+            "dokumen":"Daftar /katalog buku dari perpustakaan Prodi, Fak/ST, PT"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"6.4.1.3",
+        "isi": "Bahan pustaka yang berupa jurnal ilmiah terakreditasi Dikti.","dokumen_sumber":[
+          {
+            "kode": "6.4.1.c-01-01-01",
+            "dokumen":"Daftar /katalog buku dari perpustakaan Prodi, Fak/ST, PT"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"6.4.1.4",
+        "isi": "Bahan pustaka yang berupa jurnal ilmiah internasional.","dokumen_sumber":[
+          {
+            "kode": "6.4.1.d-01-01-01",
+            "dokumen":"Daftar /katalog buku dari perpustakaan Prodi, Fak/ST, PT"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"6.4.1.5",
+        "isi": "Bahan pustaka yang berupa prosiding seminardalam tiga tahun terakhir.","dokumen_sumber":[
+          {
+            "kode": "6.4.1.e-01-01-01",
+            "dokumen":"Daftar /katalog buku dari perpustakaan Prodi, Fak/ST, PT"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"6.4.2",
+        "isi": "Ketersediaan, akses dan pendayagunaan sarana utama di lab (tempat praktikum, bengkel, studio, ruang simulasi, rumah sakit, puskesmas/balai kesehatan, green house, lahan untuk pertanian, dan sejenisnya). ","dokumen_sumber":[
+          {
+            "kode": "6.4.2-01-01-01",
+            "dokumen":"Daftar nama sarana utama"
+          },
+		  {
+            "kode": "6.4.2-01-01-02",
+            "dokumen":"Dicek langsung di lapangan"
+          },
+		  {
+            "kode": "6.4.3-01-01-03",
+            "dokumen":"Kalau perlu ada Dokumen konsep/sistem perawatan sarana prasarana"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+    {
+        "nomor":"6.5.1",
+        "isi": "Sistem informasi dan fasilitas yang digunakan PS dalam proses pembelajaran (hardware, software, e-learning,dan perpustakaan). ","dokumen_sumber":[
+          {
+            "kode": "6.5.1-01-01-01",
+            "dokumen":"Dokumen Sistem Informsi"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "6.5.1-01-02-01",
+            "dokumen": "Hotspot PT, Fak, Prodi"
+          },
+		   {
+            "kode": "6.5.1-01-02-02",
+            "dokumen": "Website"
+          },
+		   {
+            "kode": "6.5.1-01-02-03",
+            "dokumen": "e-learning"
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor":"6.5.2 ",
+        "isi": "Aksesibilitas data dalam sistem informasi.","dokumen_sumber":[
+          {
+            "kode": "6.5.2-01-01-01",
+            "dokumen":"Dokumen aksesibilitas sistem Informasi terkait dengan: o  Mahasiswa  o  KRS o  Jadwal mata kuliah o  Nilai mata kuliah o  Transkrip nilai o  Lulusan o  Dosen o  Pegawai o  Keuangan o  Inventaris o  Perpustakaan "
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          
+		   {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+    }
+  ]
+  },
+  
+  
+   {
+    "standar": 7,
+    "judul" : " PENELITIAN, PELAYANAN/PENGABDIAN KEPADA MASYARAKAT, DAN KERJASAMA",
+    "aspek": ["Penelitian dosen tetap yang bidang keahliannya sesuai dengan Program Studi","Kegiatan pelayanan/ pengabdian kepada masyarakat","Kegiatan kerjasama dengan instansi lain "],
+    "butir":[
+      {
+        "nomor": "7.1.1.1",
+        "isi": "Keberadaan dan kesesuaian agenda penelitian dosen dengan bidang studi","dokumen_sumber":[
+          {
+            "kode": "7.1.1.1-01-01-01",
+            "dokumen":"Laporan Agenda Penelitian Dosen dengan Bidang Studi"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "7.1.1.2",
+        "isi": "Lingkup jaringan penelitian.","dokumen_sumber":[
+          {
+            "kode": "7.1.1.2-01-01-01",
+            "dokumen":"Laporan lingkup jaringan penelitian"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "7.1.2",
+        "isi": "Penggunaan pendekatan dan pemikiran baru dalam penelitian dosen dan mahasiswa ","dokumen_sumber":[
+          {
+            "kode": "7.1.2-01-01-01",
+            "dokumen":"Laporan Kegiatan Simposium Pendekatan dan Pemikiran Baru"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "7.1.3",
+        "isi": "Dampak hasil penelitian dosen atau penelitian tesis magister terhadap peningkatan aspek berikut: (1) produktivitas, (2) kesejahteraan masyarakat,  (3) mutu lingkungan. ","dokumen_sumber":[
+          {
+            "kode": "7.1.3-01-01-01",
+            "dokumen":"Laporan Survei Dampak Penelitian tesis magister"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+   {
+        "nomor": "7.1.4",
+        "isi": "Jumlah penelitian yang sesuai dengan bidang keilmuan PS, yang dilakukan oleh dosen tetap yang bidang keahliannya sama dengan PS selama tiga tahun.","dokumen_sumber":[
+          {
+            "kode": "7.1.4-01-01-01",
+            "dokumen":"Laporan Survei Kesuaian penelitian dengan bidang keilmuan"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "7.1.5.1",
+        "isi": "Jumlah artikel ilmiah yang dihasilkan oleh dosen tetap yang bidang keahliannya sesuai dengan PS selama tiga tahun. ","dokumen_sumber":[
+          {
+            "kode": "7.1.5.1-01-01-01",
+            "dokumen":"Laporan Artikel Ilmiah"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "7.1.5.2",
+        "isi": "Artikel ilmiah yang tercatat dalam lembaga sitasi internasional  dalam tiga tahun terakhir. ","dokumen_sumber":[
+          {
+            "kode": "7.1.5.2-01-01-01",
+            "dokumen":"Laporan Artikel Ilmiah tersitasi internasional"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+    {
+        "nomor": "7.1.6",
+        "isi": "Persentase  mahasiswa program magister yang penelitian tesisnya adalah bagian dari penelitian dosen (=P DM ). ","dokumen_sumber":[
+          {
+            "kode": "7.1.6-01-01-01",
+            "dokumen":"Laporan Penelitian Tesis Mahasiswa dan Dosen"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "7.1.7",
+        "isi": "Karya-karya dosen atau mahasiswa PS yang telah memperoleh hak paten atau surat pengakuan/penghargaan dari lembaga nasional/ internasional dalam tiga tahun terakhir","dokumen_sumber":[
+          {
+            "kode": "7.1.7-01-01-01",
+            "dokumen":"Laporan Hak Paten Karya-karya dosen atau mahasiswa PS"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+   {
+        "nomor": "7.2.1",
+        "isi": "Jumlah kegiatan pelayanan/pengabdian kepada masyarakat (PkM) yang dilakukan oleh dosen tetap yang bidang keahliannya sesuai dengan PS selama tiga tahun.","dokumen_sumber":[
+          {
+            "kode": "7.2.1-01-01-01",
+            "dokumen":"Laporan Kegiatan Pengabdian kepada Masyarakat Dosen Tetap"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "7.3.1",
+        "isi": "Kegiatan kerjasama dengan instansi di dalam negeri dalam tiga tahun terakhir ","dokumen_sumber":[
+          {
+            "kode": "7.3.1-01-01-01",
+            "dokumen":"Laporan Kerjasama dengan instansi di Dalam Negeri"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+  },
+  
+  
+  {
+        "nomor": "7.3.2",
+        "isi": "Kegiatan kerjasama dengan instansi di luar negeri dalam tiga tahun terakhir.","dokumen_sumber":[
+          {
+            "kode": "7.3.2-01-01-01",
+            "dokumen":"Laporan Kerjasama dengan instansi di Luar Negeri"
+          }
+        ],
+        "dokumen_pendukung":
+        [
+          {
+            "kode": "",
+            "dokumen": ""
+          }
+        ]
+      
+    }
+  
+    ]
+   }
 ]
