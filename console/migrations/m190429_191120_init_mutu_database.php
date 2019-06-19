@@ -35,7 +35,23 @@ class m190429_191120_init_mutu_database extends Migration
             'id'=>$this->primaryKey(),
             'kode'=>$this->string(),
             'nama'=>$this->string(),
+            'jurusan_departemen'=>$this->string(),
             'id_fakultas_akademi'=>$this->integer(),
+            'nomor_sk_pendirian'=>$this->string(),
+            'tanggal_sk_pendirian'=>$this->integer(),
+            'pejabat_ttd_sk_pendirian'=>$this->string(),
+            'bulan_berdiri'=>$this->integer(),
+            'tahun_berdiri'=>$this->string(4),
+            'nomor_sk_operasional'=>$this->string(),
+            'tanggal_sk_operasional'=>$this->integer(),
+            'peringkat_banpt_terakhir'=>$this->string(),
+            'nilai_banpt_terakhir'=>$this->integer(),
+            'nomor_sk_banpt'=>$this->string(),
+            'alamat'=>$this->string(),
+            'kodepos'=>$this->string(),
+            'nomor_telp'=>$this->string(),
+            'homepage'=>$this->string(),
+            'email'=>$this->string(),
             'kaprodi'=>$this->string(),
             'jenjang'=>$this->string(),
             'created_at'=>$this->integer(),
@@ -65,16 +81,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer()
         ]);
 
-        $this->createTable('{{%s7_akreditasi_prodi_diploma}}',[
-            'id'=>$this->primaryKey(),
-            'id_akreditasi'=>$this->integer(),
-            'id_prodi'=>$this->integer(),
-            'progress'=>$this->float(),
-            'peringkat'=>$this->char(1),
-            'skor'=>$this->integer(3),
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer()
-        ]);
+
         $this->createTable('{{%s7_akreditasi_prodi_s1}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
@@ -108,21 +115,6 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=> $this->integer(),
         ]);
 
-        $this->createTable('{{%s7_borang_diploma_prodi}}',[
-            'id'=>$this->primaryKey(),
-            'id_akreditasi_prodi_diploma'=>$this->integer(),
-            'progress'=>$this->float(),
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer(),
-        ]);
-        $this->createTable('{{%s7_borang_diploma_akademi}}',[
-            'id'=>$this->primaryKey(),
-            'id_akreditasi'=>$this->integer(),
-            'id_fakultas'=>$this->integer(),
-            'progress'=>$this->float(),
-            'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer()
-        ]);
 
         $this->createTable('{{%s7_borang_s1_prodi}}',[
             'id'=>$this->primaryKey(),
@@ -653,12 +645,9 @@ class m190429_191120_init_mutu_database extends Migration
         $this->dropTable('{{%s7_borang_s1_fakultas}}');
         $this->dropTable('{{%s7_dokumen_borang_s1_prodi}}');
         $this->dropTable('{{%s7_borang_s1_prodi}}');
-        $this->dropTable('{{%s7_borang_diploma_akademi}}');
-        $this->dropTable('{{%s7_borang_diploma_prodi}}');
         $this->dropTable('{{%s7_akreditasi_institusi}}');
         $this->dropTable('{{%s7_akreditasi_prodi_pasca}}');
         $this->dropTable('{{%s7_akreditasi_prodi_s1}}');
-        $this->dropTable('{{%s7_akreditasi_prodi_diploma}}');
         $this->dropTable('{{%s7_akreditasi}}');
         $this->dropTable('{{%jenis_akreditasi}}');
         $this->dropTable('{{%unit}}');

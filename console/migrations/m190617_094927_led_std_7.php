@@ -43,7 +43,7 @@ class m190617_094927_led_std_7 extends Migration
             'updated_by'=>$this->integer()
         ]);
 
-        $this->addForeignKey('fk-s7_led_institusi-s7_akreditasi','{{%s7_led_fakultas}}','id_akreditasi','{{%s7_akreditasi}}','id');
+        $this->addForeignKey('fk-s7_led_institusi-s7_akreditasi_institusi','{{%s7_led_institusi}}','id_akreditasi_institusi','{{%s7_akreditasi_institusi}}','id');
 
         $this->addForeignKey('fk-s7_led_institusi-usr_crd','{{%s7_led_institusi}}','created_by','{{%user}}','id');
         $this->addForeignKey('fk-s7_led_institusi-usr_upd','{{%s7_led_institusi}}','updated_by','{{%user}}','id');

@@ -16,16 +16,11 @@ class m190506_045438_add_relational extends Migration
         $this->addForeignKey('fk-profil_user-program_studi','{{%profil_user}}','id_prodi', 'program_studi','id');
         $this->addForeignKey('fk-program_studi_fakultas_akademi','{{%program_studi}}','id_fakultas_akademi','{{%fakultas_akademi}}','id');
         $this->addForeignKey('fk-akreditasi-jenis_akreditasi','{{%s7_akreditasi}}','id_jenis_akreditasi','{{%jenis_akreditasi}}','id');
-        $this->addForeignKey('fk-akreditasi_prodi_diploma-akreditasi','{{%s7_akreditasi_prodi_diploma}}','id_akreditasi','{{%s7_akreditasi}}','id');
-        $this->addForeignKey('fk-akreditasi_prodi_diploma-program_studi','{{%s7_akreditasi_prodi_diploma}}','id_prodi','{{%program_studi}}','id');
         $this->addForeignKey('fk-akreditasi_prodi_s1-akreditasi','{{%s7_akreditasi_prodi_s1}}','id_akreditasi','{{%s7_akreditasi}}','id');
         $this->addForeignKey('fk-akreditasi_prodi_s1-program_studi','{{%s7_akreditasi_prodi_s1}}','id_prodi','{{%program_studi}}','id');
         $this->addForeignKey('fk-akreditasi_prodi_pasca-akreditasi','{{%s7_akreditasi_prodi_pasca}}','id_akreditasi','{{%s7_akreditasi}}','id');
         $this->addForeignKey('fk-akreditasi_prodi_pasca-program_studi','{{%s7_akreditasi_prodi_pasca}}','id_prodi','{{%program_studi}}','id');
         $this->addForeignKey('fk-akreditasi_institusi-akreditasi','{{%s7_akreditasi_institusi}}','id_akreditasi','{{%s7_akreditasi}}','id');
-        $this->addForeignKey('fk-borang_diploma_prodi-akreditasi_prodi-diploma','{{%s7_borang_diploma_prodi}}','id_akreditasi_prodi_diploma','{{%s7_akreditasi_prodi_diploma}}','id');
-        $this->addForeignKey('fk-borang_diploma_akademi-akreditasi','{{%s7_borang_diploma_akademi}}','id_akreditasi','{{%s7_akreditasi}}','id');
-        $this->addForeignKey('fk-borang_diploma_akademi-fakultas_akademi','{{%s7_borang_diploma_akademi}}','id_fakultas','{{%fakultas_akademi}}','id');
         $this->addForeignKey('fk-borang_s1_prodi-akreditasi_prodi_s1','{{%s7_borang_s1_prodi}}','id_akreditasi_prodi_s1','{{%s7_akreditasi_prodi_s1}}','id');
         $this->addForeignKey('fk-dokumen_borang_s1_prodi-borang_s1_prodi','{{%s7_dokumen_borang_s1_prodi}}','id_borang_s1_prodi','{{%s7_borang_s1_prodi}}','id');
         $this->addForeignKey('fk-borang_s1_fakultas-akreditasi','{{%s7_borang_s1_fakultas}}','id_akreditasi','{{%s7_akreditasi}}','id');
@@ -159,16 +154,12 @@ class m190506_045438_add_relational extends Migration
         $this->dropForeignKey('fk-borang_s1_fakultas-fakultas','{{%s7_borang_s1_fakultas}}');
         $this->dropForeignKey('fk-dokumen_borang_s1_prodi-borang_s1_prodi','{{%s7_dokumen_borang_s1_prodi}}');
         $this->dropForeignKey('fk-borang_s1_prodi-akreditasi_prodi_s1','{{%s7_borang_s1_prodi}}');
-        $this->dropForeignKey('fk-borang_diploma_akademi-fakultas_akademi','{{%s7_borang_diploma_akademi}}');
-        $this->dropForeignKey('fk-borang_diploma_akademi-akreditasi','{{%s7_borang_diploma_akademi}}');
-        $this->dropForeignKey('fk-borang_diploma_prodi-akreditasi_prodi_diploma','{{%s7_borang_diploma_prodi}}');
         $this->dropForeignKey('fk-akreditasi_institusi-akreditasi','{{%s7_akreditasi_institusi}}');
         $this->dropForeignKey('fk-akreditasi_prodi_pasca-program_studi','{{%s7_akreditasi_prodi_pasca}}');
         $this->dropForeignKey('fk-akreditasi_prodi_pasca-akreditasi','{{%s7_akreditasi_prodi_pasca}}');
         $this->dropForeignKey('fk-akreditasi_prodi_s1-program_studi','{{%s7_akreditasi_prodi_s1}}');
         $this->dropForeignKey('fk-akreditasi_prodi_s1-akreditasi','{{%s7_akreditasi_prodi_s1}}');
-        $this->dropForeignKey('fk-akreditasi_prodi_diploma-program_studi','{{%s7_akreditasi_prodi_diploma}}');
-        $this->dropForeignKey('fk-akreditasi_prodi_diploma-akreditasi','{{%s7_akreditasi_prodi_diploma}}');
+
         $this->dropForeignKey('fk-akreditasi-jenis_akreditasi','{{%s7_akreditasi}}');
         $this->dropForeignKey('fk-program_studi_fakultas_akademi','{{%program_studi}}');
 
