@@ -71,7 +71,7 @@ $identity = Yii::$app->user->identity;
                         </div>
                     </div>
 
-                    <div class="tab-pane active" id="pill2">
+                    <div class="tab-pane" id="pill2">
                         <div class="card">
                             <div class="card-content">
                                 <h4 class="card-title">Form Fakultas</h4>
@@ -93,7 +93,7 @@ $identity = Yii::$app->user->identity;
                         </div>
                     </div>
 
-                    <div class="tab-pane active" id="pill3">
+                    <div class="tab-pane" id="pill3">
                         <div class="card">
                             <div class="card-content">
                                 <h4 class="card-title">Form Institusi</h4>
