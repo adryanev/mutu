@@ -99,7 +99,7 @@ class m190617_094927_led_std_7 extends Migration
 
         ]);
 
-        $this->createTable('{{%s7_led_prodi_s1}}',[
+        $this->createTable('{{%s7_led_prodi_s1_detail}}',[
             'id'=>$this->primaryKey(),
             'id_led_prodi_s1'=>$this->integer(),
             'jenis_file'=>$this->string(),
@@ -121,7 +121,7 @@ class m190617_094927_led_std_7 extends Migration
         ]);
 
         //PascaSarjana
-        $this->createTable('{{%s7_led_prodi_pasca}}',[
+        $this->createTable('{{%s7_led_prodi_pasca_detail}}',[
             'id'=>$this->primaryKey(),
             'id_led_prodi_pasca'=>$this->integer(),
             'jenis_file'=>$this->string(),
