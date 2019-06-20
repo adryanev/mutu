@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use common\models\led\S7LedProdiS1;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 
@@ -12,8 +13,6 @@ use yii\behaviors\TimestampBehavior;
  * @property int $id_akreditasi
  * @property int $id_prodi
  * @property double $progress
- * @property string $peringkat
- * @property int $skor
  * @property int $created_at
  * @property int $updated_at
  *
@@ -23,6 +22,7 @@ use yii\behaviors\TimestampBehavior;
  * @property S7BorangS1Prodi[] $borangS1Prodis
  * @property S7DokumentasiS1Fakultas[] $dokumentasiS1Fakultas
  * @property S7DokumentasiS1Prodi[] $dokumentasiS1Prodis
+ * @property S7LedProdiS1[] $ledProdiS1s
  */
 class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
 {
@@ -33,6 +33,7 @@ class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
             TimestampBehavior::class,
         ];
     }
+
     /**
      * {@inheritdoc}
      */
@@ -47,9 +48,8 @@ class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_akreditasi', 'id_prodi', 'skor', 'created_at', 'updated_at'], 'integer'],
+            [['id_akreditasi', 'id_prodi', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
-            [['peringkat'], 'string', 'max' => 1],
             [['id_akreditasi'], 'exist', 'skipOnError' => true, 'targetClass' => S7Akreditasi::className(), 'targetAttribute' => ['id_akreditasi' => 'id']],
             [['id_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => ProgramStudi::className(), 'targetAttribute' => ['id_prodi' => 'id']],
         ];
@@ -65,8 +65,6 @@ class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
             'id_akreditasi' => 'Id S7Akreditasi',
             'id_prodi' => 'Id Prodi',
             'progress' => 'Progress',
-            'peringkat' => 'Peringkat',
-            'skor' => 'Skor',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
@@ -78,6 +76,11 @@ class S7AkreditasiProdiS1 extends \yii\db\ActiveRecord
     public function getAkreditasi()
     {
         return $this->hasOne(S7Akreditasi::className(), ['id' => 'id_akreditasi']);
+    }
+
+    public function getLedProdiS1s()
+    {
+        return $this->hasMany(S7LedProdiS1::class, ['id_akreditasi_prodi_s1' => 'id']);
     }
 
     /**

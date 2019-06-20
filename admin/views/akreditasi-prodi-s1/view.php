@@ -43,8 +43,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_akreditasi',
             'id_prodi',
             'progress',
-            'peringkat',
-            'skor',
             'created_at',
             'updated_at',
                     ],

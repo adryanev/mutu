@@ -2,23 +2,20 @@
 
 namespace common\models\led;
 
+use common\models\S7AkreditasiInstitusi;
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "s7_led_institusi".
  *
  * @property int $id
  * @property int $id_akreditasi_institusi
- * @property string $jenis_file
- * @property string $file
  * @property int $created_at
  * @property int $updated_at
- * @property int $created_by
- * @property int $updated_by
  *
  * @property S7AkreditasiInstitusi $akreditasiInstitusi
- * @property User $createdBy
- * @property User $updatedBy
+ * @property S7LedInstitusiDetail[] $s7LedInstitusiDetails
  */
 class S7LedInstitusi extends \yii\db\ActiveRecord
 {
@@ -30,17 +27,20 @@ class S7LedInstitusi extends \yii\db\ActiveRecord
         return 's7_led_institusi';
     }
 
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
+    }
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['id_akreditasi_institusi', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
-            [['jenis_file', 'file'], 'string', 'max' => 255],
+            [['id_akreditasi_institusi', 'created_at', 'updated_at'], 'integer'],
             [['id_akreditasi_institusi'], 'exist', 'skipOnError' => true, 'targetClass' => S7AkreditasiInstitusi::className(), 'targetAttribute' => ['id_akreditasi_institusi' => 'id']],
-            [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
-            [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['updated_by' => 'id']],
         ];
     }
 
@@ -52,12 +52,8 @@ class S7LedInstitusi extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'id_akreditasi_institusi' => 'Id Akreditasi Institusi',
-            'jenis_file' => 'Jenis File',
-            'file' => 'File',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
-            'created_by' => 'Created By',
-            'updated_by' => 'Updated By',
         ];
     }
 
@@ -72,16 +68,8 @@ class S7LedInstitusi extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCreatedBy()
+    public function getS7LedInstitusiDetails()
     {
-        return $this->hasOne(User::className(), ['id' => 'created_by']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getUpdatedBy()
-    {
-        return $this->hasOne(User::className(), ['id' => 'updated_by']);
+        return $this->hasMany(S7LedInstitusiDetail::className(), ['id_led_institusi' => 'id']);
     }
 }

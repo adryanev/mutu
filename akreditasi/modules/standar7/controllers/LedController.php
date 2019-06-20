@@ -23,7 +23,7 @@ class LedController extends \yii\web\Controller
             $url = "led-prodi-";
             $url .= strtolower($model->jenjang);
 
-            return $this->redirect([$url.'/index']);
+            return $this->redirect([$url.'/arsip']);
         }
         return $this->render('prodi',[
             'model'=>$model,

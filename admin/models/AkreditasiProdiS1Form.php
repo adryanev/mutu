@@ -10,6 +10,8 @@
 namespace admin\models;
 
 
+use common\models\led\S7LedFakultas;
+use common\models\led\S7LedProdiS1;
 use common\models\S7AkreditasiProdiS1;
 use common\models\S7BorangS1Fakultas;
 use common\models\S7BorangS1FakultasStandar1;
@@ -41,6 +43,7 @@ use Yii;
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
 use yii\db\Exception;
+use yii\db\Transaction;
 
 class AkreditasiProdiS1Form extends Model
 {
@@ -73,6 +76,21 @@ class AkreditasiProdiS1Form extends Model
      */
     private $_dokumentasiS1Fakultas;
 
+
+    /**
+     * @var S7LedProdiS1
+     */
+    private $_led_prodi_s1;
+
+    /**
+     * var S7LedFakultas
+     */
+
+    private $_led_fakultas;
+
+    /**
+     * @return array
+     */
     public function rules()
     {
         return [
@@ -101,6 +119,7 @@ class AkreditasiProdiS1Form extends Model
 
             $this->createBorang($transaction);
             $this->createDokumentasi($transaction);
+            $this->createLed($transaction);
 
             $transaction->commit();
         } catch (Exception $e) {
@@ -170,7 +189,7 @@ class AkreditasiProdiS1Form extends Model
 
 
     /**
-     * @param $transaction \yii\db\Transaction
+     * @param $transaction Transaction
      */
     private function createBorang($transaction)
     {
@@ -250,7 +269,6 @@ class AkreditasiProdiS1Form extends Model
 
         }
 
-
         $standar1Prodi = new S7BorangS1ProdiStandar1();
         $standar2Prodi = new S7BorangS1ProdiStandar2();
         $standar3Prodi = new S7BorangS1ProdiStandar3();
@@ -317,7 +335,7 @@ class AkreditasiProdiS1Form extends Model
     }
 
     /**
-     * @param $transaction \yii\db\Transaction
+     * @param $transaction Transaction
      */
     private function createDokumentasi($transaction)
     {
@@ -331,7 +349,7 @@ class AkreditasiProdiS1Form extends Model
         $cekFakultas = S7DokumentasiS1Fakultas::find()->where(['id_akreditasi'=>$this->id_akreditasi,'id_fakultas'=>$this->_akreditasiProdiS1->prodi->id_fakultas_akademi])->all();
         if(empty($cekFakultas)){
             $this->_dokumentasiS1Fakultas = new S7DokumentasiS1Fakultas();
-            $this->_dokumentasiS1Fakultas->id_akreditasi = $this->_akreditasiProdiS1->id;
+            $this->_dokumentasiS1Fakultas->id_akreditasi = $this->_akreditasiProdiS1->id_akreditasi;
             $this->_dokumentasiS1Fakultas->id_fakultas = $this->_akreditasiProdiS1->prodi->id_fakultas_akademi;
             $this->_dokumentasiS1Fakultas->progress = 0;
             $this->_dokumentasiS1Fakultas->is_publik = 0;
@@ -366,7 +384,41 @@ class AkreditasiProdiS1Form extends Model
         $model->_dokumentasiS1Prodi = $data->dokumentasiS1Prodis;
         $model->_dokumentasiS1Fakultas = S7DokumentasiS1Fakultas::findOne(['id_akreditasi'=>$id_akreditasi]);
 
+        $model->_led_prodi_s1 = $data->ledProdiS1s;
+        $model->_led_fakultas = S7LedFakultas::find()->where(['id_akreditasi'=>$id_akreditasi,'id_fakultas'=>$data->prodi->id_fakultas_akademi])->all();
+
         return $model;
+    }
+
+    private function createLed(Transaction $transaction)
+    {
+        $modelProdi = new S7LedProdiS1();
+        $modelProdi->id_akreditasi_prodi_s1 = $this->_akreditasiProdiS1->id;
+
+        $cekFakultas = S7LedFakultas::find()->where(['id_akreditasi'=>$this->id_akreditasi,'id_fakultas'=>$this->_akreditasiProdiS1->prodi->id_fakultas_akademi])->all();
+
+        if(empty($cekFakultas)){
+            $modelFakultas = new S7LedFakultas();
+            $modelFakultas->id_fakultas = $this->_akreditasiProdiS1->prodi->id_fakultas_akademi;
+            $modelFakultas->id_akreditasi = $this->id_akreditasi;
+
+
+            if(!$modelFakultas->save()){
+                $transaction->rollBack();
+                throw new InvalidArgumentException($modelFakultas->errors);
+            }
+            $this->_led_fakultas = $modelFakultas;
+
+        }
+
+        if(!$modelProdi->save()){
+            $transaction->rollBack();
+            throw new InvalidArgumentException($modelProdi->errors);
+        }
+
+        $this->_led_prodi_s1 = $modelProdi;
+
+
     }
 
 
