@@ -10,6 +10,9 @@ use yii\bootstrap\Progress;
 use yii\web\View;
 
 /* @var $this yii\web\View */
+/* @var $cari */
+/* @var $butir */
+/* @var $dokProdi \common\models\S7DokumentasiInstitusi */
 $standar = $json['standar'];
 
 $this->title='Standar '.$standar;

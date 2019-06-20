@@ -1,5 +1,7 @@
 <?php
 
+use common\models\PencarianDokumentasiFakultasForm;
+use common\models\PencarianDokumentasiInstitusiForm;
 use common\models\S7Akreditasi;
 use common\models\PencarianDokumentasiProdiForm;
 // use common\models\Program;
@@ -7,10 +9,14 @@ use common\models\ProgramStudi;
 use kartik\depdrop\DepDrop;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model PencarianDokumentasiProdiForm */
+/* @var $modelInstitusi PencarianDokumentasiInstitusiForm */
+/* @var $modelFakultas PencarianDokumentasiFakultasForm */
 /* @var $dataAkreditasi Akreditasi[] */
+/* @var $dataAkreditasiInstitusi Akreditasi[] */
 /* @var $dataProgram Program[] */
 
 if($target == 'isi'){
@@ -37,6 +43,9 @@ $identity = Yii::$app->user->identity;
                 <ul class="nav nav-pills nav-pills-success">
                     <li class="active">
                         <a href="#pill1" data-toggle="tab">Akreditasi Program Studi</a>
+                    </li>
+                    <li>
+                        <a href="#pill3" data-toggle="tab">Akreditasi Program Studi - Fakultas</a>
                     </li>
                     <?php if($identity->isAdminInstitusi() || $identity->is_institusi===1): ?>
                     <li>
@@ -74,6 +83,27 @@ $identity = Yii::$app->user->identity;
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane" id="pill3">
+                        <div class="card">
+                            <div class="card-content">
+                                <h4 class="card-title">Form Fakultas</h4>
+                                <?php $form = ActiveForm::begin() ?>
+
+                                <?= $form->field($modelFakultas, 'akreditasi')->dropDownList($dataAkreditasi, ['prompt' => 'Pilih S7Akreditasi']) ?>
+                                <?= $form->field($modelFakultas, 'jenjang')->dropDownList($dataProgram, ['id' => 'jenjang', 'prompt' => 'Pilih Jenjang']) ?>
+                                <?= $form->field($modelFakultas, 'id_fakultas')->widget(\kartik\select2\Select2::class,[
+                                    'data' =>ArrayHelper::map(\common\models\FakultasAkademi::find()->all(),'id','nama')
+                                ])->label('Fakultas') ?>
+                                <?= $form->field($modelFakultas, 'dokumentasi_untuk')->dropDownList(['fakultas' => 'Fakultas'], ['prompt' => 'Pilih borang untuk']) ?>
+
+                                <div class="form-group">
+                                    <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>
+                                </div>
+
+                                <?php ActiveForm::end() ?>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane" id="pill2">
                         <div class="card">
                             
@@ -92,6 +122,8 @@ $identity = Yii::$app->user->identity;
                             </div>
                         </div>
                     </div>
+
+
                     
                 </div>
             </div>

@@ -55,15 +55,15 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
         <?= Menu::widget( [
             'items' => [
 
-                ['label' => 'Beranda', 'icon' => 'dashboard', 'url' => ['/site']],
+                ['label' => 'Beranda', 'icon' => 'dashboard', 'url' => ['default/index']],
                 [
                     'label' => 'Borang',
                     'icon' => 'description',
                     'url' => '#borang',
                     'items' => [
-                        ['label'=> 'Unggah Dokumen', 'url'=>['/standar7/borang/arsip-borang','target'=>'unggah']],
-                        ['label'=> 'Isi Borang', 'url'=>['/standar7/borang/arsip-borang','target'=>'isi']],
-                        ['label'=> 'Lihat Borang', 'url'=>['/standar7/borang/arsip-borang','target'=>'lihat']],
+                        ['label'=> 'Unggah Dokumen', 'url'=>['borang/arsip-borang','target'=>'unggah']],
+                        ['label'=> 'Isi Borang', 'url'=>['borang/arsip-borang','target'=>'isi']],
+                        ['label'=> 'Lihat Borang', 'url'=>['borang/arsip-borang','target'=>'lihat']],
                     ],
                 ],
                 [
@@ -71,22 +71,28 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                     'icon' => 'book',
                     'url' => '#dokumentasi',
                     'items' => [
-                        ['label'=> 'Isi Dokumentasi', 'url'=>['/standar7/dokumentasi/arsip-dok','target'=>'isi']],
-                        ['label'=> 'Penganggung Jawab', 'url'=>['/standar7/dokumentasi/penanggung','target'=>'pj']],
-                        ['label'=> 'Lihat Dokumentasi', 'url'=>['/standar7/dokumentasi/lihat-dok','target'=>'lihat']],
+                        ['label'=> 'Isi Dokumentasi', 'url'=>['dokumentasi/arsip-dok','target'=>'isi']],
+                        ['label'=> 'Penganggung Jawab', 'url'=>['dokumentasi/arsip-dok','target'=>'pj']],
+                        ['label'=> 'Lihat Dokumentasi', 'url'=>['dokumentasi/arsip-dok','target'=>'lihat']],
                     ],
                 ],
+                ['label'=> 'Laporan Evaluasi Diri', 'icon'=>'person', 'url'=>'#LED',
+                    'items'=>[
+                        ['label'=>'LED Program Studi','url'=>['led/prodi']],
+                        ['label'=>'LED Fakultas','url'=>['led-fakultas/index']],
+                        ['label'=>'LED Institusi','url'=>['led-institusi/index']]
+                    ]],
                 [
-                    'label' => 'Sertifikat S7Akreditasi',
+                    'label' => 'Sertifikat Akreditasi',
                     'icon' => 'assignment',
                     'url' => '#sertifikat',
                     'items' => [
-                        ['label'=> 'Data S7Akreditasi', 'url'=>['/standar7/data/tabel']],
-                        ['label'=> 'Grafik S7Akreditasi', 'url'=>['/standar7/data/grafik']],
+                        ['label'=> 'Data Akreditasi', 'url'=>['data/tabel']],
+                        ['label'=> 'Grafik Akreditasi', 'url'=>['data/grafik']],
 
                     ],
                 ],
-                ['label'=> 'Isi Penilaian', 'icon'=>'person', 'url'=>['/standar7/penilaian/arsip-penilaian']],
+
             ],
         ])?>
     </div>

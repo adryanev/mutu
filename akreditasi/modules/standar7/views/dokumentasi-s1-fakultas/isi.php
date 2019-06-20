@@ -16,15 +16,25 @@ use yii\bootstrap\Modal;
 use yii\bootstrap\Progress;
 use yii\web\View;
 /* @var $this yii\web\View */
-/* @var $borangFakultas DokumentasiS1Fakultas */
-/* @var $standar1 DokumentasiS1FakultasStandar1 */
-/* @var $standar2 DokumentasiS1FakultasStandar2 */
-/* @var $standar3 DokumentasiS1FakultasStandar3 */
-/* @var $standar4 DokumentasiS1FakultasStandar4 */
-/* @var $standar5 DokumentasiS1FakultasStandar5 */
-/* @var $standar6 DokumentasiS1FakultasStandar6 */
-/* @var $standar7 DokumentasiS1FakultasStandar7 */
+/* @var $borangFakultas S7DokumentasiS1Fakultas */
+/* @var $dokumentasiProdi S7DokumentasiS1Fakultas */
+/* @var $standar1 S7DokumentasiS1FakultasStandar1 */
+/* @var $standar2 S7DokumentasiS1FakultasStandar2 */
+/* @var $standar3 S7DokumentasiS1FakultasStandar3 */
+/* @var $standar4 S7DokumentasiS1FakultasStandar4 */
+/* @var $standar5 S7DokumentasiS1FakultasStandar5 */
+/* @var $standar6 S7DokumentasiS1FakultasStandar6 */
+/* @var $standar7 S7DokumentasiS1FakultasStandar7 */
 /* @var $json */
+/* @var $cari */
+/* @var $progressDok */
+/* @var $progress1*/
+/* @var $progress2 */
+/* @var $progress3 */
+/* @var $progress4 */
+/* @var $progress5 */
+/* @var $progress6 */
+/* @var $progress7 */
 
 $this->title='Isi Dokumentasi';
 $this->params['breadcrumbs'][] = ['label'=>'Pencarian Dokumentasi','url'=>['dokumentasi/arsip-dok','target'=>$cari]];
@@ -58,19 +68,15 @@ $this->params['breadcrumbs'][] = $this->title;
                         </tr>
                         <tr>
                             <td><strong>Lembaga Akreditasi</strong></td>
-                            <td><?=Html::encode($dokumentasiProdi->akreditasiProdiS1->akreditasi->lembaga)?></td>
+                            <td><?=Html::encode($dokumentasiProdi->akreditasi->lembaga)?></td>
                         </tr>
                         <tr>
                             <td><strong>Versi Akreditasi</strong></td>
-                            <td><?=Html::encode($dokumentasiProdi->akreditasiProdiS1->akreditasi->nama)?></td>
+                            <td><?=Html::encode($dokumentasiProdi->akreditasi->nama)?></td>
                         </tr>
                         <tr>
                             <td><strong>Jenis Akreditasi</strong></td>
-                            <td><?=Html::encode($dokumentasiProdi->akreditasiProdiS1->akreditasi->jenisAkreditasi->nama)?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Jenjang</strong></td>
-                            <td><?=Html::encode($dokumentasiProdi->akreditasiProdiS1->prodi->program->nama)?></td>
+                            <td><?=Html::encode($dokumentasiProdi->akreditasi->jenisAkreditasi->nama)?></td>
                         </tr>
                         <tr>
                             <td><strong>Borang Untuk</strong></td>
@@ -78,7 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </tr>
                         <tr>
                             <td><strong>Prodi</strong></td>
-                            <td><?=Html::encode($dokumentasiProdi->akreditasiProdiS1->prodi->nama)?></td>
+                            <td><?=Html::encode($dokumentasiProdi->fakultas->nama)?></td>
                         </tr>
                         <tr>
                             <td><strong>Keterangan</strong></td>
@@ -87,18 +93,17 @@ $this->params['breadcrumbs'][] = $this->title;
                                 $status = $dokumentasiProdi->is_publik; 
                                 $id = $dokumentasiProdi->id;
 
-                                // var_dump($status);
-                                // exit();
+
                                 
                                 if ($status === 0) {
-                                    echo Html::a('<i class ="material-icons">lock</i> Tidak Publik',['dokumentasi-s1-prodi/ubah-publik'],['class'=>'btn btn-danger','data'=>[
+                                    echo Html::a('<i class ="material-icons">lock</i> Tidak Publik',['dokumentasi-s1-fakultas/ubah-publik'],['class'=>'btn btn-danger','data'=>[
                                         'method'=>'POST',
                                         'confirm'=>'Ganti ke publik ?',
                                         'params'=>['id'=>$id, 'publik'=>1]
                                     ]]);
                                 }
                                 else{
-                                    echo Html::a('<i class ="material-icons">public</i> Publik',['dokumentasi-s1-prodi/ubah-publik'],['class'=>'btn btn-success','data'=>[
+                                    echo Html::a('<i class ="material-icons">public</i> Publik',['dokumentasi-s1-fakultas/ubah-publik'],['class'=>'btn btn-success','data'=>[
                                         'method'=>'POST',
                                         'confirm'=>'Ganti ke tidak publik ?',
                                         'params'=>['id'=>$id, 'publik'=>0]
@@ -162,7 +167,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/isi-standar','standar'=>1, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-fakultas/isi-standar','standar'=>1, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -180,7 +185,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/isi-standar','standar'=>2, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-fakultas/isi-standar','standar'=>2, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -198,7 +203,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/isi-standar','standar'=>3, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-fakultas/isi-standar','standar'=>3, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -216,7 +221,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/isi-standar','standar'=>4, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-fakultas/isi-standar','standar'=>4, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -234,7 +239,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/isi-standar','standar'=>5, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-fakultas/isi-standar','standar'=>5, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -252,7 +257,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/isi-standar','standar'=>6, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-fakultas/isi-standar','standar'=>6, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         <tr>
@@ -270,7 +275,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-s1-prodi/isi-standar','standar'=>7, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?= Html::a('Lihat',['dokumentasi-s1-fakultas/isi-standar','standar'=>7, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
                         </tr>
 
                         </tbody>

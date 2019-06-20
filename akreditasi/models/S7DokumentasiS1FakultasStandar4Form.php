@@ -43,8 +43,8 @@ class S7DokumentasiS1FakultasStandar4Form extends S7DokumentasiS1FakultasStandar
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
             $this->_dokumenDokumentasi->dokumen = $fileName;
             $this->_dokumenDokumentasi->kode = $this->kodeDokumen;
-            
-            $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$this->_dokumenDokumentasi->dokumentasiS1Fakultas->akreditasiProdiS1->akreditasi->tahun}/{$this->_dokumenDokumentasi->dokumentasiS1Fakultas->akreditasiProdiS1->id_prodi}/fakultas/dokumentasi");
+
+            $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_dokumenDokumentasi->dokumentasiS1Fakultas->akreditasi->lembaga}/prodi/{$this->_dokumenDokumentasi->dokumentasiS1Fakultas->akreditasi->tahun}/fakultas/{$this->_dokumenDokumentasi->dokumentasiS1Fakultas->id_fakultas}/dokumentasi");
            
             // var_dump($path);
             // exit();

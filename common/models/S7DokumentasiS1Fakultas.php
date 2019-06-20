@@ -50,8 +50,8 @@ class S7DokumentasiS1Fakultas extends \yii\db\ActiveRecord
         return [
             [['id_akreditasi','id_fakultas', 'is_publik', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
-            [['id_akreditasi'], 'exist', 'skipOnError' => true, 'targetClass' => S7Akreditasi::className(), 'targetAttribute' => ['id_akreditasi_prodi_s1' => 'id']],
-            [['id_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => FakultasAkademi::className(), 'targetAttribute' => ['id_akreditasi_prodi_s1' => 'id']],
+            [['id_akreditasi'], 'exist', 'skipOnError' => true, 'targetClass' => S7Akreditasi::className(), 'targetAttribute' => ['id_akreditasi' => 'id']],
+            [['id_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => FakultasAkademi::className(), 'targetAttribute' => ['id_akreditasi' => 'id']],
         ];
     }
 

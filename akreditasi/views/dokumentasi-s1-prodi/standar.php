@@ -1,7 +1,6 @@
 <?php
 
-use akreditasi\models\DokumentasiInstitusiStandar1Form;
-use common\models\S7DokumentasiInstitusi;
+use akreditasi\models\DokumentasiS1ProdiStandar1Form;
 use dosamigos\ckeditor\CKEditor;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Modal;
@@ -11,15 +10,10 @@ use yii\bootstrap\Progress;
 use yii\web\View;
 
 /* @var $this yii\web\View */
-/* @var $dokProdi S7DokumentasiInstitusi */
-/* @var $progress */
-/* @var $butir */
-/* @var $dokModel \akreditasi\models\S7DokumentasiInstitusiStandar1Form */
 $standar = $json['standar'];
 
 $this->title='Standar '.$standar;
-$this->params['breadcrumbs'][] = ['label'=>'Pencarian isi Dokumentasi','url'=>['dokumentasi/arsip-dok','target'=>$cari]];
-$this->params['breadcrumbs'][] = ['label'=>'Isi Dokumentasi','url'=>['dokumentasi-institusi/isi','dokumentasi'=>$dokProdi->id]];
+$this->params['breadcrumbs'][] = ['label'=>'Isi Dokumentasi','url'=>['dokumentasi-s1-prodi/index','dokumentasi'=>$dokProdi->id]];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -125,17 +119,17 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <?= $item['dokumen']; ?>
                                             </td>
                                             <td>
-                                                <?=Html::a('<i class="material-icons">cloud_download</i> &nbsp;Download',['dokumentasi-institusi/download-dok','standar'=> $standar,'dok'=>$item['id'], 'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-info'])?>
+                                                <?=Html::a('<i class="material-icons">cloud_download</i> &nbsp;Download',['dokumentasi-s1-prodi/download-dok','standar'=> $standar,'dok'=>$item['id'], 'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-info'])?>
                                                 <br>
-                                                <?php if($publik === 0) { echo Html::a('<i class="material-icons">lock</i> &nbsp;Tidak Publik',['dokumentasi-institusi/publik-standar','id'=>$item->id,'publik'=>1,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-warning']); }
-                                                else { echo Html::a('<i class="material-icons">public</i> &nbsp;Publik',['dokumentasi-institusi/publik-standar','id'=>$item->id,'publik'=>0,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-success']);}
+                                                <?php if($publik === 0) { echo Html::a('<i class="material-icons">lock</i> &nbsp;Tidak Publik',['dokumentasi-s1-prodi/publik-standar','id'=>$item->id,'publik'=>1,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-warning']); }
+                                                else { echo Html::a('<i class="material-icons">public</i> &nbsp;Publik',['dokumentasi-s1-prodi/publik-standar','id'=>$item->id,'publik'=>0,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-success']);}
                                                 ?>
                                                 <br>
-                                                <?php if($asesor === 0) { echo Html::a('<i class="material-icons">priority_high</i> &nbsp;Tidak Asesor',['dokumentasi-institusi/asesor-standar','id'=>$item->id,'asesor'=>1,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-warning']); }
-                                                else { echo Html::a('<i class="material-icons">school</i> &nbsp;Asesor',['dokumentasi-institusi/asesor-standar','id'=>$item->id,'asesor'=>0,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-success']);}
+                                                <?php if($asesor === 0) { echo Html::a('<i class="material-icons">priority_high</i> &nbsp;Tidak Asesor',['dokumentasi-s1-prodi/asesor-standar','id'=>$item->id,'asesor'=>1,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-warning']); }
+                                                else { echo Html::a('<i class="material-icons">school</i> &nbsp;Asesor',['dokumentasi-s1-prodi/asesor-standar','id'=>$item->id,'asesor'=>0,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-success']);}
                                                 ?>
                                                 <br>
-                                                <?=Html::a('<i class="material-icons">delete</i> &nbsp;Hapus',['dokumentasi-institusi/hapus-standar'],['class'=>'btn btn-sm btn-danger',
+                                                <?=Html::a('<i class="material-icons">delete</i> &nbsp;Hapus',['dokumentasi-s1-prodi/hapus-standar'],['class'=>'btn btn-sm btn-danger',
                                                 'data'=>[
                                                     'method'=>'POST',
                                                     'confirm'=>'Apakah anda yakin menghapus item ini ?',
@@ -167,7 +161,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                         <?php foreach ($value['dokumen_pendukung'] as $key => $pendukung) { 
                                         
-                                        $kodePendukung = str_replace('.','',trim($pendukung['kode']));
+                                        $kodePendukung = str_replace('.','',$pendukung['kode']);
 
                                         ?>
                                         <tr>
@@ -224,12 +218,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             else { echo Html::a('<i class="material-icons">school</i> &nbsp;Asesor',['dokumentasi-s1-prodi/asesor-standar','id'=>$item->id,'asesor'=>0,'standar'=>$standar,'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-success']);}
                                             ?>
                                             <br>
-                                            <?=Html::a('<i class="material-icons">delete</i> &nbsp;Hapus',['dokumentasi-s1-prodi/hapus-standar'],['class'=>'btn btn-sm btn-danger',
-                                            'data'=>[
-                                                'method'=>'POST',
-                                                'confirm'=>'Apakah anda yakin menghapus item ini ?',
-                                                'params'=>['id'=>$item->id, 'standar'=>$standar, 'dokumentasi'=>$_GET['dokumentasi']]
-                                            ]])?>
+                                            <?=Html::a('<i class="material-icons">delete</i> &nbsp;Hapus',['borang-s1-prodi/download-detail','dokumen'=>$item->id],['class'=>'btn btn-sm btn-danger'])?>
                                             </td>
                                             
                                             

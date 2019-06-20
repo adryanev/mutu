@@ -1,6 +1,6 @@
 <?php
 
-use akreditasi\models\DokumentasiInstitusiForm;
+//use akreditasi\models\S7DokumentasiInstitusiForm;
 use common\models\S7DokumentasiInstitusi;
 use common\models\S7DokumentasiInstitusiStandar1;
 use common\models\S7DokumentasiInstitusiStandar2;
@@ -16,18 +16,28 @@ use yii\bootstrap\Modal;
 use yii\bootstrap\Progress;
 use yii\web\View;
 /* @var $this yii\web\View */
-/* @var $borangProdi DokumentasiInstitusi */
-/* @var $standar1 DokumentasiInstitusiStandar1 */
-/* @var $standar2 DokumentasiInstitusiStandar2 */
-/* @var $standar3 DokumentasiInstitusiStandar3 */
-/* @var $standar4 DokumentasiInstitusiStandar4 */
-/* @var $standar5 DokumentasiInstitusiStandar5 */
-/* @var $standar6 DokumentasiInstitusiStandar6 */
-/* @var $standar7 DokumentasiInstitusiStandar7 */
+/* @var $borangProdi S7DokumentasiInstitusi */
+/* @var $dokumentasiProdi S7DokumentasiInstitusi */
+/* @var $standar1 S7DokumentasiInstitusiStandar1 */
+/* @var $standar2 S7DokumentasiInstitusiStandar2 */
+/* @var $standar3 S7DokumentasiInstitusiStandar3 */
+/* @var $standar4 S7DokumentasiInstitusiStandar4 */
+/* @var $standar5 S7DokumentasiInstitusiStandar5 */
+/* @var $standar6 S7DokumentasiInstitusiStandar6 */
+/* @var $standar7 S7DokumentasiInstitusiStandar7 */
 /* @var $json */
+/* @var $cari */
+/* @var $progressDok */
+/* @var $progress1 */
+/* @var $progress2 */
+/* @var $progress3 */
+/* @var $progress4 */
+/* @var $progress5 */
+/* @var $progress6 */
+/* @var $progress7 */
 
 $this->title='Isi Dokumentasi';
-$this->params['breadcrumbs'][] = ['label'=>'Pencarian Dokumentasi','url'=>['dokumentasi/arsip-dok','target'=>$cari]];
+$this->params['breadcrumbs'][] = ['label'=>'Pencarian Isi Dokumentasi','url'=>['dokumentasi/arsip-dok','target'=>$cari]];
 $this->params['breadcrumbs'][] = $this->title;
 
 

@@ -1,6 +1,7 @@
 <?php
 
 use akreditasi\models\DokumentasiS1FakultasStandar1Form;
+use common\models\S7DokumentasiS1Fakultas;
 use dosamigos\ckeditor\CKEditor;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Modal;
@@ -10,10 +11,14 @@ use yii\bootstrap\Progress;
 use yii\web\View;
 
 /* @var $this yii\web\View */
+/* @var $dokProdi S7DokumentasiS1Fakultas */
+/* @var $butir */
+/* @var $cari */
 $standar = $json['standar'];
 
 $this->title='Standar '.$standar;
-$this->params['breadcrumbs'][] = ['label'=>'Lihat Dokumentasi','url'=>['dokumentasi-s1-prodi/lihat','dokumentasi'=>$dokProdi->id]];
+$this->params['breadcrumbs'][] = ['label'=>'Pencarian Lihat Dokumentasi','url'=>['dokumentasi/arsip-dok','target'=>$cari]];
+$this->params['breadcrumbs'][] = ['label'=>'Lihat Dokumentasi','url'=>['dokumentasi-s1-fakultas/lihat','dokumentasi'=>$dokProdi->id]];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -83,7 +88,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <?= $item['dokumen']; ?>
                                             </td>
                                             <td>
-                                                <?=Html::a('<i class="material-icons">cloud_download</i> &nbsp;Download',['dokumentasi-s1-prodi/download-dok','standar'=> $standar,'dok'=>$item['id'], 'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-info'])?>
+                                                <?=Html::a('<i class="material-icons">cloud_download</i> &nbsp;Download',['dokumentasi-s1-fakultas/download-dok','standar'=> $standar,'dok'=>$item['id'], 'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-info'])?>
                                                 &nbsp;
                                                 <?php if($publik === 0) { echo '<button class="btn btn-warning btn-simple">Tidak Publik</button>'; }
                                                 else { echo '<button class="btn btn-success btn-simple">Publik</button>';}
@@ -139,7 +144,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <?= $item['dokumen']; ?>
                                             </td>
                                             <td>
-                                            <?=Html::a('<i class="material-icons">cloud_download</i> &nbsp;Download',['dokumentasi-s1-prodi/download-dok','standar'=> $standar,'dok'=>$item->id, 'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-info '])?>
+                                            <?=Html::a('<i class="material-icons">cloud_download</i> &nbsp;Download',['dokumentasi-s1-fakultas/download-dok','standar'=> $standar,'dok'=>$item->id, 'dokumentasi'=>$_GET['dokumentasi']],['class'=>'btn btn-sm btn-info '])?>
                                             &nbsp;
                                             <?php if($publik === 0) { echo '<button class="btn btn-warning btn-simple ">Tidak Publik</button>'; }
                                             else { echo '<button class="btn btn-success btn-simple">Publik</button>';}
