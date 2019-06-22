@@ -7,7 +7,7 @@ use yii\bootstrap\Html;
 /* @var $this yii\web\View */
 /* @var $model \yii\base\DynamicModel */
 /* @var $dataAkreditasi array */
-/* @var $dataProdi array */
+/* @var $dataFakultas array */
 
 
 
@@ -26,7 +26,7 @@ $identity = Yii::$app->user->identity;
                 <?php $form = ActiveForm::begin() ?>
 
                 <?= $form->field($model, 'akreditasi')->dropDownList($dataAkreditasi, ['id' => 'jenjang', 'prompt' => 'Pilih Akreditasi']) ?>
-                <?= $form->field($model, 'prodi')->widget(\kartik\select2\Select2::className(),['data'=>$dataProdi]) ?>
+                <?= $form->field($model, 'fakultas')->widget(\kartik\select2\Select2::className(),['data'=>$dataFakultas]) ?>
 
                 <div class="form-group">
                     <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>

@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use common\models\led\S7LedInstitusi;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 
@@ -19,6 +20,8 @@ use yii\behaviors\TimestampBehavior;
  * @property S7Akreditasi $akreditasi
  * @property S7BorangInstitusi[] $borangInstitusis
  * @property S7DokumentasiInstitusi[] $dokumentasiInstitusis
+ * @property S7LedInstitusi[] $ledInstitusi
+ *
  */
 class S7AkreditasiInstitusi extends \yii\db\ActiveRecord
 {
@@ -72,6 +75,16 @@ class S7AkreditasiInstitusi extends \yii\db\ActiveRecord
     {
         return $this->hasOne(S7Akreditasi::className(), ['id' => 'id_akreditasi']);
     }
+
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getLedInstitusi()
+    {
+        return $this->hasOne(S7LedInstitusi::className(), ['id_akreditasi_institusi' => 'id']);
+    }
+
 
     /**
      * @return \yii\db\ActiveQuery

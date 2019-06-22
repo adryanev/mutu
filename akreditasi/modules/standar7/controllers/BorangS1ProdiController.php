@@ -88,7 +88,7 @@ class BorangS1ProdiController extends \yii\web\Controller
 
         }
 
-        throw new BadRequestHttpException('Request Harus Post');
+        throw new BadRequestHttpException('Oops, Untuk mengakses link ini harus sesuai prosedur.');
 
 
     }
