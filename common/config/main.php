@@ -9,9 +9,9 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-//        'authManager'=>[
-//            'class'=>\yii\rbac\DbManager::class,
-//        ]
+        'authManager'=>[
+            'class'=>\yii\rbac\DbManager::class,
+        ]
     ],
     'modules'=>[
         'admin'=>[
