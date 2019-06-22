@@ -10,6 +10,7 @@ use common\models\PencarianBorangProdiForm;
 use common\models\Program;
 use common\models\ProgramStudi;
 use Yii;
+use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
@@ -18,6 +19,22 @@ use yii\web\Response;
 class BorangController extends \yii\web\Controller
 {
 
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+
+                    ['actions' => ['arsipBorang', 'cariProdi', 'cariFakultas'],
+                        'allow' => true,
+                        'roles' => ['adminLpm', 'superUser', 'adminFakultas', 'userFakultas']
+                    ],
+
+                ]
+            ],
+        ];
+    }
     /**
      * @return string
      * @throws NotFoundHttpException
@@ -32,6 +49,16 @@ class BorangController extends \yii\web\Controller
         $dataAkreditasiProdi = ArrayHelper::map($idAkreditasiProdi,'id',function($data){
            return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
         });
+        if(Yii::$app->user->identity->profilUser->id_fakultas != null){
+
+            $data = FakultasAkademi::find()->where(['id'=>Yii::$app->user->identity->profilUser->id_fakultas])->all();
+        }
+        else{
+            $data = FakultasAkademi::find()->all();
+
+        }
+
+        $dataFakultas = ArrayHelper::map($data,'id','nama');
 
         $idAkreditasiInstitusi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>1]);
         $dataAkreditasiInstitusi = ArrayHelper::map($idAkreditasiInstitusi,'id',function($data){
@@ -81,7 +108,8 @@ class BorangController extends \yii\web\Controller
             'dataAkreditasiInstitusi'=>$dataAkreditasiInstitusi,
             'dataProgram'=>$dataProgram,
             'modelInstitusi'=>$modelInstitusi,
-            'modelFakultas'=>$modelFakultas
+            'modelFakultas'=>$modelFakultas,
+            'dataFakultas'=>$dataFakultas
            ]);
     }
 
@@ -95,10 +123,17 @@ class BorangController extends \yii\web\Controller
             $parent = $_POST['depdrop_parents'];
             if($parent!==null){
                 $id = $parent[0];
-                $dataProdi = ProgramStudi::findAll(['jenjang'=>$id]);
+                if(Yii::$app->user->identity->profilUser->id_prodi != null){
+
+                    $dataProdi = ProgramStudi::findAll(['jenjang'=>$id,'id'=>Yii::$app->user->identity->profilUser->id_prodi]);
+                }
+                else{
+                    $dataProdi = ProgramStudi::find()->all();
+
+                }
                 foreach ($dataProdi as $data){
                     $id = $data->id;
-                    $nama = $data->nama . '('.$data->jenjang.')';
+                    $nama = $data->nama;
                     $newArray = ['id'=>$id,'name'=>$nama];
                     $arrayProdi[] = $newArray;
                 }
@@ -119,7 +154,14 @@ class BorangController extends \yii\web\Controller
             $parent = $_POST['depdrop_parents'];
             if($parent!==null){
                 $id = $parent[0];
-                $dataFakultas = FakultasAkademi::find()->all();
+                if(Yii::$app->user->identity->profilUser->id_fakultas_akademi != null){
+
+                    $dataFakultas = FakultasAkademi::find()->where(['id'=>Yii::$app->user->identity->profilUser->id_fakultas_akademi])->all();
+                }
+                else{
+                    $dataFakultas = FakultasAkademi::find()->all();
+
+                }
                 foreach ($dataFakultas as $data){
                     $id = $data->id;
                     $nama = $data->nama;

@@ -1,30 +1,108 @@
 [
   {
-    "standar": 1,
-    "sumber": "Statuta, Renstra, direktori program studi, kurikulum, peraturan perundang-undangan terkait"
+    "nama_dokumen": "Statuta"
   },
   {
-    "standar": 2,
-    "sumber": "Statuta, Renstra, direktori program studi, kurikulum, peraturan perundang-undangan terkait"
+    "nama_dokumen": "Renstra"
   },
   {
-    "standar": 3,
-    "sumber": "Statuta, Renstra, direktori program studi, kurikulum, peraturan perundang-undangan terkait"
+    "nama_dokumen": "Direktori Program Studi"
   },
   {
-    "standar": 4,
-    "sumber": "Statuta, Renstra, direktori program studi, kurikulum, peraturan perundang-undangan terkait"
+    "nama_dokumen": "Kurikulum"
   },
   {
-    "standar": 5,
-    "sumber": "Statuta, Renstra, direktori program studi, kurikulum, peraturan perundang-undangan terkait"
+    "nama_dokumen": "Peraturan undang-undang terkait"
   },
   {
-    "standar": 6,
-    "sumber": "Statuta, Renstra, direktori program studi, kurikulum, peraturan perundang-undangan terkait"
+    "nama_dokumen": "Laporan Tahunan"
   },
   {
-    "standar": 7,
-    "sumber": "Statuta, Renstra, direktori program studi, kurikulum, peraturan perundang-undangan terkait"
+    "nama_dokumen": "Risalah Rapat Pimipinan"
+  },
+  {
+    "nama_dokumen": "Hasil Studi Pelacakan"
+  },
+  {
+    "nama_dokumen": "Rencana Pengembangan Program"
+  },
+  {
+    "nama_dokumen": "Hasil Evaluasi Internal"
+  },
+  {
+    "nama_dokumen": "Hasil Akreditasi"
+  },
+  {
+    "nama_dokumen": "Pedoman Pelaksanaan Penjaminan Mutu Internal"
+  },
+  {
+    "nama_dokumen": "Buku Pedoman Rekrutmen dan Seleksi Calon Mahasiswa"
+  },
+  {
+    "nama_dokumen": "Pedoman Pelayanan Mahasiswa"
+  },
+  {
+    "nama_dokumen": "Laporan Wisudah Tahunan / Tengah Tahunan"
+  },
+  {
+    "nama_dokumen": "Transkrip Hasil Belajar Para Lulusan"
+  },
+  {
+    "nama_dokumen": "Direktori Lulusan Program Studi"
+  },
+  {
+    "nama_dokumen": "Buku Pedoman Rekrutmen dan Seleksi Calon Dosen dan Tenaga Pendukung"
+  },
+  {
+    "nama_dokumen": "Program Pegembangan Staf"
+  },
+  {
+    "nama_dokumen": "Laporan Tahunan Pimpinan Perguruan Tinggi/Program Studi"
+  },
+  {
+    "nama_dokumen": "Buku Pedoman Pengembangan Kurikulum"
+  },
+  {
+    "nama_dokumen": "Kebijakan-Kebijakan Mengenai Pembelajaran"
+  },
+  {
+    "nama_dokumen": "Pedoman Evaluasi Hasil Pembelajaran"
+  },
+  {
+    "nama_dokumen": "Pedoman Pembelajaran"
+  },
+  {
+    "nama_dokumen": "Hasil Pengamatan"
+  },
+  {
+    "nama_dokumen": "Peraturan Akademik yang Berlaku"
+  },
+  {
+    "nama_dokumen": "Laporan Keuangan Tahunan"
+  },
+  {
+    "nama_dokumen": "Rencana Pengembangan Lembaga"
+  },
+  {
+    "nama_dokumen": "Laporan Khusus Unit Pelayanan Informasi"
+  },
+  {
+    "nama_dokumen": "Pengamatan Pemanfaatan Sistem Informasi"
+  },
+  {
+    "nama_dokumen": "Rancangan Penelitian dan Pelayanan/Pengabdian Kepada Masyarakat"
+  },
+  {
+    "nama_dokumen": "Daftar Tugas Pembimbing Mahasiswa"
+  },
+  {
+    "nama_dokumen": "Catatan Mengenai Penyelesaian Tesis"
+  },
+  {
+    "nama_dokumen": "Daftar Tesis"
+  },
+  {
+    "nama_dokumen": "Naskah MOU Kerjamasa"
   }
+
 ]

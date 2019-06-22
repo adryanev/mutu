@@ -17,9 +17,8 @@ class S7AkreditasiInstitusiSearch extends S7AkreditasiInstitusi
     public function rules()
     {
         return [
-            [['id', 'id_akreditasi', 'skor', 'created_at', 'updated_at'], 'integer'],
+            [['id', 'id_akreditasi', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
-            [['peringkat'], 'safe'],
         ];
     }
 
@@ -62,12 +61,9 @@ class S7AkreditasiInstitusiSearch extends S7AkreditasiInstitusi
             'id' => $this->id,
             'id_akreditasi' => $this->id_akreditasi,
             'progress' => $this->progress,
-            'skor' => $this->skor,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
-
-        $query->andFilterWhere(['like', 'peringkat', $this->peringkat]);
 
         return $dataProvider;
     }

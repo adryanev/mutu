@@ -23,10 +23,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'progress') ?>
 
-    <?= $form->field($model, 'peringkat') ?>
-
-    <?php // echo $form->field($model, 'skor') ?>
-
     <?php // echo $form->field($model, 'created_at') ?>
 
     <?php // echo $form->field($model, 'updated_at') ?>

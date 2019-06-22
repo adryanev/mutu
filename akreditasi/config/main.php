@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-akreditasi',
+    'name'=> 'Sistem Penjaminan Mutu',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'akreditasi\controllers',
