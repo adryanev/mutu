@@ -11,6 +11,7 @@ use Yii;
 use yii\base\DynamicModel;
 use yii\base\Exception;
 use yii\base\Model;
+use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\helpers\Url;
@@ -19,6 +20,23 @@ use yii\web\UploadedFile;
 
 class LedProdiS1Controller extends \yii\web\Controller
 {
+
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+
+                    ['actions' => ['arsip', 'index', 'lihat', 'download', 'hapus'],
+                        'allow' => true,
+                        'roles' => ['adminLpm', 'superUser', 'adminFakultas', 'userFakultas']
+                    ],
+
+                ]
+            ],
+        ];
+    }
     public function beforeAction($action)
     {
         $this->layout="main";

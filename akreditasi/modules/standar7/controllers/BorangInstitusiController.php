@@ -19,6 +19,7 @@ use common\models\S7GambarBorangInstitusi;
 use common\models\S7IsianBorang;
 use common\models\S7IsianBorangInstitusi;
 use Yii;
+use yii\filters\AccessControl;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
@@ -26,6 +27,29 @@ use yii\web\UploadedFile;
 
 class BorangInstitusiController extends \yii\web\Controller
 {
+
+    public function behaviors()
+    {
+        return[
+            'access'=>[
+                'class'=>AccessControl::className(),
+                'rules'=>[
+                    [
+                        'actions'=>[
+                            'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',
+                            'allow'=>true,
+                            'roles'=>['userInstitusi','superUser']
+                        ]
+                    ],
+                    ['actions'=>['lihat','lihat-standar','download-isian','download-template','download','download-detail'],
+                        'allow'=>true,
+                        'roles'=>['adminLpm','superUser','adminInstitusi','userInstitusi']
+                    ],
+
+                ]
+            ],
+        ];
+    }
     public function beforeAction($action)
     {
         $this->layout="main";

@@ -11,7 +11,14 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'admin\controllers',
     'bootstrap' => ['log','admin'],
-    'modules' => [],
+    'modules'=>[
+        'admin'=>[
+            'class'=> \mdm\admin\Module::class,
+            'layout' => 'left-menu',
+
+
+        ]
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-admin',

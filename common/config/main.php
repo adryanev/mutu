@@ -13,10 +13,5 @@ return [
             'class'=>\yii\rbac\DbManager::class,
         ]
     ],
-    'modules'=>[
-        'admin'=>[
-            'class'=> \mdm\admin\Module::class,
 
-        ]
-    ]
 ];
