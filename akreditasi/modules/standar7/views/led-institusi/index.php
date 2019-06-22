@@ -67,7 +67,7 @@ $identity = Yii::$app->user->identity;
 
                                                     <?php
 
-                                                    $dokumen = \common\models\led\S7LedFakultasDetail::findAll(['id_led_fakultas' => $model->id_led_fakultas, 'jenis_file'=> $value['nama_dokumen']]);
+                                                    $dokumen = \common\models\led\S7LedInstitusiDetail::findAll(['id_led_institusi' => $model->id_led_institusi, 'jenis_file'=> $value['nama_dokumen']]);
 
                                                     foreach ($dokumen as $key => $v):
                                                     ?>
@@ -77,13 +77,13 @@ $identity = Yii::$app->user->identity;
                                                             <td>
                                                                 <div class="row">
                                                                     <div class="col-md-2">
-                                                                        <?=Html::a('Lihat',['led-prodi-s1/lihat','id'=>$v->id],['class'=>'btn btn-info '])?>
+                                                                        <?=Html::a('Lihat',['led-institus/lihat','id'=>$v->id],['class'=>'btn btn-info '])?>
                                                                     </div>
                                                                     <div class="col-md-2">
-                                                                        <?=Html::a('Unduh',['led-prodi-s1/download','id'=>$v->id],['class'=>'btn btn-warning'])?>
+                                                                        <?=Html::a('Unduh',['led-institus/download','id'=>$v->id],['class'=>'btn btn-warning'])?>
                                                                     </div>
                                                                     <div class="col-md-2">
-                                                                        <?=Html::a('Hapus',['led-prodi-s1/hapus','id'=>$v->id],[
+                                                                        <?=Html::a('Hapus',['led-institus/hapus','id'=>$v->id],[
                                                                             'class'=>'btn btn-danger',
                                                                             'data'=>[
                                                                                 'method'=>'POST',

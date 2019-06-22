@@ -77,13 +77,13 @@ $identity = Yii::$app->user->identity;
                                                             <td>
                                                                 <div class="row">
                                                                     <div class="col-md-2">
-                                                                        <?=Html::a('Lihat',['led-prodi-s1/lihat','id'=>$v->id],['class'=>'btn btn-info '])?>
+                                                                        <?=Html::a('Lihat',['led-fakultas/lihat','id'=>$v->id],['class'=>'btn btn-info '])?>
                                                                     </div>
                                                                     <div class="col-md-2">
-                                                                        <?=Html::a('Unduh',['led-prodi-s1/download','id'=>$v->id],['class'=>'btn btn-warning'])?>
+                                                                        <?=Html::a('Unduh',['led-fakultas/download','id'=>$v->id],['class'=>'btn btn-warning'])?>
                                                                     </div>
                                                                     <div class="col-md-2">
-                                                                        <?=Html::a('Hapus',['led-prodi-s1/hapus','id'=>$v->id],[
+                                                                        <?=Html::a('Hapus',['led-fakultas/hapus','id'=>$v->id],[
                                                                             'class'=>'btn btn-danger',
                                                                             'data'=>[
                                                                                 'method'=>'POST',

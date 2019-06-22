@@ -53,7 +53,7 @@ class LedFakultasController extends \yii\web\Controller
 
     public function actionIndex($akreditasi,$fakultas){
 
-        $akredProdi = S7Akreditasi::findOne(['id_akreditasi'=>$akreditasi]);
+        $akredProdi = S7Akreditasi::findOne(['id'=>$akreditasi]);
         $led = S7LedFakultas::findOne(['id_akreditasi'=>$akredProdi->id, 'id_fakultas'=>$fakultas]);
         $model = new S7LedFakultasDetail();
         $file = file_get_contents(Yii::getAlias('@common/required/led/led.json'));
@@ -77,7 +77,7 @@ class LedFakultasController extends \yii\web\Controller
 
             Yii::$app->session->setFlash('success','Berhasil Mengupload Dokumen Led.');
 
-            $this->redirect(Url::current());
+            return $this->redirect(Url::current());
 
         }
 
@@ -110,7 +110,7 @@ class LedFakultasController extends \yii\web\Controller
 
             $id = Yii::$app->request->post('id');
             $akreditasi = Yii::$app->request->post('akreditasi');
-            $prodi = Yii::$app->request->post('prodi');
+            $fakultas = Yii::$app->request->post('fakultas');
 
             $model= S7LedFakultasDetail::findOne($id);
 
@@ -119,7 +119,7 @@ class LedFakultasController extends \yii\web\Controller
             $model->delete();
 
             Yii::$app->session->setFlash('success','Berhasil Menghapus Gambar');
-            return $this->redirect(['led-fakultas/index','akreditasi'=>$akreditasi,'prodi'=>$prodi]);
+            return $this->redirect(['led-fakultas/index','akreditasi'=>$akreditasi,'fakultas'=>$fakultas]);
 
 
         }
