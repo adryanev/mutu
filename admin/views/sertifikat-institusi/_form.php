@@ -21,16 +21,24 @@ use kartik\file\FileInput;
 
     <?= $form->field($model, 'nama_lembaga')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tgl_akreditasi')->textInput() ?>
+    <?= $form->field($model, 'tgl_akreditasi')->widget(DatePicker::class, [
+        'name' => 'check_date',
+        'value' => '01/29/2014',
+        'removeButton' => false,
+        'pluginOptions' => [
+            'autoclose'=>true,
+            'format' => 'ddmmyyyy'
+        ]
+    ]) ?>
 
     <?= $form->field($model, 'tgl_kadaluarsa')->widget(DatePicker::class, [
-        'name' => 'datetime_10',
-        'options' => ['placeholder' => 'Select operating time ...'],
-        'convertFormat' => true,
+        'name' => 'check_date2',
+        'value' => '01/29/2014',
+        'removeButton' => false,
         'pluginOptions' => [
-            'format' => 'ddMMyyyy',
-            'startDate' => '01-Mar-2014 12:00 AM'
-            ]
+            'autoclose'=>true,
+            'format' => 'ddmmyyyy'
+        ]
     ])?>
 
     <?= $form->field($model, 'nomor_sk')->textInput(['maxlength' => true]) ?>
