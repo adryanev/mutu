@@ -1,35 +1,12 @@
 <footer class="footer">
     <div class="container-fluid">
-        <nav class="pull-left">
-            <ul>
-                <li>
-                    <a href="#">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Company
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Portfolio
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Blog
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
         <p class="copyright pull-right">
             &copy;
             <script>
                 document.write(new Date().getFullYear())
             </script>
-            <a href="http://topapp.id">TopApp.id</a>, - UIN Padang Sidimpuan
+            <a href="http://www.iain-padangsidimpuan.ac.id/"> - IAIN Padangsidimpuan</a>
         </p>
     </div>
 </footer>

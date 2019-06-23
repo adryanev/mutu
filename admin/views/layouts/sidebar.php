@@ -74,6 +74,17 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                         ['label'=>'S7Akreditasi Institusi','url'=>['/akreditasi-institusi']],
                         ['label'=>'S7Akreditasi Program Studi','url'=>['/akreditasi-prodi']],
                     ]],
+
+                [
+                    'label' => 'Sertifikat Akreditasi',
+                    'icon' => 'assignment',
+                    'url' => '#sertifikat',
+                    'items' => [
+                        ['label'=> 'Data Akreditasi', 'url'=>['sertifikat/arsip-sertifikat']],
+                        ['label'=> 'Grafik Akreditasi', 'url'=>['sertifikat/grafik-sertifikat']],
+
+                    ],
+                ],
             ],
         ]) ?>
     </div>

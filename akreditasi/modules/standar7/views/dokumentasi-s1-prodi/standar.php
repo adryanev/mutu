@@ -1,8 +1,7 @@
 <?php
 
-use akreditasi\models\DokumentasiS1ProdiStandar1Form;
-use akreditasi\models\S7DokumentasiInstitusiStandar1Form;
-use common\models\S7DokumentasiS1Prodi;
+use akreditasi\models\S7DokumentasiPascaProdiStandar1Form;
+use common\models\S7DokumentasiPascaProdi;
 use dosamigos\ckeditor\CKEditor;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Modal;
@@ -12,11 +11,11 @@ use yii\bootstrap\Progress;
 use yii\web\View;
 
 /* @var $this yii\web\View */
-/* @var $dokProdi S7DokumentasiS1Prodi*/
+/* @var $dokProdi S7DokumentasiPascaProdi*/
 /* @var $cari*/
 /* @var $progress*/
 /* @var $butir*/
-/* @var $dokModel S7DokumentasiInstitusiStandar1Form*/
+/* @var $dokModel S7DokumentasiPascaProdiStandar1Form*/
 $standar = $json['standar'];
 
 $this->title='Standar '.$standar;
