@@ -16,6 +16,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
+use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 
 class LedProdiS1Controller extends \yii\web\Controller
@@ -30,7 +31,7 @@ class LedProdiS1Controller extends \yii\web\Controller
 
                     ['actions' => ['arsip', 'index', 'lihat', 'download', 'hapus'],
                         'allow' => true,
-                        'roles' => ['adminLpm', 'superUser', 'adminFakultas', 'userFakultas']
+                        'roles' => ['adminLpm', 'superUser', 'adminProdi', 'userProdi']
                     ],
 
                 ]
@@ -55,8 +56,16 @@ class LedProdiS1Controller extends \yii\web\Controller
         $dataProdi = ArrayHelper::map(ProgramStudi::findAll(['jenjang'=>'S1']),'id','nama');
         if($model->load(Yii::$app->request->post())){
 
+
             $id_akreditasi = $model->akreditasi;
             $id_prodi = $model->prodi;
+
+            if(empty($id_akreditasi)){
+                throw new NotFoundHttpException("Halaman yang anda cari tidak ditemukan");
+            }
+            if(empty($id_prodi)){
+                throw new NotFoundHttpException("Halaman yang anda cari tidak ditemukan");
+            }
 
 
             return $this->redirect(['led-prodi-s1/index','akreditasi'=>$id_akreditasi,'prodi'=>$id_prodi]);
@@ -72,6 +81,7 @@ class LedProdiS1Controller extends \yii\web\Controller
     }
 
     public function actionIndex($akreditasi,$prodi){
+
 
         $akredProdi = S7AkreditasiProdiS1::findOne(['id_akreditasi'=>$akreditasi,'id_prodi'=>$prodi]);
         $led = S7LedProdiS1::findOne(['id_akreditasi_prodi_s1'=>$akredProdi->id]);

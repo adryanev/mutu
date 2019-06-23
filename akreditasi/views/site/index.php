@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Sistem Penjaminan Mutu IAIN Padang Sidimpuan';
 
 use yii\bootstrap\Html; ?>
 

@@ -9,6 +9,17 @@ use yii\web\Controller;
  */
 class DefaultController extends Controller
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+        ];
+    }
     public function beforeAction($action)
     {
         $this->layout="main";

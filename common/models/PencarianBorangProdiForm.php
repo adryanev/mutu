@@ -4,7 +4,9 @@
 namespace common\models;
 
 
+use yii\base\InvalidArgumentException;
 use yii\base\Model;
+use yii\web\NotFoundHttpException;
 
 /**
  *
@@ -50,6 +52,9 @@ class PencarianBorangProdiForm extends Model
             $url .= 'borang-'.strtolower($program).'-fakultas/'.$target;
 
         }else{
+            if(!$this->_akreditasi_prodi){
+                throw new NotFoundHttpException("Data Yang anda Cari Tidak Ditemukan");
+            }
             $this->_borang = call_user_func($borangProdiClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program)=>$this->_akreditasi_prodi->id]);
             $url .= 'borang-'.strtolower($program).'-prodi/'.$target;
         }

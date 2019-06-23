@@ -66,7 +66,21 @@ class BorangController extends \yii\web\Controller
         });
 
 
-        $dataProgram =['S1'=>'S1','S2'=>'S2','S3'=>'S3','Diploma'=>'Diploma'];
+        $prodi = Yii::$app->user->identity->profilUser->id_prodi;
+        if($prodi){
+            $p = ProgramStudi::findOne($prodi);
+
+            if($p->jenjang == 'S1'){
+                $dataProgram = ['S1'=>'Sarjana (S1)'];
+
+            }else{
+                $dataProgram = ['pasca'=>'Pasca Sarjana'];
+
+            }
+        }else{
+            $dataProgram = ['S1'=>'Sarjana (S1)','pasca'=>'Pasca Sarjana'];
+
+        }
         if($model->load(Yii::$app->request->post())){
 
 
