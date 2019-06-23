@@ -38,21 +38,27 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
                         ['class' => 'yii\grid\SerialColumn'],
 
-                                    'id',
+//                                    'id',
             'nama_institusi',
-            'nama_lembaga',
-            'tgl_akreditasi',
-            'tgl_kadaluarsa',
-            //'nomor_sk',
+//            'nama_lembaga',
+            'tgl_akreditasi:datetime',
+            'tgl_kadaluarsa:datetime',
+            'nomor_sk',
             //'nomor_sertifikat',
-            //'nilai_angka',
-            //'nilai_huruf',
+            'nilai_angka',
+            'nilai_huruf',
             //'tahun_sk',
             //'tanggal_pengajuan',
             //'tanggal_diterima',
-            'is_publik',
+            'is_publik:boolean',
             //'dokumen_sk',
-            'sertifikat',
+            [
+                    'attribute' => 'sertifikat',
+                'format' => 'raw',
+                'value' => function($model){
+                              return Html::a($model->sertifikat, ['sertifikat-institusi/download','id'=>$model->id]);
+                }
+            ],
             //'created_at',
             //'updated_at',
             //'created_by',

@@ -4,6 +4,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\sertifikat\SertifikatProdi */
+/* @var $dataProdi common\models\ProgramStudi */
 
 $this->title = 'Create Sertifikat Prodi';
 $this->params['breadcrumbs'][] = ['label' => 'Sertifikat Prodi', 'url' => ['index']];
@@ -25,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <?= $this->render('_form', [
                     'model' => $model,
+                    'dataProdi' => $dataProdi
                     ]) ?>
 
                 </div>
