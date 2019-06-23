@@ -23,21 +23,20 @@ use kartik\file\FileInput;
 
     <?= $form->field($model, 'tgl_akreditasi')->widget(DatePicker::class, [
         'name' => 'check_date',
-        'value' => '01/29/2014',
         'removeButton' => false,
+//        'options'=> ['placeholder' => 'Tanggal Akreditasi'],
         'pluginOptions' => [
             'autoclose'=>true,
-            'format' => 'ddmmyyyy'
+            'format' => 'dd-MM-yyyy'
         ]
     ]) ?>
 
     <?= $form->field($model, 'tgl_kadaluarsa')->widget(DatePicker::class, [
         'name' => 'check_date2',
-        'value' => '01/29/2014',
         'removeButton' => false,
         'pluginOptions' => [
             'autoclose'=>true,
-            'format' => 'ddmmyyyy'
+            'format' => 'dd-MM-yyyy'
         ]
     ])?>
 
@@ -51,9 +50,23 @@ use kartik\file\FileInput;
 
     <?= $form->field($model, 'tahun_sk')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tanggal_pengajuan')->textInput() ?>
+    <?= $form->field($model, 'tanggal_pengajuan')->widget(DatePicker::class, [
+        'name' => 'check_date3',
+        'removeButton' => false,
+        'pluginOptions' => [
+            'autoclose'=>true,
+            'format' => 'dd-MM-yyyy'
+        ]
+    ]) ?>
 
-    <?= $form->field($model, 'tanggal_diterima')->textInput() ?>
+    <?= $form->field($model, 'tanggal_diterima')->widget(DatePicker::class, [
+        'name' => 'check_date4',
+        'removeButton' => false,
+        'pluginOptions' => [
+            'autoclose'=>true,
+            'format' => 'dd-MM-yyyy'
+        ]
+    ]) ?>
 
     <?= $form->field($model, 'is_publik')->widget(Select2::class, [
         'data' => [1 => 'Publik', 0=>'Tidak Publik'],

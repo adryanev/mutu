@@ -3,6 +3,8 @@
 namespace admin\controllers;
 
 use common\models\sertifikat\SertifikatForm;
+use common\models\sertifikat\SertifikatInstitusi;
+use common\models\sertifikat\SertifikatProdi;
 use Yii;
 
 use common\models\sertifikat\SertifikatProdiForm;
@@ -39,8 +41,15 @@ class SertifikatController extends \yii\web\Controller {
 
     public function actionGrafikSertifikat(){
 
-        return $this->render('grafik-sertifikat', [
+        $modelInstitusi = SertifikatInstitusi::find()->orderBy(['id' => SORT_DESC])->one();
 
+        $modelProdi = SertifikatProdi::find();
+
+        $countA = SertifikatProdi::find()->where(['nilai_huruf'=>'A'])->count();
+
+        return $this->render('grafik-sertifikat', [
+            'modelInstitusi' => $modelInstitusi,
+            'countA' => $countA
         ]);
     }
 
