@@ -20,6 +20,7 @@ use common\models\S7GambarBorangS1Fakultas;
 use common\models\S7IsianBorang;
 use common\models\S7IsianBorangS1Fakultas;
 use Yii;
+use yii\filters\AccessControl;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
@@ -27,6 +28,29 @@ use yii\web\UploadedFile;
 
 class BorangS1FakultasController extends \yii\web\Controller
 {
+
+    public function behaviors()
+    {
+        return[
+            'access'=>[
+                'class'=>AccessControl::className(),
+                'rules'=>[
+                    [
+                        'actions'=>[
+                            'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',
+                            'allow'=>true,
+                            'roles'=>['userFakultas']
+                        ]
+                    ],
+                    ['actions'=>['lihat','lihat-standar','download-isian','download-template','download','download-detail'],
+                        'allow'=>true,
+                        'roles'=>['adminLpm','superUser','adminFakultas','userFakultas']
+                    ],
+
+                ]
+            ],
+        ];
+    }
 
     public function beforeAction($action)
     {

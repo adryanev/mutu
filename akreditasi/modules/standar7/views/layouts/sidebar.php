@@ -79,8 +79,8 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                 ['label'=> 'Laporan Evaluasi Diri', 'icon'=>'person', 'url'=>'#LED',
                     'items'=>[
                         ['label'=>'LED Program Studi','url'=>['led/prodi']],
-                        ['label'=>'LED Fakultas','url'=>['led-fakultas/index']],
-                        ['label'=>'LED Institusi','url'=>['led-institusi/index']]
+                        ['label'=>'LED Fakultas','url'=>['led-fakultas/arsip']],
+                        ['label'=>'LED Institusi','url'=>['led-institusi/arsip']]
                     ]],
                 [
                     'label' => 'Sertifikat Akreditasi',

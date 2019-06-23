@@ -2,7 +2,10 @@
 
 namespace common\models\led;
 
+use common\models\FakultasAkademi;
+use common\models\S7Akreditasi;
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "s7_led_fakultas".
@@ -10,15 +13,12 @@ use Yii;
  * @property int $id
  * @property int $id_akreditasi
  * @property int $id_fakultas
- * @property string $jenis_file
- * @property string $file
  * @property int $created_at
  * @property int $updated_at
- * @property int $created_by
- * @property int $updated_by
  *
  * @property FakultasAkademi $fakultas
  * @property S7Akreditasi $akreditasi
+ * @property S7LedFakultasDetail[] $s7LedFakultasDetails
  */
 class S7LedFakultas extends \yii\db\ActiveRecord
 {
@@ -30,14 +30,20 @@ class S7LedFakultas extends \yii\db\ActiveRecord
         return 's7_led_fakultas';
     }
 
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['id_akreditasi', 'id_fakultas', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
-            [['jenis_file', 'file'], 'string', 'max' => 255],
+            [['id_akreditasi', 'id_fakultas', 'created_at', 'updated_at'], 'integer'],
             [['id_fakultas'], 'exist', 'skipOnError' => true, 'targetClass' => FakultasAkademi::className(), 'targetAttribute' => ['id_fakultas' => 'id']],
             [['id_akreditasi'], 'exist', 'skipOnError' => true, 'targetClass' => S7Akreditasi::className(), 'targetAttribute' => ['id_akreditasi' => 'id']],
         ];
@@ -52,12 +58,8 @@ class S7LedFakultas extends \yii\db\ActiveRecord
             'id' => 'ID',
             'id_akreditasi' => 'Id Akreditasi',
             'id_fakultas' => 'Id Fakultas',
-            'jenis_file' => 'Jenis File',
-            'file' => 'File',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
-            'created_by' => 'Created By',
-            'updated_by' => 'Updated By',
         ];
     }
 
@@ -75,5 +77,13 @@ class S7LedFakultas extends \yii\db\ActiveRecord
     public function getAkreditasi()
     {
         return $this->hasOne(S7Akreditasi::className(), ['id' => 'id_akreditasi']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getS7LedFakultasDetails()
+    {
+        return $this->hasMany(S7LedFakultasDetail::className(), ['id_led_fakultas' => 'id']);
     }
 }

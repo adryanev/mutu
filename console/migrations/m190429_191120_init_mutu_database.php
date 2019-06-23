@@ -87,8 +87,6 @@ class m190429_191120_init_mutu_database extends Migration
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
             'progress'=>$this->float(),
-            'peringkat'=>$this->char(1),
-            'skor'=>$this->integer(3),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -98,8 +96,6 @@ class m190429_191120_init_mutu_database extends Migration
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
             'progress'=>$this->float(),
-            'peringkat'=>$this->char(1),
-            'skor'=>$this->integer(3),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -109,8 +105,6 @@ class m190429_191120_init_mutu_database extends Migration
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'progress'=>$this->float(),
-            'peringkat'=>$this->char(1),
-            'skor'=>$this->integer(3),
             'created_at'=>$this->integer(),
             'updated_at'=> $this->integer(),
         ]);

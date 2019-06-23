@@ -10,6 +10,7 @@
 namespace admin\models;
 
 
+use common\models\led\S7LedInstitusi;
 use common\models\S7AkreditasiInstitusi;
 use common\models\S7BorangInstitusi;
 use common\models\S7BorangInstitusiStandar1;
@@ -45,6 +46,15 @@ class AkreditasiInstitusiForm extends Model
      * @var S7DokumentasiInstitusi
      */
     private $_dokumentasiInstitusi;
+
+
+    /**
+     * @var S7AkreditasiInstitusi
+     */
+    private $_led_institusi;
+
+
+
     public function rules()
     {
         return [
@@ -86,6 +96,7 @@ class AkreditasiInstitusiForm extends Model
         $pathBorangDokumen = $pathP . '/borang/dokumen';
         $pathDokumentasi = $pathP. '/dokumentasi';
         $pathGambar = $pathP. '/gambar';
+        $pathLed = $pathP. '/led';
 
 
         if(!file_exists($pathBorang) && !mkdir($pathBorang, 0777, true) && !is_dir($pathBorang)) {
@@ -104,6 +115,10 @@ class AkreditasiInstitusiForm extends Model
             throw new RuntimeException(sprintf('Directory "%s" was not created', $pathGambar));
         }
 
+
+        if(!file_exists($pathLed) && !mkdir($pathGambar, 0777, true) && !is_dir($pathGambar)) {
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathGambar));
+        }
 
     }
 
@@ -164,6 +179,11 @@ class AkreditasiInstitusiForm extends Model
             $transaction->rollBack();
             throw new InvalidArgumentException($standar7->errors);
         }
+
+
+        $this->_led_institusi = new S7LedInstitusi();
+        $this->_led_institusi->id_akreditasi_institusi = $this->_akreditasiInstitusi->id;
+
     }
 
     private function createDokumentasi(Transaction $transaction)
@@ -186,6 +206,7 @@ class AkreditasiInstitusiForm extends Model
         $model->_borangInstitusi = $data->borangInstitusis;
         $model->_dokumentasiInstitusi = $data->dokumentasiInstitusis;
         $model->_akreditasiInstitusi = $data;
+        $model->_led_institusi = $data->ledInstitusi;
 
     }
 

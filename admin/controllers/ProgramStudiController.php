@@ -29,7 +29,7 @@ class ProgramStudiController extends Controller
                 'rules'=>[
                     ['actions'=>['index','create','update','view','delete'],
                      'allow'=>true,
-                     'roles'=>['@']
+                     'roles'=>['adminLpm','superUser']
                     ]
                 ]
             ],
@@ -48,13 +48,16 @@ class ProgramStudiController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ProgramStudiSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        if(Yii::$app->user->can('createProdi')){
+            $searchModel = new ProgramStudiSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+
+        }
     }
 
     /**

@@ -19,6 +19,7 @@ use common\models\S7GambarBorangS1Prodi;
 use common\models\S7IsianBorang;
 use common\models\S7IsianBorangS1Prodi;
 use Yii;
+use yii\filters\AccessControl;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
@@ -26,6 +27,28 @@ use yii\web\UploadedFile;
 
 class BorangS1ProdiController extends \yii\web\Controller
 {
+    public function behaviors()
+    {
+        return[
+            'access'=>[
+                'class'=>AccessControl::className(),
+                'rules'=>[
+                    [
+                        'actions'=>[
+                            'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',
+                            'allow'=>true,
+                            'roles'=>['userProdi']
+                        ]
+                    ],
+                    ['actions'=>['lihat','lihat-standar','download-isian','download-template','download','download-detail'],
+                        'allow'=>true,
+                        'roles'=>['adminLpm','superUser','adminProdi','userProdi']
+                    ],
+
+                ]
+            ],
+        ];
+    }
     public function beforeAction($action)
     {
         $this->layout="main";
@@ -88,7 +111,7 @@ class BorangS1ProdiController extends \yii\web\Controller
 
         }
 
-        throw new BadRequestHttpException('Request Harus Post');
+        throw new BadRequestHttpException('Oops, Untuk mengakses link ini harus sesuai prosedur.');
 
 
     }
