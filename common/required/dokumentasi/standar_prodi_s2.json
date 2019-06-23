@@ -9,7 +9,7 @@
         "isi": "Kejelasan dan kerealistisan visi, misi, tujuan, dan sasaran program studi.",
         "dokumen_sumber":[
           {
-            "kode": " 1.1.a- 01-01-01 ",
+            "kode": " 1.1.a-01-01-01 ",
             "dokumen":"Envisioning yang memuat:  Visi, Misi, Tujuan, Nilai Dasar, Dan Keyakinan Dasar  "
           }
 
@@ -17,19 +17,19 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.a- 01-02-01",
+            "kode": "1.1.a-01-02-01",
             "dokumen": "Dokumen daftar hadir "
           },
 		   {
-            "kode": "1.1.a- 01-02-02",
+            "kode": "1.1.a-01-02-02",
             "dokumen": "Berita acara, dan notulensi penyusunan visi"
           },
 		   {
-            "kode": "1.1.a- 01-02-03 ",
+            "kode": "1.1.a-01-02-03 ",
             "dokumen": "Dokumen daftar hadir penyusunan dan review visi, misi, tujuan, dan sasaran (sebanyak yang sudah dilakukan Prodi)"
           },
 		    {
-            "kode": "1.1.a- 01-02-04",
+            "kode": "1.1.a-01-02-04",
             "dokumen": "Dokumen berita acara penyusunan visi, misi, tujuan, dan sasaran (sebanyak yang sudah dilakukan Prodi)  "
           }
         ]
@@ -40,7 +40,7 @@
         "nomor": "1.1.b",
         "isi": "Strategi pencapaian sasaran  dengan  rentang waktu  yang  jelas  dan didukung oleh Dokumen.","dokumen_sumber":[
           {
-            "kode": " 1.1.b- 01-01-01 ",
+            "kode": " 1.1.b-01-01-01 ",
             "dokumen":"RIP dan Renstra"
           }
 
@@ -48,7 +48,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.b- 01-02-01",
+            "kode": "1.1.b-01-02-01",
             "dokumen": "Dokumen daftar hadir penyusunan RIP dan Renstra Prodi"
           }
         ]
@@ -103,7 +103,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "1.1.b- 01-02-01",
+            "kode": "1.1.b-01-02-01",
             "dokumen": "Dokumen daftar hadir penyusunan RIP dan Renstra Prodi"
           },
 		  {

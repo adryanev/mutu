@@ -21,14 +21,31 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'kode')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'kaprodi')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'jurusan_departemen')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'jenjang')->widget(Select2::class,[
-            'data'=>['S1'=>'S1','S2'=>'S2','S3'=>'S3','Diploma'=>'Diploma']
+            'data'=>['S1'=>'S1','S2'=>'S2']
     ])->label('Jenjang') ?>
 
     <?= $form->field($model, 'id_fakultas_akademi')->widget(Select2::class,[
             'data'=>$dataFakultas
     ])->label('Fakultas/Akademi') ?>
+
+    <?= $form->field($model, 'nomor_sk_pendirian')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'tanggal_sk_pendirian')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'pejabat_ttd_sk_pendirian')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'bulan_berdiri')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'tahun_berdiri')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nomor_sk_operasional')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'tanggal_sk_operasional')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'peringkat_banpt_terakhir')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nilai_banpt_terakhir')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nomor_sk_banpt')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'alamat')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'kodepos')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nomor_telp')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'homepage')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-rose']) ?>

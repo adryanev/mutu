@@ -28,6 +28,11 @@ class PencarianDokumentasiFakultasForm extends Model {
         $url = '';
         $this->_akreditasi = S7Akreditasi::find()->where(['id' => $this->akreditasi])->one();
         $program = $this->jenjang;
+
+        if($program == 'S2'){
+            $program = 'Pasca';
+        }
+
         $dokumentasifakultasClass = 'common\\models\\S7Dokumentasi' . $program . 'Fakultas';
         $this->_dokumentasi = call_user_func($dokumentasifakultasClass . '::findOne', ['id_akreditasi' => $this->akreditasi, 'id_fakultas' => $this->id_fakultas]);
         $url .= 'dokumentasi-' . strtolower($program) . '-fakultas/' . $target;

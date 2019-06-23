@@ -34,17 +34,17 @@ use yii\bootstrap\Html; ?>
 
                                         <div class="card-content">
 
-                                            <div class="progress" style="height: 30px;">
-                                                <div class="progress-bar progress-bar-rose progress-bar-striped" style="width: 35%">
-                                                    <strong>35 %</strong>
-                                                </div>
-                                                <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 20%">
-                                                    <strong>20 %</strong>
-                                                </div>
-                                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 10%">
-                                                    <strong>10 %</strong>
-                                                </div>
+                                        <div class="progress" style="height: 30px;">
+                                            <div class="progress-bar progress-bar-rose progress-bar-striped" style="width: 35%">
+                                                <strong>35 %</strong>
                                             </div>
+                                            <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 20%">
+                                                <strong>20 %</strong>
+                                            </div>
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 10%">
+                                                <strong>10 %</strong>
+                                            </div>
+                                        </div>
                                         </div>
 
 

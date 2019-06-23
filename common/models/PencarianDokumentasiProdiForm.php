@@ -30,8 +30,10 @@ class PencarianDokumentasiProdiForm extends Model {
         $url = '';
         $this->_akreditasi = S7Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
         $program = $this->jenjang;
-        // var_dump($this->jenjang);
-        // exit();
+
+        if($program == 'S2'){
+            $program = 'Pasca';
+        }
 
         $akreditasiProdiClass = 'common\\models\\'.'S7AkreditasiProdi'.$program;
         $dokumentasifakultasClass = 'common\\models\\S7Dokumentasi'.$program.'Fakultas';
@@ -40,7 +42,7 @@ class PencarianDokumentasiProdiForm extends Model {
         $this->_akreditasi_prodi = call_user_func($akreditasiProdiClass.'::findOne',['id_prodi'=>$this->id_prodi,'id_akreditasi'=>$this->akreditasi]);
 
         if($this->dokumentasi_untuk === 'fakultas'){
-            $this->_dokumentasi = call_user_func($dokumentasifakultasClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program->jenjang)=>$this->_akreditasi_prodi->id]);
+            $this->_dokumentasi = call_user_func($dokumentasifakultasClass.'::findOne',['id_akreditasi_prodi_'.strtolower($program)=>$this->_akreditasi_prodi->id]);
             $url .= 'dokumentasi-'.strtolower($program).'-fakultas/'.$target;
 
         }else{

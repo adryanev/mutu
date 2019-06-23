@@ -40,6 +40,11 @@ class PencarianBorangProdiForm extends Model
         $url ='';
         $this->_akreditasi = S7Akreditasi::find()->where(['id'=>$this->akreditasi])->one();
         $program = $this->jenjang;
+
+        if($program == 'S2'){
+            $program = 'Pasca';
+        }
+
         $akreditasiProdiClass = 'common\\models\\'.'S7AkreditasiProdi'.$program;
         $borangfakultasClass = 'common\\models\\S7Borang'.$program.'Fakultas';
         $borangProdiClass = 'common\\models\\S7Borang'.$program.'Prodi';
