@@ -1,6 +1,6 @@
 <?php
 
-use akreditasi\models\DokumentasiS1ProdiStandar1Form;
+use akreditasi\models\S7DokumentasiS1ProdiStandar1Form;
 use common\models\S7DokumentasiS1Prodi;
 use dosamigos\ckeditor\CKEditor;
 use yii\bootstrap\ActiveForm;

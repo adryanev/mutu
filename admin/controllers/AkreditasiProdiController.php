@@ -13,7 +13,7 @@ class AkreditasiProdiController extends Controller
     public function actionIndex()
     {
         $model = new DynamicModel(['program']);
-        $dataProgram =['S1'=>'S1','S2'=>'S2','S3'=>'S3','Diploma'=>'Diploma'];
+        $dataProgram =['S1'=>'Sarjana','S2'=>'Pascasarjana'];
         $model->addRule('program','required');
 
         if($model->load(Yii::$app->request->post())){

@@ -36,7 +36,7 @@ class DokumentasiController extends \yii\web\Controller
         });
 
 //        $dataProgram = ArrayHelper::map(ProgramStudi::find()->all(),'id','jenjang');
-        $dataProgram = ['S1'=>'S1','S2'=>'S2','S3'=>'S3','Diploma'=>'Diploma'];
+        $dataProgram = ['S1'=>'S1','S2'=>'S2'];
         if($model->load(\Yii::$app->request->post())){
 
             $url = $model->cari($target);

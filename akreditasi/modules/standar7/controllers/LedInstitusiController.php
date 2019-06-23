@@ -14,6 +14,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
+use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 
 class LedInstitusiController extends \yii\web\Controller
@@ -53,7 +54,9 @@ class LedInstitusiController extends \yii\web\Controller
 
             $id_akreditasi = $model->akreditasi;
 
-
+            if(empty($id_akreditasi)){
+                throw new NotFoundHttpException("Halaman yang anda cari tidak ditemukan");
+            }
             return $this->redirect(['led-prodi-s1/index','akreditasi'=>$id_akreditasi]);
 
         }

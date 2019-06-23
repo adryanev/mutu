@@ -15,6 +15,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
+use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 
 class LedProdiPascaController extends \yii\web\Controller
@@ -54,6 +55,12 @@ class LedProdiPascaController extends \yii\web\Controller
         $dataProdi = ArrayHelper::map(ProgramStudi::findAll(['jenjang'=>'pasca']),'id','nama');
         if($model->load(Yii::$app->request->post())){
 
+            if(empty($id_akreditasi)){
+                throw new NotFoundHttpException("Halaman yang anda cari tidak ditemukan");
+            }
+            if(empty($id_prodi)){
+                throw new NotFoundHttpException("Halaman yang anda cari tidak ditemukan");
+            }
             $id_akreditasi = $model->akreditasi;
             $id_prodi = $model->prodi;
 

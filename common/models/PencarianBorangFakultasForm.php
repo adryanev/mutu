@@ -38,6 +38,9 @@ class PencarianBorangFakultasForm extends Model
         $url = '';
         $this->_akreditasi = S7Akreditasi::find()->where(['id' => $this->akreditasi])->one();
         $program = $this->jenjang;
+        if($program == 'S2'){
+            $program = 'Pasca';
+        }
         $borangfakultasClass = 'common\\models\\S7Borang' . $program . 'Fakultas';
         $this->_borang = call_user_func($borangfakultasClass . '::findOne', ['id_akreditasi' => $this->akreditasi, 'id_fakultas' => $this->id_fakultas]);
         $url .= 'borang-' . strtolower($program) . '-fakultas/' . $target;

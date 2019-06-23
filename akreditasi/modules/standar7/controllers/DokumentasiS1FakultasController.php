@@ -205,7 +205,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
 
         $dokProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
         $sourceModel = 'akreditasi\\models\\S7DokumentasiS1FakultasStandar'.$standar.'Form';
-        // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
+        // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
         $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
 
         $sourceCek = 'common\\models\\S7DokumentasiS1FakultasStandar'.$standar;
@@ -370,13 +370,13 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $dokumentasiProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
 
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
-        $standar1 = S7DokumentasiS1FakultasStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar2 = S7DokumentasiS1FakultasStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar3 = S7DokumentasiS1FakultasStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar4 = S7DokumentasiS1FakultasStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar5 = S7DokumentasiS1FakultasStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar6 = S7DokumentasiS1FakultasStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar7 = S7DokumentasiS1FakultasStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar1 = S7DokumentasiS1FakultasStandar1::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar2 = S7DokumentasiS1FakultasStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar3 = S7DokumentasiS1FakultasStandar3::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar4 = S7DokumentasiS1FakultasStandar4::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar5 = S7DokumentasiS1FakultasStandar5::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar6 = S7DokumentasiS1FakultasStandar6::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar7 = S7DokumentasiS1FakultasStandar7::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
 
         $decode = Json::decode($json);
 
@@ -401,7 +401,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
 
         $dokProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
         $sourceModel = 'akreditasi\\models\\S7DokumentasiS1FakultasStandar'.$standar.'Form';
-        // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
+        // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
         $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
 
         $sourceCek = 'common\\models\\S7DokumentasiS1FakultasStandar'.$standar;
@@ -435,13 +435,13 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
         $dokumentasiProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
 
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
-        $standar1 = S7DokumentasiS1FakultasStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar2 = S7DokumentasiS1FakultasStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar3 = S7DokumentasiS1FakultasStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar4 = S7DokumentasiS1FakultasStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar5 = S7DokumentasiS1FakultasStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar6 = S7DokumentasiS1FakultasStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
-        $standar7 = S7DokumentasiS1FakultasStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->one();
+        $standar1 = S7DokumentasiS1FakultasStandar1::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar2 = S7DokumentasiS1FakultasStandar2::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar3 = S7DokumentasiS1FakultasStandar3::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar4 = S7DokumentasiS1FakultasStandar4::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar5 = S7DokumentasiS1FakultasStandar5::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar6 = S7DokumentasiS1FakultasStandar6::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
+        $standar7 = S7DokumentasiS1FakultasStandar7::find()->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->one();
 
         $decode = Json::decode($json);
 
@@ -465,7 +465,7 @@ class DokumentasiS1FakultasController extends \yii\web\Controller
 
         $dokProdi = S7DokumentasiS1Fakultas::findOne($dokumentasi);
         $sourceModel = 'akreditasi\\models\\S7DokumentasiS1FakultasStandar'.$standar.'Form';
-        // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
+        // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
         $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_fakultas'=>$dokumentasi])->all();
 
         $sourceCek = 'common\\models\\S7DokumentasiS1FakultasStandar'.$standar;

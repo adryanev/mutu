@@ -73,7 +73,7 @@ $identity = Yii::$app->user->identity;
 
                                         ]
                                     ])->label('Program Studi')?>
-                                    <?=$form->field($model,'dokumentasi_untuk')->dropDownList(['fakultas'=>'Fakultas','prodi'=>'Program Studi'],['prompt'=>'Pilih dokumentasi untuk'])?>
+                                    <?=$form->field($model,'dokumentasi_untuk')->dropDownList(['prodi'=>'Program Studi'],['prompt'=>'Pilih dokumentasi untuk'])?>
 
                                 <div class="form-group">
                                     <?=Html::submitButton('Cari',['class'=>'btn btn-rose'])?>
@@ -86,7 +86,7 @@ $identity = Yii::$app->user->identity;
                     <div class="tab-pane" id="pill3">
                         <div class="card">
                             <div class="card-content">
-                                <h4 class="card-title">Form Fakultas</h4>
+                                <h4 class="card-title">Form Dokumentasi</h4>
                                 <?php $form = ActiveForm::begin() ?>
 
                                 <?= $form->field($modelFakultas, 'akreditasi')->dropDownList($dataAkreditasi, ['prompt' => 'Pilih S7Akreditasi']) ?>
