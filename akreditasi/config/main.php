@@ -16,6 +16,9 @@ return [
         'standar7' => [
             'class' => 'akreditasi\modules\standar7\Standar7',
         ],
+        'standar9' => [
+            'class' => 'akreditasi\modules\standar9\Standar9',
+        ],
     ],
     'components' => [
         'request' => [
