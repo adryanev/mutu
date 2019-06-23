@@ -136,6 +136,7 @@ class UserController extends Controller
                 throw new InvalidArgumentException('Gagal membuat user, terdapat error');
 
             }
+
             return $this->redirect(['view', 'id' => $model->getUser()->id]);
         }
         if($modelPassword->load(Yii::$app->request->post())){
@@ -165,8 +166,16 @@ class UserController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
 
+        $user = $this->findModel($id);
+
+        $profil = $user->profilUser;
+
+        $auth = Yii::$app->authManager;
+        $r = array_values($auth->getRolesByUser($user->id))[0];
+        $auth->revoke($r,$id);
+        $profil->delete();
+        $user->delete();
         return $this->redirect(['index']);
     }
 
@@ -203,7 +212,7 @@ class UserController extends Controller
                 $dataProdi = ProgramStudi::findAll(['id_fakultas_akademi'=>$id]);
                 foreach ($dataProdi as $data){
                     $id = $data->id;
-                    $nama = $data->nama . '('.$data->program->nama.')';
+                    $nama = $data->nama . '('.$data->jenjang.')';
                     $newArray = ['id'=>$id,'name'=>$nama];
                     $arrayProdi[] = $newArray;
                 }

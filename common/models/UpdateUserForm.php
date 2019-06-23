@@ -5,6 +5,7 @@ namespace common\models;
 
 
 use InvalidArgumentException;
+use Yii;
 use yii\base\Model;
 use yii\db\Exception;
 
@@ -80,7 +81,8 @@ class UpdateUserForm extends Model
     {
         return [
 
-            [['username','email','status','is_admin','is_institusi','is_fakultas','is_prodi','nama_lengkap','id_fakultas','id_prodi'],'required'],
+            [['username','email','status','is_admin','is_institusi','is_fakultas','is_prodi','nama_lengkap'],'required'],
+            [['id_fakultas','id_prodi'],'safe']
         ];
     }
     public function updateUser()
@@ -95,8 +97,10 @@ class UpdateUserForm extends Model
             'email'=>$this->email,
             'status'=>$this->status,
             'is_admin'=>$this->is_admin,
-            'is_institusi'=>$this->is_institusi,'is_fakultas','is_prodi']);
-        $profil->setAttributes(['nama_lengkap','id_fakultas','id_prodi']);
+            'is_institusi'=>$this->is_institusi,
+            'is_fakultas'=>$this->is_fakultas,
+            'is_prodi'=>$this->is_prodi],false);
+        $profil->setAttributes(['nama_lengkap'=>$this->nama_lengkap,'id_fakultas'=>$this->id_fakultas,'id_prodi'=>$this->id_prodi]);
 
         $transaction = \Yii::$app->db->beginTransaction();
 
@@ -112,6 +116,37 @@ class UpdateUserForm extends Model
 
         try {
             $transaction->commit();
+            $auth = Yii::$app->getAuthManager();
+            $r = array_values($auth->getRolesByUser($user->id))[0];
+            $auth->revoke($r,$user->id);
+            if ($user->is_admin) {
+                if($user->is_institusi && $user->is_fakultas && $user->is_prodi){
+                    $role = $auth->getRole('adminLpm');
+                    $auth->assign($role, $user->id);
+                }
+                elseif ($user->is_institusi) {
+                    $role = $auth->getRole('adminInstitusi');
+                    $auth->assign($role, $user->id);
+                } elseif ($user->is_fakultas) {
+                    $role = $auth->getRole('adminFakultas');
+                    $auth->assign($role, $user->id);
+                } elseif ($user->is_prodi) {
+                    $role = $auth->getRole('adminProdi');
+                    $auth->assign($role, $user->id);
+                }
+
+            } else {
+                if ($user->is_institusi) {
+                    $role = $auth->getRole('userInstitusi');
+                    $auth->assign($role, $user->id);
+                } elseif ($user->is_fakultas) {
+                    $role = $auth->getRole('userFakultas');
+                    $auth->assign($role, $user->id);
+                } elseif ($user->is_prodi) {
+                    $role = $auth->getRole('userProdi');
+                    $auth->assign($role, $user->id);
+                }
+            }
         } catch (Exception $e) {
             var_dump($e->getMessage());
         }

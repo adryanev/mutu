@@ -120,7 +120,7 @@ class BorangPascaFakultasController extends yii\web\Controller {
 
         }
         return $this->render('isi',[
-            'borangFakultas'=>$borangFakultas,
+            'borangProdi'=>$borangFakultas,
             'dokumenBorang'=>$dokumenBorang,
             'dataDokumenBorang'=>$dataDokumenBorang,
             'standar1'=>$standar1,
@@ -147,7 +147,7 @@ class BorangPascaFakultasController extends yii\web\Controller {
         $standar7 = S7BorangPascaFakultasStandar7::find()->where(['id_borang_s1_fakultas'=>$borang])->one();
 
         return $this->render('lihat',[
-            'borangFakultas'=>$borangFakultas,
+            'borangProdi'=>$borangFakultas,
             'dataDokumenBorang'=>$dataDokumenBorang,
             'standar1'=>$standar1,
             'standar2'=>$standar2,
