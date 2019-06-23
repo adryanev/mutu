@@ -52,69 +52,19 @@ $this->registerJs($js, View::POS_READY);
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href=" ../dashboard.html ">IAIN Padangsidimpuan</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="../dashboard.html">
-                        <i class="material-icons">dashboard</i> Dashboard
-                    </a>
-                </li>
-                <li class="">
-                    <a href="register.html">
-                        <i class="material-icons">person_add</i> Register
-                    </a>
-                </li>
-                <!-- <li class=" active ">
-                    <a href="login.html">
-                        <i class="material-icons">fingerprint</i> Login
-                    </a>
-                </li>
-                <li class="">
-                    <a href="lock.html">
-                        <i class="material-icons">lock_open</i> Lock
-                    </a>
-                </li> -->
-            </ul>
-        </div>
-    </div>
+        </div></div>
 </nav>
 <div class="wrapper wrapper-full-page">
     <div class="full-page login-page" filter-color="black" data-image="<?=Yii::getAlias('@web/img/beranda.jpg')?>">
         <?=$content?>
         <footer class="footer">
             <div class="container">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
                 <p class="copyright pull-right">
                     &copy;
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
+IAIN Padangsidimpuan                </p>
             </div>
         </footer>
     </div>
