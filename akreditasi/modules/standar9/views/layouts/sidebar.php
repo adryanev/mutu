@@ -38,9 +38,9 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                     'icon' => 'book',
                     'url' => '#lk',
                     'items' => [
-                        ['label'=> 'LK Program Studi', 'url'=>['dokumentasi/arsip-dok','target'=>'isi']],
-                        ['label'=> 'LK Fakultas', 'url'=>['dokumentasi/arsip-dok','target'=>'pj']],
-                        ['label'=> 'LK Perguruan Tinggi', 'url'=>['dokumentasi/arsip-dok','target'=>'lihat']],
+                        ['label'=> 'LK Program Studi', 'url'=>['lk/arsip-lk']],
+                        ['label'=> 'LK Fakultas', 'url'=>['lk/arsip-lk']],
+                        ['label'=> 'LK Perguruan Tinggi', 'url'=>['lk/arsip-lk']],
                     ],
                 ],
                 ['label'=> 'Laporan Evaluasi Diri', 'icon'=>'person', 'url'=>'#LED',

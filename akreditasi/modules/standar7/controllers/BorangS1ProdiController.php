@@ -33,14 +33,16 @@ class BorangS1ProdiController extends \yii\web\Controller
             'access'=>[
                 'class'=>AccessControl::className(),
                 'rules'=>[
+//                    [
+//                        'actions'=>[
+//                            'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',
+//                            'allow'=>true,
+//                            'roles'=>['userProdi','superUser','adminLpm']
+//                        ]
+//                    ],
                     [
-                        'actions'=>[
-                            'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',
-                            'allow'=>true,
-                            'roles'=>['userProdi']
-                        ]
-                    ],
-                    ['actions'=>['lihat','lihat-standar','download-isian','download-template','download','download-detail'],
+                        'actions'=>['lihat','lihat-standar','download-isian','download-template','download','download-detail',
+                            'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',],
                         'allow'=>true,
                         'roles'=>['adminLpm','superUser','adminProdi','userProdi']
                     ],
