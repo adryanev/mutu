@@ -29,7 +29,7 @@
             <script>
                 document.write(new Date().getFullYear())
             </script>
-            <a href="http://topapp.id">TopApp.id</a>, - UIN Padang Sidimpuan
+            <a href="http://www.iain-padangsidimpuan.ac.id/"> - IAIN Padangsidimpuan</a>
         </p>
     </div>
 </footer>

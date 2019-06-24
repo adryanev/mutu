@@ -23,15 +23,15 @@ class AkreditasiController extends Controller
     public function behaviors()
     {
         return [
-            'access'=>[
-                'class'=>AccessControl::className(),
-                'rules'=>[
-                    ['actions'=>['index','create','update','view','delete'],
-                     'allow'=>true,
-                     'roles'=>['@']
-                    ]
-                ]
-            ],
+//            'access'=>[
+//                'class'=>AccessControl::className(),
+//                'rules'=>[
+//                    ['actions'=>['index','create','update','view','delete'],
+//                     'allow'=>true,
+//                     'roles'=>['@']
+//                    ]
+//                ]
+//            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
