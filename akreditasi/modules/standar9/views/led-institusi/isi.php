@@ -36,12 +36,12 @@ use yii\web\View;
 /* @var $progress6 */
 /* @var $progress7 */
 
-$this->title='Isi Dokumentasi';
-$this->params['breadcrumbs'][] = ['label'=>'Pencarian Isi Dokumentasi','url'=>['dokumentasi/arsip-dok','target'=>$cari]];
+$this->title='Isi LED';
+$this->params['breadcrumbs'][] = ['label'=>'Pencarian Isi Laporan Kinerja','url'=>['led-institusi/arsip-dok','target'=>$cari]];
 $this->params['breadcrumbs'][] = $this->title;
 
 
- ?>
+?>
 <div class="row">
     <div class="col-md-12">
         <div class="card">
@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <i class="material-icons">file_copy</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title">Form Dokumentasi</h4>
+                <h4 class="card-title">Form LED</h4>
 
                 <div class="col-md-12 table-responsive ">
                     <table class="table table-hover">
@@ -63,53 +63,36 @@ $this->params['breadcrumbs'][] = $this->title;
                         </thead> -->
                         <tbody>
                         <tr>
-                            <td><strong>Dokumentasi</strong></td>
-                            <td>Akreditasi Institusi</td>
+                            <td><strong>Borang</strong></td>
+                            <td>Borang BAN-PT Versi 2008 untuk Program Studi</td>
                         </tr>
                         <tr>
                             <td><strong>Lembaga Akreditasi</strong></td>
-                            <td><?=Html::encode($dokumentasiProdi->akreditasiInstitusi->akreditasi->lembaga)?></td>
+                            <td>BAN-PT</td>
                         </tr>
                         <tr>
                             <td><strong>Versi Akreditasi</strong></td>
-                            <td><?=Html::encode($dokumentasiProdi->akreditasiInstitusi->akreditasi->nama)?></td>
+                            <td>2008 untuk Sarjana (S1)</td>
                         </tr>
                         <tr>
                             <td><strong>Jenis Akreditasi</strong></td>
-                            <td><?=Html::encode($dokumentasiProdi->akreditasiInstitusi->akreditasi->jenisAkreditasi->nama)?></td>
+                            <td>Program</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jenjang</strong></td>
+                            <td>S1</td>
                         </tr>
                         <tr>
                             <td><strong>Borang Untuk</strong></td>
-                            <td>Institusi</td>
+                            <td>Program</td>
                         </tr>
-                       
+                        <tr>
+                            <td><strong>Prodi</strong></td>
+                            <td>Teknik Informatika</td>
+                        </tr>
                         <tr>
                             <td><strong>Keterangan</strong></td>
-                            <td>
-                            <?php 
-                                $status = $dokumentasiProdi->is_publik; 
-                                $id = $dokumentasiProdi->id;
-
-                                // var_dump($status);
-                                // exit();
-                                
-                                if ($status === 0) {
-                                    echo Html::a('<i class ="material-icons">lock</i> Tidak Publik',['dokumentasi-institusi/ubah-publik'],['class'=>'btn btn-danger','data'=>[
-                                        'method'=>'POST',
-                                        'confirm'=>'Ganti ke publik ?',
-                                        'params'=>['id'=>$id, 'publik'=>1]
-                                    ]]);
-                                }
-                                else{
-                                    echo Html::a('<i class ="material-icons">public</i> Publik',['dokumentasi-institusi/ubah-publik'],['class'=>'btn btn-success','data'=>[
-                                        'method'=>'POST',
-                                        'confirm'=>'Ganti ke tidak publik ?',
-                                        'params'=>['id'=>$id, 'publik'=>0]
-                                    ]]);
-                                }
-
-                            ?>
-                            </td>
+                            <td></td>
                         </tr>
 
                         </tbody>
@@ -124,14 +107,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Isi Dokumentasi</h4>
-                <p class="category">Kelengkapan Berkas : <?=Html::encode($progressDok)?>%</p>
-
-                
+                <h4 class="card-title">Isi LED</h4>
+                <p class="category">Kelengkapan Berkas : 60%</p>
 
                 <div class="progress">
-                    <div class="progress-bar <?=$progressDok < 30 ? 'progress-bar-danger' : (($progressDok >30 && $progressDok<=60 )? 'progress-bar-warning': 'progress-bar-info') ?>" role="progressbar" aria-valuenow="<?=Html::encode($progressDok)?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=Html::encode($progressDok)?>%;">
-                        <span class="sr-only"><?=Html::encode($progressDok)?>% Complete</span>
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
                     </div>
                 </div>
 
@@ -144,7 +125,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <thead data-background-color="green">
                         <tr>
                             <th>No.</th>
-                            <th colspan="2">Standar Akreditasi</th>
+                            <th colspan="2">Kriteria Akreditasi</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
@@ -153,128 +134,140 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>1</td>
                             <td colspan="2">
-                                Standar 1 : <?= $progress1 ?>%<br><small style="color:grey"> VISI, MISI, TUJUAN DAN SASARAN, SERTA STRATEGI PENCAPAIAN</small>
+                                Kriteria 1 : 60%<br><small style="color:grey"> VISI, MISI, TUJUAN DAN STRATEGI</small>
 
-                                <?=
-                                Progress::widget([
-                                    'percent' => $progress1,
-                                    'label' => 'test',
-                                    'barOptions' => ['class' => 'progress-bar-info'],
-                                    'options' => ['class' => 'progress-striped']
-                                ]);?>
-
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-institusi/isi-standar','standar'=>1, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>1],['class'=>['btn btn-rose']])?></td>
                         </tr>
 
                         <tr>
                             <td>2</td>
                             <td colspan="2">
-                                Standar 2 : <?=$progress2 ?>%<br><small style="color:grey">TATA PAMONG, KEPEMIMPINAN, SISTEM PENGELOLAAN, DAN PENJAMINAN MUTU</small>
+                                Kriteria 2 : 60%<br><small style="color:grey">TATA PAMONG,TATA KELOLA, dan KERJASAMA</small>
 
-                                <?=
-                                Progress::widget([
-                                    'percent' => $progress2,
-                                    'label' => 'test',
-                                    'barOptions' => ['class' => 'progress-bar-info'],
-                                    'options' => ['class' => 'progress-striped']
-                                ]);?>
-
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-institusi/isi-standar','standar'=>2, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>2],['class'=>['btn btn-rose']])?></td>
                         </tr>
 
                         <tr>
                             <td>3</td>
                             <td colspan="2">
-                                Standar 3 : <?= $progress3 ?>%<br><small style="color:grey">MAHASISWA DAN LULUSAN</small>
+                                Kriteria 3 : 60%<br><small style="color:grey">MAHASISWA</small>
 
-                                <?=
-                                Progress::widget([
-                                    'percent' => $progress3,
-                                    'label' => 'test',
-                                    'barOptions' => ['class' => 'progress-bar-info'],
-                                    'options' => ['class' => 'progress-striped']
-                                ]);?>
-
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-institusi/isi-standar','standar'=>3, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>3],['class'=>['btn btn-rose']])?></td>
                         </tr>
 
                         <tr>
                             <td>4</td>
                             <td colspan="2">
-                                Standar 4 : <?= $progress4 ?>%<br><small style="color:grey">SUMBER DAYA MANUSIA</small>
+                                Kriteria 4 : 60%<br><small style="color:grey">SUMBER DAYA MANUSIA</small>
 
-                                <?=
-                                Progress::widget([
-                                    'percent' => $progress4,
-                                    'label' => 'test',
-                                    'barOptions' => ['class' => 'progress-bar-info'],
-                                    'options' => ['class' => 'progress-striped']
-                                ]);?>
-                                
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-institusi/isi-standar','standar'=>4, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>4],['class'=>['btn btn-rose']])?></td>
                         </tr>
 
                         <tr>
                             <td>5</td>
                             <td colspan="2">
-                                Standar 5 : <?= $progress5 ?>%<br><small style="color:grey">KURIKULUM, PEMBELAJARAN, DAN SUASANA AKADEMIK</small>
+                                Kriteria 5 : 60%<br><small style="color:grey">KEUANGAN, SARANA DAN PRASARANA</small>
 
-                                <?=
-                                Progress::widget([
-                                    'percent' => $progress5,
-                                    'label' => 'test',
-                                    'barOptions' => ['class' => 'progress-bar-info'],
-                                    'options' => ['class' => 'progress-striped']
-                                ]);?>
-                                
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-institusi/isi-standar','standar'=>5, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>5],['class'=>['btn btn-rose']])?></td>
                         </tr>
 
                         <tr>
                             <td>6</td>
                             <td colspan="2">
-                                Standar 6 : <?= $progress6 ?>%<br><small style="color:grey">PEMBIAYAAN, SARANA DAN PRASARANA, SERTA SISTEM INFORMASI</small>
+                                Kriteria 6 : 60%<br><small style="color:grey">PENDIDIKAN</small>
 
-                                <?=
-                                Progress::widget([
-                                    'percent' => $progress6,
-                                    'label' => 'test',
-                                    'barOptions' => ['class' => 'progress-bar-info'],
-                                    'options' => ['class' => 'progress-striped']
-                                ]);?>
-                                
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-institusi/isi-standar','standar'=>6, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>6],['class'=>['btn btn-rose']])?></td>
                         </tr>
 
                         <tr>
                             <td>7</td>
                             <td colspan="2">
-                                Standar 7 : <?= $progress7 ?>%<br> <small style="color:grey">PENELITIAN, PELAYANAN/PENGABDIAN KEPADA MASYARAKAT, DAN KERJASAMA</small>
+                                Kriteria 7 : 60%<br> <small style="color:grey">PENELITIAN</small>
 
-                                <?=
-                                Progress::widget([
-                                    'percent' => $progress7,
-                                    'label' => 'test',
-                                    'barOptions' => ['class' => 'progress-bar-info'],
-                                    'options' => ['class' => 'progress-striped']
-                                ]);?>
-                                
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
                             </td>
 
-                            <td><?= Html::a('Lihat',['dokumentasi-institusi/isi-standar','standar'=>7, 'dokumentasi'=>$dokumentasiProdi->id],['class'=>'btn btn-rose'])?></td>
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>7],['class'=>['btn btn-rose']])?></td>
                         </tr>
+
+
+                        <tr>
+                            <td>8</td>
+                            <td colspan="2">
+                                Kriteria 8 : 60%<br> <small style="color:grey">PENGABDIAN KEPADA MASYARAKAT</small>
+
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>8],['class'=>['btn btn-rose']])?></td>
+                        </tr>
+
+
+                        <tr>
+                            <td>9</td>
+                            <td colspan="2">
+                                Kriteria  : 60%<br> <small style="color:grey">LUARAN DAN CAPAIAN TRIDHARMA</small>
+
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td><?=Html::a('Lihat',['led-institusi/isi-standar','dokumentasi'=>1,'standar'=>9],['class'=>['btn btn-rose']])?></td>
+                        </tr>
+
 
                         </tbody>
                     </table>

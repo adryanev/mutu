@@ -45,9 +45,9 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                 ],
                 ['label'=> 'Laporan Evaluasi Diri', 'icon'=>'person', 'url'=>'#LED',
                     'items'=>[
-                        ['label'=>'LED Program Studi','url'=>['led/prodi']],
-                        ['label'=>'LED Fakultas','url'=>['led-fakultas/arsip']],
-                        ['label'=>'LED Institusi','url'=>['led-institusi/arsip']]
+                        ['label'=>'LED Program Studi','url'=>['led/arsip-led']],
+                        ['label'=>'LED Fakultas','url'=>['led/arsip-led']],
+                        ['label'=>'LED Institusi','url'=>['led/arsip-led']]
                     ]],
 
             ],
