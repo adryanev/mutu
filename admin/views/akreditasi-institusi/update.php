@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model common\models\S7AkreditasiInstitusi */
 /* @var $dataAkreditasi \common\models\S7Akreditasi[] */
 
-$this->title = 'Update Akreditasi Institusi: ' . $model->id;
+$this->title = 'Update Akreditasi Institusi: ' . $model->id_akreditasi;
 $this->params['breadcrumbs'][] = ['label' => 'Akreditasi Institusi', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => $model->id_akreditasi, 'url' => ['view', 'id' => $model->id_akreditasi]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="row">
