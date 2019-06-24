@@ -28,7 +28,7 @@ class BorangController extends \yii\web\Controller
 
                     ['actions' => ['arsipBorang', 'cariProdi', 'cariFakultas'],
                         'allow' => true,
-                        'roles' => ['adminLpm', 'superUser', 'adminFakultas', 'userFakultas']
+                        'roles' => ['adminLpm', 'superUser', 'adminFakultas', 'userFakultas','adminProdi','userProdi']
                     ],
 
                 ]
