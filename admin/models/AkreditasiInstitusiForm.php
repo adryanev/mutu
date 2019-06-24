@@ -208,6 +208,8 @@ class AkreditasiInstitusiForm extends Model
         $model->_akreditasiInstitusi = $data;
         $model->_led_institusi = $data->ledInstitusi;
 
+        return $model;
+
     }
 
 }
