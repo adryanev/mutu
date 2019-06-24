@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use common\models\led\S7LedProdiPasca;
 use Yii;
 
 /**
@@ -39,9 +40,8 @@ class S7AkreditasiProdiPasca extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_akreditasi', 'id_prodi', 'skor', 'created_at', 'updated_at'], 'integer'],
+            [['id_akreditasi', 'id_prodi', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
-            [['peringkat'], 'string', 'max' => 1],
             [['id_akreditasi'], 'exist', 'skipOnError' => true, 'targetClass' => S7Akreditasi::className(), 'targetAttribute' => ['id_akreditasi' => 'id']],
             [['id_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => ProgramStudi::className(), 'targetAttribute' => ['id_prodi' => 'id']],
         ];
@@ -57,8 +57,6 @@ class S7AkreditasiProdiPasca extends \yii\db\ActiveRecord
             'id_akreditasi' => 'Id Akreditasi',
             'id_prodi' => 'Id Prodi',
             'progress' => 'Progress',
-            'peringkat' => 'Peringkat',
-            'skor' => 'Skor',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
