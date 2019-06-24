@@ -13,7 +13,7 @@ use yii\web\View;
 /* @var $model DynamicModel */
 /* @var $dataProgram Program[] */
 
-$this->title = 'S7Akreditasi Program Studi';
+$this->title = 'Akreditasi Program Studi';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">

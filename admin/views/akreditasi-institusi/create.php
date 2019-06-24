@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $model common\models\S7AkreditasiInstitusi */
 /* @var $dataAkreditasi \common\models\S7Akreditasi[] */
 
-$this->title = 'Create S7Akreditasi Institusi';
-$this->params['breadcrumbs'][] = ['label' => 'S7Akreditasi Institusi', 'url' => ['index']];
+$this->title = 'Create Akreditasi Institusi';
+$this->params['breadcrumbs'][] = ['label' => 'Akreditasi Institusi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel admin\models\S7AkreditasiInstitusiSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'S7Akreditasi Institusi';
+$this->title = 'Akreditasi Institusi';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                     <p>
-                        <?= Html::a('Create S7Akreditasi Institusi', ['create'], ['class' => 'btn btn-success']) ?>
+                        <?= Html::a('Tambah Akreditasi Institusi', ['create'], ['class' => 'btn btn-success']) ?>
                     </p>
 
                                                                     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
