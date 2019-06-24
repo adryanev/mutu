@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Sistem Penjaminan Mutu IAIN Padangsidimpuan';
+$this->title = 'Sistem Informasi Berbasis Akreditasi IAIN Padangsidimpuan';
 
 use yii\bootstrap\Html; ?>
 
