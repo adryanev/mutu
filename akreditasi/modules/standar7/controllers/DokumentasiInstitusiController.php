@@ -27,28 +27,28 @@ namespace akreditasi\modules\standar7\controllers;
 
     class DokumentasiInstitusiController extends \yii\web\Controller {
 
-        public function behaviors()
-        {
-            return[
-                'access'=>[
-                    'class'=>AccessControl::className(),
-                    'rules'=>[
-                        [
-                            'actions'=>[
-                                'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',
-                                'allow'=>true,
-                                'roles'=>['userInstitusi']
-                            ]
-                        ],
-                        ['actions'=>['lihat','lihat-standar','download-isian','download-template','download','download-detail'],
-                            'allow'=>true,
-                            'roles'=>['adminLpm','superUser','adminInstitusi','userInstitusi']
-                        ],
-
-                    ]
-                ],
-            ];
-        }
+//        public function behaviors()
+//        {
+//            return[
+//                'access'=>[
+//                    'class'=>AccessControl::className(),
+//                    'rules'=>[
+//                        [
+//                            'actions'=>[
+//                                'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',
+//                                'allow'=>true,
+//                                'roles'=>['userInstitusi']
+//                            ]
+//                        ],
+//                        ['actions'=>['lihat','lihat-standar','download-isian','download-template','download','download-detail'],
+//                            'allow'=>true,
+//                            'roles'=>['adminLpm','superUser','adminInstitusi','userInstitusi']
+//                        ],
+//
+//                    ]
+//                ],
+//            ];
+//        }
 
         public function beforeAction($action)
         {

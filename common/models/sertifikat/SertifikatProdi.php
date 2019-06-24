@@ -57,9 +57,10 @@ class SertifikatProdi extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_prodi', 'tgl_akreditasi', 'tgl_kadaluarsa', 'nilai_angka', 'tanggal_pengajuan', 'tanggal_diterima', 'is_publik', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [['id_prodi', 'nilai_angka', 'is_publik', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['nama_lembaga', 'nomor_sk', 'nomor_sertifikat', 'nilai_huruf', 'tahun_sk', 'dokumen_sk', 'sertifikat'], 'string', 'max' => 255],
             [['id_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => ProgramStudi::className(), 'targetAttribute' => ['id_prodi' => 'id']],
+            [['tgl_kadaluarsa','tgl_akreditasi','tanggal_diterima','tanggal_pengajuan'],'safe']
         ];
     }
 

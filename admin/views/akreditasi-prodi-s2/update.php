@@ -9,8 +9,8 @@ use yii\helpers\Html;
 /* @var $dataProdi ProgramStudi[] */
 /* @var $model common\models\S7AkreditasiProdiPasca */
 
-$this->title = 'Update S7 Akreditasi Prodi Pasca: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'S7 Akreditasi Prodi Pasca', 'url' => ['index']];
+$this->title = 'Update  Akreditasi Prodi Pasca: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => ' Akreditasi Prodi Pasca', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

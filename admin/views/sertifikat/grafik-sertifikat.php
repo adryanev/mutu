@@ -1,3 +1,10 @@
+<?php
+
+
+/* @var $modelInstitusi SertifikatInstitusi*/
+
+use common\models\sertifikat\SertifikatInstitusi;
+use yii\bootstrap\Html; ?>
 <div class="row" style="margin-top:20px;">
     <!-- <div class="col-md-5 col-md-offset-1"> -->
     <div class="col-md-12">
@@ -110,7 +117,80 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+<?php
+
+    $timestamp = time();
+
+?>
+                                <div class="col-md-12 table-responsive ">
+                                    <table class="table table-hover">
+
+                                        <tbody>
+                                        <tr>
+                                            <td><strong>Sertifikat</strong></td>
+                                            <td><?= $timestamp ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nama Institusi</strong></td>
+                                            <td><?= Html::encode($modelInstitusi->nama_institusi ) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nama Lembaga</strong></td>
+                                            <td><?= Html::encode($modelInstitusi->nama_lembaga ) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tanggal Akreditasi</strong></td>
+                                            <td><?= Html::encode($modelInstitusi->tgl_akreditasi ) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tanggal Kadaluarsa</strong></td>
+                                            <td><?= Html::encode($modelInstitusi->tgl_kadaluarsa ) ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nomor SK</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nomor Sertifikat</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nilai Angka (pakai warna)</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nilai Huruf juga</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tahun SK</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tanggal Pengajuan</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tanggal Diterima</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Keterangan </strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Dokumen SK</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sertifikat</strong></td>
+                                            <td></td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -125,7 +205,75 @@
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                             <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                <div class="card">
+
+                                    <div class="col-md-12 table-responsive ">
+                                        <table class="table table-hover">
+
+                                            <tbody>
+                                            <tr>
+                                                <td><strong>Sertifikat</strong></td>
+                                                <td>Akreditasi Institusi</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nama Program Studi</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Akreditasi</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Kadaluarsa</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nomor SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nomor Sertifikat</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nilai Angka (pakai warna)</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nilai Huruf juga</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tahun SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Pengajuan</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Diterima</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Keterangan </strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Dokumen SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Sertifikat</strong></td>
+                                                <td></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -140,7 +288,75 @@
                         </div>
                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                             <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                            <div class="card">
+
+                                <div class="col-md-12 table-responsive ">
+                                    <table class="table table-hover">
+
+                                        <tbody>
+                                        <tr>
+                                            <td><strong>Sertifikat</strong></td>
+                                            <td>Akreditasi Institusi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nama Program Studi</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tanggal Akreditasi</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tanggal Kadaluarsa</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nomor SK</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nomor Sertifikat</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nilai Angka (pakai warna)</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nilai Huruf juga</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tahun SK</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tanggal Pengajuan</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tanggal Diterima</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Keterangan </strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Dokumen SK</strong></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sertifikat</strong></td>
+                                            <td></td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
                             </div>
                         </div>
                     </div>
@@ -156,7 +372,75 @@
                         </div>
                         <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                             <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                <div class="card">
+
+                                    <div class="col-md-12 table-responsive ">
+                                        <table class="table table-hover">
+
+                                            <tbody>
+                                            <tr>
+                                                <td><strong>Sertifikat</strong></td>
+                                                <td>Akreditasi Institusi</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nama Program Studi</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Akreditasi</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Kadaluarsa</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nomor SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nomor Sertifikat</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nilai Angka (pakai warna)</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nilai Huruf juga</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tahun SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Pengajuan</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Diterima</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Keterangan </strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Dokumen SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Sertifikat</strong></td>
+                                                <td></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -172,7 +456,75 @@
                         </div>
                         <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
                             <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                <div class="card">
+
+                                    <div class="col-md-12 table-responsive ">
+                                        <table class="table table-hover">
+
+                                            <tbody>
+                                            <tr>
+                                                <td><strong>Sertifikat</strong></td>
+                                                <td>Akreditasi Institusi</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nama Program Studi</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Akreditasi</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Kadaluarsa</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nomor SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nomor Sertifikat</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nilai Angka (pakai warna)</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nilai Huruf juga</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tahun SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Pengajuan</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Diterima</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Keterangan </strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Dokumen SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Sertifikat</strong></td>
+                                                <td></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -188,7 +540,75 @@
                         </div>
                         <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
                             <div class="panel-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                <div class="card">
+
+                                    <div class="col-md-12 table-responsive ">
+                                        <table class="table table-hover">
+
+                                            <tbody>
+                                            <tr>
+                                                <td><strong>Sertifikat</strong></td>
+                                                <td>Akreditasi Institusi</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nama Program Studi</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Akreditasi</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Kadaluarsa</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nomor SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nomor Sertifikat</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nilai Angka (pakai warna)</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Nilai Huruf juga</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tahun SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Pengajuan</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Tanggal Diterima</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Keterangan </strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Dokumen SK</strong></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Sertifikat</strong></td>
+                                                <td></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

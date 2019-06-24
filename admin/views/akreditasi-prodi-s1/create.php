@@ -9,8 +9,8 @@ use yii\helpers\Html;
 /* @var $dataProdi ProgramStudi[] */
 /* @var $model common\models\S7AkreditasiProdiS1 */
 
-$this->title = 'Create S7Akreditasi Prodi S1';
-$this->params['breadcrumbs'][] = ['label' => 'S7Akreditasi Prodi S1', 'url' => ['index']];
+$this->title = 'Create Akreditasi Prodi S1';
+$this->params['breadcrumbs'][] = ['label' => 'Akreditasi Prodi S1', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">

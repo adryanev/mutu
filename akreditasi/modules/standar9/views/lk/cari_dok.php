@@ -29,7 +29,7 @@ else{
     $target = "Lihat";
 }
 
-$this->title='Pencarian '.$target.' Dokumentasi';
+$this->title='Pencarian '.$target.' Laporan Kinerja';
 $this->params['breadcrumbs'][] = $this->title;
 $identity = Yii::$app->user->identity;
 
@@ -58,7 +58,7 @@ $identity = Yii::$app->user->identity;
                         <div class="card">
                             
                             <div class="card-content">
-                                <h4 class="card-title">Form Dokumentasi</h4>
+                                <h4 class="card-title">Form Laporan Kinerja</h4>
                                 <?php $form = ActiveForm::begin() ?>
 
                                     <?=$form->field($model,'akreditasi')->dropDownList($dataAkreditasi,['prompt'=>'Pilih Akreditasi'])?>
@@ -73,7 +73,7 @@ $identity = Yii::$app->user->identity;
 
                                         ]
                                     ])->label('Program Studi')?>
-                                    <?=$form->field($model,'dokumentasi_untuk')->dropDownList(['prodi'=>'Program Studi'],['prompt'=>'Pilih dokumentasi untuk'])?>
+                                    <?=$form->field($model,'lk_untuk')->dropDownList(['prodi'=>'Program Studi'],['prompt'=>'Pilih laporan kinerja untuk'])?>
 
                                 <div class="form-group">
                                     <?=Html::submitButton('Cari',['class'=>'btn btn-rose'])?>
@@ -86,7 +86,7 @@ $identity = Yii::$app->user->identity;
                     <div class="tab-pane" id="pill3">
                         <div class="card">
                             <div class="card-content">
-                                <h4 class="card-title">Form Dokumentasi</h4>
+                                <h4 class="card-title">Form Laporan Kinerja</h4>
                                 <?php $form = ActiveForm::begin() ?>
 
                                 <?= $form->field($modelFakultas, 'akreditasi')->dropDownList($dataAkreditasi, ['prompt' => 'Pilih S7Akreditasi']) ?>
@@ -94,7 +94,7 @@ $identity = Yii::$app->user->identity;
                                 <?= $form->field($modelFakultas, 'id_fakultas')->widget(\kartik\select2\Select2::class,[
                                     'data' =>ArrayHelper::map(\common\models\FakultasAkademi::find()->all(),'id','nama')
                                 ])->label('Fakultas') ?>
-                                <?= $form->field($modelFakultas, 'dokumentasi_untuk')->dropDownList(['fakultas' => 'Fakultas'], ['prompt' => 'Pilih borang untuk']) ?>
+                                <?= $form->field($modelFakultas, 'lk_untuk')->dropDownList(['fakultas' => 'Fakultas'], ['prompt' => 'Pilih laporan kinerja untuk']) ?>
 
                                 <div class="form-group">
                                     <?= Html::submitButton('Cari', ['class' => 'btn btn-rose']) ?>
@@ -108,11 +108,11 @@ $identity = Yii::$app->user->identity;
                         <div class="card">
                             
                             <div class="card-content">
-                                <h4 class="card-title">Form Dokumentasi</h4>
+                                <h4 class="card-title">Form Laporan Kinerja</h4>
                                 <?php $form = ActiveForm::begin() ?>
 
                                 <?=$form->field($modelInstitusi,'akreditasi')->dropDownList($dataAkreditasiInstitusi,['prompt'=>'Pilih Akreditasi'])?>
-                                <?=$form->field($modelInstitusi,'dokumentasi_untuk')->dropDownList(['institusi'=>'Institusi'],['prompt'=>'Pilih borang untuk'])?>
+                                <?=$form->field($modelInstitusi,'lk_untuk')->dropDownList(['institusi'=>'Institusi'],['prompt'=>'Pilih laporan kinerja untuk'])?>
 
                                 <div class="form-group">
                                     <?=Html::submitButton('Cari',['class'=>'btn btn-rose'])?>

@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\JenisAkreditasi */
 
-$this->title = 'Update Jenis S7Akreditasi: ' . $model->nama;
-$this->params['breadcrumbs'][] = ['label' => 'Jenis S7Akreditasi', 'url' => ['index']];
+$this->title = 'Update Jenis Akreditasi: ' . $model->nama;
+$this->params['breadcrumbs'][] = ['label' => 'Jenis Akreditasi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->nama, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

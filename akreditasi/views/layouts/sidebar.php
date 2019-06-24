@@ -34,13 +34,13 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
 
                 ['label' => 'Beranda', 'icon' => 'dashboard', 'url' => ['/site']],
                 [
-                    'label' => 'Standar 7',
+                    'label' => 'Borang 7 Standar',
                     'icon' => 'description',
                     'url' => ['/standar7/default'],
 
                 ],
                 [
-                    'label' => 'Standar 9',
+                    'label' => 'Borang 9 Kriteria',
                     'icon' => 'book',
                     'url'=>['/standar9/default']
                 ],

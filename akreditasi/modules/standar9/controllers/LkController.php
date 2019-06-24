@@ -16,7 +16,7 @@ use yii\web\Response;
 
 class LkController extends \yii\web\Controller
 {
-    public function actionArsipLk($target){
+    public function actionArsipLk(){
 
 //        $model = new PencarianDokumentasiProdiForm();
 //        $modelFakultas = new PencarianDokumentasiFakultasForm();
@@ -68,34 +68,41 @@ class LkController extends \yii\web\Controller
 //            $this->redirect([$url,'dokumentasi'=>$dokumentasiId]);
 //        }
 
-        $model = new DynamicModel(['akreditasi','untuk']);
+        $model = new DynamicModel(['akreditasi','jenjang','id_prodi','lk_untuk']);
         $model->addRule('akreditasi','required');
-        $model->addRule('untuk','required');
+        $model->addRule('jenjang','required');
+        $model->addRule('id_prodi','required');
 
         $dataAkreditasi = [1=>'Akreditasi Program Studi (2019)'];
         $dataAkreditasiInstitusi = [1=>'Akreditasi Institusi (2019)'];
         $dataProgram = ['S1'=>'S1','S2'=>'S2'];
 
-        $modelInstitusi = new DynamicModel(['akreditasi','untuk']);
+        $modelInstitusi = new DynamicModel(['akreditasi','lk_untuk']);
         $modelInstitusi->addRule('akreditasi','required');
         $modelInstitusi->addRule('untuk','required');
 
-        $modelFakultas = new DynamicModel(['akreditasi','untuk']);
+
+        $modelFakultas = new DynamicModel(['akreditasi','jenjang','id_fakultas','lk_untuk']);
         $modelFakultas->addRule('akreditasi','required');
-        $modelFakultas->addRule('untuk','required');
+        $modelFakultas->addRule('id_fakultas','required');
+        $modelInstitusi->addRule('jenjang','required');
+        $modelInstitusi->addRule('lk_untuk','required');
 
 
         if($model->load(Yii::$app->request->post())){
+            return $this->redirect(['lk-prodi-s1/isi','dokumentasi'=>1]);
 
         }
 
         if($modelFakultas->load(Yii::$app->request->post())){
+            return $this->redirect(['lk-fakultas/isi','dokumentasi'=>1]);
 
         }
 
+        $target = 'isi';
         if($modelInstitusi->load(Yii::$app->request->post())){
 
-            return $this->redirect(['lk-institusi/arsip']);
+            return $this->redirect(['lk-institusi/isi','dokumentasi'=>1]);
         }
         return $this->render('cari_dok',[
             'model'=>$model,

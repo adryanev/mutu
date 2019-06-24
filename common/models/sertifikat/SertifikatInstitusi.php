@@ -55,8 +55,9 @@ class SertifikatInstitusi extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tgl_akreditasi', 'tgl_kadaluarsa', 'nilai_angka', 'tanggal_pengajuan', 'tanggal_diterima', 'is_publik', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
+            [[ 'nilai_angka', 'is_publik', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
             [['nama_institusi', 'nama_lembaga', 'nomor_sk', 'nomor_sertifikat', 'nilai_huruf', 'tahun_sk', 'dokumen_sk', 'sertifikat'], 'string', 'max' => 255],
+            [['tgl_akreditasi','tgl_kadaluarsa','tanggal_diterima','tanggal_pengajuan'],'safe']
         ];
     }
 

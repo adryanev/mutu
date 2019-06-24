@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\JenisAkreditasi */
 
 $this->title = $model->nama;
-$this->params['breadcrumbs'][] = ['label' => 'Jenis S7Akreditasi', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Jenis Akreditasi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
