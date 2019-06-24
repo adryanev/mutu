@@ -2,6 +2,9 @@
 
 namespace akreditasi\modules\standar7\controllers;
 
+use common\models\ProgramStudi;
+use Yii;
+use yii\base\DynamicModel;
 use yii\web\Controller;
 
 /**
@@ -32,6 +35,17 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+
+        $prodi = Yii::$app->user->identity->profilUser->id_prodi;
+        if($prodi != null){
+            $prodiuser = ProgramStudi::findOne($prodi);
+
+        return $this->render('index',[
+            'prodiuser' => $prodiuser
+        ]);
+
+        }
+
+        return $this->render('index2');
     }
 }
