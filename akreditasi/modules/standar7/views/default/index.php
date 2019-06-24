@@ -23,7 +23,7 @@ use yii\bootstrap\Html;
             <tbody>
             <tr>
                 <td><strong>Program Studi</strong></td>
-                <td>Akreditasi Prodi Pasca</td>
+                <td><?= Html::encode($prodiuser->nama) ?></td>
             </tr>
             <tr>
                 <td><strong>Kode Program Studi</strong></td>
