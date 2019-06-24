@@ -45,9 +45,8 @@ class S7AkreditasiInstitusi extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_akreditasi', 'skor', 'created_at', 'updated_at'], 'integer'],
+            [['id_akreditasi', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
-            [['peringkat'], 'string', 'max' => 1],
             [['id_akreditasi'], 'exist', 'skipOnError' => true, 'targetClass' => S7Akreditasi::className(), 'targetAttribute' => ['id_akreditasi' => 'id']],
         ];
     }
@@ -61,8 +60,6 @@ class S7AkreditasiInstitusi extends \yii\db\ActiveRecord
             'id' => 'ID',
             'id_akreditasi' => 'Id S7Akreditasi',
             'progress' => 'Progress',
-            'peringkat' => 'Peringkat',
-            'skor' => 'Skor',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
