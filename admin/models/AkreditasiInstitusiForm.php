@@ -116,8 +116,8 @@ class AkreditasiInstitusiForm extends Model
         }
 
 
-        if(!file_exists($pathLed) && !mkdir($pathGambar, 0777, true) && !is_dir($pathGambar)) {
-            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathGambar));
+        if(!file_exists($pathLed) && !mkdir($pathLed, 0777, true) && !is_dir($pathLed)) {
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $pathLed));
         }
 
     }
