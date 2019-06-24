@@ -74,11 +74,11 @@ class BorangController extends \yii\web\Controller
                 $dataProgram = ['S1'=>'Sarjana (S1)'];
 
             }else{
-                $dataProgram = ['Pasca'=>'Pasca Sarjana'];
+                $dataProgram = ['S2'=>'Pasca Sarjana'];
 
             }
         }else{
-            $dataProgram = ['S1'=>'Sarjana (S1)','Pasca'=>'Pasca Sarjana'];
+            $dataProgram = ['S1'=>'Sarjana (S1)','S2'=>'Pasca Sarjana'];
 
         }
         if($model->load(Yii::$app->request->post())){
