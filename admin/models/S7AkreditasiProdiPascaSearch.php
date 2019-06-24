@@ -17,9 +17,8 @@ class S7AkreditasiProdiPascaSearch extends S7AkreditasiProdiPasca
     public function rules()
     {
         return [
-            [['id', 'id_akreditasi', 'id_prodi', 'skor', 'created_at', 'updated_at'], 'integer'],
+            [['id', 'id_akreditasi', 'id_prodi', 'created_at', 'updated_at'], 'integer'],
             [['progress'], 'number'],
-            [['peringkat'], 'safe'],
         ];
     }
 
@@ -63,12 +62,9 @@ class S7AkreditasiProdiPascaSearch extends S7AkreditasiProdiPasca
             'id_akreditasi' => $this->id_akreditasi,
             'id_prodi' => $this->id_prodi,
             'progress' => $this->progress,
-            'skor' => $this->skor,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
-
-        $query->andFilterWhere(['like', 'peringkat', $this->peringkat]);
 
         return $dataProvider;
     }

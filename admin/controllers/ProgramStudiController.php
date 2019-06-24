@@ -48,7 +48,6 @@ class ProgramStudiController extends Controller
      */
     public function actionIndex()
     {
-        if(Yii::$app->user->can('createProdi')){
             $searchModel = new ProgramStudiSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -57,7 +56,7 @@ class ProgramStudiController extends Controller
                 'dataProvider' => $dataProvider,
             ]);
 
-        }
+
     }
 
     /**

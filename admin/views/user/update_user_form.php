@@ -49,6 +49,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         'options' => [
                             'placeholder' => 'Pilih Fakultas/Akademi',
                             'id' => 'id_fakultas',
+                        ],
+                        'pluginOptions' => [
+                                'allowClear'=>true
                         ]
                     ]) ?>
                     <?= $form->field($model, 'id_prodi')->widget(DepDrop::class, [
@@ -60,6 +63,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             'placeholder' => 'Pilih Program Studi',
                             'url' => [\yii\helpers\Url::toRoute(['user/get-prodi'])],
                             'initialize' => true,
+                            'allowClear'=>true
+
 
                         ]
                     ]) ?>

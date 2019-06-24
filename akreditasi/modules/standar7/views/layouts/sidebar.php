@@ -12,7 +12,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
 -->
     <div class="logo">
         <?= Html::a(Html::img('@web/img/logo-iain.png',['alt'=>'logo iain','width'=>'100%']),['site/index'],['class'=>'simple-text logo-mini'])?>
-        <?= Html::a('IAIN Padangsidimpuan',['site/index'],['class'=>'simple-text logo-normal','style'=>['font-size'=>'15px']])?>
+        <?= Html::a('IAIN Padangsidimpuan',['default/index'],['class'=>'simple-text logo-normal','style'=>['font-size'=>'15px']])?>
     </div>
     <div class="sidebar-wrapper" >
         <div class="user">
@@ -20,35 +20,12 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                 <?= Html::img('@web/img/faces/marc.jpg')?>
             </div>
             <div class="info">
-                <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                <a>
                             <span>
                                 <?=Yii::$app->user->identity->profilUser->nama_lengkap?>
-                                <b class="caret"></b>
                             </span>
                 </a>
                 <div class="clearfix"></div>
-                <div class="collapse" id="collapseExample">
-                    <ul class="nav">
-                        <li>
-                            <a href="#">
-                                <span class="sidebar-mini">MP</span>
-                                <span class="sidebar-normal">My Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="sidebar-mini">EP</span>
-                                <span class="sidebar-normal">Edit Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="sidebar-mini">S</span>
-                                <span class="sidebar-normal">Settings</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
 
@@ -82,16 +59,6 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                         ['label'=>'LED Fakultas','url'=>['led-fakultas/arsip']],
                         ['label'=>'LED Institusi','url'=>['led-institusi/arsip']]
                     ]],
-                [
-                    'label' => 'Sertifikat Akreditasi',
-                    'icon' => 'assignment',
-                    'url' => '#sertifikat',
-                    'items' => [
-                        ['label'=> 'Data Akreditasi', 'url'=>['sertifikat/arsip-sertifikat']],
-                        ['label'=> 'Grafik Akreditasi', 'url'=>['sertifikat/grafik-sertifikat']],
-
-                    ],
-                ],
 
             ],
         ])?>
