@@ -90,19 +90,19 @@ class LedController extends \yii\web\Controller
 
 
         if($model->load(Yii::$app->request->post())){
-            return $this->redirect(['lk-prodi-s1/isi','dokumentasi'=>1]);
+            return $this->redirect(['led-prodi-s1/isi','dokumentasi'=>1]);
 
         }
 
         if($modelFakultas->load(Yii::$app->request->post())){
-            return $this->redirect(['lk-fakultas/isi','dokumentasi'=>1]);
+            return $this->redirect(['led-fakultas/isi','dokumentasi'=>1]);
 
         }
 
         $target = 'isi';
         if($modelInstitusi->load(Yii::$app->request->post())){
 
-            return $this->redirect(['lk-institusi/isi','dokumentasi'=>1]);
+            return $this->redirect(['led-institusi/isi','dokumentasi'=>1]);
         }
         return $this->render('cari-dok',[
             'model'=>$model,

@@ -134,7 +134,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>1</td>
                             <td colspan="2">
-                                Standar 1 : 60%<br><small style="color:grey"> VISI, MISI, TUJUAN DAN STRATEGI</small>
+                                Kriteria 1 : 60%<br><small style="color:grey"> VISI, MISI, TUJUAN DAN STRATEGI</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
@@ -149,7 +149,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>2</td>
                             <td colspan="2">
-                                Standar 2 : 60%<br><small style="color:grey">TATA PAMONG,TATA KELOLA, dan KERJASAMA</small>
+                                Kriteria 2 : 60%<br><small style="color:grey">TATA PAMONG,TATA KELOLA, dan KERJASAMA</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
@@ -164,7 +164,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>3</td>
                             <td colspan="2">
-                                Standar 3 : 60%<br><small style="color:grey">MAHASISWA</small>
+                                Kriteria 3 : 60%<br><small style="color:grey">MAHASISWA</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
@@ -179,7 +179,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>4</td>
                             <td colspan="2">
-                                Standar 4 : 60%<br><small style="color:grey">SUMBER DAYA MANUSIA</small>
+                                Kriteria 4 : 60%<br><small style="color:grey">SUMBER DAYA MANUSIA</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
@@ -194,7 +194,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>5</td>
                             <td colspan="2">
-                                Standar 5 : 60%<br><small style="color:grey">KEUANGAN, SARANA DAN PRASARANA</small>
+                                Kriteria 5 : 60%<br><small style="color:grey">KEUANGAN, SARANA DAN PRASARANA</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
@@ -209,7 +209,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>6</td>
                             <td colspan="2">
-                                Standar 6 : 60%<br><small style="color:grey">PENDIDIKAN</small>
+                                Kriteria 6 : 60%<br><small style="color:grey">PENDIDIKAN</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
@@ -224,7 +224,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>7</td>
                             <td colspan="2">
-                                Standar 7 : 60%<br> <small style="color:grey">PENELITIAN</small>
+                                Kriteria 7 : 60%<br> <small style="color:grey">PENELITIAN</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
@@ -240,7 +240,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>8</td>
                             <td colspan="2">
-                                Standar 8 : 60%<br> <small style="color:grey">PENGABDIAN KEPADA MASYARAKAT</small>
+                                Kriteria 8 : 60%<br> <small style="color:grey">PENGABDIAN KEPADA MASYARAKAT</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
@@ -256,7 +256,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tr>
                             <td>9</td>
                             <td colspan="2">
-                                Standar  : 60%<br> <small style="color:grey">LUARAN DAN CAPAIAN TRIDHARMA</small>
+                                Kriteria 9 : 60%<br> <small style="color:grey">LUARAN DAN CAPAIAN TRIDHARMA</small>
 
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="60" style="width: 60%;">
