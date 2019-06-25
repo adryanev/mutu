@@ -35,14 +35,8 @@ class BorangS1FakultasController extends \yii\web\Controller
             'access'=>[
                 'class'=>AccessControl::className(),
                 'rules'=>[
-                    [
-                        'actions'=>[
-                            'unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail',
-                            'allow'=>true,
-                            'roles'=>['userFakultas']
-                        ]
-                    ],
-                    ['actions'=>['lihat','lihat-standar','download-isian','download-template','download','download-detail'],
+
+                    ['actions'=>['unggah','unggah-standar','hapus-gambar','isi','isi-standar','hapus-dokumen','hapus-detail','lihat','lihat-standar','download-isian','download-template','download','download-detail'],
                         'allow'=>true,
                         'roles'=>['adminLpm','superUser','adminFakultas','userFakultas']
                     ],

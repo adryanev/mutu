@@ -56,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <tbody>
                         <tr>
                             <td><strong>Borang</strong></td>
-                            <td>Akreditasi Prodi Pasca</td>
+                            <td>Akreditasi Prodi Pascasarjana</td>
                         </tr>
                         <tr>
                             <td><strong>Lembaga Akreditasi</strong></td>
