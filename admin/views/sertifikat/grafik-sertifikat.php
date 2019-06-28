@@ -2,6 +2,10 @@
 
 
 /* @var $modelInstitusi SertifikatInstitusi*/
+/* @var $sertifikatFSI */
+/* @var $modelInstitusi SertifikatInstitusi*/
+/* @var $modelInstitusi SertifikatInstitusi*/
+/* @var $modelInstitusi SertifikatInstitusi*/
 
 use common\models\sertifikat\SertifikatInstitusi;
 use yii\bootstrap\Html; ?>
@@ -148,43 +152,43 @@ use yii\bootstrap\Html; ?>
                                         </tr>
                                         <tr>
                                             <td><strong>Nomor SK</strong></td>
-                                            <td></td>
+                                            <td><?= Html::encode($modelInstitusi->nomor_sk ) ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Nomor Sertifikat</strong></td>
-                                            <td></td>
+                                            <td><?= Html::encode($modelInstitusi->nomor_sertifikat ) ?></td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Nilai Angka (pakai warna)</strong></td>
-                                            <td></td>
+                                            <td ><strong>Nilai Angka</strong></td>
+                                            <td style="font-weight: bold;"><?= Html::encode($modelInstitusi->nilai_angka ) ?></td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Nilai Huruf juga</strong></td>
-                                            <td></td>
+                                            <td ><strong>Nilai Huruf </strong></td>
+                                            <td style="font-weight: bold;"><?= Html::encode($modelInstitusi->nilai_huruf ) ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Tahun SK</strong></td>
-                                            <td></td>
+                                            <td><?= Html::encode($modelInstitusi->tahun_sk ) ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Tanggal Pengajuan</strong></td>
-                                            <td></td>
+                                            <td><?= Html::encode($modelInstitusi->tanggal_pengajuan ) ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Tanggal Diterima</strong></td>
-                                            <td></td>
+                                            <td><?= Html::encode($modelInstitusi->tanggal_diterima ) ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Keterangan </strong></td>
-                                            <td></td>
+                                            <td><?= Html::encode($modelInstitusi->is_publik ) ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Dokumen SK</strong></td>
-                                            <td></td>
+                                            <td><?= Html::encode($modelInstitusi->dokumen_sk ) ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Sertifikat</strong></td>
-                                            <td></td>
+                                            <td><?= Html::encode($modelInstitusi->sertifikat ) ?></td>
                                         </tr>
 
                                         </tbody>
@@ -277,10 +281,11 @@ use yii\bootstrap\Html; ?>
                             </div>
                         </div>
                     </div>
+
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingFour">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <h4 class="panel-title">
+                                <h4 class="panel-title" >
                                     Akreditasi Fakultas Syari'ah dan Ilmu Hukum
                                     <i class="material-icons">keyboard_arrow_down</i>
                                 </h4>
@@ -289,7 +294,27 @@ use yii\bootstrap\Html; ?>
                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                             <div class="panel-body">
 
-                            <div class="card">
+                                <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+
+                                   <?php
+
+                                   foreach ($sertifikatFSI as $fsi):
+
+                                   ?>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFour1">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">
+                                            <h4 class="panel-title" data-background-color="green">
+                                                <?= $fsi['nama']; ?>
+                                                <i class="material-icons">keyboard_arrow_down</i>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour1">
+                                        <div class="panel-body">
+
+                                        <div class="card">
 
                                 <div class="col-md-12 table-responsive ">
                                     <table class="table table-hover">
@@ -297,65 +322,73 @@ use yii\bootstrap\Html; ?>
                                         <tbody>
                                         <tr>
                                             <td><strong>Sertifikat</strong></td>
-                                            <td>Akreditasi Institusi</td>
+                                            <td>Akreditasi Program Studi</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Nama Program Studi</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['nama'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Tanggal Akreditasi</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['tgl_akreditasi'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Tanggal Kadaluarsa</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['tgl_kadaluarsa'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Nomor SK</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['nomor_sk'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Nomor Sertifikat</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['nomor_sertifikat'] ?></td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Nilai Angka (pakai warna)</strong></td>
-                                            <td></td>
+                                            <td><strong>Nilai Angka </strong></td>
+                                            <td><?= $fsi['nilai_angka'] ?></td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Nilai Huruf juga</strong></td>
-                                            <td></td>
+                                            <td><strong>Nilai Huruf</strong></td>
+                                            <td><?= $fsi['nilai_huruf'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Tahun SK</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['tahun_sk'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Tanggal Pengajuan</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['tanggal_pengajuan'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Tanggal Diterima</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['tanggal_diterima'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Keterangan </strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['is_publik'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Dokumen SK</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['dokumen_sk'] ?></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Sertifikat</strong></td>
-                                            <td></td>
+                                            <td><?= $fsi['sertifikat'] ?></td>
                                         </tr>
 
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <?php endforeach; ?>
+
+                                </div>
 
                             </div>
                         </div>
