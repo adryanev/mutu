@@ -49,7 +49,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nilai_angka')->textInput() ?>
 
-    <?= $form->field($model, 'nilai_huruf')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nilai_huruf')->widget(Select2::class,[
+        'data'=>['A'=>'A','B'=>'B','C'=>'C']
+    ])->label('Nilai Huruf') ?>
 
     <?= $form->field($model, 'tahun_sk')->textInput(['maxlength' => true]) ?>
 
