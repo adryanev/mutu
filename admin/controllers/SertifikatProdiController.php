@@ -92,6 +92,12 @@ class SertifikatProdiController extends Controller
             return $data->nama . " ({$data->jenjang})";
         });
 
+        $idSertifikat = SertifikatProdi::find()->all();
+//      unset nilai array yg sudah dibuat
+        foreach ($idSertifikat as $value):
+            unset($dataProdi[$value['id_prodi']]);
+        endforeach;
+
 //        var_dump($dataProdi);
 //        exit();
 
