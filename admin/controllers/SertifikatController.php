@@ -13,6 +13,7 @@ use Yii;
 use common\models\sertifikat\SertifikatProdiForm;
 use common\models\sertifikat\SertifikatInstitusiForm;
 use yii\db\Query;
+use yii\helpers\Url;
 use yii\web\NotFoundHttpException;
 
 class SertifikatController extends \yii\web\Controller {
@@ -68,6 +69,7 @@ class SertifikatController extends \yii\web\Controller {
         $sqlPASCA = 'SELECT * FROM sertifikat_prodi INNER JOIN program_studi ON sertifikat_prodi.id_prodi = program_studi.id WHERE program_studi.id_fakultas_akademi = 5';
         $sertifikatPASCA = Yii::$app->db->createCommand($sqlPASCA)->queryAll();
 
+
         $countProdi = ProgramStudi::find()->count();
         $countA = SertifikatProdi::find()->where(['nilai_huruf'=>'A'])->count();
         $countB = SertifikatProdi::find()->where(['nilai_huruf'=>'B'])->count();
@@ -102,6 +104,11 @@ class SertifikatController extends \yii\web\Controller {
             'persenC' => $persenC,
             'persenNon' => $persenNon,
         ]);
+    }
+
+    public function actionDownloadSertifikat($id){
+
+        return $this->redirect(Url::to('@web/upload/sertifikat/MTWO.png'));
     }
 
     public function beforeAction($action)

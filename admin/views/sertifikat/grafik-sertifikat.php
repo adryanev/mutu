@@ -6,6 +6,7 @@
 /* @var $sertifikatFTK */
 /* @var $sertifikatFDK */
 /* @var $sertifikatFEB */
+/* @var $sertifikatPASCA */
 /* @var $modelInstitusi SertifikatInstitusi*/
 /* @var $timeakre */
 /* @var $timekdl */
@@ -23,7 +24,12 @@
 /* @var $persenNon*/
 
 use common\models\sertifikat\SertifikatInstitusi;
-use yii\bootstrap\Html; ?>
+use yii\bootstrap\Html;
+use yii\helpers\Url;
+
+$this->title = 'Grafik Sertifikat';
+
+?>
 <div class="row" style="margin-top:20px;">
     <!-- <div class="col-md-5 col-md-offset-1"> -->
     <div class="col-md-12">
@@ -217,84 +223,117 @@ use yii\bootstrap\Html; ?>
                         </div>
                     </div>
 
+
                     <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <h4 class="panel-title">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <h4 class="panel-title" >
                                     Akreditasi Pascasarjana
                                     <i class="material-icons">keyboard_arrow_down</i>
                                 </h4>
                             </a>
                         </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                             <div class="panel-body">
 
-                                <div class="card">
+                                <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
 
-                                    <div class="col-md-12 table-responsive ">
-                                        <table class="table table-hover">
+                                    <?php
 
-                                            <tbody>
-                                            <tr>
-                                                <td><strong>Sertifikat</strong></td>
-                                                <td>Akreditasi Institusi</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Nama Program Studi</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Tanggal Akreditasi</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Tanggal Kadaluarsa</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Nomor SK</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Nomor Sertifikat</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Nilai Angka (pakai warna)</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Nilai Huruf juga</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Tahun SK</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Tanggal Pengajuan</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Tanggal Diterima</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Keterangan </strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Dokumen SK</strong></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Sertifikat</strong></td>
-                                                <td></td>
-                                            </tr>
+                                    foreach ($sertifikatPASCA as $fsi):
 
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                        ?>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingFour<?= $fsi['id'] ?>">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour<?= $fsi['id'] ?>" aria-expanded="false" aria-controls="collapseFour<?= $fsi['id'] ?>">
+                                                    <h4 class="panel-title" data-background-color="green">
+                                                        <?= $fsi['nama'] ?> <span class="badge">
+                                                    <?= $fsi['nilai_huruf'] ?>
+                                                </span>&nbsp;<span class="badge">
+                                                    <?= $fsi['nilai_angka'] ?>
+                                                </span>
+                                                        <i class="material-icons">keyboard_arrow_down</i>
+                                                    </h4>
+                                                </a>
+                                            </div>
+                                            <div id="collapseFour<?= $fsi['id'] ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour<?= $fsi['id'] ?>">
+                                                <div class="panel-body">
+
+                                                    <div class="card">
+
+                                                        <div class="col-md-12 table-responsive ">
+                                                            <table class="table table-hover">
+
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td><strong>Sertifikat</strong></td>
+                                                                    <td>Akreditasi Program Studi</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Nama Program Studi</strong></td>
+                                                                    <td><?= $fsi['nama'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Tanggal Akreditasi</strong></td>
+                                                                    <td><?= $fsi['tgl_akreditasi'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Tanggal Kadaluarsa</strong></td>
+                                                                    <td><?= $fsi['tgl_kadaluarsa'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Nomor SK</strong></td>
+                                                                    <td><?= $fsi['nomor_sk'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Nomor Sertifikat</strong></td>
+                                                                    <td><?= $fsi['nomor_sertifikat'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Nilai Angka </strong></td>
+                                                                    <td><?= $fsi['nilai_angka'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Nilai Huruf</strong></td>
+                                                                    <td><?= $fsi['nilai_huruf'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Tahun SK</strong></td>
+                                                                    <td><?= $fsi['tahun_sk'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Tanggal Pengajuan</strong></td>
+                                                                    <td><?= $fsi['tanggal_pengajuan'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Tanggal Diterima</strong></td>
+                                                                    <td><?= $fsi['tanggal_diterima'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Keterangan </strong></td>
+                                                                    <td><?= $fsi['is_publik'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Dokumen SK</strong></td>
+                                                                    <td><?= $fsi['dokumen_sk'] ?></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><strong>Sertifikat</strong></td>
+                                                                    <td><u><a href="<?= Url::to(['sertifikat/download-sertifikat', 'id'=>$fsi['id']]) ?>" target="_blank"><?= $fsi['sertifikat'] ?></a></u></td>
+                                                                </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <?php endforeach; ?>
+
                                 </div>
 
                             </div>
