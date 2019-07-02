@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_akreditasi')->widget(Select2::class,
         ['data' => $dataAkreditasi,
-            'options' => ['placeholder' => 'Pilih S7Akreditasi']])->label('S7Akreditasi') ?>
+            'options' => ['placeholder' => 'Pilih Akreditasi']])->label('Akreditasi') ?>
 
     <?= $form->field($model, 'id_prodi')->widget(Select2::class, [
         'data' => $dataProdi,

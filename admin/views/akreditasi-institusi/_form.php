@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_akreditasi')->widget(Select2::class, [
         'data' => $dataAkreditasi,
-        'options' => ['placeholder' => 'Pilih S7Akreditasi']
+        'options' => ['placeholder' => 'Pilih Akreditasi']
     ]) ?>
 
     <div class="form-group">
