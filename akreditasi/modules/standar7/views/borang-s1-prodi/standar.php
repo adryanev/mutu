@@ -85,7 +85,10 @@ $query = $isian;
 
                                                 <?=$form->field($model,$modelAttribute)->widget(CKEditor::class,[
                                                     'options' => ['rows' => 6],
-                                                    'preset' => 'full'
+                                                    'preset' => 'full',
+                                                    'clientOptions' => [
+                                                            'extraPlugins'=>['bidi']
+                                                    ]
                                                 ])->label('') ?>
 
                                                 <div class="form-group">
