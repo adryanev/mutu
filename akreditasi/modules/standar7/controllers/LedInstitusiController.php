@@ -49,7 +49,9 @@ class LedInstitusiController extends \yii\web\Controller
         $model = new DynamicModel(['akreditasi']);
         $model->addRule('akreditasi','required');
 
-        $dataAkreditasi  = ArrayHelper::map(S7AkreditasiInstitusi::find()->all(),'id','nama');
+        $dataAkreditasi  = ArrayHelper::map(S7AkreditasiInstitusi::find()->all(),'id',function($akreditasi){
+            return 'Akreditasi Insitusi ('.$akreditasi->akreditasi->tahun.")";
+        });
         if($model->load(Yii::$app->request->post())){
 
             $id_akreditasi = $model->akreditasi;
