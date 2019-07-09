@@ -62,7 +62,7 @@ class ProgramStudi extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_fakultas_akademi', 'bulan_berdiri', 'tanggal_sk_operasional', 'nilai_banpt_terakhir', 'created_at', 'updated_at'], 'integer'],
+            [['id_fakultas_akademi', 'bulan_berdiri', 'nilai_banpt_terakhir', 'created_at', 'updated_at'], 'integer'],
             [['kode', 'nama', 'jurusan_departemen', 'nomor_sk_pendirian', 'pejabat_ttd_sk_pendirian', 'nomor_sk_operasional', 'peringkat_banpt_terakhir', 'nomor_sk_banpt', 'alamat', 'kodepos', 'nomor_telp', 'homepage', 'email', 'kaprodi', 'jenjang', 'tanggal_sk_pendirian', 'tanggal_sk_operasional'], 'string', 'max' => 255],
             [['tahun_berdiri'], 'string', 'max' => 4],
             [['id_fakultas_akademi'], 'exist', 'skipOnError' => true, 'targetClass' => FakultasAkademi::className(), 'targetAttribute' => ['id_fakultas_akademi' => 'id']],
