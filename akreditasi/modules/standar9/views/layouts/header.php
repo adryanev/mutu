@@ -66,6 +66,12 @@ use yii\bootstrap\Html;
                         <ul class="dropdown-menu">
                             <li>
                                 <?= Html::a(
+                                    'Ubah Password',
+                                    ['/user/update']
+                                ) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(
                                     'Sign out',
                                     ['/site/logout'],
                                     ['data-method' => 'post']

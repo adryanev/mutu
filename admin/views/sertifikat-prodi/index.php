@@ -8,6 +8,7 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Sertifikat Prodi';
+$this->params['breadcrumbs'][] = ['label'=>'Pencarian Sertifikat','url'=>['sertifikat/arsip-sertifikat']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">

@@ -10,6 +10,7 @@ use common\models\PencarianDokumentasiProdiForm;
 use common\models\PencarianDokumentasiInstitusiForm;
 //use common\models\Program;
 use common\models\ProgramStudi;
+use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
@@ -18,6 +19,22 @@ use yii\web\Response;
 class DokumentasiController extends \yii\web\Controller
 {
 
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+
+                    ['actions' => ['arsipBorang', 'cariProdi', 'cariFakultas'],
+                        'allow' => true,
+                        'roles' => ['adminLpm', 'superUser', 'adminFakultas', 'userFakultas','adminProdi','userProdi']
+                    ],
+
+                ]
+            ],
+        ];
+    }
 
     public function actionArsipDok($target){
 
@@ -30,14 +47,40 @@ class DokumentasiController extends \yii\web\Controller
             return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
         });
 
+//        if(Yii::$app->user->identity->profilUser->id_fakultas != null){
+//
+//            $data = FakultasAkademi::find()->where(['id'=>Yii::$app->user->identity->profilUser->id_fakultas])->all();
+//        }
+//        else{
+//            $data = FakultasAkademi::find()->all();
+//
+//        }
+
+//        $dataFakultas = ArrayHelper::map($data,'id','nama');
+        $dataProgram = ['S1' => 'Sarjana', 'S2'=>'Pascasarjana'];
+
         $idAkreditasiInstitusi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>1]);
         $dataAkreditasiInstitusi = ArrayHelper::map($idAkreditasiInstitusi,'id',function($data){
             return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
         });
 
-//        $dataProgram = ArrayHelper::map(ProgramStudi::find()->all(),'id','jenjang');
-        $dataProgram = ['S1'=>'S1','S2'=>'S2'];
-        if($model->load(\Yii::$app->request->post())){
+//      $prodi = Yii::$app->user->identity->profilUser->id_prodi;
+//        if($prodi){
+//            $p = ProgramStudi::findOne($prodi);
+//
+//            if($p->jenjang == 'S1'){
+//                $dataProgram = ['S1'=>'Sarjana (S1)'];
+//
+//            }else{
+//                $dataProgram = ['S2'=>'Pasca Sarjana'];
+//
+//            }
+//        }else{
+//            $dataProgram = ['S1'=>'Sarjana (S1)','S2'=>'Pasca Sarjana'];
+//
+//        }
+
+        if($model->load(Yii::$app->request->post())){
 
             $url = $model->cari($target);
             $dokumentasi = $model->getDokumentasi();
@@ -48,6 +91,7 @@ class DokumentasiController extends \yii\web\Controller
             $this->redirect([$url,'dokumentasi'=>$dokId]);
 
         }
+
         if($modelInstitusi->load(Yii::$app->request->post())){
             $url = $modelInstitusi->cari($target);
             $dokumentasi = $modelInstitusi->getDok();
@@ -58,6 +102,7 @@ class DokumentasiController extends \yii\web\Controller
             $dokId = $dokumentasi->id;
             $this->redirect([$url,'dokumentasi'=>$dokId]);
         }
+
         if($modelFakultas->load(Yii::$app->request->post())){
 
 

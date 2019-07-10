@@ -11,7 +11,14 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'monitoring\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'standar7' => [
+            'class' => 'monitoring\modules\standar7\Standar7',
+        ],
+        'standar9' => [
+            'class' => 'monitoring\modules\standar9\Standar9',
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-monitoring',
