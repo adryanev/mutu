@@ -15,6 +15,8 @@ use yii\web\View;
 /* @var $progress */
 /* @var $butir */
 /* @var $dokModel \akreditasi\models\S7DokumentasiInstitusiStandar1Form */
+/* @var $cari */
+
 $standar = $json['standar'];
 
 $this->title='Standar '.$standar;

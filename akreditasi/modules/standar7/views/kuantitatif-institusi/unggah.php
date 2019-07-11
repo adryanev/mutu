@@ -1,19 +1,18 @@
 <?php
 
-use common\models\ProgramStudi;
-use common\models\S7Akreditasi;
-use common\models\S7DataKuantitatifProdi;
+use common\models\S7AkreditasiInstitusi;
+use common\models\S7DataKuantitatifInstitusi;
 use kartik\file\FileInput;
 use yii\bootstrap\ActiveForm;
 use yii\bootstrap\Html;
 use yii\bootstrap\Modal;
 
-/* @var $dataKuantitatifProdi S7DataKuantitatifProdi */
-/* @var $model S7DataKuantitatifProdi */
-/* @var $akreprodis1 ProgramStudi */
+/* @var $dataKuantitatifInstitusi S7DataKuantitatifInstitusi */
+/* @var $model S7DataKuantitatifInstitusi */
+/* @var $akreinstitusi S7AkreditasiInstitusi*/
 
-$this->title='Unggah Data Kuantitatif';
-$this->params['breadcrumbs'][] = ['label'=>'Pencarian Data Kuantitatif','url'=>['kuantitatif/prodi']];
+$this->title='Unggah Data Kuantitatif Institusi';
+$this->params['breadcrumbs'][] = ['label'=>'Pencarian Data Kuantitatif','url'=>['kuantitatif-institusi/arsip']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -22,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Data Kuantitatif <?= $akreprodis1->prodi->nama ?></h4>
+            <h4 class="card-title">Data Kuantitatif <?= $akreinstitusi->akreditasi->nama?></h4>
 
         </div>
 
@@ -42,20 +41,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
                         <?php
 
-                        if ($dataKuantitatifProdi != null){
+                        if ($dataKuantitatifInstitusi != null){
 
-                        foreach ($dataKuantitatifProdi as $item) :?>
-                            <tr>
-                                <td>  <?=$item->nama_dokumen?></td>
-                                <td> <?=Html::a('<i class ="material-icons">send</i> Download',['kuantitatif/download-dokumen','dokumen'=>$item->id],['class'=>'btn btn-info']) ?> <?=Html::a('<i class ="material-icons">delete</i> Hapus',['kuantitatif/hapus-dokumen'],['class'=>'btn btn-danger','data'=>[
-                                        'method'=>'POST',
-                                        'confirm'=>'Apakah anda yakin menghapus '.$item->nama_dokumen.' ?',
-                                        'params'=>['id'=>$item->id, 'id_prodi'=>$item->id_akreditasi_prodi_s1]
-                                    ]])?></td>
-                            </tr>
+                            foreach ($dataKuantitatifInstitusi as $item) :?>
+                                <tr>
+                                    <td>  <?=$item->nama_dokumen?></td>
+                                    <td> <?=Html::a('<i class ="material-icons">send</i> Download',['kuantitatif-institusi/download-dokumen','dokumen'=>$item->id],['class'=>'btn btn-info']) ?> <?=Html::a('<i class ="material-icons">delete</i> Hapus',['kuantitatif-institusi/hapus-dokumen'],['class'=>'btn btn-danger','data'=>[
+                                            'method'=>'POST',
+                                            'confirm'=>'Apakah anda yakin menghapus '.$item->nama_dokumen.' ?',
+                                            'params'=>['id'=>$item->id, 'id_institusi'=>$item->id_akreditasi]
+                                        ]])?></td>
+                                </tr>
 
-                        <?php
-                        endforeach;
+                            <?php
+                            endforeach;
                         } else {
                         ?>
 

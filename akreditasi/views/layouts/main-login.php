@@ -56,7 +56,7 @@ $this->registerJs($js, View::POS_READY);
     </div>
 </nav>
 <div class="wrapper wrapper-full-page">
-    <div class="full-page login-page" filter-color="black" data-image="<?=Yii::getAlias('@web/img/beranda.jpg')?>">
+    <div class="full-page login-page" filter-color="black" data-image="<?=Yii::getAlias('@web/img/Auditorium.JPG')?>">
         <?=$content?>
         <footer class="footer">
             <div class="container">
