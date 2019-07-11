@@ -5,7 +5,9 @@ namespace akreditasi\modules\standar7\controllers;
 use common\models\led\S7LedProdiS1Detail;
 use common\models\ProgramStudi;
 use common\models\S7Akreditasi;
+use common\models\S7AkreditasiInstitusi;
 use common\models\S7AkreditasiProdiS1;
+use common\models\S7DataKuantitatifInstitusi;
 use common\models\S7DataKuantitatifProdi;
 use Yii;
 use yii\base\DynamicModel;
@@ -24,11 +26,14 @@ class KuantitatifController extends \yii\web\Controller {
         return parent::beforeAction($action);
     }
 
-    public function actionIndex(){
+    public function actionProdi(){
 
         $model = new DynamicModel(['akreditasi','prodi']);
         $model->addRule(['akreditasi'], 'required');
         $model->addRule(['prodi'], 'required');
+
+//        $modelInstitusi = new DynamicModel(['akreditasi_ins']);
+//        $modelInstitusi->addRule(['akreditasi_ins'], 'required');
 
         $idProdi = ProgramStudi::find()->all();
         $dataProdi = ArrayHelper::map($idProdi,'id',function($data){
@@ -37,20 +42,27 @@ class KuantitatifController extends \yii\web\Controller {
 
         $idAkreditasi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>2]);
         $dataAkreditasi = ArrayHelper::map($idAkreditasi,'id',function($data){
-            return $data->lembaga. ' - '.$data->nama. '('.$data->tahun.')';
+            return $data->lembaga. ' - '.$data->nama. ' ('.$data->tahun.')';
         });
 
+//        $idAkreInstitusi = S7Akreditasi::findAll(['id_jenis_akreditasi'=>1]);
+//        $dataAkreInstitusi = ArrayHelper::map($idAkreInstitusi, 'id', function ($data){
+//            return $data->lembaga. ' - '. $data->nama. ' ('. $data->tahun.')';
+//        });
+
         if($model->load(Yii::$app->request->post())){
-
-
 
             return $this->redirect(['kuantitatif/unggah', 'id'=>$model->prodi]);
         }
 
-        return $this->render('index', [
+//        if ($modelInstitusi->load(Yii::$app->request->post())){
+//            return $this->redirect(['kuantitatif/unggah-institusi', 'id'=>$modelInstitusi->akreditasi_ins]);
+//        }
+
+        return $this->render('prodi', [
             'model'=>$model,
             'dataProdi' => $dataProdi,
-            'dataAkreditasi' => $dataAkreditasi
+            'dataAkreditasi' => $dataAkreditasi,
         ]);
 
 
@@ -104,8 +116,7 @@ class KuantitatifController extends \yii\web\Controller {
         if(Yii::$app->request->isPost){
 
             $id = Yii::$app->request->post('id');
-//            $akreditasi = Yii::$app->request->post('akreditasi');
-//            $prodi = Yii::$app->request->post('prodi');
+            $id_prodi = Yii::$app->request->post('id_prodi');
 
             $model= S7DataKuantitatifProdi::findOne($id);
 
@@ -114,7 +125,7 @@ class KuantitatifController extends \yii\web\Controller {
             $model->delete();
 
             Yii::$app->session->setFlash('success','Berhasil Menghapus Gambar');
-            return $this->redirect(['kuantitatif/unggah','id'=>$id]);
+            return $this->redirect(['kuantitatif/unggah','id'=>$id_prodi]);
 
         }
 
