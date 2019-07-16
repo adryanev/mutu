@@ -38,7 +38,7 @@ class S7DokumentasiS1ProdiStandar6Form extends S7DokumentasiS1ProdiStandar6
 
 
         if($this->validate()){
-            $this->_dokumenDokumentasi = new DokumentasiS1ProdiStandar6();
+            $this->_dokumenDokumentasi = new S7DokumentasiS1ProdiStandar6();
             $this->_dokumenDokumentasi->id_dokumentasi_s1_prodi = $id;
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
             $this->_dokumenDokumentasi->dokumen = $fileName;
