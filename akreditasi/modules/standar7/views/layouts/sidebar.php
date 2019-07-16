@@ -59,7 +59,13 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                         ['label'=>'LED Fakultas','url'=>['led-fakultas/arsip']],
                         ['label'=>'LED Institusi','url'=>['led-institusi/arsip']]
                     ]],
-                ['label' => 'Unggah Data Kuantitatif', 'icon' => 'backup', 'url'=>['kuantitatif/index']]
+                ['label' => 'Data Kuantitatif', 'icon' => 'backup', 'url'=>'#kuantitatif',
+                    'items'=>[
+                        ['label'=>'Program Studi', 'url'=>['kuantitatif/prodi']],
+                        ['label'=>'Institusi', 'url'=>['kuantitatif-institusi/arsip']]
+
+
+                ]]
             ],
         ])?>
     </div>
