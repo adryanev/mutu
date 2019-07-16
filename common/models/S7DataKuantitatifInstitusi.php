@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "s7_data_kuantitatif_institusi".
@@ -27,6 +29,14 @@ class S7DataKuantitatifInstitusi extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 's7_data_kuantitatif_institusi';
+    }
+
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class,
+        ];
     }
 
     /**
