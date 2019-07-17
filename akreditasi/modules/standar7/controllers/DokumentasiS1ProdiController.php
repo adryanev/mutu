@@ -49,13 +49,13 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
 
         $decode = Json::decode($json);
 
-        $cekisi1 = S7DokumentasiS1ProdiStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi2 = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi3 = S7DokumentasiS1ProdiStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi4 = S7DokumentasiS1ProdiStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi5 = S7DokumentasiS1ProdiStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi6 = S7DokumentasiS1ProdiStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi7 = S7DokumentasiS1ProdiStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
+        $cekisi1 = S7DokumentasiS1ProdiStandar1::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
+        $cekisi2 = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
+        $cekisi3 = S7DokumentasiS1ProdiStandar3::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
+        $cekisi4 = S7DokumentasiS1ProdiStandar4::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
+        $cekisi5 = S7DokumentasiS1ProdiStandar5::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
+        $cekisi6 = S7DokumentasiS1ProdiStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
+        $cekisi7 = S7DokumentasiS1ProdiStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
 
         $data1 = $decode[0];
         $butir1 = $data1['butir'];
@@ -145,7 +145,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         $progress6 = round(($cekisi6/$standar6json)*100,2);
         $progress7 = round(($cekisi7/$standar7json)*100,2);
 
-        $progressDok = round(($progress1+$progress2+$progress3+$progress4+$progress5+$progress6+$progress7)/100*100,2);
+        $progressDok = round(($progress1+$progress2+$progress3+$progress4+$progress5+$progress6+$progress7)/7,2);
 
         // simpan progress Dok
         $dokumentasiProdi->progress = $progressDok;
@@ -200,7 +200,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
 
         $sourceCek = 'common\\models\\S7DokumentasiS1ProdiStandar'.$standar;
         // $cekisi = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
+        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
 
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
@@ -376,7 +376,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
 
         $sourceCek = 'common\\models\\S7DokumentasiS1ProdiStandar'.$standar;
         // $cekisi = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
+        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
 
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
@@ -440,7 +440,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
 
         $sourceCek = 'common\\models\\S7DokumentasiS1ProdiStandar'.$standar;
         // $cekisi = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
-        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
+        $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
 
         $decode = Json::decode($json);
         $data = $decode[$standar-1];
