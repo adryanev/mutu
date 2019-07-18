@@ -225,15 +225,15 @@ $this->title = 'Grafik Sertifikat';
 
 
                     <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingFour">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 <h4 class="panel-title" >
                                     Akreditasi Pascasarjana
                                     <i class="material-icons">keyboard_arrow_down</i>
                                 </h4>
                             </a>
                         </div>
-                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                             <div class="panel-body">
 
                                 <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
@@ -245,8 +245,8 @@ $this->title = 'Grafik Sertifikat';
                                         ?>
 
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingFour<?= $fsi['id'] ?>">
-                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour<?= $fsi['id'] ?>" aria-expanded="false" aria-controls="collapseFour<?= $fsi['id'] ?>">
+                                            <div class="panel-heading" role="tab" id="headingThree<?= $fsi['id'] ?>">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree<?= $fsi['id'] ?>" aria-expanded="false" aria-controls="collapseThree<?= $fsi['id'] ?>">
                                                     <h4 class="panel-title" data-background-color="green">
                                                         <?= $fsi['nama'] ?> <span class="badge">
                                                     <?= $fsi['nilai_huruf'] ?>
@@ -257,7 +257,7 @@ $this->title = 'Grafik Sertifikat';
                                                     </h4>
                                                 </a>
                                             </div>
-                                            <div id="collapseFour<?= $fsi['id'] ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour<?= $fsi['id'] ?>">
+                                            <div id="collapseThree<?= $fsi['id'] ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree<?= $fsi['id'] ?>">
                                                 <div class="panel-body">
 
                                                     <div class="card">
