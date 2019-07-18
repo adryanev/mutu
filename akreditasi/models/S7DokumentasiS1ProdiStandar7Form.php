@@ -38,21 +38,27 @@ class S7DokumentasiS1ProdiStandar7Form extends S7DokumentasiS1ProdiStandar7
 
 
         if($this->validate()){
+            $model = S7DokumentasiS1ProdiStandar7::find()->select('dokumen')->all();
             $this->_dokumenDokumentasi = new S7DokumentasiS1ProdiStandar7();
-            $this->_dokumenDokumentasi->id_dokumentasi_s1_prodi = $id;
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
+
+            foreach ($model as $dok):
+                if ($dok['dokumen'] == $fileName){
+                    return false;
+                }
+            endforeach;
+
+            $this->_dokumenDokumentasi->id_dokumentasi_s1_prodi = $id;
             $this->_dokumenDokumentasi->dokumen = $fileName;
             $this->_dokumenDokumentasi->kode = $this->kodeDokumen;
 
             $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_dokumenDokumentasi->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$this->_dokumenDokumentasi->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_dokumenDokumentasi->dokumentasiS1Prodi->akreditasiProdiS1->id_prodi}/prodi/dokumentasi");
-           
-            // var_dump($path);
-            // exit();
+
             $this->dokumenDokumentasi->saveAs("$path/$fileName");
             $this->_dokumenDokumentasi->is_asesor = 0;
             $this->_dokumenDokumentasi->is_publik = 0;
             $this->_dokumenDokumentasi->progress = 0;
-            
+
             $this->_dokumenDokumentasi->save(false);
             return true;
         }

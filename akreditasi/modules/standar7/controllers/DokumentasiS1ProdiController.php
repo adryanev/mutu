@@ -195,11 +195,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
 
         $dokProdi = S7DokumentasiS1Prodi::findOne($dokumentasi);
         $sourceModel = 'akreditasi\\models\\S7DokumentasiS1ProdiStandar'.$standar.'Form';
-        // $model = DokumentasiS1ProdiStandar2Form::find('kode')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
         $model = call_user_func($sourceModel.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->all();
 
         $sourceCek = 'common\\models\\S7DokumentasiS1ProdiStandar'.$standar;
-        // $cekisi = S7DokumentasiS1ProdiStandar2::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->count();
         $cekisi = call_user_func($sourceCek.'::find')->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
 
         $decode = Json::decode($json);
@@ -229,10 +227,10 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 return $this->redirect(Url::current());
             }
             else{
-                Yii::$app->session->setFlash('danger','Gagal Upload');
+                Yii::$app->session->setFlash('error','Gagal Upload. Cek File');
                 return $this->redirect(Url::current());
             }
-            return $this->redirect(Url::current());
+//            return $this->redirect(Url::current());
 
         }
 
@@ -326,8 +324,8 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             $class = $namespace.'DokumentasiS1ProdiStandar'.$standar;
             $model = call_user_func($class.'::findOne',$id);
 
-
             unlink(Yii::getAlias('@uploadAkreditasi'."/{$model->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$model->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$model->dokumentasiS1Prodi->akreditasiProdiS1->id_prodi}/prodi/dokumentasi/{$model->dokumen}"));
+            
             $model->delete();
 
             return $this->redirect(['dokumentasi-s1-prodi/isi-standar','standar'=>$standar,'dokumentasi'=>$dokumentasi]);
