@@ -4,6 +4,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DokumentasiS1FakultasStandar2;
 
 use yii\base\Model;
@@ -39,15 +40,26 @@ class S7DokumentasiS1FakultasStandar2Form extends S7DokumentasiS1FakultasStandar
 
         if($this->validate()){
             $this->_dokumenDokumentasi = new S7DokumentasiS1FakultasStandar2();
-            $this->_dokumenDokumentasi->id_dokumentasi_s1_fakultas = $id;
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
+
+            $model = S7DokumentasiS1FakultasStandar2::find()->select('dokumen')->all();
+
+            foreach ($model as $dok):
+                if ($dok['dokumen'] == $fileName){
+
+                    $carbon = Carbon::now('Asia/Jakarta');
+                    $tgl = $carbon->format('U');
+                    $fileName = $tgl.'-'.$fileName;
+
+                }
+            endforeach;
+
+            $this->_dokumenDokumentasi->id_dokumentasi_s1_fakultas = $id;
             $this->_dokumenDokumentasi->dokumen = $fileName;
             $this->_dokumenDokumentasi->kode = $this->kodeDokumen;
 
             $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_dokumenDokumentasi->dokumentasiS1Fakultas->akreditasi->lembaga}/prodi/{$this->_dokumenDokumentasi->dokumentasiS1Fakultas->akreditasi->tahun}/fakultas/{$this->_dokumenDokumentasi->dokumentasiS1Fakultas->id_fakultas}/dokumentasi");
-           
-            // var_dump($path);
-            // exit();
+
             $this->dokumenDokumentasi->saveAs("$path/$fileName");
             $this->_dokumenDokumentasi->is_asesor = 0;
             $this->_dokumenDokumentasi->is_publik = 0;

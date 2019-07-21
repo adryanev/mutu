@@ -4,6 +4,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DokumentasiS1ProdiStandar7;
 
 use yii\base\Model;
@@ -44,7 +45,11 @@ class S7DokumentasiS1ProdiStandar7Form extends S7DokumentasiS1ProdiStandar7
 
             foreach ($model as $dok):
                 if ($dok['dokumen'] == $fileName){
-                    return false;
+
+                    $carbon = Carbon::now('Asia/Jakarta');
+                    $tgl = $carbon->format('U');
+                    $fileName = $tgl.'-'.$fileName;
+
                 }
             endforeach;
 

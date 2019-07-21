@@ -9,6 +9,7 @@ use akreditasi\models\S7DokumentasiS1ProdiStandar4Form;
 use akreditasi\models\S7DokumentasiS1ProdiStandar5Form;
 use akreditasi\models\S7DokumentasiS1ProdiStandar6Form;
 use akreditasi\models\S7DokumentasiS1ProdiStandar7Form;
+use Carbon\Carbon;
 use common\models\S7DokumentasiS1Prodi;
 use common\models\S7DokumentasiS1ProdiStandar1;
 use common\models\S7DokumentasiS1ProdiStandar2;
@@ -204,17 +205,39 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         $data = $decode[$standar-1];
         $butir = $data['butir'];
 
-        $standar1json = 0;
+        $jumlahdok = 0;
+        $jumlahisidok = 0;
+        //jumlah
+        $nomor = [];
+        $dokumen = [];
+
         foreach ($butir as $key => $value) {
-            foreach ($value['dokumen_sumber'] as $key => $sumber) {
-                $standar1json++;
+            foreach ($value['dokumen_sumber'] as $key1 => $sumber) {
+                $carikode = call_user_func($sourceCek.'::find')->where(['kode'=>$sumber['kode']])->all();
+                if($carikode){
+                    $jumlahisidok++;
+                }
+                $jumlahdok++;
             }
-            foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar1json++;
+            foreach ($value['dokumen_pendukung'] as $key2 => $pendukung) {
+
+                if (isset($pendukung['kode'])) {
+                    $carikode = call_user_func($sourceCek . '::find')->where(['kode' => $pendukung['kode']])->all();
+                    if ($carikode) {
+                        $jumlahisidok++;
+                    }
+                    $jumlahdok++;
+                }
             }
+            $nomor[$key] = $jumlahdok;
+            $dokumen[$key] = $jumlahisidok;
+            $jumlahdok = 0;
+            $jumlahisidok = 0;
         }
 
-        $progress = round(($cekisi/$standar1json)*100,2);
+        //cari dokumen yg belum diupload
+
+        $progress = round(($cekisi/array_sum($nomor))*100,2);
 
         $dokModel = new $sourceModel;
 
@@ -223,8 +246,12 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             $dokModel->dokumenDokumentasi = UploadedFile::getInstance($dokModel,'dokumenDokumentasi');
 
             if($dokModel->uploadDokumen($dokumentasi)){
+
+//              Alert jika nama sama belum selesai
+
                 Yii::$app->session->setFlash('success','Berhasil Upload');
                 return $this->redirect(Url::current());
+
             }
             else{
                 Yii::$app->session->setFlash('error','Gagal Upload. Cek File');
@@ -241,7 +268,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             'butir'=>$butir,
             'dokModel'=>$dokModel,
             'progress'=>$progress,
-            'cari'=>'isi'
+            'cari'=>'isi',
+            'nomor'=> $nomor,
+            'dokumen'=>$dokumen
         ]);
     }
 
