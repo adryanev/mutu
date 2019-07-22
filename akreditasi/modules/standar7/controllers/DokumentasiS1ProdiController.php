@@ -213,7 +213,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
 
         foreach ($butir as $key => $value) {
             foreach ($value['dokumen_sumber'] as $key1 => $sumber) {
-                $carikode = call_user_func($sourceCek.'::find')->where(['kode'=>$sumber['kode']])->all();
+                $carikode = call_user_func($sourceCek.'::find')->where(['kode'=>$sumber['kode'], 'id_dokumentasi_s1_prodi'=>$dokumentasi ])->all();
                 if($carikode){
                     $jumlahisidok++;
                 }
@@ -222,7 +222,7 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             foreach ($value['dokumen_pendukung'] as $key2 => $pendukung) {
 
                 if (isset($pendukung['kode'])) {
-                    $carikode = call_user_func($sourceCek . '::find')->where(['kode' => $pendukung['kode']])->all();
+                    $carikode = call_user_func($sourceCek . '::find')->where(['kode' => $pendukung['kode'], 'id_dokumentasi_s1_prodi'=>$dokumentasi ])->all();
                     if ($carikode) {
                         $jumlahisidok++;
                     }
