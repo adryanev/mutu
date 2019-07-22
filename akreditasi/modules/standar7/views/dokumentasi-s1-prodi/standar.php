@@ -220,7 +220,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                             <?php Modal::end(); ?>
 
-                                            <?php } else{ echo '<tr><td>Tidak ada dokumen</td></tr>';}?>
+
                                             
                                             </td>
 
@@ -254,7 +254,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                             
                                             
                                         </tr>
-                                        <?php }}} ?>
+                                        <?php }}
+
+                                        } else{ echo '<tr><td>Tidak ada dokumen</td></tr>';}
+
+                                        } ?>
+
 
                                         </tbody>
                                     </table>
