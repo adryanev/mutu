@@ -41,17 +41,20 @@ $identity = Yii::$app->user->identity;
             
             <div class="card-content">
                 <ul class="nav nav-pills nav-pills-success">
+
                     <li class="active">
                         <a href="#pill1" data-toggle="tab">Akreditasi Program Studi</a>
                     </li>
+
                     <li>
                         <a href="#pill3" data-toggle="tab">Akreditasi Program Studi - Fakultas</a>
                     </li>
-                    <?php if($identity->isAdminInstitusi() || $identity->is_institusi===1): ?>
+
                     <li>
                         <a href="#pill2" data-toggle="tab">Akreditasi Institusi</a>
                     </li>
-                    <?php endif?>
+
+
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="pill1">

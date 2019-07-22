@@ -15,6 +15,8 @@ use yii\web\View;
 /* @var $cari*/
 /* @var $progress*/
 /* @var $butir*/
+/* @var $nomor*/
+/* @var $dokumen*/
 /* @var $dokModel S7DokumentasiPascaProdiStandar1Form*/
 $standar = $json['standar'];
 
@@ -51,14 +53,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="panel-group" id="accordionn" role="tablist" aria-multiselectable="true">
 
-                    <?php foreach ($butir as $key => $value) { ?>
+                    <?php foreach ($butir as $key => $value) {
+                        $color = '#ea2c6d';
+                        if ($dokumen[$key] == $nomor[$key]){
+                            $color = 'grey';
+                        }
+                        ?>
                 
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="heading<?= $key ?>">
                             <a role="button" data-toggle="collapse" data-parent="#accordionn" href="#collapse<?= $key ?>" aria-expanded="true" aria-controls="collapse<?= $key ?>">
                                 <h4 class="panel-title">
-                                    <?= $value['nomor'] ?><br><small style="font-size:13px;color:grey"><?= $value['isi'] ?></small>
+                                    <?= $value['nomor'] ?><br><small style="font-size:14px;color:grey"><?= $value['isi'] ?></small>
                                     <i class="material-icons">keyboard_arrow_down</i>
+                                    <span class="badge" style="float: right;background-color: <?= $color ?>;" rel="tooltip" title="Jumlah / Total Kode Dokumen" ><?= $dokumen[$key] ?> / <?= $nomor[$key] ?></span>
+
                                 </h4>
                             </a>
                         </div>
@@ -78,20 +87,25 @@ $this->params['breadcrumbs'][] = $this->title;
                                         </thead>
                                         <tbody>
 
-                                        <?php foreach ($value['dokumen_sumber'] as $key => $sumber) { 
+                                        <?php foreach ($value['dokumen_sumber'] as $key => $sumber) {
                                             
                                             $clear = trim($sumber['kode']);
                                             $kodeSumber = '_'.str_replace('.','_',$clear);
+                                            $btn = 'rose';
                                             
                                             ?>
                                         <tr>
-                                            <td><?= $sumber['kode'] ?></td>
-                                            <td><?= $sumber['dokumen'] ?></td>
+                                            <td style="font-weight: normal;font-size: 15px"><?= $sumber['kode'] ?></td>
+                                            <td style="font-weight: normal;font-size: 15px"><?= $sumber['dokumen'] ?></td>
                                             <td>
-                                            
+
+                                            <?php
+                                            if (isset($sumber['kode'])){
+                                            ?>
+
                                             <?php Modal::begin([
                                                 'header' => 'Upload Dokumen Dokumentasi',
-                                                'toggleButton' => ['label' => '<i class="material-icons">backup</i> &nbsp;Upload','class'=>'btn btn-rose btn-sm pull-right'],
+                                                'toggleButton' => ['label' => '<i class="material-icons">backup</i> &nbsp;Upload','class'=>'btn btn-'.$btn.' btn-sm pull-right'],
                                                 'size' => 'modal-lg',
                                                 'clientOptions' => ['backdrop' => 'blur', 'keyboard' => true]
                                             ]); ?>
@@ -113,11 +127,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <?php ActiveForm::end() ?>
 
                                             <?php Modal::end(); ?>
-                                            
+
+                                            <?php } else{ echo '<tr><td>Tidak ada dokumen</td></tr>';}?>
+
                                             </td>
                                             
                                             </tr>
-                                            <?php  foreach ($model as $key => $item) { if($sumber['kode'] == $item['kode'])  { 
+                                            <?php  foreach ($model as $key => $item) { if($sumber['kode'] == $item['kode'])  {
                                                 $publik = $item['is_publik'];
                                                 $asesor = $item['is_asesor'];?>
                                             <tr>
@@ -166,15 +182,16 @@ $this->params['breadcrumbs'][] = $this->title;
                                         </thead>
                                         <tbody>
 
-                                        <?php foreach ($value['dokumen_pendukung'] as $key => $pendukung) { 
-                                        
-                                        $kodePendukung = str_replace('.','',trim($pendukung['kode']));
+                                        <?php foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
 
+                                        if (isset($pendukung['kode'])){
+
+                                        $kodePendukung = str_replace('.','',trim($pendukung['kode']));
                                         ?>
                                         <tr>
 
-                                            <td><?= $pendukung['kode'] ?></td>
-                                            <td><?= $pendukung['dokumen'] ?></td>
+                                            <td style="font-weight: normal;font-size: 15px"><?= $pendukung['kode'] ?></td>
+                                            <td style="font-weight: normal;font-size: 15px"><?= $pendukung['dokumen'] ?></td>
                                             <td>
 
                                             <?php Modal::begin([
@@ -202,12 +219,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <?php ActiveForm::end() ?>
 
                                             <?php Modal::end(); ?>
+
+                                            <?php } else{ echo '<tr><td>Tidak ada dokumen</td></tr>';}?>
                                             
                                             </td>
 
-                                            </tr>
+                                        </tr>
 
-                                            <?php  foreach ($model as $key => $item) { if($pendukung['kode'] == $item['kode'])  { 
+                                            <?php  foreach ($model as $key => $item) { if($pendukung['kode'] == $item['kode'])  {
                                                 $publik = $item['is_publik'];
                                                 $asesor = $item['is_asesor'];?>
                                             <tr>

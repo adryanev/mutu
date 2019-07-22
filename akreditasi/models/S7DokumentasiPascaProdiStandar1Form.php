@@ -2,6 +2,7 @@
 
 namespace akreditasi\models;
 
+use Carbon\Carbon;
 use common\models\S7DokumentasiPascaProdiStandar1;
 
 use yii\base\Model;
@@ -35,8 +36,21 @@ class S7DokumentasiPascaProdiStandar1Form extends S7DokumentasiPascaProdiStandar
 
         if($this->validate()){
             $this->_dokumenDokumentasi = new S7DokumentasiPascaProdiStandar1();
-            $this->_dokumenDokumentasi->id_dokumentasi_pasca_prodi = $id;
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
+
+            $model = S7DokumentasiPascaProdiStandar1::find()->select('dokumen')->all();
+
+            foreach ($model as $dok):
+                if ($dok['dokumen'] == $fileName){
+
+                    $carbon = Carbon::now('Asia/Jakarta');
+                    $tgl = $carbon->format('U');
+                    $fileName = $tgl.'-'.$fileName;
+
+                }
+            endforeach;
+
+            $this->_dokumenDokumentasi->id_dokumentasi_pasca_prodi = $id;
             $this->_dokumenDokumentasi->dokumen = $fileName;
             $this->_dokumenDokumentasi->kode = $this->kodeDokumen;
 
