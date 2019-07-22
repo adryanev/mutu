@@ -183,6 +183,7 @@ class AkreditasiInstitusiForm extends Model
 
         $this->_led_institusi = new S7LedInstitusi();
         $this->_led_institusi->id_akreditasi_institusi = $this->_akreditasiInstitusi->id;
+        $this->_led_institusi->save(false);
 
     }
 
@@ -207,6 +208,8 @@ class AkreditasiInstitusiForm extends Model
         $model->_dokumentasiInstitusi = $data->dokumentasiInstitusis;
         $model->_akreditasiInstitusi = $data;
         $model->_led_institusi = $data->ledInstitusi;
+
+        return $model;
 
     }
 

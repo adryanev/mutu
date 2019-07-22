@@ -4,7 +4,7 @@
 namespace akreditasi\models;
 
 
-use common\models\DokumentasiS1ProdiStandar6;
+use common\models\S7DokumentasiS1ProdiStandar6;
 
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
@@ -12,7 +12,7 @@ use yii\web\UploadedFile;
 use Yii;
 
 
-class DokumentasiS1ProdiStandar6Form extends DokumentasiS1ProdiStandar6
+class DokumentasiS1ProdiStandar6Form extends S7DokumentasiS1ProdiStandar6
 {
 
     /**
@@ -38,7 +38,7 @@ class DokumentasiS1ProdiStandar6Form extends DokumentasiS1ProdiStandar6
 
 
         if($this->validate()){
-            $this->_dokumenDokumentasi = new DokumentasiS1ProdiStandar6();
+            $this->_dokumenDokumentasi = new S7DokumentasiS1ProdiStandar6();
             $this->_dokumenDokumentasi->id_dokumentasi_s1_prodi = $id;
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
             $this->_dokumenDokumentasi->dokumen = $fileName;

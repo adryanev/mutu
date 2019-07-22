@@ -97,29 +97,30 @@ class CreateUserForm extends Model
             $auth = Yii::$app->getAuthManager();
 
             if ($user->is_admin) {
-                if ($profil->id_fakultas == null && $profil->id_prodi == null) {
+                if ($user->is_prodi && $user->is_fakultas && $user->is_institusi){
+                    $role = $auth->getRole('adminLpm');
+                    $auth->assign($role, $user->id);
+                }
+                elseif ($user->is_institusi) {
                     $role = $auth->getRole('adminInstitusi');
                     $auth->assign($role, $user->id);
-                } elseif ($profil->id_fakultas != null) {
+                } elseif ($user->is_fakultas) {
                     $role = $auth->getRole('adminFakultas');
                     $auth->assign($role, $user->id);
-                } elseif ($profil->id_prodi != null) {
+                } elseif ($user->is_prodi) {
                     $role = $auth->getRole('adminProdi');
                     $auth->assign($role, $user->id);
                 }
 
             } else {
-                if ($profil->id_fakultas == null && $profil->id_prodi == null) {
+                if ($user->is_institusi) {
                     $role = $auth->getRole('userInstitusi');
                     $auth->assign($role, $user->id);
-                } elseif ($profil->id_fakultas != null) {
+                } elseif ($user->is_fakultas) {
                     $role = $auth->getRole('userFakultas');
                     $auth->assign($role, $user->id);
-                } elseif ($profil->id_prodi != null) {
+                } elseif ($user->is_prodi != null) {
                     $role = $auth->getRole('userProdi');
-                    $auth->assign($role, $user->id);
-                } elseif ($profil->id_fakultas == null && $profil->id_prodi == null) {
-                    $role = $auth->getRole('userInstitusi');
                     $auth->assign($role, $user->id);
                 }
             }

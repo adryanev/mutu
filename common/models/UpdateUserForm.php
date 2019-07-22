@@ -117,8 +117,11 @@ class UpdateUserForm extends Model
         try {
             $transaction->commit();
             $auth = Yii::$app->getAuthManager();
-            $r = array_values($auth->getRolesByUser($user->id))[0];
-            $auth->revoke($r,$user->id);
+            $r = array_values($auth->getRolesByUser($user->id));
+            foreach ($r as $role){
+                $auth->revoke($role,$user->id);
+
+            }
             if ($user->is_admin) {
                 if($user->is_institusi && $user->is_fakultas && $user->is_prodi){
                     $role = $auth->getRole('adminLpm');

@@ -31,7 +31,7 @@ $this->registerJs($js, View::POS_READY);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <title>Sistem Penjamin Mutu IAIN Padangsidimpuan</title>
+    <title>Sistem Informasi Berbasis Akreditasi IAIN Padangsidimpuan</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,31 +51,7 @@ $this->registerJs($js, View::POS_READY);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href=" ../dashboard.html ">IAIN Padangsidimpuan</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="../dashboard.html">
-                        <i class="material-icons">dashboard</i> Dashboard
-                    </a>
-                </li>
-                <li class="">
-                    <a href="register.html">
-                        <i class="material-icons">person_add</i> Register
-                    </a>
-                </li>
-                <!-- <li class=" active ">
-                    <a href="login.html">
-                        <i class="material-icons">fingerprint</i> Login
-                    </a>
-                </li>
-                <li class="">
-                    <a href="lock.html">
-                        <i class="material-icons">lock_open</i> Lock
-                    </a>
-                </li> -->
-            </ul>
+            <a  href="#" style="text-decoration:none;color:white;font-size:16px;letter-spacing:1px;"><img src="<?=Yii::getAlias('@web/img/logo-iain.png')?>" width="70">&nbsp;&nbsp;IAIN Padangsidimpuan</a>
         </div>
     </div>
 </nav>
@@ -84,37 +60,12 @@ $this->registerJs($js, View::POS_READY);
         <?=$content?>
         <footer class="footer">
             <div class="container">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
                 <p class="copyright pull-right">
                     &copy;
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
+IAIN Padangsidimpuan                </p>
             </div>
         </footer>
     </div>

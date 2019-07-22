@@ -12,10 +12,6 @@ class m190611_132021_add_data_perguruan_tinggi extends Migration
      */
     public function safeUp()
     {
-        $this->insert('{{%unit}}',['id'=>1,
-            'nama'=>'PTIPD',
-            'created_at'=>1557554873,
-            'updated_at'=>1557554873]);
         $this->addToTabelFakultas();
         $this->addToTabelProdi();
         $this->insertUser();
@@ -27,7 +23,6 @@ class m190611_132021_add_data_perguruan_tinggi extends Migration
      */
     public function safeDown()
     {
-        $this->delete('{{%unit}}',['id'=>1]);
         $this->deleteTabelProdi();
        $this->deleteTabelFakultas();
        $this->deleteUser();
@@ -81,7 +76,8 @@ class m190611_132021_add_data_perguruan_tinggi extends Migration
             [2,'FTK','Fakultas Tarbiyah dan Ilmu Keguruan','Dr.Lelya Hilda,M.Si.',1557554873,1557554873],
             [3,'FDK','Fakultas Dakwah dan Ilmu Komunikasi','Dr.Ali Sati,M.Ag.',1557554873,1557554873],
             [4,'FEB','Fakultas Ekonomi dan Bisnis Islam','Dr.Darwis Harahap,S.HI.,M.Si.',1557554873,1557554873],
-            [5,'PASCA','Pasca Sarjana','asd',1557554873,1557554873],
+            [5,'PASCA','Pasca Sarjana',' Dr. Erawadi, M.Ag.
+',1557554873,1557554873],
 
         ];
 

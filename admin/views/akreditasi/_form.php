@@ -23,9 +23,9 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'id_jenis_akreditasi')->widget(Select2::class, [
         'data' => $dataJenisAkreditasi,
         'options' => [
-            'placeholder' => 'Pilih Jenis S7Akreditasi'
+            'placeholder' => 'Pilih Jenis Akreditasi'
         ]
-    ])->label('Jenis S7Akreditasi') ?>
+    ])->label('Jenis Akreditasi') ?>
 
     <?= $form->field($model, 'lembaga')->textInput(['maxlength' => true,'value'=>'BAN-PT','readonly'=>true]) ?>
 
