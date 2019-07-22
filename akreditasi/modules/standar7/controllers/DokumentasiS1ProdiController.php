@@ -86,7 +86,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar1json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar1json++;
+                if (isset($pendukung['kode'])){
+
+                    $standar1json++;}
             }
         }
         foreach ($butir2 as $key => $value) {
@@ -94,7 +96,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar2json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar2json++;
+                if (isset($pendukung['kode'])){
+
+                    $standar2json++;}
             }
         }
         foreach ($butir3 as $key => $value) {
@@ -102,7 +106,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar3json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar3json++;
+                if (isset($pendukung['kode'])){
+
+                    $standar3json++;}
             }
         }
         foreach ($butir4 as $key => $value) {
@@ -110,7 +116,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar4json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar4json++;
+                if (isset($pendukung['kode'])){
+
+                    $standar4json++;}
             }
         }
         foreach ($butir5 as $key => $value) {
@@ -118,7 +126,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar5json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar5json++;
+                if (isset($pendukung['kode'])){
+
+                    $standar5json++;}
             }
         }
         foreach ($butir6 as $key => $value) {
@@ -126,15 +136,21 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
                 $standar6json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
-                $standar6json++;
+                if (isset($pendukung['kode'])){
+
+                    $standar6json++;}
             }
         }
         foreach ($butir7 as $key => $value) {
             foreach ($value['dokumen_sumber'] as $key => $sumber) {
+
                 $standar7json++;
             }
             foreach ($value['dokumen_pendukung'] as $key => $pendukung) {
+                if (isset($pendukung['kode'])){
+
                 $standar7json++;
+                }
             }
         }
 
