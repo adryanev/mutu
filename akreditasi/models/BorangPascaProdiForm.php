@@ -4,6 +4,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DokumenBorangPascaProdi;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -29,12 +30,13 @@ class BorangPascaProdiForm extends Model {
 
     public function uploadDokumen($id){
 
+        $timestamp = Carbon::now()->timestamp;
 
         if($this->validate()){
             $this->_dokumenBorangPascaProdi = new S7DokumenBorangPascaProdi();
             $this->_dokumenBorangPascaProdi->id_borang_pasca_prodi = $id;
             $fileName = $this->dokumenBorang->getBaseName().'.'.$this->dokumenBorang->getExtension();
-            $this->_dokumenBorangPascaProdi->nama_dokumen = $fileName;
+            $this->_dokumenBorangPascaProdi->nama_dokumen = $timestamp.'-'.$fileName;
             $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_dokumenBorangPascaProdi->borangPascaProdi->akreditasiProdiPasca->akreditasi->lembaga}/prodi/{$this->_dokumenBorangPascaProdi->borangPascaProdi->akreditasiProdiPasca->akreditasi->tahun}/{$this->_dokumenBorangPascaProdi->borangPascaProdi->akreditasiProdiPasca->id_prodi}/prodi/borang/dokumen");
 
             $this->dokumenBorang->saveAs("$path/$fileName");

@@ -16,8 +16,10 @@ use yii\behaviors\TimestampBehavior;
  * @property int $updated_at
  * @property int $created_by
  * @property int $updated_by
+ * @property int $id_borang_pasca_fakultas
  *
  * @property S7IsianBorang $isianBorang
+ * @property S7BorangPascaFakultas $borangPascaFakultas
  * @property User $createdBy
  * @property User $updatedBy
  */
@@ -75,6 +77,14 @@ class S7IsianBorangPascaFakultas extends \yii\db\ActiveRecord
     public function getIsianBorang()
     {
         return $this->hasOne(S7IsianBorang::className(), ['id' => 'id_isian_borang']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBorangPascaFakultas()
+    {
+        return $this->hasOne(S7BorangPascaFakultas::className(), ['id' => 'id_borang_pasca_fakultas']);
     }
 
     /**

@@ -159,4 +159,19 @@ class S7BorangPascaFakultas extends \yii\db\ActiveRecord
     {
         return $this->hasMany(S7GambarBorangPascaFakultas::className(), ['id_borang_pasca_fakultas' => 'id']);
     }
+
+    public function updateProgress(){
+        $s1= $this->s7BorangPascaFakultasStandar1s->progress/100;
+        $s2= $this->s7BorangPascaFakultasStandar2s->progress/100;
+        $s3= $this->s7BorangPascaFakultasStandar3s->progress/100;
+        $s4= $this->s7BorangPascaFakultasStandar4s->progress/100;
+        $s5= $this->s7BorangPascaFakultasStandar5s->progress/100;
+        $s6= $this->s7BorangPascaFakultasStandar6s->progress/100;
+        $s7= $this->s7BorangPascaFakultasStandar7s->progress/100;
+
+        $progress = round((($s1+$s2+$s3+$s4+$s5+$s6+$s7)/7) *100,2);
+
+        $this->progress = $progress;
+        $this->save(false);
+    }
 }

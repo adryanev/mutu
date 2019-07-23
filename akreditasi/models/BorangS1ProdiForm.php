@@ -4,6 +4,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DokumenBorangS1Prodi;
 use Yii;
 use yii\base\InvalidArgumentException;
@@ -30,13 +31,14 @@ class BorangS1ProdiForm extends Model
 
 
     public function uploadDokumen($id){
+        $timestamp = Carbon::now()->timestamp;
 
 
         if($this->validate()){
             $this->_dokumenBorangS1Prodi = new S7DokumenBorangS1Prodi();
             $this->_dokumenBorangS1Prodi->id_borang_s1_prodi = $id;
             $fileName = $this->dokumenBorang->getBaseName().'.'.$this->dokumenBorang->getExtension();
-            $this->_dokumenBorangS1Prodi->nama_dokumen = $fileName;
+            $this->_dokumenBorangS1Prodi->nama_dokumen = $timestamp.'-'.$fileName;
             $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_dokumenBorangS1Prodi->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");
 
             $this->dokumenBorang->saveAs("$path/$fileName");

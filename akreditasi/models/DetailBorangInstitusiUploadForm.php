@@ -10,6 +10,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DetailBorangInstitusiStandar1;
 use common\models\S7DokumenBorangInstitusi;
 use Yii;
@@ -45,6 +46,7 @@ class DetailBorangInstitusiUploadForm extends Model
 
 
     public function uploadDokumen($id,$standar){
+        $timestamp = Carbon::now()->timestamp;
 
 
         if($this->validate()){
@@ -53,7 +55,7 @@ class DetailBorangInstitusiUploadForm extends Model
             $this->_detailBorangInstitusi = new $detailClass;
             $this->_detailBorangInstitusi->$detailAttrId = $id;
             $fileName = $this->dokumenPendukung->getBaseName().'.'.$this->dokumenPendukung->getExtension();
-            $this->_detailBorangInstitusi->nama_dokumen = $fileName;
+            $this->_detailBorangInstitusi->nama_dokumen = $timestamp.'-'. $fileName;
             $this->_detailBorangInstitusi->nomor_dokumen = $this->nomorDokumen;
             $borangAttr = 'borangInstitusiStandar'.$standar;
             $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_detailBorangInstitusi->$borangAttr->borangInstitusi->akreditasiInstitusi->akreditasi->lembaga}/institusi/{$this->_detailBorangInstitusi->$borangAttr->borangInstitusi->akreditasiInstitusi->akreditasi->tahun}/borang/dokumen");
