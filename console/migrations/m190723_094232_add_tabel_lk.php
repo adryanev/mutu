@@ -3,16 +3,16 @@
 use yii\db\Migration;
 
 /**
- * Class m190720_163106_add_tabel_lkps_s1
+ * Class m190723_094232_add_tabel_lk
  */
-class m190720_163106_add_tabel_lkps_s1 extends Migration
+class m190723_094232_add_tabel_lk extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('{{%k9_lk_s1_prodi}}',[
+        $this->createTable('{{%k9_lkps_prodi}}',[
             'id'=> $this->primaryKey(),
             'id_akreditasi_prodi_s1'=> $this->integer(),
             'progress'=> $this->integer(),
@@ -23,6 +23,7 @@ class m190720_163106_add_tabel_lkps_s1 extends Migration
         $this->createTable('{{%k9_lk_s1_prodi_kriteria1}}',[
             'id'=> $this->primaryKey(),
             'id_k9_lk_s1_prodi'=> $this->integer(),
+            'kode'=>$this->string(),
             'dokumen'=>$this->string(),
             'jenis_dokumen'=>$this->string(),
             'created_by'=>$this->integer(),
@@ -30,6 +31,8 @@ class m190720_163106_add_tabel_lkps_s1 extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
+
+//        detail
 
         $this->createTable('{{%k9_lk_s1_prodi_kriteria2}}',[
             'id'=> $this->primaryKey(),
@@ -223,7 +226,7 @@ class m190720_163106_add_tabel_lkps_s1 extends Migration
 
     public function down()
     {
-        echo "m190720_163106_add_tabel_lkps_s1 cannot be reverted.\n";
+        echo "m190723_094232_add_tabel_lk cannot be reverted.\n";
 
         return false;
     }
