@@ -58,6 +58,7 @@ class m190520_042417_create_isian_borang extends Migration
         $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_crd', '{{%s7_isian_borang_s1_fakultas}}', 'created_by', '{{%user}}', 'id');
         $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_upd', '{{%s7_isian_borang_s1_fakultas}}', 'updated_by', '{{%user}}', 'id');
 
+
         $this->createIndex('idx-search-isian_borang', '{{%s7_isian_borang}}', ['nomor_borang', 'untuk']);
     }
 
