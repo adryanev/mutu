@@ -13,14 +13,20 @@ class m190429_191120_init_mutu_database extends Migration
     public function safeUp()
     {
 
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
+        }
+
         $this->createTable('{{%profil_user}}',[
             'id'=>$this->primaryKey(),
             'id_user'=>$this->integer(),
             'nama_lengkap'=>$this->string(),
             'id_prodi'=>$this->integer(),
             'created_at'=>$this->integer(),
-            'updated_at'=>$this->integer(),
-        ]);
+            'updated_at'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%fakultas_akademi}}',[
             'id'=>$this->primaryKey(),
@@ -29,7 +35,7 @@ class m190429_191120_init_mutu_database extends Migration
             'dekan'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%program_studi}}',[
             'id'=>$this->primaryKey(),
@@ -56,21 +62,21 @@ class m190429_191120_init_mutu_database extends Migration
             'jenjang'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%unit}}',[
             'id'=>$this->primaryKey(),
             'nama'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%jenis_akreditasi}}',[
             'id'=>$this->primaryKey(),
             'nama'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_akreditasi}}',[
             'id'=>$this->primaryKey(),
             'nama'=>$this->string(),
@@ -79,7 +85,7 @@ class m190429_191120_init_mutu_database extends Migration
             'lembaga'=>$this->string(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
 
         $this->createTable('{{%s7_akreditasi_prodi_s1}}',[
@@ -89,7 +95,7 @@ class m190429_191120_init_mutu_database extends Migration
             'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_akreditasi_prodi_pasca}}',[
             'id'=>$this->primaryKey(),
@@ -98,7 +104,7 @@ class m190429_191120_init_mutu_database extends Migration
             'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
 
         $this->createTable('{{%s7_akreditasi_institusi}}',[
@@ -106,8 +112,8 @@ class m190429_191120_init_mutu_database extends Migration
             'id_akreditasi'=>$this->integer(),
             'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
-            'updated_at'=> $this->integer(),
-        ]);
+            'updated_at'=> $this->integer()
+        ],$tableOptions);
 
 
         $this->createTable('{{%s7_borang_s1_prodi}}',[
@@ -116,7 +122,7 @@ class m190429_191120_init_mutu_database extends Migration
             'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_dokumen_borang_s1_prodi}}',[
             'id'=>$this->primaryKey(),
@@ -126,7 +132,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_s1_fakultas}}',[
             'id'=>$this->primaryKey(),
@@ -135,7 +141,7 @@ class m190429_191120_init_mutu_database extends Migration
             'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumen_borang_s1_fakultas}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
@@ -144,7 +150,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
 
         $this->createTable('{{%s7_borang_pasca_prodi}}',[
@@ -153,7 +159,7 @@ class m190429_191120_init_mutu_database extends Migration
             'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_fakultas}}',[
             'id'=>$this->primaryKey(),
@@ -162,7 +168,7 @@ class m190429_191120_init_mutu_database extends Migration
             'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
 
         $this->createTable('{{%s7_borang_s1_prodi_standar1}}',[
@@ -179,8 +185,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_detail_borang_s1_prodi_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -190,9 +196,9 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
+            'updated_by'=>$this->integer()
 
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_borang_s1_prodi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
@@ -206,8 +212,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_s1_prodi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar2' =>$this->integer(),
@@ -216,8 +222,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_borang_s1_prodi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
@@ -236,8 +242,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_s1_prodi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar3' =>$this->integer(),
@@ -246,8 +252,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_s1_prodi_standar4}}',[
             'id'=>$this->primaryKey(),
@@ -276,8 +282,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_s1_prodi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar4' =>$this->integer(),
@@ -286,8 +292,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_s1_prodi_standar5}}',[
             'id'=>$this->primaryKey(),
@@ -323,8 +329,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_s1_prodi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar5' =>$this->integer(),
@@ -333,8 +339,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_s1_prodi_standar6}}',[
             'id'=>$this->primaryKey(),
@@ -359,8 +365,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_s1_prodi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar6' =>$this->integer(),
@@ -369,8 +375,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_s1_prodi_standar7}}',[
             'id'=>$this->primaryKey(),
@@ -390,8 +396,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_s1_prodi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi_standar7' =>$this->integer(),
@@ -400,8 +406,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
 
         $this->createTable('{{%s7_borang_s1_fakultas_standar1}}',[
@@ -418,7 +424,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_detail_borang_s1_fakultas_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -428,8 +434,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
 
         $this->createTable('{{%s7_borang_s1_fakultas_standar2}}',[
@@ -445,7 +451,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_s1_fakultas_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas_standar2' =>$this->integer(),
@@ -454,8 +460,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_s1_fakultas_standar3}}',[
             'id'=>$this->primaryKey(),
@@ -472,7 +478,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_detail_borang_s1_fakultas_standar3}}',[
             'id'=>$this->primaryKey(),
@@ -482,8 +488,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_s1_fakultas_standar4}}',[
             'id'=>$this->primaryKey(),
@@ -498,7 +504,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_detail_borang_s1_fakultas_standar4}}',[
             'id'=>$this->primaryKey(),
@@ -508,8 +514,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_borang_s1_fakultas_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
@@ -521,7 +527,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_detail_borang_s1_fakultas_standar5}}',[
             'id'=>$this->primaryKey(),
@@ -531,8 +537,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
         $this->createTable('{{%s7_borang_s1_fakultas_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_fakultas'=>$this->integer(),
@@ -555,7 +561,7 @@ class m190429_191120_init_mutu_database extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_detail_borang_s1_fakultas_standar6}}',[
             'id'=>$this->primaryKey(),
@@ -565,8 +571,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_s1_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
@@ -584,8 +590,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
 
         $this->createTable('{{%s7_detail_borang_s1_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
@@ -595,8 +601,8 @@ class m190429_191120_init_mutu_database extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
-            'updated_by'=>$this->integer(),
-        ]);
+            'updated_by'=>$this->integer()
+        ],$tableOptions);
     }
 
     /**

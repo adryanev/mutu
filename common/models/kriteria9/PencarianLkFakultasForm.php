@@ -7,10 +7,10 @@
  * Time: 5:15 AM
  */
 
-namespace common\models\standar9;
+namespace common\models\kriteria9;
 
 
-class PencarianLkInstitusiForm
+class PencarianLkFakultasForm
 {
 
 }

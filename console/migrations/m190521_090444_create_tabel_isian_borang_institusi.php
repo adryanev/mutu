@@ -12,6 +12,11 @@ class m190521_090444_create_tabel_isian_borang_institusi extends Migration
      */
     public function safeUp()
     {
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
+        }
         $this->createTable('{{%s7_isian_borang_institusi}}', [
             'id' => $this->primaryKey(),
             'id_isian_borang' => $this->integer(),
@@ -21,7 +26,7 @@ class m190521_090444_create_tabel_isian_borang_institusi extends Migration
             'updated_at' => $this->integer(),
             'created_by' => $this->integer(),
             'updated_by' => $this->integer(),
-        ]);
+        ],$tableOptions);
         $this->addForeignKey('fk-isian_borang_institusi-isian_borang', '{{%s7_isian_borang_institusi}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id');
         $this->addForeignKey('fk-isian_borang_institusi-borang_institusi', '{{%s7_isian_borang_institusi}}', 'id_borang_institusi', '{{%s7_borang_institusi}}', 'id');
         $this->addForeignKey('fk-isian_borang_institusi-usr_crd', '{{%s7_isian_borang_institusi}}', 'created_by', '{{%user}}', 'id');

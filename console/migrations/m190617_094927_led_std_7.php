@@ -32,13 +32,18 @@ class m190617_094927_led_std_7 extends Migration
     private function createLedInstitusi()
     {
 
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
+        }
         $this->createTable('{{%s7_led_institusi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_institusi'=>$this->integer(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
 
-        ]);
+        ],$tableOptions);
         
         $this->createTable('{{%s7_led_institusi_detail}}',[
             'id'=>$this->primaryKey(),
@@ -49,7 +54,7 @@ class m190617_094927_led_std_7 extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->addForeignKey('fk-s7_led_institusi-s7_akreditasi_institusi','{{%s7_led_institusi}}','id_akreditasi_institusi','{{%s7_akreditasi_institusi}}','id');
         $this->addForeignKey('fk-s7_led_institusi_det-s7_led_institusi','{{%s7_led_institusi_detail}}','id_led_institusi','{{%s7_led_institusi}}','id');
@@ -60,6 +65,11 @@ class m190617_094927_led_std_7 extends Migration
 
     private function createLedFakultas()
     {
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
+        }
 
         $this->createTable('s7_led_fakultas',[
             'id'=>$this->primaryKey(),
@@ -67,7 +77,7 @@ class m190617_094927_led_std_7 extends Migration
             'id_fakultas'=>$this->integer(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_led_fakultas_detail}}',[
             'id'=>$this->primaryKey(),
@@ -78,7 +88,7 @@ class m190617_094927_led_std_7 extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->addForeignKey('fk-s7_led_fakultas-s7_akreditasi','{{%s7_led_fakultas}}','id_akreditasi','{{%s7_akreditasi}}','id');
         $this->addForeignKey('fk-s7_led_fakultas-fakultas_akademi','{{%s7_led_fakultas}}','id_fakultas','{{%fakultas_akademi}}','id');
@@ -90,6 +100,12 @@ class m190617_094927_led_std_7 extends Migration
 
     private function createLedProdi()
     {
+
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
+        }
         //S1
         $this->createTable('{{%s7_led_prodi_s1}}',[
             'id'=>$this->primaryKey(),
@@ -97,7 +113,7 @@ class m190617_094927_led_std_7 extends Migration
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
 
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_led_prodi_s1_detail}}',[
             'id'=>$this->primaryKey(),
@@ -108,7 +124,7 @@ class m190617_094927_led_std_7 extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
 
 
@@ -118,7 +134,7 @@ class m190617_094927_led_std_7 extends Migration
             'id_akreditasi_prodi_pasca'=>$this->integer(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         //PascaSarjana
         $this->createTable('{{%s7_led_prodi_pasca_detail}}',[
@@ -130,7 +146,7 @@ class m190617_094927_led_std_7 extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         //fk s1
         $this->addForeignKey('fk-s7_led_prodi_s1-s7_akred_prodi_s1','{{%s7_led_prodi_s1}}','id_akreditasi_prodi_s1','{{%s7_akreditasi_prodi_s1}}','id');
 

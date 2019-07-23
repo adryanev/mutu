@@ -13,6 +13,11 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
     public function safeUp()
     {
 
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
+        }
         $this->createTable('{{%s7_isian_borang_pasca_prodi}}', [
             'id' => $this->primaryKey(),
             'id_isian_borang' => $this->integer(),
@@ -21,7 +26,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at' => $this->integer(),
             'created_by' => $this->integer(),
             'updated_by' => $this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->addForeignKey('fk-s7_isian_borang_pasca_prodi-isian_borang','{{%s7_isian_borang_pasca_prodi}}','id_isian_borang','{{%s7_isian_borang}}','id');
         $this->addForeignKey('fk-s7_isian_borang_pasca_prodi-usr_crd', '{{%s7_isian_borang_pasca_prodi}}', 'created_by', '{{%user}}', 'id');
@@ -35,7 +40,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at' => $this->integer(),
             'created_by' => $this->integer(),
             'updated_by' => $this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->addForeignKey('fk-s7_isian_borang_pasca_fakultas-isian_borang','{{%s7_isian_borang_pasca_fakultas}}','id_isian_borang','{{%s7_isian_borang}}','id');
         $this->addForeignKey('fk-s7_isian_borang_pasca_fakultas-usr_crd', '{{%s7_isian_borang_pasca_fakultas}}', 'created_by', '{{%user}}', 'id');
@@ -53,7 +58,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_gambar_borang_pasca_prodi}}',[
             'id'=>$this->primaryKey(),
@@ -64,7 +69,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_prodi_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -81,7 +86,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_prodi_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_prodi_standar1' =>$this->integer(),
@@ -91,7 +96,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_prodi_standar2}}',[
             'id'=>$this->primaryKey(),
@@ -107,7 +112,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_prodi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_prodi_standar2' =>$this->integer(),
@@ -117,7 +122,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_prodi_standar3}}',[
             'id'=>$this->primaryKey(),
@@ -138,7 +143,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_prodi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_prodi_standar3' =>$this->integer(),
@@ -148,7 +153,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_prodi_standar4}}',[
             'id'=>$this->primaryKey(),
@@ -178,7 +183,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_prodi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_prodi_standar4' =>$this->integer(),
@@ -188,7 +193,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_prodi_standar5}}',[
             'id'=>$this->primaryKey(),
@@ -225,7 +230,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_prodi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_prodi_standar5' =>$this->integer(),
@@ -235,7 +240,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_prodi_standar6}}',[
             'id'=>$this->primaryKey(),
@@ -261,7 +266,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_prodi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_prodi_standar6' =>$this->integer(),
@@ -271,7 +276,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_prodi_standar7}}',[
             'id'=>$this->primaryKey(),
@@ -292,7 +297,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_prodi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_prodi_standar7' =>$this->integer(),
@@ -302,7 +307,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         // foreign key borang pasca standar
 
@@ -310,7 +315,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
         $this->addForeignKey('fk-s7_dok_borang_pasca_prodi-usr_crt','{{%s7_dokumen_borang_pasca_prodi}}','created_by','{{%user}}','id');
         $this->addForeignKey('fk-s7_dok_borang_pasca_prodi-usr_upd','{{%s7_dokumen_borang_pasca_prodi}}','updated_by','{{%user}}','id');
 
-        $this->createIndex('idx-search-gambar_borang_pasca_prodi','{{%s7_gambar_borang_pasca_prodi}}',['nomor_borang']);
+        $this->createIndex('idx-search-gambar_borang_pasca_prodi','{{%s7_gambar_borang_pasca_prodi}}',['nomor_borang'],$tableOptions);
         $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi-s7_borang_pasca_prodi','{{%s7_gambar_borang_pasca_prodi}}','id_borang_pasca_prodi','{{%s7_borang_pasca_prodi}}','id');
         $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi_prodi-usr_crt','{{%s7_gambar_borang_pasca_prodi}}','created_by','{{%user}}','id');
         $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi_prodi-usr_upd','{{%s7_gambar_borang_pasca_prodi}}','updated_by','{{%user}}','id');
@@ -373,7 +378,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_gambar_borang_pasca_fakultas}}',[
             'id'=>$this->primaryKey(),
@@ -384,7 +389,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_fakultas_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -400,7 +405,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_fakultas_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_fakultas_standar1' =>$this->integer(),
@@ -410,7 +415,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_fakultas_standar2}}',[
             'id'=>$this->primaryKey(),
@@ -425,7 +430,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_fakultas_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_fakultas_standar2' =>$this->integer(),
@@ -435,7 +440,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_fakultas_standar3}}',[
             'id'=>$this->primaryKey(),
@@ -452,7 +457,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_fakultas_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_fakultas_standar3' =>$this->integer(),
@@ -462,7 +467,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_fakultas_standar4}}',[
             'id'=>$this->primaryKey(),
@@ -477,7 +482,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_fakultas_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_fakultas_standar4' =>$this->integer(),
@@ -487,7 +492,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_fakultas_standar5}}',[
             'id'=>$this->primaryKey(),
@@ -500,7 +505,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_fakultas_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_fakultas_standar5' =>$this->integer(),
@@ -510,7 +515,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_fakultas_standar6}}',[
             'id'=>$this->primaryKey(),
@@ -534,7 +539,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_fakultas_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_fakultas_standar6' =>$this->integer(),
@@ -544,7 +549,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_pasca_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
@@ -563,7 +568,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_pasca_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_pasca_fakultas_standar7' =>$this->integer(),
@@ -573,7 +578,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         // foreign key borang pasca standar
 

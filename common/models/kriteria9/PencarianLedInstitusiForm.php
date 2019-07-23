@@ -7,7 +7,7 @@
  * Time: 5:16 AM
  */
 
-namespace common\models\standar9;
+namespace common\models\kriteria9;
 
 
 use common\models\S7Akreditasi;

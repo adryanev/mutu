@@ -12,6 +12,11 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
      */
     public function safeUp()
     {
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
+        }
         // create tabel dokumentasi s1 prodi dan standar
         $this->createTable('{{%s7_dokumentasi_s1_prodi}}',[
             'id'=>$this->primaryKey(),
@@ -20,7 +25,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'is_publik'=>$this->boolean(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_dokumentasi_s1_prodi_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -34,7 +39,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_prodi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_prodi'=>$this->integer(),
@@ -47,7 +52,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_prodi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_prodi'=>$this->integer(),
@@ -60,7 +65,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_prodi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_prodi'=>$this->integer(),
@@ -73,7 +78,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_prodi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_prodi'=>$this->integer(),
@@ -86,7 +91,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_prodi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_prodi'=>$this->integer(),
@@ -99,7 +104,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_prodi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_prodi'=>$this->integer(),
@@ -112,7 +117,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
  
         // create tabel dokumentasi s1 fakultas dan standar
         $this->createTable('{{%s7_dokumentasi_s1_fakultas}}',[
@@ -123,7 +128,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'is_publik'=>$this->boolean(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_dokumentasi_s1_fakultas_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -137,7 +142,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_fakultas_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_fakultas'=>$this->integer(),
@@ -150,7 +155,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_fakultas_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_fakultas'=>$this->integer(),
@@ -163,7 +168,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_fakultas_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_fakultas'=>$this->integer(),
@@ -176,7 +181,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_fakultas_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_fakultas'=>$this->integer(),
@@ -189,7 +194,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_fakultas_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_fakultas'=>$this->integer(),
@@ -202,7 +207,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_s1_fakultas_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_s1_fakultas'=>$this->integer(),
@@ -215,7 +220,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         // create tabel dokumentasi institusi dan standar
         $this->createTable('{{%s7_dokumentasi_institusi}}',[
@@ -225,7 +230,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'is_publik'=>$this->boolean(),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_dokumentasi_institusi_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -239,7 +244,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_institusi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_institusi'=>$this->integer(),
@@ -252,7 +257,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_institusi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_institusi'=>$this->integer(),
@@ -265,7 +270,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_institusi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_institusi'=>$this->integer(),
@@ -278,7 +283,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_institusi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_institusi'=>$this->integer(),
@@ -291,7 +296,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_institusi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_institusi'=>$this->integer(),
@@ -304,7 +309,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_dokumentasi_institusi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_dokumentasi_institusi'=>$this->integer(),
@@ -317,7 +322,7 @@ class m190512_045509_add_dokumentasi_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
 
 

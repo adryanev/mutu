@@ -12,6 +12,11 @@ class m190513_224936_add_borang_institusi extends Migration
      */
     public function safeUp()
     {
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
+        }
         
         // migrasi borang institusi
         $this->createTable('{{%s7_borang_institusi}}',[
@@ -20,7 +25,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
-        ]);
+        ],$tableOptions);
         // dokumen borang institusi
         $this->createTable('{{%s7_dokumen_borang_institusi}}',[
             'id'=>$this->primaryKey(),
@@ -31,7 +36,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
         // borang standar institusi dan detail standar
         $this->createTable('{{%s7_borang_institusi_standar1}}',[
             'id'=>$this->primaryKey(),
@@ -46,7 +51,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_institusi_standar1}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar1' =>$this->integer(),
@@ -56,7 +61,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_institusi_standar2}}',[
             'id'=>$this->primaryKey(),
@@ -84,7 +89,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_institusi_standar2}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar2' =>$this->integer(),
@@ -94,7 +99,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_institusi_standar3}}',[
             'id'=>$this->primaryKey(),
@@ -129,7 +134,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_institusi_standar3}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar3' =>$this->integer(),
@@ -139,7 +144,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_institusi_standar4}}',[
             'id'=>$this->primaryKey(),
@@ -162,7 +167,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_institusi_standar4}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar4' =>$this->integer(),
@@ -172,7 +177,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_institusi_standar5}}',[
             'id'=>$this->primaryKey(),
@@ -192,7 +197,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_institusi_standar5}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar5' =>$this->integer(),
@@ -202,7 +207,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_institusi_standar6}}',[
             'id'=>$this->primaryKey(),
@@ -239,7 +244,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_institusi_standar6}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar6' =>$this->integer(),
@@ -249,7 +254,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%s7_borang_institusi_standar7}}',[
             'id'=>$this->primaryKey(),
@@ -276,7 +281,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
         $this->createTable('{{%s7_detail_borang_institusi_standar7}}',[
             'id'=>$this->primaryKey(),
             'id_borang_institusi_standar7' =>$this->integer(),
@@ -286,7 +291,7 @@ class m190513_224936_add_borang_institusi extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
         
         // relasi borang, dokumen dan user crt upd
         $this->addForeignKey('fk-borang_institusi-akreditasi_institusi','{{%s7_borang_institusi}}','id_akreditasi_institusi', '{{%s7_akreditasi_institusi}}','id');
