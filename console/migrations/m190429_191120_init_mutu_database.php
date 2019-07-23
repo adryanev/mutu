@@ -86,7 +86,7 @@ class m190429_191120_init_mutu_database extends Migration
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -95,7 +95,7 @@ class m190429_191120_init_mutu_database extends Migration
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_prodi'=>$this->integer(),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -104,7 +104,7 @@ class m190429_191120_init_mutu_database extends Migration
         $this->createTable('{{%s7_akreditasi_institusi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=> $this->integer(),
         ]);
@@ -113,7 +113,7 @@ class m190429_191120_init_mutu_database extends Migration
         $this->createTable('{{%s7_borang_s1_prodi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_s1'=>$this->integer(),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -132,7 +132,7 @@ class m190429_191120_init_mutu_database extends Migration
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_fakultas'=>$this->integer(),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -150,7 +150,7 @@ class m190429_191120_init_mutu_database extends Migration
         $this->createTable('{{%s7_borang_pasca_prodi}}',[
             'id'=>$this->primaryKey(),
             'id_akreditasi_prodi_pasca'=>$this->integer(),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -159,7 +159,7 @@ class m190429_191120_init_mutu_database extends Migration
             'id'=>$this->primaryKey(),
             'id_akreditasi'=>$this->integer(),
             'id_fakultas'=>$this->integer(),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer()
         ]);
@@ -175,7 +175,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_1_1_4'=>$this->text()->comment('Tujuan'),
             '_1_1_5'=>$this->text()->comment('Sasaran dan Strategi Pencapaian'),
             '_1_2'=>$this->text()->comment('Sosialisasi'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -202,7 +202,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_2_4'=>$this->text()->comment('Penjaminan Mutu'),
             '_2_5'=>$this->text()->comment('Umpan Balik'),
             '_2_6'=>$this->text()->comment('Keberlanjutan'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -232,7 +232,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_3_3_2'=>$this->text()->comment('Rata-rata waktu tunggu lulusan untuk memperoleh pekerjaan yang pertama = … bulan '),
             '_3_3_3'=>$this->text()->comment('Persentase lulusan yang bekerja pada bidang yang sesuai dengan keahliannya = … %'),
             '_3_4'=>$this->text()->comment('Himpunan Alumni'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -272,7 +272,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_4_6'=>$this->text()->comment('Tenaga kependidikan'),
             '_4_6_1'=>$this->text()->comment('Data tenaga kependidikan yang ada di PS, Jurusan, Fakultas atau PT yang melayani mahasiswa PS Tuliskan data tenaga kependidikan yang ada di PS, Jurusan, Fakultas atau PT yang melayani mahasiswa PS'),
             '_4_6_2'=>$this->text()->comment('Jelaskan upaya yang telah dilakukan PS dalam meningkatkan kualifikasi dan kompetensi tenaga kependidikan, dalam hal pemberian kesempatan belajar/pelatihan, pemberian fasilitas termasuk dana, dan jenjang karir'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -319,7 +319,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_5_7_3'=>$this->text()->comment('Program dan kegiatan di dalam dan di luar proses pembelajaran, yang dilaksanakan baik di dalam maupun di luar kelas, untuk menciptakan suasana akademik yang kondusif (misalnya seminar, simposium, lokakarya, bedah buku, penelitian bersama, pengenalan kehidupan kampus, dan temu dosen-mahasiswa-alumni). 	'),
             '_5_7_4'=>$this->text()->comment('Interaksi akademik antara dosen-mahasiswa, antar mahasiswa, serta antar dosen'),
             '_5_7_5'=>$this->text()->comment('Pengembangan perilaku kecendikiawanan'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -355,7 +355,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_6_5'=>$this->text()->comment('Sistem Informasi '),
             '_6_5_1'=>$this->text()->comment('Jelaskan sistem informasi dan fasilitas yang digunakan oleh program studi untuk proses pembelajaran (hardware, software, e-learning, perpustakaan, dll.).'),
             '_6_5_2'=>$this->text()->comment('Aksesibilitas tiap jenis data'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -386,7 +386,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_7_3'=>$this->text()->comment('Kerjasama dengan Instansi Lain'),
             '_7_3_1'=>$this->text()->comment('Instansi dalam negeri yang menjalin kerjasama* yang terkait dengan program studi/jurusan dalam tiga tahun terakhir.'),
             '_7_3_2'=>$this->text()->comment('Instansi luar negeri yang menjalin kerjasama* yang terkait dengan program studi/jurusan dalam tiga tahun terakhir.'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -413,7 +413,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_1_1_3'=>$this->text()->comment('Tujuan'),
             '_1_1_4'=>$this->text()->comment('Sasaran dan Strategi Pencapaiannya'),
             '_1_2'=>$this->text()->comment('Upaya penyebaran/sosialisasi, serta tingkat pemahaman sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan tentang visi, misi dan tujuan Fakultas/Sekolah Tinggi.'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -440,7 +440,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_2_3'=>$this->text()->comment('Karakteristik kepemimpinan'),
             '_2_4'=>$this->text()->comment('Sistem Pengelolaan'),
             '_2_5'=>$this->text()->comment('Sistem Penjaminan Mutu Fakultas/Sekolah Tinggi'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -467,7 +467,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_3_2'=>$this->text()->comment('Lulusan'),
             '_3_2_1'=>$this->text()->comment('Rata-rata masa studi dan rata-rata IPK lulusan selama tiga tahun terakhir dari mahasiswa reguler bukan transfer untuk tiap program studi S1 yang dikelola oleh Fakultas/Sekolah Tinggi'),
             '_3_2_2'=>$this->text()->comment('Pandangan Fakultas/Sekolah Tinggi tentang rara-rata masa studi dan rata-rata IPK lulusan, yang mencakup aspek : kewajaran, upaya pengembangan, dan upaya peningkatan mutu'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -493,7 +493,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_4_1_2'=>$this->text()->comment('Banyaknya penggantian dan perekrutan serta pengembangan dosen tetap yang bidang keahliannya sesuai dengan program studi pada Fakultas/Sekolah Tinggi dalam tiga tahun terakhir'),
             '_4_1_3'=>$this->text()->comment('Pandangan Fakultas/Sekolah Tinggi tentang data pada butir 4.1.1 dan 4.1.2, yang mencakup aspek: kecukupan, kualifikasi, dan pengembangan karir'),
             '_4_2'=>$this->text()->comment('Tenaga kependidikan'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -516,7 +516,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_5_1'=>$this->text()->comment('Kurikulum'),
             '_5_2'=>$this->text()->comment('Pembelajaran'),
             '_5_3'=>$this->text()->comment('Suasana Akademik'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -550,7 +550,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_6_4_2'=>$this->text()->comment('Aksesibilitas tiap jenis data'),
             '_6_4_3'=>$this->text()->comment('Upaya penyebaran informasi/kebijakan untuk sivitas akademika di Fakultas/ Sekolah Tinggi (misalnya melalui surat, faksimili, mailing list, e-mail,sms, buletin).'),
             '_6_4_4'=>$this->text()->comment('Rencana pengembangan sistem informasi jangka panjang dan upaya pencapaiannya. Uraikan pula kendala-kendala yang dihadapi.'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
@@ -580,7 +580,7 @@ class m190429_191120_init_mutu_database extends Migration
             '_7_3'=>$this->text()->comment('Kerjasama dengan Instansi Lain'),
             '_7_3_1'=>$this->text()->comment('Kerjasama dengan Instansi Lain'),
             '_7_3_2'=>$this->text()->comment('Instansi luar negeri yang menjalin kerjasama* dengan Fakultas/Sekolah Tinggi dalam tiga tahun terakhir.'),
-            'progress'=>$this->float(),
+            'progress'=>$this->float()->defaultValue(0),
             'created_at'=>$this->integer(),
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
