@@ -103,8 +103,9 @@ class SertifikatProdiController extends Controller
 
         if ($model->load(Yii::$app->request->post()) ) {
 
+//          ganti direktori ke folder upload Admin
             $file = UploadedFile::getInstance($model, 'sertifikat');
-            $path = Yii::getAlias('@uploadAkreditasi/sertifikat');
+            $path = Yii::getAlias('@uploadAdmin/sertifikat');
 
 //                FileHelper::createDirectory($path, $mode = 0777, $recursive = true);
 
