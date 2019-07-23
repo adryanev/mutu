@@ -247,7 +247,7 @@
             "dokumen":"Survei proses pembelajaran melalui umpan balik dari dosen, mahasiswa, alumni, dan pengguna lulusan  "
           },
           {
-            "kode": " 2.5-01-01-01",
+            "kode": " 2.5-01-01-02",
             "dokumen":"Dokumen Rencana Tindak Lanjut"
           }
         ],
@@ -351,7 +351,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "33.1.1.b-01-02-01   ",
+            "kode": "3.1.1.b-01-02-01   ",
             "dokumen": "Rekap mahasiswa per semester   "
           },
           {
@@ -416,19 +416,19 @@
             "dokumen": "Rekap jumlah per semester selama 5 thn terakhir:   "
           },
           {
-            "kode": "3.1.1.c-01-02-02",
+            "kode": "3.1.2.c-01-02-02",
             "dokumen": "Rekap  mahasiswa baru reguler per semester   "
           },
           {
-            "kode": "3.1.2-01-02-02",
+            "kode": "3.1.2-01-02-03",
             "dokumen": "Rekap jumlah mahasiswa baru reguler yang transfer ke Prodi,   "
           },
           {
-            "kode": "3.1.2-01-02-03",
+            "kode": "3.1.2-01-02-04",
             "dokumen": "Jumlah mahasiswa baru reguler yang transfer ke Prodi per semester    "
           },
           {
-            "kode": "3.1.1.c-01-02-05",
+            "kode": "3.1.2.c-01-02-05",
             "dokumen": "Rekap jumlah mahasiswa baru non reguler transfer ke Prodi   "
           }
         ]
@@ -703,7 +703,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.4.1-01-02-01",
+            "kode": "  3.4.2-01-02-01",
             "dokumen": "Foto kegiatan"
           }
         ]
