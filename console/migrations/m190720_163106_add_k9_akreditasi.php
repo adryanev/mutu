@@ -3,16 +3,18 @@
 use yii\db\Migration;
 
 /**
- * Class m190720_163106_add_tabel_lkps_s1
+ * Class m190720_163106_add_k9_akreditasi
  */
-class m190720_163106_add_k9akreditasi extends Migration
+class m190720_163106_add_k9_akreditasi extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
+        $this->createTable('{{%k9_akreditasi}}',[
 
+        ]);
 
     }
 
