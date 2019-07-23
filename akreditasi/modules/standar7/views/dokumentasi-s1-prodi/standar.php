@@ -139,6 +139,19 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <tr>
                                             <td></td>
                                             <td>
+
+                                                <?php
+                                                $format = 'tidak ada';
+                                                $ekstensi = explode('.',$item['dokumen']);
+                                                if ($ekstensi[1] == 'pdf'){
+                                                    $format = 'pdf.png';
+                                                }
+//                                                format lain ...
+                                                ?>
+
+                                                <div class="icon">
+                                                    <img src="<?=Yii::getAlias('@web/img/'.$format)?>" style="width: 50px;">
+                                                </div>
                                                 <?= $item['dokumen']; ?>
                                             </td>
                                             <td>
