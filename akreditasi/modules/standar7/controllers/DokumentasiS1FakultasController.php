@@ -20,6 +20,7 @@ use common\models\S7DokumentasiS1FakultasStandar6;
 use common\models\S7DokumentasiS1FakultasStandar7;
 // use common\models\DokumenDokumentasiS1Fakultas;
 use Yii;
+use yii\filters\AccessControl;
 use yii\helpers\FileHelper;
 use yii\helpers\Json;
 use yii\helpers\Url;

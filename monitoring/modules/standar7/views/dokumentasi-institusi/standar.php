@@ -14,6 +14,7 @@ use yii\web\View;
 /* @var $dokProdi S7DokumentasiInstitusi */
 /* @var $progress */
 /* @var $butir */
+/* @var $cari */
 /* @var $dokModel \akreditasi\models\S7DokumentasiInstitusiStandar1Form */
 $standar = $json['standar'];
 
