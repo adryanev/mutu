@@ -3,6 +3,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DetailBorangPascaFakultasStandar1;
 use common\models\S7DokumenBorangPascaFakultas;
 use Yii;
@@ -39,6 +40,8 @@ class DetailBorangPascaFakultasUploadForm extends Model
 
     public function uploadDokumen($id,$standar){
 
+        $timestamp = Carbon::now()->timestamp;
+
 
         if($this->validate()){
             $detailClass = 'common\\models\\S7DetailBorangPascaFakultasStandar'.$standar;
@@ -47,7 +50,7 @@ class DetailBorangPascaFakultasUploadForm extends Model
 //            $this->_detailBorangPascaFakultas = new S7DetailBorangPascaFakultasStandar1();
             $this->_detailBorangPascaFakultas->$detailAttrId = $id;
             $fileName = $this->dokumenPendukung->getBaseName().'.'.$this->dokumenPendukung->getExtension();
-            $this->_detailBorangPascaFakultas->nama_dokumen = $fileName;
+            $this->_detailBorangPascaFakultas->nama_dokumen = $timestamp.'-'.$fileName;
             $this->_detailBorangPascaFakultas->nomor_dokumen = $this->nomorDokumen;
             $borangAttr = 'borangPascaFakultasStandar'.$standar;
             $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_detailBorangPascaFakultas->$borangAttr->borangPascaFakultas->akreditasi->lembaga}/prodi/{$this->_detailBorangPascaFakultas->$borangAttr->borangPascaFakultas->akreditasi->tahun}/fakultas/{$this->_detailBorangPascaFakultas->$borangAttr->borangPascaFakultas->id_fakultas}/borang/dokumen");

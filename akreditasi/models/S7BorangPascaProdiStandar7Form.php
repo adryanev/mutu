@@ -13,7 +13,7 @@ class S7BorangPascaProdiStandar7Form extends S7BorangPascaProdiStandar7{
     public function beforeSave($insert)
     {
         $this->updateProgress();
-        $this->borangPascaProdi->updateProgress();
+        $this->borangPasca->updateProgress();
         return parent::beforeSave($insert);
     }
 
