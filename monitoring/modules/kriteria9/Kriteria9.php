@@ -1,19 +1,19 @@
 <?php
 
-namespace akreditasi\modules\standar9;
+namespace monitoring\modules\kriteria9;
 
 use Yii;
 use yii\web\ErrorHandler;
 
 /**
- * standar9 module definition class
+ * kriteria9 module definition class
  */
-class Standar9 extends \yii\base\Module
+class Kriteria9 extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'akreditasi\modules\standar9\controllers';
+    public $controllerNamespace = 'monitoring\modules\kriteria9\controllers';
 
     /**
      * {@inheritdoc}
@@ -25,7 +25,7 @@ class Standar9 extends \yii\base\Module
             'components' => [
                 'errorHandler' => [
                     'class' => ErrorHandler::className(),
-                    'errorAction' => '/standar9/default/error'
+                    'errorAction' => '/kriteria9/default/error'
                 ]
             ],
         ]);

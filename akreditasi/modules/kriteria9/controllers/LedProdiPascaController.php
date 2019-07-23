@@ -1,6 +1,6 @@
 <?php
 
-namespace akreditasi\modules\standar9\controllers;
+namespace akreditasi\modules\kriteria9\controllers;
 
 use common\models\S7DokumentasiInstitusi;
 use common\models\S7DokumentasiInstitusiStandar1;
@@ -16,7 +16,7 @@ use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
 use yii\web\UploadedFile;
 
-class LkProdiS1Controller extends \yii\web\Controller
+class LedProdiPascaController extends \yii\web\Controller
 {
     public function beforeAction($action)
     {
@@ -26,7 +26,7 @@ class LkProdiS1Controller extends \yii\web\Controller
 
     public function actionIsi($dokumentasi)
     {
-        $file_json = 'lkps_prodi_s1.json';
+        $file_json = 'led_prodi_s1.json';
 //        $dokumentasiProdi = S7DokumentasiInstitusi::findOne($dokumentasi);
 //
         $json = file_get_contents(Yii::getAlias('@common/required/standar9/'.$file_json));
@@ -39,6 +39,7 @@ class LkProdiS1Controller extends \yii\web\Controller
 //        $standar7 = S7DokumentasiInstitusiStandar7::find()->where(['id_dokumentasi_institusi'=>$dokumentasi])->one();
 
         $decode = Json::decode($json);
+
 
 //        $cekisi1 = S7DokumentasiInstitusiStandar1::find()->where(['id_dokumentasi_institusi'=>$dokumentasi])->count();
 //        $cekisi2 = S7DokumentasiInstitusiStandar2::find()->where(['id_dokumentasi_institusi'=>$dokumentasi])->count();
@@ -181,7 +182,7 @@ class LkProdiS1Controller extends \yii\web\Controller
 
     public function actionIsiStandar($standar, $dokumentasi){
 
-        $file_json = 'lkps_prodi_s1.json';
+        $file_json = 'led_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/standar9/'.$file_json));
 
 //        $dokProdi = S7DokumentasiInstitusi::findOne($dokumentasi);
@@ -327,7 +328,7 @@ class LkProdiS1Controller extends \yii\web\Controller
     }
 
     public function actionPj($dokumentasi){
-        $file_json = 'lkps_prodi_s1.json';
+        $file_json = 'led_prodi_s1.json';
         $dokumentasiProdi = S7DokumentasiInstitusi::findOne($dokumentasi);
 
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
@@ -357,7 +358,7 @@ class LkProdiS1Controller extends \yii\web\Controller
 
     public function actionPjStandar($standar, $dokumentasi){
 
-        $file_json = 'lkps_prodi_s1.json';
+        $file_json = 'led_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
 
         $dokProdi = S7DokumentasiInstitusi::findOne($dokumentasi);
@@ -392,7 +393,7 @@ class LkProdiS1Controller extends \yii\web\Controller
     }
 
     public function actionLihat($dokumentasi){
-        $file_json = 'lkps_prodi_s1.json';
+        $file_json = 'led_prodi_s1.json';
         $dokumentasiProdi = S7DokumentasiInstitusi::findOne($dokumentasi);
 
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
@@ -421,7 +422,7 @@ class LkProdiS1Controller extends \yii\web\Controller
     }
 
     public function actionLihatStandar($standar, $dokumentasi){
-        $file_json = 'lkps_prodi_s1.json';
+        $file_json = 'led_prodi_s1.json';
         $json = file_get_contents(Yii::getAlias('@common/required/dokumentasi/'.$file_json));
 
         $dokProdi = S7DokumentasiInstitusi::findOne($dokumentasi);

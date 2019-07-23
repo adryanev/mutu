@@ -16,6 +16,17 @@ class m190720_163106_add_k9_akreditasi extends Migration
 
         ]);
 
+        $this->createTable('{{%k9_akreditasi_prodi}}',[
+
+        ]);
+
+
+        $this->createTable('{{%k9_akreditasi_institusi}}',[
+
+        ]);
+
+
+
     }
 
     /**

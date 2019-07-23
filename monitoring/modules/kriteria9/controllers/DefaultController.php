@@ -1,6 +1,6 @@
 <?php
 
-namespace monitoring\modules\standar9\controllers;
+namespace monitoring\modules\kriteria9\controllers;
 
 use yii\web\Controller;
 

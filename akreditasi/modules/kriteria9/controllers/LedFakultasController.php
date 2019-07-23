@@ -1,6 +1,6 @@
 <?php
 
-namespace akreditasi\modules\standar9\controllers;
+namespace akreditasi\modules\kriteria9\controllers;
 
 use common\models\S7DokumentasiInstitusi;
 use common\models\S7DokumentasiInstitusiStandar1;
@@ -16,7 +16,7 @@ use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
 use yii\web\UploadedFile;
 
-class LedInstitusiController extends \yii\web\Controller
+class LedFakultasController extends \yii\web\Controller
 {
     public function beforeAction($action)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace akreditasi\modules\standar9\controllers;
+namespace akreditasi\modules\kriteria9\controllers;
 
 use yii\web\Controller;
 

@@ -12,7 +12,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
 -->
     <div class="logo">
         <?= Html::a(Html::img('@web/img/logo-iain.png',['alt'=>'logo iain','width'=>'100%']),['site/index'],['class'=>'simple-text logo-mini'])?>
-        <?= Html::a('IAIN Padangsidimpuan',['site/index'],['class'=>'simple-text logo-normal','style'=>['font-size'=>'15px']])?>
+        <?= Html::a(Yii::$app->params['instansi'],['site/index'],['class'=>'simple-text logo-normal','style'=>['font-size'=>'15px']])?>
     </div>
     <div class="sidebar-wrapper" >
         <div class="user">
@@ -42,7 +42,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
                 [
                     'label' => 'Borang 9 Kriteria',
                     'icon' => 'book',
-                    'url'=>['/standar9/default']
+                    'url'=>['/kriteria9/default']
                 ],
             ],
         ])?>
