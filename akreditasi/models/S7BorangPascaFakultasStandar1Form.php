@@ -14,7 +14,7 @@ class S7BorangPascaFakultasStandar1Form extends S7BorangPascaFakultasStandar1
     public function beforeSave($insert)
     {
         $this->updateProgress();
-        $this->borangPascaFakultas->updateProgress();
+        $this->borangPasca->updateProgress();
         return parent::beforeSave($insert);
     }
 

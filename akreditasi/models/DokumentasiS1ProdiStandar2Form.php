@@ -4,7 +4,8 @@
 namespace akreditasi\models;
 
 
-use common\models\DokumentasiS1ProdiStandar2;
+use Carbon\Carbon;
+use common\models\S7DokumentasiS1ProdiStandar2;
 
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
@@ -12,7 +13,7 @@ use yii\web\UploadedFile;
 use Yii;
 
 
-class DokumentasiS1ProdiStandar2Form extends DokumentasiS1ProdiStandar2
+class DokumentasiS1ProdiStandar2Form extends S7DokumentasiS1ProdiStandar2
 {
 
     /**
@@ -36,12 +37,13 @@ class DokumentasiS1ProdiStandar2Form extends DokumentasiS1ProdiStandar2
 
     public function uploadDokumen($id){
 
+        $timestamp = Carbon::now()->timestamp;
 
         if($this->validate()){
-            $this->_dokumenDokumentasi = new DokumentasiS1ProdiStandar2();
+            $this->_dokumenDokumentasi = new S7DokumentasiS1ProdiStandar2();
             $this->_dokumenDokumentasi->id_dokumentasi_s1_prodi = $id;
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
-            $this->_dokumenDokumentasi->dokumen = $fileName;
+            $this->_dokumenDokumentasi->dokumen = $timestamp .'-'. $fileName;
             $this->_dokumenDokumentasi->kode = $this->kodeDokumen;
             
             $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$this->_dokumenDokumentasi->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_dokumenDokumentasi->dokumentasiS1Prodi->akreditasiProdiS1->id_prodi}/prodi/dokumentasi");

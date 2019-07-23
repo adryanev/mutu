@@ -4,6 +4,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7BorangPascaFakultas;
 use common\models\S7GambarBorangPascaFakultas;
 use Yii;
@@ -34,11 +35,13 @@ class GambarBorangPascaFakultasUploadForm extends Model {
             $path = Yii::getAlias('@uploadAkreditasi/'."{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/{$borang->id_fakultas}/gambar");
 
             foreach ($this->gambar_borang as $gambar){
+                $timestamp = Carbon::now()->timestamp;
+
                 $model = new S7GambarBorangPascaFakultas();
-                $model->id_borang_s1_fakultas = $borang->id;
+                $model->id_borang_pasca_fakultas = $borang->id;
                 $model->nomor_borang = $this->nomor_borang;
                 $fileName = $gambar->getBaseName().'.'.$gambar->getExtension();
-                $model->nama_file = $fileName;
+                $model->nama_file = $timestamp .'-'.$fileName;
                 $gambar->saveAs("$path/$fileName");
                 $model->save(false);
             }
