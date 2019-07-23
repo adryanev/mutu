@@ -48,15 +48,15 @@ class m190520_042417_create_isian_borang extends Migration
         ],$tableOptions);
 
 
-        $this->addForeignKey('fk-isian_borang_s1_prodi-isian_borang', '{{%s7_isian_borang_s1_prodi}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id');
-        $this->addForeignKey('fk-isian_borang_s1_fakultas-isian_borang', '{{%s7_isian_borang_s1_fakultas}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_prodi-isian_borang', '{{%s7_isian_borang_s1_prodi}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-isian_borang_s1_fakultas-isian_borang', '{{%s7_isian_borang_s1_fakultas}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-isian_borang_s1_prodi-usr_crd', '{{%s7_isian_borang_s1_prodi}}', 'created_by', '{{%user}}', 'id');
-        $this->addForeignKey('fk-isian_borang_s1_prodi-usr_upd', '{{%s7_isian_borang_s1_prodi}}', 'updated_by', '{{%user}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_prodi-usr_crd', '{{%s7_isian_borang_s1_prodi}}', 'created_by', '{{%user}}', 'id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-isian_borang_s1_prodi-usr_upd', '{{%s7_isian_borang_s1_prodi}}', 'updated_by', '{{%user}}', 'id','CASCADE','CASCADE');
 
 
-        $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_crd', '{{%s7_isian_borang_s1_fakultas}}', 'created_by', '{{%user}}', 'id');
-        $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_upd', '{{%s7_isian_borang_s1_fakultas}}', 'updated_by', '{{%user}}', 'id');
+        $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_crd', '{{%s7_isian_borang_s1_fakultas}}', 'created_by', '{{%user}}', 'id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-isian_borang_s1_fakultas-usr_upd', '{{%s7_isian_borang_s1_fakultas}}', 'updated_by', '{{%user}}', 'id','CASCADE','CASCADE');
 
 
         $this->createIndex('idx-search-isian_borang', '{{%s7_isian_borang}}', ['nomor_borang', 'untuk']);

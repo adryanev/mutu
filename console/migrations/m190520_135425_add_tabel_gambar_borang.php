@@ -48,10 +48,10 @@ class m190520_135425_add_tabel_gambar_borang extends Migration
         ],$tableOptions);
 
         $this->createIndex('idx-search-gambar_borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}',['nomor_borang']);
-        $this->addForeignKey('fk-gambar_borang_s1_fakultas-borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%s7_borang_s1_fakultas}}','id');
+        $this->addForeignKey('fk-gambar_borang_s1_fakultas-borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%s7_borang_s1_fakultas}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_crd','{{%s7_gambar_borang_s1_fakultas}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_upd','{{%s7_gambar_borang_s1_fakultas}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_crd','{{%s7_gambar_borang_s1_fakultas}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_upd','{{%s7_gambar_borang_s1_fakultas}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
     }
 

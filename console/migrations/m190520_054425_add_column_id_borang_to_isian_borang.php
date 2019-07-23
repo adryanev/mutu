@@ -15,8 +15,8 @@ class m190520_054425_add_column_id_borang_to_isian_borang extends Migration
         $this->addColumn('{{%s7_isian_borang_s1_prodi}}','id_borang_s1_prodi',$this->integer());
         $this->addColumn('{{%s7_isian_borang_s1_fakultas}}','id_borang_s1_fakultas',$this->integer());
 
-        $this->addForeignKey('fk-isian_borang_s1_prodi-borang_s1_prodi','{{%s7_isian_borang_s1_prodi}}','id_borang_s1_prodi','{{%s7_borang_s1_prodi}}','id');
-        $this->addForeignKey('fk-isian_borang_s1_fakultas-borang_s1_fakultas','{{%s7_isian_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%s7_borang_s1_fakultas}}','id');
+        $this->addForeignKey('fk-isian_borang_s1_prodi-borang_s1_prodi','{{%s7_isian_borang_s1_prodi}}','id_borang_s1_prodi','{{%s7_borang_s1_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-isian_borang_s1_fakultas-borang_s1_fakultas','{{%s7_isian_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%s7_borang_s1_fakultas}}','id','CASCADE','CASCADE');
 
 
     }

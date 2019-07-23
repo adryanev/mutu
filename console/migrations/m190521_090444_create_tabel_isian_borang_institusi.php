@@ -27,10 +27,10 @@ class m190521_090444_create_tabel_isian_borang_institusi extends Migration
             'created_by' => $this->integer(),
             'updated_by' => $this->integer(),
         ],$tableOptions);
-        $this->addForeignKey('fk-isian_borang_institusi-isian_borang', '{{%s7_isian_borang_institusi}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id');
-        $this->addForeignKey('fk-isian_borang_institusi-borang_institusi', '{{%s7_isian_borang_institusi}}', 'id_borang_institusi', '{{%s7_borang_institusi}}', 'id');
-        $this->addForeignKey('fk-isian_borang_institusi-usr_crd', '{{%s7_isian_borang_institusi}}', 'created_by', '{{%user}}', 'id');
-        $this->addForeignKey('fk-isian_borang_institusi-usr_upd', '{{%s7_isian_borang_institusi}}', 'updated_by', '{{%user}}', 'id');
+        $this->addForeignKey('fk-isian_borang_institusi-isian_borang', '{{%s7_isian_borang_institusi}}', 'id_isian_borang', '{{%s7_isian_borang}}', 'id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-isian_borang_institusi-borang_institusi', '{{%s7_isian_borang_institusi}}', 'id_borang_institusi', '{{%s7_borang_institusi}}', 'id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-isian_borang_institusi-usr_crd', '{{%s7_isian_borang_institusi}}', 'created_by', '{{%user}}', 'id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-isian_borang_institusi-usr_upd', '{{%s7_isian_borang_institusi}}', 'updated_by', '{{%user}}', 'id','CASCADE','CASCADE');
     }
 
     /**

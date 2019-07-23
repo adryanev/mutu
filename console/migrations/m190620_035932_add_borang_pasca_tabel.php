@@ -28,7 +28,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_by' => $this->integer(),
         ],$tableOptions);
 
-        $this->addForeignKey('fk-s7_isian_borang_pasca_prodi-isian_borang','{{%s7_isian_borang_pasca_prodi}}','id_isian_borang','{{%s7_isian_borang}}','id');
+        $this->addForeignKey('fk-s7_isian_borang_pasca_prodi-isian_borang','{{%s7_isian_borang_pasca_prodi}}','id_isian_borang','{{%s7_isian_borang}}','id','CASCADE','CASCADE');
         $this->addForeignKey('fk-s7_isian_borang_pasca_prodi-usr_crd', '{{%s7_isian_borang_pasca_prodi}}', 'created_by', '{{%user}}', 'id');
         $this->addForeignKey('fk-s7_isian_borang_pasca_prodi-usr_upd', '{{%s7_isian_borang_pasca_prodi}}', 'updated_by', '{{%user}}', 'id');
 
@@ -42,7 +42,7 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
             'updated_by' => $this->integer(),
         ],$tableOptions);
 
-        $this->addForeignKey('fk-s7_isian_borang_pasca_fakultas-isian_borang','{{%s7_isian_borang_pasca_fakultas}}','id_isian_borang','{{%s7_isian_borang}}','id');
+        $this->addForeignKey('fk-s7_isian_borang_pasca_fakultas-isian_borang','{{%s7_isian_borang_pasca_fakultas}}','id_isian_borang','{{%s7_isian_borang}}','id','CASCADE','CASCADE');
         $this->addForeignKey('fk-s7_isian_borang_pasca_fakultas-usr_crd', '{{%s7_isian_borang_pasca_fakultas}}', 'created_by', '{{%user}}', 'id');
         $this->addForeignKey('fk-s7_isian_borang_pasca_fakultas-usr_upd', '{{%s7_isian_borang_pasca_fakultas}}', 'updated_by', '{{%user}}', 'id');
 
@@ -311,63 +311,63 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
 
         // foreign key borang pasca standar
 
-        $this->addForeignKey('fk-s7_dok_borang_pasca_prodi-s7_borang_pasca_prodi','{{%s7_dokumen_borang_pasca_prodi}}','id_borang_pasca_prodi','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-s7_dok_borang_pasca_prodi-usr_crt','{{%s7_dokumen_borang_pasca_prodi}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_dok_borang_pasca_prodi-usr_upd','{{%s7_dokumen_borang_pasca_prodi}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_dok_borang_pasca_prodi-s7_borang_pasca_prodi','{{%s7_dokumen_borang_pasca_prodi}}','id_borang_pasca_prodi','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_dok_borang_pasca_prodi-usr_crt','{{%s7_dokumen_borang_pasca_prodi}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_dok_borang_pasca_prodi-usr_upd','{{%s7_dokumen_borang_pasca_prodi}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
         $this->createIndex('idx-search-gambar_borang_pasca_prodi','{{%s7_gambar_borang_pasca_prodi}}',['nomor_borang'],$tableOptions);
-        $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi-s7_borang_pasca_prodi','{{%s7_gambar_borang_pasca_prodi}}','id_borang_pasca_prodi','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi_prodi-usr_crt','{{%s7_gambar_borang_pasca_prodi}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi_prodi-usr_upd','{{%s7_gambar_borang_pasca_prodi}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi-s7_borang_pasca_prodi','{{%s7_gambar_borang_pasca_prodi}}','id_borang_pasca_prodi','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi_prodi-usr_crt','{{%s7_gambar_borang_pasca_prodi}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_gambar_borang_pasca_prodi_prodi-usr_upd','{{%s7_gambar_borang_pasca_prodi}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar1-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar1}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std1-s7_borang_pasca_prodi_standar1','{{%s7_detail_borang_pasca_prodi_standar1}}','id_borang_pasca_prodi_standar1','{{%s7_borang_pasca_prodi_standar1}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar1-usr_crt','{{%s7_borang_pasca_prodi_standar1}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar1-usr_upd','{{%s7_borang_pasca_prodi_standar1}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std1-usr_crt','{{%s7_detail_borang_pasca_prodi_standar1}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std1-usr_upd','{{%s7_detail_borang_pasca_prodi_standar1}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar1-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar1}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std1-s7_borang_pasca_prodi_standar1','{{%s7_detail_borang_pasca_prodi_standar1}}','id_borang_pasca_prodi_standar1','{{%s7_borang_pasca_prodi_standar1}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar1-usr_crt','{{%s7_borang_pasca_prodi_standar1}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar1-usr_upd','{{%s7_borang_pasca_prodi_standar1}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std1-usr_crt','{{%s7_detail_borang_pasca_prodi_standar1}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std1-usr_upd','{{%s7_detail_borang_pasca_prodi_standar1}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar2-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar2}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std2-s7_borang_pasca_prodi_standar2','{{%s7_detail_borang_pasca_prodi_standar2}}','id_borang_pasca_prodi_standar2','{{%s7_borang_pasca_prodi_standar2}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar2-usr_crt','{{%s7_borang_pasca_prodi_standar2}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar2-usr_upd','{{%s7_borang_pasca_prodi_standar2}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std2-usr_crt','{{%s7_detail_borang_pasca_prodi_standar2}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std2-usr_upd','{{%s7_detail_borang_pasca_prodi_standar2}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar2-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar2}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std2-s7_borang_pasca_prodi_standar2','{{%s7_detail_borang_pasca_prodi_standar2}}','id_borang_pasca_prodi_standar2','{{%s7_borang_pasca_prodi_standar2}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar2-usr_crt','{{%s7_borang_pasca_prodi_standar2}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar2-usr_upd','{{%s7_borang_pasca_prodi_standar2}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std2-usr_crt','{{%s7_detail_borang_pasca_prodi_standar2}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std2-usr_upd','{{%s7_detail_borang_pasca_prodi_standar2}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar3-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar3}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std3-s7_borang_pasca_prodi_standar3','{{%s7_detail_borang_pasca_prodi_standar3}}','id_borang_pasca_prodi_standar3','{{%s7_borang_pasca_prodi_standar3}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar3-usr_crt','{{%s7_borang_pasca_prodi_standar3}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar3-usr_upd','{{%s7_borang_pasca_prodi_standar3}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std3-usr_crt','{{%s7_detail_borang_pasca_prodi_standar3}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std3-usr_upd','{{%s7_detail_borang_pasca_prodi_standar3}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar3-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar3}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std3-s7_borang_pasca_prodi_standar3','{{%s7_detail_borang_pasca_prodi_standar3}}','id_borang_pasca_prodi_standar3','{{%s7_borang_pasca_prodi_standar3}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar3-usr_crt','{{%s7_borang_pasca_prodi_standar3}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar3-usr_upd','{{%s7_borang_pasca_prodi_standar3}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std3-usr_crt','{{%s7_detail_borang_pasca_prodi_standar3}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std3-usr_upd','{{%s7_detail_borang_pasca_prodi_standar3}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar4-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar4}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std4-s7_borang_pasca_prodi_standar4','{{%s7_detail_borang_pasca_prodi_standar4}}','id_borang_pasca_prodi_standar4','{{%s7_borang_pasca_prodi_standar4}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar4-usr_crt','{{%s7_borang_pasca_prodi_standar4}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar4-usr_upd','{{%s7_borang_pasca_prodi_standar4}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std4-usr_crt','{{%s7_detail_borang_pasca_prodi_standar4}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std4-usr_upd','{{%s7_detail_borang_pasca_prodi_standar4}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar4-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar4}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std4-s7_borang_pasca_prodi_standar4','{{%s7_detail_borang_pasca_prodi_standar4}}','id_borang_pasca_prodi_standar4','{{%s7_borang_pasca_prodi_standar4}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar4-usr_crt','{{%s7_borang_pasca_prodi_standar4}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar4-usr_upd','{{%s7_borang_pasca_prodi_standar4}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std4-usr_crt','{{%s7_detail_borang_pasca_prodi_standar4}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std4-usr_upd','{{%s7_detail_borang_pasca_prodi_standar4}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar5-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar5}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std5-s7_borang_pasca_prodi_standar5','{{%s7_detail_borang_pasca_prodi_standar5}}','id_borang_pasca_prodi_standar5','{{%s7_borang_pasca_prodi_standar5}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar5-usr_crt','{{%s7_borang_pasca_prodi_standar5}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar5-usr_upd','{{%s7_borang_pasca_prodi_standar5}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std5-usr_crt','{{%s7_detail_borang_pasca_prodi_standar5}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std5-usr_upd','{{%s7_detail_borang_pasca_prodi_standar5}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar5-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar5}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std5-s7_borang_pasca_prodi_standar5','{{%s7_detail_borang_pasca_prodi_standar5}}','id_borang_pasca_prodi_standar5','{{%s7_borang_pasca_prodi_standar5}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar5-usr_crt','{{%s7_borang_pasca_prodi_standar5}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar5-usr_upd','{{%s7_borang_pasca_prodi_standar5}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std5-usr_crt','{{%s7_detail_borang_pasca_prodi_standar5}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std5-usr_upd','{{%s7_detail_borang_pasca_prodi_standar5}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar6-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar6}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std6-s7_borang_pasca_prodi_standar6','{{%s7_detail_borang_pasca_prodi_standar6}}','id_borang_pasca_prodi_standar6','{{%s7_borang_pasca_prodi_standar6}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar6-usr_crt','{{%s7_borang_pasca_prodi_standar6}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar6-usr_upd','{{%s7_borang_pasca_prodi_standar6}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std6-usr_crt','{{%s7_detail_borang_pasca_prodi_standar6}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std6-usr_upd','{{%s7_detail_borang_pasca_prodi_standar6}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar6-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar6}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std6-s7_borang_pasca_prodi_standar6','{{%s7_detail_borang_pasca_prodi_standar6}}','id_borang_pasca_prodi_standar6','{{%s7_borang_pasca_prodi_standar6}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar6-usr_crt','{{%s7_borang_pasca_prodi_standar6}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar6-usr_upd','{{%s7_borang_pasca_prodi_standar6}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std6-usr_crt','{{%s7_detail_borang_pasca_prodi_standar6}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std6-usr_upd','{{%s7_detail_borang_pasca_prodi_standar6}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar7-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar7}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std7-s7_borang_pasca_prodi_standar7','{{%s7_detail_borang_pasca_prodi_standar7}}','id_borang_pasca_prodi_standar7','{{%s7_borang_pasca_prodi_standar7}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar7-usr_crt','{{%s7_borang_pasca_prodi_standar7}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar7-usr_upd','{{%s7_borang_pasca_prodi_standar7}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std7-usr_crt','{{%s7_detail_borang_pasca_prodi_standar7}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_prodi_std7-usr_upd','{{%s7_detail_borang_pasca_prodi_standar7}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar7-s7_borang_pasca_prodi','{{%s7_borang_pasca_prodi_standar7}}','id_borang_pasca','{{%s7_borang_pasca_prodi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std7-s7_borang_pasca_prodi_standar7','{{%s7_detail_borang_pasca_prodi_standar7}}','id_borang_pasca_prodi_standar7','{{%s7_borang_pasca_prodi_standar7}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar7-usr_crt','{{%s7_borang_pasca_prodi_standar7}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_prodi_standar7-usr_upd','{{%s7_borang_pasca_prodi_standar7}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std7-usr_crt','{{%s7_detail_borang_pasca_prodi_standar7}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_prodi_std7-usr_upd','{{%s7_detail_borang_pasca_prodi_standar7}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
 //        borang pasca fakultas
         $this->createTable('{{%s7_dokumen_borang_pasca_fakultas}}',[
@@ -582,63 +582,63 @@ class m190620_035932_add_borang_pasca_tabel extends Migration
 
         // foreign key borang pasca standar
 
-        $this->addForeignKey('fk-s7_dok_borang_pasca_fakultas-s7_borang_pasca_fakultas','{{%s7_dokumen_borang_pasca_fakultas}}','id_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-s7_dok_borang_pasca_fakultas-usr_crt','{{%s7_dokumen_borang_pasca_fakultas}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_dok_borang_pasca_fakultas-usr_upd','{{%s7_dokumen_borang_pasca_fakultas}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_dok_borang_pasca_fakultas-s7_borang_pasca_fakultas','{{%s7_dokumen_borang_pasca_fakultas}}','id_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_dok_borang_pasca_fakultas-usr_crt','{{%s7_dokumen_borang_pasca_fakultas}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_dok_borang_pasca_fakultas-usr_upd','{{%s7_dokumen_borang_pasca_fakultas}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
         $this->createIndex('idx-search-gambar_borang_pasca_fakultas','{{%s7_gambar_borang_pasca_fakultas}}',['nomor_borang']);
-        $this->addForeignKey('fk-s7_gambar_borang_pasca_fakultas-s7_borang_pasca_fakultas','{{%s7_gambar_borang_pasca_fakultas}}','id_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-s7_gambar_borang_pasca_fakultas_prodi-usr_crt','{{%s7_gambar_borang_pasca_fakultas}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_gambar_borang_pasca_fakultas_prodi-usr_upd','{{%s7_gambar_borang_pasca_fakultas}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_gambar_borang_pasca_fakultas-s7_borang_pasca_fakultas','{{%s7_gambar_borang_pasca_fakultas}}','id_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_gambar_borang_pasca_fakultas_prodi-usr_crt','{{%s7_gambar_borang_pasca_fakultas}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_gambar_borang_pasca_fakultas_prodi-usr_upd','{{%s7_gambar_borang_pasca_fakultas}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar1-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar1}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar1-s7_borang_pasca_fakultas_standar1','{{%s7_detail_borang_pasca_fakultas_standar1}}','id_borang_pasca_fakultas_standar1','{{%s7_borang_pasca_fakultas_standar1}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar1-usr_crt','{{%s7_borang_pasca_fakultas_standar1}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar1-usr_upd','{{%s7_borang_pasca_fakultas_standar1}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar1-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar1}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar1-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar1}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar1-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar1}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar1-s7_borang_pasca_fakultas_standar1','{{%s7_detail_borang_pasca_fakultas_standar1}}','id_borang_pasca_fakultas_standar1','{{%s7_borang_pasca_fakultas_standar1}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar1-usr_crt','{{%s7_borang_pasca_fakultas_standar1}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar1-usr_upd','{{%s7_borang_pasca_fakultas_standar1}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar1-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar1}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar1-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar1}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar2-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar2}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar2-s7_borang_pasca_fakultas_standar2','{{%s7_detail_borang_pasca_fakultas_standar2}}','id_borang_pasca_fakultas_standar2','{{%s7_borang_pasca_fakultas_standar2}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar2-usr_crt','{{%s7_borang_pasca_fakultas_standar2}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar2-usr_upd','{{%s7_borang_pasca_fakultas_standar2}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar2-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar2}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar2-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar2}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar2-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar2}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar2-s7_borang_pasca_fakultas_standar2','{{%s7_detail_borang_pasca_fakultas_standar2}}','id_borang_pasca_fakultas_standar2','{{%s7_borang_pasca_fakultas_standar2}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar2-usr_crt','{{%s7_borang_pasca_fakultas_standar2}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar2-usr_upd','{{%s7_borang_pasca_fakultas_standar2}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar2-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar2}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar2-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar2}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar3-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar3}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar3-s7_borang_pasca_fakultas_standar3','{{%s7_detail_borang_pasca_fakultas_standar3}}','id_borang_pasca_fakultas_standar3','{{%s7_borang_pasca_fakultas_standar3}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar3-usr_crt','{{%s7_borang_pasca_fakultas_standar3}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar3-usr_upd','{{%s7_borang_pasca_fakultas_standar3}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar3-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar3}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar3-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar3}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar3-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar3}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar3-s7_borang_pasca_fakultas_standar3','{{%s7_detail_borang_pasca_fakultas_standar3}}','id_borang_pasca_fakultas_standar3','{{%s7_borang_pasca_fakultas_standar3}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar3-usr_crt','{{%s7_borang_pasca_fakultas_standar3}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar3-usr_upd','{{%s7_borang_pasca_fakultas_standar3}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar3-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar3}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar3-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar3}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar4-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar4}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar4-s7_borang_pasca_fakultas_standar4','{{%s7_detail_borang_pasca_fakultas_standar4}}','id_borang_pasca_fakultas_standar4','{{%s7_borang_pasca_fakultas_standar4}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar4-usr_crt','{{%s7_borang_pasca_fakultas_standar4}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar4-usr_upd','{{%s7_borang_pasca_fakultas_standar4}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar4-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar4}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar4-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar4}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar4-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar4}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar4-s7_borang_pasca_fakultas_standar4','{{%s7_detail_borang_pasca_fakultas_standar4}}','id_borang_pasca_fakultas_standar4','{{%s7_borang_pasca_fakultas_standar4}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar4-usr_crt','{{%s7_borang_pasca_fakultas_standar4}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar4-usr_upd','{{%s7_borang_pasca_fakultas_standar4}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar4-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar4}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar4-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar4}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar5-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar5}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar5-s7_borang_pasca_fakultas_standar5','{{%s7_detail_borang_pasca_fakultas_standar5}}','id_borang_pasca_fakultas_standar5','{{%s7_borang_pasca_fakultas_standar5}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar5-usr_crt','{{%s7_borang_pasca_fakultas_standar5}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar5-usr_upd','{{%s7_borang_pasca_fakultas_standar5}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar5-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar5}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar5-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar5}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar5-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar5}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar5-s7_borang_pasca_fakultas_standar5','{{%s7_detail_borang_pasca_fakultas_standar5}}','id_borang_pasca_fakultas_standar5','{{%s7_borang_pasca_fakultas_standar5}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar5-usr_crt','{{%s7_borang_pasca_fakultas_standar5}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar5-usr_upd','{{%s7_borang_pasca_fakultas_standar5}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar5-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar5}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar5-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar5}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar6-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar6}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar6-s7_borang_pasca_fakultas_standar6','{{%s7_detail_borang_pasca_fakultas_standar6}}','id_borang_pasca_fakultas_standar6','{{%s7_borang_pasca_fakultas_standar6}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar6-usr_crt','{{%s7_borang_pasca_fakultas_standar6}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar6-usr_upd','{{%s7_borang_pasca_fakultas_standar6}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar6-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar6}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar6-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar6}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar6-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar6}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar6-s7_borang_pasca_fakultas_standar6','{{%s7_detail_borang_pasca_fakultas_standar6}}','id_borang_pasca_fakultas_standar6','{{%s7_borang_pasca_fakultas_standar6}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar6-usr_crt','{{%s7_borang_pasca_fakultas_standar6}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar6-usr_upd','{{%s7_borang_pasca_fakultas_standar6}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar6-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar6}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar6-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar6}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar7-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar7}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar7-s7_borang_pasca_fakultas_standar7','{{%s7_detail_borang_pasca_fakultas_standar7}}','id_borang_pasca_fakultas_standar7','{{%s7_borang_pasca_fakultas_standar7}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar7-usr_crt','{{%s7_borang_pasca_fakultas_standar7}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar7-usr_upd','{{%s7_borang_pasca_fakultas_standar7}}','updated_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar7-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar7}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-dbrg_pc_fakultas_standar7-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar7}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar7-s7_borang_pasca_fakultas','{{%s7_borang_pasca_fakultas_standar7}}','id_borang_pasca','{{%s7_borang_pasca_fakultas}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar7-s7_borang_pasca_fakultas_standar7','{{%s7_detail_borang_pasca_fakultas_standar7}}','id_borang_pasca_fakultas_standar7','{{%s7_borang_pasca_fakultas_standar7}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar7-usr_crt','{{%s7_borang_pasca_fakultas_standar7}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_borang_pasca_fakultas_standar7-usr_upd','{{%s7_borang_pasca_fakultas_standar7}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar7-usr_crt','{{%s7_detail_borang_pasca_fakultas_standar7}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dbrg_pc_fakultas_standar7-usr_upd','{{%s7_detail_borang_pasca_fakultas_standar7}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
     }
 

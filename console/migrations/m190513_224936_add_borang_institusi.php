@@ -294,60 +294,60 @@ class m190513_224936_add_borang_institusi extends Migration
         ],$tableOptions);
         
         // relasi borang, dokumen dan user crt upd
-        $this->addForeignKey('fk-borang_institusi-akreditasi_institusi','{{%s7_borang_institusi}}','id_akreditasi_institusi', '{{%s7_akreditasi_institusi}}','id');
-        $this->addForeignKey('fk-dokumen_borang_institusi-borang_institusi','{{%s7_dokumen_borang_institusi}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
-        $this->addForeignKey('fk-dokumen_borang_institusi-user_crt','{{%s7_dokumen_borang_institusi}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-dokumen_borang_institusi-user_upd','{{%s7_dokumen_borang_institusi}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi-akreditasi_institusi','{{%s7_borang_institusi}}','id_akreditasi_institusi', '{{%s7_akreditasi_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dokumen_borang_institusi-borang_institusi','{{%s7_dokumen_borang_institusi}}','id_borang_institusi', '{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dokumen_borang_institusi-user_crt','{{%s7_dokumen_borang_institusi}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-dokumen_borang_institusi-user_upd','{{%s7_dokumen_borang_institusi}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
         
         // relasi standar, detail dan user crt upd
-        $this->addForeignKey('fk-borang_institusi_standar1-borang_institusi','{{%s7_borang_institusi_standar1}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar1-borang_institusi_standar1','{{%s7_detail_borang_institusi_standar1}}','id_borang_institusi_standar1', '{{%s7_borang_institusi_standar1}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar1-user_crt','{{%s7_borang_institusi_standar1}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar1-user_upd','{{%s7_borang_institusi_standar1}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar1-user_crt','{{%s7_detail_borang_institusi_standar1}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar1-user_upd','{{%s7_detail_borang_institusi_standar1}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar1-borang_institusi','{{%s7_borang_institusi_standar1}}','id_borang_institusi', '{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-detail_borang_institusi_standar1-borang_institusi_standar1','{{%s7_detail_borang_institusi_standar1}}','id_borang_institusi_standar1', '{{%s7_borang_institusi_standar1}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar1-user_crt','{{%s7_borang_institusi_standar1}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar1-user_upd','{{%s7_borang_institusi_standar1}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar1-user_crt','{{%s7_detail_borang_institusi_standar1}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar1-user_upd','{{%s7_detail_borang_institusi_standar1}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
         
-        $this->addForeignKey('fk-borang_institusi_standar2-borang_institusi','{{%s7_borang_institusi_standar2}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar2-borang_institusi_standar2','{{%s7_detail_borang_institusi_standar2}}','id_borang_institusi_standar2', '{{%s7_borang_institusi_standar2}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar2-user_crt','{{%s7_borang_institusi_standar2}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar2-user_upd','{{%s7_borang_institusi_standar2}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar2-user_crt','{{%s7_detail_borang_institusi_standar2}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar2-user_upd','{{%s7_detail_borang_institusi_standar2}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar2-borang_institusi','{{%s7_borang_institusi_standar2}}','id_borang_institusi', '{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-detail_borang_institusi_standar2-borang_institusi_standar2','{{%s7_detail_borang_institusi_standar2}}','id_borang_institusi_standar2', '{{%s7_borang_institusi_standar2}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar2-user_crt','{{%s7_borang_institusi_standar2}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar2-user_upd','{{%s7_borang_institusi_standar2}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar2-user_crt','{{%s7_detail_borang_institusi_standar2}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar2-user_upd','{{%s7_detail_borang_institusi_standar2}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
         
-        $this->addForeignKey('fk-borang_institusi_standar3-borang_institusi','{{%s7_borang_institusi_standar3}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar3-borang_institusi_standar3','{{%s7_detail_borang_institusi_standar3}}','id_borang_institusi_standar3', '{{%s7_borang_institusi_standar3}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar3-user_crt','{{%s7_borang_institusi_standar3}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar3-user_upd','{{%s7_borang_institusi_standar3}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar3-user_crt','{{%s7_detail_borang_institusi_standar3}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar3-user_upd','{{%s7_detail_borang_institusi_standar3}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar3-borang_institusi','{{%s7_borang_institusi_standar3}}','id_borang_institusi', '{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-detail_borang_institusi_standar3-borang_institusi_standar3','{{%s7_detail_borang_institusi_standar3}}','id_borang_institusi_standar3', '{{%s7_borang_institusi_standar3}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar3-user_crt','{{%s7_borang_institusi_standar3}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar3-user_upd','{{%s7_borang_institusi_standar3}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar3-user_crt','{{%s7_detail_borang_institusi_standar3}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar3-user_upd','{{%s7_detail_borang_institusi_standar3}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
         
-        $this->addForeignKey('fk-borang_institusi_standar4-borang_institusi','{{%s7_borang_institusi_standar4}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar4-borang_institusi_standar4','{{%s7_detail_borang_institusi_standar4}}','id_borang_institusi_standar4', '{{%s7_borang_institusi_standar4}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar4-user_crt','{{%s7_borang_institusi_standar4}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar4-user_upd','{{%s7_borang_institusi_standar4}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar4-user_crt','{{%s7_detail_borang_institusi_standar4}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar4-user_upd','{{%s7_detail_borang_institusi_standar4}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar4-borang_institusi','{{%s7_borang_institusi_standar4}}','id_borang_institusi', '{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-detail_borang_institusi_standar4-borang_institusi_standar4','{{%s7_detail_borang_institusi_standar4}}','id_borang_institusi_standar4', '{{%s7_borang_institusi_standar4}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar4-user_crt','{{%s7_borang_institusi_standar4}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar4-user_upd','{{%s7_borang_institusi_standar4}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar4-user_crt','{{%s7_detail_borang_institusi_standar4}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar4-user_upd','{{%s7_detail_borang_institusi_standar4}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
         
-        $this->addForeignKey('fk-borang_institusi_standar5-borang_institusi','{{%s7_borang_institusi_standar5}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar5-borang_institusi_standar5','{{%s7_detail_borang_institusi_standar5}}','id_borang_institusi_standar5', '{{%s7_borang_institusi_standar5}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar5-user_crt','{{%s7_borang_institusi_standar5}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar5-user_upd','{{%s7_borang_institusi_standar5}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar5-user_crt','{{%s7_detail_borang_institusi_standar5}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar5-user_upd','{{%s7_detail_borang_institusi_standar5}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar5-borang_institusi','{{%s7_borang_institusi_standar5}}','id_borang_institusi', '{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-detail_borang_institusi_standar5-borang_institusi_standar5','{{%s7_detail_borang_institusi_standar5}}','id_borang_institusi_standar5', '{{%s7_borang_institusi_standar5}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar5-user_crt','{{%s7_borang_institusi_standar5}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar5-user_upd','{{%s7_borang_institusi_standar5}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar5-user_crt','{{%s7_detail_borang_institusi_standar5}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar5-user_upd','{{%s7_detail_borang_institusi_standar5}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
         
-        $this->addForeignKey('fk-borang_institusi_standar6-borang_institusi','{{%s7_borang_institusi_standar6}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar6-borang_institusi_standar6','{{%s7_detail_borang_institusi_standar6}}','id_borang_institusi_standar6', '{{%s7_borang_institusi_standar6}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar6-user_crt','{{%s7_borang_institusi_standar6}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar6-user_upd','{{%s7_borang_institusi_standar6}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar6-user_crt','{{%s7_detail_borang_institusi_standar6}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar6-user_upd','{{%s7_detail_borang_institusi_standar6}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar6-borang_institusi','{{%s7_borang_institusi_standar6}}','id_borang_institusi', '{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-detail_borang_institusi_standar6-borang_institusi_standar6','{{%s7_detail_borang_institusi_standar6}}','id_borang_institusi_standar6', '{{%s7_borang_institusi_standar6}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar6-user_crt','{{%s7_borang_institusi_standar6}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar6-user_upd','{{%s7_borang_institusi_standar6}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar6-user_crt','{{%s7_detail_borang_institusi_standar6}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar6-user_upd','{{%s7_detail_borang_institusi_standar6}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
         
-        $this->addForeignKey('fk-borang_institusi_standar7-borang_institusi','{{%s7_borang_institusi_standar7}}','id_borang_institusi', '{{%s7_borang_institusi}}','id');
-        $this->addForeignKey('fk-detail_borang_institusi_standar7-borang_institusi_standar7','{{%s7_detail_borang_institusi_standar7}}','id_borang_institusi_standar7', '{{%s7_borang_institusi_standar7}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar7-user_crt','{{%s7_borang_institusi_standar7}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-borang_institusi_standar7-user_upd','{{%s7_borang_institusi_standar7}}','updated_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar7-user_crt','{{%s7_detail_borang_institusi_standar7}}','created_by', '{{%user}}','id');
-        $this->addForeignKey('fk-d_borang_institusi_standar7-user_upd','{{%s7_detail_borang_institusi_standar7}}','updated_by', '{{%user}}','id');
+        $this->addForeignKey('fk-borang_institusi_standar7-borang_institusi','{{%s7_borang_institusi_standar7}}','id_borang_institusi', '{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-detail_borang_institusi_standar7-borang_institusi_standar7','{{%s7_detail_borang_institusi_standar7}}','id_borang_institusi_standar7', '{{%s7_borang_institusi_standar7}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar7-user_crt','{{%s7_borang_institusi_standar7}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-borang_institusi_standar7-user_upd','{{%s7_borang_institusi_standar7}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar7-user_crt','{{%s7_detail_borang_institusi_standar7}}','created_by', '{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-d_borang_institusi_standar7-user_upd','{{%s7_detail_borang_institusi_standar7}}','updated_by', '{{%user}}','id','CASCADE','CASCADE');
 
     }
 

@@ -63,7 +63,7 @@ class m190620_183205_add_sertifikat_tabel extends Migration
             'updated_by'=>$this->integer()
         ],$tableOptions);
 
-        $this->addForeignKey('fk-sertifikat_prodi-prodi','{{%sertifikat_prodi}}','id_prodi','{{%program_studi}}','id');
+        $this->addForeignKey('fk-sertifikat_prodi-prodi','{{%sertifikat_prodi}}','id_prodi','{{%program_studi}}','id','CASCADE','CASCADE');
     }
 
     /**

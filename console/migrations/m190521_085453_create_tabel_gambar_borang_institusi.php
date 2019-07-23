@@ -29,10 +29,10 @@ class m190521_085453_create_tabel_gambar_borang_institusi extends Migration
         ],$tableOptions);
 
         $this->createIndex('idx-search-gambar_borang_institusi','{{%s7_gambar_borang_institusi}}',['nomor_borang']);
-        $this->addForeignKey('fk-gambar_borang_institusi-borang_institusi','{{%s7_gambar_borang_institusi}}','id_borang_institusi','{{%s7_borang_institusi}}','id');
+        $this->addForeignKey('fk-gambar_borang_institusi-borang_institusi','{{%s7_gambar_borang_institusi}}','id_borang_institusi','{{%s7_borang_institusi}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-gambar_borang_institusi-usr_crd','{{%s7_gambar_borang_institusi}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-gambar_borang_institusi-usr_upd','{{%s7_gambar_borang_institusi}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-gambar_borang_institusi-usr_crd','{{%s7_gambar_borang_institusi}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-gambar_borang_institusi-usr_upd','{{%s7_gambar_borang_institusi}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
 
     }

@@ -148,18 +148,18 @@ class m190617_094927_led_std_7 extends Migration
             'updated_by'=>$this->integer()
         ],$tableOptions);
         //fk s1
-        $this->addForeignKey('fk-s7_led_prodi_s1-s7_akred_prodi_s1','{{%s7_led_prodi_s1}}','id_akreditasi_prodi_s1','{{%s7_akreditasi_prodi_s1}}','id');
+        $this->addForeignKey('fk-s7_led_prodi_s1-s7_akred_prodi_s1','{{%s7_led_prodi_s1}}','id_akreditasi_prodi_s1','{{%s7_akreditasi_prodi_s1}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_led_prodi_s1_det-s7_led_prodi_s1','{{%s7_led_prodi_s1_detail}}','id_led_prodi_s1','{{%s7_led_prodi_s1}}','id');
-        $this->addForeignKey('fk-s7_led_prodi_s1_det-usr_crd','{{%s7_led_prodi_s1_detail}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_led_prodi_s1_det-usr_upd','{{%s7_led_prodi_s1_detail}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_led_prodi_s1_det-s7_led_prodi_s1','{{%s7_led_prodi_s1_detail}}','id_led_prodi_s1','{{%s7_led_prodi_s1}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_led_prodi_s1_det-usr_crd','{{%s7_led_prodi_s1_detail}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_led_prodi_s1_det-usr_upd','{{%s7_led_prodi_s1_detail}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
         //fk pasca
-        $this->addForeignKey('fk-s7_led_prodi_pasca-s7_akred_prodi_pasca','{{%s7_led_prodi_pasca}}','id_akreditasi_prodi_pasca','{{%s7_akreditasi_prodi_pasca}}','id');
+        $this->addForeignKey('fk-s7_led_prodi_pasca-s7_akred_prodi_pasca','{{%s7_led_prodi_pasca}}','id_akreditasi_prodi_pasca','{{%s7_akreditasi_prodi_pasca}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-s7_led_prodi_pasca_s7_led_prodi_pasca','{{%s7_led_prodi_pasca_detail}}','created_by','{{%s7_led_prodi_pasca}}','id');
-        $this->addForeignKey('fk-s7_led_prodi_pasca_det-usr_crd','{{%s7_led_prodi_pasca_detail}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-s7_led_prodi_pasca_det-usr_upd','{{%s7_led_prodi_pasca_detail}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-s7_led_prodi_pasca_s7_led_prodi_pasca','{{%s7_led_prodi_pasca_detail}}','created_by','{{%s7_led_prodi_pasca}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_led_prodi_pasca_det-usr_crd','{{%s7_led_prodi_pasca_detail}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-s7_led_prodi_pasca_det-usr_upd','{{%s7_led_prodi_pasca_detail}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
     }
 
