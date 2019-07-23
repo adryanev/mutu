@@ -26,20 +26,20 @@ $this->title = 'Sistem Informasi Berbasis Akreditasi IAIN Padangsidimpuan';
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="row">
 
-                                <div class="col-md-12 ">
+                                <div class="col-md-10 col-md-offset-1">
                                     <div class="card">
 
                                         <div class="card-content">
 
                                             <div class="progress" style="height: 30px;">
                                                 <div class="progress-bar progress-bar-rose progress-bar-striped" style="width: 35%">
-                                                    <strong>35 %</strong>
+                                                    <strong>35 % (A)</strong>
                                                 </div>
                                                 <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 20%">
-                                                    <strong>20 %</strong>
+                                                    <strong>20 % (B)</strong>
                                                 </div>
                                                 <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 10%">
-                                                    <strong>10 %</strong>
+                                                    <strong>10 % (C)</strong>
                                                 </div>
                                             </div>
                                         </div>
@@ -53,7 +53,7 @@ $this->title = 'Sistem Informasi Berbasis Akreditasi IAIN Padangsidimpuan';
 
 
 
-                                <div class="col-md-12 table-responsive ">
+                                <div class="col-md-10 col-md-offset-1 table-responsive ">
                                     <table class="table table-hover">
                                         <thead class="text-primary" data-background-color="green">
                                         <tr>

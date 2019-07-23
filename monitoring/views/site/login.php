@@ -21,7 +21,7 @@ $this->title = 'Login';
                 <div class="card card-login card-hidden">
                     <div class="card-header text-center" data-background-color="green">
                         <h4 class="card-title">Selamat Datang</h4>
-                        <p class="category">Sistem Mutu IAIN Padangsidimpuan</p>
+                        <p class="category"><?=\yii\helpers\Inflector::camel2words(Yii::$app->name) . ' '. Yii::$app->params['instansi']?></p>
 
                     </div>
                     <!-- <p class="category text-center">

@@ -10,6 +10,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DetailBorangS1ProdiStandar1;
 use common\models\S7DokumenBorangS1Prodi;
 use Yii;
@@ -46,6 +47,7 @@ class DetailBorangS1ProdiUploadForm extends Model
 
     public function uploadDokumen($id,$standar){
 
+        $timestamp = Carbon::now()->timestamp;
 
         if($this->validate()){
             $detailClass = 'common\\models\\S7DetailBorangS1ProdiStandar'.$standar;
@@ -54,7 +56,7 @@ class DetailBorangS1ProdiUploadForm extends Model
 //            $this->_detailBorangS1Prodi = new S7DetailBorangS1ProdiStandar1();
             $this->_detailBorangS1Prodi->$detailAttrId = $id;
             $fileName = $this->dokumenPendukung->getBaseName().'.'.$this->dokumenPendukung->getExtension();
-            $this->_detailBorangS1Prodi->nama_dokumen = $fileName;
+            $this->_detailBorangS1Prodi->nama_dokumen = $timestamp.'-'.$fileName;
             $this->_detailBorangS1Prodi->nomor_dokumen = $this->nomorDokumen;
             $borangAttr = 'borangS1ProdiStandar'.$standar;
             $path = Yii::getAlias('@uploadAkreditasi'. "/{$this->_detailBorangS1Prodi->$borangAttr->borangS1Prodi->akreditasiProdiS1->akreditasi->lembaga}/prodi/{$this->_detailBorangS1Prodi->$borangAttr->borangS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_detailBorangS1Prodi->$borangAttr->borangS1Prodi->akreditasiProdiS1->id_prodi}/prodi/borang/dokumen");

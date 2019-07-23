@@ -12,7 +12,7 @@ Tip 3: you can change the color of the sidebar with data-background-color="white
 -->
     <div class="logo">
         <?= Html::a(Html::img('@web/img/logo-iain.png',['alt'=>'logo iain','width'=>'100%']),['site/index'],['class'=>'simple-text logo-mini'])?>
-        <?= Html::a('IAIN Padangsidimpuan',['default/index'],['class'=>'simple-text logo-normal','style'=>['font-size'=>'15px']])?>
+        <?= Html::a(Yii::$app->params['instansi'],['default/index'],['class'=>'simple-text logo-normal','style'=>['font-size'=>'15px']])?>
     </div>
     <div class="sidebar-wrapper" >
 

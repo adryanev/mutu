@@ -31,7 +31,7 @@ $this->registerJs($js, View::POS_READY);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <title>Sistem Informasi Berbasis Akreditasi IAIN Padangsidimpuan</title>
+    <title><?=Yii::$app->name . ' '. Yii::$app->params['instansi']?></title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +51,7 @@ $this->registerJs($js, View::POS_READY);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a  href="#" style="text-decoration:none;color:white;font-size:16px;letter-spacing:1px;"><img src="<?=Yii::getAlias('@web/img/logo-iain.png')?>" width="70">&nbsp;&nbsp;IAIN Padangsidimpuan</a>
+            <a  href="#" style="text-decoration:none;color:white;font-size:16px;letter-spacing:1px;"><img src="<?=Yii::getAlias('@web/img/logo-iain.png')?>" width="70">&nbsp;&nbsp;<?=Yii::$app->params['instansi']?></a>
         </div>
     </div>
 </nav>
@@ -65,7 +65,7 @@ $this->registerJs($js, View::POS_READY);
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-IAIN Padangsidimpuan                </p>
+<?=Yii::$app->params['instansi']?>                </p>
             </div>
         </footer>
     </div>

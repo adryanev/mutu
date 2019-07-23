@@ -3,6 +3,7 @@
 namespace akreditasi\modules\standar7\controllers;
 
     use Yii;
+    use yii\filters\AccessControl;
     use yii\helpers\FileHelper;
     use yii\helpers\Json;
     use yii\helpers\Url;

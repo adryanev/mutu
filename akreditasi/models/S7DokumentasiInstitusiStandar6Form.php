@@ -4,6 +4,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DokumentasiInstitusiStandar6;
 
 use yii\base\Model;
@@ -39,8 +40,21 @@ class S7DokumentasiInstitusiStandar6Form extends S7DokumentasiInstitusiStandar6
 
         if($this->validate()){
             $this->_dokumenDokumentasi = new S7DokumentasiInstitusiStandar6();
-            $this->_dokumenDokumentasi->id_dokumentasi_institusi = $id;
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
+
+            $model = S7DokumentasiInstitusiStandar6::find()->select('dokumen')->all();
+
+            foreach ($model as $dok):
+                if ($dok['dokumen'] == $fileName){
+
+                    $carbon = Carbon::now('Asia/Jakarta');
+                    $tgl = $carbon->format('U');
+                    $fileName = $tgl.'-'.$fileName;
+
+                }
+            endforeach;
+
+            $this->_dokumenDokumentasi->id_dokumentasi_institusi = $id;
             $this->_dokumenDokumentasi->dokumen = $fileName;
             $this->_dokumenDokumentasi->kode = $this->kodeDokumen;
             

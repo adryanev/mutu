@@ -3,6 +3,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7BorangPascaFakultas;
 use common\models\S7IsianBorang;
 use common\models\S7IsianBorangPascaFakultas;
@@ -30,15 +31,17 @@ class IsianBorangPascaFakultasUploadForm extends Model{
 
     public function uploadFile($idBorang){
 
+        $timestamp = Carbon::now()->timestamp;
+
         if($this->validate()){
             $isian = S7IsianBorang::findOne(['nomor_borang'=>$this->nomor_borang,'untuk'=>'fakultas']);
             $borang = S7BorangPascaFakultas::findOne($idBorang);
             $model = new S7IsianBorangPascaFakultas();
             $model->id_isian_borang = $isian->id;
-            $model->id_borang_s1_fakultas = $borang->id;
+            $model->id_borang_pasca_fakultas = $borang->id;
 
             $filename = $this->nama_file->getBaseName().'.'.$this->nama_file->getExtension();
-            $model->nama_file = $filename;
+            $model->nama_file =$timestamp.'-'. $filename;
 
             $path = Yii::getAlias('@uploadAkreditasi'. "/{$borang->akreditasi->lembaga}/prodi/{$borang->akreditasi->tahun}/fakultas/{$borang->id_fakultas}/borang/dokumen");
 

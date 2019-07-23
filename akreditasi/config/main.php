@@ -6,9 +6,10 @@ $params = array_merge(
     require __DIR__ . '/params-local.php'
 );
 
+
 return [
     'id' => 'app-akreditasi',
-    'name'=> 'Sistem Penjaminan Mutu',
+    'name'=> $params['nama_sistem'],
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'akreditasi\controllers',
@@ -16,8 +17,8 @@ return [
         'standar7' => [
             'class' => 'akreditasi\modules\standar7\Standar7',
         ],
-        'standar9' => [
-            'class' => 'akreditasi\modules\standar9\Standar9',
+        'kriteria9' => [
+            'class' => 'akreditasi\modules\kriteria9\Kriteria9',
         ],
     ],
     'components' => [

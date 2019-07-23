@@ -31,7 +31,7 @@ $this->registerJs($js, View::POS_READY);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <title>Sistem Penjamin Mutu IAIN Padangsidimpuan</title>
+    <title><?=\yii\helpers\Inflector::camel2words(Yii::$app->name) . ' '. Yii::$app->params['instansi']?> </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +51,7 @@ $this->registerJs($js, View::POS_READY);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href=" ../dashboard.html ">IAIN Padangsidimpuan</a>
+            <a class="navbar-brand" href=" ../dashboard.html "><?=Yii::$app->params['instansi']?></a>
         </div></div>
 </nav>
 <div class="wrapper wrapper-full-page">

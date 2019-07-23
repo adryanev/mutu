@@ -4,6 +4,7 @@
 namespace akreditasi\models;
 
 
+use Carbon\Carbon;
 use common\models\S7DokumentasiS1ProdiStandar6;
 
 use yii\base\Model;
@@ -36,12 +37,13 @@ class DokumentasiS1ProdiStandar6Form extends S7DokumentasiS1ProdiStandar6
 
     public function uploadDokumen($id){
 
+        $timestamp = Carbon::now()->timestamp;
 
         if($this->validate()){
             $this->_dokumenDokumentasi = new S7DokumentasiS1ProdiStandar6();
             $this->_dokumenDokumentasi->id_dokumentasi_s1_prodi = $id;
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
-            $this->_dokumenDokumentasi->dokumen = $fileName;
+            $this->_dokumenDokumentasi->dokumen = $timestamp. '-'.$fileName;
             $this->_dokumenDokumentasi->kode = $this->kodeDokumen;
             
             $path = Yii::getAlias('@uploadAkreditasi'. "/BAN-PT/prodi/{$this->_dokumenDokumentasi->dokumentasiS1Prodi->akreditasiProdiS1->akreditasi->tahun}/{$this->_dokumenDokumentasi->dokumentasiS1Prodi->akreditasiProdiS1->id_prodi}/prodi/dokumentasi");
