@@ -40,13 +40,12 @@ class S7DokumentasiPascaProdiStandar2Form extends S7DokumentasiPascaProdiStandar
 
             $model = S7DokumentasiPascaProdiStandar2::find()->select('dokumen')->all();
 
+            $carbon = Carbon::now('Asia/Jakarta');
+            $tgl = $carbon->format('U');
+            $fileName = $tgl.'-'.$fileName;
             foreach ($model as $dok):
                 if ($dok['dokumen'] == $fileName){
-
-                    $carbon = Carbon::now('Asia/Jakarta');
-                    $tgl = $carbon->format('U');
                     $fileName = $tgl.'-'.$fileName;
-
                 }
             endforeach;
 
