@@ -44,3 +44,5 @@ phpunit.phar
 /monitoring/web/index.php
 /monitoring/web/index-test.php
 /monitoring/web/robots.txt
+
+system-configuration.ini

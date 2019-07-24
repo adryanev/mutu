@@ -92,7 +92,7 @@ class SertifikatInstitusiController extends Controller
 
 
                 $file = UploadedFile::getInstance($model, 'sertifikat');
-                $path = Yii::getAlias('@uploadAkreditasi/sertifikat');
+                $path = Yii::getAlias('@uploadAdmin/sertifikat');
 
 //                FileHelper::createDirectory($path, $mode = 0777, $recursive = true);
 
@@ -230,7 +230,7 @@ class SertifikatInstitusiController extends Controller
 
     public function actionDownload($id){
         $model = $this->findModel($id);
-        $file = Yii::getAlias(Url::to('@uploadAkreditasi/sertifikat/'.$model->sertifikat));
+        $file = Yii::getAlias(Url::to('@uploadAdmin/sertifikat/'.$model->sertifikat));
         return Yii::$app->response->sendFile($file);
     }
 

@@ -7,11 +7,18 @@ use yii\db\Migration;
  */
 class m190620_183205_add_sertifikat_tabel extends Migration
 {
+
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
+        }
+
         $this->createTable('{{%sertifikat_prodi}}',[
            'id'=>$this->primaryKey(),
            'id_prodi'=>$this->integer(),
@@ -32,7 +39,7 @@ class m190620_183205_add_sertifikat_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
         $this->createTable('{{%sertifikat_institusi}}',[
            'id'=>$this->primaryKey(),
@@ -54,9 +61,9 @@ class m190620_183205_add_sertifikat_tabel extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer()
-        ]);
+        ],$tableOptions);
 
-        $this->addForeignKey('fk-sertifikat_prodi-prodi','{{%sertifikat_prodi}}','id_prodi','{{%program_studi}}','id');
+        $this->addForeignKey('fk-sertifikat_prodi-prodi','{{%sertifikat_prodi}}','id_prodi','{{%program_studi}}','id','CASCADE','CASCADE');
     }
 
     /**

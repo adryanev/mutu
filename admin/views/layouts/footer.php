@@ -29,7 +29,7 @@
             <script>
                 document.write(new Date().getFullYear())
             </script>
-            <a href="http://www.iain-padangsidimpuan.ac.id/"> - IAIN Padangsidimpuan</a>
+            <a href="http://www.iain-padangsidimpuan.ac.id/"> - <?=Yii::$app->params['instansi']?></a>
         </p>
     </div>
 </footer>

@@ -103,8 +103,9 @@ class SertifikatProdiController extends Controller
 
         if ($model->load(Yii::$app->request->post()) ) {
 
+//          ganti direktori ke folder upload Admin
             $file = UploadedFile::getInstance($model, 'sertifikat');
-            $path = Yii::getAlias('@uploadAkreditasi/sertifikat');
+            $path = Yii::getAlias('@uploadAdmin/sertifikat');
 
 //                FileHelper::createDirectory($path, $mode = 0777, $recursive = true);
 
@@ -229,7 +230,7 @@ class SertifikatProdiController extends Controller
 
     public function actionDownload($id){
         $model = $this->findModel($id);
-        $file = Yii::getAlias(Url::to('@uploadAkreditasi/sertifikat/'.$model->sertifikat));
+        $file = Yii::getAlias(Url::to('@uploadAdmin/sertifikat/'.$model->sertifikat));
         return Yii::$app->response->sendFile($file);
     }
 

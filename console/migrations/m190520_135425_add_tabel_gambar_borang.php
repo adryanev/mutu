@@ -12,6 +12,11 @@ class m190520_135425_add_tabel_gambar_borang extends Migration
      */
     public function safeUp()
     {
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
+        }
         $this->createTable('{{%s7_gambar_borang_s1_prodi}}',[
             'id'=>$this->primaryKey(),
             'id_borang_s1_prodi'=>$this->integer(),
@@ -21,7 +26,7 @@ class m190520_135425_add_tabel_gambar_borang extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createIndex('idx-search-gambar_borang_s1_prodi','{{%s7_gambar_borang_s1_prodi}}',['nomor_borang']);
         $this->addForeignKey('fk-gambar_borang_s1_prodi-borang_s1_prodi','{{%s7_gambar_borang_s1_prodi}}','id_borang_s1_prodi','{{%s7_borang_s1_prodi}}','id');
@@ -40,13 +45,13 @@ class m190520_135425_add_tabel_gambar_borang extends Migration
             'updated_at'=>$this->integer(),
             'created_by'=>$this->integer(),
             'updated_by'=>$this->integer(),
-        ]);
+        ],$tableOptions);
 
         $this->createIndex('idx-search-gambar_borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}',['nomor_borang']);
-        $this->addForeignKey('fk-gambar_borang_s1_fakultas-borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%s7_borang_s1_fakultas}}','id');
+        $this->addForeignKey('fk-gambar_borang_s1_fakultas-borang_s1_fakultas','{{%s7_gambar_borang_s1_fakultas}}','id_borang_s1_fakultas','{{%s7_borang_s1_fakultas}}','id','CASCADE','CASCADE');
 
-        $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_crd','{{%s7_gambar_borang_s1_fakultas}}','created_by','{{%user}}','id');
-        $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_upd','{{%s7_gambar_borang_s1_fakultas}}','updated_by','{{%user}}','id');
+        $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_crd','{{%s7_gambar_borang_s1_fakultas}}','created_by','{{%user}}','id','CASCADE','CASCADE');
+        $this->addForeignKey('fk-gambar_borang_s1_fakultas-usr_upd','{{%s7_gambar_borang_s1_fakultas}}','updated_by','{{%user}}','id','CASCADE','CASCADE');
 
     }
 

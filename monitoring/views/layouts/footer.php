@@ -29,7 +29,7 @@
             <script>
                 document.write(new Date().getFullYear())
             </script>
-            IAIN Padang Sidimpuan
+            <?=Yii::$app->params['instansi']?>
         </p>
     </div>
 </footer>

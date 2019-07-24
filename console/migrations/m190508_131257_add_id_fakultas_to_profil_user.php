@@ -14,7 +14,7 @@ class m190508_131257_add_id_fakultas_to_profil_user extends Migration
     {
 
         $this->addColumn('{{%profil_user}}','id_fakultas',$this->integer());
-        $this->addForeignKey('fk-profil_user-fakultas_akademi','{{%profil_user}}','id_fakultas','{{%fakultas_akademi}}','id');
+        $this->addForeignKey('fk-profil_user-fakultas_akademi','{{%profil_user}}','id_fakultas','{{%fakultas_akademi}}','id','CASCADE','cascade');
     }
 
     /**
