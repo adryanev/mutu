@@ -416,7 +416,7 @@
             "dokumen": "Rekap jumlah per semester selama 5 thn terakhir:   "
           },
           {
-            "kode": "3.1.2.c-01-02-02",
+            "kode": "3.1.2-01-02-02",
             "dokumen": "Rekap  mahasiswa baru reguler per semester   "
           },
           {
@@ -428,7 +428,7 @@
             "dokumen": "Jumlah mahasiswa baru reguler yang transfer ke Prodi per semester    "
           },
           {
-            "kode": "3.1.2.c-01-02-05",
+            "kode": "3.1.2-01-02-05",
             "dokumen": "Rekap jumlah mahasiswa baru non reguler transfer ke Prodi   "
           }
         ]
@@ -874,7 +874,7 @@
         "isi": "Dosen yang memiliki Sertifikat Pendidik Profesional.   ",
         "dokumen_sumber":[
           {
-            "kode": " 4..3.1.d-01-01-01  ",
+            "kode": " 4.3.1.d-01-01-01  ",
             "dokumen":"Dokumen copy sertifikat pendidik dosen tetap    "
           }
         ],
