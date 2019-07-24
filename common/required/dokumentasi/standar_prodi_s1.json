@@ -247,7 +247,7 @@
             "dokumen":"Survei proses pembelajaran melalui umpan balik dari dosen, mahasiswa, alumni, dan pengguna lulusan  "
           },
           {
-            "kode": " 2.5-01-01-01",
+            "kode": " 2.5-01-01-02",
             "dokumen":"Dokumen Rencana Tindak Lanjut"
           }
         ],
@@ -351,7 +351,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "33.1.1.b-01-02-01   ",
+            "kode": "3.1.1.b-01-02-01   ",
             "dokumen": "Rekap mahasiswa per semester   "
           },
           {
@@ -416,19 +416,19 @@
             "dokumen": "Rekap jumlah per semester selama 5 thn terakhir:   "
           },
           {
-            "kode": "3.1.1.c-01-02-02",
+            "kode": "3.1.2-01-02-02",
             "dokumen": "Rekap  mahasiswa baru reguler per semester   "
           },
           {
-            "kode": "3.1.2-01-02-02",
+            "kode": "3.1.2-01-02-03",
             "dokumen": "Rekap jumlah mahasiswa baru reguler yang transfer ke Prodi,   "
           },
           {
-            "kode": "3.1.2-01-02-03",
+            "kode": "3.1.2-01-02-04",
             "dokumen": "Jumlah mahasiswa baru reguler yang transfer ke Prodi per semester    "
           },
           {
-            "kode": "3.1.1.c-01-02-05",
+            "kode": "3.1.2-01-02-05",
             "dokumen": "Rekap jumlah mahasiswa baru non reguler transfer ke Prodi   "
           }
         ]
@@ -703,7 +703,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.4.1-01-02-01",
+            "kode": "  3.4.2-01-02-01",
             "dokumen": "Foto kegiatan"
           }
         ]
@@ -782,11 +782,6 @@
           {
             "kode": " 4.2.2-01-02-02",
             "dokumen": "Laporan Penelitian"
-          },
-
-          {
-            "kode": " 4.2.2-01-02-02",
-            "dokumen": "4.2.2-01-02-02"
           }
 
 
@@ -879,7 +874,7 @@
         "isi": "Dosen yang memiliki Sertifikat Pendidik Profesional.   ",
         "dokumen_sumber":[
           {
-            "kode": " 4..3.1.d-01-01-01  ",
+            "kode": " 4.3.1.d-01-01-01  ",
             "dokumen":"Dokumen copy sertifikat pendidik dosen tetap    "
           }
         ],
@@ -947,17 +942,17 @@
 
 
       {
-        "nomor": "4.3.4 & 4.3.5",
+        "nomor": "4.3.4",
         "isi": "Kesesuaian keahlian (pendidikan terakhir) dosen dengan mata kuliah yang diajarkannya.   ","dokumen_sumber":[
         {
-          "kode": "4.3.4 & 4.3.5-01-01-01",
+          "kode": "4.3.4-01-01-01",
           "dokumen":"Dokumen Rekap Kuliah per semester dan Ijazah   "
         }
       ],
         "dokumen_pendukung":
         [
           {
-            "kode": " 4.3.4 & 4.3.5-01-02-01",
+            "kode": " 4.3.4-01-02-01",
             "dokumen": " Ijazah dan rekap mengajar per dosen "
           }
         ]
@@ -966,14 +961,14 @@
 
 
       {
-        "nomor": "4.3.4 & 4.3.5",
+        "nomor": "4.3.5",
         "isi": "Rasio jumlah dosen tidak tetap, terhadap jumlah seluruh dosen","dokumen_sumber":[
         {
-          "kode": " 4.3.4 & 4.3.5-01-01-01",
+          "kode": "4.3.5-01-01-01",
           "dokumen":"Jurnal kuliah dosen mengajar"
         },
         {
-          "kode": " 4.3.4 & 4.3.5-01-01-02",
+          "kode": "4.3.5-01-01-02",
           "dokumen":"Daftar kehadiran dosen mengajar Direkap"
         }
       ],
@@ -1213,7 +1208,7 @@
             "dokumen":"SK staf pegawai   "
           },
           {
-            "kode": " 4.6.1.b-01-01-02        ",
+            "kode": " 4.6.1.c-01-01-02        ",
             "dokumen":"Daftar tenaga kependidikan adimistrasi: gelarnya.   "
           }
         ],

@@ -44,13 +44,12 @@ class S7DokumentasiS1FakultasStandar5Form extends S7DokumentasiS1FakultasStandar
 
             $model = S7DokumentasiS1FakultasStandar5::find()->select('dokumen')->all();
 
+            $carbon = Carbon::now('Asia/Jakarta');
+            $tgl = $carbon->format('U');
+            $fileName = $tgl.'-'.$fileName;
             foreach ($model as $dok):
                 if ($dok['dokumen'] == $fileName){
-
-                    $carbon = Carbon::now('Asia/Jakarta');
-                    $tgl = $carbon->format('U');
                     $fileName = $tgl.'-'.$fileName;
-
                 }
             endforeach;
 

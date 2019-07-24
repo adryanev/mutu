@@ -44,13 +44,12 @@ class S7DokumentasiInstitusiStandar4Form extends S7DokumentasiInstitusiStandar4
 
             $model = S7DokumentasiInstitusiStandar4::find()->select('dokumen')->all();
 
+            $carbon = Carbon::now('Asia/Jakarta');
+            $tgl = $carbon->format('U');
+            $fileName = $tgl.'-'.$fileName;
             foreach ($model as $dok):
                 if ($dok['dokumen'] == $fileName){
-
-                    $carbon = Carbon::now('Asia/Jakarta');
-                    $tgl = $carbon->format('U');
                     $fileName = $tgl.'-'.$fileName;
-
                 }
             endforeach;
 

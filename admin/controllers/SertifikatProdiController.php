@@ -230,7 +230,7 @@ class SertifikatProdiController extends Controller
 
     public function actionDownload($id){
         $model = $this->findModel($id);
-        $file = Yii::getAlias(Url::to('@uploadAkreditasi/sertifikat/'.$model->sertifikat));
+        $file = Yii::getAlias(Url::to('@uploadAdmin/sertifikat/'.$model->sertifikat));
         return Yii::$app->response->sendFile($file);
     }
 
