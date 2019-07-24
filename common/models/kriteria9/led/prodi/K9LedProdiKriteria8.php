@@ -3,6 +3,7 @@
 namespace common\models\kriteria9\led\prodi;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "k9_led_prodi_kriteria8".
@@ -24,6 +25,16 @@ class K9LedProdiKriteria8 extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'k9_led_prodi_kriteria8';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
     }
 
     /**

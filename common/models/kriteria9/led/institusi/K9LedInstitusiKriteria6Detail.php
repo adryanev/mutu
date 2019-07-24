@@ -2,7 +2,10 @@
 
 namespace common\models\kriteria9\led\institusi;
 
+use common\models\User;
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "k9_led_institusi_kriteria6_detail".
@@ -29,6 +32,17 @@ class K9LedInstitusiKriteria6Detail extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'k9_led_institusi_kriteria6_detail';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class
+        ];
     }
 
     /**

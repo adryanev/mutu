@@ -3,6 +3,7 @@
 namespace common\models\kriteria9\akreditasi;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "k9_akreditasi_institusi".
@@ -14,7 +15,7 @@ use Yii;
  *
  * @property K9Akreditasi $akreditasi
  * @property K9LedInstitusi[] $k9LedInstitusis
- * @property K9LkpsInstitusi[] $k9LkpsInstitusis
+ * @property K9LkInstitusi[] $k9LkInstitusis
  */
 class K9AkreditasiInstitusi extends \yii\db\ActiveRecord
 {
@@ -24,6 +25,15 @@ class K9AkreditasiInstitusi extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'k9_akreditasi_institusi';
+    }
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
     }
 
     /**
@@ -69,8 +79,8 @@ class K9AkreditasiInstitusi extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getK9LkpsInstitusis()
+    public function getK9LkInstitusis()
     {
-        return $this->hasMany(K9LkpsInstitusi::className(), ['id_akreditasi_institusi' => 'id']);
+        return $this->hasMany(K9LkInstitusi::className(), ['id_akreditasi_institusi' => 'id']);
     }
 }

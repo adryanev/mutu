@@ -3,6 +3,7 @@
 namespace common\models\kriteria9\led\fakultas;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "k9_led_fakultas_kriteria7".
@@ -26,6 +27,15 @@ class K9LedFakultasKriteria7 extends \yii\db\ActiveRecord
         return 'k9_led_fakultas_kriteria7';
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
+    }
     /**
      * {@inheritdoc}
      */

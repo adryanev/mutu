@@ -3,6 +3,7 @@
 namespace common\models\kriteria9\led\institusi;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "k9_led_institusi_kriteria9".
@@ -24,6 +25,16 @@ class K9LedInstitusiKriteria9 extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'k9_led_institusi_kriteria9';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
     }
 
     /**

@@ -4,6 +4,7 @@ namespace common\models\kriteria9\led\prodi;
 
 use common\models\kriteria9\akreditasi\K9AkreditasiProdi;
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "k9_led_prodi".
@@ -33,6 +34,16 @@ class K9LedProdi extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'k9_led_prodi';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
     }
 
     /**

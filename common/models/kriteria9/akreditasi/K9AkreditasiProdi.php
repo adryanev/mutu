@@ -3,8 +3,10 @@
 namespace common\models\kriteria9\akreditasi;
 
 use common\models\kriteria9\led\prodi\K9LedProdi;
+use common\models\kriteria9\lk\prodi\K9LkProdi;
 use common\models\ProgramStudi;
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "k9_akreditasi_prodi".
@@ -18,7 +20,7 @@ use Yii;
  * @property K9Akreditasi $akreditasi
  * @property ProgramStudi $prodi
  * @property K9LedProdi[] $k9LedProdis
- * @property K9LkpsProdi[] $k9LkpsProdis
+ * @property K9LkProdi[] $k9LkProdis
  */
 class K9AkreditasiProdi extends \yii\db\ActiveRecord
 {
@@ -30,6 +32,15 @@ class K9AkreditasiProdi extends \yii\db\ActiveRecord
         return 'k9_akreditasi_prodi';
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class
+        ];
+    }
     /**
      * {@inheritdoc}
      */
@@ -83,8 +94,8 @@ class K9AkreditasiProdi extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getK9LkpsProdis()
+    public function getK9LkProdis()
     {
-        return $this->hasMany(K9LkpsProdi::className(), ['id_akreditasi_prodi' => 'id']);
+        return $this->hasMany(K9LkProdi::className(), ['id_akreditasi_prodi' => 'id']);
     }
 }

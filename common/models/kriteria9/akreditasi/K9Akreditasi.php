@@ -2,6 +2,9 @@
 
 namespace common\models\kriteria9\akreditasi;
 
+use common\models\JenisAkreditasi;
+use common\models\kriteria9\led\fakultas\K9LedFakultas;
+use common\models\kriteria9\lk\fakultas\K9LkFakultas;
 use Yii;
 
 /**
@@ -19,7 +22,7 @@ use Yii;
  * @property K9AkreditasiInstitusi[] $k9AkreditasiInstitusis
  * @property K9AkreditasiProdi[] $k9AkreditasiProdis
  * @property K9LedFakultas[] $k9LedFakultas
- * @property K9LkpsFakultas[] $k9LkpsFakultas
+ * @property K9LkFakultas[] $k9LkFakultas
  */
 class K9Akreditasi extends \yii\db\ActiveRecord
 {
@@ -95,8 +98,8 @@ class K9Akreditasi extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getK9LkpsFakultas()
+    public function getK9LkFakultas()
     {
-        return $this->hasMany(K9LkpsFakultas::className(), ['id_akreditasi' => 'id']);
+        return $this->hasMany(K9LkFakultas::className(), ['id_akreditasi' => 'id']);
     }
 }

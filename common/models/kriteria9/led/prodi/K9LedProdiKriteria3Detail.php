@@ -2,7 +2,10 @@
 
 namespace common\models\kriteria9\led\prodi;
 
+use common\models\User;
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "k9_led_prodi_kriteria3_detail".
@@ -31,6 +34,16 @@ class K9LedProdiKriteria3Detail extends \yii\db\ActiveRecord
         return 'k9_led_prodi_kriteria3_detail';
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::class,
+            BlameableBehavior::class
+        ];
+    }
     /**
      * {@inheritdoc}
      */
