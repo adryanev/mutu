@@ -257,9 +257,6 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
 
         $dokModel = new $sourceModel;
 
-        echo "Perbaikan <br>";
-        var_dump($cekisi);
-        exit();
 
         if($dokModel->load(Yii::$app->request->post())){
 
