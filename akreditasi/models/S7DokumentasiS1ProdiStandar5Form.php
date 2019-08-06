@@ -43,13 +43,12 @@ class S7DokumentasiS1ProdiStandar5Form extends S7DokumentasiS1ProdiStandar5
             $this->_dokumenDokumentasi = new S7DokumentasiS1ProdiStandar5();
             $fileName = $this->dokumenDokumentasi->getBaseName().'.'.$this->dokumenDokumentasi->getExtension();
 
+            $carbon = Carbon::now('Asia/Jakarta');
+            $tgl = $carbon->format('U');
+            $fileName = $tgl.'-'.$fileName;
             foreach ($model as $dok):
                 if ($dok['dokumen'] == $fileName){
-
-                    $carbon = Carbon::now('Asia/Jakarta');
-                    $tgl = $carbon->format('U');
                     $fileName = $tgl.'-'.$fileName;
-
                 }
             endforeach;
 
