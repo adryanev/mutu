@@ -321,7 +321,7 @@
         "isi": "Rasio  calon  mahasiswa yang  ikut  seleksi  terhadap daya tampung.",
         "dokumen_sumber":[
           {
-            "kode": " 3.1.1.a-01-01-01 ",
+            "kode": "3.1.1.a-01-01-01 ",
             "dokumen":"Laporan  Perkembangan  Mahasiswa per  semester  dan  tahunan  yang diperoleh  dari  Sistem  Informasi Akademik  "
           }
 
@@ -343,7 +343,7 @@
         "isi": "Rasio  mahasiswa  baru reguler  yang  melakukan registrasi  terhadap  calon mahasiswa  baru  reguler yang lulus seleksi.  ",
         "dokumen_sumber":[
           {
-            "kode": " 3.1.1.b-01-01-01",
+            "kode": "3.1.1.b-01-01-01",
             "dokumen":"Laporan Perkembangan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik  "
           }
 
@@ -368,7 +368,7 @@
         "isi": "Rasio  mahasiswa  baru transfer  terhadap mahasiswa baru regular.   ",
         "dokumen_sumber":[
           {
-            "kode": " 3.1.1.c-01-01-01    ",
+            "kode": "3.1.1.c-01-01-01    ",
             "dokumen":"Laporan Perkembangan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik   "
           }
 
@@ -404,7 +404,7 @@
         "isi": "Penerimaan mahasiswa non-reguler (selayaknya tidak membuat beban dosen sangat berat, jauh melebihi beban ideal sekitar 12 sks).     ",
         "dokumen_sumber":[
           {
-            "kode": " 3.1.2-01-01-01",
+            "kode": "3.1.2-01-01-01",
             "dokumen":"Laporan Perkembangan Mahasiswa per semester dan tahunan yang diperoleh dari Sistem Informasi Akademik   "
           }
 
@@ -441,7 +441,7 @@
         "isi": "Rata-rata Indeks Prestasi Kumulatif (IPK) selama lima tahun terakhir.      ",
         "dokumen_sumber":[
           {
-            "kode": " 3.1.1.d-01-01-01",
+            "kode": "3.1.1.d-01-01-01",
             "dokumen":"Laporan Indeks Prestasi Mahasiswa Per Semester   "
           }
 
@@ -471,7 +471,7 @@
         "isi": "Penghargaan atas prestasi mahasiswa di bidang nalar, bakat dan minat.       ",
         "dokumen_sumber":[
           {
-            "kode": " 3.1.3-01-01-01      ",
+            "kode": "3.1.3-01-01-0",
             "dokumen":"Semua bukti sertifikat atau surat penghargaan lomba bidang akademik dan non akademik para mahasiswa Prodi (kerjasama dengan pengurus HMJ Prodi)   "
           }
 
@@ -479,7 +479,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "3.1.3-01-02-01   ",
+            "kode": "3.1.3-01-02-01",
             "dokumen": "Rekaman atau Foto-foto kegiatan     "
           }
         ]
@@ -491,7 +491,7 @@
         "isi": "Persentase kelulusan tepat waktu. ",
         "dokumen_sumber":[
           {
-            "kode": " 3.1.4.a-01-01-01      ",
+            "kode": "3.1.4.a-01-01-01",
             "dokumen":"Laporan Wisuda    "
           }
 
@@ -499,7 +499,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "3.1.4.a-01-02-01    ",
+            "kode": "3.1.4.a-01-02-01",
             "dokumen": "Buku Wisuda    "
           }
         ]
@@ -511,7 +511,7 @@
         "isi": "Persentase mahasiswa yang DO atau mengundurkan diri.  ",
         "dokumen_sumber":[
           {
-            "kode": " 3.1.4.b-01-01-01      ",
+            "kode": "3.1.4.b-01-01-01",
             "dokumen":"Laporan Wisuda    "
           }
 
@@ -519,7 +519,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "3.1.4.b-01-02-01     ",
+            "kode": "3.1.4.b-01-02-01",
             "dokumen": "Buku Wisuda   "
           }
         ]
@@ -532,7 +532,7 @@
         "isi": "Layanan dan kegiatan kemahasiswaan (ragam, jenis, dan aksesibilitasnya) yang dapat dimanfaatkan untuk membina dan mengembangkan penalaran, minat, bakat, seni, dan kesejahteraan. ",
         "dokumen_sumber":[
           {
-            "kode": " 3.2.1-01-01-01      ",
+            "kode": "3.2.1-01-01-01",
             "dokumen":"Dokumen Standard Operating Procedures (SOP) untuk setiap jenis layanan   "
           }
 
@@ -553,7 +553,7 @@
         "isi": "Kualitas layanan kepada mahasiswa.  ",
         "dokumen_sumber":[
           {
-            "kode": " 3.2.2-01-01-01       ",
+            "kode": "3.2.2-01-01-01",
             "dokumen":"Laporan Survei Kualitas Pelayanan   "
           }
 
@@ -561,7 +561,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.2.2-01-02-01    ",
+            "kode": "3.2.2-01-02-01",
             "dokumen": " Kuesioner "
           }
         ]
@@ -573,7 +573,7 @@
         "isi": "Upaya  pelacakan  dan perekaman data lulusan. ",
         "dokumen_sumber":[
           {
-            "kode": " 3.3.1.a-01-01-01      ",
+            "kode": "3.3.1.a-01-01-01",
             "dokumen":"Laporan  Kegiatan  Survei  Pelacakan dan Perekaman Data Lulusan  "
           }
 
@@ -581,7 +581,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.3.1.a-01-02-01    ",
+            "kode": "3.3.1.a-01-02-01",
             "dokumen": " Kuesioner "
           }
         ]
@@ -593,7 +593,7 @@
         "isi": "Penggunaan  hasil pelacakan  untuk perbaikan:  (1)  proses pembelajaran,  (2) penggalangan  dana,  (3) informasi  pekerjaan,  (4) membangun jejaring.  ",
         "dokumen_sumber":[
           {
-            "kode": "3.3.1.b-01-01-01     ",
+            "kode": "3.3.1.b-01-01-01",
             "dokumen":"Dokumen Program Kerja Perbaikan   "
           }
 
@@ -601,7 +601,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.3.1.b-01-02-01     ",
+            "kode": "3.3.1.b-01-02-01",
             "dokumen": "Notulen Rapat  "
           }
         ]
@@ -614,7 +614,7 @@
         "isi": "Pendapat  pengguna lulusan  terhadap  mutu alumni.   ",
         "dokumen_sumber":[
           {
-            "kode": "3.3.1.c-01-01-01       ",
+            "kode": "3.3.1.c-01-01-01",
             "dokumen":"Laporan Survei Kualitas Alumni   "
           }
 
@@ -622,7 +622,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.3.1.c-01-02-01      ",
+            "kode": "3.3.1.c-01-02-01",
             "dokumen": "Kuesioner  "
           }
         ]
@@ -635,7 +635,7 @@
         "isi": "Profil  masa  tunggu  kerja pertama (dalam bulan).    ",
         "dokumen_sumber":[
           {
-            "kode": "3.3.2-01-01-01       ",
+            "kode": "3.3.2-01-01-01",
             "dokumen":"Laporan Survei Masa Tunggu Alumni dan Kesesuaian Bidang Kerja    "
           }
 
@@ -643,7 +643,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.3.2-01-02-01        ",
+            "kode": "3.3.2-01-02-01",
             "dokumen": "Kuesioner  "
           }
         ]
@@ -663,7 +663,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.3.3-01-02-01",
+            "kode": "3.3.3-01-02-01",
             "dokumen": "Kuesioner"
           }
         ]
@@ -683,7 +683,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.4.1-01-02-01",
+            "kode": "3.4.1-01-02-01",
             "dokumen": "Foto kegiatan"
           }
         ]
@@ -703,7 +703,7 @@
         "dokumen_pendukung":
         [
           {
-            "kode": "  3.4.2-01-02-01",
+            "kode": "3.4.2-01-02-01",
             "dokumen": "Foto kegiatan"
           }
         ]
