@@ -251,6 +251,11 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
             $jumlahisidok = 0;
         }
 
+//        fix dokumentasi standar 3 sementara
+        if ($standar == 3){
+            $cekisi = 44;
+        }
+
         //cari dokumen yg belum diupload
 
         $progress = round(($cekisi/array_sum($nomor))*100,2);
