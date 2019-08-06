@@ -58,6 +58,10 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         $cekisi6 = S7DokumentasiS1ProdiStandar6::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
         $cekisi7 = S7DokumentasiS1ProdiStandar7::find()->where(['id_dokumentasi_s1_prodi'=>$dokumentasi])->select('kode')->distinct()->count();
 
+        if ($cekisi3 > 44){
+            $cekisi3 = 44;
+        }
+
         $data1 = $decode[0];
         $butir1 = $data1['butir'];
         $data2 = $decode[1];
@@ -253,7 +257,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
 
 //        fix dokumentasi standar 3 sementara
         if ($standar == 3){
-            $cekisi = 44;
+            if ($cekisi > 44){
+                $cekisi = 44;
+            }
         }
 
         //cari dokumen yg belum diupload
