@@ -61,6 +61,9 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         if ($cekisi3 > 44){
             $cekisi3 = 44;
         }
+        if ($cekisi4 > 47){
+            $cekisi4 = 47;
+        }
 
         $data1 = $decode[0];
         $butir1 = $data1['butir'];
@@ -259,6 +262,11 @@ class DokumentasiS1ProdiController extends \yii\web\Controller
         if ($standar == 3){
             if ($cekisi > 44){
                 $cekisi = 44;
+            }
+        }
+        if ($standar == 4){
+            if ($cekisi > 47){
+                $cekisi = 47;
             }
         }
 
